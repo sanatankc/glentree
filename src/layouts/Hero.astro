@@ -1,0 +1,53 @@
+---
+import Button from '../components/Button.astro';
+
+import psjaAward from '../images/psjaAward.png'
+import meritAwards from '../images/meritAwards.png'
+import heroBG from '../images/heroBG.png'
+---
+<div 
+  class="h-screen w-full bg-cover bg-center flex flex-col items-center justify-center"
+  style={{
+    backgroundImage: `linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 96.35%), url("${heroBG}")`,
+    // backgroundAttachment: 'fixed'
+  }}
+>
+  <div class="w-full h-full flex flex-col items-center">
+    <div class="mt-auto flex flex-col items-center">
+      <div class="font-display text-white text-5xl mt-28">Unlock your child’s potential</div>
+      <div class="text-white text-2xl font-bold mt-3 tracking-tight">Shaping A Brighter Future for Your Child</div>
+      <div class="flex flex-row mt-5">
+        <Button>Apply Now</Button>
+        <div class="ml-3">
+          <Button secondary>Request for Callback</Button>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex flex-row h-36 w-full mt-auto items-center justify-between px-32">
+      <div class="flex flex-row">
+        <img src={psjaAward} alt="PSJA Award" class="h-12" />
+        <div class="ml-4">
+          <div class="text-base text-white">Rank 1 in <span class="text-green-600">Holistic Education</div>
+          <div class="text-base text-gray-600">India’s TOP PSJA 2022</div>
+        </div>
+      </div>
+
+      <div class="flex flex-row">
+        <img src={meritAwards} alt="PSJA Award" class="h-12" />
+        <div class="ml-4">
+          <div class="text-base text-white">Rank 1 in <span class="text-green-600">Holistic Education</div>
+          <div class="text-base text-gray-600">India’s TOP PSJA 2022</div>
+        </div>
+      </div>
+
+      <div class="flex flex-row">
+        <img src={psjaAward} alt="PSJA Award" class="h-12" />
+        <div class="ml-4">
+          <div class="text-base text-white">Rank 1 in <span class="text-green-600">Holistic Education</div>
+          <div class="text-base text-gray-600">India’s TOP PSJA 2022</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
