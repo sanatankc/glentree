@@ -1,0 +1,16 @@
+---
+import Text from "../system/Text.astro";
+
+const { title, subtitle } = Astro.props
+
+---
+
+<div class='w-full flex flex-row justify-between mt max-md:min-w-[50%]'>
+  <div class='flex flex-row'>
+    <div class='w-1 height-full bg-black/40 mr-3'></div>
+    <div>
+      <Text type='text-regular' class='text-black font-extrabold' >{title}</Text>
+      <Text type='text-regular' class='text-black font-normal'>{subtitle}</Text>
+    </div>
+  </div>
+</div>

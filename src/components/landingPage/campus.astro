@@ -1,0 +1,15 @@
+---
+import Text from '../system/Text.astro'
+import campusSectionPatternBG from '../../images/campusSectionPatternBG.png'
+---
+<div class='bg-accent relative p-20 max-md:p-8'>
+  <img src={campusSectionPatternBG} class='w-screen absolute top-0 left-0 -z-1' />
+  <div class='relative z-10'>
+    <Text type='text-subtitle' class='text-white' style={{ letterSpacing: '0.1em', opacity: 0.8 }}>Our Campuses</Text>
+    <Text type='h2' class='text-white mt-3'>Our Branches</Text>
+    <div class='flex flex-row justify-between mt-8 max-md:flex-col'>
+      <div class='max-w-[623px] w-[100%] h-[504px] max-md:h-[300px] rounded-2xl bg-slate-100  max-md:mb-8'></div>
+      <div class='max-w-[623px] w-[100%] h-[504px] max-md:h-[300px] rounded-2xl bg-slate-200'></div>
+    </div>
+  </div>
+</div>

@@ -13,8 +13,10 @@ module.exports = {
 					600: '#0A5E2F'
 				},
 				gray: {
+					200: '#FAFAFA',
 					300: '#E2E2E2',
-					500: '#D9DBE9'
+					500: '#D9DBE9',
+					600: '#A4A4A4'
 				},
 				red: {
 					500: '#A9342D',

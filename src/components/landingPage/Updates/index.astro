@@ -1,0 +1,35 @@
+---
+import Text from '../../system/Text.astro'
+import newsUpdateBG from '../../../images/newsUpdateBG.png'
+import Card from './Card.astro'
+
+const news = Array.from({ length: 6 }, (_, i) => i).map((i) => ({
+  title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  image: newsUpdateBG,
+}))
+
+
+---
+
+<div 
+  style={{
+    background: 'linear-gradient(180deg, #000000 0%, #142C1E 108.48%)',
+  }}
+  class="flex flex-col items-center pb-20"
+>
+  <div class='flex flex-row w-full items-center mt-20 mb-10 max-md:ml-0 max-md:px-6 box-border'>
+    <div class='flex-1 bg-white/40 mr-6 max-md:mr-4' style={{ height: '1px' }}></div>
+    <Text type={"text-subtitle"} class='text-center text-white/80 max-md:w-[60%]' style={{ opacity: 0.8 }}>What’s Happening at Glentree?</Text>
+    <div class='flex-1 bg-white/40 ml-6 max-md:ml-4' style={{ height: '1px' }}></div>
+  </div>
+
+  <div class="w-screen flex flex-row h-min overflow-scroll no-scrollbar scroll-snap-news-carousel px-3" style={{
+    overflowX: 'scroll',
+    overflowY: 'visible',
+    scrollSnapType: 'x mandatory',
+  }}>
+    {news.map(({ title, image }) => (
+      <Card title={title} image={image}  />
+    ))}
+  </div>
+</div>

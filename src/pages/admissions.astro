@@ -1,0 +1,319 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import TopNavigationBar from '../components/TopNavigationBar.astro';
+import astronautKidsAdmissionBG from '../images/astronautKidsAdmissionBG.png';
+import admissionStep1 from '../images/admissionStep1.png';
+import admissionStep2 from '../images/admissionStep2.png';
+import admissionStep3 from '../images/admissionStep3.png';
+
+
+
+import '../global.css'
+
+import Text from '../components/system/Text.astro';
+import Button from '../components/system/Button.astro';
+import Collapsible from '../components/admissions/Collapsible.astro';
+import CritieriaPill from '../components/admissions/CritieriaPill.astro';
+import LocationIcon from '../components/icons/Location.astro'
+import BigAdmissionCTA from '../components/BigAdmissionCTA.astro';
+import Footer from '../components/landingPage/Footer.astro';
+import AdmissionStep from '../components/admissions/AdmissionStep.astro';
+
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="flex flex-col h-screen w-screen relative bg-white">
+    <TopNavigationBar />
+    <div 
+      class="flex-1 main-container h-screen w-screen text-5xl flex flex-col items-center"
+      style={{
+        overflowY: 'overlay',
+        overflowX: 'hidden',
+      }}
+    >
+      <div class='min-h-[512px] max-h-[512px] w-full flex justify-center items-center flex-col max-md:min-h-[350px]' style={{
+        background: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.8) 68.07%), url(${astronautKidsAdmissionBG})`
+      }}>
+        <Text type={'h2'} class='mt-14 max-md:mt-10'>Admissions</Text>
+        <Text type={'text-base'} class='mt-3 text-center max-md:w-[90%]' >Your child’s journey towards a holistic learning environment starts here.</Text>
+        <Button class='mt-3'>Apply Now</Button>
+      </div>
+      
+      <div class='text-black'>
+        <Text type={'text-subtitle'} class='text-center mt-14' style={{ opacity: 0.6, letterSpacing: '0.1em' }}>HOW TO APPLY?</Text>
+        <Text type={'h2'} class='text-center mt-3'>Admission Process</Text>
+        <!-- <Button>Apply Now</Button> -->
+      </div>
+
+      <div class='w-full flex flex-col items-center'>
+        <AdmissionStep 
+          step="01"
+          title='Inquiry & Fill Admission Form'
+          titleBG='linear-gradient(263.64deg, #4B916A 6.11%, #028339 95.99%)'
+          thumbnailBG={`linear-gradient(to right, rgba(14, 101, 38, 0.8), rgba(14, 101, 38, 0.8)), url(${admissionStep1})`}
+        >
+          <Text type={'text-regular'} class='text-black leading-[29px]'>
+            To initiate the admission process, parents can either walk-in or inquire via phone or web. Upon arrival, an Admission Counsellor will provide an orientation about the school, admission process, and fee structure. Parents will also be taken on a school tour to explore the campus they prefer.
+            <br /><br />
+            Please make sure to have all necessary documentation ready for administrative review, as you will be prompted to provide this information within the application form.  You can find the address for both the campuses below:
+          </Text>
+          <div class='text-black'>
+            <div class='flex items-center mt-7'>
+              <div class='w-6 h-6'>
+                <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.5 1.5625C8.18701 1.5625 4.6875 4.7124 4.6875 8.59375C4.6875 14.8438 12.5 23.4375 12.5 23.4375C12.5 23.4375 20.3125 14.8438 20.3125 8.59375C20.3125 4.7124 16.813 1.5625 12.5 1.5625ZM12.5 12.5C11.8819 12.5 11.2777 12.3167 10.7638 11.9733C10.2499 11.63 9.8494 11.1419 9.61288 10.5709C9.37635 9.99987 9.31447 9.37153 9.43505 8.76534C9.55562 8.15915 9.85325 7.60233 10.2903 7.16529C10.7273 6.72825 11.2842 6.43062 11.8903 6.31005C12.4965 6.18947 13.1249 6.25135 13.6959 6.48788C14.2669 6.7244 14.755 7.12494 15.0983 7.63884C15.4417 8.15275 15.625 8.75693 15.625 9.375C15.6241 10.2035 15.2946 10.9979 14.7087 11.5837C14.1229 12.1696 13.3285 12.4991 12.5 12.5Z" fill="black"/>
+                </svg>            
+              </div>
+              <Text type={'text-regular'} class='text-black ml-2'>
+                Nallurhalli Rd, Whitefield, Palm Meadows, Nallurhalli, Bengaluru
+              </Text>
+            </div>
+            
+            <div class='flex items-center mt-3'>
+              <div class='w-6 h-6'>
+                <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.5 1.5625C8.18701 1.5625 4.6875 4.7124 4.6875 8.59375C4.6875 14.8438 12.5 23.4375 12.5 23.4375C12.5 23.4375 20.3125 14.8438 20.3125 8.59375C20.3125 4.7124 16.813 1.5625 12.5 1.5625ZM12.5 12.5C11.8819 12.5 11.2777 12.3167 10.7638 11.9733C10.2499 11.63 9.8494 11.1419 9.61288 10.5709C9.37635 9.99987 9.31447 9.37153 9.43505 8.76534C9.55562 8.15915 9.85325 7.60233 10.2903 7.16529C10.7273 6.72825 11.2842 6.43062 11.8903 6.31005C12.4965 6.18947 13.1249 6.25135 13.6959 6.48788C14.2669 6.7244 14.755 7.12494 15.0983 7.63884C15.4417 8.15275 15.625 8.75693 15.625 9.375C15.6241 10.2035 15.2946 10.9979 14.7087 11.5837C14.1229 12.1696 13.3285 12.4991 12.5 12.5Z" fill="black"/>
+                </svg>            
+              </div>
+              <Text type={'text-regular'} class='text-black ml-2'>
+                No.36/5, Halanayakanahalli, Varthur Hobli Bengaluru East Taluk
+              </Text>
+            </div>
+          </div>
+        </AdmissionStep>
+        <AdmissionStep
+          step="02"
+          title='Milestone Mapping Session'
+          titleBG='#C07C47'
+          thumbnailBG={`linear-gradient(to right, rgba(192, 124, 71, 0.8), rgba(192, 124, 71, 0.8)), url(${admissionStep2})`}
+        >
+        <Text type={'text-regular'} class='text-black leading-[29px]'>
+          For Grades 1-10, upon receipt of your application, we will schedule a <span class='font-bold'>Milestone Mapping Session</span> with the parents and the child.
+          <br/><br/>
+          For Walk-In applications, parents will be informed of the date and time of the session to ensure prompt arrival.
+          <br /><br/>
+          For Online applications, the session will be conducted virtually. 
+          <br /><br/>
+          During the session, we will discuss the child's academic history, interests, and learning style, and work together to set academic goals and milestones for the child.
+        </Text>
+      </AdmissionStep>
+
+      <AdmissionStep
+        step="03"
+        title='Closing the Admissions'
+        titleBG='#772D2B'
+        thumbnailBG={`linear-gradient(to right, rgba(119, 45, 43, 0.8), rgba(119, 45, 43, 0.8)), url(${admissionStep3})`}
+      >
+        <Text type={'text-regular'} class='text-black leading-[29px]'>
+          Once the application has been reviewed and the Milestone Mapping Session has been completed, the parents will be informed of the next steps to close the admissions and the other formalities.
+          <br /><br/>
+
+          If the parents choose not to proceed with the admission, the seat will be passed on to the next candidate on the waitlist.
+        </Text>
+      </AdmissionStep>
+      </div>
+
+      <Text type={'text-subtitle'} class='text-center text-black mt-9' style={{ opacity: 0.6, letterSpacing: '0.1em' }}>THINGS TO NOTE</Text>
+      <Text type={'h2'} class='text-center text-black mt-3 mb-8'>Key Information</Text>
+      <Collapsible title='Eligibility Criteria' class='mb-5' collapseGroup='collapsible'>
+        <Text 
+          type={'text-regular'}
+          class='mb-6'
+        >As per NEP Policy, a student is eligible for admission on the basis of age such as:</Text>
+
+        <div class='w-full flex flex-row justify-between'>
+          <CritieriaPill
+          title='Nursery'
+          subtitle='3 years+'
+          />
+          <CritieriaPill
+          title='LKG'
+          subtitle='4 years+'
+          />
+          <CritieriaPill
+          title='UKG'
+          subtitle='5 years+'
+          />
+          <CritieriaPill
+          title='Grade 1'
+          subtitle='6 years+'
+          />
+        </div>
+
+        <div class='w-full flex flex-row justify-between mt-9'>
+          <CritieriaPill
+          title='Grade 2'
+          subtitle='7 years+'
+          />
+          <CritieriaPill
+          title='Grade 3'
+          subtitle='8 years+'
+          />
+          <CritieriaPill
+          title='Grade 4'
+          subtitle='9 years+'
+          />
+          <CritieriaPill
+          title='Grade 5'
+          subtitle='10 years+'
+          />
+        </div>
+
+        <div class='w-full flex flex-row justify-between mt-9'>
+          <CritieriaPill
+          title='Grade 6'
+          subtitle='11 years+'
+          />
+          <CritieriaPill
+          title='Grade 7'
+          subtitle='12 years+'
+          />
+          <CritieriaPill
+          title='Grade 8'
+          subtitle='13 years+'
+          />
+          <CritieriaPill
+          title='Grade 9'
+          subtitle='14 years+'
+          />
+        </div>
+
+        <div class='w-full flex flex-row justify-between mt-9'>
+          <CritieriaPill
+            title='Grade 10'
+            subtitle='15 years+'
+          />
+        </div>
+
+      </Collapsible>
+      <Collapsible title='Scholarship' class='mb-5' collapseGroup='collapsible'>
+        <Text 
+          type={'text-regular'}
+        >Explore details on scholarships and their eligibility criteria by clicking <a href="#" class='underline font-bold'>here.</a></Text>
+
+        <div>
+
+        </div>
+      </Collapsible>
+      <Collapsible title='Transportation' class='mb-5' collapseGroup='collapsible'>
+        <ul class="list-disc marker:text-2xl relative left-5 w-[95%]">
+          <li>
+            <Text type={'text-regular'}>Students using the school bus must be at the bus stop at least 5 minutes before the scheduled arrival time.</Text>
+          </li>
+          <li>
+            <Text type={'text-regular'}>The bus will stop only at the designated pick-up point.</Text>
+          </li>
+          <li>
+            <Text type={'text-regular'}>Students must use their assigned bus and bus stop, and any changes require prior written permission from the school authorities.</Text>
+          </li>
+          <li>
+            <Text type={'text-regular'}>Pre-Primary and Primary children will only be released to their parent/guardian. If the parent/guardian is not present at the pick-up point, the child will be returned to the school, and parents must collect them directly from the school.</Text>
+          </li>
+          <li>
+            <Text type={'text-regular'}>Fees paid are non-refundable.</Text>
+          </li>
+        </ul>
+
+        <div>
+
+        </div>
+      </Collapsible>
+
+      <Text type={'text-subtitle'} class='text-center text-black mt-9' style={{ opacity: 0.6, letterSpacing: '0.1em' }}>Meet us in Person</Text>
+      <Text type={'h2'} class='text-center text-black mt-3 mb-8  max-md:mb-0'>Schedule a Visit</Text>
+
+      <div class='mt-[44px] mb-[72px] flex flex-row flex-wrap w-full justify-center max-md:justify-center max-md:mb-5'>
+        <div class='flex flex-row rounded-lg p-6 max-w-[490px] w-[90%]' style={{
+          border: '1px solid rgba(40, 40, 40, 0.12)'
+        }}>
+          <div class='w-8 h-8 mr-4 relative top-1'>
+            <LocationIcon />
+          </div>
+          <div>
+            <Text type='h4' class='text-black mb-2'>Whitefield Campus</Text>
+            <Text
+              type='text-sm'
+              style={{
+                color: '#282828',
+                opacity: 0.8
+              }}>
+              Nallurhalli Rd, Palm Meadows, Nallurhalli, Whitefield, Bengaluru, Karnataka 560066
+              <br/>
+              <br/>
+              Contact us : +91 7899 738 130
+              <br/>
+              <br/>
+              
+              Email: admission.wf@glentreeacademy.com
+            </Text>
+          </div>
+
+        </div>
+
+        <div class='flex flex-row rounded-lg p-6 max-w-[490px] w-[90%] ml-[72px] max-md:ml-0 max-md:mt-4' style={{
+          border: '1px solid rgba(40, 40, 40, 0.12)'
+        }}>
+          <div class='w-8 h-8 mr-4 relative top-1'>
+            <LocationIcon />
+          </div>
+          <div>
+            <Text type='h4' class='text-black mb-2'>Sarjapur Campus</Text>
+            <Text
+              type='text-sm'
+              style={{
+                color: '#282828',
+                opacity: 0.8
+              }}>
+              No.36/5, Halanayakanahalli, Varthur Hobli Bengaluru East Taluk, Bengaluru, Karnataka 560035
+              <br/>
+              <br/>
+              Contact us : +91 9632104368
+              <br/>
+              <br/>
+              
+              Email: admission.wf@glentreeacademy.com
+            </Text>
+          </div>
+
+        </div>
+        
+      </div>
+
+
+      <BigAdmissionCTA />
+
+      <Footer />
+      
+
+
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+  }
+  .collapsible {
+    transition: all 0.3s ease-in-out;
+  }
+</style>
+
+<script>
+  // @@ts-ignore
+
+  // dev script temp
+
+  import collapsible, { openCollapsible } from '../components/admissions/collapsible'
+  collapsible('.collapsible', 0)
+
+  const mainContainer = document.querySelector('.main-container')
+  if (mainContainer) {
+    // scroll to end 
+    // mainContainer.scrollTo(0, mainContainer.scrollHeight)
+  }
+
+</script>

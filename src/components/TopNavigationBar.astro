@@ -1,13 +1,40 @@
 ---
-import Button from '../components/Button.astro'
-import logo from '../images/logo.png'
+import Button from './system/Button.astro'
+import logo from '../images/logo.svg'
 ---
-<header class="w-full bg-black/80 py-3 px-14 box-border flex flex-row justify-between align-middle backdrop-blur-md absolute z-50">
-	<img src={logo} alt="Glentree's Logo" width="69">
-	<li class="flex items-center">
-		<a href="#" class="text-white mr-12">Academics</a>
-		<a href="#" class="text-white mr-12">Campuses</a>
-		<a href="#" class="text-white">Admissions</a>
+<header class="w-screen bg-black/80 py-2 px-14 max-md:px-5 box-border flex flex-row justify-between items-center backdrop-blur-md absolute z-50">
+	<a href="/">
+		<img src={logo} alt="Glentree's Logo" width="80px" >
+	</a>
+	<li class="flex items-center max-md:hidden">
+		<a href="#" class="text-white font-semibold mr-12">Academics</a>
+		<a href="#" class="text-white font-semibold mr-12">Campuses</a>
+		<a href="/admissions" class="text-white font-semibold">Admissions</a>
 	</li>
-	<Button>Apply Now</Button>
+	<Button class='max-md:hidden'>Apply Now</Button>
+	<div class='max-md:block md:hidden'>
+		<div style={{
+			width: '18px',
+			height: '1.5px',
+			color: '#fff',
+			backgroundColor: '#fff',
+			// transform: 'rotate(180deg)',
+		}}></div>
+		<div style={{
+			width: '18px',
+			height: '1.5px',
+			color: '#fff',
+			backgroundColor: '#fff',
+			marginTop: '3.5px'
+			// transform: 'rotate(180deg)',
+		}}></div>
+		<div style={{
+			width: '18px',
+			height: '1.5px',
+			color: '#fff',
+			backgroundColor: '#fff',
+			marginTop: '3.5px'
+			// transform: 'rotate(180deg)',
+		}}></div>
+	</div>
 </header>

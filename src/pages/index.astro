@@ -1,34 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../layouts/Hero.astro';
+
+import Hero from '../components/Hero.astro';
 import TopNavigationBar from '../components/TopNavigationBar.astro';
-import Button from '../components/Button.astro';
 
-import logo from '../images/logo.png'
-import LFLKids from '../images/LFLKids.png'
-import ourMottoSectionBG from '../images/ourMottoSectionBG.png'
-import clubsThumb from '../images/clubsThumb.png'
-import coscholasticsThumb from '../images/coscholasticsThumb.png'
-import campusSectionPatternBG from '../images/campusSectionPatternBG.png'
-import bigCTASplashVectorBG from '../images/bigCTASplashVectorBG.svg'
-import bigCTAKidBG from '../images/bigCTAKidBG.png'
-import footerBG from '../images/footerBG.png'
+import Updates from '../components/landingPage/Updates/index.astro'
+import LFL from '../components/landingPage/LFL.astro'
+import WhyGlentree from '../components/landingPage/whyGlentree.astro';
+import Campus from '../components/landingPage/Campus.astro';
 
-import facebook from '../icons/socials/Facebook.svg'
-import instagram from '../icons/socials/Instagram.svg'
-import linkedin from '../icons/socials/LinkedIn.svg'
-import twitter from '../icons/socials/Twitter.svg'
-import youtube from '../icons/socials/YouTube.svg'
+import Testimonial from '../components/landingPage/Testimonial.astro';
+import BigAdmissionCTA from '../components/BigAdmissionCTA.astro';
 
-import emailIcon from '../icons/Email.svg'
-import phoneIcon from '../icons/Phone.svg'
-import locationIcon from '../icons/Location.svg'
 
 import '../global.css'
 
 import '@fontsource/nunito-sans';
-import FilledArrowCircle from '../icons/FilledArrowCircle.astro';
-import QuoteIcon from '../icons/quoteIcon.png';
+import GlentreeFamily from '../components/landingPage/GlentreeFamily.astro';
+import Footer from '../components/landingPage/Footer.astro';
 
 ---
 
@@ -42,297 +31,37 @@ import QuoteIcon from '../icons/quoteIcon.png';
         overflowX: 'hidden',
       }}
     >
-      <Hero />
+     <Hero />
       
       <!-- Carousell/Updatexss -->
-      <div 
-        style={{
-          background: 'linear-gradient(180deg, #000000 0%, #142C1E 108.48%)',
-        }}
-        class="flex flex-row h-[592px]"
-      >
-        <div class="w-screen slider">
-          <!-- <div class='text-white bg-slate-500 w-[34.813rem] h-[22.438rem] mr-3'></div>
-          <div class='text-white bg-slate-500 w-[34.813rem] h-[22.438rem] mr-3'></div>
-          <div class='text-white bg-slate-500 w-[34.813rem] h-[22.438rem] mr-3'></div>
-          <div class='text-white bg-slate-500 w-[34.813rem] h-[22.438rem]'></div> -->
-        </div>
-      </div>
+     <Updates />
       
       <!-- Our MOttto -->
-      <div
-        class="pt-20 px-20 flex flex-row relative overflow-hidden"
-        style={{
-          background: 'linear-gradient(180deg, #3C674F 0%, #23623F 51.08%, #0A5E2F 100%)'
-      }}>
-        <div class="absolute -bottom-2 right-0 w-60 h-32" style={{
-          background: `url(${ourMottoSectionBG})`,
-        }}>
-        </div>
-        <div class="min-w-max">
-          <div class="text-xl font-bold" style={{ letterSpacing: '0.1em', opacity: 0.8 }}>OUR MOTTO</div>
-          <div class="text-5xl font-display tracking-tight">Learning for Life</div>
-          <img src={LFLKids} alt="Kids with Halo Eating Lunch" class="w-96 min-w-min -mt-14"/>
-        </div>
-        <div>
-          <div class="text-xl">
-            Our curriculum is designed to harness their natural curiosity and foster community-building and discipline through interactions with the environment. Students share ideas and experiences, and teachers serve as facilitators, learners, guides, and mentors.
-            <br/><br/>
-            We follow an integrated curriculum based on CBSE guidelines and the NCERT, which ensures a well-balanced and challenging education that is also enjoyable.
-          </div>
-          <Button secondary class="mt-10">View Philoshphy</Button>
-        </div>
-      </div>
       
+      <LFL />
       <!-- Why Glentreee -->
-      <div class="py-14 text-center flex flex-col items-center" style={{ background: 'linear-gradient(249.28deg, #FBFFF7 0%, #F6FFED 0%, #FFFAF7 100%)' }} >
-        <div class="text-xl font-bold" style={{ letterSpacing: '0.1em', opacity: 0.8, color: '#121212' }}>WHY GLENTREE?</div>
-        <div class="text-5xl font-display tracking-tight text-black mt-6">
-          Give your <span class='text-green-400'>child the best</span> at <span class='bg-accent text-white px-3 py-1 rounded-md'>Glentree Academy</span>
-        </div>
-        <div class='text-xl text-black mt-7 font-semibold' style={{ width: '45%' }}>At Glentree Academy, we prioritize practical learning that encourages children to explore and interact with the world consciously.</div>
-        <div class='flex flex-row mt-16 w-full justify-between px-56'>
-          <div class='flex flex-col items-center'>
-            <img src={clubsThumb} alt='Glentree Clubs Thumbnail' class='w-[254.71px] h-[335.96px]' />
-            <div class='flex flex-row items-center'>
-              <div class="text-[2.5rem] text-accent2 font-display tracking-tight mt-3">Glentree Clubs</div>
-              <div class="w-7 h-7 ml-3 top-3 relative">
-                <FilledArrowCircle pathClass='fill-accent2' />
-              </div>
-            </div>
-            <div class='text-lg text-black w-[60%]'>Discover dynamic student clubs for personalised learning</div>
-          </div>
-          <div class='flex flex-col items-center'>
-            <img src={coscholasticsThumb} alt='Glentree Clubs Thumbnail' class='w-[254.71px] h-[335.96px]' />
-            <div class='flex flex-row items-center'>        
-              <div class="text-[2.5rem] text-accent font-display tracking-tight mt-3">Co-Scholastics</div>
-              <div class="w-7 h-7 ml-3 top-3 relative">
-                <FilledArrowCircle pathClass='fill-accent' />
-              </div>
-            </div>
-            <div class='text-lg text-black w-[60%]'>Inspiring Co-Scholastic Programs for All-Round Development</div>
-          </div>
-        </div>
-        
-      </div>
+      <WhyGlentree />
 
 
       <!-- Our Campauses -->
-      <div class='bg-accent relative p-20'>
-        <img src={campusSectionPatternBG} class='w-screen absolute top-0 left-0 -z-1' />
-        <div class='relative z-10'>
-          <div class="text-xl font-bold text-white uppercase" style={{ letterSpacing: '0.1em', opacity: 0.8 }}>Our Campuses</div>
-          <div class="text-5xl font-display tracking-tight text-white mt-3">
-            Our Branches
-          </div>
-          <div class='flex flex-row justify-between mt-8'>
-            <div class='w-[623px] h-[504px] rounded-2xl bg-slate-100'></div>
-            <div class='w-[623px] h-[504px] rounded-2xl bg-slate-200'></div>
-          </div>
-        </div>
-      </div>
+      <Campus />
 
       <!-- Testimonials -->
 
-      <div class='bg-white relative p-14 flex flex-col items-center'>
-        <div class="text-xl font-bold text-black uppercase" style={{ letterSpacing: '0.1em', opacity: 0.6 }}>Hear From Our Parents</div>
-        <div class="text-5xl font-display tracking-tight text-black mt-3 relative">
-          See why parents <span class='text-accent2'>trust Glentree</span>
-          <div class='w-[84px] h-[67px] absolute -top-16 -left-28'>
-            <img src={QuoteIcon} class='w-full' />
-          </div>
-          <div class='w-[84px] h-[67px] absolute -bottom-2 -right-32 -scale-100'>
-            <img src={QuoteIcon} class='w-full' />
-          </div>
-        </div>
-        <div class='w-full h-[192px] rounded-2xl bg-white mt-7 border-gray-300 border'></div>
-        <div class='w-full h-[271px] rounded-2xl bg-slate-100 mt-7'></div>
-      </div>
+      <!-- <div class='w-5 h-32'></div> -->
+      <Testimonial />
 
       <!-- Admission BIG CTA -->
-      <div class='px-20 py-6 bg-white'>
-        <div class='w-full rounded-lg border border-black/25 p-3'>
-          <div 
-            class='w-full rounded-lg flex flex-col items-center py-20 relative overflow-hidden'
-            style={{
-              background: 'linear-gradient(180deg, #3C674F 0%, #00401C 63.69%)',
-              boxShadow: '0px 0px 0px 3px rgba(255, 255, 255, 0.2)'
-            }}>
-              <img src={bigCTASplashVectorBG} class="absolute -top-2 left-0" />
-              <img src={bigCTAKidBG} class="absolute bottom-0 right-0" />
-              <div class="text-xl font-bold uppercase" style={{ letterSpacing: '0.1em' }}>Enroll Now</div>
-              <div class="text-5xl font-display tracking-tight mt-5 relative">
-                Admissions Open for 2023-24
-              </div>
-              <div class="text-xl w-1/2 text-center mt-4">We believe that every child has immense potential that, in the right environment, can be uncovered, nurtured and realised.</div>
-              <div class='flex flex-row mt-10'>
-                <Button>Apply Now!</Button>
-                <Button secondary class='ml-4'>View Criteria</Button>
-              </div>
-            </div>
-        </div>
-      </div>
+      <BigAdmissionCTA />
 
       <!-- Glentree Family -->
-
-      <div class='px-20 pt-14 pb-9 bg-white flex flex-col items-center'>
-        <div class="text-xl font-bold text-black uppercase" style={{ letterSpacing: '0.1em', opacity: 0.6 }}>Our Sister Schools</div>
-        <div class="text-5xl font-display tracking-tight text-black mt-3 relative">
-          The Glentree <span class='text-accent2'>Family Tree</span>
-        </div>
-        <div class='flex flex-row w-full justify-between mt-14'>
-          <div class='flex-1'>
-            <div class='w-[28vw] h-[23vw] border border-red-500 rounded-lg'></div>
-            <div class='text-black font-display mt-6 text-2xl'>Little Elly</div>
-            <div class='text-black mt-2 text-lg w-[28vw]'>India's favorite preschool with 130+ centers in South and West India. Stimulating curriculum based on Montessori and Steiner models.</div>
-          </div>
-          <div class='flex-1'>
-            <div class='w-[28vw] h-[23vw] border border-red-500 rounded-lg'></div>
-            <div class='text-black font-display mt-6 text-2xl'>Little Elly</div>
-            <div class='text-black mt-2 text-lg w-[28vw]'>India's favorite preschool with 130+ centers in South and West India. Stimulating curriculum based on Montessori and Steiner models.</div>
-            
-          </div>
-          <div class='flex-1'>
-            <div class='w-[28vw] h-[23vw] border border-red-500 rounded-lg'></div>
-            <div class='text-black font-display mt-6 text-2xl'>Little Elly</div>
-            <div class='text-black mt-2 text-lg w-[28vw]'>India's favorite preschool with 130+ centers in South and West India. Stimulating curriculum based on Montessori and Steiner models.</div>
-          </div>
-        </div>
-      </div>
+      <GlentreeFamily />
 
 
       <!-- Footer -->
-
-      <div
-        class='w-full pt-12'
-        style={{
-          background: `linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(${footerBG})`,
-          backgroundAttachment: 'fixed',
-          backgroundPosition: 'center 200px',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover'
-      }}>
-        <div class='flex flex-row w-full justify-between px-16'>
-          <div>
-            <img src={logo} alt="Glentree's Logo" class="w-32 h-auto self-start">
-            <div class='flex flex-row mt-6'>
-              <a href="#" class='mr-5'>
-                <div class='h-[19px]'>
-                  <img src={facebook} alt="Facebook Icon" class="w-full h-full">
-                </div>
-              </a>
-  
-              <a href="#" class='mr-5'>
-                <div class='h-[19px]'>
-                  <img src={twitter} alt="Twitter Icon" class="w-full h-full">
-                </div>
-              </a>
-  
-              <a href="#" class='mr-5'>
-                <div class='h-[19px]'>
-                  <img src={instagram} alt="Instagram Icon" class="w-full h-full">
-                </div>
-              </a>
-  
-              <a href="#" class='mr-5'>
-                <div class='h-[19px]'>
-                  <img src={linkedin} alt="Linkedin Icon" class="w-full h-full">
-                </div>
-              </a>
-  
-              <a href="#" class='mr-5'>
-                <div class='h-[19px]'>
-                  <img src={youtube} alt="Youtube Icon" class="w-full h-full">
-                </div>
-              </a>
-  
-  
-            </div>
-          </div>
-
-          <div class='flex flex-row'>
-            <div>
-              <div class='text-xl text-green-300 mb-7'>Sarjapur</div>
-  
-              <div class='flex flex-row items-center mb-3'>
-                <div class='w-5'>
-                  <img src={emailIcon} alt="Email Icon" class="w-full h-full">
-                </div>
-                <div class='ml-2 text-lg'>contact@company.com</div>
-              </div>
-  
-              <div class='flex flex-row items-center mb-3'>
-                <div class='w-5'>
-                  <img src={phoneIcon} alt="Phone Icon" class="w-full h-full">
-                </div>
-                <div class='ml-2 text-lg'>(414) 687 - 5892</div>
-              </div>
-  
-              <div class='flex flex-row items-center mb-3'>
-                <div class='w-5'>
-                  <img src={locationIcon} alt="Location Icon" class="w-full h-full">
-                </div>
-                <div class='ml-2 text-lg'>xx xx</div>
-              </div>
-            </div>
-            <div class='ml-16'>
-              <div class='text-xl text-green-300 mb-7'>Whitefield</div>
-  
-              <div class='flex flex-row items-center mb-3'>
-                <div class='w-5'>
-                  <img src={emailIcon} alt="Email Icon" class="w-full h-full">
-                </div>
-                <div class='ml-2 text-lg'>contact@company.com</div>
-              </div>
-  
-              <div class='flex flex-row items-center mb-3'>
-                <div class='w-5'>
-                  <img src={phoneIcon} alt="Phone Icon" class="w-full h-full">
-                </div>
-                <div class='ml-2 text-lg'>(414) 687 - 5892</div>
-              </div>
-  
-              <div class='flex flex-row items-center mb-3'>
-                <div class='w-5'>
-                  <img src={locationIcon} alt="Location Icon" class="w-full h-full">
-                </div>
-                <div class='ml-2 text-lg'>xx xx</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class='w-full h-[1px] bg-gray-500/40 mt-24'></div>
-
-        <div class='flex flex-row py-6 font-normal px-16 w-full justify-between'>
-          <div class='text-lg'>Copyright © 2023</div>
-          <div class='text-lg'>All Rights Reserved | 
-            <a href='#' class="text-accent2">Terms and Conditions</a> |
-            <a href='#' class="text-accent2">Privacy Policy</a>
-          </div>
-        </div>
-      </div>
+      <Footer />
+      
 
     </div>
   </main>
 </Layout>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-
-
-<script>
-  // import { tns } from 'tiny-slider/src/tiny-slider'
-  // var slider = tns({
-  //   container: '.slider',
-  //   items: 3,
-  //   slideBy: 'page',
-  //   mouseDrag: true,
-  //   loop: false,
-  //   autoWidth: true
-  // });
-  // scroll to end
-
-  // temp script for dev
-  const main = document.querySelector('.main-container')
-  main.scrollTo(0, main.scrollHeight);
-</script>

@@ -1,0 +1,122 @@
+---
+import logo from '../../images/logo.svg'
+
+import facebook from '../../icons/socials/Facebook.svg'
+import instagram from '../../icons/socials/Instagram.svg'
+import linkedin from '../../icons/socials/LinkedIn.svg'
+import twitter from '../../icons/socials/Twitter.svg'
+import youtube from '../../icons/socials/YouTube.svg'
+import emailIcon from '../../icons/Email.svg'
+import phoneIcon from '../../icons/Phone.svg'
+import locationIcon from '../../icons/Location.svg'
+import Text from '../system/Text.astro'
+
+---
+<div
+  class='w-full pt-12 flex flex-col items-center'
+  style={{
+    background: 'black'
+    // background: `linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(${footerBG})`,
+    // backgroundAttachment: 'fixed',
+    // backgroundPosition: 'center 200px',
+    // backgroundRepeat: 'no-repeat',
+    // backgroundSize: 'cover'
+}}>
+  <div class='flex flex-row max-md:flex-col w-full justify-between px-16 max-md:px-6'>
+    <div>
+      <img src={logo} alt="Glentree's Logo" class="w-32 h-auto self-start">
+      <div class='flex flex-row mt-6'>
+        <a href="#" class='mr-5'>
+          <div class='h-[19px]'>
+            <img src={facebook} alt="Facebook Icon" class="w-full h-full">
+          </div>
+        </a>
+
+        <a href="#" class='mr-5'>
+          <div class='h-[19px]'>
+            <img src={twitter} alt="Twitter Icon" class="w-full h-full">
+          </div>
+        </a>
+
+        <a href="#" class='mr-5'>
+          <div class='h-[19px]'>
+            <img src={instagram} alt="Instagram Icon" class="w-full h-full">
+          </div>
+        </a>
+
+        <a href="#" class='mr-5'>
+          <div class='h-[19px]'>
+            <img src={linkedin} alt="Linkedin Icon" class="w-full h-full">
+          </div>
+        </a>
+
+        <a href="#" class='mr-5'>
+          <div class='h-[19px]'>
+            <img src={youtube} alt="Youtube Icon" class="w-full h-full">
+          </div>
+        </a>
+
+
+      </div>
+    </div>
+
+    <div class='flex flex-row max-md:flex-col'>
+      <div class='max-md:mt-8 max-md:mb-5'>
+        <Text type={'text-base'} class='text-green-300 mb-7 max-md:mb-3 font-semibold'>Sarjapur</Text>
+
+        <div class='flex flex-row items-center mb-3'>
+          <div class='w-5'>
+            <img src={emailIcon} alt="Email Icon" class="w-full h-full">
+          </div>
+          <Text type={'text-regular'} class='ml-2'>contact@company.com</Text>
+        </div>
+
+        <div class='flex flex-row items-center mb-3'>
+          <div class='w-5'>
+            <img src={phoneIcon} alt="Phone Icon" class="w-full h-full">
+          </div>
+          <Text type={'text-regular'} class='ml-2'>(414) 687 - 5892</Text>
+        </div>
+
+        <div class='flex flex-row items-center mb-3'>
+          <div class='w-5'>
+            <img src={locationIcon} alt="Location Icon" class="w-full h-full">
+          </div>
+          <Text type={'text-regular'} class='ml-2'>xx xx</Text>
+        </div>
+      </div>
+      <div class='ml-16 max-md:ml-0'>
+        <Text type={'text-base'} class='text-green-300 mb-7 max-md:mb-3 font-semibold'>Whitefield</Text>
+
+        <div class='flex flex-row items-center mb-3'>
+          <div class='w-5'>
+            <img src={emailIcon} alt="Email Icon" class="w-full h-full">
+          </div>
+          <Text type={'text-regular'} class='ml-2'>contact@company.com</Text>
+        </div>
+
+        <div class='flex flex-row items-center mb-3'>
+          <div class='w-5'>
+            <img src={phoneIcon} alt="Phone Icon" class="w-full h-full">
+          </div>
+          <Text type={'text-regular'} class='ml-2'>(414) 687 - 5892</Text>
+
+        </div>
+
+        <div class='flex flex-row items-center mb-3'>
+          <div class='w-5'>
+            <img src={locationIcon} alt="Location Icon" class="w-full h-full">
+          </div>
+          <Text type={'text-regular'} class='ml-2'>xx xx</Text>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='w-full h-[1px] bg-gray-500/40 mt-24 max-md:mt-5 max-md:w-[85%]'></div>
+
+  <div class='flex flex-row py-6 font-normal px-16 w-full justify-between max-md:flex-col max-md:px-6 text-center'>
+    <Text type={'text-regular'}>Copyright © 2023
+    </Text>
+  </div>
+</div>

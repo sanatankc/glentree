@@ -1,0 +1,44 @@
+---
+import ourMottoSectionBG from '../../images/ourMottoSectionBG.png'
+import LFLKids from '../../images/LFLKids.png'
+import Button from '../system/Button.astro'
+import Text from '../system/Text.astro'
+
+---
+
+<div
+  class="pt-20 px-20 flex flex-row relative overflow-hidden max-md:pt-8 max-md:px-6 max-md:flex-col"
+  style={{
+    background: 'linear-gradient(180deg, #3C674F 0%, #23623F 51.08%, #0A5E2F 100%)'
+}}>
+  <div class="absolute -bottom-2 right-0 w-60 h-32 max-md:hidden" style={{
+    background: `url("${ourMottoSectionBG}")`,
+  }}>
+  </div>
+  <div class="min-w-max">
+    <Text 
+      type="text-subtitle"
+      style={{ letterSpacing: '0.1em', opacity: 0.8 }}
+    >OUR MOTTO</Text>
+    <Text 
+      type="h2"
+      class="max-md:mt-1 max-md:mb-5"
+    >Learning for Life</Text>
+    <img src={LFLKids} alt="Kids with Halo Eating Lunch" class="w-96 min-w-min -mt-14 max-md:hidden"/>
+  </div>
+  <div class='flex flex-col'>
+    <Text
+      type='text-base'
+    >
+      <span>
+        Our curriculum is designed to harness their natural curiosity and foster community-building and discipline through interactions with the environment. Students share ideas and experiences, and teachers serve as facilitators, learners, guides, and mentors.
+        <br/><br/>
+        We follow an integrated curriculum based on CBSE guidelines and the NCERT, which ensures a well-balanced and challenging education that is also enjoyable.
+
+      </span>
+    </Text>
+    <Button secondary class="mt-10">View Philoshphy</Button>
+    <img src={LFLKids} alt="Kids with Halo Eating Lunch" class="w-96 min-w-min -mt-14 max-md:block hidden max-md:w-[85vw] max-md:min-w-0 max-md:-mt-6 max-md:self-center relative left-8"/>
+
+  </div>
+</div>

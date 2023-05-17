@@ -16,11 +16,13 @@ const Icon = icon ? icon : FilledArrowCircle;
       boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
       background: primary ? "linear-gradient(263.64deg, #4B916A 6.11%, #028339 95.99%)" : 'white'
     }}>
-    <span class:list={[primary ? "text-white" : "text-green-400", "font-bold"]}>
+    <span class:list={[primary ? "text-white" : "text-green-400", "font-semibold", "text-lg max-md:text-base"]}>
       <slot/>
     </span>
     <div class="w-5 h-5 ml-2">
-      <Icon color={primary ? "white" : "#3C674F"} />
+      <slot name="icon">
+        <Icon color={primary ? "white" : "#3C674F"} />
+      </slot>
     </div>
   </button>
 </div>
