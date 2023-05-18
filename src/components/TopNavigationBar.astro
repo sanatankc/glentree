@@ -2,16 +2,14 @@
 import Button from './system/Button.astro'
 import logo from '../images/logo.svg'
 ---
-<header class="w-screen bg-black/80 py-2 px-14 max-md:px-5 box-border flex flex-row justify-between items-center backdrop-blur-md absolute z-50">
+<header class="w-screen bg-black/80 py-2 px-14 max-md:px-5 box-border flex flex-row justify-between items-center backdrop-blur-md absolute z-[99]">
 	<a href="/">
 		<img src={logo} alt="Glentree's Logo" width="80px" >
 	</a>
-	<li class="flex items-center max-md:hidden">
-		<a href="#" class="text-white font-semibold mr-12">Academics</a>
-		<a href="#" class="text-white font-semibold mr-12">Campuses</a>
-		<a href="/admissions" class="text-white font-semibold">Admissions</a>
-	</li>
-	<Button class='max-md:hidden'>Apply Now</Button>
+	<div class="flex felx-row items-center relativ">
+		<a href="/admissions" class="text-white font-semibold hover:underline mr-8">Admission Process</a>
+		<Button class='max-md:hidden'>Apply Now</Button>
+	</div>
 	<div class='max-md:block md:hidden'>
 		<div style={{
 			width: '18px',

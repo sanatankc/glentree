@@ -5,74 +5,122 @@ import Text from './system/Text.astro';
 import psjaAward from '../images/psjaAward.png'
 import meritAwards from '../images/meritAwards.png'
 import heroBG from '../images/heroBG.png'
+import slide1 from '../images/slides/1.png'
+import slide2 from '../images/slides/2.png'
+import slide3 from '../images/slides/3.png'
+import slide4 from '../images/slides/4.png'
+import slide5 from '../images/slides/5.png'
+import slide6 from '../images/slides/6.png'
+import slide7 from '../images/slides/7.png'
+
+const slides = [
+  slide1,
+  slide2,
+  slide3,
+  slide4,
+  slide5,
+  slide6,
+  slide7,
+]
+
+
 ---
 <div 
-  class="h-screen w-full bg-cover bg-center flex flex-col items-center justify-center max-md:px-5 relative"
-  style={{
-    backgroundImage: `linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 96.35%), url("${heroBG}")`,
-    // backgroundAttachment: 'fixed'
-  }}
+  class="h-screen w-full bg-cover bg-center relative bg-black"
 >
-  <div class="h-[30vh] absolute bottom-0 left-0 w-full md:hidden" style={{
-    background: 'linear-gradient(180deg, rgba(3, 3, 3, 0) 0%, #030303 10.29%)'
-  }}></div>
-  <div class="w-full h-full flex flex-col max-md:justify-end">
-    <div class="mt-auto flex flex-col items-center max-md:items-start max-md:mt-0">
-      <Text
-        type="h1"
-        class='mt-28 text-center max-md:text-left max-md:mt-0'
-      >Unlock your child’s potential</Text>
-      <Text
-        type="text-lg"
-        class='mt-3 text-2xl text-center'
-      >Shaping A Brighter Future for Your Child</Text>
-      <div class="flex flex-row mt-5">
-        <Button>Apply Now</Button>
-        <div class="ml-3 max-md:hidden">
-          <Button secondary>Request for Callback</Button>
+  {slides.map(slide => (
+    <div class='slideshow-item w-full h-full absolute top-0 left-0 bg-no-repeat bg-cover' style={{
+      backgroundImage: `linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 96.35%), url("${slide}")`,
+      transition: '1s all ease-in-out'
+    }}></div>
+  ))}
+  <div class="relative z-50 flex flex-col h-full">
+    <div class="h-[30vh] absolute bottom-0 left-0 w-full md:hidden items-center justify-center max-md:px-5" style={{
+      background: 'linear-gradient(180deg, rgba(3, 3, 3, 0) 0%, #030303 10.29%)'
+    }}></div>
+    <div class="w-full h-full flex flex-col max-md:justify-end max-md:px-5">
+      <div class="mt-auto flex flex-col items-center max-md:items-start max-md:mt-0">
+        <Text
+          type="h1"
+          class='mt-28 text-center max-md:text-left max-md:mt-0'
+        >Unlock your child’s potential</Text>
+        <Text
+          type="text-lg"
+          class='mt-3 text-2xl text-center'
+        >Shaping A Brighter Future for Your Child</Text>
+        <div class="flex flex-row mt-5">
+          <Button>Apply Now</Button>
+          <!-- <div class="ml-3 max-md:hidden">
+            <Button secondary>Request for Callback</Button>
+          </div> -->
         </div>
       </div>
-    </div>
-
-    <div class="flex flex-row h-36 w-full mt-auto max-md:mt-12 items-center justify-around flex-wrap max-md:flex-col max-md:h-auto max-md:items-start relative z-20">
-      <div class="flex flex-row max-md:mb-5">
-        <img src={psjaAward} alt="PSJA Award" class="h-12" />
-        <div class="ml-4">
-          <Text type='text-sm'>
-            Rank 1 in <span class="text-green-600 font-extrabold">Holistic Education</span>
-          </Text>
-          
-          <Text type='text-sm' class='text-gray-600 max-md:text-sm'>
-            India’s TOP PSJA 2022
-          </Text>
+  
+      <div class="flex flex-row h-36 w-full mt-auto max-md:mt-12 items-center justify-around flex-wrap max-md:flex-col max-md:h-auto max-md:items-start relative z-20">
+        <div class="flex flex-row max-md:mb-5">
+          <img src={psjaAward} alt="PSJA Award" class="h-12" />
+          <div class="ml-4">
+            <Text type='text-sm'>
+              Rank 1 in <span class="text-green-600 font-extrabold">Holistic Education</span>
+            </Text>
+            
+            <Text type='text-sm' class='text-gray-600 max-md:text-sm'>
+              India’s TOP PSJA 2022
+            </Text>
+          </div>
         </div>
-      </div>
-
-      <div class="flex flex-row max-md:mb-5">
-        <img src={meritAwards} alt="PSJA Award" class="h-12 mr-[8px]" />
-        <div class="ml-4">
-          <Text type='text-sm'>
-            Rank 1 in <span class="text-green-600 font-extrabold">Holistic Education</span>
-          </Text>
-          
-          <Text type='text-sm' class='text-gray-600 max-md:text-sm'>
-            India’s TOP PSJA 2022
-          </Text>
+  
+        <div class="flex flex-row max-md:mb-5">
+          <img src={meritAwards} alt="PSJA Award" class="h-12 mr-[8px]" />
+          <div class="ml-4">
+            <Text type='text-sm'>
+              Best <span class="text-green-600 font-extrabold">Emerging</span> School
+            </Text>
+            
+            <Text type='text-sm' class='text-gray-600 max-md:text-sm'>
+              India’s School Merit Award
+            </Text>
+          </div>
         </div>
-      </div>
-
-      <div class="flex flex-row max-md:mb-5">
-        <img src={psjaAward} alt="PSJA Award" class="h-12" />
-        <div class="ml-4">
-          <Text type='text-sm'>
-            Rank 1 in <span class="text-green-600 font-extrabold">Holistic Education</span>
-          </Text>
-          
-          <Text type='text-sm' class='text-gray-600 max-md:text-sm'>
-            India’s TOP PSJA 2022
-          </Text>
+  
+        <div class="flex flex-row max-md:mb-5">
+          <img src={psjaAward} alt="PSJA Award" class="h-12" />
+          <div class="ml-4">
+            <Text type='text-sm'>
+              Rank 1 in <span class="text-green-600 font-extrabold">Integrated Learning</span>
+            </Text>
+            
+            <Text type='text-sm' class='text-gray-600 max-md:text-sm'>
+              India’s TOP PSJA 2022
+            </Text>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  const slideshowItems = Array.from(document.querySelectorAll<HTMLElement>('.slideshow-item'));
+  let slideshowIndex = 0;
+
+
+  function moveSlides(items: Array<HTMLElement>) {
+    items.forEach((item, i) => {
+      console.log(i, slideshowIndex)
+      if (i === slideshowIndex) {
+        console.log('here')
+        item.style.opacity = '1';
+        return;
+      } else {
+        item.style.opacity = '0'
+      }
+    })
+    slideshowIndex = (slideshowIndex + 1) % items.length;
+  }
+  
+  moveSlides(slideshowItems)
+  setInterval(() => {
+    moveSlides(slideshowItems)
+  }, 5000)
+</script>
