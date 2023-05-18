@@ -29,7 +29,7 @@ const slides = [
   class="h-screen w-full bg-cover bg-center relative bg-black"
 >
   {slides.map(slide => (
-    <div class='slideshow-item w-full h-full absolute top-0 left-0 bg-no-repeat bg-cover' style={{
+    <div class='slideshow-item w-full h-full absolute top-0 left-0 bg-no-repeat bg-cover bg-center' style={{
       backgroundImage: `linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 96.35%), url("${slide}")`,
       transition: '1s all ease-in-out'
     }}></div>
