@@ -6,9 +6,9 @@ import Text from './system/Text.astro';
 ---
 
 <div class='px-20 py-6 bg-white max-md:px-4 max-md:py-4'>
-  <div class='w-full rounded-lg border border-black/25 p-3 max-md:p-0 max-md:border-none'>
+  <div class='w-full rounded-2xl border border-black/25 p-3 max-md:p-0 max-md:border-none'>
     <div 
-      class='w-full rounded-lg flex flex-col items-center py-20 relative overflow-hidden max-md:py-10'
+      class='w-full rounded-2xl flex flex-col items-center py-20 relative overflow-hidden max-md:py-10'
       style={{
         background: 'linear-gradient(180deg, #3C674F 0%, #00401C 63.69%)',
         boxShadow: 'inset 0px 0px 0px 5px rgba(255, 255, 255, 0.2)'
@@ -19,10 +19,14 @@ import Text from './system/Text.astro';
         <Text type={'h2'} class='relative mt-5 text-center leading-10'>
           Admissions Open <br class='hidden max-md:block' /> for 2023-24
         </Text>
-        <Text type={'text-base'} class='w-[70%] max-md:w-[85%] text-center mt-5 max-md:mt-3'>We believe that every child has immense potential that, in the right environment, can be uncovered, nurtured and realised.</Text>
+        <Text type={'text-base'} class='w-[70%] max-md:w-[88%] text-center mt-5 max-md:mt-3'>We believe that every child has immense potential that, in the right environment, can be uncovered, nurtured and realised.</Text>
         <div class='flex flex-row mt-10 max-md:mt-8'>
-          <Button>Apply Now!</Button>
-          <Button secondary class='ml-4 max-md:hidden'>View Criteria</Button>
+          <a href="https://admissions.glentreeacademy.com">
+            <Button>Apply Now!</Button>
+          </a>
+          <a href="/admissions">
+            <Button secondary class='ml-4 max-md:hidden'>View Criteria</Button>
+          </a>
         </div>
       </div>
   </div>

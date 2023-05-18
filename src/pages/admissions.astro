@@ -37,7 +37,9 @@ import AdmissionStep from '../components/admissions/AdmissionStep.astro';
       }}>
         <Text type={'h2'} class='mt-14 max-md:mt-10'>Admissions</Text>
         <Text type={'text-base'} class='mt-3 text-center max-md:w-[90%]' >Your child’s journey towards a holistic learning environment starts here.</Text>
-        <Button class='mt-3'>Apply Now</Button>
+        <a href="https://admissions.glentreeacademy.com">
+          <Button class='mt-3'>Apply Now</Button>
+        </a>
       </div>
       
       <div class='text-black'>
@@ -122,7 +124,7 @@ import AdmissionStep from '../components/admissions/AdmissionStep.astro';
           class='mb-6'
         >As per NEP Policy, a student is eligible for admission on the basis of age such as:</Text>
 
-        <div class='w-full flex flex-row justify-between'>
+        <div class='grid-cols-4 grid gap-y-9 max-md:grid-cols-2 max-md:gap-y-5'>
           <CritieriaPill
           title='Nursery'
           subtitle='3 years+'
@@ -139,9 +141,6 @@ import AdmissionStep from '../components/admissions/AdmissionStep.astro';
           title='Grade 1'
           subtitle='6 years+'
           />
-        </div>
-
-        <div class='w-full flex flex-row justify-between mt-9'>
           <CritieriaPill
           title='Grade 2'
           subtitle='7 years+'
@@ -158,9 +157,6 @@ import AdmissionStep from '../components/admissions/AdmissionStep.astro';
           title='Grade 5'
           subtitle='10 years+'
           />
-        </div>
-
-        <div class='w-full flex flex-row justify-between mt-9'>
           <CritieriaPill
           title='Grade 6'
           subtitle='11 years+'
@@ -177,9 +173,6 @@ import AdmissionStep from '../components/admissions/AdmissionStep.astro';
           title='Grade 9'
           subtitle='14 years+'
           />
-        </div>
-
-        <div class='w-full flex flex-row justify-between mt-9'>
           <CritieriaPill
             title='Grade 10'
             subtitle='15 years+'
@@ -190,7 +183,7 @@ import AdmissionStep from '../components/admissions/AdmissionStep.astro';
       <Collapsible title='Scholarship' class='mb-5' collapseGroup='collapsible'>
         <Text 
           type={'text-regular'}
-        >To know about our available scholarships and their eligility, please feel free to contact us.</Text>
+        >To know about our available scholarships and their eligibility, please feel free to contact us.</Text>
 
         <div>
 
@@ -230,7 +223,7 @@ import AdmissionStep from '../components/admissions/AdmissionStep.astro';
           <div class='w-8 h-8 mr-4 relative top-1'>
             <LocationIcon />
           </div>
-          <div>
+          <div class='max-md:w-[88%]'>
             <Text type='h4' class='text-black mb-2'>Whitefield Campus</Text>
             <Text
               type='text-sm'
@@ -257,7 +250,7 @@ import AdmissionStep from '../components/admissions/AdmissionStep.astro';
           <div class='w-8 h-8 mr-4 relative top-1'>
             <LocationIcon />
           </div>
-          <div>
+          <div class='max-md:w-[88%]'>
             <Text type='h4' class='text-black mb-2'>Sarjapur Campus</Text>
             <Text
               type='text-sm'
@@ -272,7 +265,7 @@ import AdmissionStep from '../components/admissions/AdmissionStep.astro';
               <br/>
               <br/>
               
-              Email: admission.wf@glentreeacademy.com
+              Email: admission.gas@gltreeacademy.com
             </Text>
           </div>
 

@@ -1,4 +1,4 @@
-tz---
+---
 import Text from "../system/Text.astro";
 const { image, class: className, name, desc } = Astro.props
 ---
@@ -19,7 +19,7 @@ const { image, class: className, name, desc } = Astro.props
       </div>
     </div>
 
-    <div class='ml-6'>
+    <div class='ml-6 max-md:ml-2'>
       <Text type={'h4'} class=''>{name}</Text>
       <Text type={'text-sm'} class=''>{desc}</Text>
     </div>
