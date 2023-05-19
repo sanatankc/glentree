@@ -23,15 +23,18 @@ import Footer from '../components/landingPage/Footer.astro';
 
 <Layout title="Welcome to Astro.">
   <main class="flex flex-col h-screen w-screen relative">
-    <TopNavigationBar />
     <div 
-      class="flex-1 main-container h-screen w-screen"
-      style={{
-        overflowY: 'overlay',
-        overflowX: 'hidden',
-      }}
+    class="flex-1 main-container h-screen w-screen"
+    style={{
+      overflowY: 'overlay',
+      overflowX: 'hidden',
+    }}
     >
-     <Hero />
+    
+    <div class='flex flex-col h-screen'>
+      <TopNavigationBar />
+      <Hero />
+    </div>
       
       <!-- Carousell/Updatexss -->
      <!-- <Updates /> -->
