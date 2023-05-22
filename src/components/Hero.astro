@@ -6,34 +6,35 @@ import psjaAward from '../images/psjaAward.png'
 import meritAwards from '../images/meritAwards.png'
 import heroBG from '../images/heroBG.png'
 import slide2 from '../images/slides/2.png'
-import slide3 from '../images/slides/3.png'
+// import slide3 from '../images/slides/3.png'
 import slide4 from '../images/slides/4.png'
 import slide5 from '../images/slides/5.png'
 import slide6 from '../images/slides/6.png'
 import slide7 from '../images/slides/7.png'
 
 const slides = [
-  slide2,
-  slide3,
-  slide4,
-  slide5,
-  slide6,
-  slide7,
+  {slide: slide2, position: 'center'},
+  // {slide: slide3, position: 'bottom'},
+  {slide: slide4, position: 'top'},
+  {slide: slide5, position: 'top'},
+  {slide: slide6, position: 'top'},
+  {slide: slide7, position: 'center'},
 ]
 
 
 ---
 <div 
-  class="h-screen w-full bg-cover bg-center relative bg-black flex flex-col"
+  class="h-screen w-full bg-cover bg-top relative bg-black flex flex-col"
 >
     <div class='h-[72.6px] w-full bg-black'>
     </div>
 
     <div class='relative w-full h-full '>
-      {slides.map(slide => (
-        <div class='slideshow-item w-full h-full absolute top-0 left-0 bg-no-repeat bg-cover bg-center' style={{
+      {slides.map(({slide, position}) => (
+        <div class='slideshow-item w-full h-full absolute top-0 left-0 bg-no-repeat bg-cover' style={{
           backgroundImage: `linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 96.35%), url("${slide}")`,
-          transition: '1s all ease-in-out'
+          transition: '1s all ease-in-out',
+          backgroundPosition: position
         }}></div>
       ))}
       <div class="relative z-50 flex flex-col h-full">
