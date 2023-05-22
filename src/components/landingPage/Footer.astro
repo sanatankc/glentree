@@ -62,34 +62,6 @@ import Text from '../system/Text.astro'
 
     <div class='flex flex-row max-md:flex-col'>
       <div class='max-md:mt-8 max-md:mb-5 max-w-[325px]'>
-        <Text type={'text-base'} class='text-green-300 mb-7 max-md:mb-3 font-semibold'>Sarjapur</Text>
-
-        <div class='flex flex-row items-center mb-3'>
-          <div class='w-5'>
-            <img src={emailIcon} alt="Email Icon" class="w-full h-full">
-          </div>
-          <a href="mailto:admission.gas@gltreeacademy.com" class="hover:underline">
-            <Text type={'text-regular'} class='ml-2'>admission.gas@glentreeacademy.com</Text>
-          </a>
-        </div>
-
-        <div class='flex flex-row items-center mb-3'>
-          <div class='w-5'>
-            <img src={phoneIcon} alt="Phone Icon" class="w-full h-full">
-          </div>
-          <a href='tel:+919632104368' class="hover:underline"><Text type={'text-regular'} class='ml-2'>+91 9632104368</Text></a>
-        </div>
-
-        <div class='flex flex-row items-center mb-3'>
-          <div class='w-[2.25rem] mr-1'>
-            <img src={locationIcon} alt="Location Icon" class="w-full h-full">
-          </div>
-          <a href="https://goo.gl/maps/2WjJv85fKSJg6yfm6">
-            <Text type={'text-regular'} class='ml-2'>No.36/5,Halanayakanahalli,Varthur Hobli Bengaluru East Taluk,Bengaluru, Karnataka 560035</Text>
-          </a>
-        </div>
-      </div>
-      <div class='ml-16 max-md:ml-0 max-w-[325px]'>
         <Text type={'text-base'} class='text-green-300 mb-7 max-md:mb-3 font-semibold'>Whitefield</Text>
 
         <div class='flex flex-row items-center mb-3'>
@@ -109,7 +81,7 @@ import Text from '../system/Text.astro'
 
         </div>
 
-        <div class='flex flex-row items-center mb-3'>
+        <div class='flex flex-row items-start mb-3 '>
           <div class='w-[2.25rem]'>
             <img src={locationIcon} alt="Location Icon" class="w-full h-full">
           </div>
@@ -118,6 +90,35 @@ import Text from '../system/Text.astro'
           </a>
         </div>
       </div>
+      <div class='ml-16 max-md:ml-0 max-w-[325px]'>
+        <Text type={'text-base'} class='text-green-300 mb-7 max-md:mb-3 font-semibold'>Sarjapur</Text>
+
+        <div class='flex flex-row items-center mb-3'>
+          <div class='w-5'>
+            <img src={emailIcon} alt="Email Icon" class="w-full h-full">
+          </div>
+          <a href="mailto:admission.gas@gltreeacademy.com" class="hover:underline w-[90%]">
+            <Text type={'text-regular'} class='ml-2'>admission.gas@glentreeacademy.com</Text>
+          </a>
+        </div>
+
+        <div class='flex flex-row items-center mb-3'>
+          <div class='w-5'>
+            <img src={phoneIcon} alt="Phone Icon" class="w-full h-full">
+          </div>
+          <a href='tel:+919632104368' class="hover:underline"><Text type={'text-regular'} class='ml-2'>+91 9632104368</Text></a>
+        </div>
+
+        <div class='flex flex-row items-start mb-3 '>
+          <div class='w-[2.25rem] mr-1'>
+            <img src={locationIcon} alt="Location Icon" class="w-full h-full">
+          </div>
+          <a href="https://goo.gl/maps/2WjJv85fKSJg6yfm6">
+            <Text type={'text-regular'} class='ml-2'>No.36/5,Halanayakanahalli,Varthur Hobli Bengaluru East Taluk,Bengaluru, Karnataka 560035</Text>
+          </a>
+        </div>
+      </div>
+      
     </div>
   </div>
 
