@@ -1,0 +1,232 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TopNavigationBar from "../components/TopNavigationBar.astro";
+import Text from "../components/system/Text.astro";
+import Table from "../components/publicDisclosure/table.astro";
+
+import safetyCertificateGAS from "../images/disclosure/gas/safetyCertificate.jpg";
+import nocCBSEGAS from "../images/disclosure/gas/noc-cbse.pdf";
+import recognitionCertificateGAS from "../images/disclosure/gas/Recognisation-from-DDPI-English.pdf";
+import mandatoryPublicDesclosureGAS from "../images/disclosure/gas/mandatoryPublicDisclosure.pdf";
+import fireSafetyGAS from "../images/disclosure/gas/fireSaftey.pdf";
+import trustDeedGAS from "../images/disclosure/gas/trustDeed.pdf";
+import cbseAffiliationGAS from "../images/disclosure/gas/cbseAffiliation.pdf";
+import DDPIGAS from "../images/disclosure/gas/DDPI.pdf";
+import waterAndSanitaryCertificateGAS from "../images/disclosure/gas/water-and-sanitary-certificateGAS.pdf";
+import staffDetailsGas from "../images/disclosure/gas/staff-details.pdf";
+
+import safetyCertificateGAW from "../images/disclosure/gaw/safetyCertificate.jpg";
+import staffDetailsGAW from "../images/disclosure/gaw/staff-details.png";
+import nocCBSEGAW from "../images/disclosure/gaw/noc-cbse.pdf";
+import mandatoryPublicDisclosureGAW from "../images/disclosure/gaw/mandatoryPublicDisclosure.pdf";
+import primaryRecognitionCertificateGAW from "../images/disclosure/gaw/Primary-Recognition-certificate.pdf";
+import trustDeedGAW from "../images/disclosure/gaw/TrustDeed_Amendment.pdf";
+import CBSEAffiliationGAW from '../images/disclosure/gaw/CBSE-Affiliation.pdf';
+import giftDeedGAW from '../images/disclosure/gaw/giftdeed.pdf';
+import fireSafetyGAW from '../images/disclosure/gaw/Fire-Compliance-Certificate-Renewed.pdf';
+import waterAndSanitaryCertificateGAW from '../images/disclosure/gaw/Drinking-Water-Sanitary-Whitefield.pdf';
+
+import "../global.css";
+import Footer from "../components/landingPage/Footer.astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { school: "whitefield" } },
+    { params: { school: "sarjapur" } },
+  ];
+}
+
+const { school } = Astro.params;
+
+const sarjapurData = {
+  "Started In The Year": {
+    type: "text",
+    text: "2018",
+  },
+  Recognition: {
+    type: "text",
+    text: "Recognised by CBSE, School Code – 46717",
+  },
+  "Affiliation details": {
+    type: "text",
+    text: "Permanent Affiliation, Affiliation No : 831088 (2020 for Sec. Level)",
+  },
+  "School Udise Code": {
+    type: "text",
+    text: "29200910432",
+  },
+  "Society/Trust": {
+    type: "text",
+    text: "Glentree Education Trust",
+  },
+  Payment: {
+    type: "text",
+    text: "Payment Structure as in two Installments",
+  },
+  "Admission Period": {
+    type: "text",
+    text: "October to April",
+  },
+  "Building Safety Certificate": {
+    type: "link",
+    text: "VIEW HERE",
+    link: safetyCertificateGAS,
+  },
+  "No Objection Certificate": {
+    type: "link",
+    text: "VIEW HERE",
+    link: nocCBSEGAS,
+  },
+  "Recognition Certificate": {
+    type: "link",
+    text: "VIEW HERE",
+    link: recognitionCertificateGAS,
+  },
+  "Appendix IX – Mandatory Public Disclosure": {
+    type: "link",
+    text: "VIEW HERE",
+    link: mandatoryPublicDesclosureGAS,
+  },
+  "Fire Safety Certificate": {
+    type: "link",
+    text: "VIEW HERE",
+    link: fireSafetyGAS,
+  },
+  "Trust Deed": {
+    type: "link",
+    text: "VIEW HERE",
+    link: trustDeedGAS,
+  },
+  "CBSE Affiliation Certificate": {
+    type: "link",
+    text: "VIEW HERE",
+    link: cbseAffiliationGAS,
+  },
+  "DDPI Certificate": {
+    type: "link",
+    text: "VIEW HERE",
+    link: DDPIGAS,
+  },
+  "Academic Calender 2022-23": {
+    type: "link",
+    text: "VIEW HERE",
+    link: "https://docs.google.com/spreadsheets/d/1gt-E6JTy-AezPTiXEz8fvnKVb4C8En0r/edit#gid=905768>",
+  },
+  "Water and Sanitary Report": {
+    type: "link",
+    text: "VIEW HERE",
+    link: waterAndSanitaryCertificateGAS,
+  },
+  "Qualification of Teachers": {
+    type: "link",
+    text: "VIEW HERE",
+    link: staffDetailsGas,
+  },
+};
+
+const whitefieldData = {
+  "Started In The Year": {
+    type: "text",
+    text: "2015",
+  },
+  Recognition: {
+    type: "text",
+    text: "Recognised by CBSE, School Code – 45471",
+  },
+  "Affiliation details": {
+    type: "text",
+    text: "Permanent Affiliation, Affiliation No : 830349 (2020 for Sec. Level)",
+  },
+  "School Udise Code": {
+    type: "text",
+    text: "29200313703",
+  },
+  "Society/Trust": {
+    type: "text",
+    text: "Sri Venkateswara Trust",
+  },
+  Payment: {
+    type: "text",
+    text: "Payment Structure as in two Installments",
+  },
+  "Admission Period": {
+    type: "text",
+    text: "October to April",
+  },
+  "Building Safety Certificate": {
+    type: "link",
+    text: "VIEW HERE",
+    link: safetyCertificateGAW,
+  },
+  "Qualification of teachers": {
+    type: "link",
+    text: "VIEW HERE",
+    link: staffDetailsGAW,
+  },
+  "No Objection Certificate – GOVT OF KAR": {
+    type: "link",
+    text: "VIEW HERE",
+    link: nocCBSEGAW,
+  },
+  "Appendix IX – Mandatory Public Disclosure": {
+    type: "link",
+    text: "VIEW HERE",
+    link: mandatoryPublicDisclosureGAW,
+  },
+  "Primary Recognition Certificate by GOVT": {
+    type: "link",
+    text: "VIEW HERE",
+    link: primaryRecognitionCertificateGAW,
+  },
+  "Trust Deed": {
+    type: "link",
+    text: "VIEW HERE",
+    link: trustDeedGAW,
+  },
+  "CBSE Affiliation Extension": {
+    type: "link",
+    text: "VIEW HERE",
+    link: CBSEAffiliationGAW,
+  },
+  "Gift Deed": {
+    type: "link",
+    text: "VIEW HERE",
+    link: giftDeedGAW,
+  },
+  "Fire Compliance Certificate": {
+    type: "link",
+    text: "VIEW HERE",
+    link: fireSafetyGAW,
+  },
+  "Drinking Water & Sanitary": {
+    type: "link",
+    text: "VIEW HERE",
+    link: waterAndSanitaryCertificateGAW,
+  },
+  "Academic Calender 2022-23": {
+    type: "link",
+    text: "VIEW HERE",
+    link: "https://docs.google.com/spreadsheets/d/1gt-E6JTy-AezPTiXEz8fvnKVb4C8En0r/edit",
+  },
+};
+
+const schoolName = school === "sarjapur" ? "GLENTREE ACADEMY SARJAPUR" : "GLENTREE ACADEMY WHITEFIELD";
+const data = school === "sarjapur" ? sarjapurData : whitefieldData;
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="flex flex-col relative text-black items-center">
+    <TopNavigationBar />
+    <div class="h-[72.6px] w-full bg-black"></div>
+    <Text type={"text-subtitle"} class="mt-10 max-md:mt-10 text-center">
+      MANDATORY PUBLIC DISCLOSURE
+    </Text>
+    <Text type={"h2"} class="mt-4 max-md:mt-10 text-center">{schoolName}</Text>
+
+    <Table data={data} />
+
+    <div class="text-white w-full mt-12">
+      <Footer />
+    </div>
+  </main>
+</Layout>

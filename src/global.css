@@ -25,7 +25,13 @@ html {
 }
 
 .main-container::-webkit-scrollbar {
-  width: 0.2em;
+  width: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .main-container::-webkit-scrollbar {
+    width: 8px;
+  }
 }
  
 .main-container::-webkit-scrollbar-track {
@@ -38,7 +44,7 @@ html {
 }
  
 .main-container::-webkit-scrollbar-thumb {
-  background-color: rgba(10, 10, 10, 0.4);
+  background-color: rgba(10, 10, 10, 0.6);
   border-radius: 10px;
   scrollbar-width: thin;
   width: 4px;

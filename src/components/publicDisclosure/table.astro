@@ -1,0 +1,17 @@
+---
+
+const {data} = Astro.props
+---
+<div class="max-w-[800px] w-[90%] bg-white border border-gray-500 rounded-lg mt-10">
+    {Object.keys(data).map((key) => (
+        <div class='flex flex-row w-full border-b border-gray-500'>
+            <div class="p-4 flex-1 border-r border-gray-500">{key}</div>
+            {data[key].type === 'text' && (
+                <div class="p-4 flex-1">{data[key].text}</div>
+            )}
+            {data[key].type === 'link' && (
+                <a href={data[key].link} target="_blank" class="p-4 flex-1 text-blue-600 underline">{data[key].text}</a>
+            )}
+        </div>
+    ))}
+</div>
