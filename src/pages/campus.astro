@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Text from '../components/system/Text.astro';
+import Button from '../components/system/Button.astro';
+
+import TopNavigationBar from '../components/TopNavigationBar.astro';
+import AdmissionMarquee from '../components/campus/admissionMarquee.astro';
+
+import '../global.css'
+import GalleryMarquee from '../components/campus/galleryMarquee.astro';
+
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="flex flex-col h-screen w-screen relative">
+    <div 
+      class="flex-1 main-container h-screen w-screen"
+      style={{
+        overflowY: 'overlay',
+        overflowX: 'hidden',
+      }}
+    >
+      <div class='flex flex-col h-screen'>
+        <TopNavigationBar />
+        <div class='h-[72.6px] w-full bg-black'>
+        </div>
+  
+        <div class='min-h-[512px] max-h-[512px] w-full flex justify-center items-center flex-col max-md:min-h-[350px]' style={{
+          background: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.8) 68.07%), url()`,
+          backgroundPosition: 'top'
+        }}>
+          <Text type={'h2'} class='mt-14 max-md:mt-10'>Admissions</Text>
+          <Text type={'text-base'} class='mt-3 text-center max-md:w-[90%]' >Your child’s journey towards a holistic learning environment starts here.</Text>
+          <a href="https://admissions.glentreeacademy.com" target='_blank'>
+            <Button class='mt-3'>Apply Now</Button>
+          </a>
+        </div>
+
+        <AdmissionMarquee />
+
+        <GalleryMarquee />
+      </div>
+    </div>
+  </main>
+</Layout>

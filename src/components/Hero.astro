@@ -5,20 +5,26 @@ import Text from './system/Text.astro';
 import psjaAward from '../images/psjaAward.png'
 import meritAwards from '../images/meritAwards.png'
 import heroBG from '../images/heroBG.png'
-import slide2 from '../images/slides/2.png'
-// import slide3 from '../images/slides/3.png'
+import slide1 from '../images/slides/1.jpeg'
+import slide2 from '../images/slides/2.jpeg'
+import slide3 from '../images/slides/3.png'
 import slide4 from '../images/slides/4.png'
 import slide5 from '../images/slides/5.png'
 import slide6 from '../images/slides/6.png'
 import slide7 from '../images/slides/7.png'
+import slide8 from '../images/slides/8.jpeg'
+// import slide9 from '../images/slides/9.jpg'
 
 const slides = [
+  {slide: slide1, position: 'top'},
   {slide: slide2, position: 'center'},
-  // {slide: slide3, position: 'bottom'},
+  {slide: slide3, position: 'center 20%'},
   {slide: slide4, position: 'center 37%'},
   {slide: slide5, position: 'top'},
-  {slide: slide6, position: 'top'},
+  {slide: slide6, position: 'center'},
   {slide: slide7, position: 'center'},
+  {slide: slide8, position: 'center'},
+  // {slide: slide9, position: 'center'},
 ]
 
 
@@ -30,11 +36,11 @@ const slides = [
     </div>
 
     <div class='relative w-full h-full '>
-      {slides.map(({slide, position}) => (
-        <div class='slideshow-item w-full h-full absolute top-0 left-0 bg-no-repeat bg-cover' style={{
+      {slides.map(({slide, position}, i) => (
+        <div class:list={['slideshow-item w-full h-full absolute top-0 left-0 bg-no-repeat bg-cover', i === 0 ? 'opacity-1' : 'opacity-0']} style={{
           backgroundImage: `linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 96.35%), url("${slide}")`,
           transition: '1s all ease-in-out',
-          backgroundPosition: position
+          backgroundPosition: position,
         }}></div>
       ))}
       <div class="relative z-50 flex flex-col h-full">
@@ -115,7 +121,6 @@ const slides = [
     items.forEach((item, i) => {
       console.log(i, slideshowIndex)
       if (i === slideshowIndex) {
-        console.log('here')
         item.style.opacity = '1';
         return;
       } else {

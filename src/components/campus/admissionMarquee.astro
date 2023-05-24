@@ -1,0 +1,55 @@
+---
+import MarqueeContent from './marqueeContent.astro'
+
+const diamond = `
+<svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="5.96875" y="0.343262" width="8" height="8" transform="rotate(45 5.96875 0.343262)" fill="white"/>
+</svg>
+`
+---
+
+<div class="marquee bg-black py-4">
+  <ul class="marquee__content items-center">
+   <MarqueeContent />
+   <MarqueeContent />
+   <MarqueeContent />
+  </ul>
+  <!-- Mirrors the content above -->
+  <ul class="marquee__content items-center" aria-hidden="true">
+    <MarqueeContent />
+    <MarqueeContent />
+    <MarqueeContent />
+  </ul>
+</div>
+
+
+<style>
+.marquee {
+  --gap: 1rem;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  /* justify-content: space-around; */
+  min-width: 100%;
+  gap: var(--gap);
+  animation: scroll 20s linear infinite reverse;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+    /* opacity: 1; */
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+    /* opacity: 0; */
+  }
+}
+
+</style>
