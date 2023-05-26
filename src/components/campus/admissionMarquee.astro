@@ -8,7 +8,7 @@ const diamond = `
 `
 ---
 
-<div class="marquee bg-black py-4">
+<div class="marquee bg-black py-4 relative">
   <ul class="marquee__content items-center">
    <MarqueeContent />
    <MarqueeContent />
@@ -29,7 +29,7 @@ const diamond = `
   display: flex;
   overflow: hidden;
   user-select: none;
-  gap: var(--gap);
+  /* gap: 2rem; */
 }
 
 .marquee__content {

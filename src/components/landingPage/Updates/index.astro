@@ -2,34 +2,47 @@
 import Text from '../../system/Text.astro'
 import newsUpdateBG from '../../../images/newsUpdateBG.png'
 import Card from './Card.astro'
+import jasonResult from '../../../images/results/jason.png'
+import hasiniResult from '../../../images/results/hasini.png'
+import vivekResult from '../../../images/results/vivek.png'
+import shreyanshResult from '../../../images/results/shreyansh.png'
+import deepthiReslut from '../../../images/results/Deepthi.png'
 
-const news = Array.from({ length: 6 }, (_, i) => i).map((i) => ({
-  title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  image: newsUpdateBG,
-}))
+
+// const news = Array.from({ length: 6 }, (_, i) => i).map((i) => ({
+//   title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+//   image: newsUpdateBG,
+// }))
 
 
+const resultImages = [
+  jasonResult,
+  hasiniResult,
+  vivekResult,
+  shreyanshResult,
+  deepthiReslut
+]
 ---
 
 <div 
   style={{
-    background: 'linear-gradient(180deg, #000000 0%, #142C1E 108.48%)',
+    background: 'linear-gradient(180deg, #FFEBC0 0%, #FCFDF3 100%)',
   }}
-  class="flex flex-col items-center pb-20 max-md:pb-12"
+  class="flex flex-col items-center py-20 max-md:py-12"
 >
-  <div class='flex flex-row w-full items-center mt-20 mb-10 max-md:ml-0 max-md:px-6 box-border'>
-    <div class='flex-1 bg-white/40 mr-6 max-md:mr-4' style={{ height: '1px' }}></div>
-    <Text type={"xtext-subtitle"} class='text-center text-white/80 max-md:w-[60%]' style={{ opacity: 0.8 }}>What’s Happening at Glentree?</Text>
-    <div class='flex-1 bg-white/40 ml-6 max-md:ml-4' style={{ height: '1px' }}></div>
+  <div class='flex flex-row w-full items-center mb-10 max-md:ml-0 max-md:px-6 box-border'>
+    <div class='flex-1 bg-black/20 mr-6 max-md:mr-4 max-md:hidden' style={{ height: '1px' }}></div>
+    <Text type={"subtitle"} class='text-center max-md:w-[100%] text-black/80' style={{ opacity: 0.8 }}>  Grade 10 Results - <br class="hidden max-md:block" /> Sarjapur & Whitefield</Text>
+    <div class='flex-1 bg-black/20 ml-6 max-md:ml-4 max-md:hidden' style={{ height: '1px' }}></div>
   </div>
 
-  <div class="w-screen flex flex-row h-min overflow-scroll no-scrollbar scroll-snap-news-carousel px-3" style={{
+  <div class="w-screen flex flex-row h-min overflow-scroll no-scrollbar scroll-snap-news-carousel px-3 mb-0" style={{
     overflowX: 'scroll',
     overflowY: 'visible',
     scrollSnapType: 'x mandatory',
   }}>
-    {news.map(({ title, image }) => (
-      <Card title={title} image={image}  />
+    {resultImages.map((image) => (
+      <Card title={""} image={image}  />
     ))}
   </div>
-</div>
+</div>i

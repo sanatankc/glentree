@@ -1,0 +1,8 @@
+---
+interface Props {
+  n: number
+}
+
+const { n } = Astro.props;
+---
+{new Array(n).fill('_').map((_, i) => <slot />)}

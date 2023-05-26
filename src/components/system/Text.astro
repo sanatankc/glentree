@@ -1,12 +1,12 @@
 ---
 
 interface Props {
-  type: 'h1' | 'h2' | 'h3' | 'h4' | 'text-base' | 'text-lg' | 'text-regular' | 'text-sm' | 'text-xs' | 'text-subtitle'
+  type: 'h1' | 'h2' | 'h3' | 'h4' | 'base' | 'lg' | 'regular' | 'sm' | 'xs' | 'subtitle'
   class?: string,
   style?: {}
 }
 
-const { type = 'text-base', class: className, style = {} } = Astro.props
+const { type = 'base', class: className, style = {} } = Astro.props
 
 ---
 
@@ -59,7 +59,7 @@ const { type = 'text-base', class: className, style = {} } = Astro.props
   </h2>
 )}
 
-{type === 'text-lg' && (
+{type === 'lg' && (
   <div
     class:list={[
       "text-2xl font-bold tracking-tight", 
@@ -71,7 +71,7 @@ const { type = 'text-base', class: className, style = {} } = Astro.props
     <slot />
   </div>
 )}
-{type === 'text-base' && (
+{type === 'base' && (
   <div
     class:list={[
       "text-xl max-md:text-base", 
@@ -84,7 +84,7 @@ const { type = 'text-base', class: className, style = {} } = Astro.props
   </div>
 )}
 {
-  type === 'text-regular' && (
+  type === 'regular' && (
   <div
     class:list={[
       "text-lg max-md:text-base", 
@@ -97,7 +97,7 @@ const { type = 'text-base', class: className, style = {} } = Astro.props
   )
 }
 
-{type === 'text-sm' && (
+{type === 'sm' && (
   <div
     class:list={[
       "text-base", 
@@ -109,7 +109,7 @@ const { type = 'text-base', class: className, style = {} } = Astro.props
   </div>
 )}
 
-{type === 'text-xs' && (
+{type === 'xs' && (
   <div
     class:list={[
       "text-base", 
@@ -121,7 +121,7 @@ const { type = 'text-base', class: className, style = {} } = Astro.props
   </div>
 )}
 
-{type === 'text-subtitle' && (
+{type === 'subtitle' && (
     <div
       class:list={[
         "text-xl max-md:text-base uppercase font-extrabold",
