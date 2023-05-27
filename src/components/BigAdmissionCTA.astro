@@ -3,6 +3,8 @@ import bigCTASplashVectorBG from '../images/bigCTASplashVectorBG.svg'
 import bigCTAKidBG from '../images/bigCTAKidBG.png'
 import Button from '../components/system/Button.astro';
 import Text from './system/Text.astro';
+
+const {shouldSecondaryCTA = true} = Astro.props
 ---
 
 <div class='px-20 py-6 bg-white max-md:px-4 max-md:py-4'>
@@ -24,9 +26,11 @@ import Text from './system/Text.astro';
           <a href="https://admissions.glentreeacademy.com" target='_blank'>
             <Button>Apply Now!</Button>
           </a>
-          <a href="/admissions">
-            <Button secondary class='ml-4 max-md:mt-4 max-md:ml-0'>View Process</Button>
-          </a>
+          {shouldSecondaryCTA && (
+            <a href="/admissions">
+              <Button secondary class='ml-4 max-md:mt-4 max-md:ml-0'>View Process</Button>
+            </a>
+          )}
         </div>
       </div>
   </div>
