@@ -6,7 +6,7 @@ interface Props {
   style?: {}
 }
 
-const { type = 'base', class: className, style = {} } = Astro.props
+const { type = 'base', class: className, style = {}, ...props } = Astro.props
 
 ---
 
@@ -17,7 +17,7 @@ const { type = 'base', class: className, style = {} } = Astro.props
       className
     ]}
     style={style}
-
+    {...props}
   >
     <slot />
   </h1>
@@ -29,6 +29,7 @@ const { type = 'base', class: className, style = {} } = Astro.props
       className
     ]}
     style={style}
+    {...props}
 
   >
     <slot />
@@ -41,6 +42,7 @@ const { type = 'base', class: className, style = {} } = Astro.props
       className
     ]}
     style={style}
+    {...props}
 
   >
     <slot />
@@ -53,6 +55,7 @@ const { type = 'base', class: className, style = {} } = Astro.props
       className
     ]}
     style={style}
+    {...props}
 
   >
     <slot />
@@ -67,6 +70,7 @@ const { type = 'base', class: className, style = {} } = Astro.props
     ]}
     class="max-md:text-lg"
     style={style}
+    {...props}
   >
     <slot />
   </div>
@@ -78,6 +82,7 @@ const { type = 'base', class: className, style = {} } = Astro.props
       className
     ]}
     style={style}
+    {...props}
 
   >
     <slot />
@@ -91,6 +96,7 @@ const { type = 'base', class: className, style = {} } = Astro.props
       className
     ]}
     style={style}
+    {...props}
   >
     <slot />
   </div>
@@ -104,6 +110,7 @@ const { type = 'base', class: className, style = {} } = Astro.props
       className
     ]}
     style={style}
+    {...props}
   >
     <slot />
   </div>
@@ -116,6 +123,7 @@ const { type = 'base', class: className, style = {} } = Astro.props
       className
     ]}
     style={style}
+    {...props}
   >
     <slot />
   </div>
@@ -131,6 +139,7 @@ const { type = 'base', class: className, style = {} } = Astro.props
         letterSpacing: '0.1em', 
         ...style
       }}
+      {...props}
     >
       <slot />
     </div>

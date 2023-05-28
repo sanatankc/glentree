@@ -15,9 +15,15 @@
     "@fontsource/nunito-sans": "^4.5.10",
     "@fontsource/twinkle-star": "^4.5.9",
     "@glidejs/glide": "^3.6.0",
+    "aos": "^3.0.0-beta.6",
     "astro": "^2.4.5",
+    "locomotive-scroll": "^4.1.4",
     "siema": "^1.5.1",
     "tailwindcss": "^3.3.2",
     "tiny-slider": "^2.9.4"
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.4",
+    "@types/locomotive-scroll": "^4.1.0"
   }
 }

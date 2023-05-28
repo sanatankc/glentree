@@ -1,0 +1,133 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Text from '../components/system/Text.astro';
+import BigAdmissionCTA from '../components/BigAdmissionCTA.astro';
+
+import Button from '../components/system/Button.astro';
+
+import TopNavigationBar from '../components/TopNavigationBar.astro';
+import AdmissionMarquee from '../components/campus/admissionMarquee.astro';
+
+import '../global.css'
+import GalleryMarquee from '../components/campus/galleryMarquee.astro';
+import Footer from '../components/landingPage/Footer.astro';
+
+import art from '../images/clubs/art.png'
+import debate from '../images/clubs/debate.png'
+import eco from '../images/clubs/eco.png'
+import firstFoot from '../images/clubs/firstFoot.png'
+import heritage from '../images/clubs/heritage.png'
+import math from '../images/clubs/math.png'
+import scouts from '../images/clubs/scouts.png'
+import science from '../images/clubs/science.png'
+import literary from '../images/clubs/literary.png'
+
+
+
+
+const clubs = [
+  {
+    title: "Debate & Quiz Club",
+    description: "Battle of wits and knowledge as we alternate between fiery debates and brain-teasing quizzes",
+    thumbnail: debate,
+  },
+  {
+    title: "Art Club",
+    description: "Dive into a realm of endless creativity,  painting your dreams and imagination taking flight",
+    thumbnail: art,
+  },
+  {
+    title: "Eco Club",
+    description: "Discover the beauty of nature and learn how to protect our planet in our Eco Club",
+    thumbnail: eco,
+  },
+  {
+    title: "Science Club",
+    description: "Embark on a scientific odyssey, where curiosity takes centre stage and knowledge knows no limits",
+    thumbnail: science,
+  },
+  {
+    title: "Literary Club",
+    description: "Step into a world of words, where stories come alive and imaginations soar",
+    thumbnail: literary,
+  },
+  {
+    title: "Math Club",
+    description: "Unleash the inner mathlete and conquer numbers with us!",
+    thumbnail: math,
+  },
+  {
+    title: "Scouts & Guides",
+    description: "Equip your child with future-ready skills through our Tekie-partnered coding curriculum.",
+    thumbnail: scouts,
+  },
+  {
+    title: "First Foot Club",
+    description: "Foster essential literacy skills with our program designed for enjoying reading.",
+    thumbnail: firstFoot,
+  },
+  {
+    title: "Heritage Club",
+    description: "Ignite creativity and build confidence through theater, music, dance, and drama experiences.",
+    thumbnail: heritage,
+  },
+]
+
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="flex flex-col h-screen w-screen relative bg-white">
+    <div 
+      class="flex-1 main-container h-screen w-screen"
+      style={{
+        overflowY: 'overlay',
+        overflowX: 'hidden',
+      }}
+    >
+      <div class='flex flex-col bg-white'>
+        <TopNavigationBar />
+        <div class='h-[72.6px] w-full bg-black'>
+        </div>
+  
+        <div class='min-h-[512px] max-h-[512px] w-full flex justify-center items-center flex-col max-md:min-h-[350px]' style={{
+          background: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.8) 68.07%), url()`,
+          backgroundPosition: 'top'
+        }}>
+          <Text type={'h2'} class='mt-14 max-md:mt-10'>Admissions</Text>
+          <Text type={'base'} class='mt-3 text-center max-md:w-[90%]' >Your child’s journey towards a holistic learning environment starts here.</Text>
+          <a href="https://admissions.glentreeacademy.com" target='_blank'>
+            <Button class='mt-3'>Apply Now</Button>
+          </a>
+        </div>
+
+        
+        <div class='w-full flex flex-row flex-wrap px-20 py-16 gap-5 justify-center items-center max-md:px-4 max-md:py-6' style={{
+          background: 'linear-gradient(180deg, #202020 0%, #00160A 100%)'
+        }}>
+          {clubs.map(club => (
+            <div 
+              style={{
+                background: 'rgba(255, 255, 255, 0.04)',
+                border: '0.807503px solid rgba(255, 255, 255, 0.24)',
+                backdropFilter: 'blur(16px)',
+                borderRadius: '24px'
+              }} 
+              class='p-4 w-[400px]'
+            >
+              <div
+                class='w-full h-[320px] bg-cover bg-center rounded-2xl' 
+                style={{
+                  backgroundImage: `url(${club.thumbnail})`
+                }}
+              ></div>
+              <Text type='h4' class='mt-4'>{club.title}</Text>
+              <Text type='sm' class='mt-2 text-white/80'>{club.description}</Text>
+            </div>
+          ))}
+        </div>
+        <Footer />
+      </div>
+    </div>
+  </main>
+</Layout>

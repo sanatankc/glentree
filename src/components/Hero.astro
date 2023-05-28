@@ -48,14 +48,17 @@ const slides = [
           background: 'linear-gradient(180deg, rgba(3, 3, 3, 0) 0%, #030303 10.29%)'
         }}></div>
         <div class="w-full h-full flex flex-col max-md:justify-end max-md:px-5">
-          <div class="mt-auto flex flex-col items-center max-md:items-start max-md:mt-0">
+          <div class="mt-auto flex flex-col items-center max-md:items-start max-md:mt-0" data-scroll-section>
             <Text
               type="h1"
-              class='mt-28 text-center max-md:text-left max-md:mt-0'
+              class='mt-28 text-center max-md:text-left max-md:mt-0 disappear'
+              data-scroll data-scroll-class="appear" data-scroll-repeat="true"
             >Unlock your child’s potential</Text>
             <Text
               type="lg"
               class='mt-3 text-2xl text-center'
+              data-scroll
+              data-scroll-direction="horizontal"
             >Shaping A Brighter Future for Your Child</Text>
             <div class="flex flex-row mt-5">
               <a href="https://admissions.glentreeacademy.com" target='_blank'>

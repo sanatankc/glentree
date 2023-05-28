@@ -15,14 +15,16 @@ import Text from '../system/Text.astro'
     background: `url("${ourMottoSectionBG}")`,
   }}>
   </div>
-  <div class="min-w-max">
+  <div class="min-w-max" data-scroll-section>
     <Text 
       type='subtitle'
-      style={{ letterSpacing: '0.1em', opacity: 0.8 }}
+      data-scroll
+      data-aos="fade-up"
     >OUR MOTTO</Text>
     <Text 
       type="h2"
       class="max-md:mt-1 max-md:mb-5"
+      data-scroll
     >Learning for Life</Text>
     <img src={LFLKids} alt="Kids with Halo Eating Lunch" class="w-96 min-w-min -mt-14 max-md:hidden"/>
   </div>
