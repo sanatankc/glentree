@@ -58,14 +58,14 @@ const resultImages = [
 </style>
 
 <script>
-  const hScroll = document.querySelector('.h-scroll') as HTMLDivElement
+  // const hScroll = document.querySelector('.h-scroll') as HTMLDivElement
   
-  hScroll.addEventListener("wheel", (evt) => {
-      if (hScroll.scrollLeft === 0 && evt.deltaY < 5) return;
-      if (hScroll.scrollLeft === hScroll.scrollWidth - hScroll.clientWidth && evt.deltaY > 5) return;
-      evt.preventDefault();
-      hScroll.scrollLeft += evt.deltaY;
-  });
+  // hScroll.addEventListener("wheel", (evt) => {
+  //     if (hScroll.scrollLeft === 0 && evt.deltaY < 5) return;
+  //     if (hScroll.scrollLeft === hScroll.scrollWidth - hScroll.clientWidth && evt.deltaY > 5) return;
+  //     evt.preventDefault();
+  //     hScroll.scrollLeft += evt.deltaY;
+  // });
 
 
   // let pos = { top: 0, left: 0, x: 0, y: 0 };
