@@ -29,33 +29,33 @@ import reading from '../images/coscholastics/ReadingEnrichment.jpeg'
 const coscholastics = [
   {
     "title": "Computer Science & Coding",
-    "description": "Equip your child with future-ready skills through our Tekie-partnered coding curriculum.",
+    "description": "Build skills and unlock your potential with the Computer Science and Coding program, where you'll learn the language of the future.",
     thumbnail: computerScience
   },
   {
     "title": "Taekwondo",
-    "description": "Boost your child's strength and agility with internationally recognized martial arts training.",
+    "description": "Kick your way to confidence and self-defense skills while unleashing your inner warrior with our dynamic Taekwondo classes.",
     thumbnail: taekwondo
   },
   {
     "title": "Visual & Performing Arts",
-    "description": "Ignite creativity and build confidence through theater, music, dance, and drama experiences.",
+    "description": "From brush strokes to dance moves, discover the artist within and let your imagination run wild.",
     thumbnail: visual
   },
   {
     "title": "Yoga",
-    "description": "Achieve balance & stress relief through the ancient practice of yoga & mindfulness.",
+    "description": "From balancing poses to calming breaths, the little Yogis find their zen through the Yoga program.",
     thumbnail: yoga
   },
   {
     "title": "Sports",
-    "description": "Nurture holistic growth with fun and engaging physical education & sports programs.",
+    "description": "Get your game on, where young athletes build endurance, teamwork and leadership skills to become champions on and off the field.",
     thumbnail: sports
   },
 
   {
-    "title": "Learning from Environment",
-    "description": "From staircase with printed tables to windmills around the common areas, we use Environment as a Learning Element (ELE).",
+    "title": [{type: "normal", text: "ELE"}, {type: "sm", text: "(Environment as a Learning Element)"}],
+    "description": "Take a deep dive into the world around us with our Ele program, where nature is our classroom and learning comes to life.",
     thumbnail: ELE
   },
 
@@ -100,7 +100,7 @@ const coscholastics = [
 
         
         <div class='w-full flex flex-row flex-wrap px-20 py-16 gap-5 justify-center items-center max-md:px-4 max-md:py-6' style={{
-          background: 'linear-gradient(180deg, #202020 0%, #00160A 100%)'
+          background: 'linear-gradient(180deg, #000000 0%, #142C1E 108.48%)'
         }}>
           {coscholastics.map(coscholastic => (
             <div 
@@ -109,16 +109,29 @@ const coscholastics = [
                 border: '0.807503px solid rgba(255, 255, 255, 0.24)',
                 backdropFilter: 'blur(16px)',
                 borderRadius: '24px'
-              }} 
+              }}
               class='p-4 w-[400px] min-h-[480px]'
             >
               <div
                 class='w-full h-[320px] bg-cover bg-center rounded-2xl' 
                 style={{
-                  backgroundImage: `url(${coscholastic.thumbnail})`
+                  background: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.8) 68.07%), url(${coscholastic.thumbnail})`,
+                  backgroundPosition: 'top center',
+                  backgroundSize: 'cover'
                 }}
               ></div>
-              <Text type='h4' class='mt-4'>{coscholastic.title}</Text>
+              {Array.isArray(coscholastic.title) ? (
+                <div class="children-inline mt-4">
+                  {coscholastic.title.map(title => (
+                    title.type === 'normal' 
+                      ? <Text type='h4' class='mt-4'>{title.text}</Text>
+                      : <Text type='h4' class='mt-4 text-lg'>{title.text}</Text>
+                  ))}
+                </div>
+              ) : (
+                <Text type='h4' class='mt-4'>{coscholastic.title}</Text>
+              )
+              }
               <Text type='sm' class='mt-2 text-white/80'>{coscholastic.description}</Text>
             </div>
           ))}
@@ -129,3 +142,9 @@ const coscholastics = [
     </div>
   </main>
 </Layout>
+
+<style>
+  .children-inline * {
+    display: inline;
+  }
+</style>
