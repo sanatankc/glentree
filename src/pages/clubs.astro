@@ -4,6 +4,8 @@ import Layout from '../layouts/Layout.astro';
 import Text from '../components/system/Text.astro';
 import BigAdmissionCTA from '../components/BigAdmissionCTA.astro';
 
+import clubsBGimage from '../images/clubs/clubsBGImage.jpeg';
+
 import Button from '../components/system/Button.astro';
 
 import TopNavigationBar from '../components/TopNavigationBar.astro';
@@ -28,48 +30,48 @@ import literary from '../images/clubs/literary.png'
 
 const clubs = [
   {
-    title: "Debate & Quiz Club",
-    description: "Battle of wits and knowledge as we alternate between fiery debates and brain-teasing quizzes",
+    title: "Debate & Quizzing Club",
+    description: "Students harness their persuasive prowess and broaden their knowledge horizons in our dynamic Debate and Quizzing Club. Our club aims at amplifying their oratory skills, dive into global affairs, and ignite competitive spirit.",
     thumbnail: debate,
   },
   {
-    title: "Art Club",
-    description: "Dive into a realm of endless creativity,  painting your dreams and imagination taking flight",
+    title: "Art Mania",
+    description: "Students unleash their creativity in our vibrant Art Mania Club, exploring diverse art forms, expressing freely, and nurturing their imagination in an artistic environment.",
     thumbnail: art,
   },
   {
-    title: "Eco Club",
-    description: "Discover the beauty of nature and learn how to protect our planet in our Eco Club",
+    title: "Eco Warriors",
+    description: "Students immerse in a passion for the environment at our empowering Eco-Club, making a difference as we engage, inspire, and take action for a sustainable future.",
     thumbnail: eco,
   },
   {
-    title: "Science Club",
-    description: "Embark on a scientific odyssey, where curiosity takes centre stage and knowledge knows no limits",
+    title: "Mad Scientist",
+    description: "Fuelling scientific curiosity and hands-on learning in our Science Club, students dive into projects, research, and hands-on experiments, building curiosity and scientific knowledge.",
     thumbnail: science,
   },
   {
     title: "Literary Club",
-    description: "Step into a world of words, where stories come alive and imaginations soar",
+    description: "Our literary Club inculcates a flair for the language and enhance literary skills among the students, encouraging them to become orators and display their intellectual, independent thinking skills and imbibe a sense of confidence.",
     thumbnail: literary,
   },
   {
-    title: "Math Club",
-    description: "Unleash the inner mathlete and conquer numbers with us!",
+    title: "Math Magicians",
+    description: "While developing math skills and knowledge, our club also enriches student's skills with higher-order thinking, and prepare them for future math competitions.",
     thumbnail: math,
   },
   {
     title: "Scouts & Guides",
-    description: "Equip your child with future-ready skills through our Tekie-partnered coding curriculum.",
+    description: "Scouts and Guides empower students to reach their full potential, fostering character, health habits, handicrafts while acquiring useful skills, and responsible citizenship.",
     thumbnail: scouts,
   },
   {
-    title: "First Foot Club",
-    description: "Foster essential literacy skills with our program designed for enjoying reading.",
+    title: "First Foot Forward",
+    description: "This clubs aims at uniting like minded young entrepreneurs, igniting business ideas and exploring the nuances of it. It exposes the students to Case Studies, Social Entrepreneurship, and Knowledge Sharing.",
     thumbnail: firstFoot,
   },
   {
     title: "Heritage Club",
-    description: "Ignite creativity and build confidence through theater, music, dance, and drama experiences.",
+    description: "Ignite the power within students to become responsible, productive, and invaluable contributors to society. Our Heritage Club aims to foster cultural understanding, intellectual curiosity, and virtual exploration of India's rich diversity.",
     thumbnail: heritage,
   },
 ]
@@ -90,20 +92,23 @@ const clubs = [
         <div class='h-[72.6px] w-full bg-black'>
         </div>
   
-        <div class='min-h-[512px] max-h-[512px] w-full flex justify-center items-center flex-col max-md:min-h-[350px]' style={{
-          background: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.8) 68.07%), url()`,
-          backgroundPosition: 'top'
+        <div class='min-h-[350px] max-h-[350px] w-full flex justify-center items-center flex-col max-md:min-h-[350px]' style={{
+          background: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.8) 68.07%), url(${clubsBGimage})`,
+          backgroundPosition: 'top center',
+          backgroundSize: 'cover'
+
+          // backgroundAttachment: 'fixed',
         }}>
-          <Text type={'h2'} class='mt-14 max-md:mt-10'>Admissions</Text>
-          <Text type={'base'} class='mt-3 text-center max-md:w-[90%]' >Your child’s journey towards a holistic learning environment starts here.</Text>
-          <a href="https://admissions.glentreeacademy.com" target='_blank'>
+          <Text type={'h2'} class='mt-14 max-md:mt-10'>Glentree Clubs</Text>
+          <Text type={'base'} class='mt-3 text-center max-md:w-[90%]' >Experience Personalized Learning and Enrichment with Our Dynamic Clubs</Text>
+          <!-- <a href="https://admissions.glentreeacademy.com" target='_blank'>
             <Button class='mt-3'>Apply Now</Button>
-          </a>
+          </a> -->
         </div>
 
         
         <div class='w-full flex flex-row flex-wrap px-20 py-16 gap-5 justify-center items-center max-md:px-4 max-md:py-6' style={{
-          background: 'linear-gradient(180deg, #202020 0%, #00160A 100%)'
+          background: 'linear-gradient(180deg, #000000 0%, #142C1E 108.48%)'
         }}>
           {clubs.map(club => (
             <div 
@@ -113,7 +118,7 @@ const clubs = [
                 backdropFilter: 'blur(16px)',
                 borderRadius: '24px'
               }} 
-              class='p-4 w-[400px]'
+              class='p-4 w-[400px] min-h-[530px]'
             >
               <div
                 class='w-full h-[320px] bg-cover bg-center rounded-2xl' 

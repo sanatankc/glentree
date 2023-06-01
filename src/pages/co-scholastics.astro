@@ -1,0 +1,150 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Text from '../components/system/Text.astro';
+import BigAdmissionCTA from '../components/BigAdmissionCTA.astro';
+
+import Button from '../components/system/Button.astro';
+
+import TopNavigationBar from '../components/TopNavigationBar.astro';
+import AdmissionMarquee from '../components/campus/admissionMarquee.astro';
+
+import coscholasticsBG from '../images/coscholastics/coscholasticsBG.jpeg';
+
+import '../global.css'
+import GalleryMarquee from '../components/campus/galleryMarquee.astro';
+import Footer from '../components/landingPage/Footer.astro';
+
+import computerScience from '../images/coscholastics/computerScience.jpeg'
+import taekwondo from '../images/coscholastics/Taekwondo.jpeg'
+import visual from '../images/coscholastics/visualArt.jpeg'
+import yoga from '../images/coscholastics/Yoga.jpeg'
+import sports from '../images/coscholastics/Sports.jpeg'
+import ELE from '../images/coscholastics/ELE.jpeg'
+import fieldtrip from '../images/coscholastics/FieldTrip.jpeg'
+import reading from '../images/coscholastics/ReadingEnrichment.jpeg'
+
+
+
+const coscholastics = [
+  {
+    "title": "Computer Science & Coding",
+    "description": "Build skills and unlock your potential with the Computer Science and Coding program, where you'll learn the language of the future.",
+    thumbnail: computerScience
+  },
+  {
+    "title": "Taekwondo",
+    "description": "Kick your way to confidence and self-defense skills while unleashing your inner warrior with our dynamic Taekwondo classes.",
+    thumbnail: taekwondo
+  },
+  {
+    "title": "Visual & Performing Arts",
+    "description": "From brush strokes to dance moves, discover the artist within and let your imagination run wild.",
+    thumbnail: visual
+  },
+  {
+    "title": "Yoga",
+    "description": "From balancing poses to calming breaths, the little Yogis find their zen through the Yoga program.",
+    thumbnail: yoga
+  },
+  {
+    "title": "Sports",
+    "description": "Get your game on, where young athletes build endurance, teamwork and leadership skills to become champions on and off the field.",
+    thumbnail: sports
+  },
+
+  {
+    "title": [{type: "normal", text: "ELE"}, {type: "sm", text: "(Environment as a Learning Element)"}],
+    "description": "Take a deep dive into the world around us with our ELE program, where nature is our classroom and learning comes to life.",
+    thumbnail: ELE
+  },
+
+  {
+    "title": "Field Trip",
+    "description": "Learning doesn't stop at school. Step into a world of wonder with our unforgettable field trips.",
+    thumbnail: fieldtrip
+  },
+  {
+    "title": [{type: "normal", text: "READ"}, {type: "sm", text: "(Reading Enrichment and Development)"}],
+    "description": "Unlock your imagination with the READ program and discover new worlds with every page-turn.",
+    thumbnail: reading
+  },
+]
+
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="flex flex-col h-screen w-screen relative bg-white">
+    <div 
+      class="flex-1 main-container h-screen w-screen"
+      style={{
+        overflowY: 'overlay',
+        overflowX: 'hidden',
+      }}
+    >
+      <div class='flex flex-col bg-white'>
+        <TopNavigationBar />
+        <div class='h-[72.6px] w-full bg-black'>
+        </div>
+  
+        <div class='min-h-[350px] max-h-[350px] w-full flex bg-cover bg-center bg-no-repeat justify-center items-center flex-col max-md:min-h-[350px]' style={{
+          backgroundImage: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.8) 68.07%), url(${coscholasticsBG})`,
+          // backgroundPosition: 'top'
+        }}>
+          <Text type={'h2'} class='mt-14 max-md:mt-10 text-center'>Explore Beyond the Classrooms</Text>
+          <Text type={'base'} class='mt-3 text-center max-md:w-[90%]' >Take a look at our co-scholastic activities offered in our school</Text>
+          <!-- <a href="https://admissions.glentreeacademy.com" target='_blank'>
+            <Button class='mt-3'>Apply Now</Button>
+          </a> -->
+        </div>
+
+        
+        <div class='w-full flex flex-row flex-wrap px-20 py-16 gap-5 justify-center items-center max-md:px-4 max-md:py-6' style={{
+          background: 'linear-gradient(180deg, #000000 0%, #142C1E 108.48%)'
+        }}>
+          {coscholastics.map(coscholastic => (
+            <div 
+              style={{
+                background: 'rgba(255, 255, 255, 0.04)',
+                border: '0.807503px solid rgba(255, 255, 255, 0.24)',
+                backdropFilter: 'blur(16px)',
+                borderRadius: '24px'
+              }}
+              class='p-4 w-[400px] min-h-[480px]'
+            >
+              <div
+                class='w-full h-[320px] bg-cover bg-center rounded-2xl' 
+                style={{
+                  background: `url(${coscholastic.thumbnail})`,
+                  backgroundPosition: 'top center',
+                  backgroundSize: 'cover'
+                }}
+              ></div>
+              {Array.isArray(coscholastic.title) ? (
+                <div class="children-inline mt-4">
+                  {coscholastic.title.map(title => (
+                    title.type === 'normal' 
+                      ? <Text type='h4' class='mt-4'>{title.text}</Text>
+                      : <Text type='h4' class='mt-4 text-lg'>{title.text}</Text>
+                  ))}
+                </div>
+              ) : (
+                <Text type='h4' class='mt-4'>{coscholastic.title}</Text>
+              )
+              }
+              <Text type='sm' class='mt-2 text-white/80'>{coscholastic.description}</Text>
+            </div>
+          ))}
+          <div class='p-4 w-[400px]'></div>
+        </div>
+        <Footer />
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .children-inline * {
+    display: inline;
+  }
+</style>
