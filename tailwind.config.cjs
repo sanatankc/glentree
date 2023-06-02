@@ -3,6 +3,9 @@ module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+			screens: {
+				'md': '1000px',
+			},
 			colors: {
 				accent:'#C07C47',
 				'accent-bold':'#FF9D51',
@@ -21,7 +24,7 @@ module.exports = {
 				},
 				red: {
 					500: '#A9342D',
-				}
+				},
 			}
 		},
 		fontFamily: {
