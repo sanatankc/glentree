@@ -1,0 +1,306 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Text from '../components/system/Text.astro';
+import BigAdmissionCTA from '../components/BigAdmissionCTA.astro';
+
+import clubsBGimage from '../images/clubs/clubsBGImage.jpeg';
+
+import Button from '../components/system/Button.astro';
+
+import TopNavigationBar from '../components/TopNavigationBar.astro';
+import AdmissionMarquee from '../components/campus/admissionMarquee.astro';
+
+import '../global.css'
+import GalleryMarquee from '../components/campus/galleryMarquee.astro';
+import Footer from '../components/landingPage/Footer.astro';
+import preetiBGTemp from '../images/scholarships/preeti_bhanadry.png'
+
+import preeti from '../images/aboutUs/preeti.png'
+import sowmia from '../images/aboutUs/sowmia.png'
+import vittal from '../images/aboutUs/vittal.png'
+import missionCardBG from '../images/aboutUs/missionCardBG.png'
+import cupIcon from '../images/aboutUs/CupIcon.svg'
+
+const scholarships = [
+    {
+        "Title": "Glentree Loyalty Program for Little Elly",
+        "Description": "For Little Elly students seeking admission",
+        "Eligibility": [
+            "All Little Elly students for grades LKG to Grade 1",
+            "Nursery Grade for younger siblings of Little Elly students"
+        ],
+        "DocumentsRequired": [
+            "Little Elly Student Certificate with the last Progress Report"
+        ],
+        "Benefits": [
+            "50% waiver on the admission fee",
+            "100% waiver of the admission fee for younger siblings"
+        ],
+        "Conditions": [
+            "Application Form ₹500/- to be collected"
+        ],
+        "Deadline": "Before December 31st of the previous year"
+    },
+    {
+        "Title": "Sibling Benefits Policy",
+        "Description": "For siblings of existing students or those joining together",
+        "Eligibility": [
+            "Siblings of existing students or those joining together"
+        ],
+        "DocumentsRequired": [
+            "Principal’s confirmation of the existing student",
+            "Parent & Birth Records for sibling relationship (Not for cousins)"
+        ],
+        "Benefits": [
+            "Application Fee Waiver",
+            "50% Waiver of Admission Fee for Younger Sibling",
+            "15% discount on the Tuition Fee"
+        ],
+    },
+    {
+        "Title": "Glentree Staff Advantage Program",
+        "Description": "For children of staff members with at least one year of service",
+        "Eligibility": [
+            "Children of staff members with at least one year of service"
+        ],
+        "DocumentsRequired": [
+            "HR Department Certificate"
+        ],
+        "Benefits": [
+            "50% Waiver of Admission Fee",
+            "25% Waiver on Tuition fee"
+        ],
+        "Conditions": [
+            "Application fee of ₹500/- to be collected",
+            "Full Transport and Resource Fee"
+        ],
+    },
+    {
+        "Title": "Glentree Learning for Life - Founder’s Scholarship to Meritorious students",
+        "Description": "For academically bright students from Grades 5 to 9 moving to Grade 6 to 10",
+        "Eligibility": [
+            "Academically bright students of Grades 5 to 9 moving to Grade 6 to 10"
+        ],
+        "DocumentsRequired": [
+            "Report card showing 90% and above in both terms in all core subjects"
+        ],
+        "Benefits": [
+            "15% Waiver of Tuition Fee for that year"
+        ],
+    },
+    {
+        "Title": "Glentree Learning for Life - Founder’s Scholarship to Meritorious students (In-house students)",
+        "Description": "For academically bright students from Grades 6 to Grade 9",
+        "Eligibility": [
+            "Academically bright students from Grades 6 to Grade 9"
+        ],
+        "DocumentsRequired": [
+            "Consistent maintenance of 90% and above in both terms"
+        ],
+        "Benefits": [
+            "15% Waiver of Tuition Fee for the next academic year"
+        ],
+    },
+    {
+        "Title": "Glentree Spirit of Sports Scholarship for Excellence in Sports",
+        "Description": "For students from Grade 5 to 10 who have won prizes in recognized sports",
+        "Eligibility": [
+            "Students from Grade 5 to 10 who have won prizes in recognized sports"
+        ],
+        "DocumentsRequired": [
+            "Proof of participation at State / National Level competitions (Approval from Glentree Management)"
+        ],
+        "Benefits": [
+            "15% waiver on tuition fee for that year"
+        ],
+    },
+    {
+        "Title": "\"All in one go\" for Tuition Fee",
+        "Description": "For all students who pay their tuition fee in one go",
+        "Eligibility": [
+            "All students"
+        ],
+        "Benefits": [
+            "5% concession on Tuition Fee"
+        ],
+        "Conditions": [
+            "Tuition fee should be cleared in one shot"
+        ],
+    },
+    {
+        "Title": "Early Bird Specials or First Comers Savings",
+        "Description": "For parents who finalize admission within a week from inquiry",
+        "Eligibility": [
+            "All parents"
+        ],
+        "DocumentsRequired": [
+            "Parent finalizes admission within a week by paying both resource & admission fee"
+        ],
+        "Benefits": [
+            "₹5000 discount on admission fee"
+        ],
+        "Deadline": "Offer valid till December 31st"
+    },
+    {
+        "Title": "Preschool tie-ups",
+        "Description": "For preschool owners",
+        "Eligibility": [
+            "Preschool owners"
+        ],
+        "DocumentsRequired": [
+            "As a part of MOU"
+        ],
+        "Benefits": [
+            "₹3000 per admission to the preschool"
+        ],
+        "Conditions": [
+            "Facilities can be availed as per the terms of MOU"
+        ],
+        "Deadline": "Until March 31st"
+    }
+]
+
+const scolarshipLength = scholarships.length
+
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="flex flex-col h-screen w-screen relative bg-white">
+    <div 
+      class="flex-1 main-container h-screen w-screen"
+      style={{
+        overflowY: 'overlay',
+        overflowX: 'hidden',
+      }}
+    >
+      <div class='flex flex-col bg-white'>
+        <TopNavigationBar />
+        <div class='h-[72.6px] w-full bg-black'>
+        </div>
+  
+        <div class='min-h-[350px] max-h-[350px] w-full flex justify-center items-center flex-col max-md:min-h-[350px]' style={{
+          background: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.8) 68.07%), url(${clubsBGimage})`,
+          backgroundPosition: 'top center',
+          backgroundSize: 'cover'
+
+          // backgroundAttachment: 'fixed',
+        }}>
+          <Text type={'h2'} class='mt-14 max-md:mt-10'>Scholarships</Text>
+          <Text type={'base'} class='mt-3 text-center max-md:w-[90%]' >Empowering Students Through Diverse Scholarship Opportunities</Text>
+          <!-- <a href="https://admissions.glentreeacademy.com" target='_blank'>
+            <Button class='mt-3'>Apply Now</Button>
+          </a> -->
+        </div>
+
+        
+        <div class='w-full flex flex-row flex-wrap px-[136px] py-16 gap-5 x-md:px-4 max-md:py-6' style={{
+          background: 'linear-gradient(180deg, #000000 0%, #142C1E 108.48%)'
+        }}>
+
+        {scholarships.map((scholarship, index) => (
+          <div class='w-full flex flex-row bg-[#19211D] rounded-3xl mb-6 min-h-[230px]' id={'collapsible-container-' + index}>
+            <div class='w-[400px] p-6 box-border'>
+              <div class='w-full h-full transition-all bg-cover bg-center flex-shrink-0 rounded-lg' style={{
+                backgroundImage: `url(${preetiBGTemp})`
+              }}>
+              </div>
+            </div>
+            <div class='flex-1 p-8'>
+              <Text type={'h4'} class={'text text-3xl'}>{scholarship.Title}</Text>
+              <Text type={'base'} class='mt-3 font-normal'>{scholarship.Description}</Text>
+              <div class='collapsible-content' class='w-full'>
+                <div class='w-full h-[1px] bg-white/25 my-6'></div>
+
+                <div class='w-full grid grid-rows-2 grid-cols-2 gap-x-14 gap-y-10'>
+                  <div>
+                    <Text type={'xs'} class={'text-3xl uppercase text-white/60 font-bold tracking-widest'}>Eligibility</Text>
+                    <Text type={'regular'} class='mt-3'>{scholarship.Eligibility.length > 1 ? scholarship.Eligibility.join(' and ') : scholarship.Eligibility[0]}</Text>
+                  </div>
+                  {scholarship.DocumentsRequired && scholarship.DocumentsRequired.length > 0 && (
+                    <div>
+                      <Text type={'xs'} class={'text-3xl uppercase text-white/60 font-bold tracking-widest'}>Documents Requred</Text>
+                      <Text type={'regular'} class='mt-3'>
+                        <ul class='list-disc'>
+                          {scholarship.DocumentsRequired.map((doc) => (
+                            <li>{doc}</li>
+                          ))}
+                        </ul>
+                      </Text>
+                    </div>
+                  )}
+                  
+                  <div>
+                    <Text type={'xs'} class={'text-3xl uppercase text-white/60 font-bold tracking-widest'}>Benefits</Text>
+                    <Text type={'regular'} class='mt-3'>
+                      <ul class='list-disc'>
+                        {scholarship.Benefits.map((doc) => (
+                          <li>{doc}</li>
+                        ))}
+                      </ul>
+                    </Text>
+                  </div>
+                  {scholarship.Conditions && scholarship.Conditions.length > 0 && (
+                    <div>
+                      <Text type={'xs'} class={'text-3xl uppercase text-white/60 font-bold tracking-widest'}>Conditions</Text>
+                      <Text type={'regular'} class='mt-3'>
+                        <ul class='list-disc'>
+                          {scholarship.Conditions.map((doc) => (
+                            <li>{doc}</li>
+                          ))}
+                        </ul>
+                      </Text>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+
+          
+        </div>
+        <Footer />
+      </div>
+  </main>
+</Layout>
+
+<style>
+  .collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+  }
+
+  .collapsible-content.is-open {
+    max-height: 1000px !important;
+  }
+  #collapsible-container {
+    /* max-height: 0; */
+    overflow: hidden;
+
+    transition: max-height 0.5s ease-out;
+    cursor: pointer;
+  }
+</style>
+
+<script define:vars={{ scolarshipLength }}>
+  console.log('helllo...')
+  for (let i = 0; i < scolarshipLength; i++) {
+    console.log('helllo...1')
+    const collapsibleContainer = document.getElementById('collapsible-container-' + i);
+    const collapsibleContent = collapsibleContainer.querySelector('.collapsible-content');
+    console.log(collapsibleContainer, collapsibleContent);
+    collapsibleContainer.addEventListener('click', () => {
+      collapsibleContent.classList.toggle('is-open');
+      // close other collapsible contents
+      for (let j = 0; j < scolarshipLength; j++) {
+        if (j !== i) {
+          const otherCollapsibleContainer = document.getElementById('collapsible-container-' + j);
+          const otherCollapsibleContent = otherCollapsibleContainer.querySelector('.collapsible-content');
+          otherCollapsibleContent.classList.remove('is-open');
+        }
+      }
+    })
+  }
+</script>

@@ -44,3 +44,62 @@ html {
   border-radius: 9999px;
   background-color: rgba(0, 0, 0, 0.6);
 }
+.daisy {
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  transform: translate(0, 0);
+}
+
+
+.daisy-y-1 {
+  transform: translate(0, 10px);
+}
+
+.daisy-y-2 {
+  transform: translate(0, 20pxx);
+}
+
+.daisy-1 {
+  transition-delay: 0.1s;
+}
+
+.daisy-2 {
+  transition-delay: 0.2s;
+}
+
+.daisy-3 {
+  transition-delay: 0.3s;
+}
+
+.daisy-4 {
+  transition-delay: 0.4s;
+}
+
+.daisy-5 {
+  transition-delay: 0.5s;
+}
+
+.daisy-6 {
+  transition-delay: 0.6s;
+}
+
+.daisy-7 {
+  transition-delay: 0.7s;
+}
+
+.daisy-8 {
+  transition-delay: 0.8s;
+}
+
+.daisy-9 {
+  transition-delay: 0.9s;
+}
+
+.daisy-10 {
+  transition-delay: 1s;
+}
+
+.daisy-show {
+  opacity: 1;
+  transform: translate(0, 0);
+}

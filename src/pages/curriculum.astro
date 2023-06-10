@@ -1,0 +1,235 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Hero from '../components/Hero.astro';
+import TopNavigationBar from '../components/TopNavigationBar.astro';
+
+import Updates from '../components/landingPage/Updates/index.astro'
+import LFL from '../components/landingPage/LFL.astro'
+import WhyGlentree from '../components/landingPage/whyGlentree.astro';
+import Campus from '../components/landingPage/campus.astro';
+
+import Testimonial from '../components/landingPage/Testimonial.astro';
+import BigAdmissionCTA from '../components/BigAdmissionCTA.astro';
+
+import astronautKidsAdmissionBG from '../images/astronautKidsAdmissionBG.png';
+
+import '../global.css'
+import LFLImage from '../images/curriculum/LFL.svg';
+import balancedLearning from '../images/curriculum/balancedLearning.png';
+import diversePrograms from '../images/curriculum/diversePrograms.png';
+import lifelongLearning from '../images/curriculum/lifelongLearning.png';
+
+import '@fontsource/nunito-sans';
+import GlentreeFamily from '../components/landingPage/GlentreeFamily.astro';
+import Footer from '../components/landingPage/Footer.astro';
+import Button from '../components/system/Button.astro';
+import Text from '../components/system/Text.astro';
+
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="flex flex-col h-screen w-screen relative">
+    <div 
+      class="flex-1 main-container h-screen w-screen"
+      style={{
+        overflowY: 'overlay',
+        overflowX: 'hidden',
+      }}
+      data-scroll-container
+    >
+    
+    <div class='flex flex-col'>
+      <TopNavigationBar />
+      <!-- <Hero /> -->
+    </div>
+    <div class='h-[72.6px] w-full bg-black'>
+    </div>
+    <div class='min-h-[512px] max-h-[512px] w-full flex justify-center items-center flex-col max-md:min-h-[350px]' style={{
+      background: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.8) 68.07%), url(${astronautKidsAdmissionBG})`,
+      backgroundPosition: 'top'
+    }}>
+      <Text type={'h2'} class='mt-14 max-md:mt-10'>Curriculum & Academics</Text>
+      <Text type={'base'} class='mt-3 text-center max-md:w-[90%]' >Your child’s journey towards a holistic learning environment starts here.</Text>
+      <a href="https://admissions.glentreeacademy.com" target='_blank'>
+        <Button class='mt-3'>Apply Now</Button>
+      </a>
+    </div>
+      <!-- Carousell/Updatexss -->      
+      <!-- Our MOttto -->
+      
+      <LFL />
+
+      <div class='w-full p-14 text-black flex flex-col items-center' style={{
+        background: 'linear-gradient(249.28deg, #FBFFF7 0%, #F6FFED 0%, #FFFAF7 100%)'
+      }}>
+        <Text type={'subtitle'} class='text-black/80'>OUR PHILOSOPHY</Text>
+        <Text type={'h2'} class='mt-2'>LFL <span class='text-accent2'>Curriculum</span></Text>
+
+        <div class='w-[617px] h-[617px] mt-9'>
+          <img src={LFLImage} alt="LFL Curriculum" class="w-full h-full object-fill" />
+        </div>
+
+        <Text type={'base'} class='mt-5 self-start'>
+          At Glentree Academy, our philosophy is rooted in fostering lifelong learning. We believe in a balanced approach that goes beyond grades, nurturing well-rounded individuals equipped with academic excellence, essential life skills, and the ability to make a positive impact on the world.
+        </Text>
+        <Text type={'base'} class='mt-8 self-start'>
+          Here's how we bring our philosophy to life in our daily school practices:
+        </Text>
+        <div class='w-full flex flex-row flex-wrap gap-8 justify-center items-center mt-6'>
+          <div class='w-full max-w-[413px] rounded-xl border-2 border-solid border-color-[#E2E2E2] '>
+            <img src={balancedLearning} class='w-full h-132px rounded-t-xl' />
+            <div class='w-full bg-white p-4 flex flex-col'>
+              <Text type={'h4'} class='flex flex-row mt-1 w-max items-center'><div class='bg-accent2 text-white px-3 py-1 mr-2 rounded'>Balanced</div> <div>Learning Approach</div></Text>
+              <Text type={'regular'} class='mt-3 font-[500] '>Our comprehensive curriculum ensures a balanced focus on both core subjects and essential life skills, fostering a lifelong love for learning.</Text>
+
+            </div>
+          </div>
+          <div class='w-full max-w-[413px] rounded-xl border border-solid border-color-[#E2E2E2]'>
+            <img src={lifelongLearning} class='w-full h-132px rounded-t-xl' />
+            <div class='w-full bg-white p-4 flex flex-col'>
+              <Text type={'h4'} class='flex flex-row mt-1 w-max items-center'><div>Beyond Grades: </div><div class='bg-accent text-white px-3 py-1 ml-2 mr-2 rounded'>Lifelong</div> <div>Success</div></Text>
+              <Text type={'regular'} class='mt-3 font-[500] '>Education goes beyond grades; our curriculum empowers students with practical skills, knowledge, and a growth mindset for lifelong success.</Text>
+
+            </div>
+          </div>
+          <div class='w-full max-w-[413px] rounded-xl overflow-hidden border border-solid border-color-[#E2E2E2]'>
+            <img src={diversePrograms} class='w-full h-132px rounded-t-xl' />
+            <div class='w-full bg-white p-4 flex flex-col'>
+              <Text type={'h4'} class='flex flex-row mt-1 w-max items-center'><div>Enrich in </div><div class='bg-accent3 text-white px-3 py-1 mr-2 ml-2 rounded'>Diverse</div> <div>Programs</div></Text>
+              <Text type={'regular'} class='mt-3 font-[500] '>Diverse programs like theatre, dance, music, robotics, sports, and yoga enrich our curriculum, nurturing students' passions and fostering important skills.</Text>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='w-full p-14 text-black bg-white flex flex-col items-center'>
+        <Text type={'subtitle'} class='text-black/80'>NEP ALIGNED</Text>
+        <Text type={'h2'} class='mt-2'><span class='text-accent2'>Academics</span></Text>
+        <div class='w-full flex-col flex items-center rounded-2xl overflow-hidden mt-4 max-w-[1196px]'>
+          <div class='flex flex-row w-full mb-[2px]'>
+            <div class='w-full flex-1 max-w-[350px] h-[200px] bg-green-600 mr-[1px]'></div>
+            <div class='w-full flex-1 max-w-[845px] h-[200px] bg-green-600 mr-[1px] flex flex-row items-center justify-center p-12 py-4'>
+              <Text type={'regular'} class='mt-3 font-[500] flex-1'>
+                <ul class="list-disc text-white">
+                  <li>Montessori and Waldorf methodologies</li>
+                  <li>Activity based learning</li>
+                  <li>Language, Numeracy and Theme</li>
+                </ul>
+              </Text>
+              <Text type={'regular'} class='mt-3 font-[500] flex-1'>
+                <ul class="list-disc text-white">
+                  <li>Value Education</li>
+                  <li>Reading Program</li>
+                  <li>Reading Program</li>
+                </ul>
+              </Text>
+            </div>
+          </div>
+          <div class='flex flex-row w-full mb-[2px]'>
+            <div class='w-full flex-1 max-w-[350px] h-[200px] bg-accent mr-[1px]'></div>
+            <div class='w-full flex-1 max-w-[845px] h-[200px] bg-accent mr-[1px] flex flex-row p-12 py-3'>
+              <Text type={'regular'} class='mt-3 font-[500] flex-1'>
+                <ul class="list-disc text-white">
+                  <li>Exploring Through Discovery</li>
+                  <li>Multi-sensory Activities</li>
+                  <li>Experiential Learning</li>
+                  <li>Inter Disciplinary Approach</li>
+                  <li>Language Arts (English, Hindi, Kannada)</li>
+                  <li>Math, Science and ICT</li>
+                </ul>
+              </Text>
+              <Text type={'regular'} class='mt-3 font-[500] flex-1'>
+                <ul class="list-disc text-white">
+                  <li>STEM Lab</li>
+                  <li>R.E.A.D Program</li>
+                  <li>“Connecting the Dots” Program</li>
+                  <li>Regular Assessments</li>
+                  <li>Bi-annual Exams</li>
+                </ul>
+              </Text>
+            </div>
+          </div>
+          <div class='flex flex-row w-full'>
+            <div class='w-full flex-1 max-w-[350px] h-[200px] bg-accent3 mr-[1px]'>
+            </div>
+            <div class='w-full flex-1 max-w-[845px] h-[200px] bg-accent3 mr-[1px] flex flex-row p-12 py-4'>
+              <Text type={'regular'} class='mt-3 font-[500] flex-1'>
+                <ul class="list-disc text-white">
+                  <li>Creative thinking & Research</li>
+                  <li>Community Learning</li>
+                  <li>Language Arts (English,Hindi,Kannada)</li>
+                  <li>Math, Science and ICT</li>
+                </ul>
+              </Text>
+              <Text type={'regular'} class='mt-3 font-[500] flex-1'>
+                <ul class="list-disc text-white">
+                  <li>Social Studies</li>
+                  <li>STEM Lab</li>
+                  <li>“Connecting the Dots” Program</li>
+                  <li>Regular Assessments</li>
+                  <li>Bi-annual Exams</li>
+                </ul>
+              </Text>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <Testimonial />
+
+      <!-- Admission BIG CTA -->
+      <BigAdmissionCTA />
+
+      <!-- Glentree Family -->
+      <GlentreeFamily />
+
+
+      <!-- Footer -->
+    <Footer />
+
+    <!-- width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px; -->
+    <div class="float w-12 h-12 bottom-10 right-10 max-md:w-10 max-md:y-6 max-md:bottom-8 max-md:right-6">
+      <a href="https://api.whatsapp.com/send/?phone=917899738134&text=Hi&type=phone_number&app_absent=0" class="w-full h-full" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" fill-rule="evenodd" clip-rule="evenodd"><path fill="#fff" d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"/><path fill="#fff" d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"/><path fill="#fff" d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"/><path fill="#40c351" d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"/><path fill="#fff" fill-rule="evenodd" d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z" clip-rule="evenodd"/></svg>
+      </a>
+      <div class="fixed bottom-11 right-24 bg-white px-3 py-1 rounded-2xl">
+        <Text type='xs' class='text-black'>Enquire us at Whatsapp</Text>
+      </div>
+    </div>
+      
+
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .float{
+    position:fixed;
+    /* background-color:#25d366; */
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    /* box-shadow: 2px 2px 3px #999; */
+    z-index:100;
+  }
+
+  .float > div {
+    opacity: 0;
+    transition: 0.6s all ease-in-out
+  }
+  .float a:hover ~ div {
+    opacity: 1;
+  }
+
+.my-float{
+	margin-top:16px;
+}
+</style>

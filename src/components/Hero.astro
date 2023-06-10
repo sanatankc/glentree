@@ -51,16 +51,16 @@ const slides = [
           <div class="mt-auto flex flex-col items-center max-md:items-start max-md:mt-0" data-scroll-section>
             <Text
               type="h1"
-              class='mt-28 text-center max-md:text-left max-md:mt-0 disappear'
+              class='mt-28 text-center max-md:text-left max-md:mt-0 disappear daisy daisy-y-1 daisy-1'
               data-scroll data-scroll-class="appear" data-scroll-repeat="true"
             >Unlock your child’s potential</Text>
             <Text
               type="lg"
-              class='mt-3 text-2xl text-center'
+              class='mt-3 text-2xl text-center daisy daisy-y-1 daisy-2'
               data-scroll
               data-scroll-direction="horizontal"
             >Shaping A Brighter Future for Your Child</Text>
-            <div class="flex flex-row mt-5">
+            <div class="flex flex-row mt-5 daisy daisy-y-2 daisy-3">
               <a href="https://admissions.glentreeacademy.com" target='_blank'>
                 <Button>Apply Now</Button>
               </a>
@@ -71,11 +71,11 @@ const slides = [
           </div>
       
           <div class="flex flex-row h-36 w-full mt-auto max-md:mt-12 items-center justify-around flex-wrap max-md:flex-col max-md:h-auto max-md:items-start relative z-20">
-            <div class="flex flex-row max-md:mb-5">
+            <div class="flex flex-row max-md:mb-5 daisy daisy-y-1 daisy-4">
               <img src={psjaAward} alt="PSJA Award" class="h-12" />
               <div class="ml-4">
                 <Text type='sm'>
-                  Rank 1 in <span class="text-green-600 font-extrabold">Holistic Education</span>
+                  Rank 1 in <span class="text-[#56cf8a] font-extrabold">Holistic Education</span>
                 </Text>
                 
                 <Text type='sm' class='text-gray-600 max-md:text-sm'>
@@ -84,11 +84,11 @@ const slides = [
               </div>
             </div>
       
-            <div class="flex flex-row max-md:mb-5">
+            <div class="flex flex-row max-md:mb-5 daisy daisy-y-1 daisy-5">
               <img src={meritAwards} alt="PSJA Award" class="h-12 mr-[8px]" />
               <div class="ml-4">
                 <Text type='sm'>
-                  Best <span class="text-green-600 font-extrabold">Emerging</span> School
+                  Best <span class="text-[#56cf8a] font-extrabold">Emerging</span> School
                 </Text>
                 
                 <Text type='sm' class='text-gray-600 max-md:text-sm'>
@@ -97,11 +97,11 @@ const slides = [
               </div>
             </div>
       
-            <div class="flex flex-row max-md:mb-5">
+            <div class="flex flex-row max-md:mb-5 daisy daisy-y-1 daisy-6">
               <img src={psjaAward} alt="PSJA Award" class="h-12" />
               <div class="ml-4">
                 <Text type='sm'>
-                  Rank 1 in <span class="text-green-600 font-extrabold">Integrated Learning</span>
+                  Rank 1 in <span class="text-[#56cf8a] font-extrabold">Integrated Learning</span>
                 </Text>
                 
                 <Text type='sm' class='text-gray-600 max-md:text-sm'>
@@ -122,7 +122,7 @@ const slides = [
 
   function moveSlides(items: Array<HTMLElement>) {
     items.forEach((item, i) => {
-      console.log(i, slideshowIndex)
+      // console.log(i, slideshowIndex)
       if (i === slideshowIndex) {
         item.style.opacity = '1';
         return;
@@ -136,5 +136,5 @@ const slides = [
   moveSlides(slideshowItems)
   setInterval(() => {
     moveSlides(slideshowItems)
-  }, 5000)
+  }, 3000)
 </script>
