@@ -45,7 +45,7 @@ const resultImages = [
     scrollSnapType: 'x mandatory',
   }}>
     {resultImages.map((image, index) => (
-      <Card title={""} image={image} class={`daisy daisy-${index + 1} daisy-y-1 daisy-debug`}  />
+      <Card title={""} image={image} class={`daisy daisy-${index + 1} daisy-y-1 daisy-debug m-auto`}  />
     ))}
   </div>
 </div>
@@ -58,29 +58,28 @@ const resultImages = [
 </style>
 
 <script>
-  const hScroll = document.querySelector('.h-scroll') as HTMLDivElement
-  function detectTrackPad(e) {
-  var isTrackpad = false;
-  if (e.wheelDeltaY) {
-    if (e.wheelDeltaY === (e.deltaY * -3)) {
-      isTrackpad = true;
-    }
-  }
-  else if (e.deltaMode === 0) {
-    isTrackpad = true;
-  }
-  console.log(isTrackpad ? "Trackpad detected" : "Mousewheel detected");
-}
+//   const hScroll = document.querySelector('.h-scroll') as HTMLDivElement
+//   function detectTrackPad(e) {
+//   var isTrackpad = false;
+//   if (e.wheelDeltaY) {
+//     if (e.wheelDeltaY === (e.deltaY * -3)) {
+//       isTrackpad = true;
+//     }
+//   }
+//   else if (e.deltaMode === 0) {
+//     isTrackpad = true;
+//   }
+// }
 
-  
-  hScroll.addEventListener("wheel", (evt) => {
-      if (detectTrackPad(evt)) {
-        if (hScroll.scrollLeft === 0 && evt.deltaY < 5) return;
-        if (hScroll.scrollLeft === hScroll.scrollWidth - hScroll.clientWidth && evt.deltaY > 5) return;
-        evt.preventDefault();
-        hScroll.scrollLeft += evt.deltaY;
-      }
-  });
+
+//   hScroll.addEventListener("wheel", (evt) => {
+//       if (detectTrackPad(evt)) {
+//         if (hScroll.scrollLeft === 0 && evt.deltaY < 5) return;
+//         if (hScroll.scrollLeft === hScroll.scrollWidth - hScroll.clientWidth && evt.deltaY > 5) return;
+//         evt.preventDefault();
+//         hScroll.scrollLeft += evt.deltaY;
+//       }
+//   });
 
 
   // let pos = { top: 0, left: 0, x: 0, y: 0 };
