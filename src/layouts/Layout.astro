@@ -63,13 +63,6 @@ const { title } = Astro.props;
 			const isIntersecting = (
 				entry.isIntersecting
 			) || entry.target.classList.contains('daisy-fixed')
-			const { boundingClientRect, intersectionRect } = entry
-			const overlap = (
-				intersectionRect.width * intersectionRect.height
-			) / (boundingClientRect.width * boundingClientRect.height)
-			if (isIntersecting && entry.target.classList.contains('daisy-debug')) {
-				console.log('overlap --> ', overlap, entry.intersectionRatio)
-			}
 			if (isIntersecting) {
 				entry.target.classList.add('daisy-show')
 			}

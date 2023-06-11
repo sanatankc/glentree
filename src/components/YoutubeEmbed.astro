@@ -1,22 +1,25 @@
 ---
-const { embedLink, videoId } = Astro.props
+const { embedId, videoId } = Astro.props
 ---
 
-<div class={`p-20 fixed w-screen h-screen z-[9999] top-0 bg-black/80 data-video-${videoId} opacity-0 pointer-events-none transition-opacity`}>
-  <iframe class='iframe' width="100%" height="100%" src={embedLink} title="Glentree Testimonial | Glentree Academy" frameborder="0" autoplay allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen></iframe>
+<div id={"player" + videoId} class={`p-20 fixed w-screen h-screen z-[9999] top-0 bg-black/80 data-video-${videoId} opacity-0 pointer-events-none transition-opacity`}>
+  
 </div>
 
 
 
-<script define:vars={{videoId}}>
+<script define:vars={{videoId, embedId}}>
+
   document.querySelector(`[data-video-open="${videoId}"]`).addEventListener('click', () => {
     document.querySelector(`.data-video-${videoId}`).classList.remove('opacity-0')
     document.querySelector(`.data-video-${videoId}`).classList.remove('pointer-events-none')
+    document.querySelector(`.data-video-${videoId}`).innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${embedId}?autoplay=1&mute=0&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
   })
 
   document.querySelector(`.data-video-${videoId}`).addEventListener('click', () => {
     document.querySelector(`.data-video-${videoId}`).classList.add('opacity-0')
     document.querySelector(`.data-video-${videoId}`).classList.add('pointer-events-none')
+    document.querySelector(`.data-video-${videoId}`).innerHTML = ``
   })
 
   document.querySelector(`.data-video-${videoId} iframe`).addEventListener('click', (e) => {

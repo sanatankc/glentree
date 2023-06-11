@@ -98,9 +98,7 @@ const academics = [
 
   },
 ]
-
            
-              
 ---
 
 <Layout title="Welcome to Astro.">
@@ -124,7 +122,7 @@ const academics = [
       background: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.8) 68.07%), url(${astronautKidsAdmissionBG})`,
       backgroundPosition: 'top'
     }}>
-      <Text type={'h2'} class='mt-14 max-md:mt-10'>Curriculum & Academics</Text>
+      <Text type={'h2'} class='mt-14 max-md:mt-10'>Curriculum</Text>
       <Text type={'base'} class='mt-3 text-center max-md:w-[90%]' >Your child’s journey towards a holistic learning environment starts here.</Text>
       <a href="https://admissions.glentreeacademy.com" target='_blank'>
         <Button class='mt-3'>Apply Now</Button>
@@ -133,7 +131,7 @@ const academics = [
       <!-- Carousell/Updatexss -->      
       <!-- Our MOttto -->
       
-      <LFL />
+      <LFL viewPhilosophyVisible={false} />
 
       <div class='w-full p-14 text-black flex flex-col items-center max-md:p-6' style={{
         background: 'linear-gradient(249.28deg, #FBFFF7 0%, #F6FFED 0%, #FFFAF7 100%)'
@@ -186,7 +184,7 @@ const academics = [
           {academics.map((academic) => (
              <div class='flex flex-row w-full mb-[2px] max-md:flex-col max-md:rounded-xl overflow-hidden max-md:mb-4'>
               <div
-                class='w-full flex-1 max-w-[350px] min-h-[200px] mr-[1px] flex flex-col text-white items-center justify-center relative'
+                class='w-full flex-1 max-w-[350px] min-h-[200px] mr-[1px] flex flex-col text-white items-center justify-center relative bg-cover no-repeat'
                 style={{
                   backgroundImage: `url(${academic.image})`
               }}>
@@ -201,7 +199,12 @@ const academics = [
                   <Text type={'h4'}>{academic.grade}</Text>
                 </div>
               </div>
-              <div class='w-full flex-1 max-w-[845px] min-h-[200px] bg-green-600 mr-[1px] flex flex-row max-md:flex-col max-md:items-start max-md:p-8 max-md:pt-4 items-center justify-center p-12 py-4'>
+              <div
+                style={{
+                  background: academic.background,
+                  opacity: academic.opacity ? academic.opacity : 1
+                }}
+                class='w-full flex-1 max-w-[845px] min-h-[200px] mr-[1px] flex flex-row max-md:flex-col max-md:items-start max-md:p-8 max-md:pt-4 items-center justify-center p-12 py-4'>
                 <Text type={'regular'} class='mt-3 font-[500] flex-1'>
                   <ul class="list-disc text-white">
                     {academic.points[0].map((point) => (
