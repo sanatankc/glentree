@@ -27,10 +27,14 @@ html {
 
 @media screen and (max-width: 768px) {
   .main-container::-webkit-scrollbar {
-    width: 10px;
+    width: 1px !important;
+
   }
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 1px;
+  }
+  .main-container {
+    overflow-y: overlay;
   }
 }
  

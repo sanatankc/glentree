@@ -14,35 +14,14 @@ interface Menu {
 const menu: Array<Menu> = [
   {
     title: 'About Us',
-    submenu: [
-      {
-        title: 'Mission & Vision',
-        link: 'https://www.glentreeacademy.com/mission',
-      },
-      {
-        title: 'From the Founder\'s Desk',
-        link: 'https://www.glentreeacademy.com/message'
-      },
-      {
-        title: 'Philosophy & Values',
-        link: 'https://www.glentreeacademy.com/philosophy'
-      },
-      {
-        title: 'Accreditations & Affiliations',
-        link: 'https://www.glentreeacademy.com/accreditations'
-      },
-      {
-        title: 'Supporting Initiatives',
-        link: 'https://www.glentreeacademy.com/supporting'
-      },
-    ]
+    link: '/about-us',
   },
   {
     title: 'Academics',
     submenu: [
       {
         title: 'LFL Curriculum',
-        link: 'https://glentreeacademy.com/lfl-curriculum/'
+        link: '/lfl-curriculum/'
       },
       {
         title: 'Co-Scholastics',
@@ -59,11 +38,11 @@ const menu: Array<Menu> = [
     submenu: [
       {
         title: 'Whitefield',
-        link: 'https://glentreeacademy.com/glentree-whitefield'
+        link: '/glentree-whitefield'
       },
       {
         title: 'Sarjapur',
-        link: 'https://glentreeacademy.com/glentree-sarjapur'
+        link: '/glentree-sarjapur'
       }
     ]
   },
@@ -80,7 +59,7 @@ const menu: Array<Menu> = [
       },
       {
         title: 'Scholarship',
-        link: 'https://glentreeacademy.com/scholarship/'
+        link: '/scholarship/'
       },
     ]
   }
@@ -118,7 +97,7 @@ const menu: Array<Menu> = [
         )
       } else if (item.link) {
         return (
-          <a href={item?.link} class="text-white font-semibold hover:underline mr-8 max-md:mr-0">{item.title}</a>
+          <a href={item?.link} class="text-white font-semibold hover:underline mr-8 max-md:mr-0 daisy daisy-fixed daisy-2">{item.title}</a>
         )
       }
     })}
@@ -175,7 +154,18 @@ const menu: Array<Menu> = [
           </div>
         )
       } else {
-        return (<span>TODO: YTI</span>)
+        return (
+          <div class='mobileMenuParent'>
+            <div class='relative py-[14px] px-5 mr-8 max-md:mr-0 w-full' style={{ 
+              borderBottom: '1px solid rgba(255, 255, 255, 0.2)'
+            }}>
+                <a 
+                  href={item.link}
+                  class="text-white font-semibold hover:underline"
+                >{item.title}</a>
+            </div>
+          </div>
+        )
       }
     })}
   </div>

@@ -6,7 +6,7 @@ import Button from '../system/Button.astro';
 import Text from '../system/Text.astro';
 
 ---
-<div class='bg-white relative p-14 flex flex-col items-center max-md:px-4 max-md:p-10 max-md:pb-0 max-md:items-start'>
+<div class='bg-white relative p-14 px-20 flex flex-col items-center max-md:px-4 max-md:p-10 max-md:pb-0 max-md:items-start'>
   <Text type={'subtitle'} class='text-black' style={{ letterSpacing: '0.1em', opacity: 0.6 }}>Hear From Our Parents</Text>
   <Text type={'h2'} class='text-black mt-3 relative'>
     See why parents <span class='text-accent2'>trust Glentree</span>
@@ -29,14 +29,14 @@ import Text from '../system/Text.astro';
       >
         “This school offers more than just education. Teachers give individual attention, and activities add to the wholesome learning experience...”
       </Text>
-      <a href="https://drive.google.com/file/d/1vVhfyJkBtJZcgShn5dq1PznNJBlYt4lL/view" target='_blank'>
+      <div data-video-open="0">
         <Button class='mt-4'>
           <span>Watch Video</span>
           <svg slot="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM13.2313 8.72996C12.9466 8.53003 12.6242 8.32321 12.2903 8.1202C11.0034 7.33764 10.36 6.94636 9.7829 7.37957C9.2058 7.81278 9.15335 8.71968 9.04846 10.5335C9.01879 11.0464 9 11.5493 9 12.0001C9 12.4508 9.01879 12.9537 9.04846 13.4666C9.15335 15.2804 9.2058 16.1873 9.7829 16.6205C10.36 17.0537 11.0034 16.6625 12.2903 15.8799C12.6242 15.6769 12.9466 15.4701 13.2313 15.2702C13.5559 15.0423 13.909 14.7688 14.2651 14.4783C15.555 13.426 16.2 12.8999 16.2 12.0001C16.2 11.1002 15.555 10.5741 14.2651 9.52182C13.909 9.23134 13.5559 8.95785 13.2313 8.72996Z" fill="white"/>
           </svg>
         </Button>
-      </a>
+      </div>
     </div>
   </div>
   <!-- <div class='w-full rounded-2xl mt-7 flex flex-row max-md:flex-col'>

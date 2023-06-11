@@ -194,71 +194,68 @@ const scolarshipLength = scholarships.length
         </div>
 
         
-        <div class='w-full flex flex-row flex-wrap px-[136px] py-16 gap-5 x-md:px-4 max-md:py-6' style={{
+        <div class='w-full flex flex-row flex-wrap px-[136px] py-16 gap-5 max-md:px-4 max-md:py-6' style={{
           background: 'linear-gradient(180deg, #000000 0%, #142C1E 108.48%)'
         }}>
-
-        {scholarships.map((scholarship, index) => (
-          <div class='w-full flex flex-row bg-[#19211D] rounded-3xl mb-6 min-h-[230px]' id={'collapsible-container-' + index}>
-            <div class='w-[400px] p-6 box-border'>
-              <div class='w-full h-full transition-all bg-cover bg-center flex-shrink-0 rounded-lg' style={{
-                backgroundImage: `url(${preetiBGTemp})`
-              }}>
+          {scholarships.map((scholarship, index) => (
+            <div class='w-full flex flex-row max-md:flex-col bg-[#19211D] rounded-3xl mb-6 min-h-[230px] collapsible-container' id={'collapsible-container-' + index}>
+              <div class='max-w-[400px] w-full p-6 max-md:p-4 box-border'>
+                <div class='w-full h-full min-h-[230px] transition-all bg-cover bg-center flex-shrink-0 rounded-lg' style={{
+                  backgroundImage: `url(${preetiBGTemp})`
+                }}>
+                </div>
               </div>
-            </div>
-            <div class='flex-1 p-8'>
-              <Text type={'h4'} class={'text text-3xl'}>{scholarship.Title}</Text>
-              <Text type={'base'} class='mt-3 font-normal'>{scholarship.Description}</Text>
-              <div class='collapsible-content' class='w-full'>
-                <div class='w-full h-[1px] bg-white/25 my-6'></div>
+              <div class='flex-1 p-8 max-md:p-4'>
+                <Text type={'h4'} class={'text text-3xl'}>{scholarship.Title}</Text>
+                <Text type={'base'} class='mt-3 font-normal'>{scholarship.Description}</Text>
+                <div class='collapsible-content' class='w-full'>
+                  <div class='w-full h-[1px] bg-white/25 my-6'></div>
 
-                <div class='w-full grid grid-rows-2 grid-cols-2 gap-x-14 gap-y-10'>
-                  <div>
-                    <Text type={'xs'} class={'text-3xl uppercase text-white/60 font-bold tracking-widest'}>Eligibility</Text>
-                    <Text type={'regular'} class='mt-3'>{scholarship.Eligibility.length > 1 ? scholarship.Eligibility.join(' and ') : scholarship.Eligibility[0]}</Text>
-                  </div>
-                  {scholarship.DocumentsRequired && scholarship.DocumentsRequired.length > 0 && (
+                  <div class='w-full grid grid-rows-2 grid-cols-2 gap-x-14 gap-y-10 max-md:block'>
                     <div>
-                      <Text type={'xs'} class={'text-3xl uppercase text-white/60 font-bold tracking-widest'}>Documents Requred</Text>
+                      <Text type={'xs'} class={'text-3xl uppercase text-white/60 font-bold tracking-widest max-md:mt-6'}>Eligibility</Text>
+                      <Text type={'regular'} class='mt-3'>{scholarship.Eligibility.length > 1 ? scholarship.Eligibility.join(' and ') : scholarship.Eligibility[0]}</Text>
+                    </div>
+                    {scholarship.DocumentsRequired && scholarship.DocumentsRequired.length > 0 && (
+                      <div>
+                        <Text type={'xs'} class={'text-3xl uppercase text-white/60 font-bold tracking-widest max-md:mt-6'}>Documents Requred</Text>
+                        <Text type={'regular'} class='mt-3'>
+                          <ul class='list-disc max-md:pl-4'>
+                            {scholarship.DocumentsRequired.map((doc) => (
+                              <li>{doc}</li>
+                            ))}
+                          </ul>
+                        </Text>
+                      </div>
+                    )}
+                    
+                    <div>
+                      <Text type={'xs'} class={'text-3xl uppercase text-white/60 font-bold tracking-widest max-md:mt-6'}>Benefits</Text>
                       <Text type={'regular'} class='mt-3'>
-                        <ul class='list-disc'>
-                          {scholarship.DocumentsRequired.map((doc) => (
+                        <ul class='list-disc max-md:pl-4'>
+                          {scholarship.Benefits.map((doc) => (
                             <li>{doc}</li>
                           ))}
                         </ul>
                       </Text>
                     </div>
-                  )}
-                  
-                  <div>
-                    <Text type={'xs'} class={'text-3xl uppercase text-white/60 font-bold tracking-widest'}>Benefits</Text>
-                    <Text type={'regular'} class='mt-3'>
-                      <ul class='list-disc'>
-                        {scholarship.Benefits.map((doc) => (
-                          <li>{doc}</li>
-                        ))}
-                      </ul>
-                    </Text>
+                    {scholarship.Conditions && scholarship.Conditions.length > 0 && (
+                      <div>
+                        <Text type={'xs'} class={'text-3xl uppercase text-white/60 font-bold tracking-widest max-md:mt-6'}>Conditions</Text>
+                        <Text type={'regular'} class='mt-3'>
+                          <ul class='list-disc max-md:pl-4'>
+                            {scholarship.Conditions.map((doc) => (
+                              <li>{doc}</li>
+                            ))}
+                          </ul>
+                        </Text>
+                      </div>
+                    )}
                   </div>
-                  {scholarship.Conditions && scholarship.Conditions.length > 0 && (
-                    <div>
-                      <Text type={'xs'} class={'text-3xl uppercase text-white/60 font-bold tracking-widest'}>Conditions</Text>
-                      <Text type={'regular'} class='mt-3'>
-                        <ul class='list-disc'>
-                          {scholarship.Conditions.map((doc) => (
-                            <li>{doc}</li>
-                          ))}
-                        </ul>
-                      </Text>
-                    </div>
-                  )}
                 </div>
               </div>
             </div>
-          </div>
-        ))}
-
-          
+          ))}          
         </div>
         <Footer />
       </div>
@@ -268,29 +265,28 @@ const scolarshipLength = scholarships.length
 <style>
   .collapsible-content {
     max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-out;
+    opacity: 0;
+    /* overflow: hidden; */
+    transition: all 0.5s ease-out;
   }
 
   .collapsible-content.is-open {
     max-height: 1000px !important;
+    opacity: 1 !important;
   }
-  #collapsible-container {
+  .collapsible-container {
     /* max-height: 0; */
     overflow: hidden;
 
-    transition: max-height 0.5s ease-out;
+    transition: all 0.5s ease-out;
     cursor: pointer;
   }
 </style>
 
 <script define:vars={{ scolarshipLength }}>
-  console.log('helllo...')
   for (let i = 0; i < scolarshipLength; i++) {
-    console.log('helllo...1')
     const collapsibleContainer = document.getElementById('collapsible-container-' + i);
     const collapsibleContent = collapsibleContainer.querySelector('.collapsible-content');
-    console.log(collapsibleContainer, collapsibleContent);
     collapsibleContainer.addEventListener('click', () => {
       collapsibleContent.classList.toggle('is-open');
       // close other collapsible contents
