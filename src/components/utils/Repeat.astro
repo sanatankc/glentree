@@ -6,7 +6,11 @@ interface Props {
 
 const { n, mobile = false } = Astro.props;
 ---
-
-{mobile && <slot />}
-
-{!mobile && new Array(n).fill('_').map((_, i) =>  <slot />)}
+{new Array(n).fill('_').map((_, i) => {
+  if (mobile) {
+    return <slot class='max-md:!overflow-y-hidden' />
+  }
+  else {
+    return <slot />
+  }
+})}
