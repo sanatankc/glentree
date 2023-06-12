@@ -62,7 +62,7 @@ const campusData = {
       }
     ],
     phoneNo: '+91 7899738130',
-    workingHours: 'Monday to Saturday - 8:00 PM to 4:00 PM',
+    workingHours: 'Monday to Saturday - 8:00 AM to 4:00 PM',
     address: 'Nallurhalli Rd, Palm Meadows, Nallurhalli, Whitefield, Bengaluru, Karnataka 560066',
     mapEmbedLink: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyAIyVF44QhoXfwwKHLd1h3N49cQTHS0Yvw&q=Whitefield Glentree Academy, Whitefield, Bengaluru'
   },
@@ -71,7 +71,7 @@ const campusData = {
     description: 'A sprawling green campus located within the heart of the city.',
     bannerBG: schoolGASBG,
     virtualCampusLink: 'https://www.google.com/maps/@12.8977429,77.6849464,3a,75y,349.51h,82.52t/data=!3m8!1e1!3m6!1sAF1QipOr5WfWNbbfic6rOHNb2iIGHo6vd3F9sSIuKilE!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOr5WfWNbbfic6rOHNb2iIGHo6vd3F9sSIuKilE%3Dw203-h100-k-no-pi-0-ya303.22165-ro0-fo100!7i10676!8i5338?hl=en-US&entry=ttu',
-    galleryImages: [galleryGAS1, galleryGAS2, galleryGAS3, galleryGAS4, galleryGAS5,],
+    galleryImages: [galleryGAS1, galleryGAS2, galleryGAS3, galleryGAS4, galleryGAS5],
     leaderMessage: [
       {
         image: principalGAS,
@@ -81,7 +81,7 @@ const campusData = {
       }
     ],
     phoneNo: '+91 9632104368',
-    workingHours: 'Monday to Saturday - 8:00 PM to 4:00 PM',
+    workingHours: 'Monday to Saturday - 8:00 AM to 4:00 PM',
     address: 'No.36/5,Halanayakanahalli,Varthur Hobli Bengaluru East Taluk,Bengaluru, Karnataka 560035',
     mapEmbedLink: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyAIyVF44QhoXfwwKHLd1h3N49cQTHS0Yvw&q=Sarjapur Glentree Academy, Sarjapur, Bengaluru'
   },
@@ -134,11 +134,11 @@ const campus = campusData[campusName]
             background: 'linear-gradient(180deg, #3C674F 0%, #23623F 51.08%, #0A5E2F 100%)',
           }}>
             <Constrain>
-              <Text type={'subtitle'}>OUR BELIEF</Text>
-              <Text type={'h2'} class={'mt-3 leading-9'}>Message from the Leader’s</Text>
+              <Text type={'subtitle'}>OUR LEADER</Text>
+              <Text type={'h2'} class={'mt-3 leading-9'}>From the Principal</Text>
               {campus.leaderMessage && (campus.leaderMessage.map((message => (
                 <div class='flex flex-row max-md:flex-col max-md:items-start mt-12 items-center'>
-                  <img src={message.image} class='w-[360px] h-[460px] max-md:w-full max-md:h-auto max-md:max-w-[400px] object-cover rounded-3xl' />
+                  <img src={message.image} class='w-[360px] h-[322px] max-md:w-full max-md:h-auto max-md:max-w-[400px] object-cover rounded-3xl' />
                   <div class='ml-16 max-md:ml-0 max-md:mt-4'>
                     <Text type={'regular'} class='uppercase text-white/80'>
                       {message.role}
@@ -161,9 +161,7 @@ const campus = campusData[campusName]
           <div class="p-4 px-20">
             <Constrain>
               <Text type={'h2'} class='text-center max-md:text-left text-black mt-16 max-md:mt-2'>Learn from <span class='text-accent'>the Best</span></Text>
-              <Text type={'base'} class='text-center max-md:text-left text-black mt-2' style={{
-                color: 'rgba(102, 102, 102, 1)'
-              }}>Join our school and start building your career today</Text>
+              
               <div class='flex justify-between gap-8 mt-10 text-black mb-24 items-center max-md:flex-col max-md:px-0 max-md:mt-6 max-md:mb-8'>
                 <div class='h-full'>
                   <div class='p-6 border border-black flex flex-row rounded-lg w-[400px] max-md:w-full max-md:p-4' style={{

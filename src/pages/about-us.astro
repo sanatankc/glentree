@@ -15,9 +15,10 @@ import '../global.css'
 import GalleryMarquee from '../components/campus/galleryMarquee.astro';
 import Footer from '../components/landingPage/Footer.astro';
 
-import preeti from '../images/aboutUs/preeti.png'
+import preeti from '../images/aboutUs/preeti.jpeg'
 import sowmia from '../images/aboutUs/sowmia.png'
-import vittal from '../images/aboutUs/vittal.png'
+import vittal from '../images/aboutUs/vittal.jpeg'
+import rachna from '../images/aboutUs/Rachna.jpeg'
 import missionCardBG from '../images/aboutUs/missionCardBG.png'
 import cupIcon from '../images/aboutUs/CupIcon.svg'
 
@@ -41,6 +42,7 @@ const founderDesk = [
   { name: 'Vittal Bhandary', title: 'CEO', linkedin: "https://www.linkedin.com/in/vittal-bhandary-51902519/", image: vittal, message: "Glentree Academy envisions a transformative approach to education, addressing the shortcomings of traditional learning. As a child, I found little joy in the stress of memorisation, yet I thrived in the immersive world of sports. Inspired by my own experiences and Preeti's vision of a happy learning environment, Glentree aims to create a place where children can freely explore their talents and passions without the burden of grades." },
   { name: 'Preeti Bhandary', title: 'DIRECTOR', linkedin: 'https://www.linkedin.com/in/preeti-bhandary-0164231a', image: preeti, message: "Research shows that involved parents contribute to happier, healthier, and more successful children. However, in today's fast-paced world, lack of quality parenting time leads to increased pressure on children. We often neglect the present moment, consumed by daily crises. Engaging children in multiple activities is no substitute for parental presence, despite common misconceptions." },
   { name: 'Sowmia Raguraman', title: 'MENTOR PRINCIPAL', linkedin: 'https://www.linkedin.com/in/sowmia-raguraman-9b51b364', image: sowmia, message: "As an educator, my goal is to nurture a growth mindset in children, teaching them to embrace failures as opportunities for progress. I strive to help them measure their advancement effectively, academically and personally. By encouraging a positive attitude towards change and letting go of past negative experiences, we can develop their mature thinking from an early age. This mindset enables them to persevere through setbacks, accept constructive criticism, refine their skills, and view mistakes as stepping stones to success." },
+  { name: 'Rachna', title: 'COO', linkedin: 'https://www.linkedin.com/in/rachana-heda-b218881a6', image: rachna, message: "As the proud leader of this educational institution, I am thrilled to share our commitment to learning for life. Our vision is to cultivate lifelong learners who are curious, creative, and compassionate individuals. Through innovative teaching methods, personalized guidance, and a diverse range of opportunities, we strive to equip our students with the skills, knowledge, and values needed to thrive in an ever-changing world. Together with our dedicated educators, supportive parents, and enthusiastic students, we embark on a journey of academic excellence, character development, and holistic growth. Join us as we shape the leaders and innovators of tomorrow." },
 ]
 
 const missions = [
@@ -90,7 +92,7 @@ const missions = [
           {founderDesk.map((item, index) => (
             <div class='flex flex-row w-full mt-8 items-center max-md:flex-col max-md:items-center max-md:mt-4'>
               <div class='max-w-[360px] w-full h-[410px] mr-[60px] shrink-0 rounded-3xl overflow-hidden max-md:mr-0'>
-                <img src={item.image} alt="" class='w-full h-full object-cover' />
+                <img src={item.image} alt="" class='w-full h-full object-cover object-top' />
               </div>
               <div>
                 <div class="flex flex-row items-center max-md:mt-4">
