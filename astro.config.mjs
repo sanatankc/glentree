@@ -7,5 +7,6 @@ import vercel from "@astrojs/vercel/serverless";
 export default defineConfig({
   integrations: [tailwind()],
   output: "server",
-  adapter: vercel()
+  adapter: vercel(),
+  // server: (command) => ({ port: command === 'dev' ? 3000 : 4000, host: true })
 });
