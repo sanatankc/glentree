@@ -4,20 +4,23 @@ import campusSectionPatternBG from '../../images/campusSectionPatternBG.png'
 import sarjapurCampus from '../../images/sarjapurCampus.png'
 import whitefieldCampus from '../../images/whitefieldCampus.png'
 import CampusCard from './campusCard.astro';
+import Constrain from '../system/Constrain.astro';
 
 ---
 <div class='bg-accent relative p-20 max-md:p-5'>
   <img src={campusSectionPatternBG} class='w-screen absolute top-0 left-0 -z-1' />
-  <div class='relative z-10'>
-    <Text type='subtitle' class='text-white' style={{ letterSpacing: '0.1em', opacity: 0.8 }}>Locate Us</Text>
-    <Text type='h2' class='text-white mt-3'>Our Branches</Text>
-    <div class='grid grid-cols-2 gap-8 max-md:grid-rows-2 max-md:grid-cols-1 justify-between mt-8'>
-      <!-- <a href='https://glentreeacademy.com/glentree-whitefield/'> -->
-        <CampusCard link='/glentree-whitefield/' image={whitefieldCampus} class='mr-8' name='Whitefield' desc="Centrally located in the IT corridor of Bangalore." />
-      <!-- </a> -->
-      <!-- <a href='/glentree-sarajapura/'> -->
-        <CampusCard  link="/glentree-sarajapura/" image={sarjapurCampus} name='Sarjapur' desc="A sprawling green campus located within the heart of the city." />
-      <!-- </a> -->
+  <Constrain>
+    <div class='relative z-10'>
+      <Text type='subtitle' class='text-white' style={{ letterSpacing: '0.1em', opacity: 0.8 }}>Locate Us</Text>
+      <Text type='h2' class='text-white mt-3'>Our Branches</Text>
+      <div class='grid grid-cols-2 gap-8 max-md:grid-rows-2 max-md:grid-cols-1 justify-between mt-8'>
+        <!-- <a href='https://glentreeacademy.com/glentree-whitefield/'> -->
+          <CampusCard link='/glentree-whitefield/' image={whitefieldCampus} class='mr-8' name='Whitefield' desc="Centrally located in the IT corridor of Bangalore." />
+        <!-- </a> -->
+        <!-- <a href='/glentree-sarajapura/'> -->
+          <CampusCard  link="/glentree-sarajapura/" image={sarjapurCampus} name='Sarjapur' desc="A sprawling green campus located within the heart of the city." />
+        <!-- </a> -->
+      </div>
+    </Constrain>
     </div>
   </div>
-</div>

@@ -15,16 +15,11 @@ import '../global.css'
 import GalleryMarquee from '../components/campus/galleryMarquee.astro';
 import Footer from '../components/landingPage/Footer.astro';
 import preetiBGTemp from '../images/scholarships/preeti_bhanadry.png'
-
-import preeti from '../images/aboutUs/preeti.png'
-import sowmia from '../images/aboutUs/sowmia.png'
-import vittal from '../images/aboutUs/vittal.png'
-import missionCardBG from '../images/aboutUs/missionCardBG.png'
-import cupIcon from '../images/aboutUs/CupIcon.svg'
+import banner from '../images/scholarships/banner.jpg'
 
 const scholarships = [
     {
-        "Title": "Glentree Loyalty Program for Little Elly",
+        "Title": "Loyalty Program for Little Elly",
         "Description": "For Little Elly students seeking admission",
         "Eligibility": [
             "All Little Elly students for grades LKG to Grade 1",
@@ -59,7 +54,7 @@ const scholarships = [
         ],
     },
     {
-        "Title": "Glentree Staff Advantage Program",
+        "Title": "Staff Advantage Program",
         "Description": "For children of staff members with at least one year of service",
         "Eligibility": [
             "Children of staff members with at least one year of service"
@@ -77,7 +72,7 @@ const scholarships = [
         ],
     },
     {
-        "Title": "Glentree Learning for Life - Founder’s Scholarship to Meritorious students",
+        "Title": "Founder’s Scholarship to Meritorious students",
         "Description": "For academically bright students from Grades 5 to 9 moving to Grade 6 to 10",
         "Eligibility": [
             "Academically bright students of Grades 5 to 9 moving to Grade 6 to 10"
@@ -90,7 +85,7 @@ const scholarships = [
         ],
     },
     {
-        "Title": "Glentree Learning for Life - Founder’s Scholarship to Meritorious students (In-house students)",
+        "Title": "Founder’s Scholarship to Meritorious students (In-house students)",
         "Description": "For academically bright students from Grades 6 to Grade 9",
         "Eligibility": [
             "Academically bright students from Grades 6 to Grade 9"
@@ -103,7 +98,7 @@ const scholarships = [
         ],
     },
     {
-        "Title": "Glentree Spirit of Sports Scholarship for Excellence in Sports",
+        "Title": "Spirit of Sports Scholarship for Excellence in Sports",
         "Description": "For students from Grade 5 to 10 who have won prizes in recognized sports",
         "Eligibility": [
             "Students from Grade 5 to 10 who have won prizes in recognized sports"
@@ -180,7 +175,7 @@ const scolarshipLength = scholarships.length
         </div>
   
         <div class='min-h-[350px] max-h-[350px] w-full flex justify-center items-center flex-col max-md:min-h-[350px]' style={{
-          background: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.5) 68.07%), url(${clubsBGimage})`,
+          background: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.5) 68.07%), url(${banner})`,
           backgroundPosition: 'top center',
           backgroundSize: 'cover'
 
@@ -199,7 +194,7 @@ const scolarshipLength = scholarships.length
         }}>
           {scholarships.map((scholarship, index) => (
             <div class='w-full flex flex-row max-md:flex-col bg-[#19211D] rounded-3xl mb-6 min-h-[230px] collapsible-container' id={'collapsible-container-' + index}>
-              <div class='max-w-[400px] w-full p-6 max-md:p-4 box-border'>
+              <div class='max-w-[400px] max-md:max-w-[1000px] w-full p-6 max-md:p-4 box-border'>
                 <div class='w-full h-full min-h-[230px] transition-all bg-cover bg-center flex-shrink-0 rounded-lg' style={{
                   backgroundImage: `url(${preetiBGTemp})`
                 }}>
@@ -279,7 +274,7 @@ const scolarshipLength = scholarships.length
     overflow: hidden;
 
     transition: all 0.5s ease-out;
-    cursor: pointer;
+    /* cursor: pointer; */
   }
 </style>
 
