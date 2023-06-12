@@ -127,8 +127,9 @@ const campus = campusData[campusName]
           </div>
   
           <GalleryMarquee images={campus.galleryImages} />
-  
-          <Button class='max-md:block hidden max-md:mt-2 max-md:ml-4'>Launch Virtual Campus Tour</Button>
+          <a href={campus.virtualCampusLink} target='_blank'>
+            <Button class='max-md:block hidden max-md:mt-2 max-md:ml-4'>Launch Virtual Campus Tour</Button>
+          </a>
   
           <div class='w-full mt-20 max-md:mt-8 mb-[60px] p-20 max-md:p-4 max-md:py-8 max-md:mb-0' style={{
             background: 'linear-gradient(180deg, #3C674F 0%, #23623F 51.08%, #0A5E2F 100%)',
