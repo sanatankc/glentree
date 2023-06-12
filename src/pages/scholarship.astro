@@ -208,7 +208,7 @@ const scolarshipLength = scholarships.length
               <div class='flex-1 p-8 max-md:p-4'>
                 <Text type={'h4'} class={'text text-3xl'}>{scholarship.Title}</Text>
                 <Text type={'base'} class='mt-3 font-normal'>{scholarship.Description}</Text>
-                <div class='collapsible-content' class='w-full'>
+                <div class='collapsible-content is-open' class='w-full'>
                   <div class='w-full h-[1px] bg-white/25 my-6'></div>
 
                   <div class='w-full grid grid-rows-2 grid-cols-2 gap-x-14 gap-y-10 max-md:block'>
@@ -283,7 +283,7 @@ const scolarshipLength = scholarships.length
   }
 </style>
 
-<script define:vars={{ scolarshipLength }}>
+<!-- <script define:vars={{ scolarshipLength }}>
   for (let i = 0; i < scolarshipLength; i++) {
     const collapsibleContainer = document.getElementById('collapsible-container-' + i);
     const collapsibleContent = collapsibleContainer.querySelector('.collapsible-content');
@@ -299,4 +299,4 @@ const scolarshipLength = scholarships.length
       }
     })
   }
-</script>
+</script> -->
