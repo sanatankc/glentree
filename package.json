@@ -16,6 +16,7 @@
     "@fontsource/twinkle-star": "^4.5.9",
     "aos": "^3.0.0-beta.6",
     "astro": "^2.4.5",
+    "astro-netlify-cms": "^0.5.3",
     "locomotive-scroll": "^4.1.4",
     "siema": "^1.5.1",
     "tailwindcss": "^3.3.2",
