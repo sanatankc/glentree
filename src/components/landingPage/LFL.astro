@@ -3,7 +3,9 @@ import ourMottoSectionBG from '../../images/ourMottoSectionBG.png'
 import LFLKids from '../../images/LFLKids.png'
 import Button from '../system/Button.astro'
 import Text from '../system/Text.astro'
+import Constrain from '../system/Constrain.astro'
 
+const { viewPhilosophyVisible = true } = Astro.props
 ---
 
 <div
@@ -15,32 +17,37 @@ import Text from '../system/Text.astro'
     background: `url("${ourMottoSectionBG}")`,
   }}>
   </div>
-  <div class="min-w-max" data-scroll-section>
-    <Text 
-      type='subtitle'
-    >OUR MOTTO</Text>
-    <Text 
-      type="h2"
-      class="max-md:mt-1 max-md:mb-5"
+  <Constrain class="flex flex-row max-md:flex-col">
+    <div class="min-w-max daisy daisy-2" data-scroll-section>
+      <Text 
+        type='subtitle'
+      >OUR MOTTO</Text>
+      <Text 
+        type="h2"
+        class="max-md:mt-1 max-md:mb-5 daisy daisy-2"
 
-    >Learning for Life</Text>
-    <img src={LFLKids} alt="Kids with Halo Eating Lunch" class="w-96 min-w-min -mt-14 max-md:hidden"/>
-  </div>
-  <div class='flex flex-col'>
-    <Text
-      type='base'
-    >
-      <span>
-        Our curriculum is designed to harness their natural curiosity and foster community-building and discipline through interactions with the environment. Students share ideas and experiences, and teachers serve as facilitators, learners, guides, and mentors.
-        <br/><br/>
-        We follow an integrated curriculum based on CBSE guidelines and the NCERT, which ensures a well-balanced and challenging education that is also enjoyable.
+      >Learning for Life</Text>
+      <img src={LFLKids} alt="Kids with Halo Eating Lunch" class="w-96 min-w-min -mt-14 max-md:hidden daisy daisy-2 daisy-y-1"/>
+    </div>
+    <div class='flex flex-col items-start'>
+      <Text
+        type='base'
+        class='daisy daisy-3'
+      >
+        <span>
+          Our curriculum is designed to harness their natural curiosity and foster community-building and discipline through interactions with the environment. Students share ideas and experiences, and teachers serve as facilitators, learners, guides, and mentors.
+          <br/><br/>
+          We follow an integrated curriculum based on CBSE guidelines and the NCERT, which ensures a well-balanced and challenging education that is also enjoyable.
 
-      </span>
-    </Text>
-    <a href="https://glentreeacademy.com/philosophy/" class='relative z-10' target='_blank'>
-      <Button secondary class="mt-10">View Philosophy</Button>
-    </a>
-    <img src={LFLKids} alt="Kids with Halo Eating Lunch" class="w-96 min-w-min -mt-14 max-md:block hidden max-md:w-[100vw] max-md:min-w-0 max-md:max-w-[400px] max-md:-mt-6 max-md:self-start max-md:-left-6 relative left-8"/>
+        </span>
+      </Text>
+      {viewPhilosophyVisible && (
+        <a href="/lfl-curriculum/" class='relative z-10'>
+          <Button secondary class="mt-10 daisy daisy-1 daisy-y-2">View Philosophy</Button>
+        </a>
+      )}
+      <img src={LFLKids} alt="Kids with Halo Eating Lunch" class="w-96 min-w-min -mt-14 max-md:block hidden max-md:w-[100vw] max-md:min-w-0 max-md:max-w-[400px] max-md:-mt-6 max-md:self-start max-md:-left-6 relative left-8"/>
 
-  </div>
+    </div>
+  </Constrain>
 </div>

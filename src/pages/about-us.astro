@@ -1,0 +1,149 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+import Text from '../components/system/Text.astro';
+import BigAdmissionCTA from '../components/BigAdmissionCTA.astro';
+
+import clubsBGimage from '../images/clubs/clubsBGImage.jpeg';
+
+import Button from '../components/system/Button.astro';
+
+import TopNavigationBar from '../components/TopNavigationBar.astro';
+import AdmissionMarquee from '../components/campus/admissionMarquee.astro';
+
+import '../global.css'
+import GalleryMarquee from '../components/campus/galleryMarquee.astro';
+import Footer from '../components/landingPage/Footer.astro';
+
+import preeti from '../images/aboutUs/preeti.jpeg'
+import sowmia from '../images/aboutUs/sowmia.png'
+import vittal from '../images/aboutUs/vittal.jpeg'
+import rachna from '../images/aboutUs/Rachna.jpeg'
+import missionCardBG from '../images/aboutUs/missionCardBG.png'
+import cupIcon from '../images/aboutUs/CupIcon.svg'
+
+import mission1 from '../images/aboutUs/mission1.png'
+import mission2 from '../images/aboutUs/mission2.png'
+import mission3 from '../images/aboutUs/mission3.png'
+import mission4 from '../images/aboutUs/mission4.png'
+import mission5 from '../images/aboutUs/mission5.png'
+import mission6 from '../images/aboutUs/mission6.png'
+
+import cupStarIcon from '../images/aboutUs/icons/Cup Star.svg'
+import fireSquareIcon from '../images/aboutUs/icons/Fire Square.svg'
+import globeIcon from '../images/aboutUs/icons/Global.svg'
+import LinkSquareIcon from '../images/aboutUs/icons/Link Square.svg'
+import graphUpIcon from '../images/aboutUs/icons/Graph Up.svg'
+import sledgeHammerIcon from '../images/aboutUs/icons/Sledgehammer.svg'
+import linkedinIcon from '../icons/linkedin.svg'
+import Constrain from '../components/system/Constrain.astro';
+
+const founderDesk = [
+  { name: 'Vittal Bhandary', title: 'CEO', linkedin: "https://www.linkedin.com/in/vittal-bhandary-51902519/", image: vittal, message: "Glentree Academy envisions a transformative approach to education, addressing the shortcomings of traditional learning. As a child, I found little joy in the stress of memorisation, yet I thrived in the immersive world of sports. Inspired by my own experiences and Preeti's vision of a happy learning environment, Glentree aims to create a place where children can freely explore their talents and passions without the burden of grades." },
+  { name: 'Preeti Bhandary', title: 'DIRECTOR', linkedin: 'https://www.linkedin.com/in/preeti-bhandary-0164231a', image: preeti, message: "Research shows that involved parents contribute to happier, healthier, and more successful children. However, in today's fast-paced world, lack of quality parenting time leads to increased pressure on children. We often neglect the present moment, consumed by daily crises. Engaging children in multiple activities is no substitute for parental presence, despite common misconceptions." },
+  { name: 'Sowmia Raguraman', title: 'MENTOR PRINCIPAL', linkedin: 'https://www.linkedin.com/in/sowmia-raguraman-9b51b364', image: sowmia, message: "As an educator, my goal is to nurture a growth mindset in children, teaching them to embrace failures as opportunities for progress. I strive to help them measure their advancement effectively, academically and personally. By encouraging a positive attitude towards change and letting go of past negative experiences, we can develop their mature thinking from an early age. This mindset enables them to persevere through setbacks, accept constructive criticism, refine their skills, and view mistakes as stepping stones to success." },
+  { name: 'Rachana Heda', title: 'COO', linkedin: 'https://www.linkedin.com/in/rachana-heda-b218881a6', image: rachna, message: "As the proud leader of this educational institution, I am thrilled to share our commitment to learning for life. Our vision is to cultivate lifelong learners who are curious, creative, and compassionate individuals. Through innovative teaching methods, personalized guidance, and a diverse range of opportunities, we strive to equip our students with the skills, knowledge, and values needed to thrive in an ever-changing world. Together with our dedicated educators, supportive parents, and enthusiastic students, we embark on a journey of academic excellence, character development, and holistic growth. Join us as we shape the leaders and innovators of tomorrow." },
+]
+
+const missions = [
+  { image: mission1, title: ['Empowering', 'Personal Growth'], icon: cupIcon, description: "Nurturing and empowering individuals to unleash their full potential in a supportive learning environment." },
+  { image: mission2, title: ['Education with a', 'Global Perspective'], icon: globeIcon, description: "Broadening horizons and cultivating future leaders through innovative teaching and learning approaches." },
+  { image: mission3, title: ['Igniting', 'Lifelong Learning'], icon: fireSquareIcon, description: "Sparking a passion for continuous exploration and discovery, making learning an engaging and enduring journey." },
+  { image: mission4, title: ['Building', 'Resilient Individuals'], icon: sledgeHammerIcon, description: "Equipping students with essential values, life skills, and character development for personal and professional success." },
+  { image: mission5, title: ['Strong Parents-School', 'Parternships'], icon: LinkSquareIcon, description: "Establishing collaborative communities that foster effective communication and engagement for optimal student development." },
+  { image: mission6, title: ['Innovation & Improvement', 'in Education'], icon: graphUpIcon, description: "Embracing change, innovation, and research to create a dynamic and progressive educational environment." },
+]
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="flex flex-col h-screen w-screen relative bg-white">
+    <div 
+      class="flex-1 main-container h-screen w-screen"
+      style={{
+        overflowY: 'overlay',
+        overflowX: 'hidden',
+      }}
+    >
+      <div class='flex flex-col bg-white'>
+        <TopNavigationBar />
+        <div class='h-[72.6px] w-full bg-black'>
+        </div>
+  
+        <div class='min-h-[350px] max-h-[350px] w-full flex justify-center items-center flex-col max-md:min-h-[350px]' style={{
+          background: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.8) 68.07%), url(${clubsBGimage})`,
+          backgroundPosition: 'top center',
+          backgroundSize: 'cover'
+
+          // backgroundAttachment: 'fixed',
+        }}>
+          <Text type={'h2'} class='mt-14 max-md:mt-10'>About Us</Text>
+          <Text type={'base'} class='mt-3 text-center max-md:w-[90%]' >Pioneering Excellence: Embracing our mission for a brighter tomorrow</Text>
+          <!-- <a href="https://admissions.glentreeacademy.com" target='_blank'>
+            <Button class='mt-3'>Apply Now</Button>
+          </a> -->
+        </div>
+
+        
+        <div class='w-full px-[136px] py-16 gap-5 max-md:px-6 max-md:py-6' style={{
+          background: 'linear-gradient(180deg, #000000 0%, #142C1E 108.48%)'
+        }}>
+          <Constrain class="flex flex-row flex-wrap">
+          <Text type={'h2'} class='text-white'>From the Founder's Desk</Text>
+          {founderDesk.map((item, index) => (
+            <div class='flex flex-row w-full mt-8 items-center max-md:flex-col max-md:items-center max-md:mt-4'>
+              <div class='max-w-[360px] w-full h-[410px] mr-[60px] shrink-0 rounded-3xl overflow-hidden max-md:mr-0'>
+                <img src={item.image} alt="" class='w-full h-full object-cover object-top' />
+              </div>
+              <div>
+                <div class="flex flex-row items-center max-md:mt-4">
+                  <Text type={'h3'} class='text-white'>{item.name}</Text>
+                  {!!item.linkedin && (
+                    <a class="w-6 h-6 ml-6 max-md:w-4 max-md:h-4 max-md:ml-3" href={item.linkedin} target="_blank">
+                      <img src={linkedinIcon} alt="" class='w-full h-full object-cover' />
+                    </a>
+                  )}
+                </div>
+                <Text type={'subtitle'} class='mt-1 font-normal'>{item.title}</Text>
+                <Text type={'base'} class='mt-6 max-md:mt-3'>{item.message}</Text>
+              </div>
+            </div>
+          ))}
+          </Constrain>
+          
+        </div>
+
+        <div class='w-full flex flex-col flex-wrap px-20 py-16 gap-5 max-md:px-6 max-md:py-6 bg-white items-center max-'>
+          <Text type={'h2'} class='text-black mb-4'>Our <span class='text-accent2'>Mission</span></Text>
+          <div class='grid grid-rows-2 grid-cols-3 w-full gap-x-10 gap-y-7 max-md:grid-cols-1'>
+            {missions.map(mission => (
+              <div class='h-[400px] mission-card relative group overflow-hidden max-md:h-[320px] bg-red-100 rounded-lg bg-cover bg-center p-5 flex flex-col justify-between' style={{ backgroundImage: `url(${mission.image}` }}>
+                <div class="w-full h-full absolute top-0 left-0 bg-black/60 group-hover:bg-green-600/90 transition-all z-0"></div>
+                
+                <div class="w-10 h-10 self-end bg-contain bg-no-repeat relative z-10" style={{ backgroundImage: `url("${mission.icon}")` }}></div>
+                <div class="relative z-10">
+                  <Text type={'h4'} class='leading-tight text-[28px]' style={{ transition: '0.3s all ease-in-out' }}>{mission.title[0]}<br/>
+                    <span class='text-yellow'>
+                      {mission.title[1]}
+                    </span>
+                  </Text>
+                  <Text type={'regular'} class='max-h-0 overflow-hidden opacity-0 group-hover:max-h-[1000px] group-hover:opacity-100' style={{ transition: '0.5s all ease-in-out' }}>{mission.description}</Text>
+                </div>
+              </div>
+            ))}            
+          </div>
+        </div>
+        <BigAdmissionCTA />
+        <Footer />
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .mission-card {
+    transition: 0.3s all ease-in-out;
+    background-image: linear-gradient(45deg, rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)), url()
+  }
+  .mission-card:hover {
+    background-image: linear-gradient(45deg, rgba(10, 94, 47, 0.8), rgba(10, 94, 47, 0.8), )
+  }
+</style>

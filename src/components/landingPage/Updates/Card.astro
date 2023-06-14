@@ -1,11 +1,10 @@
 ---
 import Text from "../../system/Text.astro";
-const { image, title } = Astro.props
+const { image, title, class: className } = Astro.props
 
-// console.log(image, title)
 ---
 <div 
-  class='text-white bg-slate-500 min-w-[34.813rem] h-[22.438rem] max-sm:min-w-[300px] max-sm:h-[192px] max-[360px]:min-w-[90%] mr-3 rounded-lg flex flex-col justify-end px-5'
+  class:list={['text-white bg-slate-500 min-w-[34.813rem] h-[22.438rem] max-sm:min-w-[300px] max-sm:h-[192px] max-[360px]:min-w-[90%] mr-3 rounded-lg flex flex-col justify-end px-5', className]}
   style={{
     scrollSnapAlign: 'center',
     backgroundImage: `url(${image})`,

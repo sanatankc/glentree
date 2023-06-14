@@ -8,7 +8,7 @@ const { n, mobile = false } = Astro.props;
 ---
 {new Array(n).fill('_').map((_, i) => {
   if (mobile) {
-    return <slot class='max-md:overflow-y-hidden' />
+    return <slot class='max-md:!overflow-y-hidden' />
   }
   else {
     return <slot />

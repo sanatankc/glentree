@@ -1,0 +1,11 @@
+---
+const { class: className } = Astro.props
+---
+<div class="w-full flex items-center justify-center">
+  <div class={className} style={{
+    maxWidth: '1440px',
+    width: '100%',
+  }}>
+    <slot />
+  </div>
+</div>

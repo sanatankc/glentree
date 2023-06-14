@@ -32,20 +32,20 @@ const resultImages = [
   }}
   class="flex flex-col items-center py-20 max-md:py-12"
 >
-  <div class='flex flex-row w-full items-center max-md:ml-0 max-md:px-6 box-border'>
+  <div class='flex flex-row w-full items-center max-md:ml-0 max-md:px-6 box-border daisy daisy-2'>
     <div class='flex-1 bg-white/30 mr-6 max-md:mr-4 max-md:hidden' style={{ height: '1px' }}></div>
     <Text type={"subtitle"} class='text-center max-md:w-[100%] text-white' style={{ opacity: 0.8 }}> Our Results:<br class="hidden max-md:block" /> Sarjapur & Whitefield</Text>
     <div class='flex-1 bg-white/30 ml-6 max-md:ml-4 max-md:hidden' style={{ height: '1px' }}></div>
   </div>
-  <Text type={"base"} class='text-center text-white mb-6 mt-6 max-md:mb-5 max-md:mt-3 max-md:w-[90%]' style={{ opacity: 0.8 }}>  Glentree Academy epitomizes academic brilliance, maintaining our track record of Grade 10 Results.</Text>
+  <Text type={"base"} class='text-center text-white/80 mb-6 mt-6 max-md:mb-5 max-md:mt-3 max-md:w-[90%] daisy daisy-3 daisy-y-10'>  Glentree Academy epitomizes academic brilliance, maintaining our track record of Grade 10 Results.</Text>
 
   <div class="h-scroll w-screen flex flex-row h-min overflow-scroll no-scrollbar scroll-snap-news-carousel px-3 mb-0" style={{
     overflowX: 'scroll',
-    overflowY: 'visible',
+    overflowY: 'hidden',
     scrollSnapType: 'x mandatory',
   }}>
-    {resultImages.map((image) => (
-      <Card title={""} image={image}  />
+    {resultImages.map((image, index) => (
+      <Card title={""} image={image} class={`daisy daisy-${index + 1} daisy-y-1 daisy-debug m-auto`}  />
     ))}
   </div>
 </div>
@@ -58,29 +58,28 @@ const resultImages = [
 </style>
 
 <script>
-  const hScroll = document.querySelector('.h-scroll') as HTMLDivElement
-  function detectTrackPad(e) {
-  var isTrackpad = false;
-  if (e.wheelDeltaY) {
-    if (e.wheelDeltaY === (e.deltaY * -3)) {
-      isTrackpad = true;
-    }
-  }
-  else if (e.deltaMode === 0) {
-    isTrackpad = true;
-  }
-  console.log(isTrackpad ? "Trackpad detected" : "Mousewheel detected");
-}
+//   const hScroll = document.querySelector('.h-scroll') as HTMLDivElement
+//   function detectTrackPad(e) {
+//   var isTrackpad = false;
+//   if (e.wheelDeltaY) {
+//     if (e.wheelDeltaY === (e.deltaY * -3)) {
+//       isTrackpad = true;
+//     }
+//   }
+//   else if (e.deltaMode === 0) {
+//     isTrackpad = true;
+//   }
+// }
 
-  
-  hScroll.addEventListener("wheel", (evt) => {
-      if (detectTrackPad(evt)) {
-        if (hScroll.scrollLeft === 0 && evt.deltaY < 5) return;
-        if (hScroll.scrollLeft === hScroll.scrollWidth - hScroll.clientWidth && evt.deltaY > 5) return;
-        evt.preventDefault();
-        hScroll.scrollLeft += evt.deltaY;
-      }
-  });
+
+//   hScroll.addEventListener("wheel", (evt) => {
+//       if (detectTrackPad(evt)) {
+//         if (hScroll.scrollLeft === 0 && evt.deltaY < 5) return;
+//         if (hScroll.scrollLeft === hScroll.scrollWidth - hScroll.clientWidth && evt.deltaY > 5) return;
+//         evt.preventDefault();
+//         hScroll.scrollLeft += evt.deltaY;
+//       }
+//   });
 
 
   // let pos = { top: 0, left: 0, x: 0, y: 0 };

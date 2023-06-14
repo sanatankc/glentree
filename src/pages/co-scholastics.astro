@@ -23,6 +23,7 @@ import sports from '../images/coscholastics/Sports.jpeg'
 import ELE from '../images/coscholastics/ELE.jpeg'
 import fieldtrip from '../images/coscholastics/FieldTrip.jpeg'
 import reading from '../images/coscholastics/ReadingEnrichment.jpeg'
+import Constrain from '../components/system/Constrain.astro';
 
 
 
@@ -38,7 +39,7 @@ const coscholastics = [
     thumbnail: taekwondo
   },
   {
-    "title": "Visual & Performing Arts",
+    "title": "Performing Arts",
     "description": "From brush strokes to dance moves, discover the artist within and let your imagination run wild.",
     thumbnail: visual
   },
@@ -88,7 +89,7 @@ const coscholastics = [
         </div>
   
         <div class='min-h-[350px] max-h-[350px] w-full flex bg-cover bg-center bg-no-repeat justify-center items-center flex-col max-md:min-h-[350px]' style={{
-          backgroundImage: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.8) 68.07%), url(${coscholasticsBG})`,
+          backgroundImage: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.3) 68.07%), url(${coscholasticsBG})`,
           // backgroundPosition: 'top'
         }}>
           <Text type={'h2'} class='mt-14 max-md:mt-10 text-center'>Explore Beyond the Classrooms</Text>
@@ -99,43 +100,45 @@ const coscholastics = [
         </div>
 
         
-        <div class='w-full flex flex-row flex-wrap px-20 py-16 gap-5 justify-center items-center max-md:px-4 max-md:py-6' style={{
+        <div class='w-full px-20 py-16 max-md:px-4 max-md:py-6' style={{
           background: 'linear-gradient(180deg, #000000 0%, #142C1E 108.48%)'
         }}>
-          {coscholastics.map(coscholastic => (
-            <div 
-              style={{
-                background: 'rgba(255, 255, 255, 0.04)',
-                border: '0.807503px solid rgba(255, 255, 255, 0.24)',
-                backdropFilter: 'blur(16px)',
-                borderRadius: '24px'
-              }}
-              class='p-4 w-[400px] min-h-[480px]'
-            >
-              <div
-                class='w-full h-[320px] bg-cover bg-center rounded-2xl' 
+          <Constrain class="flex flex-row flex-wrap gap-5 justify-center items-center">
+            {coscholastics.map(coscholastic => (
+              <div 
                 style={{
-                  background: `url(${coscholastic.thumbnail})`,
-                  backgroundPosition: 'top center',
-                  backgroundSize: 'cover'
+                  background: 'rgba(255, 255, 255, 0.04)',
+                  border: '0.807503px solid rgba(255, 255, 255, 0.24)',
+                  backdropFilter: 'blur(16px)',
+                  borderRadius: '24px'
                 }}
-              ></div>
-              {Array.isArray(coscholastic.title) ? (
-                <div class="children-inline mt-4">
-                  {coscholastic.title.map(title => (
-                    title.type === 'normal' 
-                      ? <Text type='h4' class='mt-4'>{title.text}</Text>
-                      : <Text type='h4' class='mt-4 text-lg'>{title.text}</Text>
-                  ))}
-                </div>
-              ) : (
-                <Text type='h4' class='mt-4'>{coscholastic.title}</Text>
-              )
-              }
-              <Text type='sm' class='mt-2 text-white/80'>{coscholastic.description}</Text>
-            </div>
-          ))}
-          <div class='p-4 w-[400px]'></div>
+                class='p-4 w-[400px] min-h-[480px]'
+              >
+                <div
+                  class='w-full h-[320px] bg-cover bg-center rounded-2xl' 
+                  style={{
+                    background: `url(${coscholastic.thumbnail})`,
+                    backgroundPosition: 'top center',
+                    backgroundSize: 'cover'
+                  }}
+                ></div>
+                {Array.isArray(coscholastic.title) ? (
+                  <div class="children-inline mt-4">
+                    {coscholastic.title.map(title => (
+                      title.type === 'normal' 
+                        ? <Text type='h4' class='mt-4'>{title.text}</Text>
+                        : <Text type='h4' class='mt-4 text-lg'>{title.text}</Text>
+                    ))}
+                  </div>
+                ) : (
+                  <Text type='h4' class='mt-4'>{coscholastic.title}</Text>
+                )
+                }
+                <Text type='sm' class='mt-2 text-white/80'>{coscholastic.description}</Text>
+              </div>
+            ))}
+            <div class='p-4 w-[400px]'></div>
+          </Constrain>
         </div>
         <Footer />
       </div>

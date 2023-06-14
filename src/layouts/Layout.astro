@@ -54,30 +54,25 @@ const { title } = Astro.props;
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
+
 </style>
 
 <script>
-	// import AOS from 'aos'
-	// AOS.init({
-	// 	container: document.querySelector('.main-container')
-	// });
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach(entry => {
+			const isIntersecting = (
+				entry.isIntersecting
+			) || entry.target.classList.contains('daisy-fixed')
+			if (isIntersecting) {
+				entry.target.classList.add('daisy-show')
+			}
+		})
+	}, {
+		root: document.querySelector("#scroll-area")
+	})
 
-	// Find the item we want to animate on scroll
-	// var target = document.querySelector('#target');
-	// var targetActiveClass = 'target-is-active';
-
-	// Call this function when it enters/leaves the viewport
-	// var callback = function(entries, observer) { 
-	// 	entries.forEach(entry => {
-	// 		if (entry.isIntersecting) {
-	// 			entry.target.classList.add(targetActiveClass);
-	// 		} else {
-	// 			entry.target.classList.remove(targetActiveClass);
-	// 		}
-	// 	});
-	// };
-
-	// // Create our observer
-	// var observer = new IntersectionObserver(callback, {threshold: 0});
-	// observer.observe(target);
+	const hiddenElements = document.querySelectorAll('.daisy')
+	hiddenElements.forEach(element => {
+		observer.observe(element)
+	})
 </script>
