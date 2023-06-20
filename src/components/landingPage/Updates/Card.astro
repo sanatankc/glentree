@@ -4,13 +4,13 @@ const { image, title, class: className } = Astro.props
 
 ---
 <div 
-  class:list={['text-white bg-slate-500 min-w-[34.813rem] h-[22.438rem] max-sm:min-w-[300px] max-sm:h-[192px] max-[360px]:min-w-[90%] mr-3 rounded-lg flex flex-col justify-end px-5', className]}
+  class:list={['text-white bg-slate-500 min-w-[34.813rem] max-sm:min-w-[300px] h-[22.438rem] max-sm:h-[192px] max-[360px]:min-w-[90%] mr-3 rounded-lg flex flex-col justify-end px-5', className]}
   style={{
     scrollSnapAlign: 'center',
-    backgroundImage: `url(${image})`,
+    backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%,  rgba(0, 0, 0, 0) 40%), url(${image})`,
     backgroundSize: 'cover',
     boxShadow: '0px 5.0476px 25.238px rgba(0, 0, 0, 0.1)'
   }}
 >
-  <!-- <Text type=base'text-base' class='mb-3'>Middle School - Annual Day 2023</Text> -->
+  {title && (<Text type='base' class='mb-3'>{title}</Text>)}
 </div>

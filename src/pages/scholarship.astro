@@ -72,7 +72,10 @@ const scholarships = [
     //     ],
     // },
     {
-        "Title": "Founder’s Scholarship to Meritorious students",
+        "Title": [
+          {type: 'normal', text: "Founder’s Scholarship to"},
+          {type: 'highlight', text: "Meritorious students"},
+        ],
         "Description": "For academically bright students from Grades 5 to 9 moving to Grade 6 to 10",
         "Eligibility": [
             "Academically bright students of Grades 5 to 9 moving to Grade 6 to 10"
@@ -85,7 +88,11 @@ const scholarships = [
         ],
     },
     {
-        "Title": "Founder’s Scholarship to Meritorious students (In-house students)",
+        "Title": [
+          {type: 'normal', text: "Founder’s Scholarship to"},
+          {type: 'highlight', text: "Meritorious students"},
+          {type: 'normal', text: "(In-house students)"},
+        ],
         "Description": "For academically bright students from Grades 6 to Grade 9",
         "Eligibility": [
             "Academically bright students from Grades 6 to Grade 9"
@@ -98,7 +105,10 @@ const scholarships = [
         ],
     },
     {
-        "Title": "Spirit of Sports Scholarship for Excellence in Sports",
+        "Title": [
+          {type: 'normal', text: "Spirit of Sports Scholarship for"},
+          {type: 'highlight', text: "Excellence in Sports"},
+        ],
         "Description": "For students from Grade 5 to 10 who have won prizes in recognized sports",
         "Eligibility": [
             "Students from Grade 5 to 10 who have won prizes in recognized sports"
@@ -110,51 +120,77 @@ const scholarships = [
             "15% waiver on tuition fee for that year"
         ],
     },
-    // {
-    //     "Title": "\"All in one go\" for Tuition Fee",
-    //     "Description": "For all students who pay their tuition fee in one go",
-    //     "Eligibility": [
-    //         "All students"
-    //     ],
-    //     "Benefits": [
-    //         "5% concession on Tuition Fee"
-    //     ],
-    //     "Conditions": [
-    //         "Tuition fee should be cleared in one shot"
-    //     ],
-    // },
-    // {
-    //     "Title": "Early Bird Specials or First Comers Savings",
-    //     "Description": "For parents who finalize admission within a week from inquiry",
-    //     "Eligibility": [
-    //         "All parents"
-    //     ],
-    //     "DocumentsRequired": [
-    //         "Parent finalizes admission within a week by paying both resource & admission fee"
-    //     ],
-    //     "Benefits": [
-    //         "₹5000 discount on admission fee"
-    //     ],
-    //     "Deadline": "Offer valid till December 31st"
-    // },
-    // {
-    //     "Title": "Preschool tie-ups",
-    //     "Description": "For preschool owners",
-    //     "Eligibility": [
-    //         "Preschool owners"
-    //     ],
-    //     "DocumentsRequired": [
-    //         "As a part of MOU"
-    //     ],
-    //     "Benefits": [
-    //         "₹3000 per admission to the preschool"
-    //     ],
-    //     "Conditions": [
-    //         "Facilities can be availed as per the terms of MOU"
-    //     ],
-    //     "Deadline": "Until March 31st"
-    // }
 ]
+
+const benefits = [
+  {
+    "Title": [
+      {type: 'normal', text: "Glentree Loyalty Program for"},
+      {type: 'highlight', text: "Little Elly"},
+    ],
+    "Description": "Applicable to all students of Little Elly seeking admission to Glentree Academy for a given AY before 31st of December (For eg., for AY 2024-25, IT SHOULD BE BEFORE DEC 31ST OF 2023) for grades LKG to Grade 1 and Nursery Grade for younger sibling of LE student",
+    "DocumentsRequired": [
+      "Bonafide Student Certificate from Little Elly with last Progress Report",
+      "Application Form Rs 500/- to be collected"
+    ],
+    "Eligibility": "All students of Little Elly",
+    "Benefits": [
+      "50% waiver on the Prevailing Admission Fee",
+      "100% waiver of Admission Fee for sibling (younger) for the same academic year (admission taken together)"
+    ],
+    "conditions": null
+  },
+  {
+    "Title": [
+      {type: 'highlight', text: "Siblings"},
+      {type: 'normal', text: "Benefits Policy"},
+    ],
+    "Description": "Applicable to siblings of existing students or siblings who join Glentree Academy together in the same Academic Year",
+    "DocumentsRequired": [
+      "Principal’s confirmation of the existing student on the school rolls",
+      "Parent & Birth Records for evidencing the sibling relationship (Not applicable to cousins)"
+    ],
+    "Eligibility": "Siblings of existing students or siblings who join Glentree Academy together",
+    "Benefits": [
+      "Waiver of Application Fee",
+      "50% Waiver of Admission Fee for Younger Sibling (any time sibling joins)",
+      "15% discount on the Tuition Fee"
+    ],
+    "conditions": null
+  },
+  {
+    "Title": [
+      {type: 'normal', text: "Glentree"},
+      {type: 'highlight', text: "Staff Advantage"},
+      {type: 'normal', text: "Program"},
+    ],
+    "Description": "Applicable to forwards of staff members who have completed one year of service and have been confirmed",
+    "DocumentsRequired": [
+      "Certificate from HR Department",
+      "Application fee of Rs 500/- to be collected"
+    ],
+    "Eligibility": "Dependents of staff members who have completed one year of service and have been confirmed",
+    "Benefits": [
+      "50% Waiver of Admission Fee",
+      "25% Waiver on Tuition fee until the member is on the active pay rolls of Glentree Academy",
+      "Transport and Resource Fee will have to be paid in full"
+    ],
+  },
+  {
+    "Title": [
+      {type: 'highlight', text: "All in one"},
+      {type: 'notmal', text: "go for Tuition Fee"},
+    ],
+    "Description": "Applicable to all students",
+    "DocumentsRequired": null,
+    "Eligibility": "All students",
+    "Benefits": [
+      "5% concession on Tuition Fee if the tuition is cleared in one shot"
+    ],
+    "conditions": null
+  }
+]
+
 
 const scolarshipLength = scholarships.length
 
@@ -174,13 +210,7 @@ const scolarshipLength = scholarships.length
         <div class='h-[72.6px] w-full bg-black'>
         </div>
   
-        <div class='min-h-[350px] max-h-[350px] w-full flex justify-center items-center flex-col max-md:min-h-[350px]' style={{
-          background: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.5) 68.07%), url(${banner})`,
-          backgroundPosition: 'top center',
-          backgroundSize: 'cover'
-
-          // backgroundAttachment: 'fixed',
-        }}>
+        <div class='min-h-[80px] mt-[60px] max-h-[350px] w-full flex justify-center items-center flex-col max-md:min-h-[80px] bg-white text-black'>
           <Text type={'h2'} class='mt-14 max-md:mt-10'>Scholarships</Text>
           <Text type={'base'} class='mt-3 text-center max-md:w-[90%]' >Empowering Students Through Diverse Scholarship Opportunities</Text>
           <!-- <a href="https://admissions.glentreeacademy.com" target='_blank'>
@@ -189,33 +219,29 @@ const scolarshipLength = scholarships.length
         </div>
 
         
-        <div class='w-full flex flex-row flex-wrap px-[136px] py-16 gap-5 max-md:px-4 max-md:py-6' style={{
-          background: 'linear-gradient(180deg, #000000 0%, #142C1E 108.48%)'
-        }}>
+        <div class='w-full flex flex-row flex-wrap px-[136px] py-16 gap-5 max-md:px-4 max-md:py-6 bg-white'>
           {scholarships.map((scholarship, index) => (
-            <div class='w-full flex flex-row max-md:flex-col bg-[#19211D] rounded-3xl mb-6 min-h-[230px] collapsible-container' id={'collapsible-container-' + index}>
-              <div class='max-w-[400px] max-md:max-w-[1000px] w-full p-6 max-md:p-4 box-border'>
-                <div class='w-full h-full min-h-[230px] transition-all bg-cover bg-center flex-shrink-0 rounded-lg' style={{
-                  backgroundImage: `url(${preetiBGTemp})`
-                }}>
-                </div>
-              </div>
+            <div class='w-full flex flex-row max-md:flex-col bg-[#fafafa] border border-[#c8c8c8] text-black rounded-3xl mb-6 min-h-[230px] collapsible-container' id={'collapsible-container-' + index}>
               <div class='flex-1 p-8 max-md:p-4'>
-                <Text type={'h4'} class={'text text-3xl'}>{scholarship.Title}</Text>
+                <Text type={'h4'} class={'text text-3xl'}>
+                  {scholarship.Title.map((title) => (
+                    <span class={title.type === 'highlight' ? 'text-[#4B916A]' : ''}>{title.text}&nbsp;</span>
+                  ))}
+                </Text>
                 <Text type={'base'} class='mt-3 font-normal'>{scholarship.Description}</Text>
                 <div class='collapsible-content is-open' class='w-full'>
                   <div class='w-full h-[1px] bg-white/25 my-6'></div>
 
                   <div class='w-full grid grid-rows-2 grid-cols-2 gap-x-14 gap-y-10 max-md:block'>
                     <div>
-                      <Text type={'xs'} class={'text-3xl uppercase text-white/60 font-bold tracking-widest max-md:mt-6'}>Eligibility</Text>
+                      <Text type={'xs'} class={'text-3xl uppercase text-[#00662D]/60 font-bold tracking-widest max-md:mt-6'}>Eligibility</Text>
                       <Text type={'regular'} class='mt-3'>{scholarship.Eligibility.length > 1 ? scholarship.Eligibility.join(' and ') : scholarship.Eligibility[0]}</Text>
                     </div>
                     {scholarship.DocumentsRequired && scholarship.DocumentsRequired.length > 0 && (
                       <div>
-                        <Text type={'xs'} class={'text-3xl uppercase text-white/60 font-bold tracking-widest max-md:mt-6'}>Documents Requred</Text>
+                        <Text type={'xs'} class={'text-3xl uppercase text-[#00662D]/60 font-bold tracking-widest max-md:mt-6'}>Documents Requred</Text>
                         <Text type={'regular'} class='mt-3'>
-                          <ul class='list-disc max-md:pl-4'>
+                          <ul class='list-disc max-md:pl-4 list-inside'>
                             {scholarship.DocumentsRequired.map((doc) => (
                               <li>{doc}</li>
                             ))}
@@ -225,9 +251,9 @@ const scolarshipLength = scholarships.length
                     )}
                     
                     <div>
-                      <Text type={'xs'} class={'text-3xl uppercase text-white/60 font-bold tracking-widest max-md:mt-6'}>Benefits</Text>
+                      <Text type={'xs'} class={'text-3xl uppercase text-[#00662D]/60 font-bold tracking-widest max-md:mt-6'}>Benefits</Text>
                       <Text type={'regular'} class='mt-3'>
-                        <ul class='list-disc max-md:pl-4'>
+                        <ul class='list-disc max-md:pl-4 list-inside'>
                           {scholarship.Benefits.map((doc) => (
                             <li>{doc}</li>
                           ))}
@@ -236,9 +262,73 @@ const scolarshipLength = scholarships.length
                     </div>
                     {scholarship.Conditions && scholarship.Conditions.length > 0 && (
                       <div>
-                        <Text type={'xs'} class={'text-3xl uppercase text-white/60 font-bold tracking-widest max-md:mt-6'}>Conditions</Text>
+                        <Text type={'xs'} class={'text-3xl uppercase text-[#00662D]/60 font-bold tracking-widest max-md:mt-6'}>Conditions</Text>
                         <Text type={'regular'} class='mt-3'>
-                          <ul class='list-disc max-md:pl-4'>
+                          <ul class='list-disc max-md:pl-4 list-inside'>
+                            {scholarship.Conditions.map((doc) => (
+                              <li>{doc}</li>
+                            ))}
+                          </ul>
+                        </Text>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}   
+          
+          <div class='bg-black/20 w-full h-[1px]'></div>
+          <div class='flex flex-col items-center mb-8 w-full'>
+            <Text type={'h2'} class='mt-14 max-md:mt-10 text-center text-black'>Other Benefits</Text>
+            <Text type={'base'} class='mt-3 text-center max-md:w-[90%] text-black' >Explore enticing benefits, reserved exclusively for eligible individuals</Text>
+          </div>
+
+          {benefits.map((scholarship, index) => (
+            <div class='w-full flex flex-row max-md:flex-col bg-[#fafafa] border border-[#c8c8c8] text-black rounded-3xl mb-6 min-h-[230px] collapsible-container' id={'collapsible-container-' + index}>
+              <div class='flex-1 p-8 max-md:p-4'>
+                <Text type={'h4'} class={'text text-3xl'}>
+                  {scholarship.Title.map((title) => (
+                    <span class={title.type === 'highlight' ? 'text-[#4B916A]' : ''}>{title.text}&nbsp;</span>
+                  ))}
+                </Text>
+                <Text type={'base'} class='mt-3 font-normal'>{scholarship.Description}</Text>
+                <div class='collapsible-content is-open' class='w-full'>
+                  <div class='w-full h-[1px] bg-white/25 my-6'></div>
+
+                  <div class='w-full grid grid-rows-2 grid-cols-2 gap-x-14 gap-y-10 max-md:block'>
+                    <div>
+                      <Text type={'xs'} class={'text-3xl uppercase text-[#00662D]/60 font-bold tracking-widest max-md:mt-6'}>Eligibility</Text>
+                      <Text type={'regular'} class='mt-3'>{scholarship.Eligibility}</Text>
+                    </div>
+                    {scholarship.DocumentsRequired && scholarship.DocumentsRequired.length > 0 && (
+                      <div>
+                        <Text type={'xs'} class={'text-3xl uppercase text-[#00662D]/60 font-bold tracking-widest max-md:mt-6'}>Documents Requred</Text>
+                        <Text type={'regular'} class='mt-3'>
+                          <ul class='list-disc max-md:pl-4 list-inside'>
+                            {scholarship.DocumentsRequired.map((doc) => (
+                              <li>{doc}</li>
+                            ))}
+                          </ul>
+                        </Text>
+                      </div>
+                    )}
+                    
+                    <div>
+                      <Text type={'xs'} class={'text-3xl uppercase text-[#00662D]/60 font-bold tracking-widest max-md:mt-6'}>Benefits</Text>
+                      <Text type={'regular'} class='mt-3'>
+                        <ul class='list-disc max-md:pl-4 list-inside'>
+                          {scholarship.Benefits.map((doc) => (
+                            <li>{doc}</li>
+                          ))}
+                        </ul>
+                      </Text>
+                    </div>
+                    {scholarship.Conditions && scholarship.Conditions.length > 0 && (
+                      <div>
+                        <Text type={'xs'} class={'text-3xl uppercase text-[#00662D]/60 font-bold tracking-widest max-md:mt-6'}>Conditions</Text>
+                        <Text type={'regular'} class='mt-3'>
+                          <ul class='list-disc max-md:pl-4 list-inside'>
                             {scholarship.Conditions.map((doc) => (
                               <li>{doc}</li>
                             ))}

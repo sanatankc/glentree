@@ -8,7 +8,7 @@ import vivekResult from '../../../images/results/vivek.png'
 import shreyanshResult from '../../../images/results/shreyansh.png'
 import deepthiReslut from '../../../images/results/Deepthi.png'
 import suhaniResult from '../../../images/results/suhani.png'
-
+import arrow from '../../../icons/arrow.svg'
 
 // const news = Array.from({ length: 6 }, (_, i) => i).map((i) => ({
 //   title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -38,17 +38,55 @@ const resultImages = [
     <div class='flex-1 bg-white/30 ml-6 max-md:ml-4 max-md:hidden' style={{ height: '1px' }}></div>
   </div>
   <Text type={"base"} class='text-center text-white/80 mb-6 mt-6 max-md:mb-5 max-md:mt-3 max-md:w-[90%] daisy daisy-3 daisy-y-10'>  Glentree Academy epitomizes academic brilliance, maintaining our track record of Grade 10 Results.</Text>
-
-  <div class="h-scroll w-screen flex flex-row h-min overflow-scroll no-scrollbar scroll-snap-news-carousel px-3 mb-0" style={{
-    overflowX: 'scroll',
-    overflowY: 'hidden',
-    scrollSnapType: 'x mandatory',
-  }}>
-    {resultImages.map((image, index) => (
-      <Card title={""} image={image} class={`daisy daisy-${index + 1} daisy-y-1 daisy-debug m-auto`}  />
-    ))}
+  <div class="w-full relative mt-8">
+    <div class="w-screen absolute h-full top-0 left-0 z-50 flex flex-row items-center p-10 justify-between pointer-events-none">
+      <div class="w-10 h-10 pointer-events-auto cursor-pointer" id="prev-button">
+        <img src={arrow} alt="previous button" class="w-full h-full -scale-100" />
+      </div>
+      <div class="w-10 h-10 pointer-events-auto cursor-pointer" id="next-button">
+        <img src={arrow} alt="previous button" class="w-full h-full" />
+      </div>
+    </div>
+    <div id="scroll-container" class="h-scroll w-screen flex flex-row h-min overflow-scroll no-scrollbar scroll-snap-news-carousel px-3 mb-0" style={{
+      overflowX: 'scroll',
+      overflowY: 'hidden',
+      scrollSnapType: 'x mandatory',
+    }}>
+      {resultImages.map((image, index) => (
+        <Card title={""} image={image} class={`daisy daisy-${index + 1} daisy-y-1 daisy-debug m-auto scroll-card`}  />
+      ))}
+    </div>
   </div>
 </div>
+
+
+<script>
+  const prevButton = document.querySelector('#prev-button')
+  const nextButton = document.querySelector('#next-button')
+
+  const scrollContainer = document.querySelector('#scroll-container')
+
+
+  if (prevButton && nextButton && scrollContainer) {
+    const scroll = (scrollOffset: number) => {
+      scrollContainer.scrollBy({
+        top: 0,
+        left: scrollOffset,
+        behavior: 'smooth'
+      })
+    }
+  
+    const scrollOffset = document.querySelector('.scroll-card')?.offsetWidth
+  
+    prevButton.addEventListener('click', () => {
+      scroll(scrollOffset * -1)
+    })
+  
+    nextButton.addEventListener('click', () => {
+      scroll(scrollOffset)
+    })
+  }
+</script>
 
 
 <style>
