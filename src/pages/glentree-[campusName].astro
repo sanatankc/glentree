@@ -104,7 +104,8 @@ const campusData = {
     phoneNo: '+91 7899738130',
     workingHours: 'Monday to Saturday - 8:00 AM to 4:00 PM',
     address: 'Nallurhalli Rd, Palm Meadows, Nallurhalli, Whitefield, Bengaluru, Karnataka 560066',
-    mapEmbedLink: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyAIyVF44QhoXfwwKHLd1h3N49cQTHS0Yvw&q=Whitefield Glentree Academy, Whitefield, Bengaluru'
+    mapEmbedLink: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyAIyVF44QhoXfwwKHLd1h3N49cQTHS0Yvw&q=Whitefield Glentree Academy, Whitefield, Bengaluru',
+    mindlerLink: 'https://www.mindler.com/schools/GLENTREE2023'
   },
   sarajapura: {
     affiliationNo: '831088',
@@ -124,7 +125,8 @@ const campusData = {
     phoneNo: '+91 9632104368',
     workingHours: 'Monday to Saturday - 8:00 AM to 4:00 PM',
     address: 'No.36/5, Halanayakanahalli,Varthur Hobli Bengaluru East Taluk,Bengaluru, Karnataka 560035',
-    mapEmbedLink: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyAIyVF44QhoXfwwKHLd1h3N49cQTHS0Yvw&q=Sarjapur Glentree Academy, Sarjapur, Bengaluru'
+    mapEmbedLink: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyAIyVF44QhoXfwwKHLd1h3N49cQTHS0Yvw&q=Sarjapur Glentree Academy, Sarjapur, Bengaluru',
+    mindlerLink: 'https://www.mindler.com/schools/GLENTREESARJAP'
   },
 }
 
@@ -178,10 +180,11 @@ const campus = campusData[campusName]
           }}>
             <Text type={'h2'} class='mt-14 max-md:mt-10 text-center'>{campus.title}</Text>
             <Text type={'base'} class='mt-3 text-center max-md:w-[90%]' >{campus.description}</Text>
-            <Text type={'sm'} class='mt-3 text-center max-md:w-[90%]' >Permanent Affiliation No: {campus.affiliationNo}</Text>
+            <Text type={'sm'} class='mt-3 text-center max-md:w-[90%]' >Permanent Affiliation No: {campus.affiliationNo}</Text>  
+          <!--   <Text type={'sm'} class='mt-10 text-center max-md:w-[90%]'> Access the Student Mindler portal by clicking <a href={campus.mindlerLink}>here</a>. </Text> -->
           </div>
   
-          <!-- <AdmissionMarquee /> -->
+        <!-- <AdmissionMarquee /> -->
           <div 
             style={{
               background: 'linear-gradient(180deg, #000000 0%, #142C1E 100%)',
