@@ -1,120 +1,177 @@
 ---
-import Button from './system/Button.astro'
-import logo from '../images/logo.svg'
-
+import Button from "./system/Button.astro";
+import logo from "../images/logo.svg";
 
 interface Menu {
-  title: string
-  link?: string
+  title: string;
+  link?: string;
   submenu?: {
-    title: string
-    link: string
-  }[]
+    title: string;
+    link: string;
+  }[];
 }
 const menu: Array<Menu> = [
   {
-    title: 'Home',
-    link: '/',
+    title: "Home",
+    link: "/",
   },
   {
-    title: 'About Us',
-    link: '/about-us',
+    title: "About Us",
+    link: "/about-us",
   },
   {
-    title: 'Academics',
+    title: "Academics",
     submenu: [
       {
-        title: 'Curriculum',
-        link: '/lfl-curriculum/'
+        title: "Curriculum",
+        link: "/lfl-curriculum/",
       },
       {
-        title: 'Co-Scholastics',
-        link: '/co-scholastics'
+        title: "Co-Scholastics",
+        link: "/co-scholastics",
       },
       {
-        title: 'Glentree Clubs',
-        link: '/glentree-clubs'
+        title: "Glentree Clubs",
+        link: "/glentree-clubs",
       },
       {
-        title: 'After-School Activities',
-        link: '/after-school'
-      }
-    ]
+        title: "After-School Activities",
+        link: "/after-school",
+      },
+    ],
   },
   {
-    title: 'Campuses',
+    title: "Campuses",
     submenu: [
       {
-        title: 'Whitefield',
-        link: '/glentree-whitefield'
+        title: "Whitefield",
+        link: "/glentree-whitefield",
       },
       {
-        title: 'Sarjapur',
-        link: '/glentree-sarajapura'
-      }
-    ]
+        title: "Sarjapur",
+        link: "/glentree-sarajapura",
+      },
+    ],
   },
   {
-    title: 'Admissions',
+    title: "Admissions",
     submenu: [
       {
-        title: 'Admission Process',
-        link: '/admissions/'
+        title: "Admission Process",
+        link: "/admissions/",
       },
       {
-        title: 'Scholarship',
-        link: '/scholarship/'
+        title: "Scholarship",
+        link: "/scholarship/",
       },
-    ]
-  }
-]
+    ],
+  },
+  {
+    title: "Career Counselling",
+    submenu: [
+      {
+        title: "Whitefield",
+        link: "https://www.mindler.com/schools/glentree2023",
+      },
+      {
+        title: "Sarjapur",
+        link: "https://www.mindler.com/schools/glentreesarjapur2023",
+      },
+    ],
+  },
+];
 ---
-<header class="w-screen bg-black/80 py-1 px-14 max-md:px-5 box-border flex flex-row justify-between items-center backdrop-blur-md fixed z-[99]">
-  <a href="/" class='relative z-10 daisy daisy-fixed daisy-1'>
-    <img src={logo} alt="Glentree's Logo" width="130px" >
+
+<header
+  class="w-screen bg-black/80 py-1 px-14 max-md:px-5 box-border flex flex-row justify-between items-center backdrop-blur-md fixed z-[99]"
+>
+  <a href="/" class="relative z-10 daisy daisy-fixed daisy-1">
+    <img src={logo} alt="Glentree's Logo" width="130px" />
   </a>
-  <div class='flex flex-row items-center max-md:hidden'>
-    {menu.map((item, i) => {
-      if (item.submenu && item.submenu.length > 0) {
-        return (
-          <div class={`relative menu-parent cursor-pointer daisy daisy-2 daisy-fixed`}>
-            <div class:list={['flex flex-row items-center mr-8 max-md:mr-0', i >= menu.length - 1 && 'mr-0 max-md:mr-0']}>
-              <span class="text-white font-semibold hover:underline">{item.title}</span>
-              <div class='w-6 h-6 ml-1'>
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M5.94524 9.20954C6.16089 8.95794 6.53967 8.9288 6.79127 9.14446L12.0008 13.6098L17.2103 9.14446C17.4619 8.9288 17.8407 8.95794 18.0563 9.20954C18.272 9.46113 18.2429 9.83991 17.9913 10.0556L12.3913 14.8556C12.1666 15.0482 11.835 15.0482 11.6103 14.8556L6.01032 10.0556C5.75872 9.83991 5.72958 9.46113 5.94524 9.20954Z" fill="white"/>
-                </svg>					
+  <div class="flex flex-row items-center max-md:hidden">
+    {
+      menu.map((item, i) => {
+        if (item.submenu && item.submenu.length > 0) {
+          return (
+            <div
+              class={`relative menu-parent cursor-pointer daisy daisy-2 daisy-fixed`}
+            >
+              <div
+                class:list={[
+                  "flex flex-row items-center mr-8 max-md:mr-0",
+                  i >= menu.length - 1 && "mr-0 max-md:mr-0",
+                ]}
+              >
+                <span class="text-white font-semibold hover:underline">
+                  {item.title}
+                </span>
+                <div class="w-6 h-6 ml-1">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M5.94524 9.20954C6.16089 8.95794 6.53967 8.9288 6.79127 9.14446L12.0008 13.6098L17.2103 9.14446C17.4619 8.9288 17.8407 8.95794 18.0563 9.20954C18.272 9.46113 18.2429 9.83991 17.9913 10.0556L12.3913 14.8556C12.1666 15.0482 11.835 15.0482 11.6103 14.8556L6.01032 10.0556C5.75872 9.83991 5.72958 9.46113 5.94524 9.20954Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div
+                class="absolute w-[250px] bg-[#121212] top-[40px] menu"
+                style={{
+                  boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.5)",
+                }}
+              >
+                {item.submenu.map((subitem, j) => (
+                  <div
+                    class="py-[14px] px-3"
+                    style={{
+                      borderBottom:
+                        j >= item?.submenu?.length - 1
+                          ? "none"
+                          : "1px solid rgba(255, 255, 255, 0.2)",
+                    }}
+                  >
+                    <a
+                      href={subitem.link}
+                      class="text-white font-semibold hover:underline"
+                    >
+                      {subitem.title}
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
-            <div class='absolute w-[250px] bg-[#121212] top-[40px] menu' style={{
-                boxShadow: '0px 10px 20px rgba(0, 0, 0, 0.5)',
-            }}>
-            {item.submenu.map((subitem, j) => (
-              <div class='py-[14px] px-3' style={{
-                borderBottom: j >= item?.submenu?.length - 1 ? 'none' : '1px solid rgba(255, 255, 255, 0.2)'
-              }}>
-                <a href={subitem.link} class="text-white font-semibold hover:underline">{subitem.title}</a>
-              </div>
-            ))}
-            </div>
-          </div>
-        )
-      } else if (item.link) {
-        return (
-          <a href={item?.link} class="text-white font-semibold hover:underline mr-8 max-md:mr-0 daisy daisy-fixed daisy-2">{item.title}</a>
-        )
-      }
-    })}
+          );
+        } else if (item.link) {
+          return (
+            <a
+              href={item?.link}
+              class="text-white font-semibold hover:underline mr-8 max-md:mr-0 daisy daisy-fixed daisy-2"
+            >
+              {item.title}
+            </a>
+          );
+        }
+      })
+    }
   </div>
   <div class="flex flex-row items-center relative max-md:hidden">
-    <a href="https://admissions.glentreeacademy.com" target='_blank' class='daisy daisy-fixed daisy-3'>
+    <a
+      href="https://admissions.glentreeacademy.com"
+      target="_blank"
+      class="daisy daisy-fixed daisy-3"
+    >
       <Button>Apply Now</Button>
     </a>
   </div>
 
   <div class="max-md:block hidden">
     <form autocomplete="off">
-
       <div id="menuToggle">
         <input type="checkbox" />
         <span></span>
@@ -124,80 +181,116 @@ const menu: Array<Menu> = [
     </form>
   </div>
 
-  <div class="mobileMenu absolute top-0 left-0 w-screen h-screen bg-black flex flex-col pt-20 overflow-scroll" class="max-md:visible hidden">
-    {menu.map(item => {
-      if (item.submenu && item.submenu.length > 0) {
-        return (
-          <div class='mobileMenuParent'>
-            <div class='relative py-[14px] px-5 mr-8 max-md:mr-0 w-full' style={{ 
-              borderBottom: '1px solid rgba(255, 255, 255, 0.2)'
-            }}>
-              <div class='flex flex-row w-full'>
-                <span 
-                  class="text-white font-semibold hover:underline"
-                >{item.title}</span>
-                <div class='w-6 h-6 ml-1 -rotate-90 menu-arrow'>
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.94524 9.20954C6.16089 8.95794 6.53967 8.9288 6.79127 9.14446L12.0008 13.6098L17.2103 9.14446C17.4619 8.9288 17.8407 8.95794 18.0563 9.20954C18.272 9.46113 18.2429 9.83991 17.9913 10.0556L12.3913 14.8556C12.1666 15.0482 11.835 15.0482 11.6103 14.8556L6.01032 10.0556C5.75872 9.83991 5.72958 9.46113 5.94524 9.20954Z" fill="white"/>
-                  </svg>					
+  <div
+    class="mobileMenu absolute top-0 left-0 w-screen h-screen bg-black flex flex-col pt-20 overflow-scroll"
+    class="max-md:visible hidden"
+  >
+    {
+      menu.map((item) => {
+        if (item.submenu && item.submenu.length > 0) {
+          return (
+            <div class="mobileMenuParent">
+              <div
+                class="relative py-[14px] px-5 mr-8 max-md:mr-0 w-full"
+                style={{
+                  borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+                }}
+              >
+                <div class="flex flex-row w-full">
+                  <span class="text-white font-semibold hover:underline">
+                    {item.title}
+                  </span>
+                  <div class="w-6 h-6 ml-1 -rotate-90 menu-arrow">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M5.94524 9.20954C6.16089 8.95794 6.53967 8.9288 6.79127 9.14446L12.0008 13.6098L17.2103 9.14446C17.4619 8.9288 17.8407 8.95794 18.0563 9.20954C18.272 9.46113 18.2429 9.83991 17.9913 10.0556L12.3913 14.8556C12.1666 15.0482 11.835 15.0482 11.6103 14.8556L6.01032 10.0556C5.75872 9.83991 5.72958 9.46113 5.94524 9.20954Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
+              <div class="subMenu">
+                {item.submenu.map((subMenuItem) => (
+                  <div
+                    class="relative py-[14px] px-5 mr-8 max-md:mr-0 w-full"
+                    style={{
+                      borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+                    }}
+                  >
+                    <a
+                      href={subMenuItem.link}
+                      class="text-white font-semibold hover:underline pl-5"
+                    >
+                      {subMenuItem.title}
+                    </a>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div class='subMenu'>
-              {item.submenu.map(subMenuItem => (
-                <div class='relative py-[14px] px-5 mr-8 max-md:mr-0 w-full' style={{ 
-                  borderBottom: '1px solid rgba(255, 255, 255, 0.2)'
-                }}>
-                  <a 
-                    href={subMenuItem.link}
-                    class="text-white font-semibold hover:underline pl-5"
-                  >{subMenuItem.title}</a>
-                </div>
-              ))}
-            </div>
-          </div>
-        )
-      } else {
-        return (
-          <div class='mobileMenuParent'>
-            <div class='relative py-[14px] px-5 mr-8 max-md:mr-0 w-full' style={{ 
-              borderBottom: '1px solid rgba(255, 255, 255, 0.2)'
-            }}>
-                <a 
+          );
+        } else {
+          return (
+            <div class="mobileMenuParent">
+              <div
+                class="relative py-[14px] px-5 mr-8 max-md:mr-0 w-full"
+                style={{
+                  borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+                }}
+              >
+                <a
                   href={item.link}
                   class="text-white font-semibold hover:underline"
-                >{item.title}</a>
+                >
+                  {item.title}
+                </a>
+              </div>
             </div>
-          </div>
-        )
-      }
-    })}
+          );
+        }
+      })
+    }
   </div>
-  
-  <div class='hidden'>
-    <div style={{
-      width: '18px',
-      height: '1.5px',
-      color: '#fff',
-      backgroundColor: '#fff',
-      // transform: 'rotate(180deg)',
-    }}></div>
-    <div style={{
-      width: '18px',
-      height: '1.5px',
-      color: '#fff',
-      backgroundColor: '#fff',
-      marginTop: '3.5px'
-      // transform: 'rotate(180deg)',
-    }}></div>
-    <div style={{
-      width: '18px',
-      height: '1.5px',
-      color: '#fff',
-      backgroundColor: '#fff',
-      marginTop: '3.5px'
-      // transform: 'rotate(180deg)',
-    }}></div>
+
+  <div class="hidden">
+    <div
+      style={{
+        width: "18px",
+        height: "1.5px",
+        color: "#fff",
+        backgroundColor: "#fff",
+        // transform: 'rotate(180deg)',
+      }}
+    >
+    </div>
+    <div
+      style={{
+        width: "18px",
+        height: "1.5px",
+        color: "#fff",
+        backgroundColor: "#fff",
+        marginTop: "3.5px",
+        // transform: 'rotate(180deg)',
+      }}
+    >
+    </div>
+    <div
+      style={{
+        width: "18px",
+        height: "1.5px",
+        color: "#fff",
+        backgroundColor: "#fff",
+        marginTop: "3.5px",
+        // transform: 'rotate(180deg)',
+      }}
+    >
+    </div>
   </div>
 </header>
 
@@ -214,13 +307,12 @@ const menu: Array<Menu> = [
     transform: translateY(0px);
   }
 
-
   #menuToggle {
     display: block;
     position: relative;
-    
+
     z-index: 1;
-    
+
     -webkit-user-select: none;
     user-select: none;
   }
@@ -232,12 +324,12 @@ const menu: Array<Menu> = [
     position: absolute;
     top: -7px;
     left: -5px;
-    
+
     cursor: pointer;
-    
+
     opacity: 0; /* hide this */
     z-index: 2; /* and place it over the hamburger */
-    
+
     -webkit-touch-callout: none;
   }
 
@@ -250,17 +342,16 @@ const menu: Array<Menu> = [
     height: 2px;
     margin-bottom: 5px;
     position: relative;
-    
+
     background: #cdcdcd;
     border-radius: 3px;
-    
+
     z-index: 1;
-    
+
     transform-origin: 4px 0px;
-    
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                opacity 0.55s ease;
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
   }
 
   #menuToggle span:first-child {
@@ -279,15 +370,14 @@ const menu: Array<Menu> = [
   #menuToggle input:checked ~ span:nth-last-child(3) {
     opacity: 1;
     transform: rotate(45deg) translate(0px, -1px);
-  /*   background: #232323; */
+    /*   background: #232323; */
   }
 
   #menuToggle input:checked ~ span:nth-last-child(1) {
     opacity: 1;
     transform: rotate(-45deg) translate(1px, -2px);
-  /*   background: #232323; */
+    /*   background: #232323; */
   }
-
 
   /*
   * But let's hide the middle one.
@@ -327,54 +417,52 @@ const menu: Array<Menu> = [
 </style>
 
 <script>
-  const menuParent = document.querySelectorAll('.menu-parent') as NodeListOf<HTMLDivElement>
-    
+  const menuParent = document.querySelectorAll(
+    ".menu-parent"
+  ) as NodeListOf<HTMLDivElement>;
 
-    
   menuParent.forEach((el) => {
-    let removeTimeout: any = null
-    const menu = el.querySelector('.menu') as HTMLDivElement
-    el.addEventListener('mouseover', () => {
-      clearTimeout(removeTimeout)
-      menu.classList.add('visible')
-    })
-    el.addEventListener('mouseout', () => {
+    let removeTimeout: any = null;
+    const menu = el.querySelector(".menu") as HTMLDivElement;
+    el.addEventListener("mouseover", () => {
+      clearTimeout(removeTimeout);
+      menu.classList.add("visible");
+    });
+    el.addEventListener("mouseout", () => {
       removeTimeout = setTimeout(() => {
-        menu.classList.remove('visible')
-      }, 400)
-    })
-    menu.addEventListener('mouseover', () => {
-      clearTimeout(removeTimeout)
-    })
-    menu.addEventListener('mouseout', () => {
-      menu.classList.remove('visible')
-    })
-  })
-
+        menu.classList.remove("visible");
+      }, 400);
+    });
+    menu.addEventListener("mouseover", () => {
+      clearTimeout(removeTimeout);
+    });
+    menu.addEventListener("mouseout", () => {
+      menu.classList.remove("visible");
+    });
+  });
 
   // mobile menu
-  const menuToggle = document.querySelector('#menuToggle') as HTMLInputElement
-  const mobileMenu = document.querySelector('.mobileMenu') as HTMLDivElement
+  const menuToggle = document.querySelector("#menuToggle") as HTMLInputElement;
+  const mobileMenu = document.querySelector(".mobileMenu") as HTMLDivElement;
 
+  menuToggle.addEventListener("click", () => {
+    console.log("click");
+    mobileMenu.classList.toggle("visible");
+  });
 
-  menuToggle.addEventListener('click', () => {
-    console.log('click')
-    mobileMenu.classList.toggle('visible')
-  })
+  const mobileMenuParents = document.querySelectorAll(
+    ".mobileMenuParent"
+  ) as NodeListOf<HTMLDivElement>;
 
-
-  const mobileMenuParents = document.querySelectorAll('.mobileMenuParent') as NodeListOf<HTMLDivElement>
-  
   mobileMenuParents.forEach((el) => {
-    const subMenu = el.querySelector('.subMenu') as HTMLDivElement
-    el.addEventListener('click', () => {
-      subMenu.classList.toggle('visible')
-      if (subMenu.classList.contains('visible')) {
-        subMenu.style.maxHeight = '1000vh'
+    const subMenu = el.querySelector(".subMenu") as HTMLDivElement;
+    el.addEventListener("click", () => {
+      subMenu.classList.toggle("visible");
+      if (subMenu.classList.contains("visible")) {
+        subMenu.style.maxHeight = "1000vh";
       } else {
-        subMenu.style.maxHeight = '0px'
+        subMenu.style.maxHeight = "0px";
       }
-    })
-  })
-  
+    });
+  });
 </script>
