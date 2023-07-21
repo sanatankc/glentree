@@ -8,6 +8,7 @@ interface Menu {
   submenu?: {
     title: string;
     link: string;
+    newTab: boolean;
   }[];
 }
 const menu: Array<Menu> = [
@@ -72,10 +73,12 @@ const menu: Array<Menu> = [
       {
         title: "Whitefield",
         link: "https://www.mindler.com/schools/glentree2023",
+        newTab: true,
       },
       {
         title: "Sarjapur",
         link: "https://www.mindler.com/schools/glentreesarjapur2023",
+        newTab: true,
       },
     ],
   },
@@ -138,6 +141,7 @@ const menu: Array<Menu> = [
                   >
                     <a
                       href={subitem.link}
+                      target={subitem.newTab ? "_blank" : "_self"}
                       class="text-white font-semibold hover:underline"
                     >
                       {subitem.title}
