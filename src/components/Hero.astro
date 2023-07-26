@@ -30,15 +30,15 @@ const slides = [
 
 ---
 <div 
-  class="h-screen w-full bg-cover bg-top relative bg-black flex flex-col"
+  class="h-screen max-md:h-auto w-full bg-cover bg-top relative bg-black flex flex-col"
 >
-    <div class='h-[72.6px] w-full bg-black'>
+    <div class='h-[95.44px] w-full bg-black'>
     </div>
 
     <div class='relative w-full h-full '>
       {slides.map(({slide, position}, i) => (
-        <div class:list={['slideshow-item w-full h-full absolute top-0 left-0 bg-no-repeat bg-cover', i === 0 ? 'opacity-1' : 'opacity-0']} style={{
-          backgroundImage: `linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 96.35%), url("${slide}")`,
+        <div class:list={['slideshow-item w-full h-full max-md:h-[58%] absolute top-0 left-0 bg-no-repeat bg-cover', i === 0 ? 'opacity-1' : 'opacity-0']} style={{
+          backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 90.35%), url("${slide}")`,
           transition: '1s all ease-in-out',
           backgroundPosition: position,
         }}></div>
@@ -51,7 +51,7 @@ const slides = [
           <div class="mt-auto flex flex-col items-center max-md:items-start max-md:mt-0" data-scroll-section>
             <Text
               type="h1"
-              class='mt-28 text-center max-md:text-left max-md:mt-0 disappear daisy daisy-y-1 daisy-1'
+              class='mt-28  text-center max-md:text-left max-md:mt-[180%] disappear daisy daisy-y-1 daisy-1'
               data-scroll data-scroll-class="appear" data-scroll-repeat="true"
             >Unlock Your Child’s Potential</Text>
             <Text
