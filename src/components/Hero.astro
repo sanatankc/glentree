@@ -37,11 +37,16 @@ const slides = [
 
     <div class='relative w-full h-full '>
       {slides.map(({slide, position}, i) => (
-        <div class:list={['slideshow-item w-full h-full max-md:h-[58%] absolute top-0 left-0 bg-no-repeat bg-cover', i === 0 ? 'opacity-1' : 'opacity-0']} style={{
-          backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 90.35%), url("${slide}")`,
+        <div class:list={['slideshow-item w-full h-full max-md:h-[58%] absolute top-0 left-0', i === 0 ? 'opacity-1' : 'opacity-0']} style={{
+          // background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 90.35%)',
           transition: '1s all ease-in-out',
-          backgroundPosition: position,
-        }}></div>
+        }}>
+          <div class="absolute w-full h-full top-0 left-0 bg-no-repeat bg-cover" style={{
+            backgroundImage: `url("${slide}")`,
+            backgroundPosition: position,
+          }}></div>
+          <div class="absolute w-full h-full top-0 left-0 slideshow-overlay"></div>
+        </div>
       ))}
       <div class="relative z-50 flex flex-col h-full">
         <div class="h-[30vh] absolute bottom-0 left-0 w-full md:hidden items-center justify-center max-md:px-5" style={{
@@ -138,3 +143,17 @@ const slides = [
     moveSlides(slideshowItems)
   }, 3000)
 </script>
+
+
+<style>
+  .slideshow-overlay {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 90.35%);
+  }
+
+  @media screen and (max-width: 768px) {
+    .slideshow-overlay {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 75.35%);
+    }
+  }
+
+</style>
