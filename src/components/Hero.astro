@@ -6,9 +6,11 @@ import psjaAward from '../images/psjaAward.png'
 import meritAwards from '../images/meritAwards.png'
 import heroBG from '../images/heroBG.png'
 import slide1 from '../images/slides/1.jpg'
-import slide2 from '../images/slides/2.jpg'
+import slide2 from '../images/slides/2.jpeg'
+import slide2MB from '../images/slides/2-mb.jpeg'
 import slide3 from '../images/slides/3.jpg'
-import slide4 from '../images/slides/4.jpg'
+import slide4 from '../images/slides/4.jpeg'
+import slide4MB from '../images/slides/4-mb.jpeg'
 import slide5 from '../images/slides/5.jpg'
 import slide6 from '../images/slides/6.jpg'
 // import slide7 from '../images/slides/7.png'
@@ -17,9 +19,16 @@ import slide6 from '../images/slides/6.jpg'
 
 const slides = [
   {slide: slide1, position: 'center'},
-  {slide: slide2, position: 'center'},
+  {slide: [
+    {src: slide2, media: '(min-width: 768px)'},
+    {src: slide2MB, media: '(max-width: 768px)'},
+  ], position: 'center', picture: true},
   {slide: slide3, position: 'center 20%'},
-  {slide: slide4, position: 'center 37%'},
+  // {slide: slide4, position: 'center 37%'},
+  {slide: [
+    {src: slide4, media: '(min-width: 768px)'},
+    {src: slide4MB, media: '(max-width: 768px)'},
+  ], position: 'center', picture: true},
   {slide: slide5, position: 'top'},
   {slide: slide6, position: 'top'},
   // {slide: slide7, position: 'center'},
@@ -30,94 +39,40 @@ const slides = [
 
 ---
 <div 
-  class="h-screen max-md:h-auto w-full bg-cover bg-top relative bg-black flex flex-col"
+  class="h-screen w-full bg-cover bg-top relative bg-black flex flex-col"
 >
-    <div class='h-[95.44px] w-full bg-black'>
+    <div class='h-[72.6px] w-full bg-black'>
     </div>
 
     <div class='relative w-full h-full '>
-      {slides.map(({slide, position}, i) => (
-        <div class:list={['slideshow-item w-full h-full max-md:h-[58%] absolute top-0 left-0', i === 0 ? 'opacity-1' : 'opacity-0']} style={{
-          // background: 'linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 90.35%)',
-          transition: '1s all ease-in-out',
-        }}>
-          <div class="absolute w-full h-full top-0 left-0 bg-no-repeat bg-cover" style={{
-            backgroundImage: `url("${slide}")`,
+      {slides.map(({slide, position, picture}, i) => (picture ? (
+        <picture 
+          class:list={['slideshow-item w-full h-full absolute top-0 left-0 bg-no-repeat bg-cover', i === 0 ? 'opacity-1' : 'opacity-0']} 
+          style={{
+            transition: '1s all ease-in-out',
             backgroundPosition: position,
-          }}></div>
-          <div class="absolute w-full h-full top-0 left-0 slideshow-overlay"></div>
-        </div>
+          }}
+        >
+          {slide.map(({src, media}) => (
+            <source srcset={src} media={media} />
+          ))}
+          <img src={slide[0].src} alt="" class="w-full h-full object-cover" />
+        </picture>
+      ) : (
+        <div class:list={['slideshow-item w-full h-full absolute top-0 left-0 bg-no-repeat bg-cover', i === 0 ? 'opacity-1' : 'opacity-0']} style={{
+          backgroundImage: `url("${slide}")`,
+          transition: '1s all ease-in-out',
+          backgroundPosition: position,
+        }}></div>
+      )
       ))}
       <div class="relative z-50 flex flex-col h-full">
-        <div class="h-[30vh] absolute bottom-0 left-0 w-full md:hidden items-center justify-center max-md:px-5" style={{
-          background: 'linear-gradient(180deg, rgba(3, 3, 3, 0) 0%, #030303 10.29%)'
-        }}></div>
-        <div class="w-full h-full flex flex-col max-md:justify-end max-md:px-5">
-          <div class="mt-auto flex flex-col items-center max-md:items-start max-md:mt-0" data-scroll-section>
-            <Text
-              type="h1"
-              class='mt-28  text-center max-md:text-left max-md:mt-[180%] disappear daisy daisy-y-1 daisy-1'
-              data-scroll data-scroll-class="appear" data-scroll-repeat="true"
-            >Unlock Your Child’s Potential</Text>
-            <Text
-              type="lg"
-              class='mt-3 text-2xl text-center daisy daisy-y-1 daisy-2'
-              data-scroll
-              data-scroll-direction="horizontal"
-            >Shaping A Brighter Future for Your Child</Text>
-            <div class="flex flex-row mt-5 daisy daisy-y-2 daisy-3">
-              <a href="https://admissions.glentreeacademy.com" target='_blank'>
-                <Button>Apply Now</Button>
-              </a>
-              <!-- <div class="ml-3 max-md:hidden">
-                <Button secondary>Request for Callback</Button>
-              </div> -->
-            </div>
-          </div>
-      
-          <div class="flex flex-row h-36 w-full mt-auto max-md:mt-12 items-center justify-around flex-wrap max-md:flex-col max-md:h-auto max-md:items-start relative z-20">
-            <div class="flex flex-row max-md:mb-5 daisy daisy-y-1 daisy-4">
-              <img src={psjaAward} alt="PSJA Award" class="h-12" />
-              <div class="ml-4">
-                <Text type='sm'>
-                  Rank 1 in <span class="text-[#56cf8a] font-extrabold">Holistic Education</span>
-                </Text>
-                
-                <Text type='sm' class='text-gray-600 max-md:text-sm'>
-                  India’s TOP PSJA 2022
-                </Text>
-              </div>
-            </div>
-      
-            <div class="flex flex-row max-md:mb-5 daisy daisy-y-1 daisy-5">
-              <img src={meritAwards} alt="PSJA Award" class="h-12 mr-[8px]" />
-              <div class="ml-4">
-                <Text type='sm'>
-                  Best <span class="text-[#56cf8a] font-extrabold">Emerging</span> School
-                </Text>
-                
-                <Text type='sm' class='text-gray-600 max-md:text-sm'>
-                  India’s School Merit Award
-                </Text>
-              </div>
-            </div>
-      
-            <div class="flex flex-row max-md:mb-5 daisy daisy-y-1 daisy-6">
-              <img src={psjaAward} alt="PSJA Award" class="h-12" />
-              <div class="ml-4">
-                <Text type='sm'>
-                  Rank 1 in <span class="text-[#56cf8a] font-extrabold">Integrated Learning</span>
-                </Text>
-                
-                <Text type='sm' class='text-gray-600 max-md:text-sm'>
-                  India’s TOP PSJA 2022
-                </Text>
-              </div>
-            </div>
-          </div>
+        <div class="h-[30vh] absolute bottom-0 left-0 w-full md:hidden items-center justify-center max-md:px-5 slideshow-overlay"></div>
         </div>
     </div>
   </div>
+  
+
 </div>
 
 <script>
@@ -152,7 +107,7 @@ const slides = [
 
   @media screen and (max-width: 768px) {
     .slideshow-overlay {
-      background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 75.35%);
+      background: linear-gradient(16deg, rgb(0 0 0 / 90%) 5%, rgba(0, 0, 0, 0) 100%);
     }
   }
 

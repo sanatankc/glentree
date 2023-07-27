@@ -20,7 +20,9 @@ import GlentreeFamily from '../components/landingPage/GlentreeFamily.astro';
 import Footer from '../components/landingPage/Footer.astro';
 import Text from '../components/system/Text.astro';
 import YoutubeEmbed from '../components/YoutubeEmbed.astro';
-
+import psjaAward from '../images/psjaAward.png'
+import meritAwards from '../images/meritAwards.png'
+import heroBG from '../images/heroBG.png'
 ---
 
 <Layout title="Welcome to Astro.">
@@ -37,6 +39,47 @@ import YoutubeEmbed from '../components/YoutubeEmbed.astro';
     <div class='flex flex-col max-md:h-auto h-screen'>
       <TopNavigationBar />
       <Hero />
+    </div>
+
+    <div class="flex flex-row h-36 w-full mt-auto max-md:py-8 max-md:px-6 max-md:pb-1 items-center justify-around flex-wrap max-md:flex-col max-md:h-auto max-md:items-start relative z-20" style={{ background: '#030303' }}>
+      <div class="flex flex-row max-md:mb-5 daisy daisy-y-1 daisy-4">
+        <img src={psjaAward} alt="PSJA Award" class="h-12" />
+        <div class="ml-4">
+          <Text type='sm'>
+            Rank 1 in <span class="text-[#56cf8a] font-extrabold">Holistic Education</span>
+          </Text>
+          
+          <Text type='sm' class='text-gray-600 max-md:text-sm'>
+            India’s TOP PSJA 2022
+          </Text>
+        </div>
+      </div>
+
+      <div class="flex flex-row max-md:mb-5 daisy daisy-y-1 daisy-5">
+        <img src={meritAwards} alt="PSJA Award" class="h-12 mr-[8px]" />
+        <div class="ml-4">
+          <Text type='sm'>
+            Best <span class="text-[#56cf8a] font-extrabold">Emerging</span> School
+          </Text>
+          
+          <Text type='sm' class='text-gray-600 max-md:text-sm'>
+            India’s School Merit Award
+          </Text>
+        </div>
+      </div>
+
+      <div class="flex flex-row max-md:mb-5 daisy daisy-y-1 daisy-6">
+        <img src={psjaAward} alt="PSJA Award" class="h-12" />
+        <div class="ml-4">
+          <Text type='sm'>
+            Rank 1 in <span class="text-[#56cf8a] font-extrabold">Integrated Learning</span>
+          </Text>
+          
+          <Text type='sm' class='text-gray-600 max-md:text-sm'>
+            India’s TOP PSJA 2022
+          </Text>
+        </div>
+      </div>
     </div>
       
       <!-- Carousell/Updatexss -->      
