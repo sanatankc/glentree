@@ -25,7 +25,7 @@ const slides = [
       { src: slide1, media: "(min-width: 768px)" },
       { src: slide1MB, media: "(max-width: 768px)" },
     ],
-    position: "center",
+    position: "top",
     picture: true,
   },
   {
@@ -33,7 +33,7 @@ const slides = [
       { src: slide2, media: "(min-width: 768px)" },
       { src: slide2MB, media: "(max-width: 768px)" },
     ],
-    position: "center",
+    position: "top",
     picture: true,
   },
   { slide: slide3, position: "center 20%" },
@@ -43,7 +43,7 @@ const slides = [
       { src: slide4, media: "(min-width: 768px)" },
       { src: slide4MB, media: "(max-width: 768px)" },
     ],
-    position: "center",
+    position: "top",
     picture: true,
   },
   {
@@ -51,7 +51,7 @@ const slides = [
       { src: slide5, media: "(min-width: 768px)" },
       { src: slide5MB, media: "(max-width: 768px)" },
     ],
-    position: "center",
+    position: "top",
     picture: true,
   },
   { slide: slide6, position: "top" },
@@ -76,9 +76,13 @@ const slides = [
             }}
           >
             {slide.map(({ src, media }) => (
-              <source srcset={src} media={media} />
+              <source srcset={src} media={media} class="w-full h-full object-cover" style={{
+                objectPosition: position
+              }} />
             ))}
-            <img src={slide[0].src} alt="" class="w-full h-full object-cover" />
+            <img src={slide[0].src} alt="" class="w-full h-full object-cover" style={{
+              objectPosition: position
+            }} />
           </picture>
         ) : (
           <div
