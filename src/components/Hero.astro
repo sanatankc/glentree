@@ -6,19 +6,24 @@ import psjaAward from '../images/psjaAward.png'
 import meritAwards from '../images/meritAwards.png'
 import heroBG from '../images/heroBG.png'
 import slide1 from '../images/slides/1.jpg'
+import slide1MB from '../images/slides/1-mb.jpeg'
 import slide2 from '../images/slides/2.jpeg'
 import slide2MB from '../images/slides/2-mb.jpeg'
 import slide3 from '../images/slides/3.jpg'
 import slide4 from '../images/slides/4.jpeg'
 import slide4MB from '../images/slides/4-mb.jpeg'
 import slide5 from '../images/slides/5.jpg'
+import slide5MB from '../images/slides/5-mb.jpeg'
 import slide6 from '../images/slides/6.jpg'
 // import slide7 from '../images/slides/7.png'
 // import slide8 from '../images/slides/8.jpeg'
 // import slide9 from '../images/slides/9.jpg'
 
 const slides = [
-  {slide: slide1, position: 'center'},
+  { slide : [
+    {src: slide1, media: '(min-width: 768px)'},
+    {src: slide1MB, media: '(max-width: 768px)'},
+  ], position: 'center', picture: true},
   {slide: [
     {src: slide2, media: '(min-width: 768px)'},
     {src: slide2MB, media: '(max-width: 768px)'},
@@ -29,11 +34,15 @@ const slides = [
     {src: slide4, media: '(min-width: 768px)'},
     {src: slide4MB, media: '(max-width: 768px)'},
   ], position: 'center', picture: true},
-  {slide: slide5, position: 'top'},
+  {
+    slide: [
+      { src: slide5, media: '(min-width: 768px)' },
+      { src: slide5MB, media: '(max-width: 768px)' },
+    ],
+    position: 'center',
+    picture: true,
+  },
   {slide: slide6, position: 'top'},
-  // {slide: slide7, position: 'center'},
-  // {slide: slide8, position: 'center'},
-  // {slide: slide9, position: 'center'},
 ]
 
 
@@ -67,7 +76,13 @@ const slides = [
       )
       ))}
       <div class="relative z-50 flex flex-col h-full">
-        <div class="h-[30vh] absolute bottom-0 left-0 w-full md:hidden items-center justify-center max-md:px-5 slideshow-overlay"></div>
+        <div class="h-full absolute bottom-0 left-0 flex w-full items-end max-md:px-6 max-md:py-3 slideshow-overlay px-16 py-8">
+          <Text
+          type="h3"
+          class='text-center max-md:text-left'
+        >Nurturing Lifelong Learners</Text>
+          <!-- <div class="text-white text-[32px] font-normal">tag line goes here</div> -->
+        </div>
         </div>
     </div>
   </div>
@@ -102,7 +117,7 @@ const slides = [
 
 <style>
   .slideshow-overlay {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 90.35%);
+    background: linear-gradient(102deg, rgba(0, 0, 0, 0.8) 5%, rgba(0, 0, 0, 0) 96.35%);
   }
 
   @media screen and (max-width: 768px) {
