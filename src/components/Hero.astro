@@ -1,129 +1,154 @@
 ---
-import Button from './system/Button.astro';
-import Text from './system/Text.astro';
+import Button from "./system/Button.astro";
+import Text from "./system/Text.astro";
 
-import psjaAward from '../images/psjaAward.png'
-import meritAwards from '../images/meritAwards.png'
-import heroBG from '../images/heroBG.png'
-import slide1 from '../images/slides/1.jpg'
-import slide1MB from '../images/slides/1-mb.jpeg'
-import slide2 from '../images/slides/2.jpeg'
-import slide2MB from '../images/slides/2-mb.jpeg'
-import slide3 from '../images/slides/3.jpg'
-import slide4 from '../images/slides/4.jpeg'
-import slide4MB from '../images/slides/4-mb.jpeg'
-import slide5 from '../images/slides/5.jpg'
-import slide5MB from '../images/slides/5-mb.jpeg'
-import slide6 from '../images/slides/6.jpg'
+import psjaAward from "../images/psjaAward.png";
+import meritAwards from "../images/meritAwards.png";
+import heroBG from "../images/heroBG.png";
+import slide1 from "../images/slides/1.jpg";
+import slide1MB from "../images/slides/1-mb.jpeg";
+import slide2 from "../images/slides/2.jpeg";
+import slide2MB from "../images/slides/2-mb.jpeg";
+import slide3 from "../images/slides/3.jpg";
+import slide4 from "../images/slides/4.jpeg";
+import slide4MB from "../images/slides/4-mb.jpeg";
+import slide5 from "../images/slides/5.jpg";
+import slide5MB from "../images/slides/5-mb.jpeg";
+import slide6 from "../images/slides/6.jpg";
 // import slide7 from '../images/slides/7.png'
 // import slide8 from '../images/slides/8.jpeg'
 // import slide9 from '../images/slides/9.jpg'
 
 const slides = [
-  { slide : [
-    {src: slide1, media: '(min-width: 768px)'},
-    {src: slide1MB, media: '(max-width: 768px)'},
-  ], position: 'center', picture: true},
-  {slide: [
-    {src: slide2, media: '(min-width: 768px)'},
-    {src: slide2MB, media: '(max-width: 768px)'},
-  ], position: 'center', picture: true},
-  {slide: slide3, position: 'center 20%'},
-  // {slide: slide4, position: 'center 37%'},
-  {slide: [
-    {src: slide4, media: '(min-width: 768px)'},
-    {src: slide4MB, media: '(max-width: 768px)'},
-  ], position: 'center', picture: true},
   {
     slide: [
-      { src: slide5, media: '(min-width: 768px)' },
-      { src: slide5MB, media: '(max-width: 768px)' },
+      { src: slide1, media: "(min-width: 768px)" },
+      { src: slide1MB, media: "(max-width: 768px)" },
     ],
-    position: 'center',
+    position: "center",
     picture: true,
   },
-  {slide: slide6, position: 'top'},
-]
-
-
+  {
+    slide: [
+      { src: slide2, media: "(min-width: 768px)" },
+      { src: slide2MB, media: "(max-width: 768px)" },
+    ],
+    position: "center",
+    picture: true,
+  },
+  { slide: slide3, position: "center 20%" },
+  // {slide: slide4, position: 'center 37%'},
+  {
+    slide: [
+      { src: slide4, media: "(min-width: 768px)" },
+      { src: slide4MB, media: "(max-width: 768px)" },
+    ],
+    position: "center",
+    picture: true,
+  },
+  {
+    slide: [
+      { src: slide5, media: "(min-width: 768px)" },
+      { src: slide5MB, media: "(max-width: 768px)" },
+    ],
+    position: "center",
+    picture: true,
+  },
+  { slide: slide6, position: "top" },
+];
 ---
-<div 
-  class="h-screen w-full bg-cover bg-top relative bg-black flex flex-col"
->
-    <div class='h-[72.6px] w-full bg-black'>
-    </div>
 
-    <div class='relative w-full h-full '>
-      {slides.map(({slide, position, picture}, i) => (picture ? (
-        <picture 
-          class:list={['slideshow-item w-full h-full absolute top-0 left-0 bg-no-repeat bg-cover', i === 0 ? 'opacity-1' : 'opacity-0']} 
-          style={{
-            transition: '1s all ease-in-out',
-            backgroundPosition: position,
-          }}
-        >
-          {slide.map(({src, media}) => (
-            <source srcset={src} media={media} />
-          ))}
-          <img src={slide[0].src} alt="" class="w-full h-full object-cover" />
-        </picture>
-      ) : (
-        <div class:list={['slideshow-item w-full h-full absolute top-0 left-0 bg-no-repeat bg-cover', i === 0 ? 'opacity-1' : 'opacity-0']} style={{
-          backgroundImage: `url("${slide}")`,
-          transition: '1s all ease-in-out',
-          backgroundPosition: position,
-        }}></div>
+<div class="h-screen w-full bg-cover bg-top relative bg-black flex flex-col">
+  <div class="h-[72.6px] w-full bg-black"></div>
+
+  <div class="relative w-full h-full">
+    {
+      slides.map(({ slide, position, picture }, i) =>
+        picture ? (
+          <picture
+            class:list={[
+              "slideshow-item w-full h-full absolute top-0 left-0 bg-no-repeat bg-cover",
+              i === 0 ? "opacity-1" : "opacity-0",
+            ]}
+            style={{
+              transition: "1s all ease-in-out",
+              backgroundPosition: position,
+            }}
+          >
+            {slide.map(({ src, media }) => (
+              <source srcset={src} media={media} />
+            ))}
+            <img src={slide[0].src} alt="" class="w-full h-full object-cover" />
+          </picture>
+        ) : (
+          <div
+            class:list={[
+              "slideshow-item w-full h-full absolute top-0 left-0 bg-no-repeat bg-cover",
+              i === 0 ? "opacity-1" : "opacity-0",
+            ]}
+            style={{
+              backgroundImage: `url("${slide}")`,
+              transition: "1s all ease-in-out",
+              backgroundPosition: position,
+            }}
+          />
+        )
       )
-      ))}
-      <div class="relative z-50 flex flex-col h-full">
-        <div class="h-full absolute bottom-0 left-0 flex w-full items-end max-md:px-6 max-md:py-3 slideshow-overlay px-16 py-8">
-          <Text
-          type="h3"
-          class='text-center max-md:text-left'
-        >“ Nurturing Lifelong Learners ”</Text>
-          <!-- <div class="text-white text-[32px] font-normal">tag line goes here</div> -->
-        </div>
-        </div>
+    }
+    <div class="relative z-50 flex flex-col h-full">
+      <div
+        class="h-full absolute bottom-0 left-0 flex w-full items-end max-md:px-6 max-md:py-3 slideshow-overlay px-16 py-8"
+      >
+        <Text type="h3" class="text-center max-md:text-left">
+          Nurturing Lifelong Learners
+        </Text>
+        <!-- <div class="text-white text-[32px] font-normal">tag line goes here</div> -->
+      </div>
     </div>
   </div>
-  
-
 </div>
 
 <script>
-  const slideshowItems = Array.from(document.querySelectorAll<HTMLElement>('.slideshow-item'));
+  const slideshowItems = Array.from(
+    document.querySelectorAll<HTMLElement>(".slideshow-item")
+  );
   let slideshowIndex = 0;
-
 
   function moveSlides(items: Array<HTMLElement>) {
     items.forEach((item, i) => {
       // console.log(i, slideshowIndex)
       if (i === slideshowIndex) {
-        item.style.opacity = '1';
+        item.style.opacity = "1";
         return;
       } else {
-        item.style.opacity = '0'
+        item.style.opacity = "0";
       }
-    })
+    });
     slideshowIndex = (slideshowIndex + 1) % items.length;
   }
-  
-  moveSlides(slideshowItems)
-  setInterval(() => {
-    moveSlides(slideshowItems)
-  }, 3000)
-</script>
 
+  moveSlides(slideshowItems);
+  setInterval(() => {
+    moveSlides(slideshowItems);
+  }, 3000);
+</script>
 
 <style>
   .slideshow-overlay {
-    background: linear-gradient(102deg, rgba(0, 0, 0, 0.8) 5%, rgba(0, 0, 0, 0) 96.35%);
+    background: linear-gradient(
+      102deg,
+      rgba(0, 0, 0, 0.8) 5%,
+      rgba(0, 0, 0, 0) 96.35%
+    );
   }
 
   @media screen and (max-width: 768px) {
     .slideshow-overlay {
-      background: linear-gradient(16deg, rgb(0 0 0 / 90%) 5%, rgba(0, 0, 0, 0) 100%);
+      background: linear-gradient(
+        16deg,
+        rgb(0 0 0 / 90%) 5%,
+        rgba(0, 0, 0, 0) 100%
+      );
     }
   }
-
 </style>
