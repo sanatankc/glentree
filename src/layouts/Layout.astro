@@ -58,21 +58,54 @@ const { title } = Astro.props;
 </style>
 
 <script>
-	const observer = new IntersectionObserver((entries) => {
-		entries.forEach(entry => {
-			const isIntersecting = (
-				entry.isIntersecting
-			) || entry.target.classList.contains('daisy-fixed')
-			if (isIntersecting) {
-				entry.target.classList.add('daisy-show')
+	document.addEventListener('DOMContentLoaded', () => {
+		const scrollArea = document.querySelector("#scroll-area")
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				const isIntersecting = (
+					entry.isIntersecting
+				) || entry.target.classList.contains('daisy-fixed')
+				if (isIntersecting) {
+					entry.target.classList.add('daisy-show')
+				}
+			})
+		}, {
+			root: scrollArea,
+		})
+		
+		const hiddenElements = document.querySelectorAll('.daisy')
+		hiddenElements.forEach(element => {
+			observer.observe(element)
+		})
+
+		const whatsAppButton : HTMLElement = document.getElementById('whatsapp-btn') as HTMLElement
+
+		console.log('whatsapp button', whatsAppButton)
+
+		document.addEventListener('scroll', (e) => {
+
+			if (whatsAppButton) {
+				if (window.scrollY > 100) {
+					whatsAppButton?.classList.add('opacity-1')
+					whatsAppButton?.classList.remove('opacity-0')
+				} else {
+					whatsAppButton?.classList.remove('opacity-1')
+					whatsAppButton?.classList.add('opacity-0')
+				}
 			}
 		})
-	}, {
-		root: document.querySelector("#scroll-area")
-	})
-
-	const hiddenElements = document.querySelectorAll('.daisy')
-	hiddenElements.forEach(element => {
-		observer.observe(element)
+		
+		scrollArea.addEventListener('scroll', (e) => {
+			if (whatsAppButton) {
+				console.log('sceroll...', scrollArea?.scrollTop)
+				if (scrollArea?.scrollTop > 100) {
+					whatsAppButton?.classList.add('opacity-1')
+					whatsAppButton?.classList.remove('opacity-0')
+				} else {
+					whatsAppButton?.classList.remove('opacity-1')
+					whatsAppButton?.classList.add('opacity-0')
+				}
+			}
+		})
 	})
 </script>
