@@ -264,8 +264,10 @@ const campus = campusData[campusName]
             </Constrain>
   
           </div>
+          {campusName === 'whitefield' && (
+            <EarthLab />
+          )}
 
-          <EarthLab />
         
           <BigAdmissionCTA />
           <div class="p-4 px-20 max-md:px-6">
