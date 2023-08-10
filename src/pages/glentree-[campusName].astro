@@ -68,6 +68,7 @@ import GAWupdate7 from '../images/campus/gaw/updates/7.jpeg'
 import GAWupdate8 from '../images/campus/gaw/updates/8.jpeg'
 import GAWupdate9 from '../images/campus/gaw/updates/9.jpeg'
 import GAWupdate10 from '../images/campus/gaw/updates/10.jpeg'
+import EarthLab from '../components/campus/earthLab.astro';
 
 
 
@@ -234,8 +235,10 @@ const campus = campusData[campusName]
           <a href={campus.virtualCampusLink} target='_blank'>
             <Button class='max-md:block hidden max-md:mt-2 max-md:ml-4'>Launch Virtual Campus Tour</Button>
           </a>
+          
+
   
-          <div class='w-full mt-20 max-md:mt-8 mb-[60px] p-20 max-md:p-4 max-md:py-8 max-md:mb-0' style={{
+          <div class='w-full mt-20 max-md:mt-8 mb-0 p-20 max-md:p-4 max-md:py-8 max-md:mb-0' style={{
             background: 'linear-gradient(180deg, #3C674F 0%, #23623F 51.08%, #0A5E2F 100%)',
           }}>
             <Constrain>
@@ -261,6 +264,8 @@ const campus = campusData[campusName]
             </Constrain>
   
           </div>
+
+          <EarthLab />
         
           <BigAdmissionCTA />
           <div class="p-4 px-20 max-md:px-6">
