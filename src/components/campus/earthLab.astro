@@ -25,7 +25,7 @@ import thumb3 from '../../images/campus/gaw/earthLab/3.jpeg'
       <div class='w-full mt-8 flex flex-row gap-3 max-md:flex-col'>
         <div class='h-[507px] w-full rounded-md overflow-hidden relative'>
           <!-- <video src={video1} autoplay loop /> -->
-          <video class="lazy play-on-hover w-full h-full object-cover" loop playsinline poster={thumb1}>
+          <video class="lazy play-on-hover w-full h-full object-cover" loop playsinline disableRemotePlayback poster={thumb1}>
             <!-- <source data-src="one-does-not-simply.webm" type="video/webm"> -->
             <source data-src={video1} type="video/mp4">
           </video>
@@ -37,7 +37,7 @@ import thumb3 from '../../images/campus/gaw/earthLab/3.jpeg'
         </div>
         <div class='h-[507px] w-full rounded-md overflow-hidden relative'>
           <!-- <video src={video1} autoplay loop /> -->
-          <video class="lazy play-on-hover w-full h-full object-cover" loop playsinline poster={thumb2}>
+          <video class="lazy play-on-hover w-full h-full object-cover" loop playsinline disableRemotePlayback poster={thumb2}>
             <!-- <source data-src="one-does-not-simply.webm" type="video/webm"> -->
             <source data-src={video2} type="video/mp4">
           </video>
@@ -95,26 +95,24 @@ import thumb3 from '../../images/campus/gaw/earthLab/3.jpeg'
 
 
     if ("IntersectionObserver" in window && window.innerWidth < 999) {
-      var playOnHoverVideosObserver = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(function(video) {
-          if (video.isIntersecting) {
-            video.target.play();
-          console.log('play');
+      // var playOnHoverVideosObserver = new IntersectionObserver(function(entries, observer) {
+      //   entries.forEach(function(video) {
+      //     if (video.isIntersecting) {
+      //       if (video.target.paused) {
+      //         video.target.play();
+      //       }
+      //     } else {
+      //       if (!video.target.paused) {
+      //         video.target.pause();
+      //       }
+      //     }
+      //   });
+      // });
 
-          } else {
-            video.target.pause();
-          console.log('pause');
-
-          }
-        });
-      });
-
-      playOnHoverVideos.forEach(function(video) {
-        playOnHoverVideosObserver.observe(video);
-      });
-    } else {
-      
-  
+      // playOnHoverVideos.forEach(function(video) {
+      //   playOnHoverVideosObserver.observe(video);
+      // });
+    } else {  
       playOnHoverVideos.forEach(function(video) {
         video.addEventListener("mouseover", function() {
           video.play();
