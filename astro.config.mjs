@@ -8,5 +8,5 @@ export default defineConfig({
   integrations: [tailwind()],
   output: "server",
   adapter: vercel(),
-  // server: (command) => ({ port: command === 'dev' ? 3000 : 4000, host: true })
+  server: (command) => ({ port: command === 'dev' ? 3000 : 4000, host: true })
 });
