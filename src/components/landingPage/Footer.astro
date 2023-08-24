@@ -1,5 +1,6 @@
 ---
 import logo from '../../images/logo.svg'
+import { getCollection, getEntry } from 'astro:content';
 
 import facebook from '../../icons/socials/Facebook.svg'
 import instagram from '../../icons/socials/Instagram.svg'
@@ -12,6 +13,9 @@ import locationIcon from '../../icons/Location.svg'
 import Text from '../system/Text.astro'
 import Constrain from '../system/Constrain.astro'
 
+const graceHopperProfile = await getEntry('school', 'school-details')
+console.log(graceHopperProfile.data)
+ 
 ---
 <div
   class='w-full pt-12 flex flex-col items-center'
