@@ -1,14 +1,14 @@
 ---
-name: sarjapur
-title: Glentree - Sarjapur
-description: A sprawling green campus located within the heart of the city.
-bannerBg: /src/images/campus/gas/school.jpeg
-virtualCampugsLink:
-  https://www.google.com/maps/@12.8977429,77.6849464,3a,75y,349.51h,82.52t/data=!3m8!1e1!3m6!1sAF1QipOr5WfWNbbfic6rOHNb2iIGHo6vd3F9sSIuKilE!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOr5WfWNbbfic6rOHNb2iIGHo6vd3F9sSIuKilE%3Dw203-h100-k-no-pi-0-ya303.22165-ro0-fo100!7i10676!8i5338?hl=en-US&entry=ttu
-galleryImages: [{
-    image: "/src/images/campus/gas/school.jpeg"
-}]
- 
-affiliationNo: '831088'
+name: whitefieldgkkgtkgtg
+title: Glentree Academy - Whitefield
+description: Centrally located in the IT Corridor of Bengaluru
+bannerBg: /src/images/campus/gaw/school.jpg
+virtualCampusLink: >-
+  https://www.google.com/maps/@12.9655167,77.7350299,3a,75y,331.03h,78.94t/data=!3m6!1e1!3m4!1sAF1QipP0Xik14EKwv1ca-GomAFI6LTFW--HUlNO-SRCR!2e10!7i10676!8i5338?hl=en-US&entry=ttu
+galleryImages:
+  - image: /src/images/campus/gaw/school.jpg
+affiliationNo: '83049'
 ---
+
+
 
