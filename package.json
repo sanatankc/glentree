@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "tinacms build && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -14,12 +14,14 @@
     "@astrojs/vercel": "^3.3.0",
     "@fontsource/nunito-sans": "^4.5.10",
     "@fontsource/twinkle-star": "^4.5.9",
+    "@tinacms/cli": "^1.5.28",
     "aos": "^3.0.0-beta.6",
-    "astro": "^2.4.5",
+    "astro": "^2.10.12",
     "astro-netlify-cms": "^0.5.3",
     "locomotive-scroll": "^4.1.4",
     "siema": "^1.5.1",
     "tailwindcss": "^3.3.2",
+    "tinacms": "^1.5.19",
     "tiny-slider": "^2.9.4"
   },
   "devDependencies": {

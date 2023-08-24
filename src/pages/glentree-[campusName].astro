@@ -55,12 +55,13 @@ import GAWupdate16 from '../images/campus/gaw/updates/16.jpeg'
 import GAWupdate18 from '../images/campus/gaw/updates/18.jpeg'
 
 import EarthLab from '../components/campus/earthLab.astro';
+import { getEntries, getEntry } from 'astro:content';
 
 
 
-
-const allowedCampusNames = ['whitefield', 'sarajapura']
+const allowedCampusNames = ['whitefield', 'sarjapur']
 const { campusName = '' } = Astro.params
+const { data } = await getEntry('campus',campusName)
 
 
 if (!allowedCampusNames.includes(campusName)) {
@@ -94,7 +95,7 @@ const campusData = {
     mapEmbedLink: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyAIyVF44QhoXfwwKHLd1h3N49cQTHS0Yvw&q=Whitefield Glentree Academy, Whitefield, Bengaluru',
     mindlerLink: 'https://www.mindler.com/schools/GLENTREE2023'
   },
-  sarajapura: {
+  sarjapur: {
     affiliationNo: '831088',
     title: 'Glentree Academy - Sarjapur',
     description: 'A sprawling green campus located within the heart of the city.',
@@ -169,9 +170,9 @@ const campus = campusData[campusName]
           <div class='min-h-[512px] max-h-[512px] w-full flex justify-center bg-cover bg-center items-center flex-col max-md:min-h-[350px]' style={{
             backgroundImage: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.6) 68.07%), url(${campus.bannerBG})`,
           }}>
-            <Text type={'h2'} class='mt-14 max-md:mt-10 text-center'>{campus.title}</Text>
-            <Text type={'base'} class='mt-3 text-center max-md:w-[90%]' >{campus.description}</Text>
-            <Text type={'sm'} class='mt-3 text-center max-md:w-[90%]' >Permanent Affiliation No: {campus.affiliationNo}</Text>  
+            <Text type={'h2'} class='mt-14 max-md:mt-10 text-center'>{data.title}</Text>
+            <Text type={'base'} class='mt-3 text-center max-md:w-[90%]' >{data.description}</Text>
+            <Text type={'sm'} class='mt-3 text-center max-md:w-[90%]' >Permanent Affiliation No: {data.affiliationNo}</Text>  
           </div>
   
         <!-- <AdmissionMarquee /> -->
