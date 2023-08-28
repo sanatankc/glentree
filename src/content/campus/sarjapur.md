@@ -1,5 +1,5 @@
 ---
-name: sarjapur
+name: sarjapur cool
 title: Glentree Academy - Sarjapur
 description: Centrally located in the IT Corridor of Bengaluru
 bannerBg: /src/images/campus/gaw/school.jpg
@@ -9,6 +9,7 @@ galleryImages:
   - image: /src/images/campus/gaw/school.jpg
 affiliationNo: '831088'
 ---
+
 
 
 
