@@ -12,7 +12,6 @@ import Campus from '../components/landingPage/campus.astro';
 import Testimonial from '../components/landingPage/Testimonial.astro';
 import BigAdmissionCTA from '../components/BigAdmissionCTA.astro';
 
-
 import '../global.css'
 
 import '@fontsource/nunito-sans';
@@ -23,6 +22,7 @@ import YoutubeEmbed from '../components/YoutubeEmbed.astro';
 import psjaAward from '../images/psjaAward.png'
 import meritAwards from '../images/meritAwards.png'
 import heroBG from '../images/heroBG.png'
+import VittalFounderDesk from '../components/vittalFounderDesk.astro';
 ---
 
 <Layout title="Welcome to Astro.">
@@ -101,6 +101,11 @@ import heroBG from '../images/heroBG.png'
 
       <!-- <div class='w-5 h-32'></div> -->
       <Testimonial />
+
+      <Text type="h2" class="text-black text-center bg-white p-6">Our Founder’s <span class="text-green-600">Note</span></Text>
+      <div class='bg-white px-20 max-md:px-4 w-full'>
+        <VittalFounderDesk />
+      </div>
 
       <!-- Admission BIG CTA -->
       <BigAdmissionCTA />

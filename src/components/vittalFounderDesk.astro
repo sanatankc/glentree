@@ -1,0 +1,90 @@
+---
+import vittalFounderDeskPreview from '../images/vittalFounderDeskPreview.mp4'
+import vittalFounderDeskPoster from '../images/vittalFounderDeskPoster.jpeg'
+import Text from './system/Text.astro';
+import Button from './system/Button.astro';
+import Constrain from './system/Constrain.astro';
+import YoutubeEmbed from './YoutubeEmbed.astro';
+---
+
+<Constrain>
+  <div class="w-full h-[576px] max-md:[500px] rounded-lg relative overflow-hidden play-on-hover text-white">
+    <video class="lazy w-full h-full object-cover absolute top-0 left-0" loop playsinline muted poster={vittalFounderDeskPoster}>
+      <!-- <source data-src="one-does-not-simply.webm" type="video/webm"> -->
+      <source data-src={vittalFounderDeskPreview} type="video/mp4">
+    </video> 
+    <div class="w-full h-full relative z-10 px-8 max-md:px-4 py-7 flex flex-row items-end" style={{
+      background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%)'
+    }}>
+      <div class="flex flex-row max-md:flex-col max-md:items-start justify-between items-center w-full">
+        <div class='w-full max-w-[635px]'>
+          <Text type="base">
+            “We are very happy with the school because of the individual attention it gives to the children, and the entire team behind Glentree Academy is so helpful and supportive as well!”
+          </Text>
+          <Text type="sm" class='font-bold mt-4'>
+            Mr. Vittal Bhandary
+          </Text>
+          <Text type="sm" class='text-[#00C557] mt-1 font-semibold'>
+            CEO of Glentree Academy
+          </Text>
+        </div>
+        <div data-video-open="founderDeskVideo">
+          <Button class='mt-11'>
+            <span>Watch Video</span>
+            <svg slot="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM13.2313 8.72996C12.9466 8.53003 12.6242 8.32321 12.2903 8.1202C11.0034 7.33764 10.36 6.94636 9.7829 7.37957C9.2058 7.81278 9.15335 8.71968 9.04846 10.5335C9.01879 11.0464 9 11.5493 9 12.0001C9 12.4508 9.01879 12.9537 9.04846 13.4666C9.15335 15.2804 9.2058 16.1873 9.7829 16.6205C10.36 17.0537 11.0034 16.6625 12.2903 15.8799C12.6242 15.6769 12.9466 15.4701 13.2313 15.2702C13.5559 15.0423 13.909 14.7688 14.2651 14.4783C15.555 13.426 16.2 12.8999 16.2 12.0001C16.2 11.1002 15.555 10.5741 14.2651 9.52182C13.909 9.23134 13.5559 8.95785 13.2313 8.72996Z" fill="white"/>
+            </svg>
+          </Button>
+        </div>
+    
+      </div>
+    </div>
+  </div>
+  
+</Constrain>
+<YoutubeEmbed embedId={'7JeHNHMVIxI'} videoId='founderDeskVideo' />
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+
+    if ("IntersectionObserver" in window) {
+      var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(function(video) {
+          if (video.isIntersecting) {
+            for (var source in video.target.children) {
+              var videoSource = video.target.children[source];
+              if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                videoSource.src = videoSource.dataset.src;
+              }
+            }
+
+            video.target.load();
+            console.log('loadeddd. lazyy....')
+            video.target.classList.remove("lazy");
+            lazyVideoObserver.unobserve(video.target);
+          }
+        });
+      });
+
+      lazyVideos.forEach(function(lazyVideo) {
+        lazyVideoObserver.observe(lazyVideo);
+      });
+    }
+
+    var playOnHoverTarget = document.querySelector(".play-on-hover");
+    var playOnHoverVideo = document.querySelector(".play-on-hover video");
+
+
+
+    if ("IntersectionObserver" in window && window.innerWidth < 999) {
+    } else {
+      playOnHoverTarget?.addEventListener("mouseover", function() {
+        playOnHoverVideo?.play();
+      });
+      playOnHoverTarget?.addEventListener("mouseout", function() {
+        playOnHoverVideo?.pause();
+      });
+    }
+  });
+</script>

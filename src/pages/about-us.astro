@@ -10,6 +10,7 @@ import Button from '../components/system/Button.astro';
 
 import TopNavigationBar from '../components/TopNavigationBar.astro';
 import AdmissionMarquee from '../components/campus/admissionMarquee.astro';
+import VittalFounderDesk from '../components/vittalFounderDesk.astro';
 
 import '../global.css'
 import GalleryMarquee from '../components/campus/galleryMarquee.astro';
@@ -28,6 +29,7 @@ import mission3 from '../images/aboutUs/mission3.png'
 import mission4 from '../images/aboutUs/mission4.png'
 import mission5 from '../images/aboutUs/mission5.png'
 import mission6 from '../images/aboutUs/mission6.png'
+import testimonial1 from '../images/testimonial1.png'
 
 import banner from '../images/aboutUs/banner.jpeg'
 
@@ -41,7 +43,7 @@ import linkedinIcon from '../icons/linkedin.svg'
 import Constrain from '../components/system/Constrain.astro';
 
 const founderDesk = [
-  { name: 'Vittal Bhandary', title: 'CEO', linkedin: "https://www.linkedin.com/in/vittal-bhandary-51902519/", image: vittal, message: "Glentree Academy envisions a transformative approach to education, addressing the shortcomings of traditional learning. As a child, I found little joy in the stress of memorisation, yet I thrived in the immersive world of sports. Inspired by my own experiences and Preeti's vision of a happy learning environment, Glentree aims to create a place where children can freely explore their talents and passions without the burden of grades." },
+  // { name: 'Vittal Bhandary', title: 'CEO', linkedin: "https://www.linkedin.com/in/vittal-bhandary-51902519/", image: vittal, message: "Glentree Academy envisions a transformative approach to education, addressing the shortcomings of traditional learning. As a child, I found little joy in the stress of memorisation, yet I thrived in the immersive world of sports. Inspired by my own experiences and Preeti's vision of a happy learning environment, Glentree aims to create a place where children can freely explore their talents and passions without the burden of grades." },
   { name: 'Preeti Bhandary', title: 'DIRECTOR', linkedin: 'https://www.linkedin.com/in/preeti-bhandary-0164231a', image: preeti, message: "Research shows that involved parents contribute to happier, healthier, and more successful children. However, in today's fast-paced world, lack of quality parenting time leads to increased pressure on children. We often neglect the present moment, consumed by daily crises. Engaging children in multiple activities is no substitute for parental presence, despite common misconceptions." },
   { name: 'Sowmia Raguraman', title: 'MENTOR PRINCIPAL', linkedin: 'https://www.linkedin.com/in/sowmia-raguraman-9b51b364', image: sowmia, message: "As an educator, my goal is to nurture a growth mindset in children, teaching them to embrace failures as opportunities for progress. I strive to help them measure their advancement effectively, academically and personally. By encouraging a positive attitude towards change and letting go of past negative experiences, we can develop their mature thinking from an early age. This mindset enables them to persevere through setbacks, accept constructive criticism, refine their skills, and view mistakes as stepping stones to success." },
   { name: 'Rachana Heda', title: 'COO', linkedin: 'https://www.linkedin.com/in/rachana-heda-b218881a6', image: rachna, message: "As the proud leader of this educational institution, I am thrilled to share our commitment to learning for life. Our vision is to cultivate lifelong learners who are curious, creative, and compassionate individuals. Through innovative teaching methods, personalized guidance, and a diverse range of opportunities, we strive to equip our students with the skills, knowledge, and values needed to thrive in an ever-changing world. Together with our dedicated educators, supportive parents, and enthusiastic students, we embark on a journey of academic excellence, character development, and holistic growth. Join us as we shape the leaders and innovators of tomorrow." },
@@ -86,11 +88,15 @@ const missions = [
         </div>
 
         
-        <div class='w-full px-[136px] py-16 gap-5 max-md:px-6 max-md:py-6' style={{
-          background: 'linear-gradient(180deg, #000000 0%, #142C1E 108.48%)'
-        }}>
+        
+        <div class='w-full px-[136px] py-16 gap-5 max-md:px-6 max-md:py-6 bg-white text-black'>
           <Constrain class="flex flex-row flex-wrap">
-          <Text type={'h2'} class='text-white'>From the Founder's Desk</Text>
+            <div class="w-full flex justify-center items-center">
+              <div>
+                <Text type={'h2'} class='text-black w-full  mb-8 max-md:mb-4'>From the <span class="text-green-600">Founder's Desk</span></Text>
+              </div>
+            </div>
+            <VittalFounderDesk />
           {founderDesk.map((item, index) => (
             <div class='flex flex-row w-full mt-8 items-center max-md:flex-col max-md:items-center max-md:mt-4'>
               <div class='max-w-[360px] w-full h-[410px] mr-[60px] shrink-0 rounded-3xl overflow-hidden max-md:mr-0'>
@@ -98,7 +104,7 @@ const missions = [
               </div>
               <div>
                 <div class="flex flex-row items-center max-md:mt-4">
-                  <Text type={'h3'} class='text-white'>{item.name}</Text>
+                  <Text type={'h3'} class='text-black'>{item.name}</Text>
                   {!!item.linkedin && (
                     <a class="w-6 h-6 ml-6 max-md:w-4 max-md:h-4 max-md:ml-3" href={item.linkedin} target="_blank">
                       <img src={linkedinIcon} alt="" class='w-full h-full object-cover' />
