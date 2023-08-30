@@ -1,9 +1,10 @@
 ---
 import FilledArrowCircle from '../icons/FilledArrowCircle.astro'
-const { title, secondary, icon, class: className } = Astro.props;
+const { title, secondary, icon, class: className, type="button" } = Astro.props;
 const primary = !secondary;
 
 const Icon = icon ? icon : FilledArrowCircle;
+
 ---
 
 <div class={className}>
@@ -16,7 +17,9 @@ const Icon = icon ? icon : FilledArrowCircle;
     style={{
       boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)",
       background: primary ? "linear-gradient(263.64deg, #4B916A 6.11%, #028339 95.99%)" : 'white'
-    }}>
+    }}
+    type={type}
+    >
     <span class:list={[primary ? "text-white" : "text-green-400", "font-semibold", "text-lg max-md:text-base"]}>
       <slot/>
     </span>

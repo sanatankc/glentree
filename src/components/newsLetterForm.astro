@@ -1,0 +1,37 @@
+---
+import glentreeExpressBG from '../images/glentreeExpressBG.png'
+
+import Text from './system/Text.astro'
+import Button from './system/Button.astro'
+---
+<div class="w-full p-[60px]" style={{
+  background: 'linear-gradient(225deg, #FBFFF6 0%, #F6FFED 0%, #FFFAF6 100%)',
+}}>
+  <div class="flex flex-row gap-12 w-full justify-center">
+    <img src={glentreeExpressBG} />
+    <div>
+      <Text type='subtitle' class='text-[#121212]/60'>
+        STAY UP TO DATE WITH
+      </Text>
+      <Text type='h2' class='text-black'>
+        Our Newsletter:  <span class='text-green-600'> Glentree Express</span>
+      </Text>
+      <Text type='base' class='text-black mt-4 max-w-[900px]'>
+        Unlock a world of school updates and student stories by entering your email to access our latest newsletter—and enjoy seamless subscription for future issues!
+      </Text>
+      <form id="newsletter-form">
+        <input placeholder="Enter email address" type="email" class="mt-4 py-4 px-6 w-[400px] border border-[#C6C6C6] rounded-md box-border text-black focus:ring-2 active:ring-2" />
+        <Button type='submit' secondary class='mt-4'>View Latest Newsletter</Button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  const newsLetterForm = document.getElementById('newsletter-form')
+  newsLetterForm?.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const email = newsLetterForm.querySelector('input').value
+    console.log(email)
+  })
+</script>

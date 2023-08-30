@@ -2,7 +2,7 @@
 const { embedId, videoId } = Astro.props
 ---
 
-<div id={"player" + videoId} class={`p-20 fixed w-screen h-screen z-[9999] top-0 bg-black/80 data-video-${videoId} opacity-0 pointer-events-none transition-opacity`}>
+<div id={"player" + videoId} class={`p-20 max-md:px-2 fixed w-screen h-screen z-[9999] top-0 left-0 bg-black/80 data-video-${videoId} opacity-0 pointer-events-none transition-opacity`}>
   
 </div>
 
