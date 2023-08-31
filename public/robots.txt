@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.glentreeacademy.com/sitemap-index.xml
