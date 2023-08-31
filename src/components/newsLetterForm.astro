@@ -21,7 +21,7 @@ const { campusName = '' } = Astro.props
         Our Newsletter:  <span class='text-green-600'> Glentree Express</span>
       </Text>
       <img src={glentreeExpressBG} class="object-contain object-center h-40 mt-4 md:hidden" />
-      <Text type='base' class='text-black mt-4 max-w-[900px]'>
+      <Text type='base' class='text-black mt-4 max-w-[870px]'>
         Unlock a world of school updates and student stories by entering your email to access our latest newsletter—and enjoy seamless subscription for future issues!
       </Text>
       <form id="newsletter-form" action="https://script.google.com/macros/s/AKfycbyIn2f2C3nfH5NpR0mc0hd0U0ObOOLoNj9H1kBzaMDipvaAC2_4B7S1pwD6jq1vqtrM/exec">
@@ -50,7 +50,7 @@ const { campusName = '' } = Astro.props
       }
 
       const link = window.location.protocol + '//' +  window.location.host + newsLetterLinks[campusName]
-      console.log(link)
+      // console.log(link)
       window.location.href = link
     });
   });
