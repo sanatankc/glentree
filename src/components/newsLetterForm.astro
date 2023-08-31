@@ -1,0 +1,57 @@
+---
+import glentreeExpressBG from '../images/glentreeExpressBG.png'
+
+import Text from './system/Text.astro'
+import Button from './system/Button.astro'
+import gasNewsLetter from '../images/campus/gas/newsletter.pdf'
+import gawNewsLetter from '../images/campus/gaw/newsletter.pdf'
+
+const { campusName = '' } = Astro.props
+---
+<div class="w-full p-[60px] max-md:p-4" style={{
+  background: 'linear-gradient(225deg, #FBFFF6 0%, #F6FFED 0%, #FFFAF6 100%)',
+}}>
+  <div class="flex flex-row max-md:flex-col gap-12 w-full justify-center">
+    <img src={glentreeExpressBG} class="max-md:hidden" />
+    <div class="max-md:flex max-md:flex-col">
+      <Text type='subtitle' class='text-[#121212]/60 max-md:text-center'>
+        STAY UP TO DATE WITH
+      </Text>
+      <Text type='h2' class='text-black max-md:text-center'>
+        Our Newsletter:  <span class='text-green-600'> Glentree Express</span>
+      </Text>
+      <img src={glentreeExpressBG} class="object-contain object-center h-40 mt-4 md:hidden" />
+      <Text type='base' class='text-black mt-4 max-w-[870px]'>
+        Unlock a world of school updates and student stories by entering your email to access our latest newsletter—and enjoy seamless subscription for future issues!
+      </Text>
+      <form id="newsletter-form" action="https://script.google.com/macros/s/AKfycbyIn2f2C3nfH5NpR0mc0hd0U0ObOOLoNj9H1kBzaMDipvaAC2_4B7S1pwD6jq1vqtrM/exec">
+        <input placeholder="Enter email address" type="email" name="Email" class="mt-4 py-4 px-6 w-full max-w-[400px] border border-[#C6C6C6] rounded-md box-border text-black focus:ring-2 active:ring-2" />
+        <Button type='submit' secondary class='mt-4'>View Latest Newsletter</Button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script define:vars={{ campusName, gasNewsLetter, gawNewsLetter }}>
+  window.addEventListener("load", function() {
+    const form = document.getElementById('newsletter-form');
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      data.append('sheetName', campusName === 'sarajapura' ? 'Sarjapur' : 'Whitefield');
+      const action = e.target.action;
+      fetch(action, {
+        method: 'POST',
+        body: data,
+      })
+      const newsLetterLinks = {
+        sarajapura: gasNewsLetter,
+        whitefield: gawNewsLetter,
+      }
+
+      const link = window.location.protocol + '//' +  window.location.host + newsLetterLinks[campusName]
+      // console.log(link)
+      window.location.href = link
+    });
+  });
+</script>

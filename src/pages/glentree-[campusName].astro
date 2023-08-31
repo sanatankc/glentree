@@ -9,6 +9,8 @@ import Button from '../components/system/Button.astro';
 import TopNavigationBar from '../components/TopNavigationBar.astro';
 import AdmissionMarquee from '../components/campus/admissionMarquee.astro';
 
+import NewsLetterForm from '../components/newsLetterForm.astro';
+
 import '../global.css'
 import GalleryMarquee from '../components/campus/galleryMarquee.astro';
 import Footer from '../components/landingPage/Footer.astro';
@@ -175,7 +177,6 @@ const campus = campusData[campusName]
             <Text type={'sm'} class='mt-3 text-center max-md:w-[90%]' >Permanent Affiliation No: {data.affiliationNo}</Text>  
           </div>
   
-        <!-- <AdmissionMarquee /> -->
           <div 
             style={{
               background: 'linear-gradient(180deg, #000000 0%, #142C1E 100%)',
@@ -209,6 +210,8 @@ const campus = campusData[campusName]
               </div>
             </div>
           </div>
+
+          <NewsLetterForm campusName={campusName} />
   
           <div class='text-black pl-20 pr-12 pt-16 pb-14 max-md:p-4 max-md:py-8 max-md:pb-2'>
             <Constrain class=' flex items-center justify-between max-md:flex-col max-md:items-start'>
