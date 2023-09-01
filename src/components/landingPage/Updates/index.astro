@@ -9,6 +9,7 @@ import shreyanshResult from '../../../images/results/shreyansh.png'
 import deepthiReslut from '../../../images/results/Deepthi.png'
 import suhaniResult from '../../../images/results/suhani.png'
 import arrow from '../../../icons/arrow.svg'
+import { Image } from 'astro:assets';
 
 // const news = Array.from({ length: 6 }, (_, i) => i).map((i) => ({
 //   title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -41,10 +42,10 @@ const resultImages = [
   <div class="w-full relative mt-8">
     <div class="w-screen absolute h-full top-0 left-0 z-50 flex flex-row items-center p-10 justify-between pointer-events-none">
       <div class="w-10 h-10 pointer-events-auto cursor-pointer" id="prev-button">
-        <img src={arrow} alt="previous button" class="w-full h-full -scale-100" />
+        <Image src={arrow} alt="previous button" class="w-full h-full -scale-100" />
       </div>
       <div class="w-10 h-10 pointer-events-auto cursor-pointer" id="next-button">
-        <img src={arrow} alt="previous button" class="w-full h-full" />
+        <Image src={arrow} alt="previous button" class="w-full h-full" />
       </div>
     </div>
     <div id="scroll-container" class="h-scroll w-screen flex flex-row h-min overflow-scroll no-scrollbar scroll-snap-news-carousel px-3 mb-0" style={{

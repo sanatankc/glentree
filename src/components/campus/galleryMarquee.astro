@@ -10,15 +10,14 @@ interface Props {
 }
 
 const {images = []} = Astro.props
-
-console.log(images)
+console.log({images})
 ---
 <article class="wrapper max-md:gap-0">
   <div class="marquee max-md:animate-none">
     <Repeat n={2} mobile={true}>
       <div class="marquee__group max-md:!animate-none max-md:p-4 max-md:pb-0 max-md:!overflow-x-scroll max-md:!w-full max-md:!justify-start" style={{ scrollSnapType: 'x mandatory', }}>
         {images.map(image => (
-          <div class='bg-cover bg-center bg-no-repeat w-[480px] h-[376px] max-md:w-[250px] max-md:h-[196px] flex-shrink-0' style={{ backgroundImage: `url("${image}")` }} />
+          <div class='bg-cover bg-center bg-no-repeat w-[480px] h-[376px] max-md:w-[250px] max-md:h-[196px] flex-shrink-0' style={{ backgroundImage: `url("${image.image}")` }} />
         ))}
       </div>
     </Repeat>

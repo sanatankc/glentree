@@ -1,7 +1,7 @@
 ---
 import Button from "./system/Button.astro";
 import Text from "./system/Text.astro";
-
+import { Image } from 'astro:assets';
 import psjaAward from "../images/psjaAward.png";
 import meritAwards from "../images/meritAwards.png";
 import heroBG from "../images/heroBG.png";
@@ -17,6 +17,9 @@ import slide5MB from "../images/slides/5-mb.jpeg";
 import slide6 from "../images/slides/6.jpg";
 import slide7 from '../images/slides/7.jpeg'
 import slide8 from '../images/slides/8.jpeg'
+import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
+const { data } = await getEntry('home','home') as CollectionEntry<'home'>
+const title = data.title
 // import slide9 from '../images/slides/9.jpg'
 
 const slides = [
@@ -58,6 +61,8 @@ const slides = [
   { slide: slide7, position: "top" },
   { slide: slide8, position: "top" },
 ];
+// const optimizedBackground = await getImage({src: myBackground, format: 'avif'})
+
 ---
 
 <div class="h-screen w-full bg-cover bg-top relative bg-black flex flex-col">
@@ -78,11 +83,11 @@ const slides = [
             }}
           >
             {slide.map(({ src, media }) => (
-              <source srcset={src} media={media} class="w-full h-full object-cover" style={{
+              <source srcset={src.src} media={media} class="w-full h-full object-cover" style={{
                 objectPosition: position
               }} />
             ))}
-            <img src={slide[0].src} alt="" class="w-full h-full object-cover" style={{
+            <img src={slide[0].src.src} alt="slide-img" class="w-full h-full object-cover" style={{
               objectPosition: position
             }} />
           </picture>
@@ -93,7 +98,7 @@ const slides = [
               i === 0 ? "opacity-1" : "opacity-0",
             ]}
             style={{
-              backgroundImage: `url("${slide}")`,
+              backgroundImage: `url("${slide.src}")`,
               transition: "1s all ease-in-out",
               backgroundPosition: position,
             }}
@@ -106,7 +111,7 @@ const slides = [
         class="h-full absolute bottom-0 left-0 flex w-full items-end max-md:px-6 max-md:py-3 slideshow-overlay px-16 py-8"
       >
         <Text type="h3" class="text-center max-md:text-left">
-          Nurturing Lifelong Learners
+          {title}
         </Text>
         <!-- <div class="text-white text-[32px] font-normal">tag line goes here</div> -->
       </div>

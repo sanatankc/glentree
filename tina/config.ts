@@ -1,5 +1,4 @@
 import { defineConfig } from "tinacms";
-
 // Your hosting provider likely exposes this as an environment variable
 const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "staging";
 
@@ -14,35 +13,27 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "",
+      mediaRoot: "images",
       publicFolder: "public",
     },
   },
   schema: {
     collections: [
       {
-        name: "school",
-        label: "school",
-        path: "src/content/school",
+        name: 'home',
+        label: "Home",
+        path: "src/content/home",
         fields: [
           {
             type: "string",
             name: "title",
             label: "Title",
-            isTitle: true,
-            required: true,
           },
-          {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            isBody: true,
-          },
-        ],
+        ]
       },
       {
         name: "campus",
-        label: "campus",
+        label: "Campus",
         path: "src/content/campus",
         fields: [
           {
@@ -55,6 +46,7 @@ export default defineConfig({
             type: "image",
             name: "bannerBg",
             label: "Banner Image",
+           
           },
           {
             type: "string",
@@ -86,9 +78,16 @@ export default defineConfig({
             name: "galleryImages",
             label: "Gallery Images",
             list: true,
-            fields: [{ type: "image", name: "image", label: "My Image" }],
-          }
-        
+            fields: [{ type: "image", name: "image", label: "image" }],
+          },
+          {
+            type: "object",
+            name: "showcase",
+            label: "ShowCase",
+            list: true,
+            fields: [{ type: "image", name: "image", label: "image" },{ type: "string", name: "title", label: "title" }],
+          },
+                
         ],
       },
     ],

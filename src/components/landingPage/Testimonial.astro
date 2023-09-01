@@ -7,6 +7,7 @@ import testimonial2 from '../../images/testimonial2.png'
 import Button from '../system/Button.astro';
 import Constrain from '../system/Constrain.astro';
 import Text from '../system/Text.astro';
+import { Image } from 'astro:assets';
 
 import YoutubeEmbed from '../YoutubeEmbed.astro'
 ---
@@ -17,10 +18,10 @@ import YoutubeEmbed from '../YoutubeEmbed.astro'
     <Text type={'h2'} class='text-black mt-3 relative'>
       See why parents <span class='text-accent2'>trust Glentree</span>
       <div class='w-[84px] h-[67px] absolute -top-16 -left-28'>
-        <img src={QuoteIcon} class='w-full' alt="Left Quote" />
+        <Image src={QuoteIcon} class='w-full' alt="Left Quote" />
       </div>
       <div class='w-[84px] h-[67px] absolute -bottom-2 -right-32 -scale-100'>
-        <img src={QuoteIcon} class='w-full' alt="Right Quote" />
+        <Image src={QuoteIcon} class='w-full' alt="Right Quote" />
       </div>
     </Text>
     <!-- <div class='w-full h-[192px] rounded-2xl bg-white mt-7 border-gray-300 border overflow-hidden flex flex-row max-md:flex-col max-md:px-2 max-md:py-4 max-md:h-auto'>
@@ -49,7 +50,7 @@ import YoutubeEmbed from '../YoutubeEmbed.astro'
     <div class="w-full gap-7 flex flex-row max-md:flex-col mt-7">
       <div class="border border-gray-300 flex flex-row max-md:flex-col rounded-lg overflow-hidden"> 
         <div class='min-w-[232px] max-md:min-h-[350px] max-md:bg-top bg-cover bg-center' style={{
-          backgroundImage: `url(${testimonial1})`,
+          backgroundImage: `url(${testimonial1.src})`,
           backgroundSize: 'cover',
           
         }}>
@@ -74,7 +75,7 @@ import YoutubeEmbed from '../YoutubeEmbed.astro'
       </div>
       <div class="border   border-gray-300 flex flex-row max-md:flex-col rounded-lg overflow-hidden"> 
         <div class='min-w-[232px] max-md:min-h-[350px] max-md:bg-top bg-cover bg-center' style={{
-          backgroundImage: `url(${testimonial2})`,
+          backgroundImage: `url(${testimonial2.src})`,
           backgroundSize: 'cover'
         }}>
         </div>
