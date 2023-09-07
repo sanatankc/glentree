@@ -1,2 +1,9 @@
-- name: Check Spelling
-  uses: check-spelling/check-spelling@v0.0.21
+name: spell-check
+run-name: Checking grammar
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Spelling
+        uses: check-spelling/check-spelling@v0.0.21
