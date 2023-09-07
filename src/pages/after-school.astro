@@ -78,7 +78,7 @@ const clubs = [
         <div
           class="min-h-[350px] max-h-[350px] w-full flex justify-center items-center flex-col max-md:min-h-[350px]"
           style={{
-            background: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.5) 68.07%), url(${afterschoolBG})`,
+            background: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.5) 68.07%), url(${afterschoolBG.src})`,
             backgroundPosition: "center",
             backgroundSize: "cover",
 
@@ -122,7 +122,7 @@ const clubs = [
                   <div
                     class="w-full h-[320px] bg-cover bg-center rounded-2xl"
                     style={{
-                      backgroundImage: `url(${club.thumbnail})`,
+                      backgroundImage: `url(${club.thumbnail.src})`,
                     }}
                   />
                   <Text type="h4" class="mt-4">

@@ -1,6 +1,6 @@
 ---
 name: whitefield
-title: Glentree Academy - Whitefield
+title: Glentree Academy - Whitefield1
 description: A sprawling green campus within the heart of the city.
 bannerBg: /images/gaw-school.jpg
 virtualCampusLink: >-
@@ -11,21 +11,37 @@ galleryImages:
   - image: /images/gas-gallery3.jpeg
   - image: /images/gas-gallery4.jpeg
   - image: /images/gas-gallery5.jpeg
-showcase: [
-  {title: 'World Population Assembly', image: "/images/gaw-update1.jpeg"},
-  {title: 'Cubbon Park: Field Trip', image: "/images/gaw-update2.jpeg"},
-  {title: 'Debate and Quizzing', image: "/images/gaw-update3.jpeg"},
-  {title: 'Drawing Competition', image: "/images/gaw-update4.jpeg"},
-  {title: 'Friendship Day', image: "/images/gaw-update8.jpeg"},
-  {title: 'A Day out with Mothers', image: "/images/gaw-update8.jpeg"},
-  {title: 'A Day out with Mothers: Painting', image: "/images/gaw-update12.jpeg"},
-  {title: 'Neighbouring Countries of India', image: "/images/gaw-update15.jpeg"},
-  {title: 'Science Experiment', image: "/images/gaw-update16.jpeg"},
-  {title: 'Unveiling of the Earth Lab', image: "/images/gaw-update18.jpeg"}
-] 
-
+showcase:
+  - image: /images/gaw-update1.jpeg
+    title: World Population Assembly
+  - image: /images/gaw-update2.jpeg
+    title: 'Cubbon Park: Field Trip'
+  - image: /images/gaw-update3.jpeg
+    title: Debate and Quizzing
+  - image: /images/gaw-update4.jpeg
+    title: Drawing Competition
+  - image: /images/gaw-update8.jpeg
+    title: Friendship Day
+  - image: /images/gaw-update8.jpeg
+    title: A Day out with Mothers
+  - image: /images/gaw-update12.jpeg
+    title: 'A Day out with Mothers: Painting'
+  - image: /images/gaw-update15.jpeg
+    title: Neighbouring Countries of India
+  - image: /images/gaw-update16.jpeg
+    title: Science Experiment
+  - image: /images/gaw-update18.jpeg
+    title: Unveiling of the Earth Lab
 affiliationNo: '830349'
 ---
+
+
+
+
+
+
+
+
 
 
 

@@ -4,7 +4,7 @@ import { z, defineCollection } from 'astro:content';
 const blogCollection = defineCollection({
   type: 'content', 
   schema: z.object({
-    title: z.string(),
+    title: z.string()
   }),
 });
 
@@ -25,6 +25,13 @@ const homeCollection = defineCollection({
   type: 'content', 
   schema: () => z.object({
     title: z.string(),
+    heroImages: z.array(
+      z.object({
+        image_desktop: z.string().optional(),
+        image_mobile: z.string().optional(),
+        position: z.string().optional(),
+      }),
+    )
   }),
 });
 
@@ -32,5 +39,4 @@ export const collections = {
   'school': blogCollection,
   'campus': campusCollection,
   'home': homeCollection,
-
 };

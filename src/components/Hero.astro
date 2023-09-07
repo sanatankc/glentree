@@ -17,51 +17,75 @@ import slide5MB from "../images/slides/5-mb.jpeg";
 import slide6 from "../images/slides/6.jpg";
 import slide7 from '../images/slides/7.jpeg'
 import slide8 from '../images/slides/8.jpeg'
-import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
-const { data } = await getEntry('home','home') as CollectionEntry<'home'>
-const title = data.title
-// import slide9 from '../images/slides/9.jpg'
 
-const slides = [
-  {
-    slide: [
-      { src: slide1, media: "(min-width: 768px)" },
-      { src: slide1MB, media: "(max-width: 768px)" },
-    ],
-    position: "top",
+import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
+const { data } = await getEntry('home', 'home') as CollectionEntry<'home'>
+const title = data.title
+
+console.log('data...', data)
+
+const slides = data.heroImages.map(({ image_desktop, image_mobile, position = 'top' }, i) => {
+  const slide = image_desktop
+  if (!image_mobile) {
+    return {
+      slide,
+      position,
+      picture: false,
+    }
+  }
+  const responsiveSlide = [
+    { src: image_desktop, media: "(min-width: 768px)" },
+    { src: image_mobile, media: "(max-width: 768px)" },
+  ]
+  return {
+    slide: responsiveSlide,
+    position,
     picture: true,
-  },
-  {
-    slide: [
-      { src: slide2, media: "(min-width: 768px)" },
-      { src: slide2MB, media: "(max-width: 768px)" },
-    ],
-    position: "top",
-    picture: true,
-  },
-  { slide: slide3, position: "center 20%" },
-  // {slide: slide4, position: 'center 37%'},
-  {
-    slide: [
-      { src: slide4, media: "(min-width: 768px)" },
-      { src: slide4MB, media: "(max-width: 768px)" },
-    ],
-    position: "top",
-    picture: true,
-  },
-  {
-    slide: [
-      { src: slide5, media: "(min-width: 768px)" },
-      { src: slide5MB, media: "(max-width: 768px)" },
-    ],
-    position: "top",
-    picture: true,
-  },
-  { slide: slide6, position: "top" },
-  { slide: slide7, position: "top" },
-  { slide: slide8, position: "top" },
-];
-// const optimizedBackground = await getImage({src: myBackground, format: 'avif'})
+  }
+}).reverse()
+
+
+
+console.log('aliswaa...¯', JSON.stringify(slides, null, 2))
+// const slides = [
+//   {
+//     slide: [
+//       { src: slide1, media: "(min-width: 768px)" },
+//       { src: slide1MB, media: "(max-width: 768px)" },
+//     ],
+//     position: "top",
+//     picture: true,
+//   },
+//   {
+//     slide: [
+//       { src: slide2, media: "(min-width: 768px)" },
+//       { src: slide2MB, media: "(max-width: 768px)" },
+//     ],
+//     position: "top",
+//     picture: true,
+//   },
+//   { slide: slide3, position: "center 20%" },
+//   // {slide: slide4, position: 'center 37%'},
+//   {
+//     slide: [
+//       { src: slide4, media: "(min-width: 768px)" },
+//       { src: slide4MB, media: "(max-width: 768px)" },
+//     ],
+//     position: "top",
+//     picture: true,
+//   },
+//   {
+//     slide: [
+//       { src: slide5, media: "(min-width: 768px)" },
+//       { src: slide5MB, media: "(max-width: 768px)" },
+//     ],
+//     position: "top",
+//     picture: true,
+//   },
+//   { slide: slide6, position: "top" },
+//   { slide: slide7, position: "top" },
+//   { slide: slide8, position: "top" },
+// ];
 
 ---
 
@@ -83,11 +107,11 @@ const slides = [
             }}
           >
             {slide.map(({ src, media }) => (
-              <source srcset={src.src} media={media} class="w-full h-full object-cover" style={{
+              <source srcset={src} media={media} class="w-full h-full object-cover" style={{
                 objectPosition: position
               }} />
             ))}
-            <img src={slide[0].src.src} alt="slide-img" class="w-full h-full object-cover" style={{
+            <img src={slide[0]} alt="slide-img" class="w-full h-full object-cover" style={{
               objectPosition: position
             }} />
           </picture>
@@ -98,7 +122,7 @@ const slides = [
               i === 0 ? "opacity-1" : "opacity-0",
             ]}
             style={{
-              backgroundImage: `url("${slide.src}")`,
+              backgroundImage: `url("${slide}")`,
               transition: "1s all ease-in-out",
               backgroundPosition: position,
             }}

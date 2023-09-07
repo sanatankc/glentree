@@ -57,9 +57,9 @@ import GAWupdate16 from '../images/campus/gaw/updates/16.jpeg'
 import GAWupdate18 from '../images/campus/gaw/updates/18.jpeg'
 import { Image } from 'astro:assets';
 import EarthLab from '../components/campus/earthLab.astro';
-import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
 const allowedCampusNames = ['whitefield', 'sarjapur']
 const { campusName = '' } = Astro.params
+import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
 const { data } = await getEntry('campus',campusName) as CollectionEntry<'campus'>
 
 

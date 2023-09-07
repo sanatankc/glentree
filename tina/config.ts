@@ -23,12 +23,46 @@ export default defineConfig({
         name: 'home',
         label: "Home",
         path: "src/content/home",
+        defaultItem: () => ({
+          // title: "Home",
+          heroImages: {
+            position: 'top'
+          },
+        }),
         fields: [
           {
-            type: "string",
+            type: "rich-text",
             name: "title",
             label: "Title",
           },
+          {
+            type: 'object',
+            list: true,
+            label: 'Hero Images',
+            name: 'heroImages',
+            ui: {
+              defaultItem: {
+                position: 'top'
+              }
+            },
+            fields: [
+              {
+                type: 'image',
+                name: 'image_desktop',
+                label: 'Desktop Image',
+              },
+              {
+                type: 'image',
+                name: 'image_mobile',
+                label: 'Mobile Image',
+              },
+              {
+                type: 'string',
+                name: 'position',
+                label: 'Position',
+              },
+            ],
+          }
         ]
       },
       {
@@ -76,20 +110,42 @@ export default defineConfig({
           {
             type: "object",
             name: "galleryImages",
-            label: "Gallery Images",
+            label: "What's happening At Glentree",
             list: true,
             fields: [{ type: "image", name: "image", label: "image" }],
           },
           {
             type: "object",
             name: "showcase",
-            label: "ShowCase",
+            label: "Around The Campus",
             list: true,
             fields: [{ type: "image", name: "image", label: "image" },{ type: "string", name: "title", label: "title" }],
           },
                 
         ],
       },
+      {
+        name: "mandatoryPublicDisclosure",
+        label: "Mandatory Public Disclosure",
+        path: "src/content/mandatoryPublicDisclosure",
+        fields: [
+          {
+            type: "object",
+            list: true,
+            label: "Disclosure", 
+            name: "disclosure",
+            ui: {
+              itemProps: (item) => ({
+                label: item?.title
+              })
+            },
+            fields: [
+              { type: "string", name: "title", label: "Title" },
+              { type: "rich-text", name: "disclosure", label: "Disclosure" },
+            ]
+          }
+        ]
+      }
     ],
   },
 });
