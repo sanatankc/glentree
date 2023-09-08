@@ -11,16 +11,38 @@ galleryImages:
   - image: /images/gas-gallery3.jpeg
   - image: /images/gas-gallery4.jpeg
   - image: /images/gas-gallery5.jpeg
-showcase: [{title: 'Animal and their young ones', image: '/images/gas-update1.jpeg'},
-  {title: 'Field Trip', image: '/images/gas-update2.jpeg'},
-  {title: "Mother's Day", image: '/images/gas-update3.jpeg'},
-  {title: 'Food Chain', image: '/images/gas-update4.jpeg'},
-  {title: 'Plantation Drive', image: '/images/gas-update5.jpeg'},
-  {title: 'Math Lab', image: '/images/gas-update6.jpeg'},
-  {title: 'Van Mohtsav Special Assembly', image: '/images/gas-update7.jpeg'}]
-  
+showcase:
+  - image: /images/10.71561ac9.jpg
+    title: Quit India Movement
+  - image: /images/9.29a84678.jpg
+    title: National Handloom Day
+  - image: /images/8.35b81b87.jpg
+    title: Independence Day
+  - image: /images/12.663afe3d.jpg
+    title: Zero Shadow Day
+  - image: /images/11.f3bdc3d2.jpg
+    title: Weightless Wednesday
+  - image: /images/gas-update1.jpeg
+    title: Animal and their young ones
+  - image: /images/gas-update2.jpeg
+    title: Field Trip
+  - image: /images/gas-update3.jpeg
+    title: Mother's Day
+  - image: /images/gas-update4.jpeg
+    title: Food Chain
+  - image: /images/gas-update5.jpeg
+    title: Plantation Drive
+  - image: /images/gas-update6.jpeg
+    title: Math Lab
+  - image: /images/gas-update7.jpeg
+    title: Van Mohtsav Special Assembly
 affiliationNo: '831088'
 ---
+
+
+
+
+
 
 
 

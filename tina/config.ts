@@ -118,6 +118,11 @@ export default defineConfig({
             type: "object",
             name: "showcase",
             label: "Around The Campus",
+            ui: {
+              itemProps: (item) => ({
+                label: item?.title
+              })
+            },
             list: true,
             fields: [{ type: "image", name: "image", label: "image" },{ type: "string", name: "title", label: "title" }],
           },

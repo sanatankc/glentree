@@ -56,6 +56,7 @@ import parentTeacherAssociationGAW from "../images/disclosure/gaw/parentTeacherA
 
 import Footer from "../components/landingPage/Footer.astro";
 import "../global.css";
+import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
 
 export function getStaticPaths() {
   return [
@@ -340,8 +341,12 @@ const whitefieldData = {
   },
 };
 
+const { data: disclosure } = await getEntry('mandatoryPublicDisclosure', school) as CollectionEntry<'mandatoryPublicDisclosure'>
+// const title = data.title
+const data = disclosure.disclosure.reverse()
+// console.log('disclosure', data)
 const schoolName = school === "sarjapur" ? "GLENTREE ACADEMY SARJAPUR" : "GLENTREE ACADEMY WHITEFIELD";
-const data = school === "sarjapur" ? sarjapurData : whitefieldData;
+
 ---
 
 <Layout title="Welcome to Astro.">
@@ -360,3 +365,8 @@ const data = school === "sarjapur" ? sarjapurData : whitefieldData;
     </div>
   </main>
 </Layout>
+
+<script define:vars={{ sarjapurData, whitefieldData }}>
+  console.log('sarjapurData...', sarjapurData)
+    console.log('whitefieldData...', whitefieldData)
+</script>

@@ -1,20 +1,23 @@
 ---
 
-const {data} = Astro.props
+import marked from 'marked';
+import * as DOMPurify from 'dompurify';
+
+
+let {data} = Astro.props
+data = data.map((item) => {
+    item.disclosure = marked.parse(item.disclosure).trim()
+    return item
+})
+
+console.log('data....', data)
 ---
 <div class="max-w-[800px] w-[90%] bg-white border border-gray-500 rounded-lg mt-10">
     {Object.keys(data).map((key) => (
         <div class='flex flex-row w-full border-b border-gray-500'>
-            <div class={"p-4 flex-1 border-r border-gray-500 " + (data[key].type === 'head' ? 'font-bold' : '')}>{key}</div>
-            {data[key].type === 'text' && (
-                <div class="p-4 flex-1">{data[key].text}</div>
-            )}
-            {data[key].type === 'link' && (
-                <a href={data[key].link} target="_blank" class="p-4 flex-1 text-blue-600 underline">{data[key].text}</a>
-            )}
-            {data[key].type === 'head' && (
-                <span class="p-4 flex-1 font-bold">{data[key].text}</span>
-            )}
+            <div class={"p-4 flex-1 border-r border-gray-500"}>{data[key].title}</div>
+            <div class={"p-4 flex-1 [&>p>a]:text-blue-700 [&>p>a]:underline" + (data[key].type === 'head' ? 'font-bold' : '')} set:html={data[key].disclosure}>
+            </div>
         </div>
     ))}
 </div>

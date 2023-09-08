@@ -35,8 +35,17 @@ const homeCollection = defineCollection({
   }),
 });
 
+const disclosureCollection = defineCollection({
+  type: 'content',
+  schema: () => z.object({
+    title: z.string(),
+    disclosure: z.any(),
+  }),
+});
+
 export const collections = {
   'school': blogCollection,
   'campus': campusCollection,
   'home': homeCollection,
+  'disclosure': disclosureCollection,
 };
