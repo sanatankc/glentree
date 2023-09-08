@@ -6,11 +6,7 @@ import astronautKidsAdmissionBG from '../images/astronautKidsAdmissionBG.png';
 import admissionStep1 from '../images/admissionStep1.png';
 import admissionStep2 from '../images/admissionStep2.png';
 import admissionStep3 from '../images/admissionStep3.png';
-
-
-
 import '../global.css'
-
 import Text from '../components/system/Text.astro';
 import Button from '../components/system/Button.astro';
 import Collapsible from '../components/admissions/Collapsible.astro';
@@ -35,7 +31,7 @@ import AdmissionStep from '../components/admissions/AdmissionStep.astro';
       }}
     >
       <div class='min-h-[512px] max-h-[512px] w-full flex justify-center items-center flex-col max-md:min-h-[350px]' style={{
-        background: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.7) 68.07%), url(${astronautKidsAdmissionBG})`,
+        background: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.7) 68.07%), url(${astronautKidsAdmissionBG.src})`,
         backgroundPosition: '90% 40%',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
@@ -58,7 +54,7 @@ import AdmissionStep from '../components/admissions/AdmissionStep.astro';
           step="01"
           title='Enquire'
           titleBG='linear-gradient(263.64deg, #4B916A 6.11%, #028339 95.99%)'
-          thumbnailBG={`linear-gradient(to right, rgba(14, 101, 38, 0.8), rgba(14, 101, 38, 0.8)), url(${admissionStep1})`}
+          thumbnailBG={`linear-gradient(to right, rgba(14, 101, 38, 0.8), rgba(14, 101, 38, 0.8)), url(${admissionStep1.src})`}
         >
           <Text type={'regular'} class='text-black leading-[29px]'>
             To initiate the admission process, parents can either walk-in or inquire via phone or web. Upon arrival, an Admission Counsellor will provide an orientation about the school, admission process, and fee structure. Parents will also be taken on a school tour to explore the campus they prefer.
@@ -93,7 +89,7 @@ import AdmissionStep from '../components/admissions/AdmissionStep.astro';
           step="02"
           title='Milestone Mapping Session'
           titleBG='#C07C47'
-          thumbnailBG={`linear-gradient(to right, rgba(192, 124, 71, 0.8), rgba(192, 124, 71, 0.8)), url(${admissionStep2})`}
+          thumbnailBG={`linear-gradient(to right, rgba(192, 124, 71, 0.8), rgba(192, 124, 71, 0.8)), url(${admissionStep2.src})`}
         >
         <Text type={'regular'} class='text-black leading-[29px]'>
           For Grades 1-10, upon receipt of your application, we will schedule a <span class='font-bold'>Milestone Mapping Session</span> with the parents and the child.
@@ -110,7 +106,7 @@ import AdmissionStep from '../components/admissions/AdmissionStep.astro';
         step="03"
         title='Closing the Admissions'
         titleBG='#772D2B'
-        thumbnailBG={`linear-gradient(to right, rgba(119, 45, 43, 0.8), rgba(119, 45, 43, 0.8)), url(${admissionStep3})`}
+        thumbnailBG={`linear-gradient(to right, rgba(119, 45, 43, 0.8), rgba(119, 45, 43, 0.8)), url(${admissionStep3.src})`}
       >
         <Text type={'regular'} class='text-black leading-[29px]'>
           Once the application has been reviewed and the Milestone Mapping Session has been completed, the parents will be informed of the next steps to close the admissions and the other formalities.

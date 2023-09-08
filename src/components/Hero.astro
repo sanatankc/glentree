@@ -1,7 +1,7 @@
 ---
 import Button from "./system/Button.astro";
 import Text from "./system/Text.astro";
-
+import { Image } from 'astro:assets';
 import psjaAward from "../images/psjaAward.png";
 import meritAwards from "../images/meritAwards.png";
 import heroBG from "../images/heroBG.png";
@@ -17,47 +17,33 @@ import slide5MB from "../images/slides/5-mb.jpeg";
 import slide6 from "../images/slides/6.jpg";
 import slide7 from '../images/slides/7.jpeg'
 import slide8 from '../images/slides/8.jpeg'
-// import slide9 from '../images/slides/9.jpg'
 
-const slides = [
-  {
-    slide: [
-      { src: slide1, media: "(min-width: 768px)" },
-      { src: slide1MB, media: "(max-width: 768px)" },
-    ],
-    position: "top",
+import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
+const { data } = await getEntry('home', 'home') as CollectionEntry<'home'>
+const title = data.title
+
+console.log('data...', data)
+
+const slides = data.heroImages.map(({ image_desktop, image_mobile, position = 'top' }, i) => {
+  const slide = image_desktop
+  if (!image_mobile) {
+    return {
+      slide,
+      position,
+      picture: false,
+    }
+  }
+  const responsiveSlide = [
+    { src: image_desktop, media: "(min-width: 768px)" },
+    { src: image_mobile, media: "(max-width: 768px)" },
+  ]
+  return {
+    slide: responsiveSlide,
+    position,
     picture: true,
-  },
-  {
-    slide: [
-      { src: slide2, media: "(min-width: 768px)" },
-      { src: slide2MB, media: "(max-width: 768px)" },
-    ],
-    position: "top",
-    picture: true,
-  },
-  { slide: slide3, position: "center 20%" },
-  // {slide: slide4, position: 'center 37%'},
-  {
-    slide: [
-      { src: slide4, media: "(min-width: 768px)" },
-      { src: slide4MB, media: "(max-width: 768px)" },
-    ],
-    position: "top",
-    picture: true,
-  },
-  {
-    slide: [
-      { src: slide5, media: "(min-width: 768px)" },
-      { src: slide5MB, media: "(max-width: 768px)" },
-    ],
-    position: "top",
-    picture: true,
-  },
-  { slide: slide6, position: "top" },
-  { slide: slide7, position: "top" },
-  { slide: slide8, position: "top" },
-];
+  }
+}).reverse()
+
 ---
 
 <div class="h-screen w-full bg-cover bg-top relative bg-black flex flex-col">
@@ -82,7 +68,7 @@ const slides = [
                 objectPosition: position
               }} />
             ))}
-            <img src={slide[0].src} alt="" class="w-full h-full object-cover" style={{
+            <img src={slide[0]} alt="slide-img" class="w-full h-full object-cover" style={{
               objectPosition: position
             }} />
           </picture>
@@ -106,7 +92,7 @@ const slides = [
         class="h-full absolute bottom-0 left-0 flex w-full items-end max-md:px-6 max-md:py-3 slideshow-overlay px-16 py-8"
       >
         <Text type="h3" class="text-center max-md:text-left">
-          Nurturing Lifelong Learners
+          {title}
         </Text>
         <!-- <div class="text-white text-[32px] font-normal">tag line goes here</div> -->
       </div>

@@ -1,6 +1,7 @@
 ---
 import Button from "./system/Button.astro";
 import logo from "../images/logo.svg";
+import { Image } from "astro:assets";
 
 interface Menu {
   title: string;
@@ -89,7 +90,7 @@ const menu: Array<Menu> = [
   class="w-screen bg-black/80 py-1 px-14 max-md:px-5 box-border flex flex-row justify-between items-center backdrop-blur-md fixed z-[99]"
 >
   <a href="/" class="relative z-10 daisy daisy-fixed daisy-1">
-    <img src={logo} alt="Glentree's Logo" width="130px" />
+    <Image src={logo} alt="Glentree's Logo" />
   </a>
   <div class="flex flex-row items-center max-md:hidden">
     {

@@ -1,5 +1,4 @@
 import { defineConfig } from "tinacms";
-
 // Your hosting provider likely exposes this as an environment variable
 const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "staging";
 
@@ -14,47 +13,74 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "",
+      mediaRoot: "images",
       publicFolder: "public",
     },
   },
   schema: {
     collections: [
       {
-        name: "school",
-        label: "school",
-        path: "src/content/school",
+        name: 'home',
+        label: "Home",
+        path: "src/content/home",
+        defaultItem: () => ({
+          // title: "Home",
+          heroImages: {
+            position: 'top'
+          },
+        }),
         fields: [
           {
-            type: "string",
+            type: "rich-text",
             name: "title",
             label: "Title",
-            isTitle: true,
-            required: true,
           },
           {
-            type: "rich-text",
-            name: "body",
-            label: "Body",
-            isBody: true,
-          },
-        ],
+            type: 'object',
+            list: true,
+            label: 'Hero Images',
+            name: 'heroImages',
+            ui: {
+              defaultItem: {
+                position: 'top'
+              }
+            },
+            fields: [
+              {
+                type: 'image',
+                name: 'image_desktop',
+                label: 'Desktop Image',
+              },
+              {
+                type: 'image',
+                name: 'image_mobile',
+                label: 'Mobile Image',
+              },
+              {
+                type: 'string',
+                name: 'position',
+                label: 'Position',
+              },
+            ],
+          }
+        ]
       },
       {
         name: "campus",
-        label: "campus",
+        label: "Campus",
         path: "src/content/campus",
         fields: [
-          {
-            type: "string",
-            name: "name",
-            label: "Name",
-            required: true,
-          },
+          // {
+          //   type: "string",
+          //   name: "name",
+          //   label: "Name",
+          //   required: true,
+          // },
           {
             type: "image",
             name: "bannerBg",
             label: "Banner Image",
+           
           },
           {
             type: "string",
@@ -84,13 +110,47 @@ export default defineConfig({
           {
             type: "object",
             name: "galleryImages",
-            label: "Gallery Images",
+            label: "Around The Campus",
             list: true,
-            fields: [{ type: "image", name: "image", label: "My Image" }],
-          }
-        
+            fields: [{ type: "image", name: "image", label: "Image" }],
+          },
+          {
+            type: "object",
+            name: "showcase",
+            label: "What's happening At Glentree",
+            ui: {
+              itemProps: (item) => ({
+                label: item?.title
+              })
+            },
+            list: true,
+            fields: [{ type: "image", name: "image", label: "image" },{ type: "string", name: "title", label: "Title" }],
+          },
+                
         ],
       },
+      {
+        name: "mandatoryPublicDisclosure",
+        label: "Mandatory Public Disclosure",
+        path: "src/content/mandatoryPublicDisclosure",
+        fields: [
+          {
+            type: "object",
+            list: true,
+            label: "Disclosure", 
+            name: "disclosure",
+            ui: {
+              itemProps: (item) => ({
+                label: item?.title
+              })
+            },
+            fields: [
+              { type: "string", name: "title", label: "Title" },
+              { type: "rich-text", name: "disclosure", label: "Disclosure" },
+            ]
+          }
+        ]
+      }
     ],
   },
 });

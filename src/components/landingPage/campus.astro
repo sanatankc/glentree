@@ -5,10 +5,10 @@ import sarjapurCampus from '../../images/sarjapurCampus.jpeg'
 import whitefieldCampus from '../../images/whitefieldCampus.jpeg'
 import CampusCard from './campusCard.astro';
 import Constrain from '../system/Constrain.astro';
-
+import { Image } from 'astro:assets';
 ---
 <div class='bg-accent relative p-20 max-md:p-5'>
-  <img src={campusSectionPatternBG} class='w-screen absolute top-0 left-0 -z-1' role="presentation" />
+  <Image src={campusSectionPatternBG} class='w-screen absolute top-0 left-0 -z-1' role="presentation" alt="decoration" />
   <Constrain>
     <div class='relative z-10'>
       <Text type='subtitle' class='text-white' style={{ letterSpacing: '0.1em', opacity: 0.8 }}>Locate Us</Text>

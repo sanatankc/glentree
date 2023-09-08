@@ -89,7 +89,7 @@ const coscholastics = [
         </div>
   
         <div class='min-h-[350px] max-h-[350px] w-full flex bg-cover bg-center bg-no-repeat justify-center items-center flex-col max-md:min-h-[350px]' style={{
-          backgroundImage: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.3) 68.07%), url(${coscholasticsBG})`,
+          backgroundImage: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.3) 68.07%), url(${coscholasticsBG.src})`,
           // backgroundPosition: 'top'
         }}>
           <Text type={'h2'} class='mt-14 max-md:mt-10 text-center'>Explore Beyond the Classrooms</Text>
@@ -117,7 +117,7 @@ const coscholastics = [
                 <div
                   class='w-full h-[320px] bg-cover bg-center rounded-2xl' 
                   style={{
-                    background: `url(${coscholastic.thumbnail})`,
+                    background: `url(${coscholastic.thumbnail.src})`,
                     backgroundPosition: 'top center',
                     backgroundSize: 'cover'
                   }}

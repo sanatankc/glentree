@@ -4,6 +4,7 @@ import LFLKids from '../../images/LFLKids.png'
 import Button from '../system/Button.astro'
 import Text from '../system/Text.astro'
 import Constrain from '../system/Constrain.astro'
+import { Image } from 'astro:assets';
 
 const { viewPhilosophyVisible = true } = Astro.props
 ---
@@ -27,7 +28,7 @@ const { viewPhilosophyVisible = true } = Astro.props
         class="max-md:mt-1 max-md:mb-5 daisy daisy-2"
 
       >Learning for Life</Text>
-      <img src={LFLKids} alt="Kids with Halo Eating Lunch" class="w-96 min-w-min -mt-14 max-md:hidden daisy daisy-2 daisy-y-1"/>
+      <Image src={LFLKids} alt="Kids with Halo Eating Lunch" class="w-96 min-w-min -mt-14 max-md:hidden daisy daisy-2 daisy-y-1"/>
     </div>
     <div class='flex flex-col items-start'>
       <Text
@@ -46,7 +47,7 @@ const { viewPhilosophyVisible = true } = Astro.props
           <Button secondary class="mt-10 daisy daisy-1 daisy-y-2">View Philosophy</Button>
         </a>
       )}
-      <img src={LFLKids} alt="Kids with Halo Eating Lunch" class="w-96 min-w-min -mt-14 max-md:block hidden max-md:w-[100vw] max-md:min-w-0 max-md:max-w-[400px] max-md:-mt-6 max-md:self-start max-md:-left-6 relative left-8"/>
+      <Image src={LFLKids} alt="Kids with Halo Eating Lunch" class="w-96 min-w-min -mt-14 max-md:block hidden max-md:w-[100vw] max-md:min-w-0 max-md:max-w-[400px] max-md:-mt-6 max-md:self-start max-md:-left-6 relative left-8"/>
 
     </div>
   </Constrain>

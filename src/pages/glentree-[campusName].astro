@@ -15,8 +15,8 @@ import '../global.css'
 import GalleryMarquee from '../components/campus/galleryMarquee.astro';
 import Footer from '../components/landingPage/Footer.astro';
 import sowmia from '../images/campus/sowmia.png'
-import schoolGAWBG from '../images/campus/gaw/school.jpg'
-import schoolGASBG from '../images/campus/gas/school.jpeg'
+// import schoolGAWBG from '../images/campus/gaw/school.jpg'
+// import schoolGASBG from '../images/campus/gas/school.jpeg'
 
 import galleryGAW1 from '../images/campus/gaw/gallery/1.jpeg'
 import galleryGAW2 from '../images/campus/gaw/gallery/2.jpeg'
@@ -61,21 +61,25 @@ import GAWupdate12 from '../images/campus/gaw/updates/12.jpeg'
 import GAWupdate15 from '../images/campus/gaw/updates/15.jpeg'
 import GAWupdate16 from '../images/campus/gaw/updates/16.jpeg'
 import GAWupdate18 from '../images/campus/gaw/updates/18.jpeg'
+
+import { Image } from 'astro:assets';
 import GAWupdate19 from '../images/campus/gaw/updates/19.jpeg'
 import GAWupdate20 from '../images/campus/gaw/updates/20.jpeg'
 import GAWupdate21 from '../images/campus/gaw/updates/21.jpeg'
 import GAWupdate24 from '../images/campus/gaw/updates/24.jpeg'
 
-
 import EarthLab from '../components/campus/earthLab.astro';
-import { getEntries, getEntry } from 'astro:content';
-
-
-
 const allowedCampusNames = ['whitefield', 'sarjapur']
 const { campusName = '' } = Astro.params
-const { data } = await getEntry('campus',campusName)
+import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
+const { data } = await getEntry('campus',campusName) as CollectionEntry<'campus'>
 
+export function getStaticPaths() {
+  return [
+    { params: { campusName: "whitefield" } },
+    { params: { campusName: "sarjapur" } },
+  ];
+}
 
 if (!allowedCampusNames.includes(campusName)) {
   const error = await fetch(`${Astro.url}/404`)
@@ -91,7 +95,7 @@ const campusData = {
     affiliationNo: '830349',
     title: 'Glentree Academy - Whitefield',
     description: 'Centrally located in the IT Corridor of Bengaluru',
-    bannerBG: schoolGAWBG,
+    // bannerBG: schoolGAWBG,
     virtualCampusLink: 'https://www.google.com/maps/@12.9655167,77.7350299,3a,75y,331.03h,78.94t/data=!3m6!1e1!3m4!1sAF1QipP0Xik14EKwv1ca-GomAFI6LTFW--HUlNO-SRCR!2e10!7i10676!8i5338?hl=en-US&entry=ttu',
     galleryImages: [galleryGAW1, galleryGAW2, galleryGAW3, galleryGAW4],
     leaderMessage: [
@@ -112,7 +116,7 @@ const campusData = {
     affiliationNo: '831088',
     title: 'Glentree Academy - Sarjapur',
     description: 'A sprawling green campus located within the heart of the city.',
-    bannerBG: schoolGASBG,
+    // bannerBG: schoolGASBG,
     virtualCampusLink: 'https://www.google.com/maps/@12.8977429,77.6849464,3a,75y,349.51h,82.52t/data=!3m8!1e1!3m6!1sAF1QipOr5WfWNbbfic6rOHNb2iIGHo6vd3F9sSIuKilE!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOr5WfWNbbfic6rOHNb2iIGHo6vd3F9sSIuKilE%3Dw203-h100-k-no-pi-0-ya303.22165-ro0-fo100!7i10676!8i5338?hl=en-US&entry=ttu',
     galleryImages: [galleryGAS1, galleryGAS2, galleryGAS3, galleryGAS4, galleryGAS5],
     leaderMessage: [
@@ -189,9 +193,8 @@ const campus = campusData[campusName]
           <TopNavigationBar />
           <div class='h-[95.44px] w-full bg-black'>
           </div>
-    
           <div class='min-h-[512px] max-h-[512px] w-full flex justify-center bg-cover bg-center items-center flex-col max-md:min-h-[350px]' style={{
-            backgroundImage: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.6) 68.07%), url(${campus.bannerBG})`,
+            backgroundImage: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.6) 68.07%), url(${data.bannerBg})`,
           }}>
             <Text type={'h2'} class='mt-14 max-md:mt-10 text-center'>{data.title}</Text>
             <Text type={'base'} class='mt-3 text-center max-md:w-[90%]' >{data.description}</Text>
@@ -214,10 +217,10 @@ const campus = campusData[campusName]
             <div class="w-full relative mt-8">
               <div class="w-screen absolute h-full top-0 left-0 z-50 flex flex-row items-center p-10 justify-between pointer-events-none">
                 <div class="w-10 h-10 pointer-events-auto cursor-pointer" id="prev-button">
-                  <img src={arrow} alt="previous button" class="w-full h-full -scale-100" />
+                  <Image src={arrow} alt="previous button" class="w-full h-full -scale-100" />
                 </div>
                 <div class="w-10 h-10 pointer-events-auto cursor-pointer" id="next-button">
-                  <img src={arrow} alt="previous button" class="w-full h-full" />
+                  <Image src={arrow} alt="previous button" class="w-full h-full" />
                 </div>
               </div>
               <div id="scroll-container" class="h-scroll relative w-screen flex flex-row h-min overflow-scroll no-scrollbar scroll-snap-news-carousel px-6 mb-0" style={{
@@ -225,7 +228,7 @@ const campus = campusData[campusName]
                 overflowY: 'hidden',
                 scrollSnapType: 'x mandatory',
               }}>
-                {updateImages.map((card, index) => (
+                {data.showcase.map((card, index) => (
                   <Card title={card.title} image={card.image} class={`scroll-card daisy daisy-${index + 1} daisy-y-1 daisy-debug m-auto min-w-[39.813rem] max-sm:min-w-[300px]`}  />
                 ))}
               </div>
@@ -240,14 +243,14 @@ const campus = campusData[campusName]
                 <Text type={'subtitle'} style={{ color: 'rgba(18, 18, 18, 0.6)' }}>SNAPSHOTS</Text>
                 <Text type={'h2'}>Around the <span class='text-accent'>Campus</span></Text>
               </div>
-              <a href={campus.virtualCampusLink} target='_blank'>
+              <a href={data.virtualCampusLink} target='_blank'>
                 <Button class='max-md:hidden'>Launch Virtual Campus Tour</Button>
               </a>
             </Constrain>
           </div>
   
-          <GalleryMarquee images={campus.galleryImages} />
-          <a href={campus.virtualCampusLink} target='_blank'>
+          <GalleryMarquee images={data.galleryImages} />
+          <a href={data.virtualCampusLink} target='_blank'>
             <Button class='max-md:block hidden max-md:mt-2 max-md:ml-4'>Launch Virtual Campus Tour</Button>
           </a>
           
@@ -261,7 +264,7 @@ const campus = campusData[campusName]
               <Text type={'h2'} class={'mt-3 leading-9'}>From the Principal</Text>
               {campus.leaderMessage && (campus.leaderMessage.map((message => (
                 <div class='flex flex-row max-md:flex-col max-md:items-start mt-12 items-center'>
-                  <img src={message.image} class='w-[360px] h-[322px] max-md:w-full max-md:h-auto max-md:max-w-[400px] object-cover rounded-3xl' />
+                  <Image src={message.image} alt="leader image"  class='w-[360px] h-[322px] max-md:w-full max-md:h-auto max-md:max-w-[400px] object-cover rounded-3xl' />
                   <div class='ml-16 max-md:ml-0 max-md:mt-4'>
                     <Text type={'regular'} class='uppercase text-white/80'>
                       {message.role}

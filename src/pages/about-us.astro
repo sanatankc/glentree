@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 
 import Text from '../components/system/Text.astro';
 import BigAdmissionCTA from '../components/BigAdmissionCTA.astro';
+import { Image } from 'astro:assets';
 
 import clubsBGimage from '../images/clubs/clubsBGImage.jpeg';
 
@@ -74,7 +75,7 @@ const missions = [
         </div>
   
         <div class='min-h-[350px] max-h-[350px] w-full flex justify-center items-center flex-col max-md:min-h-[350px]' style={{
-          background: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.8) 68.07%), url(${banner})`,
+          background: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.8) 68.07%), url(${banner.src})`,
           backgroundPosition: 'top center',
           backgroundSize: 'cover'
 
@@ -100,14 +101,14 @@ const missions = [
           {founderDesk.map((item, index) => (
             <div class='flex flex-row w-full mt-8 items-center max-md:flex-col max-md:items-center max-md:mt-4'>
               <div class='max-w-[360px] w-full h-[410px] mr-[60px] shrink-0 rounded-3xl overflow-hidden max-md:mr-0'>
-                <img src={item.image} alt="" class='w-full h-full object-cover object-top' />
+                <Image src={item.image} alt="founder" class='w-full h-full object-cover object-top' />
               </div>
               <div>
                 <div class="flex flex-row items-center max-md:mt-4">
                   <Text type={'h3'} class='text-black'>{item.name}</Text>
                   {!!item.linkedin && (
                     <a class="w-6 h-6 ml-6 max-md:w-4 max-md:h-4 max-md:ml-3" href={item.linkedin} target="_blank">
-                      <img src={linkedinIcon} alt="" class='w-full h-full object-cover' />
+                      <Image src={linkedinIcon} alt="linked icon" class='w-full h-full object-cover' />
                     </a>
                   )}
                 </div>
@@ -124,10 +125,10 @@ const missions = [
           <Text type={'h2'} class='text-black mb-4'>Our <span class='text-accent2'>Mission</span></Text>
           <div class='grid grid-rows-2 grid-cols-3 w-full gap-x-10 gap-y-7 max-md:grid-cols-1'>
             {missions.map(mission => (
-              <div class='h-[400px] mission-card relative group overflow-hidden max-md:h-[320px] bg-red-100 rounded-lg bg-cover bg-center p-5 flex flex-col justify-between' style={{ backgroundImage: `url(${mission.image}` }}>
+              <div class='h-[400px] mission-card relative group overflow-hidden max-md:h-[320px] bg-red-100 rounded-lg bg-cover bg-center p-5 flex flex-col justify-between' style={{ backgroundImage: `url(${mission.image.src}` }}>
                 <div class="w-full h-full absolute top-0 left-0 bg-black/60 group-hover:bg-green-600/90 transition-all z-0"></div>
                 
-                <div class="w-10 h-10 self-end bg-contain bg-no-repeat relative z-10" style={{ backgroundImage: `url("${mission.icon}")` }}></div>
+                <div class="w-10 h-10 self-end bg-contain bg-no-repeat relative z-10" style={{ backgroundImage: `url("${mission.icon.src}")` }}></div>
                 <div class="relative z-10">
                   <Text type={'h4'} class='leading-tight text-[28px]' style={{ transition: '0.3s all ease-in-out' }}>{mission.title[0]}<br/>
                     <span class='text-yellow'>
