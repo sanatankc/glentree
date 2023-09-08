@@ -70,12 +70,12 @@ export default defineConfig({
         label: "Campus",
         path: "src/content/campus",
         fields: [
-          {
-            type: "string",
-            name: "name",
-            label: "Name",
-            required: true,
-          },
+          // {
+          //   type: "string",
+          //   name: "name",
+          //   label: "Name",
+          //   required: true,
+          // },
           {
             type: "image",
             name: "bannerBg",
