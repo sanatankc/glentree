@@ -15,8 +15,8 @@ import '../global.css'
 import GalleryMarquee from '../components/campus/galleryMarquee.astro';
 import Footer from '../components/landingPage/Footer.astro';
 import sowmia from '../images/campus/sowmia.png'
-import schoolGAWBG from '../images/campus/gaw/school.jpg'
-import schoolGASBG from '../images/campus/gas/school.jpeg'
+// import schoolGAWBG from '../images/campus/gaw/school.jpg'
+// import schoolGASBG from '../images/campus/gas/school.jpeg'
 
 import galleryGAW1 from '../images/campus/gaw/gallery/1.jpeg'
 import galleryGAW2 from '../images/campus/gaw/gallery/2.jpeg'
@@ -89,7 +89,7 @@ const campusData = {
     affiliationNo: '830349',
     title: 'Glentree Academy - Whitefield',
     description: 'Centrally located in the IT Corridor of Bengaluru',
-    bannerBG: schoolGAWBG,
+    // bannerBG: schoolGAWBG,
     virtualCampusLink: 'https://www.google.com/maps/@12.9655167,77.7350299,3a,75y,331.03h,78.94t/data=!3m6!1e1!3m4!1sAF1QipP0Xik14EKwv1ca-GomAFI6LTFW--HUlNO-SRCR!2e10!7i10676!8i5338?hl=en-US&entry=ttu',
     galleryImages: [galleryGAW1, galleryGAW2, galleryGAW3, galleryGAW4],
     leaderMessage: [
@@ -110,7 +110,7 @@ const campusData = {
     affiliationNo: '831088',
     title: 'Glentree Academy - Sarjapur',
     description: 'A sprawling green campus located within the heart of the city.',
-    bannerBG: schoolGASBG,
+    // bannerBG: schoolGASBG,
     virtualCampusLink: 'https://www.google.com/maps/@12.8977429,77.6849464,3a,75y,349.51h,82.52t/data=!3m8!1e1!3m6!1sAF1QipOr5WfWNbbfic6rOHNb2iIGHo6vd3F9sSIuKilE!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipOr5WfWNbbfic6rOHNb2iIGHo6vd3F9sSIuKilE%3Dw203-h100-k-no-pi-0-ya303.22165-ro0-fo100!7i10676!8i5338?hl=en-US&entry=ttu',
     galleryImages: [galleryGAS1, galleryGAS2, galleryGAS3, galleryGAS4, galleryGAS5],
     leaderMessage: [
@@ -237,14 +237,14 @@ const campus = campusData[campusName]
                 <Text type={'subtitle'} style={{ color: 'rgba(18, 18, 18, 0.6)' }}>SNAPSHOTS</Text>
                 <Text type={'h2'}>Around the <span class='text-accent'>Campus</span></Text>
               </div>
-              <a href={campus.virtualCampusLink} target='_blank'>
+              <a href={data.virtualCampusLink} target='_blank'>
                 <Button class='max-md:hidden'>Launch Virtual Campus Tour</Button>
               </a>
             </Constrain>
           </div>
   
           <GalleryMarquee images={data.galleryImages} />
-          <a href={campus.virtualCampusLink} target='_blank'>
+          <a href={data.virtualCampusLink} target='_blank'>
             <Button class='max-md:block hidden max-md:mt-2 max-md:ml-4'>Launch Virtual Campus Tour</Button>
           </a>
           
