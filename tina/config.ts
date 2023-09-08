@@ -110,21 +110,21 @@ export default defineConfig({
           {
             type: "object",
             name: "galleryImages",
-            label: "What's happening At Glentree",
+            label: "Around The Campus",
             list: true,
-            fields: [{ type: "image", name: "image", label: "image" }],
+            fields: [{ type: "image", name: "image", label: "Image" }],
           },
           {
             type: "object",
             name: "showcase",
-            label: "Around The Campus",
+            label: "What's happening At Glentree",
             ui: {
               itemProps: (item) => ({
                 label: item?.title
               })
             },
             list: true,
-            fields: [{ type: "image", name: "image", label: "image" },{ type: "string", name: "title", label: "title" }],
+            fields: [{ type: "image", name: "image", label: "image" },{ type: "string", name: "title", label: "Title" }],
           },
                 
         ],
