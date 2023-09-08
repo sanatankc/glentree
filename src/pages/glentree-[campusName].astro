@@ -76,8 +76,8 @@ const { data } = await getEntry('campus',campusName) as CollectionEntry<'campus'
 
 export function getStaticPaths() {
   return [
-    { params: { school: "whitefield" } },
-    { params: { school: "sarjapur" } },
+    { params: { campusName: "whitefield" } },
+    { params: { campusName: "sarjapur" } },
   ];
 }
 
