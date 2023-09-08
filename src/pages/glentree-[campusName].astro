@@ -74,6 +74,12 @@ const { campusName = '' } = Astro.params
 import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
 const { data } = await getEntry('campus',campusName) as CollectionEntry<'campus'>
 
+export function getStaticPaths() {
+  return [
+    { params: { school: "whitefield" } },
+    { params: { school: "sarjapur" } },
+  ];
+}
 
 if (!allowedCampusNames.includes(campusName)) {
   const error = await fetch(`${Astro.url}/404`)
