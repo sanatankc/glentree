@@ -7,7 +7,7 @@ import vercel from "@astrojs/vercel/serverless";
 export default defineConfig({
   site: "https://glentreeacademy.com/",
   integrations: [sitemap(), tailwind()],
-  output: "server",
+  output: "static",
   adapter: vercel(),
   server: (command) => ({ port: command === 'dev' ? 3000 : 4000, host: true })
 });
