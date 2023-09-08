@@ -43,6 +43,12 @@ import GASupdate4 from '../images/campus/gas/updates/4.jpeg'
 import GASupdate5 from '../images/campus/gas/updates/5.jpeg'
 import GASupdate6 from '../images/campus/gas/updates/6.jpeg'
 import GASupdate7 from '../images/campus/gas/updates/7.jpeg'
+import GASupdate8 from '../images/campus/gas/updates/8.jpeg'
+import GASupdate9 from '../images/campus/gas/updates/9.jpeg'
+import GASupdate10 from '../images/campus/gas/updates/10.jpeg'
+import GASupdate11 from '../images/campus/gas/updates/11.jpeg'
+import GASupdate12 from '../images/campus/gas/updates/12.jpeg'
+
 
 
 import GAWupdate1 from '../images/campus/gaw/updates/1.jpeg'
@@ -55,7 +61,13 @@ import GAWupdate12 from '../images/campus/gaw/updates/12.jpeg'
 import GAWupdate15 from '../images/campus/gaw/updates/15.jpeg'
 import GAWupdate16 from '../images/campus/gaw/updates/16.jpeg'
 import GAWupdate18 from '../images/campus/gaw/updates/18.jpeg'
+
 import { Image } from 'astro:assets';
+import GAWupdate19 from '../images/campus/gaw/updates/19.jpeg'
+import GAWupdate20 from '../images/campus/gaw/updates/20.jpeg'
+import GAWupdate21 from '../images/campus/gaw/updates/21.jpeg'
+import GAWupdate24 from '../images/campus/gaw/updates/24.jpeg'
+
 import EarthLab from '../components/campus/earthLab.astro';
 const allowedCampusNames = ['whitefield', 'sarjapur']
 const { campusName = '' } = Astro.params
@@ -118,6 +130,11 @@ const campusData = {
 }
 
 const updateImagesGAS: {title: string, image: string}[] = [
+  {title: 'Quit India Movement', image: GASupdate10},
+  {title: 'National Handloom Day', image: GASupdate9},
+  {title: 'Independence Day', image: GASupdate8},
+  {title: 'Zero Shadow Day', image: GASupdate12},
+  {title: 'Weightless Wednesday', image: GASupdate11},
   {title: 'Animal and their young ones', image: GASupdate1},
   {title: 'Field Trip', image: GASupdate2},
   {title: 'Mother\'s Day', image: GASupdate3},
@@ -125,8 +142,13 @@ const updateImagesGAS: {title: string, image: string}[] = [
   {title: 'Plantation Drive', image: GASupdate5},
   {title: 'Math Lab', image: GASupdate6},
   {title: 'Van Mohtsav Special Assembly', image: GASupdate7},
+
 ]
 const updateImagesGAW: {title: string, image: string}[] = [
+  {title: 'Taekwondo', image: GAWupdate24},
+  {title: 'Football Match', image: GAWupdate19},
+  {title: 'Independence Day', image: GAWupdate21},
+  {title: 'Football Match', image: GAWupdate20},
   {title: 'World Population Assembly', image: GAWupdate1},
   {title: 'Cubbon Park: Field Trip', image: GAWupdate2},
   {title: 'Debate and Quizzing', image: GAWupdate3},
