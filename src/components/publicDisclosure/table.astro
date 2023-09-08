@@ -1,12 +1,12 @@
 ---
 
-import marked from 'marked';
-import * as DOMPurify from 'dompurify';
+// import marked from 'marked';
+// import * as DOMPurify from 'dompurify';
 
 
 let {data} = Astro.props
 data = data.map((item) => {
-    item.disclosure = marked.parse(item.disclosure).trim()
+    // item.disclosure = marked.parse(item.disclosure).trim()
     return item
 })
 
