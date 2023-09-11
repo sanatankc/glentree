@@ -1,16 +1,15 @@
 ---
 
-// import marked from 'marked';
+import { marked } from 'marked';
 // import * as DOMPurify from 'dompurify';
 
 
 let {data} = Astro.props
 data = data.map((item) => {
-    // item.disclosure = marked.parse(item.disclosure).trim()
+    item.disclosure = marked.parse(item.disclosure).trim()
     return item
 })
 
-console.log('data....', data)
 ---
 <div class="max-w-[800px] w-[90%] bg-white border border-gray-500 rounded-lg mt-10">
     {Object.keys(data).map((key) => (
