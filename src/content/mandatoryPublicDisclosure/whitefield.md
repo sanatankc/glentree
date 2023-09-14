@@ -1,10 +1,15 @@
 ---
 disclosure:
+  - title: Gift Deed
+    disclosure: >
+      [View
+      Here](https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/giftdeed.pdf
+      "giftdeed.pdf")
   - title: Lease Deed
     disclosure: >
-      [[View
-      Here](<https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/Lease
-      Deed of SVT.pdf> "Lease Deed of SVT.pdf")]()
+      \[[View
+      Here](https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/Lease%20Deed%20of%20SVT.pdf
+      "Lease Deed of SVT.pdf")]\()
   - title: Affidavit - Non Proprietory
     disclosure: >
       [VIEW HERE](/images/gaw-affidavitNonProprietory.pdf
@@ -110,4 +115,5 @@ disclosure:
     disclosure: |
       2015
 ---
+
 
