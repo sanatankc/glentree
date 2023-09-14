@@ -1,8 +1,14 @@
 ---
 disclosure:
+  - title: Lease Deed
+    disclosure: >
+      [[View
+      Here](<https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/Lease
+      Deed of SVT.pdf> "Lease Deed of SVT.pdf")]()
   - title: Affidavit - Non Proprietory
-    disclosure: |
-      [VIEW HERE](/images/gaw-affidavitNonProprietory.pdf "gaw-affidavitNonProprietory.pdf")
+    disclosure: >
+      [VIEW HERE](/images/gaw-affidavitNonProprietory.pdf
+      "gaw-affidavitNonProprietory.pdf")
   - title: Floor Plan & School Infrastructure
     disclosure: |
       [VIEW HERE](/images/gaw-floorPlan.pdf "gaw-floorPlan.pdf")
@@ -13,8 +19,9 @@ disclosure:
     disclosure: |
       [VIEW HERE](/images/gaw-selfCertificate.pdf "gaw-selfCertificate.pdf")
   - title: Parent Teacher Association
-    disclosure: |
-      [VIEW HERE](/images/gaw-parentTeacherAssociation.pdf "gaw-parentTeacherAssociation.pdf")
+    disclosure: >
+      [VIEW HERE](/images/gaw-parentTeacherAssociation.pdf
+      "gaw-parentTeacherAssociation.pdf")
   - title: Fee Structure
     disclosure: |
       [VIEW HERE](/images/gaw-feeStructure.pdf "gaw-feeStructure.pdf")
@@ -28,17 +35,20 @@ disclosure:
     disclosure: |
       [VIEW HERE](/images/gaw-annualReport.pdf "gaw-annualReport.pdf")
   - title: Transfer Certificate Sample
-    disclosure: |
-      [VIEW HERE](/images/gaw-transferCertificate.pdf "gaw-transferCertificate.pdf")
+    disclosure: >
+      [VIEW HERE](/images/gaw-transferCertificate.pdf
+      "gaw-transferCertificate.pdf")
   - title: Classwise Strength
     disclosure: |
       [VIEW HERE](/images/gaw-classWiseStrength.pdf "gaw-classWiseStrength.pdf")
   - title: Youtube link as per SOP of Inspection
-    disclosure: |
-      [VIEW HERE](/images/gaw-youtubeLinkofInspectionSOP.pdf "gaw-youtubeLinkofInspectionSOP.pdf")
+    disclosure: >
+      [VIEW HERE](/images/gaw-youtubeLinkofInspectionSOP.pdf
+      "gaw-youtubeLinkofInspectionSOP.pdf")
   - title: Special Educator
-    disclosure: |
-      [VIEW HERE](/images/gaw-specialEducatorDoc.pdf "gaw-specialEducatorDoc.pdf")
+    disclosure: >
+      [VIEW HERE](/images/gaw-specialEducatorDoc.pdf
+      "gaw-specialEducatorDoc.pdf")
   - title: Academic Calender 2023-24
     disclosure: |
       [VIEW HERE](/images/gaw-AcademicCalendar.pdf "gaw-AcademicCalendar.pdf")
@@ -46,26 +56,32 @@ disclosure:
     disclosure: |
       [VIEW HERE](/images/gaw-landCertificate.pdf "gaw-landCertificate.pdf")
   - title: Drinking Water & Sanitary
-    disclosure: |
-      [VIEW HERE](/images/gaw-Drinking-Water-Sanitary-Whitefield.pdf "gaw-Drinking-Water-Sanitary-Whitefield.pdf")
+    disclosure: >
+      [VIEW HERE](/images/gaw-Drinking-Water-Sanitary-Whitefield.pdf
+      "gaw-Drinking-Water-Sanitary-Whitefield.pdf")
   - title: Fire Compliance Certificate
-    disclosure: |
-      [VIEW HERE](/images/gaw-Fire-Compliance-Certificate-Renewed.pdf "gaw-Fire-Compliance-Certificate-Renewed.pdf")
+    disclosure: >
+      [VIEW HERE](/images/gaw-Fire-Compliance-Certificate-Renewed.pdf
+      "gaw-Fire-Compliance-Certificate-Renewed.pdf")
   - title: CBSE Affiliation Extension
     disclosure: |
       [VIEW HERE](/images/gaw-CBSE-Affiliation.pdf "gaw-CBSE-Affiliation.pdf")
   - title: Trust Deed
-    disclosure: |
-      [VIEW HERE](/images/gaw-TrustDeed_Amendment.pdf "gaw-TrustDeed_Amendment.pdf")
+    disclosure: >
+      [VIEW HERE](/images/gaw-TrustDeed_Amendment.pdf
+      "gaw-TrustDeed_Amendment.pdf")
   - title: Recognition Certificate
-    disclosure: |
-      [VIEW HERE](/images/gaw-recognitionCertificate1.pdf "gaw-recognitionCertificate1.pdf")
+    disclosure: >
+      [VIEW HERE](/images/gaw-recognitionCertificate1.pdf
+      "gaw-recognitionCertificate1.pdf")
   - title: Appendix IX – Mandatory Public Disclosure
-    disclosure: |
-      [VIEW HERE](/images/gaw-mandatoryPublicDisclosure.pdf "gaw-mandatoryPublicDisclosure.pdf")
+    disclosure: >
+      [VIEW HERE](/images/gaw-mandatoryPublicDisclosure.pdf
+      "gaw-mandatoryPublicDisclosure.pdf")
   - title: Qualification of teachers
-    disclosure: |
-      [VIEW HERE](/images/gaw-teaching&NonTeachingStaffDetails.pdf "gaw-teaching&NonTeachingStaffDetails.pdf")
+    disclosure: >
+      [VIEW HERE](/images/gaw-teaching\&NonTeachingStaffDetails.pdf
+      "gaw-teaching\&NonTeachingStaffDetails.pdf")
   - title: Building Safety Certificate
     disclosure: |
       [VIEW HERE](/images/gaw-safetyCertificate.jpg "gaw-safetyCertificate.jpg")
@@ -94,3 +110,4 @@ disclosure:
     disclosure: |
       2015
 ---
+
