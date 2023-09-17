@@ -1,0 +1,154 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TopNavigationBar from "../components/TopNavigationBar.astro";
+import Text from "../components/system/Text.astro";
+import Table from "../components/publicDisclosure/table.astro";
+
+import safetyCertificateGAS from "../images/disclosure/gas/safetyCertificate.pdf";
+import nocCBSEGAS from "../images/disclosure/gas/noc-cbse.pdf";
+import recognitionCertificateGAS from "../images/disclosure/gas/Recognisation-from-DDPI-English.pdf";
+import mandatoryPublicDesclosureGAS from "../images/disclosure/gas/mandatoryPublicDisclosure.pdf";
+import fireSafetyGAS from "../images/disclosure/gas/fireSaftey.pdf";
+import trustDeedGAS from "../images/disclosure/gas/trustDeed.pdf";
+import cbseAffiliationGAS from "../images/disclosure/gas/cbseAffiliation.pdf";
+import DDPIGAS from "../images/disclosure/gas/DDPI.pdf";
+import waterAndSanitaryCertificateGAS from "../images/disclosure/gas/water-and-sanitary-certificateGAS.pdf";
+import staffDetailsGas from "../images/disclosure/gas/staff-details.pdf";
+import academicCalendarGas from "../images/disclosure/gas/AcademicCalendar.pdf";
+
+import annualReportGAS from "../images/disclosure/gas/annualReport.pdf";
+import schoolManagement from "../images/disclosure/gas/schoolManagement.pdf";
+import selfCertificate from "../images/disclosure/gas/selfCertificate.pdf";
+import textBookList from "../images/disclosure/gas/textBookList.pdf";
+import transferCertificateSample from "../images/disclosure/gas/transferCertificateSample.pdf";
+
+import safetyCertificateGAW from "../images/disclosure/gaw/safetyCertificate.jpg";
+import staffDetailsGAW from "../images/disclosure/gaw/teaching&NonTeachingStaffDetails.pdf";
+import nocCBSEGAW from "../images/disclosure/gaw/noc-cbse.pdf";
+import mandatoryPublicDisclosureGAW from "../images/disclosure/gaw/mandatoryPublicDisclosure.pdf";
+import primaryRecognitionCertificateGAW from "../images/disclosure/gaw/Primary-Recognition-certificate.pdf";
+import trustDeedGAW from "../images/disclosure/gaw/TrustDeed_Amendment.pdf";
+import CBSEAffiliationGAW from '../images/disclosure/gaw/CBSE-Affiliation.pdf';
+import giftDeedGAW from '../images/disclosure/gaw/giftdeed.pdf';
+import landCertificateGAW from '../images/disclosure/gaw/landCertificate.pdf'
+import fireSafetyGAW from '../images/disclosure/gaw/Fire-Compliance-Certificate-Renewed.pdf';
+import waterAndSanitaryCertificateGAW from '../images/disclosure/gaw/Drinking-Water-Sanitary-Whitefield.pdf';
+// import recognitionCertificateGAW from '../images/disclosure/gaw/recognitionCertificate.pdf';
+
+import academicCalendarGaw from "../images/disclosure/gaw/AcademicCalendar.pdf";
+
+import annualReportGAW from "../images/disclosure/gaw/annualReport.pdf";
+import bookListGAW from "../images/disclosure/gaw/booksList.pdf";
+import classWiseStrengthGAW from "../images/disclosure/gaw/classWiseStrength.pdf";
+import specialEducatorGAW from "../images/disclosure/gaw/specialEducatorDoc.pdf";
+import transferCertificateGAW from "../images/disclosure/gaw/transferCertificate.pdf";
+import youtubeLinkofInspectionSOPGAW from "../images/disclosure/gaw/youtubeLinkofInspectionSOP.pdf";
+import recognitionCertificateGAW from "../images/disclosure/gaw/recognitionCertificate1.pdf";
+import affidavitSMC from "../images/disclosure/gaw/affidavitSMC.pdf";
+import feeStructureGAW from "../images/disclosure/gaw/feeStructure.pdf";
+import affidavitNOCGAW from "../images/disclosure/gaw/affidavitNOC.pdf";
+import selfCertificateGAW from "../images/disclosure/gaw/selfCertificate.pdf";
+import last4YearsResultGAW from "../images/disclosure/gaw/last4YearsResult.pdf";
+import floorPlanGAW from "../images/disclosure/gaw/floorPlan.pdf";
+import affidavitNonProprietoryGAW from "../images/disclosure/gaw/affidavitNonProprietory.pdf";
+import parentTeacherAssociationGAW from "../images/disclosure/gaw/parentTeacherAssociation.pdf";
+
+
+import Footer from "../components/landingPage/Footer.astro";
+import "../global.css";
+import { getEntries, getCollection, type CollectionEntry } from 'astro:content';
+
+export function getStaticPaths() {
+  return [
+    { params: { school: "whitefield" } },
+    { params: { school: "sarjapur" } },
+  ];
+}
+
+const { school } = Astro.params;
+let allBlogs = await getCollection('blogs')
+
+allBlogs = allBlogs.map((blog) => {
+  return {
+    ...blog,
+    data: {
+      ...blog.data,
+      dateString: new Date(blog.data.publishedDate).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      })
+    }
+  }
+})
+
+allBlogs = [
+  ...allBlogs,
+  ...allBlogs,
+  ...allBlogs,
+  ...allBlogs,
+  ...allBlogs,
+  ...allBlogs,
+  ...allBlogs,
+  ...allBlogs,
+  ...allBlogs,
+  ...allBlogs,
+  ...allBlogs,
+  ...allBlogs,
+  ...allBlogs,
+  ...allBlogs,
+  ...allBlogs,
+  ...allBlogs,
+  ...allBlogs,
+  ...allBlogs,
+  ...allBlogs,
+  ...allBlogs,
+]
+
+
+// group blogs by 3 in each row
+const blogRow = allBlogs.reduce((acc, curr, index) => {
+  if (index % 3 === 0) {
+    acc.push([curr])
+  } else {
+    acc[acc.length - 1].push(curr)
+  }
+  return acc
+}, [])
+
+---
+
+<Layout title="Welcome to Astro.">
+  <main class="flex flex-col relative text-black items-center">
+    <TopNavigationBar />
+    <div class="h-[95.44px] w-full bg-black"></div>
+    <Text type="h2" class="mt-14">Blogs</Text>
+    {blogRow.map((blogs) => (
+      <div class="w-full mt-14 flex flex-row px-16  gap-12 flex-wrap">
+        {blogs.map(blog => (
+          <a href={"/blogs/" + blog.slug} class="flex-1 bg-yellow">
+            <div class="bg-white p-4 flex gap-2 flex-row" style={{
+              border: '1px solid rgba(0,0,0,.13)',
+            }}>
+              <div class="flex-1">
+                <Text type="xs" class="text-sm">{blog.data.dateString}</Text>
+                <Text type="h4">{blog.data.title}</Text>
+              </div>
+              <div class="flex-1 bg-slate-300 max-w-[30%]">
+                <img src={blog.data.thumbnail} class="w-full h-full object-cover object-center" />
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    ))}
+
+    <div class="text-white w-full mt-12">
+      <Footer />
+    </div>
+  </main>
+</Layout>
+
+<script define:vars={{ allBlogs }}>
+  console.log("allBlogs", allBlogs)
+</script>
