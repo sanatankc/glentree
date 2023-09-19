@@ -82,28 +82,28 @@ allBlogs = allBlogs.map((blog) => {
   }
 })
 
-allBlogs = [
-  ...allBlogs,
-  ...allBlogs,
-  ...allBlogs,
-  ...allBlogs,
-  ...allBlogs,
-  ...allBlogs,
-  ...allBlogs,
-  ...allBlogs,
-  ...allBlogs,
-  ...allBlogs,
-  ...allBlogs,
-  ...allBlogs,
-  ...allBlogs,
-  ...allBlogs,
-  ...allBlogs,
-  ...allBlogs,
-  ...allBlogs,
-  ...allBlogs,
-  ...allBlogs,
-  ...allBlogs,
-]
+// allBlogs = [
+//   ...allBlogs,
+//   ...allBlogs,
+//   ...allBlogs,
+//   ...allBlogs,
+//   ...allBlogs,
+//   ...allBlogs,
+//   ...allBlogs,
+//   ...allBlogs,
+//   ...allBlogs,
+//   ...allBlogs,
+//   ...allBlogs,
+//   ...allBlogs,
+//   ...allBlogs,
+//   ...allBlogs,
+//   ...allBlogs,
+//   ...allBlogs,
+//   ...allBlogs,
+//   ...allBlogs,
+//   ...allBlogs,
+//   ...allBlogs,
+// ]
 
 
 // group blogs by 3 in each row
@@ -124,10 +124,10 @@ const blogRow = allBlogs.reduce((acc, curr, index) => {
     <div class="h-[95.44px] w-full bg-black"></div>
     <Text type="h2" class="mt-14">Blogs</Text>
     {blogRow.map((blogs) => (
-      <div class="w-full mt-14 flex flex-row px-16  gap-12 flex-wrap">
+      <div class="w-full mt-14 flex flex-row px-16  gap-12 flex-wrap items-stretch">
         {blogs.map(blog => (
           <a href={"/blogs/" + blog.slug} class="flex-1 bg-yellow">
-            <div class="bg-white p-4 flex gap-2 flex-row" style={{
+            <div class="bg-white p-4 flex gap-2 flex-row h-full" style={{
               border: '1px solid rgba(0,0,0,.13)',
             }}>
               <div class="flex-1">

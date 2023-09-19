@@ -208,8 +208,10 @@ blog: >
   the development of sports activities. One of these is the age of the student.
   It is important for a physical educator to help students to make the right
   choice of physical activities either now or in the future.
-publishedDate: 2023-09-14T18:30:00.000Z
+publishedDate: '2023-09-14T18:30:00.000Z'
 ---
+
+
 
 
 
