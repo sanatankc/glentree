@@ -84,6 +84,8 @@ const menu: Array<Menu> = [
     ],
   },
 ];
+
+const { hideMenu = false } = Astro.props
 ---
 
 <header
@@ -92,120 +94,25 @@ const menu: Array<Menu> = [
   <a href="/" class="relative z-10 daisy daisy-fixed daisy-1">
     <Image src={logo} alt="Glentree's Logo" />
   </a>
-  <div class="flex flex-row items-center max-md:hidden">
-    {
-      menu.map((item, i) => {
-        if (item.submenu && item.submenu.length > 0) {
-          return (
-            <div
-              class={`relative menu-parent cursor-pointer daisy daisy-2 daisy-fixed`}
-            >
+  {!hideMenu && (
+    <div class="flex flex-row items-center max-md:hidden">
+      {
+        menu.map((item, i) => {
+          if (item.submenu && item.submenu.length > 0) {
+            return (
               <div
-                class:list={[
-                  "flex flex-row items-center mr-8 max-md:mr-0",
-                  i >= menu.length - 1 && "mr-0 max-md:mr-0",
-                ]}
+                class={`relative menu-parent cursor-pointer daisy daisy-2 daisy-fixed`}
               >
-                <span class="text-white font-semibold hover:underline">
-                  {item.title}
-                </span>
-                <div class="w-6 h-6 ml-1">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M5.94524 9.20954C6.16089 8.95794 6.53967 8.9288 6.79127 9.14446L12.0008 13.6098L17.2103 9.14446C17.4619 8.9288 17.8407 8.95794 18.0563 9.20954C18.272 9.46113 18.2429 9.83991 17.9913 10.0556L12.3913 14.8556C12.1666 15.0482 11.835 15.0482 11.6103 14.8556L6.01032 10.0556C5.75872 9.83991 5.72958 9.46113 5.94524 9.20954Z"
-                      fill="white"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div
-                class="absolute w-[250px] bg-[#121212] top-[40px] menu"
-                style={{
-                  boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.5)",
-                }}
-              >
-                {item.submenu.map((subitem, j) => (
-                  <div
-                    class="py-[14px] px-3"
-                    style={{
-                      borderBottom:
-                        j >= item?.submenu?.length - 1
-                          ? "none"
-                          : "1px solid rgba(255, 255, 255, 0.2)",
-                    }}
-                  >
-                    <a
-                      href={subitem.link}
-                      target={subitem.newTab ? "_blank" : "_self"}
-                      class="text-white font-semibold hover:underline"
-                    >
-                      {subitem.title}
-                    </a>
-                  </div>
-                ))}
-              </div>
-            </div>
-          );
-        } else if (item.link) {
-          return (
-            <a
-              href={item?.link}
-              class="text-white font-semibold hover:underline mr-8 max-md:mr-0 daisy daisy-fixed daisy-2"
-            >
-              {item.title}
-            </a>
-          );
-        }
-      })
-    }
-  </div>
-  <div class="flex flex-row items-center relative max-md:hidden">
-    <a
-      href="https://admissions.glentreeacademy.com"
-      target="_blank"
-      class="daisy daisy-fixed daisy-3"
-    >
-      <Button>Apply Now</Button>
-    </a>
-  </div>
-
-  <div class="max-md:block hidden">
-    <form autocomplete="off">
-      <div id="menuToggle">
-        <input type="checkbox" />
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </form>
-  </div>
-
-  <div
-    class="mobileMenu absolute top-0 left-0 w-screen h-screen bg-black flex flex-col pt-20 overflow-scroll"
-    class="max-md:visible hidden"
-  >
-    {
-      menu.map((item) => {
-        if (item.submenu && item.submenu.length > 0) {
-          return (
-            <div class="mobileMenuParent">
-              <div
-                class="relative py-[14px] px-5 mr-8 max-md:mr-0 w-full"
-                style={{
-                  borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
-                }}
-              >
-                <div class="flex flex-row w-full">
+                <div
+                  class:list={[
+                    "flex flex-row items-center mr-8 max-md:mr-0",
+                    i >= menu.length - 1 && "mr-0 max-md:mr-0",
+                  ]}
+                >
                   <span class="text-white font-semibold hover:underline">
                     {item.title}
                   </span>
-                  <div class="w-6 h-6 ml-1 -rotate-90 menu-arrow">
+                  <div class="w-6 h-6 ml-1">
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
@@ -220,48 +127,148 @@ const menu: Array<Menu> = [
                     </svg>
                   </div>
                 </div>
-              </div>
-              <div class="subMenu">
-                {item.submenu.map((subMenuItem) => (
-                  <div
-                    class="relative py-[14px] px-5 mr-8 max-md:mr-0 w-full"
-                    style={{
-                      borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
-                    }}
-                  >
-                    <a
-                      href={subMenuItem.link}
-                      class="text-white font-semibold hover:underline pl-5"
-                    >
-                      {subMenuItem.title}
-                    </a>
-                  </div>
-                ))}
-              </div>
-            </div>
-          );
-        } else {
-          return (
-            <div class="mobileMenuParent">
-              <div
-                class="relative py-[14px] px-5 mr-8 max-md:mr-0 w-full"
-                style={{
-                  borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
-                }}
-              >
-                <a
-                  href={item.link}
-                  class="text-white font-semibold hover:underline"
+                <div
+                  class="absolute w-[250px] bg-[#121212] top-[40px] menu"
+                  style={{
+                    boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.5)",
+                  }}
                 >
-                  {item.title}
-                </a>
+                  {item.submenu.map((subitem, j) => (
+                    <div
+                      class="py-[14px] px-3"
+                      style={{
+                        borderBottom:
+                          j >= item?.submenu?.length - 1
+                            ? "none"
+                            : "1px solid rgba(255, 255, 255, 0.2)",
+                      }}
+                    >
+                      <a
+                        href={subitem.link}
+                        target={subitem.newTab ? "_blank" : "_self"}
+                        class="text-white font-semibold hover:underline"
+                      >
+                        {subitem.title}
+                      </a>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          );
-        }
-      })
-    }
+            );
+          } else if (item.link) {
+            return (
+              <a
+                href={item?.link}
+                class="text-white font-semibold hover:underline mr-8 max-md:mr-0 daisy daisy-fixed daisy-2"
+              >
+                {item.title}
+              </a>
+            );
+          }
+        })
+      }
+    </div>
+  )}
+  <div class="flex flex-row items-center relative max-md:hidden">
+    <a
+      href="https://admissions.glentreeacademy.com"
+      target="_blank"
+      class="daisy daisy-fixed daisy-3"
+    >
+      <Button>Apply Now</Button>
+    </a>
   </div>
+
+  {!hideMenu && (
+    <div class="max-md:block hidden">
+      <form autocomplete="off">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </form>
+  
+    </div>
+    <div
+      class="mobileMenu absolute top-0 left-0 w-screen h-screen bg-black flex flex-col pt-20 overflow-scroll"
+      class="max-md:visible hidden"
+    >
+      {
+        menu.map((item) => {
+          if (item.submenu && item.submenu.length > 0) {
+            return (
+              <div class="mobileMenuParent">
+                <div
+                  class="relative py-[14px] px-5 mr-8 max-md:mr-0 w-full"
+                  style={{
+                    borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+                  }}
+                >
+                  <div class="flex flex-row w-full">
+                    <span class="text-white font-semibold hover:underline">
+                      {item.title}
+                    </span>
+                    <div class="w-6 h-6 ml-1 -rotate-90 menu-arrow">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M5.94524 9.20954C6.16089 8.95794 6.53967 8.9288 6.79127 9.14446L12.0008 13.6098L17.2103 9.14446C17.4619 8.9288 17.8407 8.95794 18.0563 9.20954C18.272 9.46113 18.2429 9.83991 17.9913 10.0556L12.3913 14.8556C12.1666 15.0482 11.835 15.0482 11.6103 14.8556L6.01032 10.0556C5.75872 9.83991 5.72958 9.46113 5.94524 9.20954Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div class="subMenu">
+                  {item.submenu.map((subMenuItem) => (
+                    <div
+                      class="relative py-[14px] px-5 mr-8 max-md:mr-0 w-full"
+                      style={{
+                        borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+                      }}
+                    >
+                      <a
+                        href={subMenuItem.link}
+                        class="text-white font-semibold hover:underline pl-5"
+                      >
+                        {subMenuItem.title}
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          } else {
+            return (
+              <div class="mobileMenuParent">
+                <div
+                  class="relative py-[14px] px-5 mr-8 max-md:mr-0 w-full"
+                  style={{
+                    borderBottom: "1px solid rgba(255, 255, 255, 0.2)",
+                  }}
+                >
+                  <a
+                    href={item.link}
+                    class="text-white font-semibold hover:underline"
+                  >
+                    {item.title}
+                  </a>
+                </div>
+              </div>
+            );
+          }
+        })
+      }
+    </div>
+  )}
+
 
   <div class="hidden">
     <div
