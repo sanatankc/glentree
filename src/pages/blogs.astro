@@ -2,6 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 import TopNavigationBar from "../components/TopNavigationBar.astro";
 import Text from "../components/system/Text.astro";
+import { Image } from 'astro:assets';
+import bgWhiteContourPattern from '../images/bgWhiteContourPattern.png'
+import bigCTASplashVectorBG from '../images/bigCTASplashVectorBG.svg'
+
+
 import Table from "../components/publicDisclosure/table.astro";
 
 import safetyCertificateGAS from "../images/disclosure/gas/safetyCertificate.pdf";
@@ -82,32 +87,8 @@ allBlogs = allBlogs.map((blog) => {
   }
 })
 
-// allBlogs = [
-//   ...allBlogs,
-//   ...allBlogs,
-//   ...allBlogs,
-//   ...allBlogs,
-//   ...allBlogs,
-//   ...allBlogs,
-//   ...allBlogs,
-//   ...allBlogs,
-//   ...allBlogs,
-//   ...allBlogs,
-//   ...allBlogs,
-//   ...allBlogs,
-//   ...allBlogs,
-//   ...allBlogs,
-//   ...allBlogs,
-//   ...allBlogs,
-//   ...allBlogs,
-//   ...allBlogs,
-//   ...allBlogs,
-//   ...allBlogs,
-// ]
-
-
 // group blogs by 3 in each row
-const blogRow = allBlogs.reduce((acc, curr, index) => {
+let blogRow = allBlogs.reduce((acc, curr, index) => {
   if (index % 3 === 0) {
     acc.push([curr])
   } else {
@@ -118,35 +99,41 @@ const blogRow = allBlogs.reduce((acc, curr, index) => {
 
 ---
 
+<!-- grid gap-4 grid-cols-3 -->
+
 <Layout title="Welcome to Astro.">
   <main class="flex flex-col relative text-black items-center">
     <TopNavigationBar />
     <div class="h-[95.44px] w-full bg-black"></div>
-    <Text type="h2" class="mt-14">Blogs</Text>
-    {blogRow.map((blogs) => (
-      <div class="w-full mt-14 flex flex-row px-16  gap-12 flex-wrap items-stretch">
-        {blogs.map(blog => (
-          <a href={"/blogs/" + blog.slug} class="flex-1 bg-yellow">
-            <div class="bg-white p-4 flex gap-2 flex-row h-full" style={{
-              border: '1px solid rgba(0,0,0,.13)',
-            }}>
-              <div class="flex-1">
-                <Text type="xs" class="text-sm">{blog.data.dateString}</Text>
-                <Text type="h4">{blog.data.title}</Text>
+    <div class="w-full relative">
+      <Image src={bgWhiteContourPattern} alt="background pattern" class="w-full absolute z-0 opacity-40" />
+      <!-- <Image src={bigCTASplashVectorBG} alt="background pattern" class="absolute z-0 opacity-40 top-0 right-0 -scale-x-100" /> -->
+      <div class="w-full z-10 relative flex flex-col items-center">
+        <Text type="h3" class="mt-14 text-black max-md:mt-8 max-md:text-3xl">Blog <span class='bg-accent2 text-white px-3 py-1 rounded-md'>Corner</span></Text>
+        <Text type="base" class="mt-5 max-w-[700px] text-center max-md:p-4 max-md:text-sm max-md:mt-2">Explore insightful articles and updates showcasing educational knowledge, student development, and engaging content on holistic learning.</Text>
+        
+        <div class="w-full mt-12 max-md:mt-4 flex-row px-16 flex-wrap items-stretch grid gap-4 grid-cols-3 max-md:grid-cols-1 max-md:px-4">
+          {allBlogs.map((blog => (
+            <a href={"/blogs/" + blog.slug} class="flex-1 border border-transparent">
+              <div class="bg-white p-4 flex gap-2 flex-row rounded-xl transition-all h-full border border-black/10 hover:border-black/30 hover:shadow-md hover:shadow-black/10 hover:border-b-accent2 hover:border-b-2">
+                <div class="flex-1">
+                  <Text type="xs" class="text-sm max-md:text-xs uppercase tracking-widest text-slate-500">{blog.data.dateString}</Text>
+                  <div class="p-[6px] max-md:p-1"></div>
+                  <Text type="h4" class=" text-[#222] text-xl font-bold font-sans max-md:text-base  max-md:!leading-tight">{blog.data.title}</Text>
+                </div>
+                <div class="flex-1 max-w-[30%] max-md:max-w-[40%] h-[130px] max-md:h-[90px]">
+                  <img src={blog.data.thumbnail} class="w-full h-full object-cover object-center rounded-md" />
+                </div>
               </div>
-              <div class="flex-1 bg-slate-300 max-w-[30%]">
-                <img src={blog.data.thumbnail} class="w-full h-full object-cover object-center" />
-              </div>
-            </div>
-          </a>
-        ))}
+            </a>
+          )))}
+        </div>
       </div>
-    ))}
-
-    <div class="text-white w-full mt-12">
-      <Footer />
     </div>
   </main>
+  <div class="text-white w-full mt-12">
+    <Footer />
+  </div>
 </Layout>
 
 <script define:vars={{ allBlogs }}>
