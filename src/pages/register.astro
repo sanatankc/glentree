@@ -6,7 +6,7 @@ import TopNavigationBar from '../components/TopNavigationBar.astro';
 
 import Updates from '../components/landingPage/Updates/index.astro'
 import LFL from '../components/landingPage/LFL.astro'
-import WhyGlentree from '../components/landingPage/whyGlentree.astro';
+import WhyGlentree from '../components/register/whyGlentree.astro';
 import Campus from '../components/landingPage/campus.astro';
 
 import Testimonial from '../components/landingPage/Testimonial.astro';
@@ -23,7 +23,85 @@ import psjaAward from '../images/psjaAward.png'
 import meritAwards from '../images/meritAwards.png'
 import VittalFounderDesk from '../components/vittalFounderDesk.astro';
 import { Image } from 'astro:assets';
+import AdmissionMarquee from '../components/campus/admissionMarquee.astro'
 
+import PrePrimaryBG from '../images/curriculum/prePrimary.png';
+import PrimaryBG from '../images/curriculum/primary.png';
+import MiddleAndHighBG from '../images/curriculum/middle&High.png';
+import Constrain from '../components/system/Constrain.astro';
+import overviewRegisterPageBG from '../images/overviewRegisterPageBG.png'
+
+
+const academics = [
+  {
+    title: 'Pre-Primary',
+    grade: 'NUR - UKG',
+    points: [
+      [
+        'Montessori and Waldorf methodologies',
+        'Activity based learning',
+        'Language, Numeracy, and Theme',
+      ],
+      [
+        'Value Education',
+        'Reading Program',
+        'Montessori Lab'
+      ]
+    ],
+    image: PrePrimaryBG,
+    background: '#0E6526',
+    backgroundContent: '#0A5E2F',
+    opacity: 1,
+    link: 'https://glentreeacademy.com/curriculum/pre-primary'
+  },
+  {
+    title: 'Primary',
+    image: PrimaryBG,
+    link: 'https://glentreeacademy.com/curriculum/primary',
+    background: '#C07C47',
+    grade: 'Grade I-IV',
+    points: [                
+      [
+        "Exploring Through Discovery",
+        "Multi-sensory Activities",
+        "Experiential Learning",
+        "Inter Disciplinary Approach",
+        "Language Arts (English, Hindi, Kannada",
+        "Math, Science and ICT"
+      ],  
+      [
+        "STEM Lab",
+        "R.E.A.D Program",
+        "“Connecting the Dots” Program",
+        "Regular Assessments",
+        "Bi-annual Exams"
+      ],
+    ] 
+  },
+  {
+    title: 'Middle & High School',
+    image: MiddleAndHighBG,
+    link: 'https://glentreeacademy.com/curriculum/middle-and-high',
+    background: '#6F322E',
+    grade: 'Grade V-X',
+    points: [
+      [               
+        "Creative thinking & Research",
+        "Community Learning",
+        "Language Arts (English, Hindi, Kannada)",
+        "Math, Science and ICT",
+      ],
+      [
+        "Social Studies",
+        "STEM Lab",
+        "“Connecting the Dots” Program",
+        "Regular Assessments",
+        "Bi-annual Exams",
+      ]
+    ]
+
+  },
+]
 
 ---
 
@@ -38,59 +116,81 @@ import { Image } from 'astro:assets';
       }}
     >
     
-    <div class='flex flex-col max-md:h-[100svh] h-[100vh]'>
-      <TopNavigationBar />
-      <Hero />
-    </div>
-
-    <div class="flex flex-row h-36 w-full mt-auto max-md:py-8 max-md:px-6 max-md:pb-1 items-center justify-around flex-wrap max-md:flex-col max-md:h-auto max-md:items-start relative z-20" style={{ background: '#030303' }}>
-      <div class="flex flex-row max-md:mb-5 daisy daisy-y-1 daisy-4">
-        <Image src={psjaAward} alt="PSJA Award" class="h-12 w-auto" />
-        <div class="ml-4">
-          <Text type='sm'>
-            Rank 1 in <span class="text-[#56cf8a] font-extrabold">Holistic Education</span>
-          </Text>
-          
-          <Text type='sm' class='text-gray-600 max-md:text-sm'>
-            India’s TOP PSJA 2022
-          </Text>
-        </div>
+      <div class='flex flex-col max-md:h-auto h-screen'>
+        <TopNavigationBar />
+        <div class="w-full flex-1 bg-red-300"></div>
+        <AdmissionMarquee />
       </div>
 
-      <div class="flex flex-row max-md:mb-5 daisy daisy-y-1 daisy-5">
-        <Image src={meritAwards} alt="PSJA Award" class="h-12 mr-[8px] w-auto" />
-        <div class="ml-4">
-          <Text type='sm'>
-            Best <span class="text-[#56cf8a] font-extrabold">Emerging</span> School
-          </Text>
-          
-          <Text type='sm' class='text-gray-600 max-md:text-sm'>
-            India’s School Merit Award
-          </Text>
-        </div>
-      </div>
 
-      <div class="flex flex-row max-md:mb-5 daisy daisy-y-1 daisy-6">
-        <Image src={psjaAward} alt="PSJA Award" class="h-12 w-auto" />
-        <div class="ml-4">
-          <Text type='sm'>
-            Rank 1 in <span class="text-[#56cf8a] font-extrabold">Integrated Learning</span>
-          </Text>
-          
-          <Text type='sm' class='text-gray-600 max-md:text-sm'>
-            India’s TOP PSJA 2022
-          </Text>
-        </div>
+
+    <div class='bg-white relative p-20 max-md:p-5 text-black'>
+      <Image src={overviewRegisterPageBG} class='w-screen absolute top-0 left-0 -z-1' role="presentation" alt="decoration" />
+      <Constrain>
+        <div class='relative z-10 flex flex-col items-center'>
+            <!-- <Text type='subtitle' style={{ letterSpacing: '0.1em', opacity: 0.8 }}>Locate Us</Text> -->
+            <Text type='h2' class='mt-3'>Glentree{' '}<span class='text-accent2'>Overview</span></Text>
+            <Text type='base' class='mt-3 max-w-[680px] max-md:w-full text-center'>
+              At Glentree Academy, each experience becomes a lesson, and every challenge transforms into an opportunity in a student's journey.
+            </Text>
+            <div class='grid grid-cols-2 gap-8 max-md:grid-rows-2 max-md:grid-cols-1 justify-between mt-8'>
+              
+            </div>
+          </div>
+      </Constrain>
       </div>
-    </div>
       
-      <!-- Carousell/Updatexss -->      
-      <!-- Our MOttto -->
-      <!-- <Updates /> -->
-      
+      <div class='w-full p-14 text-black bg-white flex flex-col items-center max-md:p-6'>
+        <Text type={'subtitle'} class='text-black/80'>ENRICHING CURRICULUM</Text>
+        <Text type={'h2'} class='mt-2'>Academic{' '}<span class='text-accent2'>Landscape</span></Text>
+        <div class='w-full flex-col flex items-center rounded-2xl max-md:rounded-2xl overflow-hidden mt-4 max-w-[1196px]'>
+          {academics.map((academic) => (
+             <div class='flex flex-row w-full mb-[2px] max-md:flex-col max-md:rounded-xl overflow-hidden max-md:mb-4'>
+              <div
+                class='w-full flex-1 max-w-[350px] max-md:max-w-[1000px] min-h-[200px] mr-[1px] flex flex-col text-white items-center justify-center relative bg-cover no-repeat'
+                style={{
+                  backgroundImage: `url(${academic.image})`
+              }}>
+                <div class='w-full h-full mix-blend-multiply absolute z-0' style={{
+                  background: academic.background,
+                  opacity: academic.opacity ? academic.opacity : 1
+                }}>
+                </div>
+                <div class='relative z-10 text-center'>
+
+                  <Text type={'h4'}>{academic.title}</Text>
+                  <Text type={'h4'}>{academic.grade}</Text>
+                </div>
+              </div>
+              <div
+                style={{
+                  background: academic.backgroundContent ? academic.backgroundContent : academic.background,
+                  opacity: academic.opacity ? academic.opacity : 1
+                }}
+                class='w-full flex-1 max-w-[845px] max-md:max-w-[1000px] min-h-[200px] mr-[1px] flex flex-row max-md:flex-col max-md:items-start max-md:p-8 max-md:pt-4 items-center justify-center p-12 py-4'>
+                <Text type={'regular'} class='mt-3 font-[500] flex-1'>
+                  <ul class="list-disc text-white">
+                    {academic.points[0].map((point) => (
+                      <li>{point}</li>
+                    ))}
+                  </ul>
+                </Text>
+                <Text type={'regular'} class='mt-3 font-[500] flex-1 max-md:mt-0'>
+                  <ul class="list-disc text-white">
+                    {academic.points[1].map((point) => (
+                      <li>{point}</li>
+                    ))}
+                  </ul>
+                </Text>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <LFL />
       <!-- Why Glentreee -->
-      <WhyGlentree />
+      <!-- <WhyGlentree /> -->
 
 
       <!-- Our Campauses -->
