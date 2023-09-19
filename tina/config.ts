@@ -150,7 +150,20 @@ export default defineConfig({
             ]
           }
         ]
-      }
+      },
+      {
+        name: "blogs",
+        label: "Blogs",
+        path: "src/content/blogs",
+        fields: [
+          { type: "string", name: "category", label: "Category" },
+          { type: "datetime", name: "publishedDate", label: "Published Date" },
+          { type: "string", name: "title", label: "Title" },
+          { type: 'image', name: 'thumbnail', label: 'Thumbnail' },
+          { type: "rich-text", name: "caption", label: "Caption" },
+          { type: "rich-text", name: "blog", label: "Blog" },
+        ]
+      },
     ],
   },
 });
