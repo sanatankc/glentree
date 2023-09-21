@@ -1,0 +1,148 @@
+---
+import Modal from "./system/Modal.astro";
+import Text from "./system/Text.astro";
+import arrow from '../icons/arrow.svg';
+
+const { id, gallery } = Astro.props
+const slideId = 'slide' + id
+---
+
+<Modal id={id} class="h-screen backdrop-blur-sm p-9 max-md:p-0" containerClass="max-md:flex max-md:items-center">
+  <div class="bg-white rounded-md w-full h-full max-md:h-auto p-3 max-md:p-0">
+    <div class="w-full h-full relative overflow-hidden rounded-md">
+      {gallery.map((slide: {
+        src: string,
+        caption: string
+      }, index: Number) => (
+        <img
+          src={slide?.src?.src}
+          alt={slide.caption}
+          class="w-full h-full max-md:h-auto object-cover rounded-md hidden data-[is-active=true]:block"
+          data-target-slide={slideId}
+          data-target-slide-i={index}
+          data-is-active={index === 0 ? "true" : "false"}
+        />
+      ))}
+      <div class="absolute w-full pt-[52px] pb-[33px] max-md:pb-[20px] bottom-0 left-0 flex justify-center items-center" style={{
+        background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%)'
+      }}>
+        <div class="flex flex-row min-w-[460px] max-md:min-w-[90%] justify-between items-center">
+          <div 
+            data-slide-pb 
+            data-target-slideId={slideId}
+            class="w-10 h-10 max-md:w-10 max-md:h-10 cursor-pointer" 
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24C44 35.0457 35.0457 44 24 44ZM28.0607 16.9393C27.4749 16.3536 26.5251 16.3536 25.9393 16.9393L19.9393 22.9393C19.3536 23.5251 19.3536 24.4749 19.9393 25.0607L25.9393 31.0607C26.5251 31.6464 27.4749 31.6464 28.0607 31.0607C28.6464 30.4749 28.6464 29.5251 28.0607 28.9393L23.1213 24L28.0607 19.0607C28.6464 18.4749 28.6464 17.5251 28.0607 16.9393Z" fill="white"/>
+            </svg>
+          </div>
+            <Text type="subtitle" class="text-white" data-caption-id={slideId} data-slides-captions={[gallery.map(slide => slide.caption)]}>{gallery[0].caption}</Text>
+          <div
+            data-slide-nb
+          data-target-slideId={slideId}
+            class="-scale-100 w-10 h-10 max-md:w-10 max-md:h-10 cursor-pointer"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24C44 35.0457 35.0457 44 24 44ZM28.0607 16.9393C27.4749 16.3536 26.5251 16.3536 25.9393 16.9393L19.9393 22.9393C19.3536 23.5251 19.3536 24.4749 19.9393 25.0607L25.9393 31.0607C26.5251 31.6464 27.4749 31.6464 28.0607 31.0607C28.6464 30.4749 28.6464 29.5251 28.0607 28.9393L23.1213 24L28.0607 19.0607C28.6464 18.4749 28.6464 17.5251 28.0607 16.9393Z" fill="white"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-12 h-12 absolute top-4 right-3 cursor-pointer bg-accent2/50 rounded-[50%] p-0" data-modal-close={id}>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="100%" height="100%" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M44 24C44 35.0457 35.0457 44 24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24ZM17.9393 17.9393C18.525 17.3535 19.4748 17.3535 20.0606 17.9393L23.9999 21.8787L27.9393 17.9393C28.525 17.3536 29.4748 17.3536 30.0606 17.9393C30.6464 18.5251 30.6464 19.4749 30.0606 20.0607L26.1213 24L30.0605 27.9393C30.6463 28.525 30.6463 29.4748 30.0605 30.0606C29.4747 30.6464 28.525 30.6464 27.9392 30.0606L23.9999 26.1213L20.0606 30.0606C19.4748 30.6464 18.5251 30.6464 17.9393 30.0606C17.3535 29.4748 17.3535 28.5251 17.9393 27.9393L21.8786 24L17.9393 20.0606C17.3535 19.4748 17.3535 18.5251 17.9393 17.9393Z" fill="white"/>
+        </svg>
+      </div>
+    </div>
+  </div> 
+</Modal>
+
+<style>
+  .gallery-hidden {
+    /* transform: translateY(100vh); */
+    opacity: 0;
+    pointer-events: none;
+  }
+</style>
+
+
+<script>
+
+  const prevButtonsSlides = document.querySelectorAll<HTMLElement>('[data-slide-pb]')
+  const nextButtonsSlides = document.querySelectorAll<HTMLElement>('[data-slide-nb]')
+
+
+  const goToPrevSlide = slideId => {
+    const captionText = document.querySelector<HTMLElement>(`[data-caption-id="${slideId}"][data-slides-captions]`)
+  
+    const allCaptions = captionText.dataset.slidesCaptions.split(',')
+    console.log(captionText, allCaptions)
+
+    const allSlides = document.querySelectorAll<HTMLElement>(`[data-target-slide="${slideId}"]`)
+    const allSlidesLength = allSlides.length
+    const activeSlide = [...allSlides].find(slide => slide.dataset.isActive === 'true')
+
+    const activeSlideIndex = parseInt(activeSlide.dataset.targetSlideI)
+    const prevSlideIndex = activeSlideIndex === 0 ? allSlidesLength - 1 : activeSlideIndex - 1
+    const prevSlide = document.querySelector<HTMLElement>(`[data-target-slide="${slideId}"][data-target-slide-i="${prevSlideIndex}"]`)
+    
+    const newCaption = allCaptions[prevSlideIndex]
+    captionText.innerText = newCaption
+
+    activeSlide.dataset.isActive = 'false'
+    prevSlide.dataset.isActive = 'true'
+  }
+
+  const goToNextSlide = slideId => {
+
+    const captionText = document.querySelector<HTMLElement>(`[data-caption-id="${slideId}"][data-slides-captions]`)
+  
+    const allCaptions = captionText.dataset.slidesCaptions.split(',')
+    console.log(captionText, allCaptions)
+
+    const allSlides = document.querySelectorAll<HTMLElement>(`[data-target-slide="${slideId}"]`)
+    const allSlidesLength = allSlides.length
+    const activeSlide = [...allSlides].find(slide => slide.dataset.isActive === 'true')
+    const activeSlideIndex = parseInt(activeSlide.dataset.targetSlideI)
+
+    const nextSlideIndex = activeSlideIndex === allSlidesLength - 1 ? 0 : activeSlideIndex + 1
+    const nextSlide = document.querySelector<HTMLElement>(`[data-target-slide="${slideId}"][data-target-slide-i="${nextSlideIndex}"]`)
+      
+    const newCaption = allCaptions[nextSlideIndex]
+    console.log('activeSlideIndex --> ', activeSlideIndex)
+    captionText.innerText = newCaption
+
+    activeSlide.dataset.isActive = 'false'
+    nextSlide.dataset.isActive = 'true'
+  }
+
+  prevButtonsSlides.forEach(prevButton => {
+    prevButton.addEventListener('click', () => {
+      goToPrevSlide(prevButton.dataset.targetSlideid)
+    })
+  })
+
+  nextButtonsSlides.forEach(nextButton => {
+    nextButton.addEventListener('click', () => {
+      console.log('nextButton.dataset.targetSlideid', nextButton.dataset.targetSlideid)
+      goToNextSlide(nextButton.dataset.targetSlideid)
+    })
+  })
+
+  document.addEventListener('keydown', e => {
+    const allModals = document.querySelectorAll<HTMLElement>('[data-modal-id]')
+    const modal = [...allModals].find(modal => !modal.classList.contains('modal-hidden'))
+    if (modal) {
+      const slideId = 'slide' + modal.dataset.modalId
+      console.log('slideId --> ', modal, slideId)
+      if (e.key === 'ArrowLeft') {
+        goToPrevSlide(slideId)
+      }
+      if (e.key === 'ArrowRight') {
+        goToNextSlide(slideId)
+      }
+    }
+  })
+
+</script>

@@ -1,0 +1,72 @@
+---
+const { id, class: className='', containerClass } = Astro.props
+---
+
+<div 
+  class:list={[
+    "w-screen h-screen fixed z-[999] bg-black/80 top-0 left-0 overscroll-y-contain transition-all duration-300 modal-hidden",
+    className
+  ]}
+  data-modal-id={id}
+  data-modal-visible={false}
+>
+  <div class="w-screen h-screen absolute top-0 left-0 backdrop-click" data-modal-close-id={id}>
+
+  </div>
+  <div class:list={[
+    "h-full",
+    containerClass
+  ]}>
+    <slot />
+  </div>
+</div>
+
+<style>
+  .modal-hidden {
+    /* transform: translateY(100vh); */
+    opacity: 0;
+    pointer-events: none;
+  }
+  .modal-hidden .backdrop-click {
+    pointer-events: none;
+  }
+</style>
+
+<script>
+  const body = document.querySelector('body')
+  const targets = document.querySelectorAll('[data-modal-target]')
+  const targetClose = document.querySelectorAll('[data-modal-close]')
+
+  targets.forEach(target => {
+    target.addEventListener('click', () => {
+      const modal = document.querySelector(`[data-modal-id="${target.dataset.modalTarget}"]`)
+      console.log('hello... modal', modal)
+      modal?.classList.remove('modal-hidden')
+      modal.dataset.modalVisible = true
+      // body.classList.add('overflow-hidden')
+    })
+  })
+
+  targetClose.forEach(target => {
+    target.addEventListener('click', () => {
+      const modal = document.querySelector(`[data-modal-id="${target.dataset.modalClose}"]`)
+      modal?.classList.add('modal-hidden')
+      modal.dataset.modalVisible = false
+    })
+  })
+
+  document.querySelectorAll('.backdrop-click')
+    .forEach((el) => {
+      el.addEventListener('click', () => {
+        const modal = document.querySelector(`[data-modal-id="${el.dataset.modalCloseId}"]`)
+        modal?.classList.add('modal-hidden')
+        modal.dataset.modalVisible = false
+      })
+    })
+
+  // document.querySelectorAll('.modal-content')
+  //   .forEach((el) => el.addEventListener('click', (e) => {
+  //     e.stopPropagation()
+  //     e.preventDefault()
+  //   } ))
+</script>

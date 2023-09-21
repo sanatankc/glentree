@@ -7,20 +7,21 @@ const {
 ---
 
 <div class="relative">
-  <input
-    placeholder={placeholder}
-    type={type}
-    name={name}
-    style={{
-      boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.05)'
-    }}
-    class="
-      w-full border border-[#C6C6C6] rounded-md box-border text-black focus:ring-2 active:ring-2
-      py-3 pl-4 text-[14px]
-      relative
-      pr-[42px]
-    "
-  />
+  <div class="w-full" style={{
+    boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.05)'
+  }}>
+    <input
+      placeholder={placeholder}
+      type={type}
+      name={name}
+      class="
+        w-full border border-[#C6C6C6] rounded-md box-border text-black focus:ring-2 active:ring-2
+        py-3 pl-4 text-[14px]
+        relative
+        pr-[42px]
+      "
+    />
+  </div>
   
   <div
     class="h-full w-[42px] right-0 top-0 absolute flex justify-center items-center"

@@ -2,6 +2,9 @@
 import Text from '../system/Text.astro'
 import Button from '../system/Button.astro'
 import InputIcon from '../system/InputIcon.astro';
+import Select from '../system/Select.astro'
+import SelectPill from '../system/SelectPill.astro'
+
 
 if (Astro.request.method === "POST") {
   try {
@@ -20,39 +23,41 @@ if (Astro.request.method === "POST") {
 }
 ---
 
-<div class="p-[22px] px-[32px] bg-white border border-accent2 text-black rounded-xl items-center w-full max-w-[534px]">
-  <Text type="h3" class='text-[32px] text-center'>Register Now for <span class="text-accent2">AY 2024-25</span></Text>
+<div class="p-[22px] px-[32px] max-md:px-[18px] bg-white border border-accent2 text-black rounded-xl items-center w-full max-w-[534px] relative z-20">
+  <Text type="h3" class='text-[32px] text-center'>Register Now for <span class="text-green-600">AY 2024-25</span></Text>
   <Text type="sm" class="text-black/70 text-center font-semibold">Fill the form below and we’ll get in touch shortly!</Text>
   <form class="flex-col flex gap-[23px] mt-8"  method="POST">
-    <div class="flex flex-row gap-5"> 
-      <input
-        placeholder="Student Name"
-        type="text"
-        name="studentName"
-        style={{
-          boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.05)'
-        }}
-        class="
-          w-full border border-[#C6C6C6] rounded-md box-border text-black focus:ring-2 active:ring-2
-          py-3 pl-4 text-[14px]
-          relative
-          pr-[42px]
-        "
-      />
-      <input
-        placeholder="Parent Name"
-        type="text"
-        name="parentName"
-        style={{
-          boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.05)'
-        }}
-        class="
-          w-full border border-[#C6C6C6] rounded-md box-border text-black focus:ring-2 active:ring-2
-          py-3 pl-4 text-[14px]
-          relative
-          pr-[42px]
-        "
-      />
+    <div class="flex flex-row gap-5 max-md:flex-col"> 
+      <div class="w-full" style={{
+        boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.05)'
+      }}>
+        <input
+          placeholder="Student Name"
+          type="text"
+          name="studentName"
+          class="
+            w-full border border-[#C6C6C6] rounded-md box-border text-black focus:ring-2 active:ring-2
+            py-3 pl-4 text-[14px]
+            relative
+            pr-[42px]
+          "
+        />
+      </div>
+      <div class="w-full" style={{
+        boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.05)'
+      }}>
+        <input
+          placeholder="Parent Name"
+          type="text"
+          name="parentName"
+          class="
+            w-full border border-[#C6C6C6] rounded-md box-border text-black focus:ring-2 active:ring-2
+            py-3 pl-4 text-[14px]
+            relative
+            pr-[42px]
+          "
+        />
+      </div>
     </div>
     <InputIcon placeholder="Phone Number" type="tel" name="phone">
       <svg slot="icon" xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
@@ -69,6 +74,56 @@ if (Astro.request.method === "POST") {
         <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6792 8.61981C10.8892 8.39085 11.245 8.37547 11.4739 8.58544L16.8177 13.4862C17.0467 13.6962 17.062 14.052 16.8521 14.281C16.6421 14.5099 16.2863 14.5253 16.0573 14.3153L10.7136 9.41456C10.4846 9.20459 10.4692 8.84876 10.6792 8.61981Z" fill="#6C727F"/>
       </svg>
     </InputIcon>
+    <SelectPill
+      placeholder="Select Grade"
+      id="selectGrade"
+      options={[
+        "Nursery",
+        "LKG",
+        "UKG",
+        "Grade 1",
+        "Grade 2",
+        "Grade 3",
+        "Grade 4",
+        "Grade 5",
+        "Grade 6",
+        "Grade 7",
+        "Grade 8",
+        "Grade 9",
+        "Grade 10",
+      ]}
+      name="grade"
+    />
+    <Select
+      placeholder="Choose Branch"
+      id="selectBranch"
+      options={[
+        "Whitefield",
+        "Sarjapur",
+        "Bannerghatta",
+      ]}
+      name="campus"
+    />
+   
+    <Select
+      placeholder="Select Admission Year"
+      id="selectAdmissionYear"
+      options={[
+        "2023-24",
+        "2024-25"
+      ]}
+      name="grade"
+    />
+
+    <div class="flex flex-row">
+      <input type="checkbox" class="accent-accent2 cursor-pointer" name="whatsappConsent" id="whatsappConsent" />
+      <div class="px-1" />
+      <Text type="xs" class="text-sm cursor-pointer">
+        <label for="whatsappConsent" class="cursor-pointer">
+          Whatsapp consent thingy.....
+        </label>
+      </Text>
+    </div>
     <Button type='submit' class='mt-4 w-full [&>button]:w-full [&>button]:justify-center'>Register Now</Button>
   </form>
 </div>

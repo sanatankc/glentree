@@ -169,7 +169,7 @@ const { hideMenu = false } = Astro.props
       }
     </div>
   )}
-  <div class="flex flex-row items-center relative max-md:hidden">
+  <div class:list={["flex flex-row items-center relative max-md:hidden", hideMenu && 'max-md:!flex']}>
     <a
       href="https://admissions.glentreeacademy.com"
       target="_blank"

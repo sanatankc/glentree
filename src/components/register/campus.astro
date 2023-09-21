@@ -1,0 +1,26 @@
+---
+import Text from '../system/Text.astro'
+import campusSectionPatternBG from '../../images/campusSectionPatternBG.png'
+import sarjapurCampus from '../../images/sarjapurCampus.jpeg'
+import whitefieldCampus from '../../images/whitefieldCampus.jpeg'
+import CampusCard from './campusCard.astro';
+import Constrain from '../system/Constrain.astro';
+import { Image } from 'astro:assets';
+---
+<div class='bg-white relative p-20 max-md:p-5'>
+  <!-- <Image src={campusSectionPatternBG} class='w-screen absolute top-0 left-0 -z-1' role="presentation" alt="decoration" /> -->
+  <Constrain>
+    <div class='relative z-10'>
+      <Text type='subtitle' class='text-center text-black/60' style={{ letterSpacing: '0.1em' }}>THREE CAMPUSES, ONE VISION</Text>
+      <Text type='h2' class='text-center text-black mt-3'>Our <span class="text-accent2">Branches</span></Text>
+      <div class='grid grid-cols-3 gap-8 max-md:grid-rows-2 max-md:grid-cols-1 justify-between mt-8'>
+        <!-- <a href='https://glentreeacademy.com/glentree-whitefield/'> -->
+          <CampusCard link='/glentree-whitefield/' image={whitefieldCampus} class='text-white text-left border-[2px] border-[#D1E0D3]' name='Whitefield' desc="Centrally located in the IT corridor of Bangalore." />
+        <!-- </a> -->
+        <!-- <a href='/glentree-sarajapura/'> -->
+          <CampusCard  link="/glentree-sarjapur/" image={sarjapurCampus} name='Sarjapur' class="text-white text-left border-[2px] border-[#D1E0D3]" desc="A sprawling green campus located within the heart of the city." />
+          <CampusCard  link="/glentree-bannerghetta/" image={sarjapurCampus} name='Bannerghetta' class="text-white text-left border-[2px] border-[#D1E0D3]" desc="Opening Soon to Expand Learning Horizons" />
+        <!-- </a> -->
+      </div>
+    </Constrain>
+</div>

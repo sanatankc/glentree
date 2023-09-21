@@ -1,0 +1,31 @@
+---
+import Text from "../system/Text.astro";
+const { image, class: className, name, desc, link } = Astro.props
+---
+
+<div data-link={link} class:list={[
+  'max-md:w-full h-[432px] cursor-pointer max-md:h-[300px] rounded-2xl max-md:mb-8 flex flex-col justify-end max-md:p-0 bg-cover bg-center overflow-hidden',
+  className
+]}
+  style={{
+    backgroundImage: `url(${image.src})`
+  }}
+>
+  <div class='flex flex-row justify-between items-center bg-gradient-to-b p-8 px-2 from-black/0 to-black max-md:p-4 w-full'>
+    <div class="flex flex-row items-center">
+      <div class='ml-6 mr-6 max-md:ml-2'>
+        <Text type={'h4'} class=''>{name}</Text>
+        <Text type={'sm'} class=''>{desc}</Text>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('[data-link]').forEach(el => {
+    el.addEventListener('click', () => {
+      window.open(el.dataset.link, "_self"); 
+    })
+  })
+</script>

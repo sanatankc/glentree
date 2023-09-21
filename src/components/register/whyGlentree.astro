@@ -5,73 +5,121 @@ import FilledArrowCircle from '../icons/FilledArrowCircle.astro';
 import Constrain from '../system/Constrain.astro';
 import Text from '../system/Text.astro';
 import { Image } from 'astro:assets';
+import blobBG from '../../images/blobBG.svg'
+import DeckCard from '../DeckCard.astro';
+import earthLab from '../../images/earthLab.png'
+import taekwondo from '../../images/coscholastics/Taekwondo.jpg'
+import bulletStar from '../../images/bulletStar.svg'
+import bulletStarGreen from '../../images/bulletStarGreen.svg'
+import Gallery from '../Gallery.astro';
 
 ---
-<div class="py-14 max-md:py-8 text-center flex flex-col items-center" style={{ background: 'linear-gradient(249.28deg, #FBFFF7 0%, #F6FFED 0%, #FFFAF7 100%)' }} >
+<div class="py-14 max-md:py-8 relative text-center flex flex-col items-center" style={{ background: 'linear-gradient(249.28deg, #FBFFF7 0%, #F6FFED 0%, #FFFAF7 100%)' }} >
+  <div class="w-[263px] h-[279px] absolute right-0 top-0 z-20 max-md:hidden">
+    <Image src={blobBG} alt='Blob Background' class='w-full h-full object-cover' />
+  </div>
   <Text type={'subtitle'} style={{ opacity: 0.8, color: '#121212' }}>WHY GLENTREE?</Text>
   <Text type={'h2'} class='text-black mt-6'>
-    Give your <span class='text-green-400'>child the best </span> <br class="hidden max-md:block"/> 
+    We believe in
     <div class="mt-4 inline max-md:block">
-      at <span class='bg-accent text-white px-3 py-1 rounded-md'>Glentree Academy</span>
+      <span class='bg-green-600 text-white px-3 py-1 rounded-md'>Learning for Life</span>
     </div>
   </Text>
   <Text type={'base'} class='mt-7 font-semibold text-black w-[45%] max-md:w-[90%]'>
     At Glentree Academy, we prioritize practical learning that encourages children to explore and interact with the world consciously.
   </Text>
-  <Constrain>
-    <div class='flex flex-row mt-16 w-full justify-between px-56 max-md:mt-8 max-md:px-6 max-md:flex-col'>
-        <a href="/glentree-clubs/" class='group'>
-          <div class='flex flex-col items-center'>
-            <div class='w-[241px] h-[324px] max-md:w-[145.28px] max-md:h-[177.41px] border p-[6px] rounded-t-[100px] border-green-500 group-hover:bg-green-500/80 group-hover:border-green-500/80 group-hover:shadow-[0_0px_20px_15px_rgba(60,103,79,0.1)] overflow-hidden' style={{
-              overflow: 'hidden',
-              transition: 'all 0.3s ease-in-out',
-            }}>
-              <div class='w-full h-full overflow-hidden rounded-t-[100px]' style={{
-                transition: 'all 0.3s ease-in-out',
-              }}>
-                <Image src={clubsThumb} alt='Glentree Clubs Thumbnail' class='w-full h-full object-cover' />
-              </div>
-            </div>
-            <div class='flex flex-row items-center'>
-              <Text type='h3' class="text-accent2 mt-3">Glentree Clubs</Text>
-              <div class="w-7 h-7 ml-3 top-3 relative group-hover:translate-x-1 transition-all" >
-                <FilledArrowCircle pathClass='fill-accent2' />
-              </div>
-            </div>
-            <Text type='regular' class='text-black w-[80%] max-md:w-[85%] max-md:mb-4'>
-              Discover dynamic student clubs for personalised learning
-            </Text>
+  <p class="p-3" />
+  <Constrain class="flex flex-col w-full items-center gap-8">  
+    <div class="flex flex-row gap-12 w-full justify-center mt-6 text-black max-w-[1070px] max-md:w-full max-md:flex-col max-md:items-center">
+      <DeckCard
+        images={[
+          taekwondo,
+          earthLab,
+        ]}
+        class="mt-6"
+        id="deck-card-clubs"
+        target="gallery-clubs"
+      />
+      <div class="flex flex-col items-start text-left gap-6 max-md:px-8">
+        <Text type="h3" class="text-accent2">Glentree Clubs</Text>
+        <Text type="base" class="font-semibold">Discover dynamic student clubs for personalised learning. Some of our key clubs include:</Text>
+        <div class="flex flex-row items-center">
+          <div class="w-[16px] h-[18px]">
+            <Image src={bulletStarGreen} class="w-full h-full object-cover" alt="bullet icon" />
           </div>
-        </a>
-      
-      <a href="/co-scholastics/" class='group'>
-        <div class='flex flex-col items-center'>
-          <div class='w-[254.71px] h-[335.96px] rounded-xl border border-accent-bold group-hover:bg-accent-bold/80 group-hover:border-accent-bold/80 group-hover:shadow-accent-bold/10 group-hover:shadow-[0_0px_20px_15px] max-md:w-[145.28px] max-md:h-[177.41px] overflow-hidden p-[6px]' style={{
-            transition: 'all 0.3s ease-in-out',
-          }}>
-            <Image 
-              src={coscholasticsThumb}
-              alt='Glentree Clubs Thumbnail'
-              class='w-full h-full object-cover rounded-xl'
-              style={{
-                transition: 'all 0.3s ease-in-out',
-              }}
-            />
+          <Text type="regular" class="font-bold ml-[10px]">Earth Lab</Text>
+        </div> 
+        <div class="flex flex-row items-center">
+          <div class="w-[16px] h-[18px]">
+            <Image src={bulletStarGreen} class="w-full h-full object-cover" alt="bullet icon" />
           </div>
-          <div class='flex flex-row items-center'>        
-            <Text type='h3' class="text-accent mt-3">Co-Scholastics</Text>
-            <div class="w-7 h-7 ml-3 top-3 relative group-hover:translate-x-1 transition-all" >
-              <FilledArrowCircle pathClass='fill-accent' />
-            </div>
-          </div>
-          
-    
-          <Text type='regular' class='text-black w-[80%] max-md:w-[85%]'>
-            Inspiring Co-Scholastic Programs for All-Round Development
-          </Text>
+          <Text type="regular" class="font-bold ml-[10px]">Entrepreneurship Club</Text>
         </div>
-      </a>
+        <div class="flex flex-row items-center">
+          <div class="w-[16px] h-[18px]">
+            <Image src={bulletStarGreen} class="w-full h-full object-cover" alt="bullet icon" />
+          </div>
+          <Text type="regular" class="font-bold ml-[10px]">Debate & Quizzing Club</Text>
+        </div>
+        <div class="cursor-pointer" data-modal-target="gallery-clubs" data-target-deck="deck-card-clubs">
+          <Text type="regular" class='underline uppercase text-green-600 tracking-wide font-bold'>VIEW all CLUBS</Text>
+        </div>
+      </div>
     </div>
+
+    <div class="flex flex-row gap-12 w-full justify-center mt-12 text-black max-w-[1070px] max-md:w-full max-md:flex-col max-md:items-center">
+      <div class="flex flex-col items-start text-left gap-6 max-md:order-2 max-md:px-8">
+        <Text type="h3" class="text-accent">Co-Scholastics</Text>
+        <Text type="base" class="font-semibold">Explore a vibrant array of co-curricular activities for personalized development. Some of our key offerings include:</Text>
+        <div class="flex flex-row items-center">
+          <div class="w-[16px] h-[18px]">
+            <Image src={bulletStar} class="w-full h-full object-cover" alt="bullet icon" />
+          </div>
+          <Text type="regular" class="font-bold ml-[10px]">Earth Lab</Text>
+        </div> 
+        <div class="flex flex-row items-center">
+          <div class="w-[16px] h-[18px]">
+            <Image src={bulletStar} class="w-full h-full object-cover" alt="bullet icon" />
+          </div>
+          <Text type="regular" class="font-bold ml-[10px]">Entrepreneurship Club</Text>
+        </div>
+        <div class="flex flex-row items-center">
+          <div class="w-[16px] h-[18px]">
+            <Image src={bulletStar} class="w-full h-full object-cover" alt="bullet icon" />
+          </div>
+          <Text type="regular" class="font-bold ml-[10px]">Debate & Quizzing Club</Text>
+        </div>
+        <div class="cursor-pointer" data-modal-target="gallery-coscholastics" data-target-deck="deck-card-coscholastics">
+          <Text type="regular" class='underline uppercase text-accent tracking-wide font-bold'>VIEW all ACtIVITIES</Text>
+        </div>
+      </div>
+      <DeckCard
+        images={[
+          earthLab,
+          taekwondo,
+        ]}
+        class="mt-6 max-md:order-1"
+        id="deck-card-coscholastics"
+        target="gallery-coscholastics"
+      />
+    </div>
+
   </Constrain>
+
+  <Gallery
+    id="gallery-clubs"
+    gallery={[
+      { src: taekwondo, caption: "Taekwondo" },
+      { src: earthLab, caption: "Earth Lab" },
+    ]}
+  />
+
+  <Gallery
+    id="gallery-coscholastics"
+    gallery={[
+      { src: earthLab, caption: "Earth Lab" },
+      { src: taekwondo, caption: "Taekwondo" },
+    ]}
+  />
   
 </div>
