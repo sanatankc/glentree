@@ -1,0 +1,77 @@
+---
+import Text from '../system/Text.astro'
+import Button from '../system/Button.astro'
+import campusSectionPatternBG from '../../images/campusSectionPatternBG.png'
+import sarjapurCampus from '../../images/sarjapurCampus.jpeg'
+import whitefieldCampus from '../../images/whitefieldCampus.jpeg'
+import CampusCard from './campusCard.astro';
+import Constrain from '../system/Constrain.astro';
+import bulletStar from '../../images/bulletStar.svg'
+import { Image } from 'astro:assets';
+import scholarship1 from '../../images/register/scholarship/1.png'
+import scholarship2 from '../../images/register/scholarship/2.png'
+
+
+---
+<div class='bg-white relative p-20 py- max-md:p-5'>
+  <!-- <Image src={campusSectionPatternBG} class='w-screen absolute top-0 left-0 -z-1' role="presentation" alt="decoration" /> -->
+  <Constrain class="'max-w-[1320px]">
+    <div class='relative z-10'>
+      <Text type='subtitle' class='text-center text-black/60' style={{ letterSpacing: '0.1em' }}>Empowering Students</Text>
+      <Text type='h2' class='text-center text-black mt-3'>Scholarship & Benefit <span class="text-accent2">Programs</span></Text>
+      <div class='grid grid-cols-2 gap-6 max-md:grid-rows-2 max-md:grid-cols-1 justify-between mt-8'>
+        <div class='border border-black/20 p-6 max-md:p-2 max-md:pr-2 pr-8 flex flex-row max-md:flex-col rounded-md gap-4'>
+          <div class="min-w-[232px] max-md:h-[230px] h-full rounded-md">
+            <Image src={scholarship1} class="w-full h-full object-cover rounded-md" alt="scholarship" />
+          </div>
+          
+          <div class="flex flex-col items-start text-left gap-3 max-md:px-2 text-black">
+            <div>
+              <Text type='h4' class='text-black'><span class="text-accent">Inspire Scholarship</span> Program </Text>
+            </div>
+            <div class="flex flex-row items-start">
+              <div class="min-w-[16px] min-h-[18px] max-w-[16px] max-h-[18px] mt-1">
+                <Image src={bulletStar} class="w-full h-full object-cover" alt="bullet icon" />
+              </div>
+              <Text type="regular" class="ml-[5px]">15% tuition fee waiver for the academic year</Text>
+            </div> 
+            <div class="flex flex-row items-start">
+              <div class="min-w-[16px] min-h-[18px] max-w-[16px] max-h-[18px] mt-1">
+                <Image src={bulletStar} class="w-full h-full object-cover" alt="bullet icon" />
+              </div>
+              <Text type="regular" class="ml-[5px]">For meritorious students of Grades 6 to 9 transferring to Glentree Academy from CBSE or ICSE boards</Text>
+            </div>
+          </div>
+
+        </div>
+        <div class='border border-black/20 p-6 max-md:p-2 max-md:pr-2 pr-8 flex flex-row max-md:flex-col rounded-md gap-4'>
+          <div class="min-w-[232px] max-md:h-[230px] h-full bg-slate-200 rounded-md">
+            <Image src={scholarship2} class="w-full h-full object-cover rounded-md" alt="scholarship" />
+          </div>
+
+          <div class="flex flex-col items-start text-left gap-3 max-md:px-2 text-black">
+            <div>
+              <Text type='h4' class='text-black'><span class="text-accent3">Exellence in{' '}</span>Sports Program </Text>
+            </div>
+            <div class="flex flex-row items-start">
+              <div class="min-w-[16px] min-h-[18px] max-w-[16px] max-h-[18px] mt-1">
+                <Image src={bulletStar} class="w-full h-full object-cover" alt="bullet icon" />
+              </div>
+              <Text type="regular" class="ml-[5px]">15% tuition fee waiver for the academic year</Text>
+            </div> 
+            <div class="flex flex-row items-start">
+              <div class="min-w-[16px] min-h-[18px] max-w-[16px] max-h-[18px] mt-1">
+                <Image src={bulletStar} class="w-full h-full object-cover" alt="bullet icon" />
+              </div>
+              <Text type="regular" class="ml-[5px]">For students from Grade 5 to 10 excelling in recognized team or individual sports</Text>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 max-md:p-2" />
+      <div class="w-full px-6 py-4 rounded-lg bg-[#F6D58D]/20 flex flex-row max-md:flex-col text-center max-md:px-3 justify-between items-center text-black">
+        <Text type="base">To learn more about available scholarships, get in touch with our admissions counsellor.</Text>
+        <Button class="max-md:mt-2 max-md:hidden">Apply Now</Button>
+      </div>
+  </Constrain>
+</div>

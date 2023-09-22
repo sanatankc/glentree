@@ -1,9 +1,10 @@
 ---
 import MarqueeContent from './marqueeContent.astro'
 
+const { class: className } = Astro.props
 ---
 
-<div class="marquee bg-black py-4 relative">
+<div class:list={["marquee bg-black py-4 relative", className]}>
   <ul class="marquee__content items-center">
    <MarqueeContent />
    <MarqueeContent />

@@ -12,7 +12,7 @@ import Collapsible from '../components/admissions/Collapsible.astro';
 
 import Testimonial from '../components/landingPage/Testimonial.astro';
 import BigAdmissionCTA from '../components/BigAdmissionCTA.astro';
-
+import Scholarship from '../components/register/scholarship.astro';
 import '../global.css'
 
 import '@fontsource/nunito-sans';
@@ -34,12 +34,17 @@ import overviewRegisterPageBG from '../images/overviewRegisterPageBG.png'
 import RegisterForm from '../components/register/registerForm.astro'
 import Slide from '../components/system/Slide.astro';
 import awards from "../images/awards.svg"
+import blobBG from '../images/blobBG.svg'
 
-import slide1 from "../images/slides/1.jpg";
-import slide1MB from "../images/slides/1-mb.jpeg";
-import slide2 from "../images/slides/2.jpeg";
-import slide2MB from "../images/slides/2-mb.jpeg";
+import slide1 from "../images/register/slides/1.png";
+import slide2 from "../images/register/slides/2.png";
+import slide3 from "../images/register/slides/3.png";
 
+import slide1MB from "../images/register/slides/mb/1.jpg";
+import slide2MB from "../images/register/slides/mb/2.jpg";
+import slide3MB from "../images/register/slides/mb/3.jpg";
+
+import PhoneWhite from '../icons/PhoneWhite.svg'
 
 
 const academics = [
@@ -62,6 +67,7 @@ const academics = [
     background: '#0E6526',
     backgroundContent: '#0A5E2F',
     opacity: 1,
+
     link: 'https://glentreeacademy.com/curriculum/pre-primary'
   },
   {
@@ -113,6 +119,29 @@ const academics = [
   },
 ]
 
+const faqs = [
+  {
+    question: 'How do I apply for admission to Glentree Academy?',
+    answer: ''
+  },
+  {
+    question: 'What are the admission requirements?',
+    answer: ''
+  },
+  {
+    question: 'Is there an application deadline for admissions?',
+    answer: ''
+  },
+  {
+    question: 'What are the tuition fees for the programs?',
+    answer: ''
+  },
+  {
+    question: 'How do I schedule a campus visit?',
+    answer: ''
+  },
+]
+
 ---
 
 <Layout title="Welcome to Astro.">
@@ -127,45 +156,63 @@ const academics = [
     >
     
       <div class='flex flex-col max-md:h-auto min-h-screen'>
-        <TopNavigationBar hideMenu />
+        <TopNavigationBar hideMenu applyNowButtonId="register-page-apply-now" />
         <div class="h-[88px] w-full bg-black"></div>
+
         <div class="w-full flex-1 h-full relative p-12 flex flex-row max-md:flex-col justify-between items-center max-md:p-8 max-md:px-4">
-          <div class="w-full h-full absolute top-0 left-0">
+          <div class="w-full h-full absolute top-0 left-0 max-md:hidden">
             <Slide
               slides={[
                 { image_desktop: slide1.src, image_mobile: slide1MB.src, position: 'center' },
-                { image_desktop: slide2.src, image_mobile: slide2MB.src, position: 'center' }
+                { image_desktop: slide2.src, image_mobile: slide2MB.src, position: 'center' },
+                { image_desktop: slide3.src, image_mobile: slide2MB.src, position: 'center' }
               ]}
               id="resiter-page-hero"
             />
           </div>
+
+          <div class="w-full h-[110svh] absolute top-0 left-0 bg-red-100 hidden max-md:block">
+            <Slide
+              slides={[
+                { image_desktop: slide1MB.src, image_mobile: slide1MB.src, position: 'center' },
+                { image_desktop: slide2MB.src, image_mobile: slide2MB.src, position: 'center' },
+                { image_desktop: slide3MB.src, image_mobile: slide3MB.src, position: 'center' }
+              ]}
+              id="resiter-page-hero-mb"
+            />
+          </div>
+
           <div 
             class="
-              absolute w-full h-full z-10 top-0 left-0
+              absolute w-full h-full top-0 left-0
               bg-[linear-gradient(183deg,_rgba(0,_66,_29,_0.00)_31.29%,_#000_97.19%)]
-              max-md:bg-[linear-gradient(321deg,_rgba(0,_66,_29,_0.10)_-108.71%,_#000_101.19%)]
+              max-md:bg-[linear-gradient(180deg,_rgba(0,_66,_29,_0.10)_-40.71%,_#000_50.19%)]
+              z-20
             "
             style={{
               // background: 'linear-gradient(183deg, rgba(0, 66, 29, 0.00) 31.29%, #000 97.19%)',
               // 'linear-gradient(321deg, rgba(0, 66, 29, 0.10) -2.71%, #000 101.19%)'
             }}
           />
+
+          <div class="max-md:p-36 max-md:block hidden"  />
+
           <div class="h-full flex flex-row items-end relative z-20 self-end max-md:self-start">
             <div class="flex flex-col max-md:items-center">
-              <Text type="h2" class='text-white'>Glentree Academy</Text>
+              <Text type="h3" class='text-white text-center'>Nurturing Lifelong Learners</Text>
               <div class="flex flex-row text-white mt-4">
-                <div class="w-[115px] py-1 flex justify-center bg-accent rounded-tl-md rounded-bl-md">
+                <div class="w-[160px] max-md:w-[115px] py-1 flex justify-center bg-accent rounded-tl-md rounded-bl-md">
                   <Text type="h4" class="text-[21px] max-md:text-[16px] tracking-wide">Experience</Text>
                 </div>
-                <div class="w-[115px] py-1 flex justify-center bg-green-600">
+                <div class="w-[160px] max-md:w-[115px] py-1 flex justify-center bg-green-600">
                   <Text type="h4" class="text-[21px] max-md:text-[16px] tracking-wide">Evolve</Text>
                 </div>
-                <div class="w-[115px] py-1 flex justify-center bg-accent3 rounded-tr-md rounded-br-md">
+                <div class="w-[160px] max-md:w-[115px] py-1 flex justify-center bg-accent3 rounded-tr-md rounded-br-md">
                   <Text type="h4" class="text-[21px] max-md:text-[16px] tracking-wide">Excel</Text>
                 </div>
               </div>
-              <div class="pt-[36px] max-md:pt-[24px]" />
-              <div class="w-[382px] max-md:w-full">
+              <div class="pt-[36px] max-md:pt-[24px]" id="register-form-container-mobile" />
+              <div class="w-[382px] max-md:w-[85%]">
                 <Image src={awards} class="w-full" alt="Glentree Rank 1: " />
               </div>
             </div>
@@ -173,30 +220,28 @@ const academics = [
           <div class="max-md:py-4" />
           <RegisterForm />
         </div>
-        <AdmissionMarquee />
+        <AdmissionMarquee class="max-md:!hidden" />
       </div>
+      <WhyGlentree />
 
-
-
-    <div class='bg-white relative p-20 max-md:p-5 text-black'>
-      <Image src={overviewRegisterPageBG} class='w-screen absolute top-0 left-0 -z-1' role="presentation" alt="decoration" />
+    <div class='bg-white relative p-20 pb-10 max-md:p-5 text-black' >
+      <div class="w-[263px] h-[279px] absolute right-0 top-0 z-20 max-md:hidden">
+        <Image src={blobBG} alt='Blob Background' class='w-full h-full object-cover' />
+      </div>
       <Constrain>
         <div class='relative z-10 flex flex-col items-center'>
           <!-- <Text type='subtitle' style={{ letterSpacing: '0.1em', opacity: 0.8 }}>Locate Us</Text> -->
           <Text type='h2' class='mt-3'>Glentree{' '}<span class='text-accent2'>Overview</span></Text>
-          <Text type='base' class='mt-3 max-w-[680px] max-md:w-full text-center'>
-            At Glentree Academy, each experience becomes a lesson, and every challenge transforms into an opportunity in a student's journey.
-          </Text>
-          <div class="w-[870px] max-md:w-full h-[537px] flex flex-col mt-8">
+          <div class="w-[870px] max-md:w-full max-md:h-[450px] h-[537px] flex flex-col mt-8">
             <div class="flex flex-row flex-1 border-b border-black/20">
               <div class="flex-1 flex px-2 flex-col items-center justify-center border-r border-black/20">
-                <Text type="h2" class="text-[#6F322E]">K-12</Text>
+                <Text type="h2" class="max-md:text-[26px] text-[#6F322E]">K-12</Text>
                 <Text type='base' class='mt-3 font-semibold text-center'>
                   Grades Offered
                 </Text>
               </div>
               <div class="flex-1 flex px-2 items-center justify-center flex-col border-r border-black/20">
-                <Text type="h2" class="text-black flex items-start">
+                <Text type="h2" class="max-md:text-[26px] text-black flex items-start">
                   1
                 </Text>
                 <Text type='base' class='mt-3 font-semibold text-center'>
@@ -204,7 +249,7 @@ const academics = [
                 </Text>
               </div>
               <div class="flex-1 flex px-2 items-center justify-center flex-col">
-                <Text type="h2" class="text-[#6F322E]">23</Text>
+                <Text type="h2" class="max-md:text-[26px] text-[#6F322E]">23</Text>
                 <Text type='base' class='mt-3 font-semibold text-center'>
                   Clubs Offered
                 </Text>
@@ -212,20 +257,20 @@ const academics = [
             </div>
             <div class="flex flex-row flex-1 border-b border-black/20">
               <div class="flex-1 flex px-2 items-center justify-center flex-col border-r border-black/20">
-                <Text type="h2" class="text-black">40</Text>
+                <Text type="h2" class="max-md:text-[26px] text-black">40</Text>
                 <Text type='base' class='mt-3 font-semibold text-center'>
                   Activities Offered
                 </Text>
               </div>
               <div class="flex-1 flex px-2 items-center justify-center flex-col border-r border-black/20">
-                <Text type="h2" class="text-[#6F322E]">50</Text>
+                <Text type="h2" class="max-md:text-[26px] text-[#6F322E]">50</Text>
                 <Text type='base' class='mt-3 font-semibold text-center'>
                   Students Club
                 </Text>
                 
               </div>
               <div class="flex-1 flex px-2 items-center justify-center flex-col">
-                <Text type="h2" class="text-black flex flex-row items-start">
+                <Text type="h2" class="max-md:text-[26px] text-black flex flex-row items-start">
                   1<span class="text-3xl leading-[0.75] -tracking-normal">st</span>
                 </Text>
                 <Text type='base' class='mt-3 font-semibold text-center'>
@@ -235,19 +280,19 @@ const academics = [
             </div>
             <div class="flex flex-row flex-1">
               <div class="flex-1 flex px-2 items-center justify-center flex-col border-r border-black/20">
-                <Text type="h2" class="text-[#6F322E]">3</Text>
+                <Text type="h2" class="max-md:text-[26px] text-[#6F322E]">3</Text>
                 <Text type='base' class='mt-3 font-semibold text-center'>
                   Campuses
                 </Text>
               </div>
               <div class="flex-1 flex px-2 items-center justify-center flex-col border-r border-black/20">
-                <Text type="h2" class="text-black">800</Text>
+                <Text type="h2" class="max-md:text-[26px] text-black">800</Text>
                 <Text type='base' class='mt-3 font-semibold text-center'>
                   Students
                 </Text>
               </div>
               <div class="flex-1 flex px-2 items-center justify-center flex-col">
-                <Text type="h2" class="text-[#6F322E]">8</Text>
+                <Text type="h2" class="max-md:text-[26px] text-[#6F322E]">8</Text>
                 <Text type='base' class='mt-3 font-semibold text-center'>
                   Years of Excellence
                 </Text>
@@ -257,10 +302,13 @@ const academics = [
         </div>
       </Constrain>
     </div>
-      
-    <WhyGlentree />
 
-    <div class='w-full p-14 text-black bg-white flex flex-col items-center max-md:p-6'>
+
+
+   
+      
+
+    <div class='w-full p-14 pb-3 text-black bg-white flex flex-col items-center max-md:p-6'>
       <Text type={'subtitle'} class='text-black/80'>ENRICHING CURRICULUM</Text>
       <Text type={'h2'} class='mt-2'>Academic{' '}<span class='text-accent2'>Landscape</span></Text>
       <div class='w-full flex-col flex items-center rounded-2xl max-md:rounded-2xl overflow-hidden mt-8 max-w-[1196px]'>
@@ -269,7 +317,7 @@ const academics = [
             <div
               class='w-full flex-1 max-w-[350px] max-md:max-w-[1000px] min-h-[200px] mr-[1px] flex flex-col text-white items-center justify-center relative bg-cover no-repeat'
               style={{
-                backgroundImage: `url(${academic.image})`
+                backgroundImage: `url(${academic.image.src})`
             }}>
               <div class='w-full h-full mix-blend-multiply absolute z-0' style={{
                 background: academic.background,
@@ -317,7 +365,9 @@ const academics = [
 
 
 
+    <Scholarship />
     <Testimonial />
+
 
     <div class="w-full items-center flex flex-col bg-white">
       <div class="p-4" />
@@ -325,52 +375,31 @@ const academics = [
       <Text type={'h2'} class='mt-2 text-black'>FAQs</Text>
       <div class="p-4" />
       <div class="flex flex-col items-center gap-5 ">
-        <Collapsible title='Transportation' class='mb-5' collapseGroup='collapsible'>
-          <ul class="list-disc marker:text-2xl relative left-5 w-[95%]">
-            <li>
-              <Text type={'regular'}>Students using the school bus must be at the bus stop at least 5 minutes before the scheduled arrival time.</Text>
-            </li>
-            <li>
-              <Text type={'regular'}>The bus will stop only at the designated pick-up point.</Text>
-            </li>
-            <li>
-              <Text type={'regular'}>Students must use their assigned bus and bus stop, and any changes require prior written permission from the school authorities.</Text>
-            </li>
-            <li>
-              <Text type={'regular'}>Pre-Primary and Primary children will only be released to their parent/guardian. If the parent/guardian is not present at the pick-up point, the child will be returned to the school, and parents must collect them directly from the school.</Text>
-            </li>
-            <li>
-              <Text type={'regular'}>Fees paid are non-refundable.</Text>
-            </li>
-          </ul>
-  
-          <div>
-  
-          </div>
-        </Collapsible>
-        <Collapsible title='B' class='mb-5' collapseGroup='collapsible'>
-          <ul class="list-disc marker:text-2xl relative left-5 w-[95%]">
-            <li>
-              <Text type={'regular'}>Students using the school bus must be at the bus stop at least 5 minutes before the scheduled arrival time.</Text>
-            </li>
-            <li>
-              <Text type={'regular'}>The bus will stop only at the designated pick-up point.</Text>
-            </li>
-            <li>
-              <Text type={'regular'}>Students must use their assigned bus and bus stop, and any changes require prior written permission from the school authorities.</Text>
-            </li>
-            <li>
-              <Text type={'regular'}>Pre-Primary and Primary children will only be released to their parent/guardian. If the parent/guardian is not present at the pick-up point, the child will be returned to the school, and parents must collect them directly from the school.</Text>
-            </li>
-            <li>
-              <Text type={'regular'}>Fees paid are non-refundable.</Text>
-            </li>
-          </ul>
-  
-          <div>
-  
-          </div>
-        </Collapsible>
+        {faqs.map(({ question, answer }) => (
+          <Collapsible title={question} titleClass='font-sans font-bold text-xl max-md:text-lg' class='mb-5' collapseGroup='collapsible' plusButtonClass="w-[35px] h-[35px] ml-1">
+            <ul class="list-disc marker:text-2xl relative left-5 w-[95%]">
+              <li>
+                <Text type={'regular'}>Students using the school bus must be at the bus stop at least 5 minutes before the scheduled arrival time.</Text>
+              </li>
+              <li>
+                <Text type={'regular'}>The bus will stop only at the designated pick-up point.</Text>
+              </li>
+              <li>
+                <Text type={'regular'}>Students must use their assigned bus and bus stop, and any changes require prior written permission from the school authorities.</Text>
+              </li>
+              <li>
+                <Text type={'regular'}>Pre-Primary and Primary children will only be released to their parent/guardian. If the parent/guardian is not present at the pick-up point, the child will be returned to the school, and parents must collect them directly from the school.</Text>
+              </li>
+              <li>
+                <Text type={'regular'}>Fees paid are non-refundable.</Text>
+              </li>
+            </ul>
+    
+            <div>
+    
+            </div>
+          </Collapsible>
+        ))}
       </div>
       <div class="p-3" />
     </div>
@@ -382,7 +411,18 @@ const academics = [
 
     <!-- <GlentreeFamily /> -->
     <Footer />
-  </div>
+    </div>
+
+    <a href="tel:7676310000">
+      <div class="fixed w-full h-14 bg-green-600 bottom-0 left-0 z-10 hidden max-md:flex items-center justify-center gap-4">
+        <div 
+          class="w-4 h-4"
+        >
+          <Image src={PhoneWhite} alt="Phone" class="w-full h-full object-cover" />
+        </div>
+        <Text type="sm">+91 76763 10000</Text>
+      </div>
+    </a>
 
   </main>
 </Layout>
@@ -416,6 +456,17 @@ const academics = [
   // @@ts-ignore
 
   // dev script temp
+  const applyNowButton = document.querySelector(`[data-apply-now-button="register-page-apply-now"]`)
+  console.log('apply-now-button')
+  applyNowButton?.addEventListener('click', () => {
+    if (window.innerWidth > 768) {
+      const registerFormContainer = document.getElementById('register-form-container-desktop')
+      registerFormContainer?.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      const registerFormContainer = document.getElementById('register-form-container-mobile')
+      registerFormContainer?.scrollIntoView({ behavior: 'smooth' })
+    }
+  })
 
   import collapsible, { openCollapsible } from '../components/admissions/collapsible'
   collapsible('.collapsible', null)
@@ -425,5 +476,20 @@ const academics = [
     // scroll to end 
     // mainContainer.scrollTo(0, mainContainer.scrollHeight)
   }
+
+  // document.addEventListener('scroll', (e) => {
+
+  //   if (whatsAppButton) {
+  //     if (window.scrollY > 100) {
+  //       whatsAppButton?.classList.add('opacity-1')
+  //       whatsAppButton?.classList.remove('opacity-0')
+  //     } else {
+  //       whatsAppButton?.classList.remove('opacity-1')
+  //       whatsAppButton?.classList.add('opacity-0')
+  //     }
+  //   }
+  // })
+
+  
 
 </script>

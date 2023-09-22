@@ -7,10 +7,10 @@ const {
 } = Astro.props
 ---
 
-<div class="select text-[14px] h-[48px]">
+<div class="select text-[14px] h-[48px]" data-select-parent-id={id}>
   <div class="selectWrapper">
-    <select class="selectNative js-selectNative h-[48px]" aria-labelledby={name} name={name} id={id}>
-      <option value="sel" disabled="" selected="">{placeholder}</option>
+    <select class="selectNative js-selectNative h-[48px]" aria-labelledby={name} name={name} data-id={id} required>
+      <option value="" disabled="" selected="">{placeholder}</option>
       {options.map((option: string) => (
         <option value={option}>
           {option}
@@ -19,7 +19,7 @@ const {
     </select>
 
     <!-- Hide the custom select from AT (e.g. SR) using aria-hidden -->
-    <div class="selectCustom js-selectCustom" aria-hidden="true" id={id}>
+    <div class="selectCustom js-selectCustom" aria-hidden="true" data-id={id}>
       <div class="selectCustom-trigger">{placeholder}</div>
       <div class="selectCustom-options flex flex-row flex-wrap gap-5 !px-6 justify-between">
         {options.map((option: string) => (
@@ -34,6 +34,14 @@ const {
 
 
 <style>
+
+  .select.active select {
+    color: black !important;
+  }
+  .select.active .selectCustom-trigger {
+    color: black !important;
+  }
+
   .selectNative,
 .selectCustom {
   position: relative;
@@ -157,16 +165,15 @@ const {
 
 </style>
 
-<script>
+<script>import { CampusPartsFragmentDoc } from "../../../tina/__generated__/types";
+
   const elSelectNativeElements = document.querySelectorAll<HTMLElement>(".js-selectNative");
   const elSelectCustomElements = document.querySelectorAll<HTMLElement>(".js-selectCustom");
 
   elSelectCustomElements.forEach((elSelectCustom) => {
-
-    console.log('ell--->', elSelectCustom)
     let elSelectNative = [...elSelectNativeElements].find(elSelectNative => {
       if (elSelectNative) {
-        return elSelectNative.id === elSelectCustom.id
+        return elSelectNative.dataset.id === elSelectCustom.dataset.id
       }
     })
     const elSelectCustomBox = elSelectCustom.children[0];
@@ -248,9 +255,17 @@ const {
       if (elOption) {
         elOption.classList.add("isActive");
       }
-  
+      
+      
       elSelectCustomBox.textContent = text;
       optionChecked = value;
+      console.log('select id.... ---> ',
+      elSelectCustom.dataset.id,
+      elSelectNative?.dataset.id
+      )
+      const selectParent = document.querySelector(`[data-select-parent-id="${elSelectCustom.dataset.id}"]`)
+      console.log('selectParent....', `[data-select-parent-id="${elSelectCustom.dataset.id}"]`, selectParent)
+      selectParent?.classList.add('active')
     }
   
     function watchClickOutside(e) {

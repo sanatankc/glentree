@@ -1,7 +1,10 @@
 ---
 import Button from "./system/Button.astro";
+import Text from "./system/Text.astro";
 import logo from "../images/logo.svg";
 import { Image } from "astro:assets";
+
+import PhoneWhite from '../icons/PhoneWhite.svg'
 
 interface Menu {
   title: string;
@@ -85,7 +88,7 @@ const menu: Array<Menu> = [
   },
 ];
 
-const { hideMenu = false } = Astro.props
+const { hideMenu = false, applyNowButtonId = null } = Astro.props
 ---
 
 <header
@@ -170,13 +173,32 @@ const { hideMenu = false } = Astro.props
     </div>
   )}
   <div class:list={["flex flex-row items-center relative max-md:hidden", hideMenu && 'max-md:!flex']}>
-    <a
-      href="https://admissions.glentreeacademy.com"
-      target="_blank"
-      class="daisy daisy-fixed daisy-3"
-    >
-      <Button>Apply Now</Button>
-    </a>
+
+      <div class="w-full h-14 bottom-0 left-0 z-10 flex max-md:hidden items-center justify-center gap-4 mr-8">
+        <div 
+          class="w-4 h-4"
+        >
+          <Image src={PhoneWhite} alt="Phone" class="w-full h-full object-cover" />
+        </div>
+        <Text type="sm">+91 76763 10000</Text>
+      </div>
+
+    {applyNowButtonId ? (
+      <div
+      data-apply-now-button={applyNowButtonId}
+      class="flex-shrink-0"
+      >
+        <Button>Apply Now</Button>
+      </div>
+    ) : (
+      <a
+        href="https://admissions.glentreeacademy.com"
+        target="_blank"
+        class="daisy daisy-fixed daisy-3"
+      >
+        <Button>Apply Now</Button>
+      </a>
+    )}
   </div>
 
   {!hideMenu && (
