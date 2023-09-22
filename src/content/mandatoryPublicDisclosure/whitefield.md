@@ -13,8 +13,8 @@ disclosure:
   - title: Lease Deed
     disclosure: >
       [VIEW
-      HERE](https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/Cover%20Letter%20Old%20&%20New%20Lease%20Deed.pdf
-      "Cover Letter Old & New Lease Deed.pdf")
+      HERE](<https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/LEASE
+      DEED GAW Updated.pdf> "Lease Deed")
   - title: Affidavit - Non Proprietory
     disclosure: >
       [VIEW HERE](/images/gaw-affidavitNonProprietory.pdf
@@ -120,6 +120,7 @@ disclosure:
     disclosure: |
       2015
 ---
+
 
 
 
