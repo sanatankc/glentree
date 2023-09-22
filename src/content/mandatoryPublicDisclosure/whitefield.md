@@ -1,10 +1,5 @@
 ---
 disclosure:
-  - title: Cancelled Lease Deed
-    disclosure: >
-      [View
-      Here](https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/Cancelled%20Lease%20deed.pdf
-      "Cancelled Lease deed.pdf")
   - title: Gift Deed
     disclosure: >
       [View
@@ -13,8 +8,8 @@ disclosure:
   - title: Lease Deed
     disclosure: >
       [VIEW
-      HERE](<https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/LEASE
-      DEED GAW Updated.pdf> "Lease Deed")
+      HERE](https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/LEASE%20DEED%20GAW%20Updated.pdf
+      "Lease Deed")
   - title: Affidavit - Non Proprietory
     disclosure: >
       [VIEW HERE](/images/gaw-affidavitNonProprietory.pdf
@@ -120,6 +115,7 @@ disclosure:
     disclosure: |
       2015
 ---
+
 
 
 
