@@ -3,6 +3,10 @@ const {
   type,
   name,
   placeholder,
+  pattern=null,
+  max=null,
+  min=null,
+  title=""
 } = Astro.props
 ---
 
@@ -14,6 +18,11 @@ const {
       placeholder={placeholder}
       type={type}
       name={name}
+      title={title}
+      pattern={pattern}
+      required
+      min={min}
+      max={max}
       class="
         w-full border border-[#C6C6C6] rounded-md box-border text-black focus:ring-2 active:ring-2
         py-3 pl-4 text-[14px]

@@ -3,14 +3,15 @@ const {
   placeholder,
   options,
   name,
-  id
+  id,
+  title=null
 } = Astro.props
 ---
 
 <div class="select text-[14px] h-[48px]" data-select-parent-id={id}>
   <div class="selectWrapper">
-    <select class="selectNative js-selectNative appearance-none" aria-labelledby={name} name={name} data-id={id}>
-      <option value="" disabled="" selected="" required>{placeholder}</option>
+    <select class="selectNative js-selectNative appearance-none" aria-labelledby={name} name={name} data-id={id} required title={title}>
+      <option value="" disabled="" selected="">{placeholder}</option>
       {options.map((option: string) => (
         <option value={option}>
           {option}

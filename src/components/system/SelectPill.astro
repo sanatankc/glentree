@@ -4,12 +4,13 @@ const {
   options,
   name,
   id,
+  title=null
 } = Astro.props
 ---
 
 <div class="select text-[14px] h-[48px]" data-select-parent-id={id}>
   <div class="selectWrapper">
-    <select class="selectNative js-selectNative h-[48px]" aria-labelledby={name} name={name} data-id={id} required>
+    <select class="selectNative js-selectNative h-[48px]" aria-labelledby={name} name={name} data-id={id} required title={title}>
       <option value="" disabled="" selected="">{placeholder}</option>
       {options.map((option: string) => (
         <option value={option}>
@@ -259,9 +260,6 @@ const {
       
       elSelectCustomBox.textContent = text;
       optionChecked = value;
-      elSelectCustom.dataset.id,
-      elSelectNative?.dataset.id
-      )
       const selectParent = document.querySelector(`[data-select-parent-id="${elSelectCustom.dataset.id}"]`)
       selectParent?.classList.add('active')
     }

@@ -31,6 +31,7 @@ import PrimaryBG from '../images/curriculum/primary.png';
 import MiddleAndHighBG from '../images/curriculum/middle&High.png';
 import Constrain from '../components/system/Constrain.astro';
 import overviewRegisterPageBG from '../images/overviewRegisterPageBG.png'
+import DownArrow from '../icons/DownArrow.svg'
 import RegisterForm from '../components/register/registerForm.astro'
 import Slide from '../components/system/Slide.astro';
 import awards from "../images/awards.svg"
@@ -154,12 +155,13 @@ const faqs = [
         overflowX: 'hidden',
       }}
     >
+
     
-      <div class='flex flex-col max-md:h-auto min-h-screen'>
+      <div class='flex flex-col max-md:h-auto min-h-screen relative'>
         <TopNavigationBar hideMenu applyNowButtonId="register-page-apply-now" />
         <div class="h-[88px] w-full bg-black"></div>
 
-        <div class="w-full flex-1 h-full relative p-12 flex flex-row max-md:flex-col justify-between items-center max-md:p-8 max-md:px-4">
+        <div class="w-full flex-1 h-full relative p-12 py-2 flex flex-row max-md:flex-col justify-between items-center max-md:p-8 max-md:px-4">
           <div class="w-full h-full absolute top-0 left-0 max-md:hidden">
             <Slide
               slides={[
@@ -221,6 +223,11 @@ const faqs = [
           <RegisterForm />
         </div>
         <AdmissionMarquee class="max-md:!hidden" />
+        <div class="w-[50px] h-[50px] down-arrow-button transition-all duration-500 rounded-[50%] bg-accent border-accent/60 border-[4px] absolute top-[96vh] left-[50%] z-[9999] flex items-center justify-center max-md:hidden">
+          <div class="w-[18px] h-[9px] down-arrow-icon">
+            <Image src={DownArrow} alt="Down Arrow" class="w-full h-full object-cover" />
+          </div>
+        </div>
       </div>
       <WhyGlentree />
 
@@ -447,9 +454,52 @@ const faqs = [
     opacity: 1;
   }
 
-.my-float{
-	margin-top:16px;
-}
+  .my-float{
+    margin-top:16px;
+  }
+
+  .down-arrow-button {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+    overflow: hidden;
+  }
+
+  .down-arrow-button:before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+        120deg,
+        rgba(255,255,255, 0) 30%,
+        rgba(255,255,255, .8),
+        rgba(255,255,255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+    animation: shine 3s ease-out infinite;
+  }
+
+  
+  @keyframes shine {
+    0% {left: -100px}
+    20% {left: 100%}
+    100% {left: 100%}
+  }
+  
+  /* @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    20% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    } */
+  /* } */
 </style>
 
 <script>
@@ -470,6 +520,13 @@ const faqs = [
   import collapsible, { openCollapsible } from '../components/admissions/collapsible'
   collapsible('.collapsible', null)
 
+  const downArrowButton = document.querySelector('.down-arrow-button')
+  document.addEventListener('scroll', (e) => {
+    // after scrolling 100px, show the button
+    if (window.scrollY > window.innerHeight / 5) {
+      downArrowButton?.classList.add('opacity-0')
+    }
+  })
   const mainContainer = document.querySelector('.main-container')
   if (mainContainer) {
     // scroll to end 
