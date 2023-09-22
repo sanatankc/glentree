@@ -22,7 +22,7 @@ import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
 const { data } = await getEntry('home', 'home') as CollectionEntry<'home'>
 const title = data.title
 
-console.log('data...', data)
+'data...', data)
 
 const slides = data.heroImages.map(({ image_desktop, image_mobile, position = 'top' }, i) => {
   const slide = image_desktop

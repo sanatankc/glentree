@@ -93,7 +93,6 @@ const slides = slidesData.map(({
 
   function moveSlides(items: Array<HTMLElement>, slideshowIndex : number) {
     items.forEach((item, i) => {
-      // console.log(i, slideshowIndex)
       if (i === slideshowIndex) {
         item.style.opacity = "1";
         return;

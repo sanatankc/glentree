@@ -259,12 +259,10 @@ const {
       
       elSelectCustomBox.textContent = text;
       optionChecked = value;
-      console.log('select id.... ---> ',
       elSelectCustom.dataset.id,
       elSelectNative?.dataset.id
       )
       const selectParent = document.querySelector(`[data-select-parent-id="${elSelectCustom.dataset.id}"]`)
-      console.log('selectParent....', `[data-select-parent-id="${elSelectCustom.dataset.id}"]`, selectParent)
       selectParent?.classList.add('active')
     }
   

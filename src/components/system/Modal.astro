@@ -40,7 +40,6 @@ const { id, class: className='', containerClass } = Astro.props
   targets.forEach(target => {
     target.addEventListener('click', () => {
       const modal = document.querySelector(`[data-modal-id="${target.dataset.modalTarget}"]`)
-      console.log('hello... modal', modal)
       modal?.classList.remove('modal-hidden')
       modal.dataset.modalVisible = true
       // body.classList.add('overflow-hidden')

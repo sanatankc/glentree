@@ -77,7 +77,6 @@ const slideId = 'slide' + id
     const captionText = document.querySelector<HTMLElement>(`[data-caption-id="${slideId}"][data-slides-captions]`)
   
     const allCaptions = captionText.dataset.slidesCaptions.split(',')
-    console.log(captionText, allCaptions)
 
     const allSlides = document.querySelectorAll<HTMLElement>(`[data-target-slide="${slideId}"]`)
     const allSlidesLength = allSlides.length
@@ -99,7 +98,6 @@ const slideId = 'slide' + id
     const captionText = document.querySelector<HTMLElement>(`[data-caption-id="${slideId}"][data-slides-captions]`)
   
     const allCaptions = captionText.dataset.slidesCaptions.split(',')
-    console.log(captionText, allCaptions)
 
     const allSlides = document.querySelectorAll<HTMLElement>(`[data-target-slide="${slideId}"]`)
     const allSlidesLength = allSlides.length
@@ -110,7 +108,6 @@ const slideId = 'slide' + id
     const nextSlide = document.querySelector<HTMLElement>(`[data-target-slide="${slideId}"][data-target-slide-i="${nextSlideIndex}"]`)
       
     const newCaption = allCaptions[nextSlideIndex]
-    console.log('activeSlideIndex --> ', activeSlideIndex)
     captionText.innerText = newCaption
 
     activeSlide.dataset.isActive = 'false'
@@ -125,7 +122,7 @@ const slideId = 'slide' + id
 
   nextButtonsSlides.forEach(nextButton => {
     nextButton.addEventListener('click', () => {
-      console.log('nextButton.dataset.targetSlideid', nextButton.dataset.targetSlideid)
+
       goToNextSlide(nextButton.dataset.targetSlideid)
     })
   })
@@ -135,7 +132,7 @@ const slideId = 'slide' + id
     const modal = [...allModals].find(modal => !modal.classList.contains('modal-hidden'))
     if (modal) {
       const slideId = 'slide' + modal.dataset.modalId
-      console.log('slideId --> ', modal, slideId)
+
       if (e.key === 'ArrowLeft') {
         goToPrevSlide(slideId)
       }
