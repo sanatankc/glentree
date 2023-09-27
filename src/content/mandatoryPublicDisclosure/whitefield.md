@@ -62,9 +62,6 @@ disclosure:
   - title: Academic Calender 2023-24
     disclosure: |
       [VIEW HERE](/images/gaw-AcademicCalendar.pdf "gaw-AcademicCalendar.pdf")
-  - title: Land Certificate
-    disclosure: |
-      [VIEW HERE](/images/gaw-landCertificate.pdf "gaw-landCertificate.pdf")
   - title: Drinking Water & Sanitary
     disclosure: >
       [VIEW HERE](/images/gaw-Drinking-Water-Sanitary-Whitefield.pdf
@@ -120,6 +117,7 @@ disclosure:
     disclosure: |
       2015
 ---
+
 
 
 
