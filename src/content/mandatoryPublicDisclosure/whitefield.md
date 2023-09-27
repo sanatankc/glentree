@@ -1,11 +1,5 @@
 ---
 disclosure:
-  - title: Land Certificate
-    disclosure: >
-      [https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/Land
-      certificate -
-      GAW.pdf](https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/Land%20certificate%20-%20GAW.pdf
-      "View Here")
   - title: Gift Deed
     disclosure: >
       [View
@@ -121,6 +115,7 @@ disclosure:
     disclosure: |
       2015
 ---
+
 
 
 
