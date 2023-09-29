@@ -1,18 +1,32 @@
 ---
-const { images = [], class: className, target, id } = Astro.props
+const { images = [], class: className, cardHoverStyle, target, id } = Astro.props
+
+let deckHoverClass = ''
+let deckActiveClass = ''
+
+if (cardHoverStyle) {
+  deckHoverClass = cardHoverStyle.map(style => `group-hover:${style}`).join(' ')
+  deckActiveClass = cardHoverStyle.map(style => `[&.active>div]:${style}`).join(' ')
+}
+
 ---
 
 <div class:list={[
   'flex flex-col justify-center items-center',
   className
 ]} data-modal-target={target}>
-  <div class="w-[357px] h-[333px] max-md:w-[320px] max-md:h-[280px] relative group hover:cursor-pointer deck-card" data-deck-id={id}>
+  <div class:list={[`
+    w-[357px] h-[333px] max-md:w-[320px] max-md:h-[280px] relative group hover:cursor-pointer deck-card
+    [&.active>div:first-child]:rotate-[-4deg]
+    [&.active>div:last-child]:rotate-[4.651deg] 
+    [&.active>div]:border-[#0A5E2F]`,
+    deckActiveClass
+  ]} data-deck-id={id}>
     <div 
-      class="
-      bg-white border rounded-md w-full h-full absolute top-0 left-0 p-2
-        rotate-[-2.785deg] group-hover:rotate-[-4deg] group-hover:border-[#0A5E2F] transition-transform
-        max-md:rotate-[-2.785deg]
-      "
+      class:list={[`bg-white border rounded-md w-full h-full absolute top-0 left-0 p-2
+        rotate-[-2.785deg]  transition-transform max-md:rotate-[-2.785deg]
+        group-hover:rotate-[-4deg] group-hover:border-[#0A5E2F]
+      `, deckHoverClass]}
       style={{
         boxShadow: '0px 0px 18.19317px 0px rgba(0, 0, 0, 0.30)'
       }}
@@ -24,11 +38,12 @@ const { images = [], class: className, target, id } = Astro.props
       />
     </div>
     <div 
-      class="
-      bg-white border rounded-md w-full h-full absolute top-0 left-0 p-2
-        rotate-[2.026deg] group-hover:rotate-[4.651deg] group-hover:border-accent2 transition-transform
+      class:list={[`
+        bg-white border rounded-md w-full h-full absolute top-0 left-0 p-2
+        rotate-[2.026deg] transition-transform
         max-md:rotate-[3.026deg] origin-bottom-right
-      "
+        group-hover:rotate-[4.651deg] group-hover:border-accent2
+      `, deckHoverClass]}
       style={{
         boxShadow: '0px 0px 14.19317px 0px rgba(0, 0, 0, 0.10)'
       }}
@@ -44,17 +59,7 @@ const { images = [], class: className, target, id } = Astro.props
 </div>
 
 <style>
-  .deck-card {
 
-  }
-  .deck-card.active > div:first-child {
-    transform: rotate(-4deg);
-    border-color: #0A5E2F;
-  }
-  .deck-card.active > div:last-child {
-    transform: rotate(4.651deg);
-    border-color: #0A5E2F;
-  }
 </style>
 
 <script>

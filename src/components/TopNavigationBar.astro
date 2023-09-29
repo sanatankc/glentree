@@ -25,6 +25,10 @@ const menu: Array<Menu> = [
     link: "/about-us",
   },
   {
+    title: "Blog",
+    link: "/blog",
+  },
+  {
     title: "Academics",
     submenu: [
       {
@@ -85,6 +89,10 @@ const menu: Array<Menu> = [
         newTab: true,
       },
     ],
+  },
+  {
+    title: "Blog",
+    link: "/blog",
   },
 ];
 
@@ -456,24 +464,38 @@ const { hideMenu = false, applyNowButtonId = null } = Astro.props
   const menuParent = document.querySelectorAll(
     ".menu-parent"
   ) as NodeListOf<HTMLDivElement>;
-
+  const menuCheckBox = document.querySelector(
+    ".menu-checkbox"
+  ) as HTMLInputElement;
+  const menuChild = document.querySelectorAll(
+    ".menu"
+  ) as NodeListOf<HTMLDivElement>;
   menuParent.forEach((el) => {
     let removeTimeout: any = null;
     const menu = el.querySelector(".menu") as HTMLDivElement;
     el.addEventListener("mouseover", () => {
       clearTimeout(removeTimeout);
-      menu.classList.add("visible");
+      menuChild.forEach((elC) => {
+        if (elC !== menu) {
+          console.log("elC...", elC);
+          console.log("el...", el);
+          elC.classList.remove("visible");
+        }
+      });
+      setTimeout(() => {
+        menu.classList.add("visible");
+      }, 0);
     });
     el.addEventListener("mouseout", () => {
       removeTimeout = setTimeout(() => {
         menu.classList.remove("visible");
-      }, 400);
+      }, 50);
     });
     menu.addEventListener("mouseover", () => {
       clearTimeout(removeTimeout);
     });
     menu.addEventListener("mouseout", () => {
-      menu.classList.remove("visible");
+      // menu.classList.remove('visible')
     });
   });
 
@@ -481,12 +503,9 @@ const { hideMenu = false, applyNowButtonId = null } = Astro.props
   const menuToggle = document.querySelector("#menuToggle") as HTMLInputElement;
   const mobileMenu = document.querySelector(".mobileMenu") as HTMLDivElement;
 
-  if (menuToggle) {
-    menuToggle.addEventListener("click", () => {
-      mobileMenu.classList.toggle("visible");
-    });
-  }
-
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("visible");
+  });
   const mobileMenuParents = document.querySelectorAll(
     ".mobileMenuParent"
   ) as NodeListOf<HTMLDivElement>;
@@ -496,7 +515,7 @@ const { hideMenu = false, applyNowButtonId = null } = Astro.props
     el.addEventListener("click", () => {
       subMenu.classList.toggle("visible");
       if (subMenu.classList.contains("visible")) {
-        subMenu.style.maxHeight = "1000vh";
+        subMenu.style.maxHeight = "100vh";
       } else {
         subMenu.style.maxHeight = "0px";
       }
