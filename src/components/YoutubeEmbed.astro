@@ -10,19 +10,29 @@ const { embedId, videoId } = Astro.props
 
 <script define:vars={{videoId, embedId}}>
 
-  document.querySelector(`[data-video-open="${videoId}"]`).addEventListener('click', () => {
-    document.querySelector(`.data-video-${videoId}`).classList.remove('opacity-0')
-    document.querySelector(`.data-video-${videoId}`).classList.remove('pointer-events-none')
-    document.querySelector(`.data-video-${videoId}`).innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${embedId}?autoplay=1&mute=0&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-  })
+  const videoTarget = document.querySelector(`[data-video-open="${videoId}"]`)
+  
+  if (videoTarget) {
+    videoTarget.addEventListener('click', () => {
+      document.querySelector(`.data-video-${videoId}`).classList.remove('opacity-0')
+      document.querySelector(`.data-video-${videoId}`).classList.remove('pointer-events-none')
+      document.querySelector(`.data-video-${videoId}`).innerHTML = `<iframe width="100%" height="100%" src="https://www.youtube.com/embed/${embedId}?autoplay=1&mute=0&enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+    })
+  }
 
-  document.querySelector(`.data-video-${videoId}`).addEventListener('click', () => {
-    document.querySelector(`.data-video-${videoId}`).classList.add('opacity-0')
-    document.querySelector(`.data-video-${videoId}`).classList.add('pointer-events-none')
-    document.querySelector(`.data-video-${videoId}`).innerHTML = ``
-  })
+  const videoElem = document.querySelector(`.data-video-${videoId}`)
 
-  document.querySelector(`.data-video-${videoId} iframe`).addEventListener('click', (e) => {
-    e.stopPropagation()
-  })
+  if (videoElem) {
+    videoElem.addEventListener('click', () => {
+      document.querySelector(`.data-video-${videoId}`).classList.add('opacity-0')
+      document.querySelector(`.data-video-${videoId}`).classList.add('pointer-events-none')
+      document.querySelector(`.data-video-${videoId}`).innerHTML = ``
+    })
+  }
+  const iframe = document.querySelector(`.data-video-${videoId} iframe`)
+  if (iframe) {
+    document.querySelector(`.data-video-${videoId} iframe`).addEventListener('click', (e) => {
+      e.stopPropagation()
+    })
+  }
 </script>

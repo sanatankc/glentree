@@ -60,7 +60,6 @@ import YoutubeEmbed from './YoutubeEmbed.astro';
             }
 
             video.target.load();
-            console.log('loadeddd. lazyy....')
             video.target.classList.remove("lazy");
             lazyVideoObserver.unobserve(video.target);
           }

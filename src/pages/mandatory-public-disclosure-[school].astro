@@ -344,7 +344,7 @@ const whitefieldData = {
 const { data: disclosure } = await getEntry('mandatoryPublicDisclosure', school) as CollectionEntry<'mandatoryPublicDisclosure'>
 // const title = data.title
 const data = disclosure.disclosure.reverse()
-// console.log('disclosure', data)
+// console.log('disclo sure', data)
 const schoolName = school === "sarjapur" ? "GLENTREE ACADEMY SARJAPUR" : "GLENTREE ACADEMY WHITEFIELD";
 
 ---
@@ -352,7 +352,7 @@ const schoolName = school === "sarjapur" ? "GLENTREE ACADEMY SARJAPUR" : "GLENTR
 <Layout title="Welcome to Astro.">
   <main class="flex flex-col relative text-black items-center">
     <TopNavigationBar />
-    <div class="h-[95.44px] w-full bg-black"></div>
+    <div class="h-[88px] w-full bg-black"></div>
     <Text type={"subtitle"} class="mt-10 max-md:mt-10 text-center">
       MANDATORY PUBLIC DISCLOSURE
     </Text>
@@ -366,7 +366,3 @@ const schoolName = school === "sarjapur" ? "GLENTREE ACADEMY SARJAPUR" : "GLENTR
   </main>
 </Layout>
 
-<script define:vars={{ sarjapurData, whitefieldData }}>
-  // console.log('sarjapurData...', sarjapurData)
-    // console.log('whitefieldData...', whitefieldData)
-</script>

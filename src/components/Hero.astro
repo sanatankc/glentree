@@ -22,8 +22,6 @@ import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
 const { data } = await getEntry('home', 'home') as CollectionEntry<'home'>
 const title = data.title
 
-console.log('data...', data)
-
 const slides = data.heroImages.map(({ image_desktop, image_mobile, position = 'top' }, i) => {
   const slide = image_desktop
   if (!image_mobile) {
@@ -47,7 +45,7 @@ const slides = data.heroImages.map(({ image_desktop, image_mobile, position = 't
 ---
 
 <div class="h-screen w-full bg-cover bg-top relative bg-black flex flex-col">
-  <div class="h-[110px] w-full bg-black"></div>
+  <div class="h-[96px] w-full bg-black"></div>
 
   <div class="relative w-full h-full">
     {
@@ -91,7 +89,7 @@ const slides = data.heroImages.map(({ image_desktop, image_mobile, position = 't
       <div
         class="h-full absolute bottom-0 left-0 flex w-full items-end max-md:px-6 max-md:py-3 slideshow-overlay px-16 py-8"
       >
-        <Text type="h3" class="text-center max-md:text-left">
+        <Text type="h3" class="text-center max-md:text-left pb-4">
           {title}
         </Text>
       </div>

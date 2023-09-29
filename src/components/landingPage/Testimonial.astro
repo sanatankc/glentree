@@ -11,11 +11,11 @@ import { Image } from 'astro:assets';
 
 import YoutubeEmbed from '../YoutubeEmbed.astro'
 ---
-<div class='bg-white p-14 pt-24 px-20 max-md:px-4 max-md:p-10 max-md:pb-0'>
-  <Constrain class="relative flex flex-col items-center max-md:items-start">
+<div class='bg-white p-14 pt-24 max-md:pt-2 px-20 max-md:px-4 max-md:p-10 max-md:pb-0'>
+  <Constrain class="relative flex flex-col items-center max-md:items-center max-md:text-center">
 
-    <Text type={'subtitle'} class='text-black' style={{ letterSpacing: '0.1em', opacity: 0.6 }}>Hear From Our Community</Text>
-    <Text type={'h2'} class='text-black mt-3 relative'>
+    <!-- <Text type={'subtitle'} class='text-black text-center w-full max-md:hidden' style={{ letterSpacing: '0.1em', opacity: 0.6 }}>Hear From Our Community</Text>
+    <Text type={'h2'} class='text-black mt-3 relative max-md:hidden'>
       See why <span class='text-accent2'>Glentree</span> is trusted
       <div class='w-[84px] h-[67px] absolute -top-16 -left-28'>
         <Image src={QuoteIcon} class='w-full' alt="Left Quote" />
@@ -23,7 +23,20 @@ import YoutubeEmbed from '../YoutubeEmbed.astro'
       <div class='w-[84px] h-[67px] absolute -bottom-2 -right-32 -scale-100'>
         <Image src={QuoteIcon} class='w-full' alt="Right Quote" />
       </div>
+    </Text> -->
+
+    <Text type={'h2'} class='text-black mt-3 relative max-md:block'>
+      <div>
+        Hear From Our <span class="text-accent2">Community</span>
+      </div>
+      <div class='w-[84px] h-[67px] absolute -top-16 -left-28'>
+        <Image src={QuoteIcon} class='w-full' alt="Left Quote" />
+      </div>
+      <div class='w-[84px] h-[67px] absolute -bottom-2 -right-32 -scale-100'>
+        <Image src={QuoteIcon} class='w-full' alt="Right Quote" />
+      </div>
     </Text>
+    <div class="max-md:p-0 p-3" />
     <!-- <div class='w-full h-[192px] rounded-2xl bg-white mt-7 border-gray-300 border overflow-hidden flex flex-row max-md:flex-col max-md:px-2 max-md:py-4 max-md:h-auto'>
       <div class='min-w-[34vw] max-md:w-[100%] max-md:min-h-[136px] bg-cover bg-center rounded-lg' style={{
         backgroundImage: `linear-gradient(90deg, rgba(255, 255, 255, 0) 40.82%, #FFFFFF 95.62%), url(${heroTestimonial})`
@@ -36,7 +49,7 @@ import YoutubeEmbed from '../YoutubeEmbed.astro'
         >
           “This school offers more than just education. Teachers give individual attention, and activities add to the wholesome learning experience...”
         </Text>
-        <div data-video-open="0">
+        <div data-video-open="0" class="max-md:flex max-md:justify-center">
           <Button class='mt-4'>
             <span>Watch Video</span>
             <svg slot="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,9 +60,9 @@ import YoutubeEmbed from '../YoutubeEmbed.astro'
       </div>
     </div> -->
 
-    <div class="w-full gap-7 flex flex-row max-md:flex-col mt-7">
+    <div class="w-full gap-7 flex flex-row max-md:flex-col mt-6">
       <div class="border border-gray-300 flex flex-row max-md:flex-col rounded-lg overflow-hidden"> 
-        <div class='min-w-[232px] max-md:min-h-[350px] max-md:bg-top bg-cover bg-center' style={{
+        <div class='min-w-[232px] max-md:min-h-[280px] max-md:bg-[10%_10%] bg-cover bg-center' style={{
           backgroundImage: `url(${testimonial1.src})`,
           backgroundSize: 'cover',
           
@@ -62,7 +75,7 @@ import YoutubeEmbed from '../YoutubeEmbed.astro'
 
           <Text type={'base'} class='text-black font-semibold mt-11 max-md:mt-4'>Dr. Priya Gupta</Text>
           <Text type={'base'} class='text-green-600 font-semibold mt-3'>Parent of Arohan Sen gupta</Text>
-          <div data-video-open="1">
+          <div data-video-open="1" class="max-md:flex max-md:justify-center">
             <Button class='mt-11 max-md:mt-4'>
               <span>Watch Video</span>
               <svg slot="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -74,7 +87,7 @@ import YoutubeEmbed from '../YoutubeEmbed.astro'
         </div>
       </div>
       <div class="border   border-gray-300 flex flex-row max-md:flex-col rounded-lg overflow-hidden"> 
-        <div class='min-w-[232px] max-md:min-h-[350px] max-md:bg-top bg-cover bg-center' style={{
+        <div class='min-w-[232px] max-md:min-h-[280px] max-md:bg-[10%_10%] bg-cover bg-center' style={{
           backgroundImage: `url(${testimonial2.src})`,
           backgroundSize: 'cover'
         }}>
@@ -85,8 +98,8 @@ import YoutubeEmbed from '../YoutubeEmbed.astro'
           </Text>
 
           <Text type={'base'} class='text-black font-semibold mt-11 max-md:mt-4'>Muskaan Jangid</Text>
-          <Text type={'base'} class='text-green-600 font-semibold mt-3'>Student</Text>
-          <div data-video-open="2">
+          <Text type={'base'} class='text-green-600 font-semibold mt-3'>Grade 10 Student</Text>
+          <div data-video-open="2" class="max-md:flex max-md:justify-center">
             <Button class='mt-11 max-md:mt-4'>
               <span>Watch Video</span>
               <svg slot="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

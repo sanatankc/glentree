@@ -1,4 +1,5 @@
 export const openCollapsible = (collapsible: HTMLElement) => {
+  if (!collapsible) return
   const collapsibleContent = collapsible.querySelector('.collapsible-content') as HTMLElement
   const collapseIcon = collapsible.querySelector('.collapse-icon')
   if (!collapseIcon) return
@@ -8,6 +9,8 @@ export const openCollapsible = (collapsible: HTMLElement) => {
 }
 
 export const closeCollapsible = (collapsible: HTMLElement) => {
+  if (!collapsible) return
+
   const collapsibleContent = collapsible.querySelector('.collapsible-content') as HTMLElement
   const collapseIcon = collapsible.querySelector('.collapse-icon')
   if (!collapseIcon) return
@@ -17,6 +20,7 @@ export const closeCollapsible = (collapsible: HTMLElement) => {
 }
 
 const toggleCollapsible = (collapsible: HTMLElement) => {
+  if (!collapsible) return
   const collapsibleContent = collapsible.querySelector('.collapsible-content') as HTMLElement
   const collapseIcon = collapsible.querySelector('.collapse-icon')
   if (!collapseIcon) return
@@ -39,7 +43,6 @@ const collapsible = (collapseGroupClassName: string, defaultOpen = 0) => {
     const collapseIcon = document.querySelector('.collapse-icon')
     if (collapsibleContent && collapseIcon) {
       collapsible.addEventListener('click', () => {
-        console.log('click')
         collapsibles.forEach((collapsible: HTMLElement, n: number) => {
           if (i !== n) {
             closeCollapsible(collapsible)
