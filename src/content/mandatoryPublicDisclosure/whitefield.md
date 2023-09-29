@@ -1,10 +1,10 @@
 ---
 disclosure:
-  - title: Cancelled Lease Deed
+  - title: Land Certificate
     disclosure: >
       [View
-      Here](https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/Cancelled%20Lease%20deed.pdf
-      "Cancelled Lease deed.pdf")
+      Here](https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/Land%20certificate%20-%20GAW.pdf
+      "View Here")
   - title: Gift Deed
     disclosure: >
       [View
@@ -13,8 +13,8 @@ disclosure:
   - title: Lease Deed
     disclosure: >
       [VIEW
-      HERE](https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/Cover%20Letter%20Old%20&%20New%20Lease%20Deed.pdf
-      "Cover Letter Old & New Lease Deed.pdf")
+      HERE](https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/LEASE%20DEED%20GAW%20Updated.pdf
+      "Lease Deed")
   - title: Affidavit - Non Proprietory
     disclosure: >
       [VIEW HERE](/images/gaw-affidavitNonProprietory.pdf
@@ -62,9 +62,6 @@ disclosure:
   - title: Academic Calender 2023-24
     disclosure: |
       [VIEW HERE](/images/gaw-AcademicCalendar.pdf "gaw-AcademicCalendar.pdf")
-  - title: Land Certificate
-    disclosure: |
-      [VIEW HERE](/images/gaw-landCertificate.pdf "gaw-landCertificate.pdf")
   - title: Drinking Water & Sanitary
     disclosure: >
       [VIEW HERE](/images/gaw-Drinking-Water-Sanitary-Whitefield.pdf
@@ -120,6 +117,23 @@ disclosure:
     disclosure: |
       2015
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

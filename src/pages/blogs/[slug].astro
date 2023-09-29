@@ -1,0 +1,116 @@
+---
+import TopNavigationBar from '../../components/TopNavigationBar.astro';
+import Text from '../../components/system/Text.astro';
+import { marked } from 'marked'
+import Layout from '../../layouts/Layout.astro';
+
+import '../../global.css'
+import { Image } from 'astro:assets';
+
+import { getEntries, getEntry, type CollectionEntry, getCollection } from 'astro:content';
+
+import Footer from "../../components/landingPage/Footer.astro";
+
+const { slug = '' } = Astro.params;
+
+export async function getStaticPaths() {
+  const allBlogs = await getCollection('blogs')
+  return allBlogs.map(({ slug }) => ({
+    params: {
+      slug
+    }
+  }))
+}
+
+const blogContent = await getEntry('blogs', slug) as CollectionEntry<'blogs'>
+const data = blogContent?.data
+
+const blogContentHTML = marked.parse(data.blog)
+
+---
+
+
+<Layout title="Importance of Physical Education">
+  <main class="flex flex-col h-screen w-screen relative bg-white">
+    <div 
+      class="flex-1 main-container h-screen w-screen"
+      style={{
+        overflowY: 'overlay',
+        overflowX: 'hidden',
+      }}
+    >
+      <div class='flex flex-col bg-white'>
+        <div class='h-[95.44px] w-full bg-black'>
+        </div>
+        <TopNavigationBar />
+        <div class='bg-gradient-to-t from-[#d7ffeb] to-[#ffddb6] w-full flex flex-col items-center py-20 max-md:py-6 max-md:px-6 h-[calc(100%-700px)]'>
+          <div class="bg-black p-1 px-2 uppercase rounded">
+            <Text type="sm" class='font-bold'>
+              {data.category}
+            </Text>
+          </div>
+          <div class="p-4"></div>
+          <Text 
+            type='h2'
+            class='max-w-[800px] text-center text-black'
+          >{data.title}</Text>
+          <div class="p-3"></div>
+          <Text 
+            type="base"
+            class='max-w-[800px] text-center text-black'
+          >{data.caption}</Text>
+          <div class="p-6 max-md:p-3"></div>
+          <div class="w-64 h-1 bg-black"></div>
+          <div class="p-1"></div>
+          <div class="w-64 h-1 bg-black"></div>
+          <div class="p-6 max-md:p-3"></div>
+          <div class="max-md:hidden block">
+            <div class="h-[450px]">
+              <Image 
+                src={data.thumbnail}
+                alt="education-1"
+                class="border-slate-500/60 h-[450px] border-4 p-2 object-cover"
+                width={800}
+                height={500}
+              />
+            </div>
+          </div>
+          <div class="md:hidden block">
+            <div class="h-[250px]">
+              <Image 
+                src={data.thumbnail}
+                alt="education-1"
+                class="border-slate-500/60 h-[250px] border-4 p-2 object-cover"
+                width={800}
+                height={200}
+              />
+            </div>
+          </div>
+        </div>
+        <div class='
+          content text-black mt-12 max-w-[800px] m-auto
+          text-lg max-md:text-base
+          max-md:px-5 max-md:mt-8
+          [&>h3]:text-2xl [&>h3]:tracking-tight [&>h3]:font-display [&>h3]:max-md:text-2xl
+          [&>ol]:list-decimal [&>ol]:list-inside
+          flex flex-col gap-4
+          pb-8
+          [&>*]:w-full
+          [&>p>img]:w-full
+          [&>img]:w-full
+          ' 
+        set:html={blogContentHTML}
+        >
+
+        </div>
+      </div>
+  <Footer />
+
+    </div>
+
+  </main>
+</Layout>
+
+<script define:vars={{ data: blogContent?.data }}>
+  console.log('data..', data)
+</script>
