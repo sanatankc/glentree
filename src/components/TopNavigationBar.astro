@@ -12,7 +12,7 @@ interface Menu {
   submenu?: {
     title: string;
     link: string;
-    newTab: boolean;
+    newTab?: boolean;
   }[];
 }
 const menu: Array<Menu> = [
@@ -23,10 +23,6 @@ const menu: Array<Menu> = [
   {
     title: "About Us",
     link: "/about-us",
-  },
-  {
-    title: "Blog",
-    link: "/blog",
   },
   {
     title: "Academics",
