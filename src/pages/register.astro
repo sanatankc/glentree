@@ -161,6 +161,12 @@ const faqs = [
         <TopNavigationBar hideMenu applyNowButtonId="register-page-apply-now" />
         <div class="h-[88px] w-full bg-black"></div>
 
+        <!-- <div class="bg-yellow p-2 text-center text-black flex flex-row max-md:flex-col justify-center items-center group">
+          <Text type='regular' class="font-bold uppercase tracking-widest">Limited-period offer</Text>
+          <div class="px-2" />
+          <Text type='base' class="font-bold">Rs. 10,000 off on Admission Fees</Text>
+        </div> -->
+
         <div class="w-full flex-1 h-full relative p-12 py-2 flex flex-row max-md:flex-col justify-between items-center max-md:p-8 max-md:px-4">
           <div class="w-full h-full absolute top-0 left-0 max-md:hidden">
             <Slide
@@ -200,7 +206,7 @@ const faqs = [
           <div class="max-md:p-36 max-md:block hidden"  />
 
           <div class="h-full flex flex-row items-end relative z-20 self-end max-md:self-start">
-            <div class="flex flex-col max-md:items-center">
+            <div class="flex flex-col max-md:items-center mb-10 max-md:mb-2">
               <Text type="h3" class='text-white text-center'>Nurturing Lifelong Learners</Text>
               <div class="flex flex-row text-white mt-4">
                 <div class="w-[160px] max-md:w-[115px] py-1 flex justify-center bg-accent rounded-tl-md rounded-bl-md">
@@ -223,7 +229,7 @@ const faqs = [
           <RegisterForm />
         </div>
         <AdmissionMarquee class="max-md:!hidden" />
-        <div class="w-[50px] h-[50px] down-arrow-button transition-all duration-500 rounded-[50%] bg-accent border-accent/60 border-[4px] absolute top-[96vh] left-[50%] z-[9999] flex items-center justify-center max-md:hidden">
+        <div class="w-[50px] h-[50px] down-arrow-button transition-all duration-500 rounded-[50%] bg-accent border-accent/60 border-[4px] absolute top-[97vh] left-[50%] z-[9999] flex items-center justify-center max-md:hidden">
           <div class="w-[18px] h-[9px] down-arrow-icon">
             <Image src={DownArrow} alt="Down Arrow" class="w-full h-full object-cover" />
           </div>
@@ -479,11 +485,11 @@ const faqs = [
     top: 0;
     left: -100px;
     opacity: 0.6;
-    animation: shine 3s ease-out infinite;
+    animation: shineDownArrow 3s ease-out infinite;
   }
 
   
-  @keyframes shine {
+  @keyframes shineDownArrow {
     0% {left: -100px}
     20% {left: 100%}
     100% {left: 100%}
@@ -506,16 +512,18 @@ const faqs = [
   // @@ts-ignore
 
   // dev script temp
-  const applyNowButton = document.querySelector(`[data-apply-now-button="register-page-apply-now"]`)
-  applyNowButton?.addEventListener('click', () => {
-    if (window.innerWidth > 768) {
-      const registerFormContainer = document.getElementById('register-form-container-desktop')
-      registerFormContainer?.scrollIntoView({ behavior: 'smooth' })
-    } else {
-      const registerFormContainer = document.getElementById('register-form-container-mobile')
-      registerFormContainer?.scrollIntoView({ behavior: 'smooth' })
-    }
-  })
+  const applyNowButtons = document.querySelectorAll(`[data-apply-now-button="register-page-apply-now"]`)
+  applyNowButtons.forEach((applyNowButton => {
+    applyNowButton?.addEventListener('click', () => {
+      if (window.innerWidth > 768) {
+        const registerFormContainer = document.getElementById('register-form-container-desktop')
+        registerFormContainer?.scrollIntoView({ behavior: 'smooth' })
+      } else {
+        const registerFormContainer = document.getElementById('register-form-container-mobile')
+        registerFormContainer?.scrollIntoView({ behavior: 'smooth' })
+      }
+    })
+  }))
 
   import collapsible, { openCollapsible } from '../components/admissions/collapsible'
   collapsible('.collapsible', null)
