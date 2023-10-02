@@ -7,6 +7,9 @@ import BigAdmissionCTA from '../components/BigAdmissionCTA.astro';
 import Button from '../components/system/Button.astro';
 
 import TopNavigationBar from '../components/TopNavigationBar.astro';
+import Carousel from '../components/system/Carousel.astro'
+import CarouselCard from '../components/system/CarouselCard.astro'
+
 import AdmissionMarquee from '../components/campus/admissionMarquee.astro';
 
 import NewsLetterForm from '../components/newsLetterForm.astro';
@@ -14,10 +17,7 @@ import NewsLetterForm from '../components/newsLetterForm.astro';
 import '../global.css'
 import GalleryMarquee from '../components/campus/galleryMarquee.astro';
 import Footer from '../components/landingPage/Footer.astro';
-import sowmia from '../images/campus/sowmia.png'
-// import schoolGAWBG from '../images/campus/gaw/school.jpg'
-// import schoolGASBG from '../images/campus/gas/school.jpeg'
-
+import sowmia from '../images/campus/sowmia.png';
 import galleryGAW1 from '../images/campus/gaw/gallery/1.jpeg'
 import galleryGAW2 from '../images/campus/gaw/gallery/2.jpeg'
 import galleryGAW3 from '../images/campus/gaw/gallery/3.jpeg'
@@ -69,10 +69,17 @@ import GAWupdate21 from '../images/campus/gaw/updates/21.jpeg'
 import GAWupdate24 from '../images/campus/gaw/updates/24.jpeg'
 
 import EarthLab from '../components/campus/earthLab.astro';
+
+
+
 const allowedCampusNames = ['whitefield', 'sarjapur']
-const { campusName = '' } = Astro.params
+const { campusName = '', slug } = Astro.params
 import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
 import ContactUs from '../components/campus/contactUs.astro';
+import DeckCard from '../components/DeckCard.astro';
+import DeckCardWithGallery from '../components/DeckCardWithGallery.astro';
+import CampusFacilities from '../components/campusFacilities.astro';
+
 const { data } = await getEntry('campus',campusName) as CollectionEntry<'campus'>
 
 // export function getStaticPaths() {
@@ -81,6 +88,7 @@ const { data } = await getEntry('campus',campusName) as CollectionEntry<'campus'
 //     { params: { campusName: "sarjapur" } },
 //   ];
 // }
+
 
 if (!allowedCampusNames.includes(campusName)) {
   const error = await fetch(`${Astro.url}/404`)
@@ -178,6 +186,8 @@ const updateImagesGAW: {title: string, image: string}[] = [
 const updateImages = campusName === 'whitefield' ? updateImagesGAW : updateImagesGAS
 
 const campus = campusData[campusName]
+
+const currentPath = Astro.url.pathname
 ---
 
 {allowedCampusNames.includes(campusName) && (
@@ -238,22 +248,25 @@ const campus = campusData[campusName]
 
           <NewsLetterForm campusName={campusName} />
   
-          <div class='text-black pl-20 pr-12 pt-16 pb-14 max-md:p-4 max-md:py-8 max-md:pb-2'>
-            <Constrain class=' flex items-center justify-between max-md:flex-col max-md:items-start'>
-              <div>
-                <Text type={'subtitle'} style={{ color: 'rgba(18, 18, 18, 0.6)' }}>SNAPSHOTS</Text>
-                <Text type={'h2'}>Around the <span class='text-accent'>Campus</span></Text>
-              </div>
-              <a href={data.virtualCampusLink} target='_blank'>
-                <Button class='max-md:hidden'>Launch Virtual Campus Tour</Button>
-              </a>
-            </Constrain>
-          </div>
-  
-          <GalleryMarquee images={data.galleryImages} />
           <a href={data.virtualCampusLink} target='_blank'>
             <Button class='max-md:block hidden max-md:mt-2 max-md:ml-4'>Launch Virtual Campus Tour</Button>
           </a>
+
+        <div class='text-black pl-20 pr-12 pt-16 pb-0 max-md:p-4 max-md:py-8 max-md:pb-2'>
+          <Constrain class=' flex items-center justify-between max-md:flex-col max-md:items-start'>
+            <div>
+              <Text type={'subtitle'} style={{ color: 'rgba(18, 18, 18, 0.6)' }}>SNAPSHOTS</Text>
+              <Text type={'h2'}>Around the <span class='text-accent'>Campus</span></Text>
+            </div>
+            <a href={data.virtualCampusLink} target='_blank'>
+              <Button class='max-md:hidden'>Launch Virtual Campus Tour</Button>
+            </a>
+          </Constrain>
+
+          <CampusFacilities currentLink={currentPath} campusName={campusName} />
+
+        </div>
+
           
 
   

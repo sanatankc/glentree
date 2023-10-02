@@ -1,0 +1,39 @@
+---
+import DeckCard from "./DeckCard.astro";
+import Gallery from "./Gallery.astro";
+const { 
+  deckContainerClass, 
+  cardHoverStyle,
+  id,
+  gallery,
+  deckImages=[0, 2],
+  link,
+  currentLink,
+  closeLink
+} = Astro.props
+
+const images = gallery.map(slide => (
+  {src: slide.src.src, alt: slide.caption}
+)).slice(...deckImages).reverse()
+
+const deckCardId = 'deck-' + id
+
+console.log('currentLink --> ', currentLink)
+---
+
+<DeckCard
+  images={images}
+  class={deckContainerClass}
+  cardHoverStyle={cardHoverStyle}
+  id={deckCardId}
+  target={id}
+  link={link}
+/>
+
+<Gallery
+  id={id}
+  gallery={gallery}
+  currentLink={currentLink}
+  link={link}
+  closeLink={closeLink}
+/>

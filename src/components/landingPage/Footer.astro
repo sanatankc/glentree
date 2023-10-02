@@ -11,6 +11,8 @@ import phoneIcon from '../../icons/Phone.svg'
 import locationIcon from '../../icons/Location.svg'
 import Text from '../system/Text.astro'
 import Constrain from '../system/Constrain.astro'
+import theDotStudioLogo from '../../images/theDotStudioLogo.svg'
+
 
 ---
 <div
@@ -62,8 +64,62 @@ import Constrain from '../system/Constrain.astro'
         </div>
       </div>
   
-      <div class='flex flex-row max-md:flex-col'>
+      <div class='flex flex-row gap-6 max-md:gap-0 max-md:flex-col'>
         <div class='max-md:mt-8 max-md:mb-5 max-w-[325px]'>
+          <Text type={'base'} class='text-white/50 !text-[18px] max-md:!text-[16px] uppercase tracking-[2.4px] mb-7 max-md:mb-3 font-semibold'>Apply Now</Text>
+  
+          <div class='flex flex-row items-center mb-3'>
+            <a target='_blank' href="/admissions" class="hover:underline">
+              <Text type={'regular'}>Admission Process</Text>
+            </a>
+          </div>
+  
+          <div class='flex flex-row items-center mb-3'>
+            <a target='_blank' href='/scholarship' class="hover:underline"><Text type={'regular'}>Scholarship</Text></a>
+          </div>
+
+        </div>
+        <div class="bg-white/20 w-[1px] h-full max-md:h-[1px] max-md:w-full"></div>
+        <div class='max-md:mt-8 max-md:mb-5 max-w-[325px]'>
+          <Text type={'base'} class='text-white/50 !text-[18px] max-md:!text-[16px] uppercase tracking-[2.4px] mb-7 max-md:mb-3 font-semibold'>Campuses</Text>
+  
+          <div class='flex flex-row items-center mb-3'>
+            <a target='_blank' href="/glentree-whitefield" class="hover:underline">
+              <Text type={'regular'}>Whitefield</Text>
+            </a>
+          </div>
+  
+          <div class='flex flex-row items-center mb-3'>
+            <a target='_blank' href='/glentree-sarjapur' class="hover:underline"><Text type={'regular'}>Sarjapur</Text></a>
+          </div>
+          <div class='flex flex-row items-center mb-3'>
+            <a target='_blank' href='/glentree-bannerghatta' class="hover:underline"><Text type={'regular'}>Bannerghetta</Text></a>
+          </div>
+
+        </div>
+        <div class="bg-white/20 w-[1px] h-full max-md:h-[1px] max-md:w-full"></div>
+        <div class='max-md:mt-8 max-md:mb-5 max-w-[325px]'>
+          <Text type={'base'} class='text-white/50 !text-[18px] max-md:!text-[16px] uppercase tracking-[2.4px] mb-7 max-md:mb-3 font-semibold'>Contact us</Text>
+  
+          <div class='flex flex-row items-center mb-3'>
+            <div class='w-5 flex-shrink-0'>
+              <Image src={emailIcon} alt="Email Icon" class="w-full h-full">
+            </div>
+            <a target='_blank' href="mailto:admission.wf@glentreeacademy.coms" class="hover:underline">
+              <Text type={'regular'} class='ml-2'>admission.gaw@glentreeacademy.com</Text>
+            </a>
+          </div>
+  
+          <div class='flex flex-row items-center mb-3'>
+            <div class='w-5'>
+              <Image src={phoneIcon} alt="Phone Icon" class="w-full h-full">
+            </div>
+            <a target='_blank' href='tel:+917899738130' class="hover:underline"><Text type={'regular'} class='ml-2'>+91 7899738130</Text></a>
+  
+          </div>
+
+        </div>
+        <!-- <div class='max-md:mt-8 max-md:mb-5 max-w-[325px]'>
           <Text type={'base'} class='text-green-300 mb-7 max-md:mb-3 font-semibold'>Whitefield</Text>
   
           <div class='flex flex-row items-center mb-3'>
@@ -119,7 +175,7 @@ import Constrain from '../system/Constrain.astro'
               <Text type={'regular'} class='ml-2'>No.36/5,Halanayakanahalli,Varthur Hobli Bengaluru East Taluk,Bengaluru, Karnataka 560035</Text>
             </a>
           </div>
-        </div>
+        </div> -->
         
       </div>
     </Constrain>
@@ -128,23 +184,31 @@ import Constrain from '../system/Constrain.astro'
   <div class='w-full h-[1px] bg-gray-500/40 mt-12 max-md:mt-5 max-md:w-[85%]'></div>
 
   <div class='py-6 font-normal px-16 w-full  max-md:px-6 text-center'>
-    <Constrain class="flex flex-row max-md:flex-col">
-      <Text type={'regular'}>
-        Copyright © 2023 &nbsp;
-      </Text>
-      <Text type={'regular'}>
-        {' • '} Mandatory CBSE Public Disclosure: 
-        <a 
-          href="/mandatory-public-disclosure-whitefield" 
-          class="underline"
-        >Whitefield</a>
-        <span>{' | '}</span>
-        <a 
-          href="/mandatory-public-disclosure-sarjapur"
-          class="underline"
-        >Sarjapur</a>
-      </Text>
-
+    <Constrain class="flex flex-row max-md:flex-col items-center justify-between">
+      <div class="flex flex-row items-center max-md:flex-col">
+        <Text type={'regular'}>
+          Copyright © 2023 &nbsp;
+        </Text>
+        <Text type={'regular'}>
+          <span class="max-md:hidden">{' • '}</span> Mandatory CBSE Public Disclosure: 
+          <br class="hidden max-md:block" />
+          <a 
+            href="/mandatory-public-disclosure-whitefield" 
+            class="underline"
+          >Whitefield</a>
+          <span>{' | '}</span>
+          <a 
+            href="/mandatory-public-disclosure-sarjapur"
+            class="underline"
+          >Sarjapur</a>
+        </Text>
+      </div>
+      <div class="max-md:pt-3 pt-0"></div>
+      <div>
+        <a href="https://thedotstudio.in/" target="_blank">
+          <Image src={theDotStudioLogo} class="w-[250px] max-md:w-[200px]" alt={"The Dot Studio Logo"} />
+        </a>
+      </div>
     </Constrain>
   </div>
 </div>

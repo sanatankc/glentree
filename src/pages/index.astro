@@ -23,12 +23,14 @@ import psjaAward from '../images/psjaAward.png'
 import meritAwards from '../images/meritAwards.png'
 import VittalFounderDesk from '../components/vittalFounderDesk.astro';
 import { Image } from 'astro:assets';
+import Constrain from '../components/system/Constrain.astro';
+import GlentreerCareer from '../components/GlentreerCareer.astro';
 
 
 ---
 
 <Layout title="Welcome to Astro.">
-  <main class="flex flex-col h-screen max-md:h-auto w-screen relative">
+  <main class="flex flex-col h-screen max-md:h-auto w-screen relative bg-white">
     <div 
       class="flex-1 main-container max-md:h-auto h-screen w-screen"
       id="scroll-area"
@@ -115,6 +117,10 @@ import { Image } from 'astro:assets';
       <!-- Glentree Family -->
       <GlentreeFamily />
 
+      <GlentreerCareer />
+      
+      <div class="pb-6" />
+
 
       <!-- Footer -->
     <Footer />
@@ -161,4 +167,23 @@ import { Image } from 'astro:assets';
 .my-float{
 	margin-top:16px;
 }
+
+#arrow-button-about-us-career {
+  transition: 0.3s all ease-in-out;
+}
+#arrow-button-about-us-career.hovered {
+  transform: translatex(10px) translatey(-10px);
+}
+
 </style>
+
+<script>
+  const joinCareerCta = document.getElementById('about-us-join-career-cta')
+  const arrowButton = document.getElementById('arrow-button-about-us-career')
+  joinCareerCta?.addEventListener('mouseenter', () => {
+    arrowButton.classList.add('hovered')
+  })
+  joinCareerCta?.addEventListener('mouseleave', () => {
+    arrowButton.classList.remove('hovered')
+  })
+</script>

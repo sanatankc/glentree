@@ -3,11 +3,13 @@ import Modal from "./system/Modal.astro";
 import Text from "./system/Text.astro";
 import arrow from '../icons/arrow.svg';
 
-const { id, gallery } = Astro.props
+const { id, gallery, currentLink, link, closeLink } = Astro.props
 const slideId = 'slide' + id
+
+console.log('link ---> ', currentLink, link)
 ---
 
-<Modal id={id} class="h-screen backdrop-blur-sm p-9 max-md:p-0" containerClass="max-md:flex max-md:items-center">
+<Modal openDefault={Boolean(currentLink === link && link && currentLink)} link={link} closeLink={closeLink} id={id} class="h-screen backdrop-blur-sm p-9 max-md:p-0" containerClass="max-md:flex max-md:items-center">
   <div class="bg-white rounded-md w-full h-full max-md:h-auto p-3 max-md:p-0">
     <div class="w-full h-full relative overflow-hidden rounded-md">
       {gallery.map((slide: {
