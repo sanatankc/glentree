@@ -34,6 +34,10 @@ import NewCampusShowcase from '../components/campus/newCampusShowcase.astro';
 import BigAdmissionCTA from '../components/BigAdmissionCTA.astro';
 import ContactUs from '../components/campus/contactUs.astro';
 
+import campus1 from '../images/campus/gab/slides/campus1.png'
+import campus2 from '../images/campus/gab/slides/campus2.png'
+import earthLab from '../images/campus/gab/slides/earthLab.png'
+
 const academics = [
   {
     title: 'Pre-Primary',
@@ -110,7 +114,7 @@ const academics = [
 <Layout title="Welcome to Astro.">
   <main class="flex flex-col min-h-screen max-md:h-auto w-screen relative bg-white">
     <div 
-      class="flex-1 flex flex-col main-container max-md:h-auto min-h-screen w-screen"
+      class="flex-1 flex flex-col main-container max-md:h-auto min-h-[screen w-screen"
       id="scroll-area"
       style={{
         overflowY: 'overlay',
@@ -118,8 +122,8 @@ const academics = [
       }}
     >
     
-      <div class='flex flex-col max-md:h-auto min-h-screen'>
-        <TopNavigationBar hideMenu />
+      <div class='flex flex-col max-md:h-auto min-h-[99.5vh]'>
+        <TopNavigationBar />
         <div class="h-[88px] w-full bg-black"></div>
         <div class="bg-yellow p-2 text-center text-black flex flex-row max-md:flex-col justify-center items-center cursor-pointer group">
           <Text type='base' class="font-bold">Avail our Early Bird Offer</Text>
@@ -143,8 +147,9 @@ const academics = [
           <div class="w-full h-full absolute top-0 left-0">
             <Slide
               slides={[
-                { image_desktop: slide1.src, image_mobile: slide1MB.src, position: 'center' },
-                { image_desktop: slide2.src, image_mobile: slide2MB.src, position: 'center' }
+                { image_desktop: campus2.src, image_mobile: campus2.src, position: 'center' },
+                { image_desktop: earthLab.src, image_mobile: earthLab.src, position: 'center' },
+                { image_desktop: campus1.src, image_mobile: campus1.src, position: 'center' },
               ]}
               id="resiter-page-hero"
             />
@@ -191,7 +196,7 @@ const academics = [
             <div
               class='w-full flex-1 max-w-[350px] max-md:max-w-[1000px] min-h-[200px] mr-[1px] flex flex-col text-white items-center justify-center relative bg-cover no-repeat'
               style={{
-                backgroundImage: `url(${academic.image})`
+                backgroundImage: `url(${academic.image.src})`
             }}>
               <div class='w-full h-full mix-blend-multiply absolute z-0' style={{
                 background: academic.background,
@@ -253,7 +258,7 @@ const academics = [
       }}
     />
 
-    <div class="w-full items-center flex flex-col bg-white">
+    <!-- <div class="w-full items-center flex flex-col bg-white">
       <div class="p-4" />
       <Text type={'subtitle'} class='text-black/60'>THINGS TO NOTE</Text>
       <Text type={'h2'} class='mt-2 text-black'>FAQs</Text>
@@ -307,7 +312,7 @@ const academics = [
         </Collapsible>
       </div>
       <div class="p-3" />
-    </div>
+    </div> -->
 
 
     
