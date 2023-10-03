@@ -83,7 +83,7 @@ console.log('link ---> ', currentLink, link)
     const descriptionText = document.querySelector<HTMLElement>(`[data-description-id="${slideId}"]`)
   
     const allCaptions = captionText.dataset.slidesCaptions.split(',')
-    const allDescriptions = descriptionText.dataset.slidesDescriptions.split(',')
+    
 
     const allSlides = document.querySelectorAll<HTMLElement>(`[data-target-slide="${slideId}"]`)
     const allSlidesLength = allSlides.length
@@ -95,7 +95,11 @@ console.log('link ---> ', currentLink, link)
     
     const newCaption = allCaptions[prevSlideIndex]
     captionText.innerText = newCaption
-    descriptionText.innerText = allDescriptions[prevSlideIndex]
+
+    if (descriptionText) {
+      const allDescriptions = descriptionText.dataset.slidesDescriptions.split(',')
+      descriptionText.innerText = allDescriptions[prevSlideIndex]
+    }
 
 
     activeSlide.dataset.isActive = 'false'

@@ -4,11 +4,20 @@ import Text from '../system/Text.astro';
 import { Image } from 'astro:assets';
 import blobBG from '../../images/blobBG.svg'
 import DeckCard from '../DeckCard.astro';
-import earthLab from '../../images/earthLab.png'
 import taekwondo from '../../images/coscholastics/Taekwondo.jpg'
 import bulletStar from '../../images/bulletStar.svg'
 import bulletStarGreen from '../../images/bulletStarGreen.svg'
 import Gallery from '../Gallery.astro';
+
+import campus1 from '../../images/campus/gab/slides/campus1.png'
+import campus2 from '../../images/campus/gab/slides/campus2.png'
+import campus3 from '../../images/campus/gab/slides/campus3.png'
+import computerLab from '../../images/campus/gab/slides/computerLab.jpg'
+import earthLab from '../../images/campus/gab/slides/earthLab.png'
+import playArea from '../../images/campus/gab/slides/playArea.jpg'
+import receptionArea from '../../images/campus/gab/slides/receptionArea.jpg'
+import sportsFacilities from '../../images/campus/gab/slides/sportsFacilities.png'
+
 
 ---
 <div class="py-14 max-md:py-8 relative text-center flex flex-col items-center" style={{ background: 'linear-gradient(249.28deg, #FBFFF7 0%, #F6FFED 0%, #FFFAF7 100%)' }} >
@@ -68,7 +77,13 @@ import Gallery from '../Gallery.astro';
   <Gallery
     id="new-campus-showcase"
     gallery={[
-      { src: taekwondo, caption: "Taekwondo" },
+      { src: campus1, caption: "Campus" },
+      { src: campus2, caption: "Campus" },
+      { src: campus3, caption: "Campus" },
+      { src: receptionArea, caption: "Reception Area" },
+      { src: sportsFacilities, caption: "Sports Facilities" },
+      { src: playArea, caption: "Play Area" },
+      { src: computerLab, caption: "Computer Lab" },
       { src: earthLab, caption: "Earth Lab" },
     ]}
   />

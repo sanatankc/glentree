@@ -250,6 +250,25 @@ const currentPath = Astro.url.pathname
 
           <NewsLetterForm campusName={campusName} />
   
+          <a href={data.virtualCampusLink} target='_blank'>
+            <Button class='max-md:block hidden max-md:mt-2 max-md:ml-4'>Launch Virtual Campus Tour</Button>
+          </a>
+
+        <div class='text-black pl-20 pr-12 pt-16 pb-0 max-md:p-4 max-md:py-8 max-md:pb-2'>
+          <Constrain class=' flex items-center justify-between max-md:flex-col max-md:items-start'>
+            <div>
+              <Text type={'subtitle'} style={{ color: 'rgba(18, 18, 18, 0.6)' }}>SNAPSHOTS</Text>
+              <Text type={'h2'}>Around the <span class='text-accent'>Campus</span></Text>
+            </div>
+            <a href={data.virtualCampusLink} target='_blank'>
+              <Button class='max-md:hidden'>Launch Virtual Campus Tour</Button>
+            </a>
+          </Constrain>
+
+          <CampusFacilities currentLink={currentPath} campusName={campusName} />
+
+        </div>
+
           
 
   

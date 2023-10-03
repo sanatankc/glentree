@@ -40,9 +40,10 @@ const collapsible = (collapseGroupClassName: string, defaultOpen = 0) => {
 
   collapsibles.forEach((collapsible: HTMLElement, i: number) => {
     const collapsibleContent = collapsible.querySelector('.collapsible-content')
+    const collapsibleTarget = collapsible.querySelector('div:first-child')
     const collapseIcon = document.querySelector('.collapse-icon')
     if (collapsibleContent && collapseIcon) {
-      collapsible.addEventListener('click', () => {
+      collapsibleTarget.addEventListener('click', () => {
         collapsibles.forEach((collapsible: HTMLElement, n: number) => {
           if (i !== n) {
             closeCollapsible(collapsible)

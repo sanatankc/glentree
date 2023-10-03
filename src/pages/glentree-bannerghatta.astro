@@ -25,7 +25,6 @@ import overviewRegisterPageBG from '../images/overviewRegisterPageBG.png'
 import RegisterForm from '../components/register/registerForm.astro'
 import Slide from '../components/system/Slide.astro';
 import awards from "../images/awards.svg"
-
 import slide1 from "../images/slides/1.jpg";
 import slide1MB from "../images/slides/1-mb.jpeg";
 import slide2 from "../images/slides/2.jpeg";
@@ -36,7 +35,14 @@ import ContactUs from '../components/campus/contactUs.astro';
 
 import campus1 from '../images/campus/gab/slides/campus1.png'
 import campus2 from '../images/campus/gab/slides/campus2.png'
+import campus3 from '../images/campus/gab/slides/campus3.png'
+import computerLab from '../images/campus/gab/slides/computerLab.png'
 import earthLab from '../images/campus/gab/slides/earthLab.png'
+import playArea from '../images/campus/gab/slides/playArea.png'
+import receptionArea from '../images/campus/gab/slides/receptionArea.png'
+import sportsFacilities from '../images/campus/gab/slides/sportsFacilities.png'
+
+import Faqs from '../components/faqs.astro';
 
 const academics = [
   {
@@ -84,30 +90,8 @@ const academics = [
       ],
     ] 
   },
-  // {
-  //   title: 'Middle & High School',
-  //   image: MiddleAndHighBG,
-  //   link: 'https://glentreeacademy.com/curriculum/middle-and-high',
-  //   background: '#6F322E',
-  //   grade: 'Grade V-X',
-  //   points: [
-  //     [               
-  //       "Creative thinking & Research",
-  //       "Community Learning",
-  //       "Language Arts (English, Hindi, Kannada)",
-  //       "Math, Science and ICT",
-  //     ],
-  //     [
-  //       "Social Studies",
-  //       "STEM Lab",
-  //       "“Connecting the Dots” Program",
-  //       "Regular Assessments",
-  //       "Bi-annual Exams",
-  //     ]
-  //   ]
-
-  // },
 ]
+
 
 ---
 
@@ -125,7 +109,7 @@ const academics = [
         <TopNavigationBar />
         <div class="h-[88px] w-full bg-black"></div>
         <div class="bg-yellow p-2 text-center text-black flex flex-row max-md:flex-col justify-center items-center cursor-pointer group">
-          <Text type='base' class="font-bold">Avail our Early Bird Offer</Text>
+          <Text type='base' class="font-bold">Avail our Early Admission Offer</Text>
           <div class="px-4" />
           <div class="flex flex-row items-center">
             <Text type='regular' class="font-bold uppercase tracking-widest">EXPLORE OFFER</Text>
@@ -257,61 +241,14 @@ const academics = [
       }}
     />
 
-    <!-- <div class="w-full items-center flex flex-col bg-white">
+    <div class="w-full items-center flex flex-col bg-white">
       <div class="p-4" />
       <Text type={'subtitle'} class='text-black/60'>THINGS TO NOTE</Text>
       <Text type={'h2'} class='mt-2 text-black'>FAQs</Text>
       <div class="p-4" />
-      <div class="flex flex-col items-center gap-5 ">
-        <Collapsible title='Transportation' class='mb-5' collapseGroup='collapsible'>
-          <ul class="list-disc marker:text-2xl relative left-5 w-[95%]">
-            <li>
-              <Text type={'regular'}>Students using the school bus must be at the bus stop at least 5 minutes before the scheduled arrival time.</Text>
-            </li>
-            <li>
-              <Text type={'regular'}>The bus will stop only at the designated pick-up point.</Text>
-            </li>
-            <li>
-              <Text type={'regular'}>Students must use their assigned bus and bus stop, and any changes require prior written permission from the school authorities.</Text>
-            </li>
-            <li>
-              <Text type={'regular'}>Pre-Primary and Primary children will only be released to their parent/guardian. If the parent/guardian is not present at the pick-up point, the child will be returned to the school, and parents must collect them directly from the school.</Text>
-            </li>
-            <li>
-              <Text type={'regular'}>Fees paid are non-refundable.</Text>
-            </li>
-          </ul>
-  
-          <div>
-  
-          </div>
-        </Collapsible>
-        <Collapsible title='B' class='mb-5' collapseGroup='collapsible'>
-          <ul class="list-disc marker:text-2xl relative left-5 w-[95%]">
-            <li>
-              <Text type={'regular'}>Students using the school bus must be at the bus stop at least 5 minutes before the scheduled arrival time.</Text>
-            </li>
-            <li>
-              <Text type={'regular'}>The bus will stop only at the designated pick-up point.</Text>
-            </li>
-            <li>
-              <Text type={'regular'}>Students must use their assigned bus and bus stop, and any changes require prior written permission from the school authorities.</Text>
-            </li>
-            <li>
-              <Text type={'regular'}>Pre-Primary and Primary children will only be released to their parent/guardian. If the parent/guardian is not present at the pick-up point, the child will be returned to the school, and parents must collect them directly from the school.</Text>
-            </li>
-            <li>
-              <Text type={'regular'}>Fees paid are non-refundable.</Text>
-            </li>
-          </ul>
-  
-          <div>
-  
-          </div>
-        </Collapsible>
-      </div>
+      <Faqs />
       <div class="p-3" />
-    </div> -->
+    </div>
 
 
     
