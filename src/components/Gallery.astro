@@ -25,31 +25,33 @@ console.log('link ---> ', currentLink, link)
           data-is-active={index === 0 ? "true" : "false"}
         />
       ))}
-      <div class="absolute w-full pt-[52px] pb-[33px] max-md:pb-[20px] bottom-0 left-0 flex justify-center items-center" style={{
-        background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%)'
-      }}>
-        <div class="flex flex-row min-w-[460px] max-md:min-w-[90%] justify-between items-center">
-          <div 
-            data-slide-pb 
-            data-target-slideId={slideId}
-            class="w-10 h-10 max-md:w-10 max-md:h-10 cursor-pointer" 
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24C44 35.0457 35.0457 44 24 44ZM28.0607 16.9393C27.4749 16.3536 26.5251 16.3536 25.9393 16.9393L19.9393 22.9393C19.3536 23.5251 19.3536 24.4749 19.9393 25.0607L25.9393 31.0607C26.5251 31.6464 27.4749 31.6464 28.0607 31.0607C28.6464 30.4749 28.6464 29.5251 28.0607 28.9393L23.1213 24L28.0607 19.0607C28.6464 18.4749 28.6464 17.5251 28.0607 16.9393Z" fill="white"/>
-            </svg>
-          </div>
+      <slot name="caption">
+        <div class="absolute w-full pt-[52px] pb-[33px] max-md:pb-[20px] bottom-0 left-0 flex justify-center items-center" style={{
+          background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%)'
+        }}>
+          <div class="flex flex-row min-w-[460px] max-md:min-w-[90%] justify-between items-center">
+            <div 
+              data-slide-pb 
+              data-target-slideId={slideId}
+              class="w-10 h-10 max-md:w-10 max-md:h-10 cursor-pointer" 
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24C44 35.0457 35.0457 44 24 44ZM28.0607 16.9393C27.4749 16.3536 26.5251 16.3536 25.9393 16.9393L19.9393 22.9393C19.3536 23.5251 19.3536 24.4749 19.9393 25.0607L25.9393 31.0607C26.5251 31.6464 27.4749 31.6464 28.0607 31.0607C28.6464 30.4749 28.6464 29.5251 28.0607 28.9393L23.1213 24L28.0607 19.0607C28.6464 18.4749 28.6464 17.5251 28.0607 16.9393Z" fill="white"/>
+              </svg>
+            </div>
             <Text type="subtitle" class="text-white" data-caption-id={slideId} data-slides-captions={[gallery.map(slide => slide.caption)]}>{gallery[0].caption}</Text>
-          <div
-            data-slide-nb
-          data-target-slideId={slideId}
-            class="-scale-100 w-10 h-10 max-md:w-10 max-md:h-10 cursor-pointer"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24C44 35.0457 35.0457 44 24 44ZM28.0607 16.9393C27.4749 16.3536 26.5251 16.3536 25.9393 16.9393L19.9393 22.9393C19.3536 23.5251 19.3536 24.4749 19.9393 25.0607L25.9393 31.0607C26.5251 31.6464 27.4749 31.6464 28.0607 31.0607C28.6464 30.4749 28.6464 29.5251 28.0607 28.9393L23.1213 24L28.0607 19.0607C28.6464 18.4749 28.6464 17.5251 28.0607 16.9393Z" fill="white"/>
-            </svg>
+            <div
+              data-slide-nb
+            data-target-slideId={slideId}
+              class="-scale-100 w-10 h-10 max-md:w-10 max-md:h-10 cursor-pointer"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24C44 35.0457 35.0457 44 24 44ZM28.0607 16.9393C27.4749 16.3536 26.5251 16.3536 25.9393 16.9393L19.9393 22.9393C19.3536 23.5251 19.3536 24.4749 19.9393 25.0607L25.9393 31.0607C26.5251 31.6464 27.4749 31.6464 28.0607 31.0607C28.6464 30.4749 28.6464 29.5251 28.0607 28.9393L23.1213 24L28.0607 19.0607C28.6464 18.4749 28.6464 17.5251 28.0607 16.9393Z" fill="white"/>
+              </svg>
+            </div>
           </div>
         </div>
-      </div>
+      </slot>
 
       <div class="w-12 h-12 absolute top-4 right-3 cursor-pointer bg-accent2/50 rounded-[50%] p-0" data-modal-close={id}>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="100%" height="100%" fill="none">
@@ -77,8 +79,11 @@ console.log('link ---> ', currentLink, link)
 
   const goToPrevSlide = slideId => {
     const captionText = document.querySelector<HTMLElement>(`[data-caption-id="${slideId}"][data-slides-captions]`)
+
+    const descriptionText = document.querySelector<HTMLElement>(`[data-description-id="${slideId}"]`)
   
     const allCaptions = captionText.dataset.slidesCaptions.split(',')
+    const allDescriptions = descriptionText.dataset.slidesDescriptions.split(',')
 
     const allSlides = document.querySelectorAll<HTMLElement>(`[data-target-slide="${slideId}"]`)
     const allSlidesLength = allSlides.length
@@ -90,6 +95,8 @@ console.log('link ---> ', currentLink, link)
     
     const newCaption = allCaptions[prevSlideIndex]
     captionText.innerText = newCaption
+    descriptionText.innerText = allDescriptions[prevSlideIndex]
+
 
     activeSlide.dataset.isActive = 'false'
     prevSlide.dataset.isActive = 'true'

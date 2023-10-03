@@ -1,5 +1,5 @@
 ---
-import DeckCard from "./DeckCardWithGallery.astro";
+import DeckCard from "./DeckCardWithGalleryCaption.astro";
 import Text from "./system/Text.astro";
 import GASupdate1 from '../images/campus/gas/updates/1.jpeg'
 import GASupdate2 from '../images/campus/gas/updates/2.jpeg'
@@ -20,8 +20,8 @@ console.log('facilityIoenn? ', currentLink)
       currentLink={currentLink}
       closeLink={`/glentree-${campusName}`}
       gallery={[
-        { src: GASupdate1, caption: "Example #1" },
-        { src: GASupdate1, caption: "Example #2" },
+        { src: GASupdate1, caption: "Example #1", description: "Equipped with the latest tech, our robotics lab offers top of the edge instruments for studnets to explore" },
+        { src: GASupdate1, caption: "Example #2", description: "Equipped with the latest tech, our robotics lab offers top of the edge instruments for studnets to explore" },
       ]}
       id="campus-facility1"
     />
@@ -85,8 +85,8 @@ console.log('facilityIoenn? ', currentLink)
       currentLink={currentLink}
       closeLink={`/glentree-${campusName}`}
       gallery={[
-        { src: GASupdate1, caption: "Example #1" },
-        { src: GASupdate1, caption: "Example #2" },
+        { src: GASupdate1, caption: "Example #1", description: "Equipped with the latest tech, our robotics lab offers top of the edge instruments for studnets to explore" },
+        { src: GASupdate1, caption: "Example #2", description: "Equipped with the latest tech, our robotics lab offers top of the edge instruments for studnets to explore" },
       ]}
       id="campus-facility2"
     />
@@ -99,8 +99,8 @@ console.log('facilityIoenn? ', currentLink)
       currentLink={currentLink}
       closeLink={`/glentree-${campusName}`}
       gallery={[
-        { src: GASupdate1, caption: "Example #1" },
-        { src: GASupdate1, caption: "Example #2" },
+        { src: GASupdate1, caption: "Example #1", description: "Equipped with the latest tech, our robotics lab offers top of the edge instruments for studnets to explore" },
+        { src: GASupdate1, caption: "Example #2", description: "Equipped with the latest tech, our robotics lab offers top of the edge instruments for studnets to explore" },
       ]}
       id="campus-facility3"
     />
