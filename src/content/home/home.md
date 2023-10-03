@@ -7,6 +7,7 @@ heroImages:
   - image_desktop: /images/7.6ea46354.jpg
     position: top
   - image_desktop: /images/6.7919d22c.jpg
+    image_mobile: /images/6.7919d22c-_1_.webp
     position: top
   - image_desktop: /images/5.dd0ff39a.jpg
     image_mobile: /images/5-mb.8e76eae6.jpg
@@ -24,6 +25,7 @@ heroImages:
     image_mobile: /images/1-mb.dce4c98c.jpg
     position: top
 ---
+
 
 
 
