@@ -46,6 +46,7 @@ import slide2MB from "../images/register/slides/mb/2.jpg";
 import slide3MB from "../images/register/slides/mb/3.jpg";
 
 import PhoneWhite from '../icons/PhoneWhite.svg'
+import Faqs from '../components/faqs.astro';
 
 
 const academics = [
@@ -387,33 +388,7 @@ const faqs = [
       <Text type={'subtitle'} class='text-black/60'>THINGS TO NOTE</Text>
       <Text type={'h2'} class='mt-2 text-black'>FAQs</Text>
       <div class="p-4" />
-      <div class="flex flex-col items-center gap-5 ">
-        {faqs.map(({ question, answer }) => (
-          <Collapsible title={question} titleClass='font-sans font-bold text-xl max-md:text-lg' class='mb-5' collapseGroup='collapsible' plusButtonClass="w-[35px] h-[35px] ml-1">
-            <ul class="list-disc marker:text-2xl relative left-5 w-[95%]">
-              <li>
-                <Text type={'regular'}>Students using the school bus must be at the bus stop at least 5 minutes before the scheduled arrival time.</Text>
-              </li>
-              <li>
-                <Text type={'regular'}>The bus will stop only at the designated pick-up point.</Text>
-              </li>
-              <li>
-                <Text type={'regular'}>Students must use their assigned bus and bus stop, and any changes require prior written permission from the school authorities.</Text>
-              </li>
-              <li>
-                <Text type={'regular'}>Pre-Primary and Primary children will only be released to their parent/guardian. If the parent/guardian is not present at the pick-up point, the child will be returned to the school, and parents must collect them directly from the school.</Text>
-              </li>
-              <li>
-                <Text type={'regular'}>Fees paid are non-refundable.</Text>
-              </li>
-            </ul>
-    
-            <div>
-    
-            </div>
-          </Collapsible>
-        ))}
-      </div>
+      <Faqs />
       <div class="p-3" />
     </div>
 
