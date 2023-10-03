@@ -211,12 +211,14 @@ const currentPath = Astro.url.pathname
             <Text type={'base'} class='mt-3 text-center max-md:w-[90%]' >{data.description}</Text>
             <Text type={'sm'} class='mt-3 text-center max-md:w-[90%]' >Permanent Affiliation No: {data.affiliationNo}</Text>  
           </div>
+
+          <AdmissionMarquee />
   
           <div 
             style={{
               background: 'linear-gradient(180deg, #000000 0%, #142C1E 100%)',
             }}
-            class="flex flex-col items-center py-20 max-md:py-12"
+            class="flex flex-col items-center py-14 max-md:py-12"
           >
 
           <div class='flex flex-row w-full items-center max-md:ml-0 max-md:px-6 box-border daisy daisy-2'>
@@ -248,25 +250,6 @@ const currentPath = Astro.url.pathname
 
           <NewsLetterForm campusName={campusName} />
   
-          <a href={data.virtualCampusLink} target='_blank'>
-            <Button class='max-md:block hidden max-md:mt-2 max-md:ml-4'>Launch Virtual Campus Tour</Button>
-          </a>
-
-        <div class='text-black pl-20 pr-12 pt-16 pb-0 max-md:p-4 max-md:py-8 max-md:pb-2'>
-          <Constrain class=' flex items-center justify-between max-md:flex-col max-md:items-start'>
-            <div>
-              <Text type={'subtitle'} style={{ color: 'rgba(18, 18, 18, 0.6)' }}>SNAPSHOTS</Text>
-              <Text type={'h2'}>Around the <span class='text-accent'>Campus</span></Text>
-            </div>
-            <a href={data.virtualCampusLink} target='_blank'>
-              <Button class='max-md:hidden'>Launch Virtual Campus Tour</Button>
-            </a>
-          </Constrain>
-
-          <CampusFacilities currentLink={currentPath} campusName={campusName} />
-
-        </div>
-
           
 
   
