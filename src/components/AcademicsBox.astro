@@ -96,12 +96,15 @@ const academics = [
   },
 ]
 
+const { noHeader } = Astro.props
 ---
 
 
-<div class='w-full p-14 text-black bg-white flex flex-col items-center max-md:p-6'>
-  <Text type={'subtitle'} class='text-black/80'>NEP ALIGNED</Text>
-  <Text type={'h2'} class='mt-2'><span class='text-accent2'>Academics</span></Text>
+<div class:list={['w-full p-14 text-black bg-white flex flex-col items-center max-md:p-6', noHeader && '!p-0 max-md:!p-0']}>
+  {!noHeader && (
+    <Text type={'subtitle'} class='text-black/80'>NEP ALIGNED</Text>
+    <Text type={'h2'} class='mt-2'><span class='text-accent2'>Academics</span></Text>
+  )}
   <div class='w-full flex-col flex items-center rounded-2xl max-md:rounded-2xl overflow-hidden mt-4 max-w-[1196px]'>
     {academics.map((academic) => (
        <div class='flex flex-row w-full mb-[2px] max-md:flex-col max-md:rounded-xl overflow-hidden max-md:mb-4'>
