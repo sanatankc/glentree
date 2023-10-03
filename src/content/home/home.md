@@ -15,6 +15,7 @@ heroImages:
     image_mobile: /images/4-mb.9fd3b1fc.jpg
     position: top
   - image_desktop: /images/3.jpg
+    image_mobile: /images/3 copy.webp
     position: center 20%
   - image_desktop: /images/2.8a97d424.jpg
     image_mobile: /images/2-mb.ae386964.jpg
@@ -23,6 +24,7 @@ heroImages:
     image_mobile: /images/1-mb.dce4c98c.jpg
     position: top
 ---
+
 
 
 
