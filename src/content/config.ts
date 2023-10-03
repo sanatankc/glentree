@@ -11,6 +11,18 @@ const campusCollection = defineCollection({
     galleryImages: z.any(),
     showcase: z.any(),
     affiliationNo: z.string(),
+    aroundTheCampus: z.object({
+      title: z.string(),
+      description: z.string(),
+      ctaText: z.string(),
+      gallery: z.array(
+        z.object({
+          image: z.string().optional(),
+          title: z.string().optional(),
+          description: z.string().optional(),
+        })
+      )
+    })
   }),
 });
 const homeCollection = defineCollection({

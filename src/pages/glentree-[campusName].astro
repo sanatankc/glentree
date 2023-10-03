@@ -82,14 +82,6 @@ import CampusFacilities from '../components/campusFacilities.astro';
 
 const { data } = await getEntry('campus',campusName) as CollectionEntry<'campus'>
 
-// export function getStaticPaths() {
-//   return [
-//     { params: { campusName: "whitefield" } },
-//     { params: { campusName: "sarjapur" } },
-//   ];
-// }
-
-
 if (!allowedCampusNames.includes(campusName)) {
   const error = await fetch(`${Astro.url}/404`)
   return new Response(error.body, {
@@ -188,6 +180,8 @@ const updateImages = campusName === 'whitefield' ? updateImagesGAW : updateImage
 const campus = campusData[campusName]
 
 const currentPath = Astro.url.pathname
+
+console.log('data... aroundTheCampus -> ', JSON.stringify(data.aroundTheCampus, null, 2))
 ---
 
 {allowedCampusNames.includes(campusName) && (
@@ -265,13 +259,32 @@ const currentPath = Astro.url.pathname
             </a>
           </Constrain>
 
-          <CampusFacilities currentLink={currentPath} campusName={campusName} />
-
+          <CampusFacilities
+            currentLink={currentPath}
+            campusName={campusName}
+            data={[
+              {
+                title: '<span>Academic</span> Facilities',
+                description: `Step into our modern, spacious classrooms equipped with the latest educational technology. We prioritise comfort and up-to-date resources to support your child’s optimal learning experience.
+                <ul>
+                  <li>Digitally Enabled Classrooms</li>
+                  <li>Wonder Room for Pre primary</li>
+                  <li>Well-stocked libraries</li>
+                  <li>Multi-purpose Amphitheatres</li>
+                  <li>CC TV Monitoring for added security.</li>
+                </ul>
+                `,
+                ctaText: '',
+                gallery: [{
+                  image: '',
+                  title: '',
+                  description: '',
+                }]
+              }
+            ]}
+          />
         </div>
 
-          
-
-  
           <div class='w-full mt-20 max-md:mt-8 mb-0 p-20 max-md:p-4 max-md:py-8 max-md:mb-0' style={{
             background: 'linear-gradient(180deg, #3C674F 0%, #23623F 51.08%, #0A5E2F 100%)',
           }}>
