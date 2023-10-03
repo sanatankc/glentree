@@ -3,10 +3,13 @@ title: |
   Nurturing Lifelong Learner
 heroImages:
   - image_desktop: /images/8.93e91d19.jpg
+    image_mobile: /images/8.93e91d19Sm-_1_.webp
     position: top
   - image_desktop: /images/7.6ea46354.jpg
+    image_mobile: /images/7.6ea46354Sm.webp
     position: top
   - image_desktop: /images/6.7919d22c.jpg
+    image_mobile: /images/6.7919d22c-_1_.webp
     position: top
   - image_desktop: /images/5.dd0ff39a.jpg
     image_mobile: /images/5-mb.8e76eae6.jpg
@@ -15,6 +18,7 @@ heroImages:
     image_mobile: /images/4-mb.9fd3b1fc.jpg
     position: top
   - image_desktop: /images/3.jpg
+    image_mobile: /images/3sm.webp
     position: center 20%
   - image_desktop: /images/2.8a97d424.jpg
     image_mobile: /images/2-mb.ae386964.jpg
@@ -23,6 +27,11 @@ heroImages:
     image_mobile: /images/1-mb.dce4c98c.jpg
     position: top
 ---
+
+
+
+
+
 
 
 
