@@ -505,7 +505,9 @@ const { hideMenu = false, applyNowButtonId = null } = Astro.props
   const mobileMenu = document.querySelector(".mobileMenu") as HTMLDivElement;
 
   menuToggle.addEventListener("click", () => {
-    mobileMenu.classList.toggle("visible");
+    if (mobileMenu) {
+      mobileMenu.classList.toggle("visible");
+    }
   });
   const mobileMenuParents = document.querySelectorAll(
     ".mobileMenuParent"
