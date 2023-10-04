@@ -1,23 +1,5 @@
 ---
-import Button from "./system/Button.astro";
 import Text from "./system/Text.astro";
-import { Image } from 'astro:assets';
-import psjaAward from "../images/psjaAward.png";
-import meritAwards from "../images/meritAwards.png";
-import heroBG from "../images/heroBG.png";
-import slide1 from "../images/slides/1.jpg";
-import slide1MB from "../images/slides/1-mb.jpeg";
-import slide2 from "../images/slides/2.jpeg";
-import slide2MB from "../images/slides/2-mb.jpeg";
-import slide3 from "../images/slides/3.jpg";
-import slide4 from "../images/slides/4.jpeg";
-import slide4MB from "../images/slides/4-mb.jpeg";
-import slide5 from "../images/slides/5.jpg";
-import slide5MB from "../images/slides/5-mb.jpeg";
-import slide6 from "../images/slides/6.jpg";
-import slide7 from '../images/slides/7.jpeg'
-import slide8 from '../images/slides/8.jpeg'
-
 import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
 const { data } = await getEntry('home', 'home') as CollectionEntry<'home'>
 const title = data.title
