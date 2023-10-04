@@ -22,7 +22,7 @@ const campusCollection = defineCollection({
           description: z.string().optional(),
         })
       )
-    })
+    }).optional(),
   }),
 });
 const homeCollection = defineCollection({
