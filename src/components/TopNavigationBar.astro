@@ -478,8 +478,6 @@ const { hideMenu = false, applyNowButtonId = null } = Astro.props
       clearTimeout(removeTimeout);
       menuChild.forEach((elC) => {
         if (elC !== menu) {
-          console.log("elC...", elC);
-          console.log("el...", el);
           elC.classList.remove("visible");
         }
       });
@@ -504,11 +502,11 @@ const { hideMenu = false, applyNowButtonId = null } = Astro.props
   const menuToggle = document.querySelector("#menuToggle") as HTMLInputElement;
   const mobileMenu = document.querySelector(".mobileMenu") as HTMLDivElement;
 
-  menuToggle.addEventListener("click", () => {
-    if (mobileMenu) {
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener("click", () => {
       mobileMenu.classList.toggle("visible");
-    }
-  });
+    });
+  }
   const mobileMenuParents = document.querySelectorAll(
     ".mobileMenuParent"
   ) as NodeListOf<HTMLDivElement>;

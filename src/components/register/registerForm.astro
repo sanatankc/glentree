@@ -77,9 +77,23 @@ if (Astro.request.method === "POST") {
         <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6792 8.61981C10.8892 8.39085 11.245 8.37547 11.4739 8.58544L16.8177 13.4862C17.0467 13.6962 17.062 14.052 16.8521 14.281C16.6421 14.5099 16.2863 14.5253 16.0573 14.3153L10.7136 9.41456C10.4846 9.20459 10.4692 8.84876 10.6792 8.61981Z" fill="#6C727F"/>
       </svg>
     </InputIcon>
+
+    <Select
+      placeholder="Choose Branch"
+      id="selectBranch"
+      title="Please select a branch"
+      options={[
+        "Whitefield",
+        "Sarjapur",
+        "Bannerghatta",
+      ]}
+      name="campus"
+      required
+    />
+
     <SelectPill
       placeholder="Select Grade"
-      id="selectGrade"
+      id="selectGrade1"
       title="Please select a grade"
       options={[
         "Nursery",
@@ -95,19 +109,26 @@ if (Astro.request.method === "POST") {
         "Grade 8",
         "Grade 9",
         "Grade 10",
+        "Grade 11",
       ]}
-      name="grade"
+      name="grade1"
+      required
     />
-    <Select
-      placeholder="Choose Branch"
-      id="selectBranch"
-      title="Please select a branch"
+    <SelectPill
+      placeholder="Select Grade"
+      id="selectGrade2"
+      title="Please select a grade"
       options={[
-        "Whitefield",
-        "Sarjapur",
-        "Bannerghatta",
+        "Nursery",
+        "LKG",
+        "UKG",
+        "Grade 1",
+        "Grade 2",
+        "Grade 3",
+        "Grade 4",
       ]}
-      name="campus"
+      name="grade2"
+      required
     />
    
     <Select
@@ -117,7 +138,8 @@ if (Astro.request.method === "POST") {
         "2023-24",
         "2024-25"
       ]}
-      name="grade"
+      name="admissionYear"
+      required
     />
 
     <div class="flex flex-row">
@@ -134,3 +156,43 @@ if (Astro.request.method === "POST") {
     <Button type='submit' class='w-full [&>button]:w-full [&>button]:justify-center max-md:mt-0'>Apply Now</Button>
   </form>
 </div>
+
+<script>
+  // by default hide grades
+  const selectGrade1Container = document.querySelector('[data-select-parent-id="selectGrade1"]');
+  const selectGrade2Container = document.querySelector('[data-select-parent-id="selectGrade2"]');
+  
+  const selectBranchEl = document.querySelector('[data-select-parent-id="selectBranch"] select');
+  
+  const selectBranchOptions = document.querySelectorAll('[data-select-parent-id="selectBranch"] [data-value]');
+  
+  selectGrade1Container.style.display = 'none';
+  selectGrade2Container.style.display = 'none';
+
+  const updateGradesOptions = (campusName) => {
+    if (campusName === 'Whitefield' || campusName === 'Sarjapur') {
+      selectGrade1Container.style.display = 'block';
+      selectGrade2Container.style.display = 'none';
+      // required for form validation
+      selectGrade2Container.querySelector('select').required = false
+    } else if (campusName === 'Bannerghatta') {
+      selectGrade1Container.style.display = 'none';
+      selectGrade2Container.style.display = 'block';
+
+      selectGrade1Container.querySelector('select').required = false
+    }
+  }
+  // show grades when branch is selected
+  selectBranchEl.addEventListener('change', (e) => {
+    updateGradesOptions(e.target.value)
+  })
+
+  selectBranchOptions.forEach((option) => {
+    option.addEventListener('click', (e) => {
+      updateGradesOptions(option.innerText)
+    })
+  })
+
+  
+  
+</script>
