@@ -1,6 +1,7 @@
 ---
 import ourMottoSectionBG from '../../images/ourMottoSectionBG.png'
 import LFLKids from '../../images/LFLKids.png'
+import treeBgPattern from '../../images/treeBgPattern.png'
 import Button from '../system/Button.astro'
 import Text from '../system/Text.astro'
 import Constrain from '../system/Constrain.astro'
@@ -51,4 +52,12 @@ const { viewPhilosophyVisible = true } = Astro.props
 
     </div>
   </Constrain>
+
+  <div class="w-[236px] h-[125px] max-md:hidden bottom-0 right-0 absolute">
+    <div class="w-full h-full" style={{
+      background: `url("${treeBgPattern.src}")`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}></div>
+  </div>
 </div>

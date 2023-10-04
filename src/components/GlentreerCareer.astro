@@ -1,0 +1,70 @@
+---
+import { Image } from "astro:assets";
+import Constrain from "./system/Constrain.astro";
+import Text from "./system/Text.astro";
+import careerSectionBG from '../images/careerBG.webp'
+import treeBgPattern from '../images/treeBgPattern.png'
+
+---
+
+<Constrain class="bg-white max-md:px-4 relative !w-[90%] max-md:!w-full">
+  <div class="h-[420px] max-md:h-[530px] w-full rounded flex flex-row">
+    <div class="flex-1 flex flex-row w-full rounded-2xl max-md:rounded-br-2xl rounded-br-none bg-[#096230] overflow-hidden max-md:flex-col">
+      <div class="w-[400px] h-full max-md:h-[60%] max-md:w-full max-md:clip max-md:![clip-path:none]" style={{
+        clipPath: 'polygon(0 0, 100% 0, 68% 100%, 0% 100%);',
+      }}>
+        <Image src={careerSectionBG} alt="Career Section" class="w-full h-full object-cover max-md:object-top" />
+      </div>
+      <div class="w-full flex-1 flex flex-col justify-center text-white max-md:items-center max-md:text-center">
+        <Text type="subtitle" class="text-yellow">Work with Us</Text>
+        <div class="pt-4" />
+        <Text type="h2">Join the Glentree Community</Text>
+        <div class="pt-6" />
+        <Text type="base">To view open career positions, <a href="https://www.naukri.com/learning-edge-india-jobs-careers-1633530" class="underline" id="about-us-join-career-cta">click here</a></Text>
+      </div>
+    </div>
+    <div class="w-[120px] max-md:w-[60px] h-full flex-col flex max-md:hidden">
+        <div class="relative h-[120px] max-md:h-[60px] w-full">
+          <div id="arrow-button-about-us-career" class="absolute w-full h-full -top-[18px] left-[18px] max-md:-top-2 max-md:left-2 rounded-2xl bg-[#096230] z-10 flex items-center justify-center">
+            <div class="w-[60%]">
+              <svg fill="none" viewBox="0 0 24 24" stroke-width="2"  stroke="currentColor" class="w-full h-full">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+              </svg>
+            </div>
+          </div>
+          <div class="w-[60px] h-[60px] -bottom-0 -left-0 absolute bg-whitee">
+            <div class="w-[16px] h-[16px] bottom-0 absolute left-0 bg-[#096230]"></div>
+            <div class="w-[32px] h-[32px] bottom-0 absolute left-0 bg-white rounded-[50%]"></div>
+          </div>
+        </div>
+        <div class="flex-1 w-full bg-[#096230] rounded-r-2xl"></div>
+    </div>
+  </div>
+  <div class="w-[236px] h-[125px] max-md:hidden bottom-0 right-0 absolute">
+    <div class="w-full h-full" style={{
+      background: `url("${treeBgPattern.src}")`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}></div>
+  </div>
+</Constrain>
+
+<style>
+  #arrow-button-about-us-career {
+    transition: 0.3s all ease-in-out;
+  }
+  #arrow-button-about-us-career.hovered {
+    transform: translatex(10px) translatey(-10px);
+  }
+</style>
+
+<script>
+  const joinCareerCta = document.getElementById('about-us-join-career-cta')
+  const arrowButton = document.getElementById('arrow-button-about-us-career')
+  joinCareerCta?.addEventListener('mouseenter', () => {
+    arrowButton.classList.add('hovered')
+  })
+  joinCareerCta?.addEventListener('mouseleave', () => {
+    arrowButton.classList.remove('hovered')
+  })
+</script>

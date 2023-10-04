@@ -53,6 +53,16 @@
 </style>
 
 <script>
+	document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+	});
+
 	document.addEventListener('DOMContentLoaded', () => {
 		const scrollArea = document.querySelector("#scroll-area")
 		if (!scrollArea) return
@@ -76,8 +86,6 @@
 
 		const whatsAppButton : HTMLElement = document.getElementById('whatsapp-btn') as HTMLElement
 
-		console.log('whatsapp button', whatsAppButton)
-
 		document.addEventListener('scroll', (e) => {
 
 			if (whatsAppButton) {
@@ -93,8 +101,7 @@
 		
 		scrollArea.addEventListener('scroll', (e) => {
 			if (whatsAppButton) {
-				console.log('sceroll...', scrollArea?.scrollTop)
-				if (scrollArea?.scrollTop > 100) {
+ 				if (scrollArea?.scrollTop > 100) {
 					whatsAppButton?.classList.add('opacity-1')
 					whatsAppButton?.classList.remove('opacity-0')
 				} else {

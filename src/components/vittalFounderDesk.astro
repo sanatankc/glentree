@@ -1,6 +1,6 @@
 ---
 import vittalFounderDeskPreview from '../images/vittalFounderDeskPreview.mp4'
-import vittalFounderDeskPoster from '../images/vittalFounderDeskPoster.jpeg'
+import vittalFounderDeskPoster from '../images/vittalFounderDeskPoster.webp'
 import Text from './system/Text.astro';
 import Button from './system/Button.astro';
 import Constrain from './system/Constrain.astro';
@@ -60,7 +60,6 @@ import YoutubeEmbed from './YoutubeEmbed.astro';
             }
 
             video.target.load();
-            console.log('loadeddd. lazyy....')
             video.target.classList.remove("lazy");
             lazyVideoObserver.unobserve(video.target);
           }

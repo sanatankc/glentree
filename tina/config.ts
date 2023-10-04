@@ -80,7 +80,6 @@ export default defineConfig({
             type: "image",
             name: "bannerBg",
             label: "Banner Image",
-           
           },
           {
             type: "string",
@@ -109,10 +108,25 @@ export default defineConfig({
           },
           {
             type: "object",
-            name: "galleryImages",
+            name: "aroundTheCampus",
             label: "Around The Campus",
             list: true,
-            fields: [{ type: "image", name: "image", label: "Image" }],
+            fields: [
+              { type: "string", name: "title", label: "Title" },
+              { type: "string", name: "description", label: "Description", ui: {component: "textarea"} },
+              { type: "string", name: "ctaText", label: "CTA Text" },
+              { 
+                type: "object",
+                list: true,
+                label: 'Gallery',
+                name: 'gallery',
+                fields: [
+                  { type: "image", name: "image", label: "Image" },
+                  { type: "string", name: "title", label: "Title" },
+                  { type: "string", name: "description", label: "Description" },
+                ]
+              },
+            ],
           },
           {
             type: "object",

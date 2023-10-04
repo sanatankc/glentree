@@ -1,0 +1,97 @@
+---
+import Constrain from '../system/Constrain.astro';
+import Text from '../system/Text.astro';
+import { Image } from 'astro:assets';
+import blobBG from '../../images/blobBG.svg'
+import DeckCard from '../DeckCard.astro';
+import taekwondo from '../../images/coscholastics/Taekwondo.jpg'
+import bulletStar from '../../images/bulletStar.svg'
+import bulletStarGreen from '../../images/bulletStarGreen.svg'
+import Gallery from '../Gallery.astro';
+
+import campus1 from '../../images/campus/gab/slides/campus1.png'
+import campus2 from '../../images/campus/gab/slides/campus2.png'
+import campus3 from '../../images/campus/gab/slides/campus3.png'
+import computerLab from '../../images/campus/gab/slides/computerLab.jpg'
+import earthLab from '../../images/campus/gab/slides/earthLab.png'
+import playArea from '../../images/campus/gab/slides/playArea.jpg'
+import receptionArea from '../../images/campus/gab/slides/receptionArea.jpg'
+import sportsFacilities from '../../images/campus/gab/slides/sportsFacilities.png'
+
+
+---
+<div class="py-14 max-md:py-8 relative text-center flex flex-col items-center" style={{ background: 'linear-gradient(249.28deg, #FBFFF7 0%, #F6FFED 0%, #FFFAF7 100%)' }} >
+  <div class="w-[263px] h-[279px] absolute right-0 top-0 z-20 max-md:hidden">
+    <Image src={blobBG} alt='Blob Background' class='w-full h-full object-cover' />
+  </div>
+  <Text type={'subtitle'} style={{ opacity: 0.8, color: '#121212' }}>EXPANDING TO Bannerghatta Road</Text>
+  <Text type={'h2'} class='text-black mt-6'>
+    Coming
+      <span class='bg-green-600 text-white px-3 py-1 rounded-md'>Soon</span>
+  </Text>
+  <!-- <Text type={'base'} class='mt-7 font-semibold text-black w-[45%] max-md:w-[90%]'>
+    At Glentree Academy, we prioritize practical learning that encourages children to explore and interact with the world consciously.
+  </Text> -->
+  <p class="p-4 max-md:hidden" />
+  <Constrain class="flex flex-col w-full items-center gap-8">  
+    <div class="flex flex-row gap-12 w-full justify-center mt-6 text-black max-w-[1070px] max-md:w-full max-md:flex-col max-md:items-center">
+      <DeckCard
+        images={[
+          taekwondo,
+          earthLab,
+        ]}
+        class="mt-6"
+        id="deck-new-campus-showcase"
+        target="new-campus-showcase"
+      />
+      <div class="flex flex-col items-start text-left gap-6 max-md:px-8">
+        <!-- <Text type="h3" class="text-accent2">Top-Notch Facilities</Text> -->
+        <div class="py-2" />
+        <Text type="base" class="font-semibold">Explore our upcoming campus, designed to enhance the learning experience with modern facilities and resources.</Text>
+        <div class="flex flex-row items-center">
+          <div class="w-[16px] h-[18px]">
+            <Image src={bulletStarGreen} class="w-full h-full object-cover" alt="bullet icon" />
+          </div>
+          <Text type="regular" class="font-bold ml-[10px]">Earth Lab</Text>
+        </div> 
+        <div class="flex flex-row items-center">
+          <div class="w-[16px] h-[18px]">
+            <Image src={bulletStarGreen} class="w-full h-full object-cover" alt="bullet icon" />
+          </div>
+          <Text type="regular" class="font-bold ml-[10px]">High-Tech Computer Lab</Text>
+        </div>
+        <div class="flex flex-row items-center">
+          <div class="w-[16px] h-[18px]">
+            <Image src={bulletStarGreen} class="w-full h-full object-cover" alt="bullet icon" />
+          </div>
+          <Text type="regular" class="font-bold ml-[10px]">Premium Sports Facilities</Text>
+        </div>
+        <div class="flex flex-row items-center">
+          <div class="w-[16px] h-[18px]">
+            <Image src={bulletStarGreen} class="w-full h-full object-cover" alt="bullet icon" />
+          </div>
+          <Text type="regular" class="font-bold ml-[10px]">Fun-Secure Play Area</Text>
+        </div>
+        <div class="cursor-pointer" data-modal-target="new-campus-showcase" data-target-deck="deck-new-campus-showcase">
+          <Text type="regular" class='underline uppercase text-green-600 tracking-wide font-bold'>VIEW Facilities</Text>
+        </div>
+      </div>
+    </div>
+
+  </Constrain>
+
+  <Gallery
+    id="new-campus-showcase"
+    gallery={[
+      { src: campus1, caption: "Learning and Leisure" },
+      { src: campus2, caption: "Campus Highlights" },
+      { src: campus3, caption: "Overhead Excellence" },
+      { src: receptionArea, caption: "Reception Area" },
+      { src: sportsFacilities, caption: "Sports Facilities" },
+      { src: playArea, caption: "Play Area" },
+      { src: computerLab, caption: "High-Tech Computer lab" },
+      { src: earthLab, caption: "Earth Lab" },
+    ]}
+  />
+  
+</div>

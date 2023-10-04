@@ -30,7 +30,6 @@ import mission3 from '../images/aboutUs/mission3.png'
 import mission4 from '../images/aboutUs/mission4.png'
 import mission5 from '../images/aboutUs/mission5.png'
 import mission6 from '../images/aboutUs/mission6.png'
-import testimonial1 from '../images/testimonial1.png'
 
 import banner from '../images/aboutUs/banner.jpeg'
 
@@ -42,6 +41,7 @@ import graphUpIcon from '../images/aboutUs/icons/Graph Up.svg'
 import sledgeHammerIcon from '../images/aboutUs/icons/Sledgehammer.svg'
 import linkedinIcon from '../icons/linkedin.svg'
 import Constrain from '../components/system/Constrain.astro';
+import GlentreerCareer from '../components/GlentreerCareer.astro';
 
 const founderDesk = [
   // { name: 'Vittal Bhandary', title: 'CEO', linkedin: "https://www.linkedin.com/in/vittal-bhandary-51902519/", image: vittal, message: "Glentree Academy envisions a transformative approach to education, addressing the shortcomings of traditional learning. As a child, I found little joy in the stress of memorisation, yet I thrived in the immersive world of sports. Inspired by my own experiences and Preeti's vision of a happy learning environment, Glentree aims to create a place where children can freely explore their talents and passions without the burden of grades." },
@@ -71,9 +71,8 @@ const missions = [
     >
       <div class='flex flex-col bg-white'>
         <TopNavigationBar />
-        <div class='h-[95.44px] w-full bg-black'>
+        <div class='h-[88px] w-full bg-black'>
         </div>
-  
         <div class='min-h-[350px] max-h-[350px] w-full flex justify-center items-center flex-col max-md:min-h-[350px]' style={{
           background: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.8) 68.07%), url(${banner.src})`,
           backgroundPosition: 'top center',
@@ -142,6 +141,9 @@ const missions = [
           </div>
         </div>
         <BigAdmissionCTA />
+        <div class="pt-6 max-md:pt-4" />
+        <GlentreerCareer />
+        <div class="pt-8 max-md:pt-4" />
         <Footer />
     </div>
   </main>

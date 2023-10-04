@@ -1,0 +1,91 @@
+---
+const { id, closeLink, class: className='', containerClass, openDefault = false, link } = Astro.props
+
+---
+
+
+<div 
+  class:list={[
+    "w-screen h-screen fixed z-[999] bg-black/80 top-0 left-0 overscroll-y-contain transition-all duration-300 modal-hidden",
+    className
+  ]}
+  data-modal-id={id}
+  data-modal-link={link}
+  data-close-link={closeLink}
+  data-modal-visible={String(openDefault)}
+>
+  <div class="w-screen h-screen absolute top-0 left-0 backdrop-click" data-modal-close-id={id}>
+
+  </div>
+  <div class:list={[
+    "h-full",
+    containerClass
+  ]}>
+    <slot />
+  </div>
+</div>
+
+<style>
+  .modal-hidden {
+    /* transform: translateY(100vh); */
+    opacity: 0;
+    pointer-events: none;
+  }
+  .modal-hidden .backdrop-click {
+    pointer-events: none;
+  }
+</style>
+
+<script>
+  const body = document.querySelector('body')
+  const targets = document.querySelectorAll('[data-modal-target]')
+  const targetClose = document.querySelectorAll('[data-modal-close]')
+
+  targets.forEach(target => {
+    target.addEventListener('click', () => {
+      const modal = document.querySelector(`[data-modal-id="${target.dataset.modalTarget}"]`)
+      console.log('link...', modal.dataset.modalLink)
+      if (modal.dataset.modalLink) {
+        window.location.href = modal.dataset.modalLink
+      } else {
+        modal?.classList.remove('modal-hidden')
+        modal.dataset.modalVisible = true
+      }
+    })
+  })
+
+  targetClose.forEach(target => {
+    target.addEventListener('click', () => {
+      const modal = document.querySelector(`[data-modal-id="${target.dataset.modalClose}"]`)
+      modal?.classList.add('modal-hidden')
+      modal.dataset.modalVisible = false
+      if (modal.dataset.closeLink) {
+        window.location.href = modal.dataset.closeLink
+      }
+    })
+  })
+
+  document.querySelectorAll('.backdrop-click')
+    .forEach((el) => {
+      el.addEventListener('click', () => {
+        const modal = document.querySelector(`[data-modal-id="${el.dataset.modalCloseId}"]`)
+        modal?.classList.add('modal-hidden')
+        modal.dataset.modalVisible = false
+        if (modal.dataset.closeLink) {
+          window.location.href = modal.dataset.closeLink
+        }
+      })
+    })
+
+  const modals = document.querySelectorAll('[data-modal-id]')
+
+  modals.forEach((modal) => {
+    if (modal.dataset.modalVisible === 'true') {
+      modal.classList.remove('modal-hidden')
+    } else {
+      modal.classList.add('modal-hidden')
+    }
+  })
+
+
+</script>

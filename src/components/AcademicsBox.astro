@@ -1,0 +1,153 @@
+---
+import PrePrimaryBG from '../images/curriculum/prePrimary.png';
+import PrimaryBG from '../images/curriculum/primary.png';
+import MiddleAndHighBG from '../images/curriculum/middle&High.png';
+import Text from './system/Text.astro';
+
+
+const academics = [
+  {
+    title: 'Pre-Primary',
+    grade: 'NUR - UKG',
+    points: [
+      [
+        'Montessori and Waldorf methodologies',
+        'Activity based learning',
+        'Language, Numeracy, and Theme',
+      ],
+      [
+        'Value Education',
+        'Reading Program',
+        'Montessori Lab'
+      ]
+    ],
+    image: PrePrimaryBG,
+    background: '#0E6526',
+    backgroundContent: '#0A5E2F',
+    opacity: 1,
+    link: 'https://glentreeacademy.com/curriculum/pre-primary'
+  },
+  {
+    title: 'Primary',
+    image: PrimaryBG,
+    link: 'https://glentreeacademy.com/curriculum/primary',
+    background: '#C07C47',
+    grade: 'Grade I-IV',
+    points: [                
+      [
+        "Concept driven academics",
+        "Multi sensorial development and approach",
+        "Exploring Through Discovery",
+        "Experiential Learning",
+        "Inter Disciplinary Approach"
+      ],  
+      [
+        "Language Arts (English, Hindi, Kannada)",
+        "STEM Lab",
+        'CS & Coding',
+        "R.E.A.D Program",
+        "“Connecting the Dots” Program"
+      ],
+    ] 
+  },
+  {
+    title: 'Middle & High School',
+    image: MiddleAndHighBG,
+    link: 'https://glentreeacademy.com/curriculum/middle-and-high',
+    background: '#6F322E',
+    grade: 'Grade V-X',
+    points: [
+      [          
+        "Concept driven academics",
+        "Multi sensorial development and approach",     
+        "Creative Thinking & Research",
+        "Community Learning",
+        "Inter Disciplinary Approach"
+      ],
+      [
+        "Language Arts (English, Hindi, Kannada)",
+        "STEM Lab",
+        "Social Studies",
+        'CS & Coding',
+        "“Connecting the Dots” Program"
+      ]
+    ]
+
+  },
+  {
+    title: 'Senior Secondary School',
+    image: MiddleAndHighBG,
+    link: 'https://glentreeacademy.com/curriculum/middle-and-high',
+    background: '#2C734B',
+    new: true,
+    grade: 'Grade XI (Commerce)',
+    points: [
+      [               
+        "COM 1: Business Studies, Accountancy, Economics, English, PE Elective.",
+        "COM 2: Business Studies, Accountancy, Economics, English, Psychology",
+      ],
+      [
+        "Global Engagement Emphasis",
+        "Personalised Career Counselling",
+      ]
+    ]
+
+  },
+]
+
+
+const { noHeader } = Astro.props
+---
+
+
+<div class:list={['w-full p-14 text-black bg-white flex flex-col items-center max-md:p-6', noHeader && '!p-0 max-md:!p-0']}>
+  {!noHeader && (
+    <Text type={'subtitle'} class='text-black/80'>NEP ALIGNED</Text>
+    <Text type={'h2'} class='mt-2'><span class='text-accent2'>Academics</span></Text>
+  )}
+  <div class='w-full flex-col flex items-center rounded-2xl max-md:rounded-2xl overflow-hidden mt-4 max-w-[1196px]'>
+    {academics.map((academic) => (
+       <div class='flex flex-row w-full mb-[2px] max-md:flex-col max-md:rounded-xl overflow-hidden max-md:mb-4'>
+        <div
+          class='w-full flex-1 overflow-hidden max-w-[350px] max-md:max-w-[1000px] min-h-[200px] mr-[1px] flex flex-col text-white items-center justify-center relative bg-cover no-repeat'
+          style={{
+            backgroundImage: `url(${academic.image.src})`
+        }}>
+          <div class='w-full h-full mix-blend-multiply absolute z-0' style={{
+            background: academic.background,
+            opacity: academic.opacity ? academic.opacity : 1
+          }}>
+          </div>
+          {academic.new && <div class="ribbon max-md:block hidden absolute py-1 px-12 bg-yellow border-[2px] border-[#C7AC66] text-[#613938] text-[15px] top-[1.2rem] -right-[3.5rem] font-bold rotate-[40deg]">Newly added</div>}
+
+          <div class='relative z-10 text-center'>
+            <Text type={'h4'}>{academic.title}</Text>
+            <Text type={'h4'}>{academic.grade}</Text>
+          </div>
+        </div>
+        <div
+          style={{
+            background: academic.backgroundContent ? academic.backgroundContent : academic.background,
+            opacity: academic.opacity ? academic.opacity : 1
+          }}
+          class='w-full relative flex-1 max-w-[845px] max-md:max-w-[1000px] min-h-[200px] mr-[1px] flex flex-row max-md:flex-col max-md:items-start max-md:p-8 max-md:pt-4 items-center justify-center p-12 py-4'>
+          <Text type={'regular'} class='mt-3 font-[500] flex-1'>
+            <ul class="list-disc text-white">
+              {academic.points[0].map((point) => (
+                <li>{point}</li>
+              ))}
+            </ul>
+          </Text>
+          <Text type={'regular'} class='mt-3 font-[500] flex-1 max-md:mt-0'>
+            <ul class="list-disc text-white">
+              {academic.points[1].map((point) => (
+                <li>{point}</li>
+              ))}
+            </ul>
+          </Text>
+          {academic.new && <div class="ribbon max-md:hidden absolute py-1 px-12 bg-yellow border-[2px] border-[#C7AC66] text-[#613938] text-[15px] top-[1.2rem] -right-[3.5rem] font-bold rotate-[40deg]">Newly added</div>}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>

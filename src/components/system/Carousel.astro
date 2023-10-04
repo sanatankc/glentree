@@ -1,0 +1,111 @@
+---
+import arrow from "../../icons/arrow.svg?raw"
+
+const { class: className, id, stackOnMobile, arrowsContainerClass = '' } = Astro.props
+---
+
+<div>
+  <div class:list={[
+    "flex overflow-auto cursor-grab drag-scroll no-scrollbar",
+    className,
+    stackOnMobile && 'max-md:flex-col'
+  ]}
+  id={id}
+  >
+    <slot />
+  </div>
+  <div 
+    class:list={[
+      "w-fit h-fit top-0 left-0 z-50 flex flex-row gap-6 mt-4 items-center  justify-between pointer-events-none gap-l mx-auto",
+      stackOnMobile && 'max-md:hidden',
+      arrowsContainerClass
+    ]}
+  >
+    <div class="w-10 h-10 pointer-events-auto cursor-pointer" data-prev-button data-target={id}>
+      <div class="w-full h-full -scale-100 bg-white text-white flex items-center justify-center rounded-full">
+        <div class="relative w-full h-full left-[1px]" set:html={arrow} />
+      </div>
+    </div>
+    <div class="w-10 h-10 pointer-events-auto cursor-pointer" data-next-button data-target={id}>
+      <div class="w-full h-full scale-100 bg-white flex text-white items-center justify-center rounded-full">
+        <div class="relative w-full h-full left-[1px]" set:html={arrow}  />
+      </div>
+      </div>
+  </div>
+</div>
+
+<script>
+    const dragToScroll = document.querySelectorAll<HTMLElement>('.drag-scroll');
+    dragToScroll.forEach((ele) => {
+      ele.style.cursor = 'grab';
+  
+      let pos = { top: 0, left: 0, x: 0, y: 0 };
+  
+      const mouseDownHandler = function (e: MouseEvent) {
+        ele.style.cursor = 'grabbing';
+        ele.style.userSelect = 'none';
+
+        pos = {
+            left: ele.scrollLeft,
+            top: ele.scrollTop,
+            // Get the current mouse position
+            x: e.clientX,
+            y: e.clientY,
+        };
+
+        document.addEventListener('mousemove', mouseMoveHandler);
+        document.addEventListener('mouseup', mouseUpHandler);
+      };
+  
+      const mouseMoveHandler = function (e: MouseEvent) {
+        // How far the mouse has been moved
+        const dx = e.clientX - pos.x;
+        const dy = e.clientY - pos.y;
+
+        // Scroll the element
+        ele.scrollTop = pos.top - dy;
+        ele.scrollLeft = pos.left - dx;
+      };
+  
+      const mouseUpHandler = function () {
+        ele.style.cursor = 'grab';
+        ele.style.removeProperty('user-select');
+        document.removeEventListener('mousemove', mouseMoveHandler);
+        document.removeEventListener('mouseup', mouseUpHandler);
+      };
+  
+      // Attach the handler
+      ele.addEventListener('mousedown', mouseDownHandler);
+    })
+
+
+    let prevButtons = document.querySelectorAll<HTMLElement>('[data-prev-button]');
+    let nextButtons = document.querySelectorAll<HTMLElement>('[data-next-button]');
+
+    prevButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        let target = document.getElementById(button.dataset.target)
+        if (target) {
+          // target.scrollLeft -= 200;
+          target.scrollBy({
+            left: -400,
+            behavior: 'smooth'
+          })
+        }
+      })
+    })
+    
+
+    nextButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        let target = document.getElementById(button.dataset.target)
+
+        if (target) {
+          target.scrollBy({
+            left: 400,
+            behavior: 'smooth'
+          })
+        }
+      })
+    })
+</script>

@@ -1,0 +1,42 @@
+---
+import Gallery from "./Gallery.astro";
+import Text from "./system/Text.astro";
+
+const props = Astro.props
+const slideId = props.slideId
+const gallery = props.gallery
+---
+
+<Gallery {...props}>
+  <div
+    slot="caption" 
+    class="
+      text-white bg-black/80 backdrop-blur-sm
+      py-[25px] px-[87px] w-full absolute bottom-[0px]
+      flex flex-row justify-between items-center
+  ">
+    <div 
+      data-slide-pb 
+      data-target-slideId={slideId}
+      class="w-10 h-10 max-md:w-10 max-md:h-10 cursor-pointer" 
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24C44 35.0457 35.0457 44 24 44ZM28.0607 16.9393C27.4749 16.3536 26.5251 16.3536 25.9393 16.9393L19.9393 22.9393C19.3536 23.5251 19.3536 24.4749 19.9393 25.0607L25.9393 31.0607C26.5251 31.6464 27.4749 31.6464 28.0607 31.0607C28.6464 30.4749 28.6464 29.5251 28.0607 28.9393L23.1213 24L28.0607 19.0607C28.6464 18.4749 28.6464 17.5251 28.0607 16.9393Z" fill="white"/>
+      </svg>
+    </div>
+    <div class="text-center">
+      <Text type="h4" class="text-white" data-caption-id={slideId} data-slides-captions={[gallery.map(slide => slide.caption)]}>{gallery[0].caption}</Text>
+      <div class="p-1" />
+      <Text type="base" class="text-[#F6D58D] italic" data-description-id={slideId} data-slides-description={[gallery.map(slide => slide.description)]}>{gallery[0].description}</Text>
+    </div>
+    <div
+      data-slide-nb
+    data-target-slideId={slideId}
+      class="-scale-100 w-10 h-10 max-md:w-10 max-md:h-10 cursor-pointer"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24C44 35.0457 35.0457 44 24 44ZM28.0607 16.9393C27.4749 16.3536 26.5251 16.3536 25.9393 16.9393L19.9393 22.9393C19.3536 23.5251 19.3536 24.4749 19.9393 25.0607L25.9393 31.0607C26.5251 31.6464 27.4749 31.6464 28.0607 31.0607C28.6464 30.4749 28.6464 29.5251 28.0607 28.9393L23.1213 24L28.0607 19.0607C28.6464 18.4749 28.6464 17.5251 28.0607 16.9393Z" fill="white"/>
+      </svg>
+    </div>
+  </div>
+</Gallery>

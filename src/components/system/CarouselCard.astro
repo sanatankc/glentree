@@ -1,0 +1,12 @@
+---
+
+const {img, title , class: className,style,index} = Astro.props
+import Text from "../system/Text.astro";
+
+---
+
+<div
+  class={`flex-shrink-0 snap-end overflow-visible ${className}`}
+>
+  <slot />
+</div>

@@ -7,7 +7,7 @@ import TopNavigationBar from '../components/TopNavigationBar.astro';
 import Updates from '../components/landingPage/Updates/index.astro'
 import LFL from '../components/landingPage/LFL.astro'
 import WhyGlentree from '../components/landingPage/whyGlentree.astro';
-import Campus from '../components/landingPage/campus.astro';
+import Campus from '../components/register/campus.astro';
 
 import Testimonial from '../components/landingPage/Testimonial.astro';
 import BigAdmissionCTA from '../components/BigAdmissionCTA.astro';
@@ -23,12 +23,15 @@ import psjaAward from '../images/psjaAward.png'
 import meritAwards from '../images/meritAwards.png'
 import VittalFounderDesk from '../components/vittalFounderDesk.astro';
 import { Image } from 'astro:assets';
+import Constrain from '../components/system/Constrain.astro';
+import GlentreerCareer from '../components/GlentreerCareer.astro';
+import AdmissionMarquee from '../components/campus/admissionMarquee.astro';
 
 
 ---
 
 <Layout title="Welcome to Astro.">
-  <main class="flex flex-col h-screen max-md:h-auto w-screen relative">
+  <main class="flex flex-col h-screen max-md:h-auto w-screen relative bg-white">
     <div 
       class="flex-1 main-container max-md:h-auto h-screen w-screen"
       id="scroll-area"
@@ -38,9 +41,10 @@ import { Image } from 'astro:assets';
       }}
     >
     
-    <div class='flex flex-col max-md:h-auto h-screen'>
+    <div class='flex flex-col max-md:h-[100svh] h-[100vh]'>
       <TopNavigationBar />
       <Hero />
+      <AdmissionMarquee />
     </div>
 
     <div class="flex flex-row h-36 w-full mt-auto max-md:py-8 max-md:px-6 max-md:pb-1 items-center justify-around flex-wrap max-md:flex-col max-md:h-auto max-md:items-start relative z-20" style={{ background: '#030303' }}>
@@ -115,6 +119,12 @@ import { Image } from 'astro:assets';
       <!-- Glentree Family -->
       <GlentreeFamily />
 
+      <div class="pb-6" />
+
+      <GlentreerCareer />
+      
+      <div class="pb-6" />
+
 
       <!-- Footer -->
     <Footer />
@@ -161,4 +171,23 @@ import { Image } from 'astro:assets';
 .my-float{
 	margin-top:16px;
 }
+
+#arrow-button-about-us-career {
+  transition: 0.3s all ease-in-out;
+}
+#arrow-button-about-us-career.hovered {
+  transform: translatex(10px) translatey(-10px);
+}
+
 </style>
+
+<script>
+  const joinCareerCta = document.getElementById('about-us-join-career-cta')
+  const arrowButton = document.getElementById('arrow-button-about-us-career')
+  joinCareerCta?.addEventListener('mouseenter', () => {
+    arrowButton.classList.add('hovered')
+  })
+  joinCareerCta?.addEventListener('mouseleave', () => {
+    arrowButton.classList.remove('hovered')
+  })
+</script>

@@ -1,0 +1,77 @@
+---
+const { images = [], class: className, cardHoverStyle, target, id } = Astro.props
+
+let deckHoverClass = ''
+let deckActiveClass = ''
+
+if (cardHoverStyle) {
+  deckHoverClass = cardHoverStyle.map(style => `group-hover:${style}`).join(' ')
+  deckActiveClass = cardHoverStyle.map(style => `[&.active>div]:${style}`).join(' ')
+}
+
+---
+
+<div class:list={[
+  'flex flex-col justify-center items-center',
+  className
+]} data-modal-target={target}>
+  <div class:list={[`
+    w-[357px] h-[333px] max-md:w-[320px] max-md:h-[280px] relative group hover:cursor-pointer deck-card
+    [&.active>div:first-child]:rotate-[-4deg]
+    [&.active>div:last-child]:rotate-[4.651deg] 
+    [&.active>div]:border-[#0A5E2F]`,
+    deckActiveClass
+  ]} data-deck-id={id}>
+    <div 
+      class:list={[`bg-white border rounded-md w-full h-full absolute top-0 left-0 p-2
+        rotate-[-2.785deg]  transition-transform max-md:rotate-[-2.785deg]
+        group-hover:rotate-[-4deg] group-hover:border-[#0A5E2F]
+      `, deckHoverClass]}
+      style={{
+        boxShadow: '0px 0px 18.19317px 0px rgba(0, 0, 0, 0.30)'
+      }}
+    >
+      <img
+        src={images[0].src}
+        alt={images[0].alt}
+        class="w-full h-full rounded-md object-cover"
+      />
+    </div>
+    <div 
+      class:list={[`
+        bg-white border rounded-md w-full h-full absolute top-0 left-0 p-2
+        rotate-[2.026deg] transition-transform
+        max-md:rotate-[3.026deg] origin-bottom-right
+        group-hover:rotate-[4.651deg] group-hover:border-accent2
+      `, deckHoverClass]}
+      style={{
+        boxShadow: '0px 0px 14.19317px 0px rgba(0, 0, 0, 0.10)'
+      }}
+    >
+      <img
+        src={images[1].src}
+        alt={images[1].alt}
+        class="w-full h-full rounded-md object-cover"
+      />
+    </div>
+  </div>
+  <slot />
+</div>
+
+<style>
+
+</style>
+
+<script>
+  const targetDecks = document.querySelectorAll<HTMLElement>('[data-target-deck]')
+  targetDecks.forEach(targetDeck => {
+    const target = targetDeck.dataset.targetDeck
+    const deckCard = document.querySelector<HTMLElement>(`[data-deck-id="${target}"]`)
+    targetDeck?.addEventListener('mouseover', () => {
+      deckCard?.classList.add('active')
+    })
+    targetDeck?.addEventListener('mouseout', () => {
+      deckCard?.classList.remove('active')
+    })
+  })
+</script>
