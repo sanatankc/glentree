@@ -15,7 +15,7 @@ heroImages:
     image_mobile: /images/slides/5-mb.webp
     position: top
   - image_desktop: /images/slides/4.webp
-    image_mobile: /images/slides/4-mb.jpg
+    image_mobile: /images/slides/4-mb.webp
     position: top
   - image_desktop: /images/slides/3.webp
     image_mobile: /images/3sm.webp
