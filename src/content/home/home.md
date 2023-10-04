@@ -28,21 +28,3 @@ heroImages:
     position: top
 ---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
