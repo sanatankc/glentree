@@ -77,9 +77,9 @@ const faqs = [
 ---
 
 <Layout title="Welcome to Astro.">
-  <main class="flex flex-col min-h-screen max-md:h-auto w-screen relative">
+  <main class="flex flex-col min-h-[98svh] max-md:h-auto w-screen relative">
     <div 
-      class="flex-1 flex flex-col main-container max-md:h-auto min-h-screen w-screen"
+      class="flex-1 flex flex-col main-container max-md:h-auto min-h-[98svh] w-screen"
       id="scroll-area"
       style={{
         overflowY: 'overlay',
@@ -88,7 +88,7 @@ const faqs = [
     >
 
     
-      <div class='flex flex-col max-md:h-auto min-h-screen relative'>
+      <div class='flex flex-col max-md:h-auto min-h-[98svh] relative'>
         <TopNavigationBar hideMenu applyNowButtonId="register-page-apply-now" />
         <div class="h-[88px] w-full bg-black"></div>
 
@@ -160,11 +160,11 @@ const faqs = [
           <RegisterForm />
         </div>
         <AdmissionMarquee class="max-md:!hidden" />
-        <div class="w-[50px] h-[50px] down-arrow-button transition-all duration-500 rounded-[50%] bg-accent border-accent/60 border-[4px] absolute top-[97vh] left-[50%] z-[9999] flex items-center justify-center max-md:hidden">
+        <!-- <div class="w-[50px] h-[50px] down-arrow-button transition-all duration-500 rounded-[50%] bg-accent border-accent/60 border-[4px] absolute top-[97vh] left-[50%] z-[9999] flex items-center justify-center max-md:hidden">
           <div class="w-[18px] h-[9px] down-arrow-icon">
             <Image src={DownArrow} alt="Down Arrow" class="w-full h-full object-cover" />
           </div>
-        </div>
+        </div> -->
       </div>
       <WhyGlentree />
 
@@ -335,7 +335,7 @@ const faqs = [
     animation: bounce 2s infinite;
     overflow: hidden;
   }
-
+  
   .down-arrow-button:before {
     content: '';
     position: absolute;
@@ -352,25 +352,12 @@ const faqs = [
     opacity: 0.6;
     animation: shineDownArrow 3s ease-out infinite;
   }
-
   
   @keyframes shineDownArrow {
     0% {left: -100px}
     20% {left: 100%}
     100% {left: 100%}
   }
-  
-  /* @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    20% {
-      transform: translateY(-10px);
-    }
-    60% {
-      transform: translateY(-5px);
-    } */
-  /* } */
 </style>
 
 <script>
@@ -402,22 +389,8 @@ const faqs = [
   })
   const mainContainer = document.querySelector('.main-container')
   if (mainContainer) {
-    // scroll to end 
-    // mainContainer.scrollTo(0, mainContainer.scrollHeight)
   }
 
-  // document.addEventListener('scroll', (e) => {
-
-  //   if (whatsAppButton) {
-  //     if (window.scrollY > 100) {
-  //       whatsAppButton?.classList.add('opacity-1')
-  //       whatsAppButton?.classList.remove('opacity-0')
-  //     } else {
-  //       whatsAppButton?.classList.remove('opacity-1')
-  //       whatsAppButton?.classList.add('opacity-0')
-  //     }
-  //   }
-  // })
 
   
 

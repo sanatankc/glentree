@@ -4,7 +4,7 @@ import Text from "./system/Text.astro";
 import GASupdate1 from '../images/campus/gas/updates/1.jpeg'
 import GASupdate2 from '../images/campus/gas/updates/2.jpeg'
 
-const { currentLink, campusName } = Astro.props
+const { currentLink, campusName, data } = Astro.props
 
 console.log('facilityIoenn? ', currentLink)
 
@@ -16,13 +16,7 @@ console.log('facilityIoenn? ', currentLink)
     <DeckCard
       deckContainerClass="relative left-2 max-md:-left-2"
       cardHoverStyle={["border-accent"]}
-      link={`/glentree-${campusName}/facility/facility1`}
-      currentLink={currentLink}
-      closeLink={`/glentree-${campusName}`}
-      gallery={[
-        { src: GASupdate1, caption: "Example #1", description: "Equipped with the latest tech, our robotics lab offers top of the edge instruments for studnets to explore" },
-        { src: GASupdate1, caption: "Example #2", description: "Equipped with the latest tech, our robotics lab offers top of the edge instruments for studnets to explore" },
-      ]}
+      gallery={data.gallery}
       id="campus-facility1"
     />
     <div>
@@ -52,83 +46,6 @@ console.log('facilityIoenn? ', currentLink)
         data-target-deck="deck-campus-facility1"
       >
         View Facilities
-      </Text>
-    </div>
-  </div>
-  <div class="flex flex-row max-md:flex-col w-full gap-20 justify-between">
-    <div class="max-md:order-2">
-      <Text type="h3">
-        <span class="text-accent">STEM</span> Labs
-      </Text>
-      <div class="p-2"></div>
-      <Text type="base" class="w-[90%]">
-        Explore our modern STEM labs at Ekam Edify, where curiosity meets
-        innovation. They are meticulously designed, adhering to the highest
-        safety standards. Here, students embark on hands-on experiments,
-        unlocking the mysteries of science and technology in an environment
-        that sparks intellectual curiosity and creativity.
-      </Text>
-      <div class="p-3"></div>
-      <Text
-        type="sm"
-        class="uppercase text-accent underline tracking-widest font-bold cursor-pointer"
-        data-modal-target="campus-facility2"
-        data-target-deck="deck-campus-facility2"
-      >
-        View Labs
-      </Text>
-    </div>
-    <DeckCard
-      deckContainerClass="relative left-2 max-md:-left-2"
-      cardHoverStyle={["border-accent"]}
-      link={`/glentree-${campusName}/facility/facility2`}
-      currentLink={currentLink}
-      closeLink={`/glentree-${campusName}`}
-      gallery={[
-        { src: GASupdate1, caption: "Example #1", description: "Equipped with the latest tech, our robotics lab offers top of the edge instruments for studnets to explore" },
-        { src: GASupdate1, caption: "Example #2", description: "Equipped with the latest tech, our robotics lab offers top of the edge instruments for studnets to explore" },
-      ]}
-      id="campus-facility2"
-    />
-  </div>
-  <div class="flex flex-row max-md:flex-col w-full gap-20 justify-between">
-    <DeckCard
-      deckContainerClass="relative left-2 max-md:-left-2"
-      cardHoverStyle={["border-accent"]}
-      link={`/glentree-${campusName}/facility/facility3`}
-      currentLink={currentLink}
-      closeLink={`/glentree-${campusName}`}
-      gallery={[
-        { src: GASupdate1, caption: "Example #1", description: "Equipped with the latest tech, our robotics lab offers top of the edge instruments for studnets to explore" },
-        { src: GASupdate1, caption: "Example #2", description: "Equipped with the latest tech, our robotics lab offers top of the edge instruments for studnets to explore" },
-      ]}
-      id="campus-facility3"
-    />
-    <div>
-      <Text type="h3">
-        <span class="text-accent">Sports</span> Facilities
-      </Text>
-      <div class="p-2"></div>
-      <Text type="base" class="w-[90%]">
-        International size courts and sports infrastructure as well as
-        expert professional coaches support a variety of sport activities
-        like swimming, basketball, football, volleyball, chess, handball,
-        netball, karate, cricket, skating, lawn tennis, table tennis, and
-        badminton.
-        <br />
-        <br />
-        The students are also exposed to opportunities to participate in
-        varied recreational programs that include gymnastics, aerobics,
-        yoga, athletics and exercise.
-      </Text>
-      <div class="p-3"></div>
-      <Text
-        type="sm"
-        class="uppercase text-accent underline tracking-widest font-bold cursor-pointer"
-        data-modal-target="campus-facility3"
-        data-target-deck="deck-campus-facility3"
-      >
-        View Sport Facilities
       </Text>
     </div>
   </div>

@@ -4,13 +4,16 @@ const {
   options,
   name,
   id,
+  class: className,
+  disabled,
+  required = false,
   title=null
 } = Astro.props
 ---
 
-<div class="select text-[14px] h-[48px]" data-select-parent-id={id}>
+<div class:list={["select text-[14px] h-[48px] relative", className, disabled && 'opacity-80']} data-select-parent-id={id}>
   <div class="selectWrapper">
-    <select class="selectNative js-selectNative h-[48px]" aria-labelledby={name} name={name} data-id={id} required title={title}>
+    <select class="selectNative js-selectNative h-[48px]" aria-labelledby={name} name={name} data-id={id} required={required} title={title}>
       <option value="" disabled="" selected="">{placeholder}</option>
       {options.map((option: string) => (
         <option value={option}>
@@ -24,13 +27,16 @@ const {
       <div class="selectCustom-trigger">{placeholder}</div>
       <div class="selectCustom-options flex flex-row flex-wrap gap-5 !px-6 justify-between">
         {options.map((option: string) => (
-          <div data-value={option} class="selectCustom-option flex items-center justify-center flex-1 min-w-fit !p-2 !pl-3 !px-3 border border-[#C6C6C6] rounded-md cursor-pointer transition-all" >
+          <div data-value={option} class="selectCustom-option flex items-center justify-center flex-1 min-w-[80px] !p-2 !px-2 border border-[#C6C6C6] rounded-md cursor-pointer transition-all" >
             {option}
-          </div>
+          </div> 
         ))}
       </div>
     </div>
   </div>
+  {disabled && (
+    <div class="absolute w-full h-full top-0 left-0 cursor-not-allowed"></div>
+  )}
 </div>
 
 
