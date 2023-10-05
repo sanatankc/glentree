@@ -323,10 +323,22 @@ import 'tippy.js/dist/tippy.css'; // optional for styling
       document.querySelector('.apply-now-register-button').classList.remove('loading')
       const data = await response.json();
       if (data.message) {
-        fbq('track', 'CompleteRegistration', Array.from(formData.entries()).reduce((memo, [key, value]) => ({
+        let params = Array.from(formData.entries()).reduce((memo, [key, value]) => ({
           ...memo,
           [key]: value,
-        }), {}));
+        }), {})
+
+        params = {
+          ...params,
+          
+        }
+        fbq('track', 'CompleteRegistration', {
+          value: 0.00,
+          currency: 0.00,
+          em: formData.get('email'),
+          ph: formData.get('phoneNo'),
+          fn: formData.get('parentName'),
+        })
         document.getElementById('register-form-container-desktop').classList.add('form-completed')
       }
     })
