@@ -6,7 +6,7 @@ import arrow from '../icons/arrow.svg';
 const { id, gallery, currentLink, link, closeLink } = Astro.props
 const slideId = 'slide' + id
 
-console.log('link ---> ', currentLink, link)
+console.log('slideId...', slideId)
 ---
 
 <Modal openDefault={Boolean(currentLink === link && link && currentLink)} link={link} closeLink={closeLink} id={id} class="h-screen backdrop-blur-sm p-9 max-md:p-0" containerClass="max-md:flex max-md:items-center">
@@ -109,7 +109,8 @@ console.log('link ---> ', currentLink, link)
   const goToNextSlide = slideId => {
 
     const captionText = document.querySelector<HTMLElement>(`[data-caption-id="${slideId}"][data-slides-captions]`)
-  
+      
+    console.log('captionText...',  `[data-caption-id="${slideId}"][data-slides-captions]`, captionText)
     const allCaptions = captionText.dataset.slidesCaptions.split(',')
 
     const allSlides = document.querySelectorAll<HTMLElement>(`[data-target-slide="${slideId}"]`)
