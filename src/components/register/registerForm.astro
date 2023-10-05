@@ -316,7 +316,10 @@ const selectGrade3Container = document.querySelector('[data-select-parent-id="se
       document.querySelector('.apply-now-register-button').classList.remove('loading')
       const data = await response.json();
       if (data.message) {
-        console.log('Hello...', data.message)
+        fbq('track', 'CompleteRegistration', Array.from(formData.entries()).reduce((memo, [key, value]) => ({
+          ...memo,
+          [key]: value,
+        }), {}));
         document.getElementById('register-form-container-desktop').classList.add('form-completed')
       }
     })
