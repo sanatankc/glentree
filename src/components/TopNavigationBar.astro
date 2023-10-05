@@ -140,14 +140,14 @@ const { hideMenu = false, applyNowButtonId = null } = Astro.props
                   </div>
                 </div>
                 <div
-                  class="absolute w-[250px] bg-[#121212] top-[40px] menu"
+                  class="absolute w-[250px] pt-[10px] menu"
                   style={{
                     boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.5)",
                   }}
                 >
                   {item.submenu.map((subitem, j) => (
                     <div
-                      class="py-[14px] px-3"
+                      class="py-[14px] px-3 bg-[#121212]"
                       style={{
                         borderBottom:
                           j >= item?.submenu?.length - 1
