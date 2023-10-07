@@ -316,7 +316,7 @@ import 'tippy.js/dist/tippy.css'; // optional for styling
 
       document.querySelector('.apply-now-register-button').classList.add('loading')
 
-      const response = await fetch("/apihttps://admissions.glentreeacademy.com", {
+      const response = await fetch("/api/register", {
         method: "POST",
         body: formData,
       });
