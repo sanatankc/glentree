@@ -19,7 +19,7 @@ export const POST: APIRoute = async ({ request }) => {
   formData.append("Admission Year", admissionYear);
   formData.append("Grade", grade);
   formData.append("sheetName", 'Users');
-  formData.append("Date_Time", new Date().toLocaleString());
+  formData.append("Date_Time", new Date().toLocaleString('en-GB', { timeZone: 'IST' }));
   formData.append("Whatsapp Consent", whatsappConsent === 'on' ? 'Yes' : 'No');
 
   // append the rest of the data to the form data object
