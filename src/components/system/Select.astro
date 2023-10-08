@@ -10,7 +10,7 @@ const {
 } = Astro.props
 ---
 
-<div class="select text-[14px] h-[48px]" data-select-parent-id={id} data-default-value={defaultValue}>
+<div class:list={["select text-[14px] h-[48px]", defaultValue && 'active']} data-select-parent-id={id} data-default-value={defaultValue}>
   <div class="selectWrapper">
     <select class="selectNative js-selectNative appearance-none" aria-labelledby={name} name={name} data-id={id} required={required} title={title}>
       <option value="" disabled="" selected="">{placeholder}</option>
@@ -23,7 +23,7 @@ const {
 
     <!-- Hide the custom select from AT (e.g. SR) using aria-hidden -->
     <div class="selectCustom js-selectCustom" aria-hidden="true" data-id={id}>
-      <div class="selectCustom-trigger">{placeholder}</div>
+      <div class="selectCustom-trigger">{defaultValue ? defaultValue : placeholder}</div>
       <div class="selectCustom-options">
         {options.map((option: string) => (
           <div class="selectCustom-option hover:bg-green-600" data-value={option}>
