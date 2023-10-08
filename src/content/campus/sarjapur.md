@@ -1,5 +1,6 @@
 ---
 bannerBg: /images/gas-school.jpeg
+name: sarjapur
 title: Glentree Academy - Sarjapur
 description: Centrally located in the IT Corridor of Bengaluru
 virtualCampusLink: >-
