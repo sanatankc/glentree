@@ -17,6 +17,17 @@ import 'tippy.js/dist/tippy.css'; // optional for styling
     <Text type="sm" class="text-black/70 text-center font-semibold max-md:text-sm">Fill the form below and we’ll get in touch shortly!</Text>
     
     <form class="flex-col flex gap-[23px] mt-8 max-md:mt-6" id="register-form"  method="POST">
+      <Select
+        placeholder="Select Admission Year"
+        id="selectAdmissionYear"
+        options={[
+          "2023-24",
+          "2024-25"
+        ]}
+        name="admissionYear"
+        required
+        defaultValue="2024-25"
+      />
       <div class="flex flex-row gap-5 max-md:flex-col"> 
         <div class="w-full" style={{
           boxShadow: '0px 2px 2px 0px rgba(0, 0, 0, 0.05)'
@@ -170,17 +181,6 @@ import 'tippy.js/dist/tippy.css'; // optional for styling
         name="grade3"
         required
       />
-     
-      <Select
-        placeholder="Select Admission Year"
-        id="selectAdmissionYear"
-        options={[
-          "2023-24",
-          "2024-25"
-        ]}
-        name="admissionYear"
-        required
-      />
   
       <div class="flex flex-row">
         <input type="checkbox" class="accent-accent2 cursor-pointer" name="whatsappConsent" id="whatsappConsent" />
@@ -236,7 +236,7 @@ import 'tippy.js/dist/tippy.css'; // optional for styling
 <script>
   import tippy from 'tippy.js';
 
-  console.log(tippy)
+  console.log('hello...')
   // by default hide grades
   const selectGrade1Container = document.querySelector('[data-select-parent-id="selectGrade1"]');
   const selectGrade2Container = document.querySelector('[data-select-parent-id="selectGrade2"]');

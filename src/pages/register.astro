@@ -125,7 +125,7 @@ const faqs = [
             class="
               absolute w-full h-full top-0 left-0
               bg-[linear-gradient(183deg,_rgba(0,_66,_29,_0.00)_31.29%,_#000_97.19%)]
-              max-md:bg-[linear-gradient(180deg,_rgba(0,_66,_29,_0.10)_-40.71%,_#000_50.19%)]
+              max-md:bg-[linear-gradient(180deg,_rgba(0,_66,_29,_0.80)_-40.71%,_#000_50.19%)]
               z-20
             "
             style={{
@@ -134,7 +134,7 @@ const faqs = [
             }}
           />
 
-          <div class="max-md:p-36 max-md:block hidden"  />
+          <div class="max-md:p-2 max-md:block hidden"  />
 
           <div class="h-full flex flex-row items-end relative z-20 self-end max-md:self-start">
             <div class="flex flex-col max-md:items-center mb-10 max-md:mb-2">
@@ -291,16 +291,18 @@ const faqs = [
     <Footer />
     </div>
 
-    <a href="tel:7676310000">
-      <div class="fixed w-full h-14 bg-green-600 bottom-0 left-0 z-10 hidden max-md:flex items-center justify-center gap-4">
-        <div 
-          class="w-4 h-4"
-        >
-          <Image src={PhoneWhite} alt="Phone" class="w-full h-full object-cover" />
+    <button>
+      <a href="tel:7676310000">
+        <div class="fixed w-full h-14 bg-green-600 bottom-0 left-0 z-10 hidden max-md:flex items-center justify-center gap-4">
+          <div 
+            class="w-4 h-4"
+          >
+            <Image src={PhoneWhite} alt="Phone" class="w-full h-full object-cover" />
+          </div>
+          <Text type="sm">+91 76763 10000</Text>
         </div>
-        <Text type="sm">+91 76763 10000</Text>
-      </div>
-    </a>
+      </a>
+    </button>
 
   </main>
 </Layout>
@@ -372,20 +374,14 @@ const faqs = [
   fbq('init', '647409237216912');
   fbq('track', 'PageView');
 </script>
-<noscript>
-  <img
-    height="1"
-    width="1"
-    style="display:none"
-    src="https://www.facebook.com/tr?id=647409237216912&ev=PageView&noscript=1"
-  />
-</noscript>
+
 
 <script>
   // @@ts-ignore
 
   // dev script temp
   const applyNowButtons = document.querySelectorAll(`[data-apply-now-button="register-page-apply-now"]`)
+  console.log(applyNowButtons)
   applyNowButtons.forEach((applyNowButton => {
     applyNowButton?.addEventListener('click', () => {
       if (window.innerWidth > 768) {

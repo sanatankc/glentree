@@ -5,16 +5,17 @@ const {
   name,
   id,
   title=null,
-  required=false
+  required=false,
+  defaultValue=null,
 } = Astro.props
 ---
 
-<div class="select text-[14px] h-[48px]" data-select-parent-id={id}>
+<div class="select text-[14px] h-[48px]" data-select-parent-id={id} data-default-value={defaultValue}>
   <div class="selectWrapper">
     <select class="selectNative js-selectNative appearance-none" aria-labelledby={name} name={name} data-id={id} required={required} title={title}>
       <option value="" disabled="" selected="">{placeholder}</option>
       {options.map((option: string) => (
-        <option value={option}>
+        <option selected={defaultValue === option} value={option}>
           {option}
         </option>
       ))}
