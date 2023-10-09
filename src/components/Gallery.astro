@@ -11,7 +11,7 @@ console.log('slideId...', slideId)
 
 <Modal openDefault={Boolean(currentLink === link && link && currentLink)} link={link} closeLink={closeLink} id={id} class="h-screen backdrop-blur-sm p-9 max-md:p-0" containerClass="max-md:flex max-md:items-center">
   <div class="bg-white rounded-md w-full h-full max-md:h-auto p-3 max-md:p-0">
-    <div class="w-full h-full relative overflow-hidden rounded-md">
+    <div class="w-full h-full relative rounded-md">
       {gallery.map((slide: {
         src: string,
         caption: string
@@ -80,7 +80,7 @@ console.log('slideId...', slideId)
   const goToPrevSlide = slideId => {
     const captionText = document.querySelector<HTMLElement>(`[data-caption-id="${slideId}"][data-slides-captions]`)
 
-    const descriptionText = document.querySelector<HTMLElement>(`[data-description-id="${slideId}"]`)
+    const descriptionText = document.querySelectorAll<HTMLElement>(`[data-description-id="${slideId}"]`)
   
     const allCaptions = captionText.dataset.slidesCaptions.split(',')
     
@@ -97,8 +97,10 @@ console.log('slideId...', slideId)
     captionText.innerText = newCaption
 
     if (descriptionText) {
-      const allDescriptions = descriptionText.dataset.slidesDescriptions.split(',')
-      descriptionText.innerText = allDescriptions[prevSlideIndex]
+      descriptionText.forEach((description, index) => {
+        const allDescriptions = description.dataset.slidesDescription.split('___')
+        description.innerText = allDescriptions[prevSlideIndex]
+      })
     }
 
 
@@ -107,10 +109,9 @@ console.log('slideId...', slideId)
   }
 
   const goToNextSlide = slideId => {
-
     const captionText = document.querySelector<HTMLElement>(`[data-caption-id="${slideId}"][data-slides-captions]`)
-      
-    console.log('captionText...',  `[data-caption-id="${slideId}"][data-slides-captions]`, captionText)
+    const descriptionText = document.querySelectorAll<HTMLElement>(`[data-description-id="${slideId}"]`)
+
     const allCaptions = captionText.dataset.slidesCaptions.split(',')
 
     const allSlides = document.querySelectorAll<HTMLElement>(`[data-target-slide="${slideId}"]`)
@@ -123,6 +124,13 @@ console.log('slideId...', slideId)
       
     const newCaption = allCaptions[nextSlideIndex]
     captionText.innerText = newCaption
+
+    if (descriptionText) {
+      descriptionText.forEach((description, index) => {
+        const allDescriptions = description.dataset.slidesDescription.split('___')
+        description.innerText = allDescriptions[nextSlideIndex]
+      })
+    }
 
     activeSlide.dataset.isActive = 'false'
     nextSlide.dataset.isActive = 'true'

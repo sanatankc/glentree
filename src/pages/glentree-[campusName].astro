@@ -70,6 +70,21 @@ import GAWupdate24 from '../images/campus/gaw/updates/24.jpeg'
 
 import EarthLab from '../components/campus/earthLab.astro';
 
+import LibraryGAW from '../images/campus/gaw/facilities/library2.webp'
+import ScienceLabGAW from '../images/campus/gaw/facilities/sciencelab.webp'
+import ComputerLabGAW from '../images/campus/gaw/facilities/computerlab.webp'
+import earthLabGAW from '../images/campus/gaw/facilities/earthlab.webp'
+import PlaygroundGAW from '../images/campus/gaw/facilities/playground.webp'
+import campusGAW from '../images/campus/gaw/facilities/campus.webp'
+import auditoriumGAW from '../images/campus/gaw/facilities/auditorium.webp'
+import discoverRoomGAW from '../images/campus/gaw/facilities/discoverroom.webp'
+
+import campusGAS from '../images/campus/gas/facilities/Campus.webp'
+import ScienceLabGAS from '../images/campus/gas/facilities/chemlab.webp'
+import LibraryGAS from '../images/campus/gas/facilities/Library.webp'
+import smartClassroomGAS from '../images/campus/gas/facilities/SmartClassroom.webp'
+import SportsGAS from '../images/campus/gas/facilities/Sports.webp'
+import csLabGAS from '../images/campus/gas/facilities/cslab.webp'
 
 
 const allowedCampusNames = ['whitefield', 'sarjapur']
@@ -243,7 +258,7 @@ console.log('data... aroundTheCampus -> ', JSON.stringify(data.aroundTheCampus, 
           </div>
 
           <NewsLetterForm campusName={campusName} />
-  {/*
+  
           <a href={data.virtualCampusLink} target='_blank'>
             <Button class='max-md:block hidden max-md:mt-2 max-md:ml-4'>Launch Virtual Campus Tour</Button>
           </a>
@@ -258,92 +273,163 @@ console.log('data... aroundTheCampus -> ', JSON.stringify(data.aroundTheCampus, 
               <Button class='max-md:hidden'>Launch Virtual Campus Tour</Button>
             </a>
           </Constrain>
-
-          <CampusFacilities
-            currentLink={currentPath}
-            campusName={campusName}
-            data={{
-              title: '<span>Campus</span> Facilities',
-              description: `Step into our modern, spacious classrooms equipped with the latest educational technology. We prioritise comfort and up-to-date resources to support your child’s optimal learning experience.
-              <ul>
-                <li>Digitally Enabled Classrooms</li>
-                <li>Wonder Room for Pre primary</li>
-                <li>Well-stocked libraries</li>
-                <li>Multi-purpose Amphitheatres</li>
-                <li>CC TV Monitoring for added security.</li>
-              </ul>
-              `,
-              gallery: [
-                {
-                  src: GASupdate1, 
-                  caption: 'Library',
-                  description: 'Explore our vast library, a treasure trove of knowledge with a diverse collection of books and journals, to fuel the academic journey.',
-                },
-                {
-                  src: GASupdate1,
-                  caption: 'Composite Science Laboratory',
-                  description: 'Unlock the wonders of science through hands-on experiments in our state-of-the-art lab, fostering a deep understanding of the natural world.',
-                },
-                {
-                  src: GASupdate1,
-                  caption: 'Composite Science Laboratory',
-                  description: 'Unlock the wonders of science through hands-on experiments in our state-of-the-art lab, fostering a deep understanding of the natural world.',
-                },
-                {
-                  src: GASupdate1,
-                  caption: 'Math Lab',
-                  description: 'Discover the joy of mathematics in an interactive space equipped with tools, puzzles, and games that make learning math engaging and fun.',
-                },
-                {
-                  src: GASupdate1,
-                  caption: 'Computer Lab',
-                  description: "Embark on a digital voyage in our cutting-edge computer lab, where students gain practical skills and knowledge in technology and computer science.",
-                },
-                {
-                  src: GASupdate1,
-                  caption: 'Earth Lab',
-                  description: "Connect with the environment and explore our Earth Lab, where the students engage in environmental studies and learn about sustainability and ecology.",
-                },
-                {
-                  src: GASupdate1,
-                  caption: 'Auditorium',
-                  description: "Witness the magic of the stage in our spacious auditorium, a hub for cultural events, presentations, and performances that showcase our students' talents.",
-                },
-                {
-                  src: GASupdate1,
-                  caption: 'Infirmary',
-                  description: "Our infirmary is well-equipped to provide necessary first aid to students in the time of an emergency. Annual health check-ups ups including an eye check-up by specialists are a regular procedure at the school.",
-                },
-
-                {
-                  src: GASupdate1,
-                  caption: 'Smart Interactive Classrooms',
-                  description: "Step into the future of education with our Smart Interactive Classrooms, where technology and teaching seamlessly combine to enhance the learning experience.",
-                },
-                {
-                  src: GASupdate1,
-                  caption: 'CCTV Secured Campus',
-                  description: "Safety is paramount to us. Our CCTV-secured campus ensures a secure environment, providing peace of mind to both students and parents.",
-                },
-                {
-                  src: GASupdate1,
-                  caption: 'Counselling Room',
-                  description: "Find a haven for emotional and psychological support in our confidential counselling room, where trained professionals are ready to listen and guide you through life's challenges.",
-                },
-                {
-                  src: GASupdate1,
-                  caption: 'Performing Art Room',
-                  description: "A place to unleash creativity in our dedicated Performing Arts Room, where music, drama, and dance come to life. ",
-                },
-                {
-                  src: GASupdate1,
-                  caption: 'Playground',
-                  description: "Discover the joy of outdoor activities and sports in our expansive playground, where fun and fitness unite. Sports and Recreation – Glentree offers a diverse range of sports and recreational activities, including chess, badminton, table tennis, football, basketball, volleyball, yoga, taekwondo, and fostering physical fitness and a spirit of teamwork among our students."
-                },
-              ]
-            }}
-          />
-          </div> */}
+          {campusName === 'whitefield' && (
+            <CampusFacilities
+              currentLink={currentPath}
+              campusName={campusName}
+              data={{
+                title: 'Explore our whitefield campus, designed to enhance the learning experience with modern facilities and resources.',
+                description: [
+                  'Earth Lab',
+                  'High-Tech Computer Lab',
+                  'Premium Sports Facilities',
+                  'Fun-Secure Play Area',
+                ],
+                gallery: [
+                  {
+                    src: LibraryGAW, 
+                    caption: 'Library',
+                    description: 'Explore our vast library, a treasure trove of knowledge with a diverse collection of books and journals, to fuel the academic journey.',
+                  },
+                  {
+                    src: ScienceLabGAW,
+                    caption: 'Composite Science Laboratory',
+                    description: 'Unlock the wonders of science through hands-on experiments in our state-of-the-art lab, fostering a deep understanding of the natural world.',
+                  },
+                  // {
+                  //   src: GASupdate1,
+                  //   caption: 'Math Lab',
+                  //   description: 'Discover the joy of mathematics in an interactive space equipped with tools, puzzles, and games that make learning math engaging and fun.',
+                  // },
+                  {
+                    src: ComputerLabGAW,
+                    caption: 'Computer Lab',
+                    description: "Embark on a digital voyage in our cutting-edge computer lab, where students gain practical skills and knowledge in technology and computer science.",
+                  },
+                  {
+                    src: earthLabGAW,
+                    caption: 'Earth Lab',
+                    description: "Connect with the environment and explore our Earth Lab, where the students engage in environmental studies and learn about sustainability and ecology.",
+                  },
+                  {
+                    src: auditoriumGAW,
+                    caption: 'Auditorium',
+                    description: "Witness the magic of the stage in our spacious auditorium, a hub for cultural events, presentations, and performances that showcase our students' talents.",
+                  },
+                  // {
+                  //   src: GASupdate1,
+                  //   caption: 'Infirmary',
+                  //   description: "Our infirmary is well-equipped to provide necessary first aid to students in the time of an emergency. Annual health check-ups ups including an eye check-up by specialists are a regular procedure at the school.",
+                  // },
+  
+                  // {
+                  //   src: smartClassroomGAW,
+                  //   caption: 'Smart Interactive Classrooms',
+                  //   description: "Step into the future of education with our Smart Interactive Classrooms, where technology and teaching seamlessly combine to enhance the learning experience.",
+                  // },
+                  {
+                    src: campusGAW,
+                    caption: 'CCTV Secured Campus',
+                    description: "Safety is paramount to us. Our CCTV-secured campus ensures a secure environment, providing peace of mind to both students and parents.",
+                  },
+                  {
+                    src: discoverRoomGAW,
+                    caption: 'Counselling Room',
+                    description: "Find a haven for emotional and psychological support in our confidential counselling room, where trained professionals are ready to listen and guide you through life's challenges.",
+                  },
+                  // {
+                  //   src: GASupdate1,
+                  //   caption: 'Performing Art Room',
+                  //   description: "A place to unleash creativity in our dedicated Performing Arts Room, where music, drama, and dance come to life. ",
+                  // },
+                  {
+                    src: PlaygroundGAW,
+                    caption: 'Playground',
+                    description: "Sports and Recreation – Glentree offers a diverse range of sports and recreational activities, including chess, badminton, table tennis, football, basketball, volleyball, yoga, taekwondo, and fostering physical fitness and a spirit of teamwork among our students."
+                  },
+                ]
+              }}
+            />
+          )}
+          {campusName === 'sarjapur' && (
+            <CampusFacilities
+              currentLink={currentPath}
+              campusName={campusName}
+              data={{
+                title: 'Explore our whitefield campus, designed to enhance the learning experience with modern facilities and resources.',
+                description: [
+                  'Composite Science Laboratory',
+                  'High-Tech Computer Lab',
+                  'Premium Sports Facilities',
+                  'Fun-Secure Play Area',
+                ],
+                gallery: [
+                  {
+                    src: LibraryGAS, 
+                    caption: 'Library',
+                    description: 'Explore our vast library, a treasure trove of knowledge with a diverse collection of books and journals, to fuel the academic journey.',
+                  },
+                  {
+                    src: ScienceLabGAS,
+                    caption: 'Composite Science Laboratory',
+                    description: 'Unlock the wonders of science through hands-on experiments in our state-of-the-art lab, fostering a deep understanding of the natural world.',
+                  },
+                  // {
+                  //   src: GASupdate1,
+                  //   caption: 'Math Lab',
+                  //   description: 'Discover the joy of mathematics in an interactive space equipped with tools, puzzles, and games that make learning math engaging and fun.',
+                  // },
+                  {
+                    src: csLabGAS,
+                    caption: 'Computer Lab',
+                    description: "Embark on a digital voyage in our cutting-edge computer lab, where students gain practical skills and knowledge in technology and computer science.",
+                  },
+                  // {
+                  //   src: earthLabGAW,
+                  //   caption: 'Earth Lab',
+                  //   description: "Connect with the environment and explore our Earth Lab, where the students engage in environmental studies and learn about sustainability and ecology.",
+                  // },
+                  // {
+                  //   src: GASupdate1,
+                  //   caption: 'Auditorium',
+                  //   description: "Witness the magic of the stage in our spacious auditorium, a hub for cultural events, presentations, and performances that showcase our students' talents.",
+                  // },
+                  // {
+                  //   src: GASupdate1,
+                  //   caption: 'Infirmary',
+                  //   description: "Our infirmary is well-equipped to provide necessary first aid to students in the time of an emergency. Annual health check-ups ups including an eye check-up by specialists are a regular procedure at the school.",
+                  // },
+  
+                  {
+                    src: smartClassroomGAS,
+                    caption: 'Smart Interactive Classrooms',
+                    description: "Step into the future of education with our Smart Interactive Classrooms, where technology and teaching seamlessly combine to enhance the learning experience.",
+                  },
+                  {
+                    src: campusGAS,
+                    caption: 'CCTV Secured Campus',
+                    description: "Safety is paramount to us. Our CCTV-secured campus ensures a secure environment, providing peace of mind to both students and parents.",
+                  },
+                  // {
+                  //   src: GASupdate1,
+                  //   caption: 'Counselling Room',
+                  //   description: "Find a haven for emotional and psychological support in our confidential counselling room, where trained professionals are ready to listen and guide you through life's challenges.",
+                  // },
+                  // {
+                  //   src: GASupdate1,
+                  //   caption: 'Performing Art Room',
+                  //   description: "A place to unleash creativity in our dedicated Performing Arts Room, where music, drama, and dance come to life. ",
+                  // },
+                  {
+                    src: SportsGAS,
+                    caption: 'Playground',
+                    description: "Sports and Recreation – Glentree offers a diverse range of sports and recreational activities, including chess, badminton, table tennis, football, basketball, volleyball, yoga, taekwondo, and fostering physical fitness and a spirit of teamwork among our students."
+                  },
+                ]
+              }}
+            />
+          )}
+        </div>
 
           <div class='w-full mt-20 max-md:mt-8 mb-0 p-20 max-md:p-4 max-md:py-8 max-md:mb-0' style={{
             background: 'linear-gradient(180deg, #3C674F 0%, #23623F 51.08%, #0A5E2F 100%)',
