@@ -291,7 +291,7 @@ const faqs = [
     <Footer />
     </div>
 
-    <button>
+    <button data-pixel-contact-target>
       <a href="tel:7676310000">
         <div class="fixed w-full h-14 bg-green-600 bottom-0 left-0 z-10 hidden max-md:flex items-center justify-center gap-4">
           <div 
@@ -378,6 +378,14 @@ const faqs = [
 
 <script>
   // @@ts-ignore
+
+  const pixelContactTargets = document.querySelectorAll('[data-pixel-contact-target]')
+
+  pixelContactTargets.forEach((pixelContactTarget) => {
+    pixelContactTarget.addEventListener('click', () => {
+      fbq('track', 'Contact');
+    })
+  })
 
   // dev script temp
   const applyNowButtons = document.querySelectorAll(`[data-apply-now-button="register-page-apply-now"]`)
