@@ -221,17 +221,18 @@ import AdmissionStep from '../components/admissions/AdmissionStep.astro';
       <Text type={'subtitle'} class='text-center text-black mt-9' style={{ opacity: 0.6, letterSpacing: '0.1em' }}>Meet us in Person</Text>
       <Text type={'h2'} class='text-center text-black mt-3 mb-8  max-md:mb-0'>Schedule a Visit</Text>
 
-      <div class='mt-[44px] mb-[72px] flex flex-row flex-wrap w-full justify-center max-md:justify-center max-md:mb-5'>
-        <div class='flex flex-row rounded-lg p-6 max-w-[490px] w-[90%]' style={{
+      <div class='mt-[44px] mb-[72px] gap-[72px] max-md:gap-0 flex flex-row flex-wrap w-full justify-center max-md:justify-center max-md:mb-5'>
+        <div class='flex flex-row rounded-lg p-6 max-w-[400px] w-[90%]' style={{
           border: '1px solid rgba(40, 40, 40, 0.12)'
         }}>
-          <div class='w-8 h-8 mr-4 relative top-1'>
+          <div class='w-6 h-6 mr-4 relative top-1 flex-shrink-0'>
             <LocationIcon />
           </div>
           <div class='max-md:w-[88%]'>
             <Text type='h4' class='text-black mb-2'>Whitefield Campus</Text>
             <Text
               type='sm'
+              class="!text-[15px]"
               style={{
                 color: '#282828',
                 opacity: 0.8
@@ -249,16 +250,17 @@ import AdmissionStep from '../components/admissions/AdmissionStep.astro';
 
         </div>
 
-        <div class='flex flex-row rounded-lg p-6 max-w-[490px] w-[90%] ml-[72px] max-md:ml-0 max-md:mt-4' style={{
+        <div class='flex flex-row rounded-lg p-6 max-w-[400px] w-[90%] max-md:ml-0 max-md:mt-4' style={{
           border: '1px solid rgba(40, 40, 40, 0.12)'
         }}>
-          <div class='w-8 h-8 mr-4 relative top-1'>
+          <div class='w-6 h-6 mr-4 relative top-1 flex-shrink-0'>
             <LocationIcon />
           </div>
           <div class='max-md:w-[88%]'>
             <Text type='h4' class='text-black mb-2'>Sarjapur Campus</Text>
             <Text
               type='sm'
+              class="!text-[15px]"
               style={{
                 color: '#282828',
                 opacity: 0.8
@@ -271,6 +273,33 @@ import AdmissionStep from '../components/admissions/AdmissionStep.astro';
               <br/>
               
               Email: admission.gas@glentreeacademy.com
+            </Text>
+          </div>
+
+        </div>
+        <div class='flex flex-row rounded-lg p-6 max-w-[400px] w-[90%] max-md:ml-0 max-md:mt-4' style={{
+          border: '1px solid rgba(40, 40, 40, 0.12)'
+        }}>
+          <div class='w-6 h-6 mr-4 relative top-1 flex-shrink-0'>
+            <LocationIcon />
+          </div>
+          <div class='max-md:w-[88%]'>
+            <Text type='h4' class='text-black mb-2'>Bannerghatta Campus</Text>
+            <Text
+              type='sm'
+              class="!text-[15px]"
+              style={{
+                color: '#282828',
+                opacity: 0.8
+              }}>
+              C K Palya Rd, Hommadevanahalli, Bengaluru, Doddakammanahalli, Karnataka 560083
+              <br/>
+              <br/>
+              Contact us : +91 8105826950
+              <br/>
+              <br/>
+              
+              Email: admission.gab@glentreeacademy.com
             </Text>
           </div>
 
