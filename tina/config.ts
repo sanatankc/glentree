@@ -1,6 +1,6 @@
 import { defineConfig } from "tinacms";
 // Your hosting provider likely exposes this as an environment variable
-const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "staging";
+const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
 
 export default defineConfig({
   branch,
@@ -70,12 +70,6 @@ export default defineConfig({
         label: "Campus",
         path: "src/content/campus",
         fields: [
-          // {
-          //   type: "string",
-          //   name: "name",
-          //   label: "Name",
-          //   required: true,
-          // },
           {
             type: "image",
             name: "bannerBg",
