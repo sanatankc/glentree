@@ -11,7 +11,7 @@ showcase:
   - image: /images/13.jpeg
     title: Yellow Day
   - image: /images/IMG-20230923-WA0033.jpg
-    title: 'Inter School Throw Ball '
+    title: Inter School Throw Ball
   - image: /images/10.71561ac9.jpg
     title: Quit India Movement
   - image: /images/9.29a84678.jpg
