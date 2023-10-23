@@ -61,8 +61,8 @@ disclosure:
   - title: Building Safety Certificate
     disclosure: >
       [VIEW
-      HERE](<https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/Building
-      Safety - GAS.pdf> "gas-safetyCertificate.pdf")
+      HER](<https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/Building
+      Safety Certificate 2023.pdf> "gas-safetyCertificate.pdf")
   - title: Admission Period
     disclosure: |
       October to April
