@@ -20,32 +20,32 @@ const { title = 'Best CBSE School in Bangalore | Glentree Academy School' } = As
 
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-SEL743GRSY"></script>
-		<script async>
+		<script>
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
 
 			gtag('config', 'G-SEL743GRSY');
+
+			function gtag_report_conversion(url) {
+			var callback = function () {
+				if (typeof(url) != 'undefined') {
+					window.location = url;
+				}
+			};
+			gtag('event', 'conversion', {
+					'send_to': 'AW-600364619/3ftGCKqG-vMYEMuso54C',
+					'event_callback': callback
+			});
+			return false;
+		}
+		window.gtag_report_conversion = gtag_report_conversion
 		</script>
 
 
 <!-- Event snippet for Admission Form Submitted conversion page
 In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-<script async>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-600364619/3ftGCKqG-vMYEMuso54C',
-      'event_callback': callback
-  });
-  return false;
-}
-window.gtag_report_conversion = gtag_report_conversion
-</script>
+
 	</head>
 	<body>
 		<slot />
