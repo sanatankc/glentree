@@ -339,6 +339,7 @@ import 'tippy.js/dist/tippy.css'; // optional for styling
           ph: formData.get('phone'),
           fn: formData.get('parentName'),
         })
+        window.gtag_report_conversion()
         document.getElementById('register-form-container-desktop').classList.add('form-completed')
       }
     })
