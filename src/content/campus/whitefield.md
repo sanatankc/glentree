@@ -1,5 +1,6 @@
 ---
 bannerBg: /images/gaw-school.jpg
+name: Dummy
 title: Glentree Academy - Whitefield
 description: A sprawling green campus within the heart of the city.
 virtualCampusLink: >-
