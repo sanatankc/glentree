@@ -7,7 +7,7 @@ virtualCampusLink: >-
 affiliationNo: '830349'
 showcase:
   - image: /images/Kannada Rajyotsava.jpg
-    title: ಕನ್ನಡ ರಾಜ್ಯೋತ್ಸವ
+    title: 'ಕನ್ನಡ ರಾಜ್ಯೋತ್ಸವ '
   - image: /images/391661758_803149435152982_6560339782273369487_n.jpg
     title: Community Helpers
   - image: /images/393695436_806718588129400_6878058105282631629_n.jpg
