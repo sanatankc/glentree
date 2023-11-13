@@ -6,6 +6,8 @@ virtualCampusLink: >-
   https://www.google.com/maps/place/Glentree+Academy+%7C+Sarjapur+Road/@12.8977869,77.685075,3a,75y,40h,90t/data=!3m8!1e1!3m6!1sAF1QipMsMZhGdx_yVOtQmfHLZylZSCsbMukrLDnCoiRB!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMsMZhGdx_yVOtQmfHLZylZSCsbMukrLDnCoiRB%3Dw224-h298-k-no-pi-0-ya123.074-ro-0-fo100!7i10744!8i5372!4m23!1m13!4m12!1m4!2m2!1d77.6699904!2d12.9162376!4e1!1m6!1m2!1s0x3bae133b85c0a5c9:0xfb6b527d7c9d4f4f!2sglentree+academy+sarjapur!2m2!1d77.6848375!2d12.8976944!3m8!1s0x3bae133b85c0a5c9:0xfb6b527d7c9d4f4f!8m2!3d12.8976944!4d77.6848375!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11f03_4kl3?entry=ttu
 affiliationNo: '831088'
 showcase:
+  - image: /images/WhatsApp Image 2023-11-06 at 21.42.43 (18).jpeg
+    title: Special Assembly for Kannada Rajyotsava
   - image: /images/Dussehra.jpeg
     title: Happy Dussehra
   - image: /images/Students Day.jpeg
