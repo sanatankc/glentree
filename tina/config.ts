@@ -81,12 +81,12 @@ export default defineConfig({
             label: "Title",
             required: true,
           },
-          {
-            type: "string",
-            name: "name",
-            label: "Name",
-            required: false,
-          },
+          // {
+          //   type: "string",
+          //   name: "name",
+          //   label: "Name",
+          //   required: false,
+          // },
           {
             type: "string",
             name: "description",
