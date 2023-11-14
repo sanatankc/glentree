@@ -41,9 +41,12 @@ import earthLab from '../images/campus/gab/slides/earthLab.png'
 import playArea from '../images/campus/gab/slides/playArea.png'
 import receptionArea from '../images/campus/gab/slides/receptionArea.png'
 import sportsFacilities from '../images/campus/gab/slides/sportsFacilities.png'
+import arrow from '../icons/arrow.svg'
 
 import Faqs from '../components/faqs.astro';
 import EarthLab from '../components/campus/earthLab.astro';
+import Card from '../components/landingPage/Updates/Card.astro';
+import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
 
 
 const academics = [
@@ -93,6 +96,10 @@ const academics = [
     ] 
   },
 ]
+
+
+
+const { data } = await getEntry('campus','bannerghatta') as CollectionEntry<'campus'>
 
 
 ---
@@ -168,6 +175,44 @@ const academics = [
         </div>
         <AdmissionMarquee />
       </div>
+
+
+      {data.showcase && data.showcase.length > 0 && (
+        <div 
+          style={{
+            background: 'linear-gradient(180deg, #000000 0%, #142C1E 100%)',
+          }}
+          class="flex flex-col items-center py-14 max-md:py-12"
+        >
+          <div class='flex flex-row w-full items-center max-md:ml-0 max-md:px-6 box-border daisy daisy-2'>
+            <div class='flex-1 bg-white/30 mr-6 max-md:mr-4 max-md:hidden' style={{ height: '1px' }}></div>
+            <Text type={"subtitle"} class='text-center max-md:w-[100%] text-white' style={{ opacity: 0.8 }}> What's Happening at Glentree</Text>
+            <div class='flex-1 bg-white/30 ml-6 max-md:ml-4 max-md:hidden' style={{ height: '1px' }}></div>
+          </div>
+      
+          <div class="w-full relative mt-8">
+            <div class="w-screen absolute h-full top-0 left-0 z-50 flex flex-row items-center p-10 justify-between pointer-events-none">
+              <div class="w-10 h-10 pointer-events-auto cursor-pointer" id="prev-button">
+                <Image src={arrow} alt="previous button" class="w-full h-full -scale-100" />
+              </div>
+              <div class="w-10 h-10 pointer-events-auto cursor-pointer" id="next-button">
+                <Image src={arrow} alt="previous button" class="w-full h-full" />
+              </div>
+            </div>
+            <div id="scroll-container" class="h-scroll relative w-screen flex flex-row h-min overflow-scroll no-scrollbar scroll-snap-news-carousel px-6 mb-0" style={{
+              overflowX: 'scroll',
+              overflowY: 'hidden',
+              scrollSnapType: 'x mandatory',
+            }}>
+              {data.showcase.map((card, index) => (
+                <Card title={card.title} image={card.image} class={`scroll-card daisy daisy-${index + 1} daisy-y-1 daisy-debug m-auto min-w-[39.813rem] max-sm:min-w-[300px]`}  />
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+
 
     <NewCampusShowcase />
 

@@ -3,14 +3,13 @@ import { z, defineCollection } from 'astro:content';
 const campusCollection = defineCollection({
   type: 'content', 
   schema: ({image}) => z.object({
-    name: z.string(),
-    title: z.string(),
-    description: z.string(),
-    bannerBg: z.string(),
-    virtualCampusLink: z.string(),
-    galleryImages: z.any(),
-    showcase: z.any(),
-    affiliationNo: z.string(),
+    title: z.string().optional(),
+    description: z.string().optional(),
+    bannerBg: z.string().optional(),
+    virtualCampusLink: z.string().optional(),
+    galleryImages: z.any().optional(),
+    showcase: z.any().optional(),
+    affiliationNo: z.string().optional(),
     aroundTheCampus: z.object({
       title: z.string(),
       description: z.string(),
