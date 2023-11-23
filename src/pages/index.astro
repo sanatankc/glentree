@@ -192,6 +192,13 @@ import Faqs from '../components/faqs.astro';
 </style>
 
 <script>
+  // @@ts-ignore
+
+  // dev script temp
+
+  import collapsible, { openCollapsible } from '../components/admissions/collapsible'
+  collapsible('.collapsible', null)
+
   const joinCareerCta = document.getElementById('about-us-join-career-cta')
   const arrowButton = document.getElementById('arrow-button-about-us-career')
   joinCareerCta?.addEventListener('mouseenter', () => {
