@@ -4,6 +4,8 @@ description: Bannerghatta
 virtualCampusLink: test
 affiliationNo: test
 showcase:
+  - image: /images/WhatsApp Image 2023-11-23 at 15.37.16.jpeg
+    title: 'Our School Story unveiled '
   - image: /images/Board.jpg
     title: Through the lens of Learning
   - image: /images/WhatsApp Image 2023-11-23 at 15.33.21.jpeg
