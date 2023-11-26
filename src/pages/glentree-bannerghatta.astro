@@ -41,7 +41,7 @@ import earthLab from '../images/campus/gab/slides/earthLab.png'
 import playArea from '../images/campus/gab/slides/playArea.png'
 import receptionArea from '../images/campus/gab/slides/receptionArea.png'
 import sportsFacilities from '../images/campus/gab/slides/sportsFacilities.png'
-import arrow from '../icons/arrow.svg'
+import arrow from '../icons/ArrowWhite.svg'
 
 import Faqs from '../components/faqs.astro';
 import EarthLab from '../components/campus/earthLab.astro';
@@ -191,14 +191,6 @@ const { data } = await getEntry('campus','bannerghatta') as CollectionEntry<'cam
           </div>
       
           <div class="w-full relative mt-8">
-            <div class="w-screen absolute h-full top-0 left-0 z-50 flex flex-row items-center p-10 justify-between pointer-events-none">
-              <div class="w-10 h-10 pointer-events-auto cursor-pointer" id="prev-button">
-                <Image src={arrow} alt="previous button" class="w-full h-full -scale-100" />
-              </div>
-              <div class="w-10 h-10 pointer-events-auto cursor-pointer" id="next-button">
-                <Image src={arrow} alt="previous button" class="w-full h-full" />
-              </div>
-            </div>
             <div id="scroll-container" class="h-scroll relative w-screen flex flex-row h-min overflow-scroll no-scrollbar scroll-snap-news-carousel px-6 mb-0" style={{
               overflowX: 'scroll',
               overflowY: 'hidden',
@@ -207,6 +199,15 @@ const { data } = await getEntry('campus','bannerghatta') as CollectionEntry<'cam
               {data.showcase.map((card, index) => (
                 <Card title={card.title} image={card.image} class={`scroll-card daisy daisy-${index + 1} daisy-y-1 daisy-debug m-auto min-w-[39.813rem] max-sm:min-w-[300px]`}  />
               ))}
+            </div>
+          </div>
+
+          <div class="flex flex-row gap-6 mt-8 justify-center">
+            <div class="w-10 h-10 pointer-events-auto cursor-pointer" id="prev-button">
+              <Image src={arrow} alt="previous button" class="w-full h-full -scale-100" />
+            </div>
+            <div class="w-10 h-10 pointer-events-auto cursor-pointer" id="next-button">
+              <Image src={arrow} alt="previous button" class="w-full h-full" />
             </div>
           </div>
         </div>
@@ -353,4 +354,33 @@ const { data } = await getEntry('campus','bannerghatta') as CollectionEntry<'cam
     // mainContainer.scrollTo(0, mainContainer.scrollHeight)
   }
 
+</script>
+
+
+<script>
+  const prevButton = document.querySelector('#prev-button')
+  const nextButton = document.querySelector('#next-button')
+
+  const scrollContainer = document.querySelector('#scroll-container')
+
+
+  if (prevButton && nextButton && scrollContainer) {
+    const scroll = (scrollOffset: number) => {
+      scrollContainer.scrollBy({
+        top: 0,
+        left: scrollOffset,
+        behavior: 'smooth'
+      })
+    }
+  
+    const scrollOffset = document.querySelector('.scroll-card')?.offsetWidth
+  
+    prevButton.addEventListener('click', () => {
+      scroll(scrollOffset * -1)
+    })
+  
+    nextButton.addEventListener('click', () => {
+      scroll(scrollOffset)
+    })
+  }
 </script>
