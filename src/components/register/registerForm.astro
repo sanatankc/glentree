@@ -301,10 +301,12 @@ import 'tippy.js/dist/tippy.css'; // optional for styling
       const formData = new FormData(e.target as HTMLFormElement);
       const grade1 = formData.get('grade1')
       const grade2 = formData.get('grade2')
-      const grade = grade1 || grade2
+      const grade3 = formData.get('grade3')
+      const grade = grade1 || grade2 || grade3
       formData.append('form-name', 'register-form');
       formData.delete("grade1")
       formData.delete("grade2")
+      formData.delete("grade3")
       formData.append("grade", grade)
 
       // append everything in urlsearchparams to formData
