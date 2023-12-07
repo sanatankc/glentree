@@ -2,6 +2,7 @@
 import Modal from "./system/Modal.astro";
 import Text from "./system/Text.astro";
 import arrow from '../icons/arrow.svg';
+import { Image } from "astro:assets";
 
 const { id, gallery, currentLink, link, closeLink } = Astro.props
 const slideId = 'slide' + id
@@ -16,14 +17,19 @@ console.log('slideId...', slideId)
         src: string,
         caption: string
       }, index: Number) => (
-        <img
-          src={slide?.src?.src}
-          alt={slide.caption}
-          class="w-full h-full max-md:h-auto object-cover rounded-md hidden data-[is-active=true]:block"
+        <div
           data-target-slide={slideId}
           data-target-slide-i={index}
           data-is-active={index === 0 ? "true" : "false"}
-        />
+          class="w-full h-full top-0 left-0 rounded-md hidden data-[is-active=true]:block"
+        >
+          <Image
+            src={slide?.src}
+            alt={slide.caption}
+            width={1920}
+            class="w-full h-full max-md:h-auto object-cover object-[center_30%] rounded-md"
+          />
+        </div>
       ))}
       <slot name="caption">
         <div class="absolute w-full pt-[52px] pb-[33px] max-md:pb-[20px] bottom-0 left-0 flex justify-center items-center" style={{
