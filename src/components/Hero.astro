@@ -87,7 +87,6 @@ const slides = data.heroImages.map(({ image_desktop, image_mobile, position = 't
 
   function moveSlides(items: Array<HTMLElement>) {
     items.forEach((item, i) => {
-      // console.log(i, slideshowIndex)
       if (i === slideshowIndex) {
         item.style.opacity = "1";
         return;

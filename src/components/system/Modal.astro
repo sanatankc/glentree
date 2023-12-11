@@ -44,7 +44,6 @@ const { id, closeLink, class: className='', containerClass, openDefault = false,
   targets.forEach(target => {
     target.addEventListener('click', () => {
       const modal = document.querySelector(`[data-modal-id="${target.dataset.modalTarget}"]`)
-      console.log('link...', modal.dataset.modalLink)
       if (modal.dataset.modalLink) {
         window.location.href = modal.dataset.modalLink
       } else {

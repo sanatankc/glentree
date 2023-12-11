@@ -40,7 +40,6 @@ const { image, class: className, name, desc, link } = Astro.props
 
 <script>
   document.querySelectorAll('[data-link]').forEach(el => {
-    console.log(el)
     el.addEventListener('click', () => {
       window.open(el.dataset.link, "_self"); 
     })
