@@ -27,8 +27,6 @@ export const POST: APIRoute = async ({ request }) => {
     formData.append(entry[0], entry[1]);
   }
 
-  console.log('formdata...', formData)
-
   const response = await fetch('https://script.google.com/macros/s/AKfycbzizy-yNaQMfG9kdRCFWWPFkj4V2wKc3NtgpPEvZQG_Ka7I4gsfjwMVwWo-CoKZpqpumA/exec', {
     method: 'POST',
     body: formData

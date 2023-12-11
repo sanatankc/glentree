@@ -201,11 +201,19 @@ const capitalize = (word) => {
 }
 
 const campusDisplayName = capitalize(campusName)
-console.log('data... aroundTheCampus -> ', JSON.stringify(data.aroundTheCampus, null, 2))
+
+const campusSeoName = {
+  whitefield: 'Whitefield, Bangalore',
+  sarjapur: 'Sarjapur Road, Bangalore',
+}
 ---
 
 {allowedCampusNames.includes(campusName) && (
-  <Layout title={`Campus | Best CBSE School in ${campusDisplayName} | Glentree Academy School`}>
+  <Layout 
+    title={`${campusDisplayName} Campus | Best CBSE School in ${campusSeoName[campusName]} | Glentree Academy, ${campusDisplayName}`}
+    // Glentree Academy Whitefield is one of the best CBSE schools in Whitefield, Bangalore. Admissions open in Whitefield branch for Nursery to Grade 11. Admissions Are Open 2023-24.
+    description={`Glentree Academy ${campusDisplayName} is one of the best CBSE schools in ${campusSeoName[campusName]}. Admissions open in ${campusDisplayName} branch for Nursery to Grade 11. Admissions Are Open 2023-24.`}
+  >
     <main class="flex flex-col h-screen w-screen relative bg-white">
       <div 
         class="flex-1 main-container h-screen w-screen"
@@ -328,7 +336,7 @@ console.log('data... aroundTheCampus -> ', JSON.stringify(data.aroundTheCampus, 
                   // },
   
                   // {
-                  //   src: smartClassroomGAW,
+                  //   srcroad smartClassroomGAW,
                   //   caption: 'Smart Interactive Classrooms',
                   //   description: "Step into the future of education with our Smart Interactive Classrooms, where technology and teaching seamlessly combine to enhance the learning experience.",
                   // },
