@@ -52,12 +52,17 @@ import AcademicsBox from '../components/AcademicsBox.astro';
     </div>
     <div class='h-[88px] w-full bg-black'>
     </div>
-    <div class='min-h-[450px] max-h-[450px] w-full flex justify-center items-center flex-col max-md:min-h-[350px]' style={{
-      background: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.7) 68.07%), url(${astronautKidsAdmissionBG.src})`,
+    <div class='min-h-[450px] relative max-h-[450px] w-full flex justify-center items-center flex-col max-md:min-h-[350px]' style={{
+      background: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.7) 68.07%)`,
       backgroundPosition: '90% 40%',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
     }}>
+      <Image
+        class="w-full h-full absolute top-0 left-0 object-cover object-center -z-10"
+        src={astronautKidsAdmissionBG}
+        alt="CBSE Based Curriculum, NEP Based School Curriculum"
+      />
       <Text type={'h2'} class='mt-14 max-md:mt-10'>Curriculum</Text>
       <Text type={'base'} class='mt-3 text-center max-md:w-[90%]' >Your child’s journey towards a holistic learning environment starts here.</Text>
       <!-- <a href="https://admissions.glentreeacademy.com" target='_blank'>

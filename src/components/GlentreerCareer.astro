@@ -5,6 +5,7 @@ import Text from "./system/Text.astro";
 import careerSectionBG from '../images/careerBG.webp'
 import treeBgPattern from '../images/treeBgPattern.png'
 
+const { alt } = Astro.props
 ---
 
 <Constrain class="bg-white max-md:px-4 relative !w-[90%] max-md:!w-full">
@@ -13,7 +14,7 @@ import treeBgPattern from '../images/treeBgPattern.png'
       <div class="w-[400px] h-full max-md:h-[60%] max-md:w-full max-md:clip max-md:![clip-path:none]" style={{
         clipPath: 'polygon(0 0, 100% 0, 68% 100%, 0% 100%);',
       }}>
-        <Image src={careerSectionBG} alt="Career Section" class="w-full h-full object-cover max-md:object-top" />
+        <Image src={careerSectionBG} alt={alt} class="w-full h-full object-cover max-md:object-top" />
       </div>
       <div class="w-full flex-1 flex flex-col justify-center text-white max-md:items-center max-md:text-center">
         <Text type="subtitle" class="text-yellow">Work with Us</Text>

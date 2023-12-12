@@ -41,7 +41,7 @@ import graphUpIcon from '../images/aboutUs/icons/Graph Up.svg'
 import sledgeHammerIcon from '../images/aboutUs/icons/Sledgehammer.svg'
 import linkedinIcon from '../icons/linkedin.svg'
 import Constrain from '../components/system/Constrain.astro';
-import GlentreerCareer from '../components/GlentreerCareer.astro';
+import GlentreeCareer from '../components/GlentreerCareer.astro';
 
 const founderDesk = [
   // { name: 'Vittal Bhandary', title: 'CEO', linkedin: "https://www.linkedin.com/in/vittal-bhandary-51902519/", image: vittal, message: "Glentree Academy envisions a transformative approach to education, addressing the shortcomings of traditional learning. As a child, I found little joy in the stress of memorisation, yet I thrived in the immersive world of sports. Inspired by my own experiences and Preeti's vision of a happy learning environment, Glentree aims to create a place where children can freely explore their talents and passions without the burden of grades." },
@@ -51,12 +51,12 @@ const founderDesk = [
 ]
 
 const missions = [
-  { image: mission1, title: ['Empowering', 'Personal Growth'], icon: cupIcon, description: "Nurturing and empowering individuals to unleash their full potential in a supportive learning environment." },
-  { image: mission2, title: ['Education with a', 'Global Perspective'], icon: globeIcon, description: "Broadening horizons and cultivating future leaders through innovative teaching and learning approaches." },
-  { image: mission3, title: ['Igniting', 'Lifelong Learning'], icon: fireSquareIcon, description: "Sparking a passion for continuous exploration and discovery, making learning an engaging and enduring journey." },
-  { image: mission4, title: ['Building', 'Resilient Individuals'], icon: sledgeHammerIcon, description: "Equipping students with essential values, life skills, and character development for personal and professional success." },
-  { image: mission5, title: ['Strong Parents-School', 'Parternships'], icon: LinkSquareIcon, description: "Establishing collaborative communities that foster effective communication and engagement for optimal student development." },
-  { image: mission6, title: ['Innovation & Improvement', 'in Education'], icon: graphUpIcon, description: "Embracing change, innovation, and research to create a dynamic and progressive educational environment." },
+  { image: mission1, alt: "Personal Growth at Best schools in Sarjapur Road, Bangalore", title: ['Empowering', 'Personal Growth'], icon: cupIcon, description: "Nurturing and empowering individuals to unleash their full potential in a supportive learning environment." },
+  { image: mission2, alt: "Global Education at top schools in Whitefield, Bangalore", title: ['Education with a', 'Global Perspective'], icon: globeIcon, description: "Broadening horizons and cultivating future leaders through innovative teaching and learning approaches." },
+  { image: mission3, alt: "Lifelong learning philosophy at Best schools in Bannerghatta Road, Bangalore", title: ['Igniting', 'Lifelong Learning'], icon: fireSquareIcon, description: "Sparking a passion for continuous exploration and discovery, making learning an engaging and enduring journey." },
+  { image: mission4, alt: "Building Resilience at top schools in Sarjapur Road, Bangalore", title: ['Building', 'Resilient Individuals'], icon: sledgeHammerIcon, description: "Equipping students with essential values, life skills, and character development for personal and professional success." },
+  { image: mission5, alt: "Top parent rated school in Whitefield, Bangalore", title: ['Strong Parents-School', 'Parternships'], icon: LinkSquareIcon, description: "Establishing collaborative communities that foster effective communication and engagement for optimal student development." },
+  { image: mission6, alt: "Innovation & Improvementat Best schools in Bannerghatta Road, Bangalore", title: ['Innovation & Improvement', 'in Education'], icon: graphUpIcon, description: "Embracing change, innovation, and research to create a dynamic and progressive educational environment." },
 ]
 ---
 
@@ -129,8 +129,7 @@ const missions = [
             {missions.map(mission => (
               <div class='h-[400px] mission-card relative group overflow-hidden max-md:h-[320px] bg-red-100 rounded-lg bg-cover bg-center p-5 flex flex-col justify-between' style={{ backgroundImage: `url(${mission.image.src}` }}>
                 <div class="w-full h-full absolute top-0 left-0 bg-black/60 group-hover:bg-green-600/90 transition-all z-0"></div>
-                
-                <div class="w-10 h-10 self-end bg-contain bg-no-repeat relative z-10" style={{ backgroundImage: `url("${mission.icon.src}")` }}></div>
+                <Image class="w-10 h-10 self-end object-contain relative z-10" src={mission.icon} alt={mission.alt} />
                 <div class="relative z-10">
                   <Text type={'h4'} class='leading-tight text-[28px]' style={{ transition: '0.3s all ease-in-out' }}>{mission.title[0]}<br/>
                     <span class='text-yellow'>
@@ -145,7 +144,7 @@ const missions = [
         </div>
         <BigAdmissionCTA />
         <div class="pt-6 max-md:pt-4" />
-        <GlentreerCareer />
+        <GlentreeCareer alt="Careers at Top Schools in Sarjapur, Bangalore" />
         <div class="pt-8 max-md:pt-4" />
         <Footer />
     </div>

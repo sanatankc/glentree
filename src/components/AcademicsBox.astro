@@ -3,6 +3,7 @@ import PrePrimaryBG from '../images/curriculum/prePrimary.png';
 import PrimaryBG from '../images/curriculum/primary.png';
 import MiddleAndHighBG from '../images/curriculum/middle&High.png';
 import Text from './system/Text.astro';
+import { Image } from 'astro:assets';
 
 
 const academics = [
@@ -25,7 +26,8 @@ const academics = [
     background: '#0E6526',
     backgroundContent: '#0A5E2F',
     opacity: 1,
-    link: 'https://glentreeacademy.com/curriculum/pre-primary'
+    link: 'https://glentreeacademy.com/curriculum/pre-primary',
+    alt: "Pre-Primary CBSE Syllabus"
   },
   {
     title: 'Primary',
@@ -48,7 +50,8 @@ const academics = [
         "R.E.A.D Program",
         "“Connecting the Dots” Program"
       ],
-    ] 
+    ],
+    alt: "Grade 1 CBSE Syllabus, Grade 2 CBSE Syllabus, Grade 3 CBSE Syllabus, Grade 4 CBSE Syllabus"
   },
   {
     title: 'Middle & High School',
@@ -71,7 +74,8 @@ const academics = [
         'CS & Coding',
         "“Connecting the Dots” Program"
       ]
-    ]
+    ],
+    alt: "Grade 5 CBSE Syllabus, Grade 6 CBSE Syllabus, Grade 7 CBSE Syllabus, Grade 8 CBSE Syllabus, Grade 9 CBSE Syllabus, Grade 10 CBSE Syllabus"
 
   },
   {
@@ -90,7 +94,8 @@ const academics = [
         "Global Engagement Emphasis",
         "Personalised Career Counselling",
       ]
-    ]
+    ],
+    alt: "Grade 11 CBSE Syllabus, Grade 12 CBSE Syllabus"
 
   },
 ]
@@ -110,9 +115,12 @@ const { noHeader } = Astro.props
        <div class='flex flex-row w-full mb-[2px] max-md:flex-col max-md:rounded-xl overflow-hidden max-md:mb-4'>
         <div
           class='w-full flex-1 overflow-hidden max-w-[350px] max-md:max-w-[1000px] min-h-[200px] mr-[1px] flex flex-col text-white items-center justify-center relative bg-cover no-repeat'
-          style={{
-            backgroundImage: `url(${academic.image.src})`
-        }}>
+        >
+          <Image
+            class="w-full h-full absolute top-0 left-0 object-cover object-center"
+            src={academic.image}
+            alt={academic.alt}
+          />
           <div class='w-full h-full mix-blend-multiply absolute z-0' style={{
             background: academic.background,
             opacity: academic.opacity ? academic.opacity : 1
