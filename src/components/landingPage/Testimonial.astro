@@ -62,12 +62,11 @@ import YoutubeEmbed from '../YoutubeEmbed.astro'
 
     <div class="w-full gap-7 flex flex-row max-md:flex-col mt-6">
       <div class="border border-gray-300 flex flex-row max-md:flex-col rounded-lg overflow-hidden"> 
-        <div class='min-w-[232px] max-md:min-h-[280px] max-md:bg-[10%_10%] bg-cover bg-center' style={{
-          backgroundImage: `url(${testimonial1.src})`,
-          backgroundSize: 'cover',
-          
-        }}>
-        </div>
+        <Image 
+          class='min-w-[232px] max-md:h-[280px] max-md:bg-[10%_10%] object-cover object-[10%_10%]'
+          src={testimonial1}
+          alt="Glentree Academy Reviews"
+        />
         <div class=" p-6">
           <Text type={'base'} class='text-black'>
             “We are very happy with the school because of the individual attention it gives to the children, and the entire team behind Glentree Academy is so helpful and supportive as well!”
@@ -87,11 +86,11 @@ import YoutubeEmbed from '../YoutubeEmbed.astro'
         </div>
       </div>
       <div class="border   border-gray-300 flex flex-row max-md:flex-col rounded-lg overflow-hidden"> 
-        <div class='min-w-[232px] max-md:min-h-[280px] max-md:bg-[10%_10%] bg-cover bg-center' style={{
-          backgroundImage: `url(${testimonial2.src})`,
-          backgroundSize: 'cover'
-        }}>
-        </div>
+        <Image 
+          class='min-w-[232px] max-md:h-[280px] max-md:bg-[10%_10%] object-cover object-[10%_10%]'
+          src={testimonial2}
+          alt="Glentree Academy Reviews"
+        />
         <div class=" p-6">
           <Text type={'base'} class='text-black'>
             “The teachers are like magicians, because they help us at every point of turn and  help me with my career path. They are always there for me no matter what.”
