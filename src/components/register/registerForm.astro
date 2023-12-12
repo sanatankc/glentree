@@ -9,8 +9,18 @@ import { Image } from 'astro:assets';
 
 import 'tippy.js/dist/tippy.css'; // optional for styling
 
----
+const campusName = Astro.url.searchParams.get('campus') || '';
 
+
+const campuses = {
+  whitefield: "Whitefield",
+  sarjapur: "Sarjapur Road",
+  bannerghatta: "Bannerghatta Road",
+}
+
+const selectedCampus = campuses[campusName] || null
+
+---
 <div class="p-[22px] px-[32px] max-md:px-[18px] bg-white border border-accent2 text-black rounded-xl items-center w-full max-w-[534px] relative z-20 transition-opacity duration-300" id="register-form-container-desktop">
   <div class="w-full form">
     <Text type="h3" class='text-[32px] text-center'>Register Now for <span class="text-green-600">AY 2024-25</span></Text>
@@ -82,6 +92,7 @@ import 'tippy.js/dist/tippy.css'; // optional for styling
         placeholder="Choose Campus"
         id="selectBranch"
         title="Please select a Campus"
+        defaultValue={selectedCampus}
         options={[
           "Whitefield",
           "Sarjapur Road",
