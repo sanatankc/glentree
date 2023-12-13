@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+import Text from "./system/Text.astro";
+const {
+  title,
+  description,
+  thumbnail,
+  school,
+  publishedDate,
+  alt,
+  type,
+  class: className
+} = Astro.props
+
+const monthNameShort = publishedDate.toLocaleString('default', { month: 'short' });
+const date = publishedDate.getDate().toString().padStart(2, '0');
+---
+<div
+  class:list={[
+    type === 'featured' && 'w-[450px]',
+    type === 'featured-sm' && 'w-[327px]',
+    type === 'normal' && 'w-[320px]',
+    "text-left",
+    className
+  ]}
+  data-school={school}
+  
+>
+  <Image
+    src={thumbnail}
+    alt={alt || title}
+    class:list={[
+      type === 'featured' && 'w-[450px] h-[450px]',
+      type === 'featured-sm' && 'w-[327px] h-[230px]',
+      type === 'normal' && 'w-[325px] h-[325px]',
+      "rounded-md border-[2px] border-accent3 object-cover"
+    ]}
+    width={450}
+    height={450}
+  />
+  <div class="flex flex-row mt-6">
+    <div class="flex flex-col items-center mr-3">
+      <Text type="subtitle" class="text-accent3">{date}</Text>
+      <Text type="subtitle" class="text-accent3">{monthNameShort}</Text>
+    </div>
+    <div>
+      <Text type="h2" class="text-[20px] mb-2">{title}</Text>
+      <Text type="base" class="text-[18px]">Discover dynamic student clubs for some personalised ...</Text>
+    </div>
+  </div>
+</div>

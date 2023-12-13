@@ -57,10 +57,22 @@ const blogCollection = defineCollection({
   }),
 })
 
+const updateCollection = defineCollection({
+  type: 'content',
+  schema: () => z.object({
+    thumbnail: z.string(),
+    title: z.string(),
+    description: z.string(),
+    publishedDate: z.date(),
+    alt: z.string(),
+  }),
+})
+
 export const collections = {
   'school': blogCollection,
   'campus': campusCollection,
   'home': homeCollection,
   'disclosure': disclosureCollection,
-  'blog': blogCollection
+  'blog': blogCollection,
+  'update': updateCollection,
 };
