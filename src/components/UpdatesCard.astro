@@ -45,7 +45,7 @@ const date = publishedDate.getDate().toString().padStart(2, '0');
     </div>
     <div>
       <Text type="h2" class="text-[20px] mb-2">{title}</Text>
-      <Text type="base" class="text-[18px]">Discover dynamic student clubs for some personalised ...</Text>
+      <Text type="base" class="text-[18px]">{description || 'Discover dynamic student clubs for some personalised ...'}</Text>
     </div>
   </div>
 </div>
