@@ -178,6 +178,27 @@ export default defineConfig({
           { type: "rich-text", name: "blog", label: "Blog" },
         ]
       },
+      {
+        name: "updates",
+        label: "Updates",
+        path: "src/content/Updates",
+        fields: [
+          {
+            type: "object",
+            list: true,
+            label: "Updates", 
+            name: "updates",
+            fields: [
+              { type: 'image', name: 'thumbnail', label: 'Thumbnail' },
+              { type: 'string', name: 'alt', label: 'Alt tag' },
+              { type: "string", name: "title", label: "title" },
+              { type: 'string', name: 'videoLink', label: 'Video Link' },
+              { type: "string", name: "description", label: "Description" },
+              { type: "datetime", name: "publishedDate", label: "Published Date" },
+            ]
+          }
+        ]
+      },
     ],
   },
 });
