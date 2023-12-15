@@ -192,6 +192,7 @@ export default defineConfig({
               { type: 'image', name: 'thumbnail', label: 'Thumbnail' },
               { type: 'string', name: 'alt', label: 'Alt tag' },
               { type: "string", name: "title", label: "title" },
+              { type: 'string', name: 'videoLink', label: 'Video Link' },
               { type: "string", name: "description", label: "Description" },
               { type: "datetime", name: "publishedDate", label: "Published Date" },
             ]

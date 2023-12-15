@@ -64,6 +64,7 @@ const updateCollection = defineCollection({
     title: z.string(),
     description: z.string(),
     publishedDate: z.date(),
+    videoLink: z.string(),
     alt: z.string(),
   }),
 })

@@ -61,10 +61,10 @@ const [
   <main class="flex flex-col relative text-black items-center">
     <TopNavigationBar />
     <div class="h-[95.44px] w-full bg-black"></div>
-    <div class="w-full p-[60px]" style={{
+    <div class="w-full p-[60px] max-md:p-5" style={{
       background: 'linear-gradient(249deg, #FBFFF6 0%, #F6FFED 0%, #FFFAF6 100%)'
     }}>
-      <div class="flex flex-row w-full justify-between gap-[60px]">
+      <div class="flex flex-row max-md:flex-col w-full justify-between gap-[60px]">
         <div class="flex-1">
           <div class="w-full relative">
             <Text type="h2">News & <span class="text-accent2">Updates</span></Text>
@@ -72,8 +72,9 @@ const [
             <Text type="subtitle" class="text-[#121212]/80 mt-8">LATEST NEWS</Text>
           </div>
           <div class="pt-4"></div>
-          <div class="flex flex-row justify-between">
+          <div class="flex flex-row max-md:flex-col justify-between gap-12">
             <UpdatesCard
+              video={firstPost.videoLink}
               title={firstPost.title},
               description={firstPost.description},
               thumbnail={firstPost.thumbnail},
@@ -82,6 +83,7 @@ const [
               type="featured"
             />
             <UpdatesCard
+              video={secondPost.videoLink}
               title={secondPost.title},
               description={secondPost.description},
               thumbnail={secondPost.thumbnail},
@@ -93,6 +95,7 @@ const [
         </div>
         <div>
             <UpdatesCard
+              video={thirdPost.videoLink}
               title={thirdPost.title},
               description={thirdPost.description},
               thumbnail={thirdPost.thumbnail},
@@ -102,6 +105,7 @@ const [
             />
             <div class="pt-[42px]" />
             <UpdatesCard
+              video={fourthPost.videoLink}
               title={fourthPost.title},
               description={fourthPost.description},
               thumbnail={fourthPost.thumbnail},
@@ -139,9 +143,10 @@ const [
       </div>
       <div class="pt-[48px]"></div>
 
-      <div class="flex flex-row gap-x-[90px] gap-y-[46px] flex-wrap px-[130px]">
+      <div class="flex flex-row gap-x-[90px] gap-y-[46px] flex-wrap px-[130px] max-md:px-[20px]">
         {posts.map(post => (
           <UpdatesCard
+            video={post.videoLink}
             title={post.title}
             school={post.school}
             description={post.description}

@@ -2,6 +2,7 @@
 updates:
   - thumbnail: /images/IMG_20231111_083610.jpg
     title: 'Parent Teacher Meeting '
+    videoLink: ''
     publishedDate: 2023-12-03T18:30:00.000Z
   - thumbnail: /images/Kannada Rajyotsava.jpg
     title: ಕನ್ನಡ ರಾಜ್ಯೋತ್ಸವ
@@ -23,16 +24,16 @@ updates:
     publishedDate: 2023-11-12T18:30:00.000Z
   - thumbnail: /images/20.0a6b7564.jpg
     title: Football Match
-    publishedDate: 2023-11-8T18:30:00.000Z
+    publishedDate: 2023-11-08T18:30:00.000Z
   - thumbnail: /images/gaw-update1.jpeg
     title: World Population Assembly
-    publishedDate: 2023-11-7T18:30:00.000Z
+    publishedDate: 2023-11-07T18:30:00.000Z
   - thumbnail: /images/gaw-update2.jpeg
     title: 'Cubbon Park: Field Trip'
-    publishedDate: 2023-11-3T18:30:00.000Z
+    publishedDate: 2023-11-03T18:30:00.000Z
   - thumbnail: /images/gaw-update3.jpeg
     title: Debate and Quizzing
-    publishedDate: 2023-11-1T18:30:00.000Z
+    publishedDate: 2023-11-01T18:30:00.000Z
   - thumbnail: /images/gaw-update4.jpeg
     title: Drawing Competition
     publishedDate: 2023-10-29T18:30:00.000Z
@@ -53,6 +54,9 @@ updates:
     publishedDate: 2023-10-10T18:30:00.000Z
   - thumbnail: /images/gaw-update18.jpeg
     title: Unveiling of the Earth Lab
-    publishedDate: 2023-10-8T18:30:00.000Z
+    publishedDate: 2023-10-08T18:30:00.000Z
 ---
+
+
+
 
