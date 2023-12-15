@@ -188,6 +188,11 @@ export default defineConfig({
             list: true,
             label: "Updates", 
             name: "updates",
+            ui: {
+              itemProps: (item) => ({
+                label: item?.title
+              })
+            },
             fields: [
               { type: 'image', name: 'thumbnail', label: 'Thumbnail' },
               { type: 'string', name: 'alt', label: 'Alt tag' },
