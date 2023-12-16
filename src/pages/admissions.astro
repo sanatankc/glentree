@@ -62,7 +62,7 @@ import AdmissionStep from '../components/admissions/AdmissionStep.astro';
           <Text type={'regular'} class='text-black leading-[29px]'>
             To initiate the admission process, parents can either walk-in or inquire via phone or web. Upon arrival, an Admission Counsellor will provide an orientation about the school, admission process, and fee structure. Parents will also be taken on a school tour to explore the campus they prefer.
             <br /><br />
-            Please make sure to have all necessary documentation ready for administrative review, as you will be prompted to provide this information within the application form.  You can find the address for both the campuses below:
+            Please make sure to have all necessary documentation ready for administrative review, as you will be prompted to provide this information within the application form.  You can find the address for all the campuses below:
           </Text>
           <div class='text-black'>
             <div class='flex items-center mt-7'>
@@ -72,7 +72,7 @@ import AdmissionStep from '../components/admissions/AdmissionStep.astro';
                 </svg>            
               </div>
               <Text type={'regular'} class='text-black ml-2'>
-                Nallurhalli Rd, Whitefield, Palm Meadows, Nallurhalli, Bengaluru
+                <span class="font-bold">Whitefield:</span> Nallurhalli Rd, Whitefield, Palm Meadows, Nallurhalli, Bengaluru
               </Text>
             </div>
             
@@ -83,7 +83,17 @@ import AdmissionStep from '../components/admissions/AdmissionStep.astro';
                 </svg>            
               </div>
               <Text type={'regular'} class='text-black ml-2'>
-                No.36/5, Halanayakanahalli, Varthur Hobli Bengaluru East Taluk
+                <span class="font-bold">Sarjapur Road:</span> No.36/5, Halanayakanahalli, Varthur Hobli Bengaluru East Taluk
+              </Text>
+            </div>
+            <div class='flex items-center mt-3'>
+              <div class='w-6 h-6'>
+                <svg viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.5 1.5625C8.18701 1.5625 4.6875 4.7124 4.6875 8.59375C4.6875 14.8438 12.5 23.4375 12.5 23.4375C12.5 23.4375 20.3125 14.8438 20.3125 8.59375C20.3125 4.7124 16.813 1.5625 12.5 1.5625ZM12.5 12.5C11.8819 12.5 11.2777 12.3167 10.7638 11.9733C10.2499 11.63 9.8494 11.1419 9.61288 10.5709C9.37635 9.99987 9.31447 9.37153 9.43505 8.76534C9.55562 8.15915 9.85325 7.60233 10.2903 7.16529C10.7273 6.72825 11.2842 6.43062 11.8903 6.31005C12.4965 6.18947 13.1249 6.25135 13.6959 6.48788C14.2669 6.7244 14.755 7.12494 15.0983 7.63884C15.4417 8.15275 15.625 8.75693 15.625 9.375C15.6241 10.2035 15.2946 10.9979 14.7087 11.5837C14.1229 12.1696 13.3285 12.4991 12.5 12.5Z" fill="black"/>
+                </svg>            
+              </div>
+              <Text type={'regular'} class='text-black ml-2'>
+                <span class="font-bold">Bannerghatta Road:</span>C K Palya Rd, Hommadevanahalli, Bengaluru, Doddakammanahalli, Karnataka 560083
               </Text>
             </div>
           </div>
@@ -95,7 +105,7 @@ import AdmissionStep from '../components/admissions/AdmissionStep.astro';
           thumbnailBG={`linear-gradient(to right, rgba(192, 124, 71, 0.8), rgba(192, 124, 71, 0.8)), url(${admissionStep2.src})`}
         >
         <Text type={'regular'} class='text-black leading-[29px]'>
-          For Grades 1-10, upon receipt of your application, we will schedule a <span class='font-bold'>Milestone Mapping Session</span> with the parents and the child.
+          For Pre-Primary Grade 11, upon receipt of your application, we will schedule a <span class='font-bold'>Milestone Mapping Session</span> with the parents and the child.
           <br/><br/>
           For Walk-In applications, parents will be informed of the date and time of the session to ensure prompt arrival.
           <br /><br/>
