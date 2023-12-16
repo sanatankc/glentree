@@ -8,7 +8,7 @@ virtualCampusLink: >-
 affiliationNo: '830349'
 showcase:
   - image: /images/sports day.jpg
-    title: Sports Day
+    title: Sports Day Practice
   - image: /images/IMG_20231111_083610.jpg
     title: 'Parent Teacher Meeting '
   - image: /images/Kannada Rajyotsava.jpg
