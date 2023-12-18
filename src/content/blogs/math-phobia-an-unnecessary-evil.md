@@ -1,7 +1,7 @@
 ---
 category: Maths
 publishedDate: 2023-12-05T18:30:00.000Z
-title: math-phobia-an-unnecessary-evil
+title: Math Phobia an Unnecessary Evil
 thumbnail: /images/DALL·E Child Art.png
 caption: >
   Banish math phobia with Glentree Academy, your guide to conquer numbers! CBSE
