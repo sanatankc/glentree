@@ -1,10 +1,7 @@
 ---
 category: Maths
 publishedDate: 2023-12-05T18:30:00.000Z
-title: >-
-  Banish math phobia with Glentree Academy, your guide to conquer numbers! CBSE
-  schools near Sarjapur Road, Bannerghatta Road, and Whitefield, nurturing
-  confident learners
+title: math-phobia-an-unnecessary-evil
 thumbnail: /images/DALL·E Child Art.png
 caption: >
   Math is a language that helps in understanding the world around us. It help us
