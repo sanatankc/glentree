@@ -1,7 +1,7 @@
 ---
 category: Curriculum
 publishedDate: 2023-09-17T18:30:00.000Z
-title: importance-of-sports-for-students-in-schools
+title: Importance of Sports for Students in Schools
 thumbnail: /images/Sports.84bd3d07.jpg
 caption: >
   Unleashing Potential: Where Passion Meets Play at Glentree Academy - CBSE
