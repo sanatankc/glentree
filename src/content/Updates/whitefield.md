@@ -3,6 +3,11 @@ updates:
   - thumbnail: /images/IMG_20231111_083610.jpg
     title: 'Parent Teacher Meeting '
     videoLink: ''
+    description: >-
+      Parent teacher meetings play an important role in child's academic success
+      and personal growth. At Glentree Academy,  parent teacher meetings are
+      organized regularly to promote efficient communication between pa.rents
+      and teachers
     publishedDate: 2023-12-03T18:30:00.000Z
   - thumbnail: /images/Kannada Rajyotsava.jpg
     title: ಕನ್ನಡ ರಾಜ್ಯೋತ್ಸವ
@@ -56,7 +61,4 @@ updates:
     title: Unveiling of the Earth Lab
     publishedDate: 2023-10-08T18:30:00.000Z
 ---
-
-
-
 
