@@ -5,7 +5,7 @@ virtualCampusLink: test
 affiliationNo: test
 showcase:
   - image: /images/best cbse school award for glentree academy.jpg
-    title: India School Merit Award - Glentree Acedamy
+    title: India School Merit Award - Glentree Academy
   - image: /images/WhatsApp Image 2023-11-23 at 15.37.16.jpeg
     title: 'Our School Story unveiled '
   - image: /images/Board.jpg
