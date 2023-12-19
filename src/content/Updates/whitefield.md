@@ -6,8 +6,8 @@ updates:
     description: >-
       Parent teacher meetings play an important role in child's academic success
       and personal growth. At Glentree Academy,  parent teacher meetings are
-      organized regularly to promote efficient communication between pa.rents
-      and teachers
+      organized regularly to promote efficient communication between parents and
+      teachers
     publishedDate: 2023-12-03T18:30:00.000Z
   - thumbnail: /images/Kannada Rajyotsava.jpg
     title: ಕನ್ನಡ ರಾಜ್ಯೋತ್ಸವ
