@@ -4,6 +4,8 @@ description: Bannerghatta
 virtualCampusLink: test
 affiliationNo: test
 showcase:
+  - image: /images/best cbse school award for glentree academy.jpg
+    title: Award - CBSE School Parameter Wise - Glentree Acedamy
   - image: /images/WhatsApp Image 2023-11-23 at 15.37.16.jpeg
     title: 'Our School Story unveiled '
   - image: /images/Board.jpg
