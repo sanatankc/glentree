@@ -10,6 +10,13 @@ import Text from '../system/Text.astro';
 import { Image } from 'astro:assets';
 
 import YoutubeEmbed from '../YoutubeEmbed.astro'
+
+import { marked } from 'marked'
+import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
+const { data } = await getEntry('home', 'home') as CollectionEntry<'home'>
+
+const testimonials = data.testimonials.reverse()
+
 ---
 <div class='bg-white p-14 pt-24 max-md:pt-2 px-20 max-md:px-4 max-md:p-10 max-md:pb-0'>
   <Constrain class="relative flex flex-col items-center max-md:items-center max-md:text-center">
@@ -37,84 +44,46 @@ import YoutubeEmbed from '../YoutubeEmbed.astro'
       </div>
     </Text>
     <div class="max-md:p-0 p-3" />
-    <!-- <div class='w-full h-[192px] rounded-2xl bg-white mt-7 border-gray-300 border overflow-hidden flex flex-row max-md:flex-col max-md:px-2 max-md:py-4 max-md:h-auto'>
-      <div class='min-w-[34vw] max-md:w-[100%] max-md:min-h-[136px] bg-cover bg-center rounded-lg' style={{
-        backgroundImage: `linear-gradient(90deg, rgba(255, 255, 255, 0) 40.82%, #FFFFFF 95.62%), url(${heroTestimonial})`
-      }}>
-      </div>
-      <div class='flex flex-col justify-center px-14 max-md:px-0 max-md:items-center'>
-        <Text
-          type={'regular'}
-          class={'text-black max-md:mt-4 max-md:w-[80%]'}
-        >
-          “This school offers more than just education. Teachers give individual attention, and activities add to the wholesome learning experience...”
-        </Text>
-        <div data-video-open="0" class="max-md:flex max-md:justify-center">
-          <Button class='mt-4'>
-            <span>Watch Video</span>
-            <svg slot="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM13.2313 8.72996C12.9466 8.53003 12.6242 8.32321 12.2903 8.1202C11.0034 7.33764 10.36 6.94636 9.7829 7.37957C9.2058 7.81278 9.15335 8.71968 9.04846 10.5335C9.01879 11.0464 9 11.5493 9 12.0001C9 12.4508 9.01879 12.9537 9.04846 13.4666C9.15335 15.2804 9.2058 16.1873 9.7829 16.6205C10.36 17.0537 11.0034 16.6625 12.2903 15.8799C12.6242 15.6769 12.9466 15.4701 13.2313 15.2702C13.5559 15.0423 13.909 14.7688 14.2651 14.4783C15.555 13.426 16.2 12.8999 16.2 12.0001C16.2 11.1002 15.555 10.5741 14.2651 9.52182C13.909 9.23134 13.5559 8.95785 13.2313 8.72996Z" fill="white"/>
-            </svg>
-          </Button>
-        </div>
-      </div>
-    </div> -->
 
     <div class="w-full gap-7 flex flex-row max-md:flex-col mt-6">
-      <div class="border border-gray-300 flex flex-row max-md:flex-col rounded-lg overflow-hidden"> 
-        <Image 
-          class='min-w-[232px] max-md:h-[280px] max-md:bg-[10%_10%] object-cover object-[10%_10%]'
-          src={testimonial1}
-          alt="Glentree Academy Whitefield Review"
-        />
-        <div class=" p-6">
-          <Text type={'base'} class='text-black'>
-            “We are very happy with the school because of the individual attention it gives to the children, and the entire team behind Glentree Academy is so helpful and supportive as well!”
-          </Text>
-
-          <Text type={'base'} class='text-black font-semibold mt-11 max-md:mt-4'>Dr. Priya Gupta</Text>
-          <Text type={'base'} class='text-green-600 font-semibold mt-3'>Parent of Arohan Sen gupta</Text>
-          <div data-video-open="1" class="max-md:flex max-md:justify-center">
-            <Button class='mt-11 max-md:mt-4'>
-              <span>Watch Video</span>
-              <svg slot="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM13.2313 8.72996C12.9466 8.53003 12.6242 8.32321 12.2903 8.1202C11.0034 7.33764 10.36 6.94636 9.7829 7.37957C9.2058 7.81278 9.15335 8.71968 9.04846 10.5335C9.01879 11.0464 9 11.5493 9 12.0001C9 12.4508 9.01879 12.9537 9.04846 13.4666C9.15335 15.2804 9.2058 16.1873 9.7829 16.6205C10.36 17.0537 11.0034 16.6625 12.2903 15.8799C12.6242 15.6769 12.9466 15.4701 13.2313 15.2702C13.5559 15.0423 13.909 14.7688 14.2651 14.4783C15.555 13.426 16.2 12.8999 16.2 12.0001C16.2 11.1002 15.555 10.5741 14.2651 9.52182C13.909 9.23134 13.5559 8.95785 13.2313 8.72996Z" fill="white"/>
-              </svg>
-            </Button>
+      {testimonials?.map((testimonial, index) => {
+        const testimonialText = marked.parse(testimonial.testimonial || '')
+        return (
+          <div class="border border-gray-300 flex flex-row max-md:flex-col rounded-lg overflow-hidden"> 
+            <Image 
+              class="min-w-[232px] max-md:h-[280px] max-md:bg-[10%_10%] object-cover object-[10%_10%]"
+              src={testimonial.testimonial_picture}
+              alt={testimonial.testimonial_picture_alt}
+              width={250}
+              height={420}
+            />
+            <div class=" p-6">
+              <Text type={'base'} class='text-black'>
+                <div set:html={testimonialText} />
+              </Text>
+    
+              <Text type={'base'} class='text-black font-semibold mt-11 max-md:mt-4'>{testimonial.author}</Text>
+              <Text type={'base'} class='text-green-600 font-semibold mt-3'>{testimonial.role}</Text>
+              <div data-video-open={index} class="max-md:flex max-md:justify-center">
+                <Button class='mt-11 max-md:mt-4'>
+                  <span>Watch Video</span>
+                  <svg slot="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM13.2313 8.72996C12.9466 8.53003 12.6242 8.32321 12.2903 8.1202C11.0034 7.33764 10.36 6.94636 9.7829 7.37957C9.2058 7.81278 9.15335 8.71968 9.04846 10.5335C9.01879 11.0464 9 11.5493 9 12.0001C9 12.4508 9.01879 12.9537 9.04846 13.4666C9.15335 15.2804 9.2058 16.1873 9.7829 16.6205C10.36 17.0537 11.0034 16.6625 12.2903 15.8799C12.6242 15.6769 12.9466 15.4701 13.2313 15.2702C13.5559 15.0423 13.909 14.7688 14.2651 14.4783C15.555 13.426 16.2 12.8999 16.2 12.0001C16.2 11.1002 15.555 10.5741 14.2651 9.52182C13.909 9.23134 13.5559 8.95785 13.2313 8.72996Z" fill="white"/>
+                  </svg>
+                </Button>
+              </div>
+      
+            </div>
           </div>
-  
-        </div>
-      </div>
-      <div class="border   border-gray-300 flex flex-row max-md:flex-col rounded-lg overflow-hidden"> 
-        <Image 
-          class='min-w-[232px] max-md:h-[280px] max-md:bg-[10%_10%] object-cover object-[10%_10%]'
-          src={testimonial2}
-          alt="Glentree Academy Sarjapur Review"
-        />
-        <div class=" p-6">
-          <Text type={'base'} class='text-black'>
-            “The teachers are like magicians, because they help us at every point of turn and  help me with my career path. They are always there for me no matter what.”
-          </Text>
-
-          <Text type={'base'} class='text-black font-semibold mt-11 max-md:mt-4'>Muskaan Jangid</Text>
-          <Text type={'base'} class='text-green-600 font-semibold mt-3'>Grade 10 Student</Text>
-          <div data-video-open="2" class="max-md:flex max-md:justify-center">
-            <Button class='mt-11 max-md:mt-4'>
-              <span>Watch Video</span>
-              <svg slot="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24ZM13.2313 8.72996C12.9466 8.53003 12.6242 8.32321 12.2903 8.1202C11.0034 7.33764 10.36 6.94636 9.7829 7.37957C9.2058 7.81278 9.15335 8.71968 9.04846 10.5335C9.01879 11.0464 9 11.5493 9 12.0001C9 12.4508 9.01879 12.9537 9.04846 13.4666C9.15335 15.2804 9.2058 16.1873 9.7829 16.6205C10.36 17.0537 11.0034 16.6625 12.2903 15.8799C12.6242 15.6769 12.9466 15.4701 13.2313 15.2702C13.5559 15.0423 13.909 14.7688 14.2651 14.4783C15.555 13.426 16.2 12.8999 16.2 12.0001C16.2 11.1002 15.555 10.5741 14.2651 9.52182C13.909 9.23134 13.5559 8.95785 13.2313 8.72996Z" fill="white"/>
-              </svg>
-            </Button>
-          </div>
-  
-        </div>
-      </div>
+        )
+      })}
     </div>
 
     <!-- <iframe width="330" height="186" src="https://www.youtube.com/embed/" title="Glentree Student Testimonial | Glentree Academy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
   
     <!-- <YoutubeEmbed embedId={'d-A17Q46EvI'} videoId='0' /> -->
-    <YoutubeEmbed embedId={'GjJE1dh_wA4'} videoId='1' />
-    <YoutubeEmbed embedId={'9o0X53CHTTE'} videoId='2' />
+    {testimonials?.map((testimonial, index) => (
+      <YoutubeEmbed embedId={testimonial.embedId} videoId={index} />
+    ))}
   </Constrain>
   </div>

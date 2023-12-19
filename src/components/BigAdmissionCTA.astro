@@ -5,7 +5,20 @@ import Button from '../components/system/Button.astro';
 import Text from './system/Text.astro';
 import Constrain from './system/Constrain.astro';
 import { Image } from 'astro:assets';
+import { marked } from 'marked'
+
+import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
+const { data } = await getEntry('home', 'home') as CollectionEntry<'home'>
+
+const bigAdmissionCTA = data.bigAdmissionCTA
 const {shouldSecondaryCTA = true} = Astro.props
+
+const headingArr = bigAdmissionCTA?.heading?.split(" ") || []
+const headingHalf = Math.ceil(headingArr.length / 2)
+const headingFirstHalf = headingArr.slice(0, headingHalf).join(" ")
+const headingSecondHalf = headingArr.slice(headingHalf, headingArr.length).join(" ")
+
+const bigAdmissionCTABody = marked.parse(bigAdmissionCTA?.body || '')
 ---
 
 <div class='px-20 py-6 bg-white max-md:px-4 max-md:py-4'>
@@ -19,18 +32,21 @@ const {shouldSecondaryCTA = true} = Astro.props
         }}>
           <Image src={bigCTASplashVectorBG} class="absolute -top-2 left-0 max-md:-top-28 max-md:-left-20" role="presentation" alt="decorative"/>
           <Image src={bigCTAKidBG} class="absolute bottom-0 right-0  max-md:right-0 max-md:-bottom-8 max-md:w-20" alt="Glentree Academy Admissions Open for 2024-25" />
-          <Text type={'subtitle'} style={{ letterSpacing: '0.1em' }}>Enroll Now</Text>
+          <Text type={'subtitle'} style={{ letterSpacing: '0.1em' }}>{bigAdmissionCTA?.subtitle}</Text>
           <Text type={'h2'} class='relative mt-5 text-center leading-10'>
-            Admissions Open <br class='hidden max-md:block' /> for 2024-25
+          {headingFirstHalf}<br class='hidden max-md:block' />&nbsp;{headingSecondHalf}
           </Text>
-          <Text type={'base'} class='w-[70%] max-md:w-[88%] text-center mt-5 max-md:mt-3'>We believe that every child has immense potential that, in the right environment, can be uncovered, nurtured and realised.</Text>
+          <Text type={'base'} class='w-[70%] max-md:w-[88%] text-center mt-5 max-md:mt-3'>
+            <div set:html={bigAdmissionCTABody}>
+            </div>
+          </Text>
           <div class='flex flex-row mt-10 max-md:mt-8 max-md:flex-col max-md:items-center'>
-            <a href="https://admissions.glentreeacademy.com" target='_blank'>
-              <Button>Apply Now!</Button>
+            <a href={bigAdmissionCTA?.primaryCTALink} target='_blank'>
+              <Button>{bigAdmissionCTA?.primaryCTAText}</Button>
             </a>
             {shouldSecondaryCTA && (
-              <a href="/admissions">
-                <Button secondary class='ml-4 max-md:mt-4 max-md:ml-0'>View Process</Button>
+              <a href={bigAdmissionCTA?.secondaryCTALink}>
+                <Button secondary class='ml-4 max-md:mt-4 max-md:ml-0'>{bigAdmissionCTA?.secondaryCTAText}</Button>
               </a>
             )}
           </div>
