@@ -675,8 +675,8 @@ export default defineConfig({
                 fields: [
                   {
                     type: 'boolean',
-                    name: 'type',
-                    label: 'Type',
+                    name: 'highlight',
+                    label: 'Highlight',
                   },
                   {
                     type: 'string',

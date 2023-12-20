@@ -3,11 +3,11 @@ sectionTitle: Scholarships
 sectionDescription: Empowering Students Through Diverse Scholarship Opportunities
 scholarships:
   - title: 
-      - type: "normal"
+      - highlight: false
         text: "Founder’s Scholarship to"
-      - type: "highlight"
+      - highlight: true
         text: "Meritorious students"
-      - type: "normal"
+      - highlight: false
         text: "– For Existing Glentree Students"
     description: "For academically bright students of Grades 5 to 9 moving to Grades 6 to 10"
     eligibility: 
@@ -17,11 +17,11 @@ scholarships:
     benefits: 
       - "15% tuition fee waiver for the academic year"
   - title:
-      - type: "normal"
+      - highlight: false
         text: "Glentree Inspire Scholarship Program for"
-      - type: "highlight"
+      - highlight: true
         text: "Meritorious students"
-      - type: "normal"
+      - highlight: false
         text: "- New Admissions"
     description: "For meritorious students of Grades 6 to 9 transferring to Glentree Academy from CBSE or ICSE boards"
     eligibility:
@@ -31,11 +31,11 @@ scholarships:
     benefits:
       - "15% tuition fee waiver for the academic year"
   - title:
-      - type: "normal"
+      - highlight: false
         text: "Glentree Spirit of Sports for"
-      - type: "highlight"
+      - highlight: true
         text: "Excellence in Sports"
-      - type: "normal"
+      - highlight: false
         text: "- For both Existing Students and New Admissions"
     description: "For students from Grade 5 to 10 excelling in recognized team or individual sports"
     eligibility:

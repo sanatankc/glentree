@@ -122,18 +122,18 @@ const scholarshipsCollection = defineCollection({
     scholarships: z.array(
       z.object({
         title: z.array(z.object({
-          type: z.string(),
+          highlight: z.boolean(),
           text: z.string(),
-        })),
-        description: z.string(),
-        eligibility: z.array(z.string()),
-        documentsRequired: z.array(z.string()),
-        benefits: z.array(z.string()),
+        })).optional(),
+        description: z.string().optional(),
+        eligibility: z.array(z.string()).optional(),
+        documentsRequired: z.array(z.string()).optional(),
+        benefits: z.array(z.string()).optional(),
       })
     ),
   }),
 });
-   
+
 const curriculumCollection = defineCollection({
   type: 'content',
   schema: () => z.object({
