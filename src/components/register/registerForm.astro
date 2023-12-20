@@ -264,7 +264,6 @@ const selectedCampus = campuses[campusName] || null
   const updateGradesOptions = (campusName) => {
     document.querySelector('[data-select-parent-id="selectDisabled"]').style.display = 'none';
     // document.getElementById('register-form-container-desktop').classList.add('form-completed')
-    console.log('selected campus', campusName)
     if (campusName === 'Whitefield') {
       selectAdmissionYear.querySelector('select').required = true
       selectAdmissionYear.style.display = 'block'
