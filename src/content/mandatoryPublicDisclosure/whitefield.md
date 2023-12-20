@@ -1,5 +1,12 @@
 ---
 disclosure:
+  - title: Lift Work in Progress - PO & Payment
+    disclosure: >
+      [https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/Letter and
+      documents to CBSE Affiliation Unit for
+      LIFT.pdf](<https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/Letter
+      and documents to CBSE Affiliation Unit for LIFT.pdf> "Lift Work in
+      Progress")
   - title: Teacher Training Details & Certificate
     disclosure: >
       [View
