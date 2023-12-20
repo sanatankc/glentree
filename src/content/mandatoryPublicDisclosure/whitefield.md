@@ -1,5 +1,8 @@
 ---
 disclosure:
+  - title: 'Declaration Letter to CBSE for Deficiencies - Compliance Report    '
+    disclosure: >
+      [https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/Declaration.pdf](https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/Declaration.pdf)
   - title: Lift Work in Progress - PO & Payment
     disclosure: >
       [View
