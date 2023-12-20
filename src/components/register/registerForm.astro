@@ -264,18 +264,19 @@ const selectedCampus = campuses[campusName] || null
   const updateGradesOptions = (campusName) => {
     document.querySelector('[data-select-parent-id="selectDisabled"]').style.display = 'none';
     // document.getElementById('register-form-container-desktop').classList.add('form-completed')
-    console.log('Campus Selected', campusName)
     if (campusName === 'Whitefield') {
-      
+      console.log('selected campus')
+      selectAdmissionYear.querySelector('select').required = true
+      selectAdmissionYear.style.display = 'block'
       selectGrade1Container.style.display = 'block';
       selectGrade2Container.style.display = 'none';
       selectGrade3Container.style.display = 'none';
-      
       // required for form validation
       selectGrade2Container.querySelector('select').required = false
       selectGrade3Container.querySelector('select').required = false
     } else if (campusName === 'Sarjapur Road') {
-      
+      selectAdmissionYear.querySelector('select').required = true
+      selectAdmissionYear.style.display = 'block'
       selectGrade1Container.style.display = 'none';
       selectGrade2Container.style.display = 'block';
       selectGrade3Container.style.display = 'none';
@@ -286,10 +287,11 @@ const selectedCampus = campuses[campusName] || null
       selectGrade1Container.style.display = 'none';
       selectGrade2Container.style.display = 'none';
       selectGrade3Container.style.display = 'block';
+      selectAdmissionYear.style.display = 'none'
 
       selectGrade1Container.querySelector('select').required = false
       selectGrade2Container.querySelector('select').required = false
-      
+      selectAdmissionYear.querySelector('select').required = false
 
     }
   }
