@@ -13,7 +13,7 @@ const {
 } = Astro.props
 
 const images = gallery.map(slide => (
-  {src: slide.src.src, alt: slide.caption}
+  {src: slide.src.src || slide.src, alt: slide.altTag || slide.caption}
 )).slice(...deckImages).reverse()
 
 const deckCardId = 'deck-' + id

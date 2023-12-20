@@ -58,5 +58,42 @@ showcase:
     title: Math Lab
   - image: /images/gas-update7.jpeg
     title: Van Mohtsav Special Assembly
+aroundTheCampus:
+  description: "Explore our sarjapur road campus, designed to enhance the learning experience with modern facilities and resources."
+  bulletPoints:
+    - bulletPoint: "Composite Science Laboratory"
+    - bulletPoint: "High-Tech Computer Lab"
+    - bulletPoint: "Premium Sports Facilities"
+    - bulletPoint: "Fun-Secure Play Area"
+  gallery:
+    - image: "/images/gas-facilities/Library.webp"
+      altTag: "Library"
+      title: "Library"
+      description: "Explore our vast library, a treasure trove of knowledge with a diverse collection of books and journals, to fuel the academic journey."
+    - image: "/images/gas-facilities/chemlab.webp"
+      altTag: "Composite Science Laboratory"
+      title: "Composite Science Laboratory"
+      description: "Unlock the wonders of science through hands-on experiments in our state-of-the-art lab, fostering a deep understanding of the natural world."
+    - image: "/images/gas-facilities/cslab.webp"
+      altTag: "Computer Lab"
+      title: "Computer Lab"
+      description: "Embark on a digital voyage in our cutting-edge computer lab, where students gain practical skills and knowledge in technology and computer science."
+    - image: "/images/gas-facilities/SmartClassroom.webp"
+      altTag: "Smart Interactive Classrooms"
+      title: "Smart Interactive Classrooms"
+      description: "Step into the future of education with our Smart Interactive Classrooms, where technology and teaching seamlessly combine to enhance the learning experience."
+    - image: "/images/gas-facilities/Campus.webp"
+      altTag: "CCTV Secured Campus"
+      title: "CCTV Secured Campus"
+      description: "Safety is paramount to us. Our CCTV-secured campus ensures a secure environment, providing peace of mind to both students and parents."
+    - image: "/images/gas-facilities/Sports.webp"
+      altTag: "Playground"
+      title: "Playground"
+      description: "Sports and Recreation – Glentree offers a diverse range of sports and recreational activities, including chess, badminton, table tennis, football, basketball, volleyball, yoga, taekwondo, and fostering physical fitness and a spirit of teamwork among our students."
+contactUs:
+  phoneNo: '+91 9632104368'
+  workingHours: 'Monday to Saturday - 8:00 AM to 4:00 PM'
+  address: 'No.36/5, Halanayakanahalli,Varthur Hobli Bengaluru East Taluk,Bengaluru, Karnataka 560035'
+  mapEmbedLink: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyAIyVF44QhoXfwwKHLd1h3N49cQTHS0Yvw&q=Sarjapur Glentree Academy, Sarjapur, Bengaluru'
+  email: admission.gas@glentreeacademy.com
 ---
-

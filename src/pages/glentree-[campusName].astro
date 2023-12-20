@@ -106,6 +106,7 @@ if (!allowedCampusNames.includes(campusName)) {
   })
 }
 
+const aroundTheCampus = data?.aroundTheCampus
 const campusData = {
   whitefield: {
     affiliationNo: '830349',
@@ -291,76 +292,14 @@ const campusSeoName = {
               currentLink={currentPath}
               campusName={campusName}
               data={{
-                title: 'Explore our whitefield campus, designed to enhance the learning experience with modern facilities and resources.',
-                description: [
-                  'Earth Lab',
-                  'High-Tech Computer Lab',
-                  'Premium Sports Facilities',
-                  'Fun-Secure Play Area',
-                ],
-                gallery: [
-                  {
-                    src: LibraryGAW, 
-                    caption: 'Library',
-                    description: 'Explore our vast library, a treasure trove of knowledge with a diverse collection of books and journals, to fuel the academic journey.',
-                  },
-                  {
-                    src: ScienceLabGAW,
-                    caption: 'Composite Science Laboratory',
-                    description: 'Unlock the wonders of science through hands-on experiments in our state-of-the-art lab, fostering a deep understanding of the natural world.',
-                  },
-                  // {
-                  //   src: GASupdate1,
-                  //   caption: 'Math Lab',
-                  //   description: 'Discover the joy of mathematics in an interactive space equipped with tools, puzzles, and games that make learning math engaging and fun.',
-                  // },
-                  {
-                    src: ComputerLabGAW,
-                    caption: 'Computer Lab',
-                    description: "Embark on a digital voyage in our cutting-edge computer lab, where students gain practical skills and knowledge in technology and computer science.",
-                  },
-                  {
-                    src: earthLabGAW,
-                    caption: 'Earth Lab',
-                    description: "Connect with the environment and explore our Earth Lab, where the students engage in environmental studies and learn about sustainability and ecology.",
-                  },
-                  {
-                    src: auditoriumGAW,
-                    caption: 'Auditorium',
-                    description: "Witness the magic of the stage in our spacious auditorium, a hub for cultural events, presentations, and performances that showcase our students' talents.",
-                  },
-                  // {
-                  //   src: GASupdate1,
-                  //   caption: 'Infirmary',
-                  //   description: "Our infirmary is well-equipped to provide necessary first aid to students in the time of an emergency. Annual health check-ups ups including an eye check-up by specialists are a regular procedure at the school.",
-                  // },
-  
-                  // {
-                  //   srcroad smartClassroomGAW,
-                  //   caption: 'Smart Interactive Classrooms',
-                  //   description: "Step into the future of education with our Smart Interactive Classrooms, where technology and teaching seamlessly combine to enhance the learning experience.",
-                  // },
-                  {
-                    src: campusGAW,
-                    caption: 'CCTV Secured Campus',
-                    description: "Safety is paramount to us. Our CCTV-secured campus ensures a secure environment, providing peace of mind to both students and parents.",
-                  },
-                  {
-                    src: discoverRoomGAW,
-                    caption: 'Counselling Room',
-                    description: "Find a haven for emotional and psychological support in our confidential counselling room, where trained professionals are ready to listen and guide you through life's challenges.",
-                  },
-                  // {
-                  //   src: GASupdate1,
-                  //   caption: 'Performing Art Room',
-                  //   description: "A place to unleash creativity in our dedicated Performing Arts Room, where music, drama, and dance come to life. ",
-                  // },
-                  {
-                    src: PlaygroundGAW,
-                    caption: 'Playground',
-                    description: "Sports and Recreation – Glentree offers a diverse range of sports and recreational activities, including chess, badminton, table tennis, football, basketball, volleyball, yoga, taekwondo, and fostering physical fitness and a spirit of teamwork among our students."
-                  },
-                ]
+                title: aroundTheCampus?.description,
+                description: aroundTheCampus?.bulletPoints?.map(({ bulletPoint }) => bulletPoint),
+                gallery: aroundTheCampus?.gallery?.map(({ image, title, description, altTag }) => ({
+                  src: image,
+                  caption: title,
+                  description,
+                  altTag,
+                })),
               }}
             />
           )}
@@ -387,32 +326,11 @@ const campusSeoName = {
                     caption: 'Composite Science Laboratory',
                     description: 'Unlock the wonders of science through hands-on experiments in our state-of-the-art lab, fostering a deep understanding of the natural world.',
                   },
-                  // {
-                  //   src: GASupdate1,
-                  //   caption: 'Math Lab',
-                  //   description: 'Discover the joy of mathematics in an interactive space equipped with tools, puzzles, and games that make learning math engaging and fun.',
-                  // },
                   {
                     src: csLabGAS,
                     caption: 'Computer Lab',
                     description: "Embark on a digital voyage in our cutting-edge computer lab, where students gain practical skills and knowledge in technology and computer science.",
                   },
-                  // {
-                  //   src: earthLabGAW,
-                  //   caption: 'Earth Lab',
-                  //   description: "Connect with the environment and explore our Earth Lab, where the students engage in environmental studies and learn about sustainability and ecology.",
-                  // },
-                  // {
-                  //   src: GASupdate1,
-                  //   caption: 'Auditorium',
-                  //   description: "Witness the magic of the stage in our spacious auditorium, a hub for cultural events, presentations, and performances that showcase our students' talents.",
-                  // },
-                  // {
-                  //   src: GASupdate1,
-                  //   caption: 'Infirmary',
-                  //   description: "Our infirmary is well-equipped to provide necessary first aid to students in the time of an emergency. Annual health check-ups ups including an eye check-up by specialists are a regular procedure at the school.",
-                  // },
-  
                   {
                     src: smartClassroomGAS,
                     caption: 'Smart Interactive Classrooms',
@@ -423,16 +341,6 @@ const campusSeoName = {
                     caption: 'CCTV Secured Campus',
                     description: "Safety is paramount to us. Our CCTV-secured campus ensures a secure environment, providing peace of mind to both students and parents.",
                   },
-                  // {
-                  //   src: GASupdate1,
-                  //   caption: 'Counselling Room',
-                  //   description: "Find a haven for emotional and psychological support in our confidential counselling room, where trained professionals are ready to listen and guide you through life's challenges.",
-                  // },
-                  // {
-                  //   src: GASupdate1,
-                  //   caption: 'Performing Art Room',
-                  //   description: "A place to unleash creativity in our dedicated Performing Arts Room, where music, drama, and dance come to life. ",
-                  // },
                   {
                     src: SportsGAS,
                     caption: 'Playground',
@@ -475,7 +383,7 @@ const campusSeoName = {
 
         
           <BigAdmissionCTA />
-          <ContactUs campus={campus} />
+          <ContactUs campus={data.contactUs} />
           <Footer />
         </div>
       </div>

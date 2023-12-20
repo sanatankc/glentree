@@ -15,51 +15,20 @@ import "../global.css";
 import GalleryMarquee from "../components/campus/galleryMarquee.astro";
 import Footer from "../components/landingPage/Footer.astro";
 
+
+import Constrain from "../components/system/Constrain.astro";
+
 import aerospace from "../images/afterschool/aerospace.png";
 import bharatanatyam from "../images/afterschool/bharatanatyam.png";
 import german from "../images/afterschool/german.png";
 import music from "../images/afterschool/music.png";
 import robotics from "../images/afterschool/robotics.png";
 import sports from "../images/afterschool/sports.png";
+import { Image } from "astro:assets";
+import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
+const { data } = await getEntry('afterschool', 'afterschool') as CollectionEntry<'afterschool'>
 
-import Constrain from "../components/system/Constrain.astro";
-
-const clubs = [
-  {
-    title: "Bharatnatyam",
-    description:
-      "Indian Classical Dance instruction with theory, history, fitness, and technique refinement.",
-    thumbnail: bharatanatyam,
-  },
-  {
-    title: "Musical Instruments",
-    description:
-      "Progressive music curriculum for building musicianship and instrument technique.",
-    thumbnail: music,
-  },
-  {
-    title: "Robotics",
-    description:
-      "Hands-on robotics program fostering creativity, problem-solving, and STEM understanding.",
-    thumbnail: robotics,
-  },
-  {
-    title: "Aerospace",
-    description: "High-quality space education and services for students.",
-    thumbnail: aerospace,
-  },
-  {
-    title: "Sports",
-    description:
-      "Specialized sports program unlocking athletic potential and cultivating passion through expert coaching.",
-    thumbnail: sports,
-  },
-  {
-    title: "German Language",
-    description: "Fostering global fluency through teaching foreign languages.",
-    thumbnail: german,
-  },
-];
+const afterSchool = data?.afterschool || []
 ---
 
 <Layout 
@@ -112,7 +81,7 @@ const clubs = [
             class="flex flex-row flex-wrap gap-5 justify-center items-center"
           >
             {
-              clubs.map((club) => (
+              afterSchool.map((activity) => (
                 <div
                   style={{
                     background: "rgba(255, 255, 255, 0.04)",
@@ -122,17 +91,18 @@ const clubs = [
                   }}
                   class="p-4 w-[400px] min-h-[500px]"
                 >
-                  <div
-                    class="w-full h-[320px] bg-cover bg-center rounded-2xl"
-                    style={{
-                      backgroundImage: `url(${club.thumbnail.src})`,
-                    }}
+                  <Image
+                    class='w-full h-[320px] object-cover object-center rounded-2xl' 
+                    src={activity.thumbnail}
+                    width={400}
+                    height={320}
+                    alt={activity.thumbnailAlt}
                   />
                   <Text type="h4" class="mt-4">
-                    {club.title}
+                    {activity.title}
                   </Text>
                   <Text type="sm" class="mt-2 text-white/80">
-                    {club.description}
+                    {activity.description}
                   </Text>
                 </div>
               ))
