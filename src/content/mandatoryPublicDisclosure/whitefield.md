@@ -1,10 +1,10 @@
 ---
 disclosure:
-  - disclosure: >
-      [https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/CBSE Training
-      & Certificate compressed.pdf
-      ](<https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/CBSE
-      Training & Certificate compressed.pdf> "Teacher Training & Certificate")
+  - title: Teacher Training Details & Certificate
+    disclosure: >
+      [View Here
+      ](https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/CBSE%20Training%20&%20Certificate%20compressed.pdf
+      "Teacher Training & Certificate")
   - title: Land Certificate
     disclosure: >
       [View
