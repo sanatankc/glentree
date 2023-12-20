@@ -204,6 +204,98 @@ export default defineConfig({
           }
         ]
       },
+      {
+        name: 'scholarships',
+        label: 'Scholarships',
+        path: 'src/content/scholarships',
+        fields: [
+          {
+            type: 'string',
+            name: 'sectionTitle',
+            label: 'Section Title',
+          },
+          {
+            type: 'string',
+            name: 'sectionDescription',
+            label: 'Section Description',
+          },
+          {
+            type: 'object',
+            list: true,
+            label: 'Scholarship Details',
+            name: 'scholarships',
+            ui: {
+              itemProps: (item) => ({
+                label: item?.title.map((title) => title.text).join(' '),
+              })
+            },
+            fields: [
+              {
+                type: 'object',
+                list: true,
+                name: 'title',
+                label: 'Title',
+                fields: [
+                  {
+                    type: 'boolean',
+                    name: 'type',
+                    label: 'Type',
+                  },
+                  {
+                    type: 'string',
+                    name: 'text',
+                    label: 'Text',
+                  },
+                ],
+              },
+              {
+                type: 'rich-text',
+                name: 'description',
+                label: 'Description',
+              },
+              {
+                type: 'object',
+                list: true,
+                name: 'eligibility',
+                label: 'Eligibility',
+                fields: [
+                  {
+                    type: 'string',
+                    name: 'criterion',
+                    label: 'Criterion',
+                  },
+                ],
+              },
+              {
+                type: 'object',
+                list: true,
+                name: 'documentsRequired',
+                label: 'Documents Required',
+                fields: [
+                  {
+                    type: 'string',
+                    name: 'document',
+                    label: 'Document',
+                  },
+                ],
+              },
+              {
+                type: 'object',
+                list: true,
+                name: 'benefits',
+                label: 'Benefits',
+                fields: [
+                  {
+                    type: 'string',
+                    name: 'benefit',
+                    label: 'Benefit',
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      }      
     ],
   },
 });

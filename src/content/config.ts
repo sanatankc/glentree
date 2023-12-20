@@ -69,6 +69,26 @@ const updateCollection = defineCollection({
   }),
 })
 
+const scholarshipsCollection = defineCollection({
+  type: 'content',
+  schema: () => z.object({
+    sectionTitle: z.string(),
+    sectionDescription: z.string(),
+    scholarships: z.array(
+      z.object({
+        title: z.array(z.object({
+          type: z.string(),
+          text: z.string(),
+        })),
+        description: z.string(),
+        eligibility: z.array(z.string()),
+        documentsRequired: z.array(z.string()),
+        benefits: z.array(z.string()),
+      })
+    ),
+  }),
+});
+
 export const collections = {
   'school': blogCollection,
   'campus': campusCollection,
@@ -76,4 +96,5 @@ export const collections = {
   'disclosure': disclosureCollection,
   'blog': blogCollection,
   'update': updateCollection,
+  'scholarships': scholarshipsCollection,
 };
