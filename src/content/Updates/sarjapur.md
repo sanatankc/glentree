@@ -137,7 +137,11 @@ updates:
   - thumbnail: /images/gas-update3.jpeg
     title: |
       Mother's Day
-    publishedDate: 2023-10-14T18:30:00.000Z
+    description: >-
+      Mother’s Day was celebrated with great enthusiasm. The students of junior
+      sections were told of the role and value of the mother in the life of
+      every individual.
+    publishedDate: 2023-05-11T18:30:00.000Z
   - thumbnail: /images/gas-update5.jpeg
     title: |
       Plantation Drive
