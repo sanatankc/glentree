@@ -121,7 +121,11 @@ updates:
   - thumbnail: /images/12.663afe3d.jpg
     title: |
       Zero Shadow Day
-    publishedDate: 2023-10-22T18:30:00.000Z
+    description: >-
+      Zero Shadow Day 2023 in India, is observed in Bengaluru on August 18, at
+      noon, when the Sun aligned directly overhead. Students at Glentree Academy
+      Sarjapur showcasing zero shadows.
+    publishedDate: 2023-08-17T18:30:00.000Z
   - thumbnail: /images/11.f3bdc3d2.jpg
     title: |
       Weightless Wednesday
