@@ -12,6 +12,11 @@ updates:
   - thumbnail: /images/406405837_869439644970293_5633037024608602708_n.jpg
     title: |
       Special Assembly - Sharing is Caring
+    description: >-
+      To share is to spread joy. Sharing is also a critical skill that comes in
+      handy when kids play and learn with other kids. We at Glentree Academy,
+      start teaching students about the concept of sharing and caring as early
+      as kindergarten and pre-primary.
     publishedDate: 2023-10-26T18:30:00.000Z
   - thumbnail: /images/WhatsApp Image 2023-11-16 at 10.02.45.jpeg
     title: |
