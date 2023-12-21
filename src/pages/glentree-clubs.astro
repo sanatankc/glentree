@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
 import Text from '../components/system/Text.astro';
 import BigAdmissionCTA from '../components/BigAdmissionCTA.astro';
 
@@ -15,6 +14,9 @@ import '../global.css'
 import GalleryMarquee from '../components/campus/galleryMarquee.astro';
 import Footer from '../components/landingPage/Footer.astro';
 
+import Constrain from '../components/system/Constrain.astro';
+
+
 import art from '../images/clubs/art.png'
 import debate from '../images/clubs/debate.png'
 import eco from '../images/clubs/eco.png'
@@ -24,58 +26,15 @@ import math from '../images/clubs/math.png'
 import scouts from '../images/clubs/scouts.png'
 import science from '../images/clubs/science.png'
 import literary from '../images/clubs/literary.png'
-import Constrain from '../components/system/Constrain.astro';
 
 
+import { Image } from 'astro:assets';
+import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
+const { data } = await getEntry('clubs', 'clubs') as CollectionEntry<'clubs'>
 
 
-const clubs = [
-  {
-    title: "Debate & Quizzing Club",
-    description: "Students harness their persuasive prowess and broaden their knowledge horizons in our dynamic Debate and Quizzing Club. Our club aims at amplifying their oratory skills, dive into global affairs, and ignite competitive spirit.",
-    thumbnail: debate,
-  },
-  {
-    title: "Art Mania",
-    description: "Students unleash their creativity in our vibrant Art Mania Club, exploring diverse art forms, expressing freely, and nurturing their imagination in an artistic environment.",
-    thumbnail: art,
-  },
-  {
-    title: "Eco Warriors",
-    description: "Students immerse in a passion for the environment at our empowering Eco-Club, making a difference as we engage, inspire, and take action for a sustainable future.",
-    thumbnail: eco,
-  },
-  {
-    title: "Mad Scientist",
-    description: "Fuelling scientific curiosity and hands-on learning in our Science Club, students dive into projects, research, and hands-on experiments, building curiosity and scientific knowledge.",
-    thumbnail: science,
-  },
-  {
-    title: "Literary Club",
-    description: "Our literary Club inculcates a flair for the language and enhance literary skills among the students, encouraging them to become orators and display their intellectual, independent thinking skills and imbibe a sense of confidence.",
-    thumbnail: literary,
-  },
-  {
-    title: "Math Magicians",
-    description: "While developing math skills and knowledge, our club also enriches student's skills with higher-order thinking, and prepare them for future math competitions.",
-    thumbnail: math,
-  },
-  {
-    title: "Scouts & Guides",
-    description: "Scouts and Guides empower students to reach their full potential, fostering character, health habits, handicrafts while acquiring useful skills, and responsible citizenship.",
-    thumbnail: scouts,
-  },
-  {
-    title: "First Foot Forward",
-    description: "This clubs aims at uniting like minded young entrepreneurs, igniting business ideas and exploring the nuances of it. It exposes the students to Case Studies, Social Entrepreneurship, and Knowledge Sharing.",
-    thumbnail: firstFoot,
-  },
-  {
-    title: "Heritage Club",
-    description: "Ignite the power within students to become responsible, productive, and invaluable contributors to society. Our Heritage Club aims to foster cultural understanding, intellectual curiosity, and virtual exploration of India's rich diversity.",
-    thumbnail: heritage,
-  },
-]
+const clubs = data?.clubs || []
+
 
 ---
 
@@ -125,12 +84,13 @@ const clubs = [
                 }} 
                 class='p-4 w-[400px] min-h-[530px]'
               >
-                <div
-                  class='w-full h-[320px] bg-cover bg-center rounded-2xl' 
-                  style={{
-                    backgroundImage: `url(${club.thumbnail.src})`
-                  }}
-                ></div>
+                <Image
+                  class='w-full h-[320px] object-cover object-center rounded-2xl' 
+                  src={club.thumbnail}
+                  width={400}
+                  height={320}
+                  alt={club.thumbnailAlt}
+                />
                 <Text type='h4' class='mt-4'>{club.title}</Text>
                 <Text type='sm' class='mt-2 text-white/80'>{club.description}</Text>
               </div>

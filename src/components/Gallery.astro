@@ -14,7 +14,8 @@ const slideId = 'slide' + id
     <div class="w-full h-full relative rounded-md">
       {gallery.map((slide: {
         src: string,
-        caption: string
+        caption: string,
+        altTag: string,
       }, index: Number) => (
         <div
           data-target-slide={slideId}
@@ -24,8 +25,9 @@ const slideId = 'slide' + id
         >
           <Image
             src={slide?.src}
-            alt={slide.caption}
+            alt={slide.altTag || slide.caption}
             width={1920}
+            height={1080}
             class="w-full h-full max-md:h-auto object-cover object-[center_30%] rounded-md"
           />
         </div>

@@ -4,101 +4,137 @@ import PrimaryBG from '../images/curriculum/primary.png';
 import MiddleAndHighBG from '../images/curriculum/middle&High.png';
 import Text from './system/Text.astro';
 import { Image } from 'astro:assets';
+import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
+const { data } = await getEntry('curriculum', 'curriculum') as CollectionEntry<'curriculum'>
 
 
-const academics = [
+const academicColors = [
   {
-    title: 'Pre-Primary',
-    grade: 'NUR - UKG',
-    points: [
-      [
-        'Montessori and Waldorf methodologies',
-        'Activity based learning',
-        'Language, Numeracy, and Theme',
-      ],
-      [
-        'Value Education',
-        'Reading Program',
-        'Montessori Lab'
-      ]
-    ],
-    image: PrePrimaryBG,
     background: '#0E6526',
     backgroundContent: '#0A5E2F',
-    opacity: 1,
-    link: 'https://glentreeacademy.com/curriculum/pre-primary',
-    alt: "Pre-Primary CBSE Syllabus"
   },
   {
-    title: 'Primary',
-    image: PrimaryBG,
-    link: 'https://glentreeacademy.com/curriculum/primary',
     background: '#C07C47',
-    grade: 'Grade I-IV',
-    points: [                
-      [
-        "Concept driven academics",
-        "Multi sensorial development and approach",
-        "Exploring Through Discovery",
-        "Experiential Learning",
-        "Inter Disciplinary Approach"
-      ],  
-      [
-        "Language Arts (English, Hindi, Kannada)",
-        "STEM Lab",
-        'CS & Coding',
-        "R.E.A.D Program",
-        "“Connecting the Dots” Program"
-      ],
-    ],
-    alt: "Grade 1 CBSE Syllabus, Grade 2 CBSE Syllabus, Grade 3 CBSE Syllabus, Grade 4 CBSE Syllabus"
+    backgroundContent: '#C07C47',
   },
   {
-    title: 'Middle & High School',
-    image: MiddleAndHighBG,
-    link: 'https://glentreeacademy.com/curriculum/middle-and-high',
     background: '#6F322E',
-    grade: 'Grade V-X',
-    points: [
-      [          
-        "Concept driven academics",
-        "Multi sensorial development and approach",     
-        "Creative Thinking & Research",
-        "Community Learning",
-        "Inter Disciplinary Approach"
-      ],
-      [
-        "Language Arts (English, Hindi, Kannada)",
-        "STEM Lab",
-        "Social Studies",
-        'CS & Coding',
-        "“Connecting the Dots” Program"
-      ]
-    ],
-    alt: "Grade 5 CBSE Syllabus, Grade 6 CBSE Syllabus, Grade 7 CBSE Syllabus, Grade 8 CBSE Syllabus, Grade 9 CBSE Syllabus, Grade 10 CBSE Syllabus"
-
+    backgroundContent: '#6F322E',
   },
   {
-    title: 'Senior Secondary School',
-    image: MiddleAndHighBG,
-    link: 'https://glentreeacademy.com/curriculum/middle-and-high',
     background: '#2C734B',
-    new: true,
-    grade: 'Grade XI (Commerce)',
-    points: [
-      [               
-        "COM 1: Business Studies, Accountancy, Economics, English, PE Elective.",
-        "COM 2: Business Studies, Accountancy, Economics, English, Psychology",
-      ],
-      [
-        "Global Engagement Emphasis",
-        "Personalised Career Counselling",
-      ]
-    ],
-    alt: "Grade 11 CBSE Syllabus, Grade 12 CBSE Syllabus"
-
+    backgroundContent: '#2C734B',
   },
 ]
+
+const sliceArrayInHalves = (arr) => {
+  const half = Math.ceil(arr.length / 2);
+  const firstHalf = arr.slice(0, half);
+  const secondHalf = arr.slice(-half);
+  return [firstHalf, secondHalf];
+}
+
+const academics = data.academics.map((academic, i) => ({
+  ...academic,
+  ...academicColors[i],
+  points: sliceArrayInHalves(academic.concepts),
+  alt: academic.imageAlt,
+
+}))
+
+// const academics = [
+//   {
+//     title: 'Pre-Primary',
+//     grade: 'NUR - UKG',
+//     points: [
+//       [
+//         'Montessori and Waldorf methodologies',
+//         'Activity based learning',
+//         'Language, Numeracy, and Theme',
+//       ],
+//       [
+//         'Value Education',
+//         'Reading Program',
+//         'Montessori Lab'
+//       ]
+//     ],
+//     image: PrePrimaryBG,
+//     background: '#0E6526',
+//     backgroundContent: '#0A5E2F',
+//     opacity: 1,
+//     link: 'https://glentreeacademy.com/curriculum/pre-primary',
+//     alt: "Pre-Primary CBSE Syllabus"
+//   },
+//   {
+//     title: 'Primary',
+//     image: PrimaryBG,
+//     link: 'https://glentreeacademy.com/curriculum/primary',
+//     background: '#C07C47',
+//     grade: 'Grade I-IV',
+//     points: [                
+//       [
+//         "Concept driven academics",
+//         "Multi sensorial development and approach",
+//         "Exploring Through Discovery",
+//         "Experiential Learning",
+//         "Inter Disciplinary Approach"
+//       ],  
+//       [
+//         "Language Arts (English, Hindi, Kannada)",
+//         "STEM Lab",
+//         'CS & Coding',
+//         "R.E.A.D Program",
+//         "“Connecting the Dots” Program"
+//       ],
+//     ],
+//     alt: "Grade 1 CBSE Syllabus, Grade 2 CBSE Syllabus, Grade 3 CBSE Syllabus, Grade 4 CBSE Syllabus"
+//   },
+//   {
+//     title: 'Middle & High School',
+//     image: MiddleAndHighBG,
+//     link: 'https://glentreeacademy.com/curriculum/middle-and-high',
+//     background: '#6F322E',
+//     grade: 'Grade V-X',
+//     points: [
+//       [          
+//         "Concept driven academics",
+//         "Multi sensorial development and approach",     
+//         "Creative Thinking & Research",
+//         "Community Learning",
+//         "Inter Disciplinary Approach"
+//       ],
+//       [
+//         "Language Arts (English, Hindi, Kannada)",
+//         "STEM Lab",
+//         "Social Studies",
+//         'CS & Coding',
+//         "“Connecting the Dots” Program"
+//       ]
+//     ],
+//     alt: "Grade 5 CBSE Syllabus, Grade 6 CBSE Syllabus, Grade 7 CBSE Syllabus, Grade 8 CBSE Syllabus, Grade 9 CBSE Syllabus, Grade 10 CBSE Syllabus"
+
+//   },
+//   {
+//     title: 'Senior Secondary School',
+//     image: MiddleAndHighBG,
+//     link: 'https://glentreeacademy.com/curriculum/middle-and-high',
+//     background: '#2C734B',
+//     new: true,
+//     grade: 'Grade XI (Commerce)',
+//     points: [
+//       [               
+//         "COM 1: Business Studies, Accountancy, Economics, English, PE Elective.",
+//         "COM 2: Business Studies, Accountancy, Economics, English, Psychology",
+//       ],
+//       [
+//         "Global Engagement Emphasis",
+//         "Personalised Career Counselling",
+//       ]
+//     ],
+//     alt: "Grade 11 CBSE Syllabus, Grade 12 CBSE Syllabus"
+
+//   },
+// ]
 
 
 const { noHeader } = Astro.props

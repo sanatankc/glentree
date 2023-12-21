@@ -1,58 +1,19 @@
 ---
 import Collapsible from "./admissions/Collapsible.astro"
 import Text from "./system/Text.astro";
+import { marked } from 'marked'
+import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
+const { data } = await getEntry('home', 'home') as CollectionEntry<'home'>
 
-const faqs = [
-  {
-    "question": "How do I apply for admission to Glentree academy?",
-    "answer": "You can apply online/ offline. For more details, kindly log on to <a href='https://www.glentreeacademy.com/admissions/'>https://www.glentreeacademy.com/admissions/</a>"
-  },
-  {
-    "question": "What are the admission requirements?",
-    "answer": "The admission requirements are as follows : <br /><br /><span class='font-bold'>Age Criteria</span>: Please click to understand the age criteria <a href='https://www.glentreeacademy.com/admissions/'>https://www.glentreeacademy.com/admissions/</a><br/><br/> <span class='font-bold'>Documents to be submitted:</span> Marks card of last 3 years, TC, Adahar card copies of the student and parent, address proof, Immunization card"
-  },
-  {
-    "question": "Is there an Application deadline for admissions?",
-    "answer": "We have limited seats available. It's always advisable to close the admission as soon as possible."
-  },
-  {
-    "question": "What are the Glentree Academy fees for the Programs?",
-    "answer": "You can visit the school to know details as the fee varies Grade wise."
-  },
-  {
-    "question": "How do I schedule the campus tour or visit?",
-    "answer": "You can either fill the form on the website, or call the school, or write an email to schedule a campus tour."
-  },
-  {
-    "question": "What are the options for online or remote learning?",
-    "answer": "Glentree Academy offers only Offline learning."
-  },
-  {
-    "question": "What are the Glentree Academy school timings?",
-    "answer": "For Pre primary the school functions from 8:00AM to 12:00PM and grade 1 and above its 8:00AM to 2:30PM"
-  },
-  {
-    "question": "Are Saturdays working?",
-    "answer": "Grade 4 onwards 2 Saturdays in a month would be working which will be half day"
-  },
-  {
-    "question": "Does the school have Daycare facilities?",
-    "answer": "Glentree Academy School offers best Day care facilities up to 6PM. Kindly connect to the admission office to know about the batches"
-  },
-  {
-    "question": "How many Languages are offered?",
-    "answer": "School offers English, Kannada and Hindi as a part of Curriculum and German language is offered as an After School Program."
-  },
-  {
-    "question": "What are the other facilities offered in the school?",
-    "answer": "The school offers a wide range of activities, and students receive some of the best facilities available. for the same are linked below: <br /> <a href='https://www.glentreeacademy.com/co-scholastics'>https://www.glentreeacademy.com/co-scholastics</a>"
-  }
-]
+const faqs = data?.faqs || []
 ---
 <div class="flex flex-col items-center gap-5 ">
-  {faqs.map(({ question, answer }) => (
-    <Collapsible title={question} titleClass='font-sans font-bold text-xl max-md:text-lg' class='mb-5' collapseGroup='collapsible' plusButtonClass="w-[35px] h-[35px] ml-1">
-      <Text type={'regular'} set:html={answer} class="[&>a]:underline [&>a]:text-blue-700"></Text>
-    </Collapsible>
-  ))}
+  {faqs.map(({ question, answer }) => {
+    const answerHtml = marked.parse(answer)
+    return (
+      <Collapsible title={question} titleClass='font-sans font-bold text-xl max-md:text-lg' class='mb-5' collapseGroup='collapsible' plusButtonClass="w-[35px] h-[35px] ml-1">
+        <Text type={'regular'} set:html={answerHtml} class="[&_a]:underline [&_a]:text-blue-700"></Text>
+      </Collapsible>
+    )}
+  )}
 </div>

@@ -33,10 +33,10 @@ import NewCampusShowcase from '../components/campus/newCampusShowcase.astro';
 import BigAdmissionCTA from '../components/BigAdmissionCTA.astro';
 import ContactUs from '../components/campus/contactUs.astro';
 
-import campus1 from '../images/campus/gab/slides/campus1.png'
-import campus2 from '../images/campus/gab/slides/campus2.png'
 import campus3 from '../images/campus/gab/slides/campus3.png'
 import computerLab from '../images/campus/gab/slides/computerLab.png'
+import campus2 from '../images/campus/gab/slides/campus2.png'
+import campus1 from '../images/campus/gab/slides/campus1.png'
 import earthLab from '../images/campus/gab/slides/earthLab.png'
 import playArea from '../images/campus/gab/slides/playArea.png'
 import receptionArea from '../images/campus/gab/slides/receptionArea.png'
@@ -101,7 +101,6 @@ const academics = [
 
 const { data } = await getEntry('campus','bannerghatta') as CollectionEntry<'campus'>
 
-
 ---
 
 <Layout 
@@ -139,11 +138,14 @@ const { data } = await getEntry('campus','bannerghatta') as CollectionEntry<'cam
         <div class="w-full flex-1 h-full relative p-12 flex flex-row max-md:flex-col justify-between items-center max-md:p-8 max-md:px-4 max-md:justify-end max-md:items-left max-md:pb-0">
           <div class="w-full h-full absolute top-0 left-0">
             <Slide
-              slides={[
-                { image_desktop: campus2.src, image_mobile: campus2.src, position: 'center' },
-                { image_desktop: earthLab.src, image_mobile: earthLab.src, position: 'center' },
-                { image_desktop: campus1.src, image_mobile: campus1.src, position: 'center' },
-              ]}
+              slides={
+                data.heroImages.map((image) => ({
+                  image_desktop: image.image_desktop,
+                  image_mobile: image.image_mobile,
+                  position: image.position || 'center',
+                  alt: image.alt,
+                }))
+              }
               id="resiter-page-hero"
             />
           </div>
@@ -216,7 +218,7 @@ const { data } = await getEntry('campus','bannerghatta') as CollectionEntry<'cam
 
 
 
-    <NewCampusShowcase />
+    <NewCampusShowcase data={data.aroundTheCampus} />
 
 
     <div class='w-full p-14 text-black bg-white flex flex-col items-center max-md:p-6'>
@@ -287,12 +289,7 @@ const { data } = await getEntry('campus','bannerghatta') as CollectionEntry<'cam
 
     <BigAdmissionCTA />
     <ContactUs 
-      campus={{
-        phoneNo: '+91 8105826950',
-        mapEmbedLink: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15559.921740228929!2d77.5994554!3d12.8445401!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6be1a2dd9ebb%3A0x9fb79f397d5fedd2!2sGlentree%20Academy%20Bannerghatta!5e0!3m2!1sen!2sin!4v1695325697476!5m2!1sen!2sin',
-        address: 'C K Palya Rd, Hommadevanahalli, Bengaluru, Doddakammanahalli, Karnataka 560083',
-        workingHours: 'Monday to Saturday - 8:00 AM to 4:00 PM',
-      }}
+      campus={data.contactUs}
     />
 
     <div class="w-full items-center flex flex-col bg-white">
