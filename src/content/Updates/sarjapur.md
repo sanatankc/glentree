@@ -129,6 +129,10 @@ updates:
   - thumbnail: /images/gas-update2.jpeg
     title: |
       Field Trip
+    description: >-
+      A Perfect Blend of Fun and Learning at Glentree Academy Sarjapur. Students
+      of the Glentree Academy school had a perfect day out on a field trip. We
+      not only learn through books but also through experiences.
     publishedDate: 2023-10-19T18:30:00.000Z
   - thumbnail: /images/gas-update3.jpeg
     title: |
