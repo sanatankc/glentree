@@ -116,7 +116,8 @@ updates:
   - thumbnail: /images/8.35b81b87.jpg
     title: |
       Independence Day
-    publishedDate: 2023-10-24T18:30:00.000Z
+    description: Independence Day celebration at Glentree Academy Sarjapur School.
+    publishedDate: 2023-08-14T18:30:00.000Z
   - thumbnail: /images/12.663afe3d.jpg
     title: |
       Zero Shadow Day
