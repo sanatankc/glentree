@@ -30,7 +30,11 @@ updates:
   - thumbnail: /images/WhatsApp Image 2023-11-10 at 12.25.41 PM (2).jpeg
     title: |
       Happy Diwali
-    publishedDate: 2023-11-22T18:30:00.000Z
+    description: >-
+      Diwali Celebrations at Glentree Academy Sarjapur campus. Let’s celebrate
+      the festival by spreading joy and lighting up the world of others. Wishing
+      everyone happiness, health, peace and prosperity.
+    publishedDate: 2023-11-11T18:30:00.000Z
   - thumbnail: /images/WhatsApp Image 2023-11-11 at 19.31.21.jpeg
     title: Joy of Giving
     publishedDate: 2023-11-18T18:30:00.000Z
