@@ -32,7 +32,7 @@ const bigAdmissionCTABody = marked.parse(bigAdmissionCTA?.body || '')
         }}>
           <Image src={bigCTASplashVectorBG} class="absolute -top-2 left-0 max-md:-top-28 max-md:-left-20" role="presentation" alt="decorative"/>
           <Image src={bigCTAKidBG} class="absolute bottom-0 right-0  max-md:right-0 max-md:-bottom-8 max-md:w-20" alt="Glentree Academy Admissions Open for 2024-25" />
-          <Text type={'subtitle'} style={{ letterSpacing: '0.1em' }}>{bigAdmissionCTA?.subtitle}</Text>
+          <Text type={'subtitle'} style={{ letterSpacing: '0.1em' }} class='text-white'>{bigAdmissionCTA?.subtitle}</Text>
           <Text type={'h2'} class='relative mt-5 text-center leading-10'>
           {headingFirstHalf}<br class='hidden max-md:block' />&nbsp;{headingSecondHalf}
           </Text>
