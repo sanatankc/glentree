@@ -80,8 +80,12 @@ updates:
       tiny tots feel bright, lively and cheerful.
     publishedDate: 2023-11-09T18:30:00.000Z
   - thumbnail: /images/13.jpeg
-    title: |
-      Yellow Day
+    title: Yellow Day Celebrations
+    description: >-
+      Yellow Day celebrations at Glentree Academy, Sarjapur. Shades of yellow
+      stimulate our little ones with happiness, energy and optimism. Children
+      were not only beautifully dressed in their favourite yellow dresses but
+      also brought yellow objects to make it a complete “Yellow Day”!
     publishedDate: 2023-11-04T18:30:00.000Z
   - thumbnail: /images/IMG-20230923-WA0033.jpg
     title: |
