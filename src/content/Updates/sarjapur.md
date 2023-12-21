@@ -73,8 +73,11 @@ updates:
       Kalam
     publishedDate: 2023-10-14T18:30:00.000Z
   - thumbnail: /images/9.jpeg
-    title: |
-      Red Day
+    title: Red Day Celebrations
+    description: >-
+      Glentree Academy Sarjapur conducted a ‘Red Day’ activity to introduce
+      children to the mesmerizing realm of colours. The shades of red made our
+      tiny tots feel bright, lively and cheerful.
     publishedDate: 2023-11-09T18:30:00.000Z
   - thumbnail: /images/13.jpeg
     title: |
