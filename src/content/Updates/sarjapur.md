@@ -145,15 +145,14 @@ updates:
   - thumbnail: /images/gas-update5.jpeg
     title: |
       Plantation Drive
-    description: >-
-      A tiny sapling can feed the world and a small hope can lead the lives. A
-      plantation drive was organised by Glentree Academy Sarjapur. The drive was
-      a huge success empowering students with substantial knowledge of the
-      environment and plants.
     publishedDate: 2023-10-06T18:30:00.000Z
   - thumbnail: /images/gas-update7.jpeg
     title: |
       Van Mohtsav Special Assembly
-    publishedDate: 2023-10-02T18:30:00.000Z
+    description: >-
+      Think green, act green and live green. The students of Glentree Academy
+      Sarjapur celebrated Van Mahotsav by organizing a special assembly
+      discussing the importance of the day and its significance in today’s time
+    publishedDate: 2023-07-07T18:30:00.000Z
 ---
 
