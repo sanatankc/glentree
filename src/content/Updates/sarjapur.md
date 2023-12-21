@@ -108,7 +108,11 @@ updates:
   - thumbnail: /images/9.29a84678.jpg
     title: |
       National Handloom Day
-    publishedDate: 2023-10-26T18:30:00.000Z
+    description: >-
+      National Handloom Day is observed on 7th August every year in India. The
+      day honours the handloom weavers in the country and also highlights the
+      handloom industry.
+    publishedDate: 2023-08-06T18:30:00.000Z
   - thumbnail: /images/8.35b81b87.jpg
     title: |
       Independence Day
