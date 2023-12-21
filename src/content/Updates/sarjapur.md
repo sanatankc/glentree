@@ -47,7 +47,13 @@ updates:
   - thumbnail: /images/WhatsApp Image 2023-11-06 at 21.42.43 (18).jpeg
     title: |
       Special Assembly for Kannada Rajyotsava
-    publishedDate: 2023-11-14T18:30:00.000Z
+    description: >-
+      Kannada Rajyotsava was celebrated with great enthusiasm by the students of
+      Glentree Academy, Sarjapur. The students' remarkable dance performance
+      beautifully showcased the essence of the Kannada language. The celebration
+      instilled a great sense of pride in the young minds for being a part of a
+      culture that is so rich and vibrant.
+    publishedDate: 2023-10-31T18:30:00.000Z
   - thumbnail: /images/Dussehra.jpeg
     title: |
       Happy Dussehra
