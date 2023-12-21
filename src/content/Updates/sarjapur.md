@@ -90,6 +90,11 @@ updates:
   - thumbnail: /images/IMG-20230923-WA0033.jpg
     title: |
       Inter School Throw Ball
+    description: >-
+      Glentree Academy Sarjapur excels in sports- Throw Ball. Glentree Academy
+      believes in the holistic development of its students, and the Inter-School
+      Throw Ball competition was a testament to the school’s commitment to
+      nurturing both physical fitness and the values of sportsmanship
     publishedDate: 2023-11-03T18:30:00.000Z
   - thumbnail: /images/10.71561ac9.jpg
     title: |
