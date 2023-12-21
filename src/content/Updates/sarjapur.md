@@ -99,19 +99,33 @@ updates:
   - thumbnail: /images/10.71561ac9.jpg
     title: |
       Quit India Movement
-    publishedDate: 2023-11-01T18:30:00.000Z
+    description: >-
+      Students at Glentree academy Sarjapur showcased this historical movement
+      using posters and delivering speeches. The student discussed the primary
+      goal of the Quit India Movement, which was the immediate end of British
+      rule.
+    publishedDate: 2023-08-07T18:30:00.000Z
   - thumbnail: /images/9.29a84678.jpg
     title: |
       National Handloom Day
-    publishedDate: 2023-10-26T18:30:00.000Z
+    description: >-
+      National Handloom Day is observed on 7th August every year in India. The
+      day honours the handloom weavers in the country and also highlights the
+      handloom industry.
+    publishedDate: 2023-08-06T18:30:00.000Z
   - thumbnail: /images/8.35b81b87.jpg
     title: |
       Independence Day
-    publishedDate: 2023-10-24T18:30:00.000Z
+    description: Independence Day celebration at Glentree Academy Sarjapur School.
+    publishedDate: 2023-08-14T18:30:00.000Z
   - thumbnail: /images/12.663afe3d.jpg
     title: |
       Zero Shadow Day
-    publishedDate: 2023-10-22T18:30:00.000Z
+    description: >-
+      Zero Shadow Day 2023 in India, is observed in Bengaluru on August 18, at
+      noon, when the Sun aligned directly overhead. Students at Glentree Academy
+      Sarjapur showcasing zero shadows.
+    publishedDate: 2023-08-17T18:30:00.000Z
   - thumbnail: /images/11.f3bdc3d2.jpg
     title: |
       Weightless Wednesday
