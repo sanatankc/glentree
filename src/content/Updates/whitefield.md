@@ -9,9 +9,6 @@ updates:
       organized regularly to promote efficient communication between parents and
       teachers
     publishedDate: 2023-12-03T18:30:00.000Z
-  - thumbnail: /images/Kannada Rajyotsava.jpg
-    title: ಕನ್ನಡ ರಾಜ್ಯೋತ್ಸವ
-    publishedDate: 2023-11-29T18:30:00.000Z
   - thumbnail: /images/391661758_803149435152982_6560339782273369487_n.jpg
     title: Community Helpers
     description: >-
