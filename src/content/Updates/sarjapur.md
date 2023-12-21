@@ -66,7 +66,12 @@ updates:
   - thumbnail: /images/Students Day.jpeg
     title: |
       World Student's Day
-    publishedDate: 2023-11-12T18:30:00.000Z
+    description: >-
+      Happy International Students Day! It's a day to rejoice, appreciate each
+      other, and acknowledge the role education plays in shaping our future.
+      “You have to dream before your dreams can come true” - Dr. A. P. J. Abdul
+      Kalam
+    publishedDate: 2023-10-14T18:30:00.000Z
   - thumbnail: /images/9.jpeg
     title: |
       Red Day
