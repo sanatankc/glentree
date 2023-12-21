@@ -138,18 +138,10 @@ updates:
     title: |
       Mother's Day
     publishedDate: 2023-10-14T18:30:00.000Z
-  - thumbnail: /images/gas-update4.jpeg
-    title: |
-      Food Chain
-    publishedDate: 2023-10-13T18:30:00.000Z
   - thumbnail: /images/gas-update5.jpeg
     title: |
       Plantation Drive
     publishedDate: 2023-10-06T18:30:00.000Z
-  - thumbnail: /images/gas-update6.jpeg
-    title: |
-      Math Lab
-    publishedDate: 2023-10-03T18:30:00.000Z
   - thumbnail: /images/gas-update7.jpeg
     title: |
       Van Mohtsav Special Assembly
