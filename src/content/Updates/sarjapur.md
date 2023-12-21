@@ -57,7 +57,12 @@ updates:
   - thumbnail: /images/Dussehra.jpeg
     title: |
       Happy Dussehra
-    publishedDate: 2023-11-16T18:30:00.000Z
+    description: >-
+      Happy Dussehra celebrations at Glentree Academy Sarjapur Schools–
+      Celebrating Victory and Virtue! We encourage our students to embody the
+      virtues of honesty, integrity, and courage, mirroring the spirit of this
+      revered festival.
+    publishedDate: 2023-10-23T18:30:00.000Z
   - thumbnail: /images/Students Day.jpeg
     title: |
       World Student's Day
