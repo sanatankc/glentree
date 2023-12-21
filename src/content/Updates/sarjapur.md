@@ -3,7 +3,12 @@ updates:
   - thumbnail: /images/WhatsApp Image 2023-12-07 at 9.14.58 PM.jpeg
     title: |
       A SPECIAL ASSEMBLY - NAVY DAY
-    publishedDate: 2023-12-04T18:30:00.000Z
+    description: >-
+      We recently celebrated Navy Day at our school. Glentree Academy Sarjapur
+      salutes the brave hearts who guard our nation on the occasion of the
+      Indian Navy Day. The celebrations include special assembly demonstrations
+      and a display of naval capabilities
+    publishedDate: 2023-12-03T18:30:00.000Z
   - thumbnail: /images/406405837_869439644970293_5633037024608602708_n.jpg
     title: |
       Special Assembly - Sharing is Caring
