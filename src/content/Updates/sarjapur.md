@@ -37,6 +37,12 @@ updates:
     publishedDate: 2023-11-11T18:30:00.000Z
   - thumbnail: /images/WhatsApp Image 2023-11-11 at 19.31.21.jpeg
     title: Joy of Giving
+    description: >-
+      As educators, one of how we can raise an exceptional child is by
+      inculcating in them feelings of gratitude. Even small acts of giving can
+      trigger the feelings of gratitude. Glentree Academy has a motto of
+      “Learning for Life” and we cultivate lifelong learners who are
+      compassionate individuals
     publishedDate: 2023-11-18T18:30:00.000Z
   - thumbnail: /images/WhatsApp Image 2023-11-06 at 21.42.43 (18).jpeg
     title: |
