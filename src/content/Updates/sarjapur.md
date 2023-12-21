@@ -99,7 +99,12 @@ updates:
   - thumbnail: /images/10.71561ac9.jpg
     title: |
       Quit India Movement
-    publishedDate: 2023-11-01T18:30:00.000Z
+    description: >-
+      Students at Glentree academy Sarjapur showcased this historical movement
+      using posters and delivering speeches. The student discussed the primary
+      goal of the Quit India Movement, which was the immediate end of British
+      rule.
+    publishedDate: 2023-08-07T18:30:00.000Z
   - thumbnail: /images/9.29a84678.jpg
     title: |
       National Handloom Day
