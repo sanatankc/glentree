@@ -64,7 +64,7 @@ updates:
       Art is one of the ways to show creativity and a chance for students to showcase their hidden talents. Top schools in Bangalore make sure to nurture kid’s creativity through these activities and help them bring out their best selves
   - thumbnail: /images/gaw-update8.jpeg
     title: Friendship Day
-    publishedDate: 2023-10-22T18:30:00.000Z
+    publishedDate: 2023-08-06T18:30:00.000Z
     description: >-
       Friendship Day Celebration at Glentree Academy. 
       
