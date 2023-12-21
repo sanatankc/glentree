@@ -21,7 +21,12 @@ updates:
   - thumbnail: /images/WhatsApp Image 2023-11-16 at 10.02.45.jpeg
     title: |
       Happy Children's Day
-    publishedDate: 2023-11-23T18:30:00.000Z
+    description: >-
+      The children of today will make the India of tomorrow. The way we bring
+      them up will determine the future of the country. We at Glentree Academy
+      believe in broadening horizons and cultivating future leaders through
+      innovative teaching and learning approaches.
+    publishedDate: 2023-11-13T18:30:00.000Z
   - thumbnail: /images/WhatsApp Image 2023-11-10 at 12.25.41 PM (2).jpeg
     title: |
       Happy Diwali
