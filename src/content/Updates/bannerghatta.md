@@ -8,10 +8,19 @@ updates:
   - thumbnail: /images/Board.jpg
     title: Through the lens of Learning
     description: >-
-      The motto of Glentree Academy is “ Learning For Life”. The hallmark of the Glentree culture is to impart high-quality holistic education which has helped us in becoming one of the top schools in Sarjapur and Whitefield. We are going to follow the same principles at our new Bannerghatta campus also.
+      The motto of Glentree Academy is “ Learning For Life”. The hallmark of the
+      Glentree culture is to impart high-quality holistic education which has
+      helped us in becoming one of the top schools in Sarjapur and Whitefield.
+      We are going to follow the same principles at our new Bannerghatta campus
+      also.
     publishedDate: 2023-11-29T18:30:00.000Z
   - thumbnail: /images/WhatsApp Image 2023-11-23 at 15.33.21.jpeg
     title: Embarking on a New Journey at our latest campus
+    description: >-
+      Glentree Academy Bannerghatta, like Glentree Academy Whitefield and
+      Sarjapur, is being built on the same principle of Learning for Life and
+      holistic education that will help bring into the classrooms the same
+      energy and enthusiasm for education at Glentree Academy Bannerghatta also.
     publishedDate: 2023-11-26T18:30:00.000Z
     description: >-
       Glentree Academy Bannerghatta, like Glentree Academy Whitefield and Sarjapur, is being built on the same principle of Learning for Life and holistic education that will help bring into the classrooms the same energy and enthusiasm for education at Glentree Academy Bannerghatta also.
