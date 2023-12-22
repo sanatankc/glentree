@@ -142,10 +142,6 @@ updates:
       sections were told of the role and value of the mother in the life of
       every individual.
     publishedDate: 2023-05-11T18:30:00.000Z
-  - thumbnail: /images/gas-update5.jpeg
-    title: |
-      Plantation Drive
-    publishedDate: 2023-10-06T18:30:00.000Z
   - thumbnail: /images/gas-update7.jpeg
     title: |
       Van Mohtsav Special Assembly
