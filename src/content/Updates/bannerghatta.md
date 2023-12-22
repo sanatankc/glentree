@@ -27,6 +27,10 @@ updates:
     publishedDate: 2023-11-26T18:30:00.000Z
   - thumbnail: /images/WhatsApp Image 2023-11-09 at 12.01.44_efca9afc.jpg
     title: Pooja Vibes at our New Campus
+    description: >-
+      The school organized a pious 'Havan Pooja' to inaugurate the Glentree
+      Bannerghatta campus, a new addition to the Glentree journey. The whole
+      ceremony was performed with divine fervour and spirituality
     publishedDate: 2023-11-14T18:30:00.000Z
 ---
 
