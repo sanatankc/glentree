@@ -3,7 +3,10 @@ updates:
   - thumbnail: /images/WhatsApp Image 2023-11-23 at 15.37.16.jpeg
     title: 'Our School Story unveiled '
     description: >-
-      Glentree Academy hosts a pooja ceremony to inaugurate its new campus at Bannerghatta. Among other schools near Bannerghatta, Glentree Academy Bannerghatta mission is to be one of the top schools in Bannerghatta Road, Bangalore. Affiliated to CBSE, it offers pre-primary, Grade 1 to Grade 4.
+      Glentree Academy hosts a pooja ceremony to inaugurate its new campus at
+      Bannerghatta. Among other schools near Bannerghatta, Glentree Academy
+      Bannerghatta mission is to be one of the top schools in Bannerghatta Road,
+      Bangalore. Affiliated to CBSE, it offers pre-primary, Grade1 to Grade 4
     publishedDate: 2023-12-03T18:30:00.000Z
   - thumbnail: /images/Board.jpg
     title: Through the lens of Learning
@@ -22,12 +25,8 @@ updates:
       holistic education that will help bring into the classrooms the same
       energy and enthusiasm for education at Glentree Academy Bannerghatta also.
     publishedDate: 2023-11-26T18:30:00.000Z
-    description: >-
-      Glentree Academy Bannerghatta, like Glentree Academy Whitefield and Sarjapur, is being built on the same principle of Learning for Life and holistic education that will help bring into the classrooms the same energy and enthusiasm for education at Glentree Academy Bannerghatta also.
   - thumbnail: /images/WhatsApp Image 2023-11-09 at 12.01.44_efca9afc.jpg
     title: Pooja Vibes at our New Campus
     publishedDate: 2023-11-14T18:30:00.000Z
-    description: >-
-      Pooja vibe at the new campus of Glentree Academy Bannerghatta: The school organized a pious 'Havan Pooja' to inaugurate the Glentree Bannerghatta campus, a new addition to the Glentree journey. The whole ceremony was performed with divine fervour and spirituality
 ---
 
