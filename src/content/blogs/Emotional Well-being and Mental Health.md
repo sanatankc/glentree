@@ -22,12 +22,14 @@ blog: >
   health. If you google about the definition of mental health, it will define
   the term as the ability to cope with the stress and showcase their abilities
   in learning new skills in our life. In this course, the real challenge comes
-  up with the well-being of the emotional state of our mind. 
+  up with the well-being of the emotional state of our mind.
 
 
-  In today’s time, emotional well-being and good mental health refers to people
-  of all ages. But the rising amount of lack of good mental health is increasing
-  amongst one group of individuals – the youngsters or the students.
+  In today’s time, [emotional well-being and good mental
+  health](https://www.glentreeacademy.com/blogs/emotional-well-being-and-mental-health
+  "Emotional Wellbeing and Mental Health") refers to people of all ages. But the
+  rising amount of lack of good mental health is increasing amongst one group of
+  individuals – the youngsters or the students.
 
 
   ![girl got stressed and put her hand on forehead](</images/emotional well
@@ -41,7 +43,10 @@ blog: >
   over 60% of the girls and 40% of the boys feel tensed while appearing for
   examinations even if they are well-prepared. Moreover, the advent of mobile
   phones and the internet has created a sensation amongst the adolescents. This
-  has absorbed more time in spending digitally. \
+  has absorbed more time in spending digitally. 
+
+
+  \
 
   ![](</images/mental health-cbse schools in bangalore (1).jpg>)
 
@@ -51,7 +56,7 @@ blog: >
   attain a healthy lifestyle which is required for the steady growth of the
   individual. This can be only be possible through the joint ventures of the
   [school](https://www.glentreeacademy.com/ "Schools in Bangalore") and the
-  parents. The school can implement it through their curriculum. 
+  parents. The school can implement it through their curriculum.
 
 
   Let us have an understanding of the role played by the schools in upgrading
@@ -77,7 +82,7 @@ blog: >
 
 
   ![](</images/emotional wellbeing and mental health-best schools in south
-  bangalore (1).jpg>) 
+  bangalore (1).jpg>)
 
 
   Furthermore, the incorporated activities in the daily lessons which serve the
