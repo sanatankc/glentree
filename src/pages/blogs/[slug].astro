@@ -98,6 +98,8 @@ const blogContentHTML = marked.parse(data.blog)
           [&>*]:w-full
           [&>p>img]:w-full
           [&>img]:w-full
+          [&_a]:text-blue-700
+          [&_a]:underline
           ' 
         set:html={blogContentHTML}
         >
