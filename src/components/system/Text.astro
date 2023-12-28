@@ -1,7 +1,7 @@
 ---
 
 interface Props {
-  type: 'h1' | 'h2' | 'h3' | 'h4' | 'base' | 'lg' | 'regular' | 'sm' | 'xs' | 'subtitle'
+  type: 'h1' | 'h2' | 'h3' | 'h4' | 'base' | 'lg' | 'regular' | 'sm' | 'xs' | 'subtitle' | 'h1Sm' | 'h1xs'
   class?: string,
   style?: {}
 }
@@ -22,6 +22,19 @@ const { type = 'base', class: className, style = {}, ...props } = Astro.props
     <slot />
   </h1>
 )}
+{type === 'h1Sm' && (
+  <h1
+    class:list={[
+      "font-display text-5xl tracking-tight max-md:text-[2rem]", 
+      className
+    ]}
+    style={style}
+    {...props}
+
+  >
+    <slot />
+  </h1>
+)}
 {type === 'h2' && (
   <h2
     class:list={[
@@ -34,6 +47,19 @@ const { type = 'base', class: className, style = {}, ...props } = Astro.props
   >
     <slot />
   </h2>
+)}
+{type === 'h1xs' && (
+  <h1
+    class:list={[
+      "text-[2.5rem] tracking-tight font-display max-md:text-2xl", 
+      className
+    ]}
+    style={style}
+    {...props}
+
+  >
+    <slot />
+  </h1>
 )}
 {type === 'h3' && (
   <h3
