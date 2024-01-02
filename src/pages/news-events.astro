@@ -4,6 +4,7 @@ import TopNavigationBar from "../components/TopNavigationBar.astro";
 import Text from "../components/system/Text.astro";
 import Select from "../components/system/Select.astro";
 import { Image } from 'astro:assets';
+import decorationSVG from '../images/decoration.svg'
 
 import Footer from "../components/landingPage/Footer.astro";
 import "../global.css";
@@ -49,8 +50,6 @@ let allUpdates = updates
 const [
   firstPost,
   secondPost,
-  thirdPost,
-  fourthPost,
   ...posts
 ] = allUpdates
 ---
@@ -61,17 +60,18 @@ const [
   <main class="flex flex-col relative text-black items-center">
     <TopNavigationBar />
     <div class="h-[95.44px] w-full bg-black"></div>
-    <div class="w-full p-[60px] max-md:p-5" style={{
+    <div class="w-full p-[60px] max-md:p-5 relative" style={{
       background: 'linear-gradient(249deg, #FBFFF6 0%, #F6FFED 0%, #FFFAF6 100%)'
     }}>
+      <Image class="absolute w-[230px] h-[200px] top-0 right-0 max-md:w-[105px] max-md:h-[105px]" src={decorationSVG} alt="decoration" />
       <div class="flex flex-row max-md:flex-col w-full justify-between gap-[60px]">
         <div class="flex-1">
-          <div class="w-full relative">
-            <Text type="h1Sm">News & <span class="text-accent2">Updates</span></Text>
-            <Text type="base" class="mt-3">Stay up to date with the happenings at our school.</Text>
-            <Text type="subtitle" class="text-[#121212]/80 mt-8">LATEST NEWS</Text>
+          <div class="pt-4" />
+          <div class="w-full relative text-center">
+            <Text type="h1Sm">News & <span class="text-accent2">Events</span></Text>
+            <Text type="base" class="mt-3 font-[600]">Stay up to date with the happenings at our school.</Text>
           </div>
-          <div class="pt-4"></div>
+          <div class="pt-12"></div>
           <div class="flex flex-row max-md:flex-col justify-between gap-12">
             <UpdatesCard
               video={firstPost.videoLink}
@@ -93,7 +93,7 @@ const [
             />
           </div>
         </div>
-        <div>
+        <!-- <div>
             <UpdatesCard
               video={thirdPost.videoLink}
               title={thirdPost.title},
@@ -113,7 +113,7 @@ const [
               alt={fourthPost.alt}
               type="featured-sm"
             />
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -143,7 +143,7 @@ const [
       </div> -->
       <div class="pt-[48px]"></div>
 
-      <div class="flex flex-row gap-x-[90px] gap-y-[46px] flex-wrap px-[130px] max-md:px-[20px]">
+      <div class="flex flex-row gap-x-[60px] gap-y-[46px] flex-wrap max-md:px-[20px] w-full justify-center">
         {posts.map(post => (
           <UpdatesCard
             video={post.videoLink}

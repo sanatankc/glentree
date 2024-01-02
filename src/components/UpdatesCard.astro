@@ -19,9 +19,8 @@ const date = publishedDate.getDate().toString().padStart(2, '0');
 ---
 <a
   class:list={[
-    type === 'featured' && 'w-[450px] max-md:w-full',
-    type === 'featured-sm' && 'w-[327px] max-md:w-full',
-    type === 'normal' && 'w-[320px] max-md:w-full',
+    type === 'featured' && 'flex-1 max-md:w-full rounded-xl  bg-white overflow-hidden border-[2px] border-[#ECECEC]',
+    type === 'normal' && 'w-[26vw] max-md:w-full',
     "text-left",
     className
   ]}
@@ -34,10 +33,9 @@ const date = publishedDate.getDate().toString().padStart(2, '0');
       src={thumbnail}
       alt={alt || title}
       class:list={[
-        type === 'featured' && 'w-[450px] h-[450px] max-md:h-[230px] max-md:w-full',
-        type === 'featured-sm' && 'w-[327px] h-[230px] max-md:h-[230px] max-md:w-full',
-        type === 'normal' && 'w-[325px] h-[325px] max-md:h-[230px] max-md:w-full',
-        "rounded-md border-[2px] border-accent3 object-cover"
+        type === 'featured' && 'w-full h-[550px] max-md:h-[230px] max-md:w-full',
+        type === 'normal' && 'w-full border-[2px] border-[rgba(192,124,71,1)] rounded-md h-[325px] max-md:h-[230px] max-md:w-full',
+        "object-cover"
       ]}
       width={450}
       height={450}
@@ -52,14 +50,14 @@ const date = publishedDate.getDate().toString().padStart(2, '0');
       height={100}
     />}
   </div>
-  <div class="flex flex-row mt-6">
-    <div class="flex flex-col items-center mr-3">
-      <Text type="subtitle" class="text-accent3">{date}</Text>
-      <Text type="subtitle" class="text-accent3">{monthNameShort}</Text>
-    </div>
+  <div class:list={[
+    type === 'featured' && 'p-6',
+    "flex flex-row pt-6"
+  ]}>
     <div>
-      <Text type="h2" class="text-[20px] max-md:!text-[18px] mb-2">{title}</Text>
-      <Text type="base" class="text-[18px] max-md:!text-[16px]">{description || 'Discover dynamic student clubs for some personalised ...'}</Text>
+      <Text type="subtitle" class="text-accent3">{date}{' '} {monthNameShort}</Text>
+      <Text type="h4" class="mb-2 mt-4">{title}</Text>
+      <Text type="base" class="text-[18px] max-md:!text-[16px] font-[400]">{description || 'Discover dynamic student clubs for some personalised ...'}</Text>
     </div>
   </div>
 </a>
