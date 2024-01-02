@@ -247,6 +247,17 @@ const selectedCampus = campuses[campusName] || null
 <script>
   import tippy from 'tippy.js';
 
+  const convertToSHA256 = async (string: string) => {
+    const encoder = new TextEncoder();
+    const data = encoder.encode(string);
+    return crypto.subtle.digest('SHA-256', data).then((hash) => {
+      const hexString = Array.from(new Uint8Array(hash))
+        .map((b) => b.toString(16).padStart(2, '0'))
+        .join('');
+      return hexString;
+    });
+  };
+
   // by default hide grades
   const selectGrade1Container = document.querySelector('[data-select-parent-id="selectGrade1"]');
   const selectGrade2Container = document.querySelector('[data-select-parent-id="selectGrade2"]');
@@ -346,12 +357,15 @@ const selectedCampus = campuses[campusName] || null
           ...params,
           
         }
+        const email = await convertToSHA256(formData.get('email'))
+        const phone = await convertToSHA256(formData.get('phone'))
+        const parentName = await convertToSHA256(formData.get('parentName'))
         fbq('track', 'CompleteRegistration', {
           value: 0.00,
           currency: 'INR',
-          em: formData.get('email'),
-          ph: formData.get('phone'),
-          fn: formData.get('parentName'),
+          em: email,
+          ph: phone,
+          fn: parentName,
         })
         window.gtag_report_conversion()
         document.getElementById('register-form-container-desktop').classList.add('form-completed')
