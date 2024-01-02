@@ -247,7 +247,7 @@ const selectedCampus = campuses[campusName] || null
 <script>
   import tippy from 'tippy.js';
 
-  const convertToSHA256 = async (string: string) => {
+  const convertToSHA256 = (string: string) => {
     const encoder = new TextEncoder();
     const data = encoder.encode(string);
     return crypto.subtle.digest('SHA-256', data).then((hash) => {
