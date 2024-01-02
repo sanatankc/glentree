@@ -1,7 +1,7 @@
 ---
 
 interface Props {
-  type: 'h1' | 'h2' | 'h3' | 'h4' | 'base' | 'lg' | 'regular' | 'sm' | 'xs' | 'subtitle' | 'h1Sm' | 'h1xs'
+  type: 'h1' | 'h2' | 'h3' | 'h4' | 'base' | 'lg' | 'regular' | 'sm' | 'xs' | 'subtitle' | 'h1Sm' | 'h1xs' | '2xs'
   class?: string,
   style?: {}
 }
@@ -146,6 +146,18 @@ const { type = 'base', class: className, style = {}, ...props } = Astro.props
   <div
     class:list={[
       "text-base", 
+      className
+    ]}
+    style={style}
+    {...props}
+  >
+    <slot />
+  </div>
+)}
+{type === '2xs' && (
+  <div
+    class:list={[
+      "text-[16px]", 
       className
     ]}
     style={style}

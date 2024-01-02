@@ -95,6 +95,8 @@ const blogCollection = defineCollection({
   type: 'content',
   schema: () => z.object({
     title: z.string(),
+    titleTag: z.string(),
+    metaDescription: z.string(),
     category: z.string(),
     thumbnail: z.string(),
     caption: z.string(),
