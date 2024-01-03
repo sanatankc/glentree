@@ -27,7 +27,7 @@ heroImages:
     image_mobile: /images/slides/2-mb.webp
     position: top
   - image_desktop: /images/schools in bangalore.JPG
-    image_mobile: /images/slides/1-mb.webp
+    image_mobile: /images/schools in bangalore.JPG
     position: top
 testimonials:
   - testimonial_picture: /images/testimonial2.png
