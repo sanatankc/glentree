@@ -2,8 +2,8 @@
 title: |
   Nurturing Lifelong Learner
 heroImages:
-  - image_desktop: /images/best schools in bangalore.JPG
-    image_mobile: /images/best schools in bangalore.JPG
+  - image_desktop: /images/best-schools-in-bangalore.JPG
+    image_mobile: /images/best-schools-in-bangalore.JPG
     position: top
   - image_desktop: /images/best cbse schools in bangalore.JPG
     image_mobile: /images/best cbse schools in bangalore.JPG
