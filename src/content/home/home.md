@@ -27,7 +27,7 @@ heroImages:
     image_mobile: /images/slides/2-mb.webp
     position: top
   - image_desktop: /images/best-cbse-schools-in-bangalore-1.jpg
-    image_mobile: /images/mobile view-cbse-schools-in-bangalore.jpg
+    image_mobile: /images/best-cbse-schools-in-bangalore-1.jpg
     position: top
 testimonials:
   - testimonial_picture: /images/testimonial2.png
