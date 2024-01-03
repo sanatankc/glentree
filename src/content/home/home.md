@@ -8,8 +8,8 @@ heroImages:
   - image_desktop: /images/cbse-schools-in-bangalore-1.jpg
     image_mobile: /images/mobile-view-best-cbse-schools-in-bangalore.jpg
     position: top
-  - image_desktop: /images/best-schools-in-bangalore-1.jpg
-    image_mobile: /images/mobile-view-best-schools-in-bangalore.jpg
+  - image_desktop: /images/mobile-view-cbse-schools-in-bangalore-3.jpg
+    image_mobile: /images/best-schools-in-bangalore-3.jpg
     position: top
   - image_desktop: /images/slides/6.webp
     image_mobile: /images/6.7919d22c-_1_.webp
