@@ -6,7 +6,7 @@ updates:
       Glentree Academy hosts a pooja ceremony to inaugurate its new campus at
       Bannerghatta. Among other schools near Bannerghatta, Glentree Academy
       Bannerghatta mission is to be one of the top schools in Bannerghatta Road,
-      Bangalore. Affiliated to CBSE, it offers pre-primary, Grade1 to Grade 4
+      Bangalore. It offers pre-primary, Grade1 to Grade 4
     publishedDate: 2023-12-03T18:30:00.000Z
   - thumbnail: /images/Board.jpg
     title: Through the lens of Learning

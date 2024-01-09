@@ -6,6 +6,71 @@ description: A sprawling green campus within the heart of the city.
 virtualCampusLink: >-
   https://www.google.com/maps/@12.9655167,77.7350299,3a,75y,331.03h,78.94t/data=!3m6!1e1!3m4!1sAF1QipP0Xik14EKwv1ca-GomAFI6LTFW--HUlNO-SRCR!2e10!7i10676!8i5338?hl=en-US&entry=ttu
 affiliationNo: '830349'
+aroundTheCampus:
+  description: >-
+    Explore our whitefield campus, designed to enhance the learning experience
+    with modern facilities and resources.
+  bulletPoints:
+    - bulletPoint: Earth Lab
+    - bulletPoint: High-Tech Computer Lab
+    - bulletPoint: Premium Sports Facilities
+    - bulletPoint: Fun-Secure Play Area
+  gallery:
+    - image: /images/gaw-facilities/library2.webp
+      altTag: Library
+      title: Library
+      description: >-
+        Explore our vast library, a treasure trove of knowledge with a diverse
+        collection of books and journals, to fuel the academic journey.
+    - image: /images/gaw-facilities/sciencelab.webp
+      altTag: Composite Science Laboratory
+      title: Composite Science Laboratory
+      description: >-
+        Unlock the wonders of science through hands-on experiments in our
+        state-of-the-art lab, fostering a deep understanding of the natural
+        world.
+    - image: /images/gaw-facilities/computerlab.webp
+      altTag: Computer Lab
+      title: Computer Lab
+      description: >-
+        Embark on a digital voyage in our cutting-edge computer lab, where
+        students gain practical skills and knowledge in technology and computer
+        science.
+    - image: /images/gaw-facilities/earthlab.webp
+      altTag: Earth Lab
+      title: Earth Lab
+      description: >-
+        Connect with the environment and explore our Earth Lab, where the
+        students engage in environmental studies and learn about sustainability
+        and ecology.
+    - image: /images/gaw-facilities/auditorium.webp
+      altTag: Auditorium
+      title: Auditorium
+      description: >-
+        Witness the magic of the stage in our spacious auditorium, a hub for
+        cultural events, presentations, and performances that showcase our
+        students' talents.
+    - image: /images/gaw-facilities/campus.webp
+      altTag: CCTV Secured Campus
+      title: CCTV Secured Campus
+      description: >-
+        Safety is paramount to us. Our CCTV-secured campus ensures a secure
+        environment, providing peace of mind to both students and parents.
+    - image: /images/gaw-facilities/discoverroom.webp
+      altTag: Counselling Room
+      title: Counselling Room
+      description: >-
+        Find a haven for emotional and psychological support in our confidential
+        counselling room, where trained professionals are ready to listen and
+        guide you through life's challenges.
+    - image: /images/gaw-facilities/playground.webp
+      altTag: Playground
+      title: Playground
+      description: >-
+        Sports and Recreation – Glentree offers a diverse range of sports and
+        recreational activities, including chess, badminton, table tennis,
+        football, basketball, volleyball, yoga, taekwondo, and fostering
+        physical fitness and a spirit of teamwork among our students.
 showcase:
   - image: /images/award-indias-top-cbse-schools-in-whitefield.png
     title: Award - India's Top CBSE Schools in Whitefield
@@ -49,51 +114,15 @@ showcase:
     title: Science Experiment
   - image: /images/gaw-update18.jpeg
     title: Unveiling of the Earth Lab
-aroundTheCampus:
-  description: "Explore our whitefield campus, designed to enhance the learning experience with modern facilities and resources."
-  bulletPoints:
-    - bulletPoint: "Earth Lab"
-    - bulletPoint: "High-Tech Computer Lab"
-    - bulletPoint: "Premium Sports Facilities"
-    - bulletPoint: "Fun-Secure Play Area"
-  gallery:
-    - image: "/images/gaw-facilities/library2.webp"
-      altTag: "Library"
-      title: "Library"
-      description: "Explore our vast library, a treasure trove of knowledge with a diverse collection of books and journals, to fuel the academic journey."
-    - image: "/images/gaw-facilities/sciencelab.webp"
-      altTag: "Composite Science Laboratory"
-      title: "Composite Science Laboratory"
-      description: "Unlock the wonders of science through hands-on experiments in our state-of-the-art lab, fostering a deep understanding of the natural world."
-    - image: "/images/gaw-facilities/computerlab.webp"
-      altTag: "Computer Lab"
-      title: "Computer Lab"
-      description: "Embark on a digital voyage in our cutting-edge computer lab, where students gain practical skills and knowledge in technology and computer science."
-    - image: "/images/gaw-facilities/earthlab.webp"
-      altTag: "Earth Lab"
-      title: "Earth Lab"
-      description: "Connect with the environment and explore our Earth Lab, where the students engage in environmental studies and learn about sustainability and ecology."
-    - image: "/images/gaw-facilities/auditorium.webp"
-      altTag: "Auditorium"
-      title: "Auditorium"
-      description: "Witness the magic of the stage in our spacious auditorium, a hub for cultural events, presentations, and performances that showcase our students' talents."
-    - image: "/images/gaw-facilities/campus.webp"
-      altTag: "CCTV Secured Campus"
-      title: "CCTV Secured Campus"
-      description: "Safety is paramount to us. Our CCTV-secured campus ensures a secure environment, providing peace of mind to both students and parents."
-    - image: "/images/gaw-facilities/discoverroom.webp"
-      altTag: "Counselling Room"
-      title: "Counselling Room"
-      description: "Find a haven for emotional and psychological support in our confidential counselling room, where trained professionals are ready to listen and guide you through life's challenges."
-    - image: "/images/gaw-facilities/playground.webp"
-      altTag: "Playground"
-      title: "Playground"
-      description: "Sports and Recreation – Glentree offers a diverse range of sports and recreational activities, including chess, badminton, table tennis, football, basketball, volleyball, yoga, taekwondo, and fostering physical fitness and a spirit of teamwork among our students."
 contactUs:
-  phoneNo: '+91 7899738130'
-  workingHours: 'Monday to Saturday - 8:00 AM to 4:00 PM'
-  address: 'Nallurhalli Rd, Palm Meadows, Nallurhalli, Whitefield, Bengaluru, Karnataka 560066'
+  phoneNo: +91 7899738130
   email: admission.gaw@glentreeacademy.com
-  mapEmbedLink: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyAIyVF44QhoXfwwKHLd1h3N49cQTHS0Yvw&q=Whitefield Glentree Academy, Whitefield, Bengaluru'
+  mapEmbedLink: >-
+    https://www.google.com/maps/embed/v1/place?key=AIzaSyAIyVF44QhoXfwwKHLd1h3N49cQTHS0Yvw&q=Whitefield
+    Glentree Academy, Whitefield, Bengaluru
+  address: >-
+    Nallurhalli Rd, Palm Meadows, Nallurhalli, Whitefield, Bengaluru, Karnataka
+    560066
+  workingHours: 'Monday to Saturday - 8:00 AM to 4:00 PM'
 ---
 
