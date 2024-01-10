@@ -1,4 +1,6 @@
 ---
+titleTag: Glentree Clubs | Top CBSE Schools in Bangalore | Glentree Academy School
+metaDescription: Glentree Academy is one of the schools with best clubs in Sarjapur Road, Bangalore and  is also one of the schools with best clubs in Bannerghatta Road, Bangalore. Admissions 2024-25
 clubs:
   - title: "Debate & Quizzing Club"
     description: "Students harness their persuasive prowess and broaden their knowledge horizons in our dynamic Debate and Quizzing Club. Our club aims at amplifying their oratory skills, dive into global affairs, and ignite competitive spirit."

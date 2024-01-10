@@ -12,6 +12,8 @@ const campusCollection = defineCollection({
       })
     ).optional(),
     title: z.string().optional(),
+    titleTag: z.string().optional(),
+    metaDescription: z.string().optional(),
     description: z.string().optional(),
     bannerBg: z.string().optional(),
     virtualCampusLink: z.string().optional(),
@@ -48,6 +50,8 @@ const homeCollection = defineCollection({
   type: 'content', 
   schema: () => z.object({
     title: z.string().optional(),
+    titleTag: z.string().optional(),
+    metaDescription: z.string().optional(),
     heroImages: z.array(
       z.object({
         image_desktop: z.string().optional(),
@@ -86,7 +90,8 @@ const homeCollection = defineCollection({
 const disclosureCollection = defineCollection({
   type: 'content',
   schema: () => z.object({
-    title: z.string(),
+    titleTag: z.string().optional(),
+    metaDescription: z.string().optional(),
     disclosure: z.any(),
   }),
 });
@@ -107,13 +112,17 @@ const blogCollection = defineCollection({
 const updateCollection = defineCollection({
   type: 'content',
   schema: () => z.object({
-    thumbnail: z.string(),
-    title: z.string(),
-    description: z.string(),
-    publishedDate: z.date(),
-    videoLink: z.string(),
-    alt: z.string(),
-  }),
+    titleTag: z.string(),
+    metaDescription: z.string(),
+    updates: z.object({
+      thumbnail: z.string(),
+      title: z.string(),
+      description: z.string(),
+      publishedDate: z.date(),
+      videoLink: z.string(),
+      alt: z.string(),
+    }).array(),
+  })
 })
 
 const scholarshipsCollection = defineCollection({
@@ -121,6 +130,8 @@ const scholarshipsCollection = defineCollection({
   schema: () => z.object({
     sectionTitle: z.string(),
     sectionDescription: z.string(),
+    titleTag: z.string(),
+    metaDescription: z.string(),
     scholarships: z.array(
       z.object({
         title: z.array(z.object({
@@ -139,6 +150,8 @@ const scholarshipsCollection = defineCollection({
 const curriculumCollection = defineCollection({
   type: 'content',
   schema: () => z.object({
+    titleTag: z.string(),
+    metaDescription: z.string(),
     academics: z.array(
       z.object({
         title: z.string(),
@@ -159,6 +172,8 @@ const curriculumCollection = defineCollection({
 const afterschoolCollection = defineCollection({
   type: 'content',
   schema: () => z.object({
+    titleTag: z.string(),
+    metaDescription: z.string(),
     afterschool: z.array(
       z.object({
         title: z.string(),
@@ -174,6 +189,8 @@ const afterschoolCollection = defineCollection({
 const clubsCollection = defineCollection({
   type: 'content',
   schema: () => z.object({
+    titleTag: z.string(),
+    metaDescription: z.string(),
     clubs: z.array(
       z.object({
         title: z.string(),
@@ -188,6 +205,8 @@ const clubsCollection = defineCollection({
 const coscholasticsCollection = defineCollection({
   type: 'content',
   schema: () => z.object({
+    titleTag: z.string(),
+    metaDescription: z.string(),
     coscholastics: z.array(
       z.object({
         title: z.string(),
@@ -203,6 +222,8 @@ const coscholasticsCollection = defineCollection({
 const admissionsCollection = defineCollection({
   type: 'content',
   schema: () => z.object({
+    titleTag: z.string(),
+    metaDescription: z.string(),
     admissionProcess: z.array(
       z.object({
         title: z.string(),

@@ -1,6 +1,8 @@
 ---
 title: Bannerghatta
 description: Bannerghatta
+titleTag: Bannerghatta Campus | Best CBSE School in Bannerghatta Road, Bangalore | Glentree Academy, Bannerghatta
+metaDescription: Glentree Academy is opening a new branch in Bannerghatta Road, we are on the mission to make it one of the best schools in Bannerghatta Road, Bangalore. Glentree Academy Bannerghatta Road is going to be a new addition amongst best schools near Bannerghatta Road Bangalore. Admissions open in Bannerghatta branch for Nursery to Grade 11. Admissions Open For 2024-25.
 virtualCampusLink: test
 affiliationNo: test
 showcase:

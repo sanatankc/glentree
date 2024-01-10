@@ -29,11 +29,14 @@ import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
 const { data } = await getEntry('afterschool', 'afterschool') as CollectionEntry<'afterschool'>
 
 const afterSchool = data?.afterschool || []
+
+const titleTag = data?.titleTag
+const metaDescription = data?.metaDescription
 ---
 
 <Layout 
-  title="After School acitivities | Top CBSE Schools in Bangalore | Glentree Academy School"
-  description="Glentree academy believes in holistic development of students. After school activities at Glentree Academy Sarjapur Road, Bangalore | Glentree Academy Bannerghatta Road, Bangalore | Glentree Academy Whitefield, Bangalore helps students in their all round development."
+  title={titleTag}
+  description={metaDescription}
 >
   <main class="flex flex-col h-screen w-screen relative bg-white">
     <div

@@ -3,6 +3,8 @@ name: Dummy
 bannerBg: /images/gaw-school.jpg
 title: Glentree Academy - Whitefield
 description: A sprawling green campus within the heart of the city.
+titleTag: Whitefield Campus | Best CBSE School in whitefield | Glentree Academy, Whitefield
+metaDescription: Glentree Academy Whitefield is one of the best CBSE schools in whitefield. Admissions open in Whitefield branch for Nursery to Grade 11. Admissions Open For 2024-25.
 virtualCampusLink: >-
   https://www.google.com/maps/@12.9655167,77.7350299,3a,75y,331.03h,78.94t/data=!3m6!1e1!3m4!1sAF1QipP0Xik14EKwv1ca-GomAFI6LTFW--HUlNO-SRCR!2e10!7i10676!8i5338?hl=en-US&entry=ttu
 affiliationNo: '830349'

@@ -1,4 +1,6 @@
 ---
+titleTag: Admissions Open 2024-25 | Best CBSE School in Bangalore | Glentree Academy School
+metaDescription: Are you Looking For best CBSE Schools in Sarjapur Road, Bangalore or best CBSE Schools in Whitefield, Bangalore or  best CBSE Schools in Bannerghatta Road, Bangalore? Glentree Academy is a school near you. Admissions Are Open for Nursery to Grade 11, 2024-25
 admissionProcess:
   - title: Enquire
     description: >

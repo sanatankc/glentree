@@ -1,4 +1,5 @@
 ---
+titleTag: Mandatory Public Disclosure | Best CBSE School in Bangalore | Glentree Academy School
 disclosure:
   - title: 'Declaration Letter to CBSE for Deficiencies - Compliance Report    '
     disclosure: >

@@ -31,6 +31,16 @@ export default defineConfig({
         }),
         fields: [
           {
+            type: 'string',
+            name: 'titleTag',
+            label: 'Title Tag',
+          },
+          {
+            type: 'string',
+            name: 'metaDescription',
+            label: 'Meta Description',
+          },
+          {
             type: "rich-text",
             name: "title",
             label: "Title",
@@ -180,6 +190,16 @@ export default defineConfig({
         path: 'src/content/curriculum',
         fields: [
           {
+            type: 'string',
+            name: 'titleTag',
+            label: 'Title Tag',
+          },
+          {
+            type: 'string',
+            name: 'metaDescription',
+            label: 'Description Tag',
+          },
+          {
             type: 'object',
             list: true,
             label: 'Academics',
@@ -243,6 +263,16 @@ export default defineConfig({
         path: 'src/content/clubs',
         fields: [
           {
+            type: 'string',
+            name: 'titleTag',
+            label: 'Title Tag',
+          },
+          {
+            type: 'string',
+            name: 'metaDescription',
+            label: 'Meta Description',
+          },
+          {
             type: 'object',
             list: true,
             label: 'Clubs',
@@ -282,6 +312,16 @@ export default defineConfig({
         label: 'Co-scholastics',
         path: 'src/content/coscholastics',
         fields: [
+          {
+            type: 'string',
+            name: 'titleTag',
+            label: 'Title Tag',
+          },
+          {
+            type: 'string',
+            name: 'metaDescription',
+            label: 'Meta Description',
+          },
           {
             type: 'object',
             list: true,
@@ -323,6 +363,16 @@ export default defineConfig({
         path: 'src/content/afterschool',
         fields: [
           {
+            type: 'string',
+            name: 'titleTag',
+            label: 'Title Tag',
+          },
+          {
+            type: 'string',
+            name: 'metaDescription',
+            label: 'Meta Description',
+          },
+          {
             type: 'object',
             list: true,
             label: 'AfterSchool Programs',
@@ -362,6 +412,16 @@ export default defineConfig({
         label: "Campus",
         path: "src/content/campus",
         fields: [
+          {
+            type: 'string',
+            name: 'titleTag',
+            label: 'Title Tag',
+          },
+          {
+            type: 'string',
+            name: 'metaDescription',
+            label: 'Meta Description',
+          },
           {
             type: 'object',
             name: 'heroImages',
@@ -528,6 +588,16 @@ export default defineConfig({
         path: 'src/content/admissions',
         fields: [
           {
+            type: 'string',
+            name: 'titleTag',
+            label: 'Title Tag',
+          },
+          {
+            type: 'string',
+            name: 'metaDescription',
+            label: 'Meta Description',
+          },
+          {
             type: 'object',
             list: true,
             label: 'Admission Process',
@@ -586,6 +656,16 @@ export default defineConfig({
         path: "src/content/mandatoryPublicDisclosure",
         fields: [
           {
+            type: 'string',
+            name: 'titleTag',
+            label: 'Title Tag',
+          },
+          {
+            type: 'string',
+            name: 'metaDescription',
+            label: 'Meta Description',
+          },
+          {
             type: "object",
             list: true,
             label: "Disclosure", 
@@ -622,6 +702,16 @@ export default defineConfig({
         label: "Updates",
         path: "src/content/Updates",
         fields: [
+          // {
+          //   type: 'string',
+          //   name: 'titleTag',
+          //   label: 'Title Tag',
+          // },
+          // {
+          //   type: 'string',
+          //   name: 'metaDescription',
+          //   label: 'Meta Description',
+          // },
           {
             type: "object",
             list: true,
@@ -648,6 +738,16 @@ export default defineConfig({
         label: 'Scholarships',
         path: 'src/content/scholarships',
         fields: [
+          // {
+          //   type: 'string',
+          //   name: 'titleTag',
+          //   label: 'Title Tag',
+          // },
+          // {
+          //   type: 'string',
+          //   name: 'metaDescription',
+          //   label: 'Meta Description',
+          // },
           {
             type: 'string',
             name: 'sectionTitle',

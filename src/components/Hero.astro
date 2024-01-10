@@ -1,4 +1,5 @@
 ---
+import Button from "./system/Button.astro";
 import Text from "./system/Text.astro";
 import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
 const { data } = await getEntry('home', 'home') as CollectionEntry<'home'>
@@ -69,11 +70,21 @@ const slides = data.heroImages.map(({ image_desktop, image_mobile, position = 't
     }
     <div class="relative z-50 flex flex-col h-full">
       <div
-        class="h-full absolute bottom-0 left-0 flex w-full items-end max-md:px-6 max-md:py-2 slideshow-overlay px-16 py-3"
+        class="h-full absolute bottom-0 left-0 flex max-md:flex-col max-md:justify-end max-md:items-start w-full items-end max-md:px-6 max-md:py-2 slideshow-overlay px-16 py-3"
       >
         <Text type="h1xs" class="text-center max-md:text-left pb-0">
           {title}
         </Text>
+        <div class="max-md:pt-3 pt-0"></div>
+        <a
+          href="https://admissions.glentreeacademy.com"
+          target="_blank"
+          class="daisy daisy-fixed daisy-3 max-md:block hidden"
+        >
+          <Button>Apply Now</Button>
+        </a>
+        <div class="max-md:pt-3 pt-0"></div>
+
       </div>
     </div>
   </div>
@@ -112,8 +123,8 @@ const slides = data.heroImages.map(({ image_desktop, image_mobile, position = 't
   @media screen and (max-width: 768px) {
     .slideshow-overlay {
       background: linear-gradient(
-        16deg,
-        rgb(0 0 0 / 90%) 5%,
+        13deg,
+        rgb(0 0 0 / 60%) 5%,
         rgba(0, 0, 0, 0) 100%
       );
     }

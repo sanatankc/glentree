@@ -29,12 +29,15 @@ import Constrain from '../components/system/Constrain.astro';
 import { Image } from 'astro:assets';
 import AcademicsBox from '../components/AcademicsBox.astro';
 
+import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
+const { data } = await getEntry('curriculum', 'curriculum') as CollectionEntry<'curriculum'>
+
           
 ---
 
 <Layout 
-  title="CBSE Curriculum | Top CBSE schools near Sarjapur Road, Bangalore"
-  description="Learning For Life curriculum based on CBSE guidelines and the NCERT. Best curriculum among top CBSE schools near Sarjapur Road, Bangalore and top CBSE schools near Bannerghatta Road, Bangalore"
+  title={data.titleTag}
+  description={data.metaDescription}
 >
   <main class="flex flex-col h-screen w-screen relative">
     <div 

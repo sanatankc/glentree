@@ -21,6 +21,7 @@ import Text from '../components/system/Text.astro';
 import YoutubeEmbed from '../components/YoutubeEmbed.astro';
 import psjaAward from '../images/psjaAward.png'
 import meritAwards from '../images/meritAwards.png'
+import meritAwardsNew from '../images/meritAwardsNew.png'
 import VittalFounderDesk from '../components/vittalFounderDesk.astro';
 import { Image } from 'astro:assets';
 import Constrain from '../components/system/Constrain.astro';
@@ -28,10 +29,15 @@ import GlentreeCareer from '../components/GlentreerCareer.astro';
 import AdmissionMarquee from '../components/campus/admissionMarquee.astro';
 import Faqs from '../components/faqs.astro';
 
+import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
 
+const { data } = await getEntry('home', 'home') as CollectionEntry<'home'>
 ---
 
-<Layout title="Home | Best CBSE School in Bangalore | Glentree Academy School">
+<Layout 
+  title={data.titleTag}
+  description={data.metaDescription}
+>
   <main class="flex flex-col h-screen max-md:h-auto w-screen relative bg-white">
     <div 
       class="flex-1 main-container max-md:h-auto h-screen w-screen"
@@ -49,7 +55,7 @@ import Faqs from '../components/faqs.astro';
     </div>
 
     <div class="flex flex-row h-36 w-full mt-auto max-md:py-8 max-md:px-6 max-md:pb-1 items-center justify-around flex-wrap max-md:flex-col max-md:h-auto max-md:items-start relative z-20" style={{ background: '#030303' }}>
-      <div class="flex flex-row max-md:mb-5 daisy daisy-y-1 daisy-4">
+      <!-- <div class="flex flex-row max-md:mb-5 daisy daisy-y-1 daisy-4">
         <Image src={psjaAward} alt="PSJA Award" class="h-12 w-auto" />
         <div class="ml-4">
           <Text type='sm'>
@@ -73,8 +79,21 @@ import Faqs from '../components/faqs.astro';
             India’s School Merit Award
           </Text>
         </div>
-      </div>
+      </div> -->
 
+      <div class="flex flex-row max-md:mb-5 daisy daisy-y-1 daisy-6">
+        <Image src={meritAwardsNew} alt="PSJA Award" class="h-12 w-auto grayscale" width={150} />
+        <div class="ml-4">
+          <Text type='sm'>
+            Rank 1 in <span class="text-[#56cf8a] font-extrabold">Holistic Education</span>
+          </Text>
+          
+          <Text type='sm' class='text-gray-600 max-md:text-sm'>
+            India School Merit Awards 2023-24
+          </Text>
+        </div>
+      </div>
+      
       <div class="flex flex-row max-md:mb-5 daisy daisy-y-1 daisy-6">
         <Image src={psjaAward} alt="PSJA Award" class="h-12 w-auto" />
         <div class="ml-4">
@@ -84,6 +103,19 @@ import Faqs from '../components/faqs.astro';
           
           <Text type='sm' class='text-gray-600 max-md:text-sm'>
             India’s TOP PSJA 2022
+          </Text>
+        </div>
+      </div>
+
+      <div class="flex flex-row max-md:mb-5 daisy daisy-y-1 daisy-6">
+        <Image src={meritAwardsNew} alt="PSJA Award" class="h-12 w-auto grayscale" width={150} />
+        <div class="ml-4">
+          <Text type='sm'>
+            Rank 1 in <span class="text-[#56cf8a] font-extrabold">Innovative Teaching</span>
+          </Text>
+          
+          <Text type='sm' class='text-gray-600 max-md:text-sm'>
+            India School Merit Awards 2023-24
           </Text>
         </div>
       </div>
