@@ -112,8 +112,8 @@ const blogCollection = defineCollection({
 const updateCollection = defineCollection({
   type: 'content',
   schema: () => z.object({
-    titleTag: z.string(),
-    metaDescription: z.string(),
+    // titleTag: z.string(),
+    // metaDescription: z.string(),
     updates: z.object({
       thumbnail: z.string(),
       title: z.string(),
@@ -130,8 +130,6 @@ const scholarshipsCollection = defineCollection({
   schema: () => z.object({
     sectionTitle: z.string(),
     sectionDescription: z.string(),
-    titleTag: z.string(),
-    metaDescription: z.string(),
     scholarships: z.array(
       z.object({
         title: z.array(z.object({
