@@ -1,5 +1,7 @@
 ---
-titleTag: Mandatory Public Disclosure | Best CBSE School in Bangalore | Glentree Academy School
+titleTag: >-
+  Mandatory Public Disclosure | Best CBSE School in Bangalore | Glentree Academy
+  School
 disclosure:
   - title: 'Declaration Letter to CBSE for Deficiencies - Compliance Report    '
     disclosure: >
@@ -43,10 +45,6 @@ disclosure:
   - title: Self Certification CBSE
     disclosure: |
       [VIEW HERE](/images/gaw-selfCertificate.pdf "gaw-selfCertificate.pdf")
-  - title: Parent Teacher Association
-    disclosure: >
-      [VIEW HERE](/images/gaw-parentTeacherAssociation.pdf
-      "gaw-parentTeacherAssociation.pdf")
   - title: Fee Structure
     disclosure: |
       [VIEW HERE](/images/gaw-feeStructure.pdf "gaw-feeStructure.pdf")
