@@ -32,7 +32,7 @@ import galleryGAS3 from '../images/campus/gas/gallery/3.jpeg'
 import galleryGAS4 from '../images/campus/gas/gallery/4.jpeg'
 import galleryGAS5 from '../images/campus/gas/gallery/5.jpeg'
 
-import principalGAW from '../images/campus/gaw/principal.png'
+import principalGAW from '../images/campus/gaw/principal.jpg'
 import principalGAS from '../images/campus/gas/principal.png'
 import Constrain from '../components/system/Constrain.astro';
 import Card from '../components/landingPage/Updates/Card.astro';
@@ -118,9 +118,9 @@ const campusData = {
     leaderMessage: [
       {
         image: principalGAW,
-        name: 'Mrs. Singupilla Ratna Kumari',
+        name: 'Mrs. Rizwana Reddy',
         role: 'PRINCIPAL',
-        body: 'At Glentree, we embrace the belief that learning is a lifelong process. We foster curiosity and encourage our students to be self-motivated learners. Our holistic approach focuses on developing their intelligence, emotions, and spirituality. By providing an enlightened and innovative learning environment, we empower them to become global citizens, offering transformative experiences and opportunities for personal growth.'
+        body: `<span class="italic">There are no shortcuts to excellence</span> <br/> <br/>Greetings dear parents and students, <br/> Our exemplary pedagogy triumphantly stimulates passion and strengthens their perseverance hence establishing an unshakable grit in the soul of each of our students throughout their journey inside the walls of our schools. We value every child for the individual that they are, and without omitting any of our student's personality or characteristics we strive to bring out the full potential of the student with immense care.`
       }
     ],
     phoneNo: '+91 7899738130',
@@ -367,8 +367,8 @@ const campusSeoName = {
                     <Text type={'lg'} class='mt-1'>
                       {message.name}
                     </Text>
-                    <Text type={'base'} class='mt-4 leading-relaxed'>
-                      {message.body}
+                    <Text type={'base'} class='mt-4 leading-relaxed' set:html={message.body}>
+                   
                     </Text>
                   </div>
                 </div>
