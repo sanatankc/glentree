@@ -82,7 +82,7 @@ showcase:
   - image: /images/fancy-dress-at-cbse-schools-in-whitefield.jpg
     title: Fancy Dress
   - image: /images/study-strategy-at-schools-in whitefield.jpg
-    title: Study Strategy
+    title: Study Strategy for Grade 9 and 10
   - image: /images/award-indias-top-cbse-schools-in-whitefield.png
     title: Award - India's Top CBSE Schools in Whitefield
   - image: /images/award-indias-top-cbse-schools-glentree-whitefield.png
