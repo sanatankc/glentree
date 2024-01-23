@@ -65,7 +65,7 @@ showcase:
   - image: /images/field-trip-at-top-schools-in-sarjapur-road.jpg
     title: Field Trip
   - image: /images/g20-summit-at-cbse-schools-in-sarjapur-road.jpg
-    title: G20 Summit
+    title: G20 Summit - Special Assembly
   - image: /images/sankranti-glentree-academy.jpg
     title: Happy Sankranti
   - image: /images/award-indias-top-cbse-schools-in-sarjapur.png
