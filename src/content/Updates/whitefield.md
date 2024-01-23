@@ -8,7 +8,7 @@ updates:
     alt: Kite flying with dad at Glentree Academy
     title: Kite Flying With Dad
     description: >-
-      Glentree Academy Whitefield and Glentree Academy Sarjapur organized a
+      Glentree Academy Whitefield and Glentree Academy Sarjapur Road organized a
       delightful Kite Flying With Dad event at the school on 13th Jan, bringing
       joy to pre-primary students and their fathers. The event showcased a
       beautiful bond between fathers and children, creating cherished memories
