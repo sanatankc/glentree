@@ -67,7 +67,7 @@ showcase:
   - image: /images/g20-summit-at-cbse-schools-in-sarjapur-road.jpg
     title: G20 Summit - Special Assembly
   - image: /images/sankranti-glentree-academy.jpg
-    title: Happy Sankranti
+    title: Makara Sankranti Celebration - Pre Primary
   - image: /images/award-indias-top-cbse-schools-in-sarjapur.png
     title: Award - India's Top CBSE Schools in Sarjapur Road
   - image: /images/award-indias-top-cbse-schools-sajarpur-road.png
