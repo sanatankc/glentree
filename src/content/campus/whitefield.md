@@ -80,7 +80,7 @@ aroundTheCampus:
         physical fitness and a spirit of teamwork among our students.
 showcase:
   - image: /images/fancy-dress-at-cbse-schools-in-whitefield.jpg
-    title: Fancy Dress
+    title: Fancy Dress Competition
   - image: /images/study-strategy-at-schools-in whitefield.jpg
     title: Study Strategy for Grade 9 and 10
   - image: /images/award-indias-top-cbse-schools-in-whitefield.png
