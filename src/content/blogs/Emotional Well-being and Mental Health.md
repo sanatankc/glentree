@@ -1,13 +1,17 @@
 ---
 category: Social
-publishedDate: 2023-12-25T18:30:00.000Z
 title: Emotional Well-being and Mental Health
-thumbnail: /images/emotional well being-schools in bangalore.jpg
+titleTag: ''
 caption: >
   If you have good thoughts, they will shine out of your face like sunbeams, and
   you
 
   will always look lovely.
+metaDescription: >-
+  Nourish your soul with our blog's wisdom, guiding you towards emotional
+  well-being and good mental health.
+publishedDate: 2023-12-25T18:30:00.000Z
+thumbnail: /images/emotional well being-schools in bangalore.jpg
 blog: >
   “If you have good thoughts, they will shine out of your face like sunbeams and
   you
@@ -100,9 +104,5 @@ blog: >
   form of fun-loving knowledge gain which they would utilize it later for
   achieving their goal. The sooner we change our approach, the healthier our
   students will be emotionally.
-titleTag: ''
-metaDescription: ''
 ---
-
-
 
