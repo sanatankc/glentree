@@ -14,7 +14,7 @@ updates:
       beautiful bond between fathers and children, creating cherished memories
       through the shared experience of flying kites.
     publishedDate: 2024-01-22T18:30:00.000Z
-  - thumbnail: /images/IMG_20231111_083610.jpg
+  - thumbnail: /images/parent-teacher-meeting.jpg
     title: 'Parent Teacher Meeting '
     videoLink: ''
     description: >-
