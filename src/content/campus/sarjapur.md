@@ -62,6 +62,8 @@ aroundTheCampus:
         football, basketball, volleyball, yoga, taekwondo, and fostering
         physical fitness and a spirit of teamwork among our students.
 showcase:
+  - image: /images/g20-summit-at-cbse-schools-in-sarjapur-road.jpg
+    title: G20 Summit
   - image: /images/sankranti-glentree-academy.jpg
     title: Happy Sankranti
   - image: /images/award-indias-top-cbse-schools-in-sarjapur.png
