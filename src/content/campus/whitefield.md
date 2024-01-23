@@ -79,6 +79,8 @@ aroundTheCampus:
         football, basketball, volleyball, yoga, taekwondo, and fostering
         physical fitness and a spirit of teamwork among our students.
 showcase:
+  - image: /images/fancy-dress-at-cbse-schools-in-whitefield.jpg
+    title: Fancy Dress
   - image: /images/study-strategy-at-schools-in whitefield.jpg
     title: Study Strategy
   - image: /images/award-indias-top-cbse-schools-in-whitefield.png
