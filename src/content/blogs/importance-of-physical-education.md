@@ -1,10 +1,14 @@
 ---
-title: 10 Reasons Why Physical Education is Important In Schools
 category: Education
-thumbnail: /images/tempBlog.png
+title: 10 Reasons Why Physical Education is Important In Schools
 caption: >
   With everything being shifted into a hybrid model, kids need to destress from
   their screens and focus on their mind and body.
+metaDescription: >-
+  Uncover the 10 reasons why physical education is important In schools that
+  impact on academic performance, mental health, and overall well-being.
+publishedDate: 2023-09-14T18:30:00.000Z
+thumbnail: /images/tempBlog.png
 blog: >
   We’ve often heard people stress the importance of physical education, how
   important it is really? As parents, we often place higher importance to grades
@@ -208,12 +212,5 @@ blog: >
   the development of sports activities. One of these is the age of the student.
   It is important for a physical educator to help students to make the right
   choice of physical activities either now or in the future.
-publishedDate: '2023-09-14T18:30:00.000Z'
 ---
-
-
-
-
-
-
 
