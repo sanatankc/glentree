@@ -1,7 +1,19 @@
 ---
 titleTag: Blogs | Best CBSE School in Bangalore | Glentree Academy School
-metaDescription: Glentree Academy school is affiliated to CBSE. It is ranked amongst the top CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
+metaDescription: >-
+  Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
+  CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/sports-schools-in-bangalore.jpeg
+    alt: Kite flying with dad at Glentree Academy
+    title: Kite Flying With Dad
+    description: >-
+      Glentree Academy Whitefield and Glentree Academy Sarjapur organized a
+      delightful Kite Flying With Dad event at the school on 13th Jan, bringing
+      joy to pre-primary students and their fathers. The event showcased a
+      beautiful bond between fathers and children, creating cherished memories
+      through the shared experience of flying kites.
+    publishedDate: 2024-01-22T18:30:00.000Z
   - thumbnail: /images/IMG_20231111_083610.jpg
     title: 'Parent Teacher Meeting '
     videoLink: ''
