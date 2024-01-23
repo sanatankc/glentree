@@ -1,5 +1,15 @@
 ---
 updates:
+  - thumbnail: /images/sports-day-schools-in-bangalore.png
+    alt: Sports Day at Glentree Academy
+    title: Sports Day Event
+    description: >-
+      Explore the highlights of our School Sports Day Event, held on January
+      18th and 19th for students from classes 1-10. From exhilarating Taekwondo
+      displays to serene Yoga and energetic Aerobics, the event featured a
+      spectacular March Past and thrilling races, culminating in well-deserved
+      awards distribution.
+    publishedDate: 2024-01-22T18:30:00.000Z
   - thumbnail: /images/WhatsApp Image 2023-12-07 at 9.14.58 PM.jpeg
     title: |
       A SPECIAL ASSEMBLY - NAVY DAY
