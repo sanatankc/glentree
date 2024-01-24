@@ -1,7 +1,7 @@
 ---
 titleTag: Best CBSE Schools in Bangalore | CBSE Schools
 metaDescription: >-
-  Elevate your child's educational journey with one of the best CBSE schools in
+  Lift your child's educational journey with one of the best CBSE schools in
   Bangalore that is dedicated to shaping success.
 title: |
   Nurturing Lifelong Learner
