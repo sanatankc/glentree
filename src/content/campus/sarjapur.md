@@ -1,9 +1,8 @@
 ---
-titleTag: 'Sarjapur Campus | Best CBSE School in sarjapur | Glentree Academy, Sarjapur'
+titleTag: Best CBSE Schools in Sarjapur Road | CBSE Schools
 metaDescription: >-
-  Glentree Academy Sarjapur is one of the best CBSE schools in sarjapur.
-  Admissions open in Sarjapur branch for Nursery to Grade 11. Admissions Open
-  For 2024-25.
+  Experience academic brilliance and nurturing environments at the best CBSE
+  schools in Sarjapur Road, fostering a love for learning.
 bannerBg: /images/gas-school.jpeg
 title: Glentree Academy - Sarjapur Road
 description: Centrally located in the IT Corridor of Bengaluru
