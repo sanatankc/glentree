@@ -1,6 +1,8 @@
 ---
-titleTag: Home | Best CBSE School in Bangalore | Glentree Academy School
-metaDescription: Glentree Academy school is affiliated to CBSE. It is ranked amongst the top CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
+titleTag: Best CBSE Schools in Bangalore | CBSE Schools
+metaDescription: >-
+  Elevate your child's educational journey with one of the best CBSE schools in
+  Bangalore that is dedicated to shaping success.
 title: |
   Nurturing Lifelong Learner
 heroImages:
