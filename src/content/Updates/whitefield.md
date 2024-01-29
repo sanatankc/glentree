@@ -4,6 +4,16 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/sky-gazing-workshop.jpg
+    alt: Sky Gazing Workshop
+    title: Sky Gazing Workshop
+    description: >-
+      Embarking on a celestial journey, Glentree Academy, in collaboration with
+      Genex Space, curated an enchanting evening of sky gazing on January 25th,
+      2024. Witnessing our students immerse themselves in the profound
+      experience of sky gazing adds a luminous chapter to our academic
+      endeavors. 
+    publishedDate: 2024-01-28T18:30:00.000Z
   - thumbnail: /images/sports-schools-in-bangalore.jpeg
     alt: Kite flying with dad at Glentree Academy
     title: Kite Flying With Dad
