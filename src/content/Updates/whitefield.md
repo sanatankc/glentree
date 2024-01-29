@@ -5,7 +5,7 @@ metaDescription: >-
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
   - thumbnail: /images/sky-gazing-workshop.jpg
-    alt: Sky Gazing Workshop
+    alt: Sky gazing workshop
     title: Sky Gazing Workshop
     description: >-
       Embarking on a celestial journey, Glentree Academy, in collaboration with
