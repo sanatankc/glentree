@@ -9,7 +9,7 @@ updates:
     title: Sky Gazing Workshop
     description: >-
       Embarking on a celestial journey, Glentree Academy, in collaboration with
-      Genex Space, curated an enchanting evening of sky gazing on January 25th,
+      Genex Space, curated an captivating evening of sky gazing on January 25th,
       2024. Witnessing our students immerse themselves in the profound
       experience of sky gazing adds a luminous chapter to our academic
       endeavors. 
