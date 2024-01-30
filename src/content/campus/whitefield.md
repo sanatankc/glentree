@@ -76,6 +76,8 @@ aroundTheCampus:
         football, basketball, volleyball, yoga, taekwondo, and fostering
         physical fitness and a spirit of teamwork among our students.
 showcase:
+  - image: /images/sports-day-3.jpg
+    title: Annual Sports Day 2023 - 24
   - image: /images/fancy-dress-at-cbse-schools-in-whitefield.jpg
     title: Fancy Dress Competition
   - image: /images/study-strategy-at-schools-in whitefield.jpg
