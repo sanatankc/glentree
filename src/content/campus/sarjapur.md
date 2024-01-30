@@ -61,6 +61,8 @@ aroundTheCampus:
         football, basketball, volleyball, yoga, taekwondo, and fostering
         physical fitness and a spirit of teamwork among our students.
 showcase:
+  - image: /images/sports-day (1).jpg
+    title: Annual Sports Day Winners - Akash House
   - image: /images/sports-day (2).jpg
     title: Annual Sports Day 2023 - 24
   - image: /images/sports-day (3).jpg
