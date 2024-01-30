@@ -61,6 +61,8 @@ aroundTheCampus:
         football, basketball, volleyball, yoga, taekwondo, and fostering
         physical fitness and a spirit of teamwork among our students.
 showcase:
+  - image: /images/sports-day (3).jpg
+    title: Annual Sports Day 2023 - 24
   - image: /images/field-trip-at-top-schools-in-sarjapur-road.jpg
     title: Field Trip
   - image: /images/g20-summit-at-cbse-schools-in-sarjapur-road.jpg
