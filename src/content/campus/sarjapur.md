@@ -62,7 +62,7 @@ aroundTheCampus:
         physical fitness and a spirit of teamwork among our students.
 showcase:
   - image: /images/sports-day (1).jpg
-    title: Rolling Trophy for the AY - 2023-24 - Akash House
+    title: Founders Trophy for the AY - 2023-24 - Akash House
   - image: /images/sports-day (2).jpg
     title: Annual Sports Day 2023 - 24
   - image: /images/sports-day (3).jpg
