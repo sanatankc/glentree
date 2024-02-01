@@ -4,6 +4,17 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/parent-teacher-meeting-in-best-cbse-schools-in-bangalore.jpg
+    alt: Parent teacher meeting
+    title: Parent Teacher Meeting
+    description: >-
+      Parents Teacher meeting go beyond a mere exchange of information they are
+      a collaborative effort to nurture the growth and success of the student.
+      Glentree Academy Whitefield's PTM was conducted on 27th of January, 2024.
+      These meetings contribute to the development of a positive and trusting
+      relationship between parents and teachers and also creating a foundation
+      for the child's lifelong learning journey.
+    publishedDate: 2024-01-31T18:30:00.000Z
   - thumbnail: /images/sky-gazing-workshop.jpg
     alt: Sky gazing workshop
     title: Sky Gazing Workshop
