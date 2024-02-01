@@ -1,10 +1,12 @@
 ---
 name: Dummy
+titleTag: Best CBSE Schools in Whitefield | CBSE Schools
+metaDescription: >-
+  In the vibrant community, our best CBSE schools in Whitefield stand tall by
+  offering a perfect blend of academics, culture, and character development.
 bannerBg: /images/gaw-school.jpg
 title: Glentree Academy - Whitefield
 description: A sprawling green campus within the heart of the city.
-titleTag: Whitefield Campus | Best CBSE School in whitefield | Glentree Academy, Whitefield
-metaDescription: Glentree Academy Whitefield is one of the best CBSE schools in whitefield. Admissions open in Whitefield branch for Nursery to Grade 11. Admissions Open For 2024-25.
 virtualCampusLink: >-
   https://www.google.com/maps/@12.9655167,77.7350299,3a,75y,331.03h,78.94t/data=!3m6!1e1!3m4!1sAF1QipP0Xik14EKwv1ca-GomAFI6LTFW--HUlNO-SRCR!2e10!7i10676!8i5338?hl=en-US&entry=ttu
 affiliationNo: '830349'
@@ -74,6 +76,16 @@ aroundTheCampus:
         football, basketball, volleyball, yoga, taekwondo, and fostering
         physical fitness and a spirit of teamwork among our students.
 showcase:
+  - image: /images/sports-day-2.jpg
+    title: Founder's Trophy for the AY - 2023-24 - Agni House
+  - image: /images/sports-day-5.jpg
+    title: Annual Sports Day 2023 - 24
+  - image: /images/sports-day-3.jpg
+    title: Annual Sports Day 2023 - 24
+  - image: /images/fancy-dress-at-cbse-schools-in-whitefield.jpg
+    title: Fancy Dress Competition
+  - image: /images/study-strategy-at-schools-in whitefield.jpg
+    title: Study Strategy for Grade 9 and 10
   - image: /images/award-indias-top-cbse-schools-in-whitefield.png
     title: Award - India's Top CBSE Schools in Whitefield
   - image: /images/award-indias-top-cbse-schools-glentree-whitefield.png

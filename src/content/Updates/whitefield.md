@@ -1,8 +1,41 @@
 ---
 titleTag: Blogs | Best CBSE School in Bangalore | Glentree Academy School
-metaDescription: Glentree Academy school is affiliated to CBSE. It is ranked amongst the top CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
+metaDescription: >-
+  Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
+  CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
-  - thumbnail: /images/IMG_20231111_083610.jpg
+  - thumbnail: /images/parent-teacher-meeting-in-best-cbse-schools-in-bangalore.jpg
+    alt: Parent teacher meeting
+    title: Parent Teacher Meeting
+    description: >-
+      Parents Teacher meeting go beyond a mere exchange of information they are
+      a collaborative effort to nurture the growth and success of the student.
+      Glentree Academy Whitefield's PTM was conducted on 27th of January, 2024.
+      These meetings contribute to the development of a positive and trusting
+      relationship between parents and teachers and also creating a foundation
+      for the child's lifelong learning journey.
+    publishedDate: 2024-01-31T18:30:00.000Z
+  - thumbnail: /images/sky-gazing-workshop.jpg
+    alt: Sky gazing workshop
+    title: Sky Gazing Workshop
+    description: >-
+      Embarking on a celestial journey, Glentree Academy, in collaboration with
+      Genex Space, curated an captivating evening of sky gazing on January 25th,
+      2024. Witnessing our students immerse themselves in the profound
+      experience of sky gazing adds a luminous chapter to our academic
+      endeavors. 
+    publishedDate: 2024-01-28T18:30:00.000Z
+  - thumbnail: /images/sports-schools-in-bangalore.jpeg
+    alt: Kite flying with dad at Glentree Academy
+    title: Kite Flying With Dad
+    description: >-
+      Glentree Academy Whitefield and Glentree Academy Sarjapur Road organized a
+      delightful Kite Flying With Dad event at the school on 13th Jan, bringing
+      joy to pre-primary students and their fathers. The event showcased a
+      beautiful bond between fathers and children, creating cherished memories
+      through the shared experience of flying kites.
+    publishedDate: 2024-01-22T18:30:00.000Z
+  - thumbnail: /images/parent-teacher-meeting.jpg
     title: 'Parent Teacher Meeting '
     videoLink: ''
     description: >-

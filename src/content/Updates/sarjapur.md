@@ -1,5 +1,28 @@
 ---
 updates:
+  - thumbnail: >-
+      /images/indian-music-experience-museum-by-best-schools-in-sarjapur-road-1.jpg
+    alt: 'Indian music experience museum '
+    title: 'Indian Music Experience Museum - Grades 4, 5 and 6'
+    description: >-
+      A memorable adventure recently led for the students to an enriching Field
+      Trip. From engaging museums to interactive technology facilities, every
+      stop sparked a new wave of mastering. The journey fostered camaraderie and
+      teamwork among students. Teachers played pivotal roles in courses,
+      imparting insights that ignited intellectual curiosity. We consider such
+      outings essential for holistic education, nurturing a passion for
+      discovery and exploration.
+    publishedDate: 2024-01-26T18:30:00.000Z
+  - thumbnail: /images/sports-day-schools-in-bangalore.png
+    alt: Sports Day at Glentree Academy
+    title: Sports Day Event
+    description: >-
+      Explore the highlights of our School Sports Day Event, held on January
+      18th and 19th for students from classes 1-10. From exhilarating Taekwondo
+      displays to serene Yoga and energetic Aerobics, the event featured a
+      spectacular March Past and thrilling races, culminating in well-deserved
+      awards distribution.
+    publishedDate: 2024-01-22T18:30:00.000Z
   - thumbnail: /images/WhatsApp Image 2023-12-07 at 9.14.58 PM.jpeg
     title: |
       A SPECIAL ASSEMBLY - NAVY DAY

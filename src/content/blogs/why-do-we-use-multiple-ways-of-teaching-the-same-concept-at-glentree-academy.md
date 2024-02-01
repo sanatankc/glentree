@@ -1,12 +1,15 @@
 ---
 category: Education
-publishedDate: 2023-09-18T18:30:00.000Z
 title: Why do we use multiple ways of teaching the same concept at Glentree Academy?
-thumbnail: >-
-  /images/How-the-various-teacher-knowledge-sections-14colors-are-related-to-each-other-Layout.png
 caption: >
   Research shows that relevant learning means effective learning and is most
-  enduring. 
+  enduring.
+metaDescription: >-
+  Witness the dynamic landscape of education by exploring multiple ways of
+  teaching the same concept. 
+publishedDate: 2023-09-18T18:30:00.000Z
+thumbnail: >-
+  /images/How-the-various-teacher-knowledge-sections-14colors-are-related-to-each-other-Layout.png
 blog: >
   How many times have we heard students asking, “Why do we learn calculus or
   theorems? Where do we apply or use it in the real world?” And honestly, it’s a
