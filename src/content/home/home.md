@@ -1,5 +1,5 @@
 ---
-titleTag: Best CBSE Schools in Bangalore | Glentree Academy Schools
+titleTag: 'Best CBSE Schools in Bangalore | Glentree Academy '
 metaDescription: >-
   Lift your child's educational journey with one of the best CBSE schools in
   Bangalore that is dedicated to shaping success.
