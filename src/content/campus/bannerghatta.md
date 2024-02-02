@@ -1,5 +1,5 @@
 ---
-titleTag: Best CBSE Schools in Bannerghatta Road | CBSE Schools
+titleTag: Best CBSE Schools in Bannerghatta Road | Glentree Academy
 metaDescription: >-
   Providing quality learning experiences for children in the best CBSE schools
   in Bannerghatta Road for well-rounded development.
