@@ -1,5 +1,5 @@
 ---
-titleTag: Best CBSE Schools in Sarjapur Road | CBSE Schools
+titleTag: Best CBSE Schools in Sarjapur Road | Glentree Academy
 metaDescription: >-
   Experience academic brilliance and nurturing environments at the best CBSE
   schools in Sarjapur Road, fostering a love for learning.
