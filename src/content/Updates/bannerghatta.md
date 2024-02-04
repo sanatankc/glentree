@@ -11,7 +11,12 @@ updates:
       Glentree Academy’s Chief Operating Officer, Mrs. Rachana Heda, took center
       stage as an eminent speaker at a panel discussion organized by Education
       Excellence Conclave, focused on "Student Loneliness in the age of AI and
-      beyond...Challenges and Solutions."
+      beyond...Challenges and Solutions."  During the discussion, Mrs. Heda
+      emphasized the importance of creating awareness among students, parents,
+      and teachers regarding the mindful usage of technology and the
+      significance of social interactions. She highlighted Glentree's efforts in
+      raising collaboration opportunities among peers to foster a supportive
+      environment for students.
     publishedDate: 2024-02-03T18:30:00.000Z
   - thumbnail: /images/WhatsApp Image 2023-11-23 at 15.37.16.jpeg
     title: 'Our School Story unveiled '
