@@ -66,7 +66,7 @@ showcase:
   - image: /images/Wide-corridor.jpg
     title: Wide Corridor
   - image: /images/Brand-new-campus-glimps.jpeg
-    title: Brand New Campus Glimpse
+    title: 'Glimpse of Our Brand New Campus '
   - image: /images/Learning-spaces.jpeg
     title: Learning Space
   - image: /images/Safe-spaces.jpeg
