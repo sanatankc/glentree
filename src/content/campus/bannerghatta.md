@@ -68,11 +68,11 @@ showcase:
   - image: /images/Brand-new-campus-glimps.jpeg
     title: 'Glimpse of Our Brand New Campus '
   - image: /images/Learning-spaces.jpeg
-    title: Learning Space
+    title: Innovative Spaces
   - image: /images/Safe-spaces.jpeg
-    title: Beyond the Walls
+    title: Safe Spaces
   - image: /images/best-schools-in-bannerghatta-road.jpeg
-    title: Children Safe Furniture
+    title: Child Friendly Furnitures
   - image: /images/best cbse school award for glentree academy.jpg
     title: India School Merit Award - Glentree Academy
   - image: /images/WhatsApp Image 2023-11-23 at 15.37.16.jpeg
