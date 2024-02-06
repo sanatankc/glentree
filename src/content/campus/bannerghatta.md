@@ -61,6 +61,8 @@ aroundTheCampus:
       altTag: BasketBall Court
       title: BasketBall Court
 showcase:
+  - image: /images/Learning-spaces.jpeg
+    title: Learning Space
   - image: /images/Safe-spaces.jpeg
     title: Safe Spaces
   - image: /images/best-schools-in-bannerghatta-road.jpeg
