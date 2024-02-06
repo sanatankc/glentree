@@ -61,6 +61,8 @@ aroundTheCampus:
       altTag: BasketBall Court
       title: BasketBall Court
 showcase:
+  - image: /images/Wide-corridor.jpg
+    title: Wide Corridor
   - image: /images/Brand-new-campus-glimps.jpeg
     title: Brand New Campus Glimpse
   - image: /images/Learning-spaces.jpeg
