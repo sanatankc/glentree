@@ -68,7 +68,7 @@ showcase:
   - image: /images/Brand-new-campus-glimps.jpeg
     title: 'Glimpse of Our Brand New Campus '
   - image: /images/Learning-spaces.jpeg
-    title: Learning Space
+    title: Innovative Spaces
   - image: /images/Safe-spaces.jpeg
     title: Safe Spaces
   - image: /images/best-schools-in-bannerghatta-road.jpeg
