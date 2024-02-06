@@ -61,6 +61,8 @@ aroundTheCampus:
       altTag: BasketBall Court
       title: BasketBall Court
 showcase:
+  - image: /images/best-schools-in-bannerghatta-road.jpeg
+    title: Children Safe Furniture
   - image: /images/best cbse school award for glentree academy.jpg
     title: India School Merit Award - Glentree Academy
   - image: /images/WhatsApp Image 2023-11-23 at 15.37.16.jpeg
