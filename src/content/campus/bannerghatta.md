@@ -68,9 +68,9 @@ showcase:
   - image: /images/Brand-new-campus-glimps.jpeg
     title: 'Glimpse of Our Brand New Campus '
   - image: /images/Learning-spaces.jpeg
-    title: Innovative Spaces
+    title: Learning Space
   - image: /images/Safe-spaces.jpeg
-    title: Safe Spaces
+    title: Beyond the Walls
   - image: /images/best-schools-in-bannerghatta-road.jpeg
     title: Children Safe Furniture
   - image: /images/best cbse school award for glentree academy.jpg
