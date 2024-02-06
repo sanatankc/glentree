@@ -61,6 +61,8 @@ aroundTheCampus:
       altTag: BasketBall Court
       title: BasketBall Court
 showcase:
+  - image: /images/Safe-spaces.jpeg
+    title: Safe Spaces
   - image: /images/best-schools-in-bannerghatta-road.jpeg
     title: Children Safe Furniture
   - image: /images/best cbse school award for glentree academy.jpg
