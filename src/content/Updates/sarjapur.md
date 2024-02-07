@@ -21,20 +21,20 @@ updates:
     publishedDate: 2024-02-06T18:30:00.000Z
   - thumbnail: /images/national-science-day.jpg
     alt: national-science-day
-    title: National Science Day - Grade 6
+    title: Science of Sustainable Future - National Science Day - Grade 6
     description: >-
       National Science Day is celebrated in India on February 28th every year to
       commemorate the discovery of the Raman Effect by the Indian physicist Sir
       C.V. Raman in 1928. The day aims to inspire young minds to pursue careers
       in science and research, fostering innovation and critical thinking.
-      Student of Grade-6 A at Glentree Academy Sarjapur Road, showcased National
-      Science Day on 5/2/24 in the Special Assembly based on the theme of
-      National Science Day 2024 is “Science of Sustainable Future”. Children
-      performed various activities such as Quizzes, Science as magic, science
-      song etc... The cherry on the cake was enactment of Sir C V Raman by one
-      of the student who was a show stopper. By fostering a culture of
-      scientific inquiry and innovation amongst students India can continue to
-      make significant contributions to the global scientific community.
+      Student of Grade-6 at Glentree Academy Sarjapur Road, showcased National
+      Science Day on 5th Feb in the Special Assembly based on the theme of
+      “Science of Sustainable Future”. Children performed various activities
+      such as Quizzes, Science as magic, science song etc... The cherry on the
+      cake was enactment of Sir C V Raman by one of the student who was a show
+      stopper. By fostering a culture of scientific inquiry and innovation
+      amongst students India can continue to make significant contributions to
+      the global scientific community.
     publishedDate: 2024-02-06T18:30:00.000Z
   - thumbnail: >-
       /images/indian-music-experience-museum-by-best-schools-in-sarjapur-road-1.jpg
