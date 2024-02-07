@@ -4,6 +4,23 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/field-trip.jpg
+    alt: field-trip
+    title: Field Trip - Grade 1
+    description: >-
+      A field trip to Bannerghatta National Park offers a unique opportunity for
+      students and nature enthusiasts to explore the rich biodiversity of one of
+      India's most renowned wildlife reserves. This was organized on Feb
+      5th,2024 for all our Grade-1 Students .Before embarking on the field trip,
+      Students were briefed on the park's rules and regulations, safety
+      guidelines, and the importance of respecting the natural environment.
+      Throughout the field trip, educational activities are integrated to
+      enhance participants' understanding of ecological concepts and wildlife
+      conservation principles, there were also guided discussions on topics such
+      as habitat preservation, biodiversity conservation, and the impact of
+      human activities on the environment. Overall is was an overwhelming
+      experience and a day filled with Joy and discovery.
+    publishedDate: 2024-02-06T18:30:00.000Z
   - thumbnail: /images/parent-teacher-meeting-in-best-cbse-schools-in-bangalore.jpg
     alt: Parent teacher meeting
     title: Parent Teacher Meeting
