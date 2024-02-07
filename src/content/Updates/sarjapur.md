@@ -1,5 +1,24 @@
 ---
 updates:
+  - thumbnail: /images/graduation-day.jpg
+    alt: Graduation Day
+    title: Graduation Day - Grade 10
+    description: >-
+      Grade 10 graduation day is a memorable occasion that encapsulates a mix of
+      emotions – pride, nostalgia, excitement, and anticipation. It celebrates
+      the accomplishments of students, the support of families, and the
+      dedication of educators. Glentree Academy Sarjapur had their Graduation
+      ceremony on Feb 3rd ,2024 at the School Auditorium which was adorned with
+      decorations that reflect the school's colors and emblem. Families of our
+      Grade 10 students had gathered to witness and celebrate the
+      accomplishments of the graduating class. One of the most iconic elements
+      of any graduation ceremony is the traditional cap and gown. Students
+      proudly don these symbols of achievement, signifying the end of one
+      chapter and the beginning of another. As graduates move forward, they
+      carry with them the lessons learned, friendships made, and the promise of
+      a bright and promising future. We wish all of our lovely Students Good
+      luck for all their future endeavours. 
+    publishedDate: 2024-02-06T18:30:00.000Z
   - thumbnail: >-
       /images/indian-music-experience-museum-by-best-schools-in-sarjapur-road-1.jpg
     alt: 'Indian music experience museum '
