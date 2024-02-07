@@ -18,7 +18,7 @@ updates:
       make significant contributions to the global scientific community.
     publishedDate: 2024-02-06T18:30:00.000Z
   - thumbnail: /images/graduation-day.jpg
-    alt: Graduation Day
+    alt: graduation-day
     title: Graduation Day - Grade 10
     description: >-
       Grade 10 graduation day is a memorable occasion that encapsulates a mix of
