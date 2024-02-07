@@ -19,7 +19,7 @@ updates:
       a bright and promising future. We wish all of our lovely Students Good
       luck for all their future endeavours. 
     publishedDate: 2024-02-06T18:30:00.000Z
-  - thumbnail: /images/national-science-day.jpg
+  - thumbnail: /images/national-science-day-special-assembly.jpg
     alt: national-science-day
     title: Special Assembly - National Science Day - Grade 6
     description: >-
