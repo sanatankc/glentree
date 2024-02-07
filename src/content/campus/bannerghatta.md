@@ -1,5 +1,5 @@
 ---
-titleTag: Best CBSE Schools in Bannerghatta Road | CBSE Schools
+titleTag: Best CBSE Schools in Bannerghatta Road | Glentree Academy
 metaDescription: >-
   Providing quality learning experiences for children in the best CBSE schools
   in Bannerghatta Road for well-rounded development.
@@ -61,6 +61,18 @@ aroundTheCampus:
       altTag: BasketBall Court
       title: BasketBall Court
 showcase:
+  - image: /images/The-reading-tree.jpg
+    title: The Reading Tree
+  - image: /images/Wide-corridor.jpg
+    title: Wide Corridor
+  - image: /images/Brand-new-campus-glimps.jpeg
+    title: 'Glimpse of Our Brand New Campus '
+  - image: /images/Learning-spaces.jpeg
+    title: Innovative Spaces
+  - image: /images/Safe-spaces.jpeg
+    title: Safe Spaces
+  - image: /images/best-schools-in-bannerghatta-road.jpeg
+    title: Child Friendly Furnitures
   - image: /images/best cbse school award for glentree academy.jpg
     title: India School Merit Award - Glentree Academy
   - image: /images/WhatsApp Image 2023-11-23 at 15.37.16.jpeg

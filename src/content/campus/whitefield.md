@@ -1,6 +1,6 @@
 ---
 name: Dummy
-titleTag: Best CBSE Schools in Whitefield | CBSE Schools
+titleTag: Best CBSE Schools in Whitefield | Glentree Academy
 metaDescription: >-
   In the vibrant community, our best CBSE schools in Whitefield stand tall by
   offering a perfect blend of academics, culture, and character development.
