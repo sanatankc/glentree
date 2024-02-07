@@ -21,7 +21,7 @@ updates:
     publishedDate: 2024-02-06T18:30:00.000Z
   - thumbnail: /images/national-science-day.jpg
     alt: national-science-day
-    title: Science of Sustainable Future - National Science Day - Grade 6
+    title: Special Assembly - National Science Day - Grade 6
     description: >-
       National Science Day is celebrated in India on February 28th every year to
       commemorate the discovery of the Raman Effect by the Indian physicist Sir
