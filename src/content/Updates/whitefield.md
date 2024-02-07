@@ -15,7 +15,7 @@ updates:
       Students were briefed on the park's rules and regulations, safety
       guidelines, and the importance of respecting the natural environment.
       Throughout the field trip, educational activities are integrated to
-      enhance participants' understanding of ecological concepts and wildlife
+      enhance students understanding of ecological concepts and wildlife
       conservation principles, there were also guided discussions on topics such
       as habitat preservation, biodiversity conservation, and the impact of
       human activities on the environment. Overall is was an overwhelming
