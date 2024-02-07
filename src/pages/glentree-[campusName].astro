@@ -90,12 +90,12 @@ import csLabGAS from '../images/campus/gas/facilities/cslab.webp'
 
 const allowedCampusNames = ['whitefield', 'sarjapur']
 const { campusName = '', slug } = Astro.params
+const { data } = await getEntry('campus',campusName) as CollectionEntry<'campus'>
 import ContactUs from '../components/campus/contactUs.astro';
 import DeckCard from '../components/DeckCard.astro';
 import DeckCardWithGallery from '../components/DeckCardWithGallery.astro';
 import CampusFacilities from '../components/campusFacilities.astro';
 
-const { data } = await getEntry('campus',campusName) as CollectionEntry<'campus'>
 
 if (!allowedCampusNames.includes(campusName)) {
   const error = await fetch(`${Astro.url}/404`)
@@ -226,8 +226,8 @@ const campusSeoName = {
           <TopNavigationBar />
           <div class='h-[88px] w-full bg-black'>
           </div>
-          <div class='min-h-[512px] max-h-[512px] w-full flex justify-center bg-cover bg-center items-center flex-col max-md:min-h-[350px]' style={{
-            backgroundImage: `linear-gradient(180deg, rgba(18, 18, 18, 0) -21.78%, rgba(0, 0, 0, 0.6) 68.07%), url(${data.bannerBg})`,
+          <div class='min-h-[490px] max-h-[350px] w-full flex justify-end bg-cover bg-center p-[30px] items-center flex-col max-md:min-h-[350px]' style={{
+          backgroundImage: `linear-gradient(180deg, rgba(18, 18, 18, 0.00) 40.1%, rgba(0, 0, 0, 0.70) 100%), url(${data.bannerBg})`,
           }}>
             <Text type={'h1Sm'} class='mt-14 max-md:mt-10 text-center'>{data.title}</Text>
             <Text type={'base'} class='mt-3 text-center max-md:w-[90%]' >{data.description}</Text>

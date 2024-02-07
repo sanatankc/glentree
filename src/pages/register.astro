@@ -124,7 +124,7 @@ const faqs = [
           <div 
             class="
               absolute w-full h-full top-0 left-0
-              bg-[linear-gradient(183deg,_rgba(0,_66,_29,_0.00)_31.29%,_#000_97.19%)]
+              bg-[linear-gradient(183deg,_rgba(0,_66,_29,_0.00)_51.29%,_rgba(0,0,0,0.7)_97.19%)]
               max-md:bg-[linear-gradient(180deg,_rgba(0,_66,_29,_0.80)_-40.71%,_#000_50.19%)]
               z-20
             "
@@ -384,6 +384,10 @@ const faqs = [
   pixelContactTargets.forEach((pixelContactTarget) => {
     pixelContactTarget.addEventListener('click', () => {
       fbq('track', 'Contact');
+      gtag("event", "click", {
+        "event_category": "Contact",
+        "event_label": "phone_number_click",
+    });
     })
   })
 

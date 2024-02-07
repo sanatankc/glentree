@@ -13,9 +13,11 @@ const {
   video,
   class: className
 } = Astro.props
-
-const monthNameShort = publishedDate.toLocaleString('default', { month: 'short' });
-const date = publishedDate.getDate().toString().padStart(2, '0');
+const date = publishedDate.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      });
 ---
 <a
   class:list={[
@@ -55,7 +57,7 @@ const date = publishedDate.getDate().toString().padStart(2, '0');
     "flex flex-row pt-6"
   ]}>
     <div>
-      <Text type="subtitle" class="text-accent3">{date}{' '} {monthNameShort}</Text>
+      <Text type="subtitle" class="text-accent3 !tracking-normal">{date}</Text>
       <Text type="h4" class="mb-2 mt-4">{title}</Text>
       <Text type="base" class="text-[18px] max-md:!text-[16px] font-[400]">{description || 'Discover dynamic student clubs for some personalised ...'}</Text>
     </div>
