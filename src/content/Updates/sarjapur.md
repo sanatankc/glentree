@@ -1,6 +1,6 @@
 ---
 updates:
-  - thumbnail: /images/graduation-day-1.jpeg
+  - thumbnail: /images/graduation-day-3.jpg
     alt: graduation-day
     title: Graduation Day - Grade 10
     description: >-
