@@ -76,6 +76,8 @@ aroundTheCampus:
         football, basketball, volleyball, yoga, taekwondo, and fostering
         physical fitness and a spirit of teamwork among our students.
 showcase:
+  - image: /images/school-fieldtrip.jpg
+    title: Field Trip - Grade 1
   - image: /images/sports-day-2.jpg
     title: Founder's Trophy for the AY - 2023-24 - Agni House
   - image: /images/sports-day-5.jpg
