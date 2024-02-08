@@ -64,7 +64,7 @@ showcase:
   - image: /images/The-reading-tree.jpg
     title: The Reading Tree
   - image: /images/Wide-corridor.jpg
-    title: Wide Corridor
+    title: Wide Corridors
   - image: /images/Brand-new-campus-glimps.jpeg
     title: 'Glimpse of Our Brand New Campus '
   - image: /images/Learning-spaces.jpeg
