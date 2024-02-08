@@ -77,7 +77,7 @@ aroundTheCampus:
         physical fitness and a spirit of teamwork among our students.
 showcase:
   - image: /images/school-fieldtrip.jpg
-    title: Field Trip - Grade 1
+    title: Field Trip - Grade 1 - Bannerghatta National Park
   - image: /images/sports-day-2.jpg
     title: Founder's Trophy for the AY - 2023-24 - Agni House
   - image: /images/sports-day-5.jpg
