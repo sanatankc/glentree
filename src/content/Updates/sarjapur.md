@@ -2,7 +2,7 @@
 updates:
   - thumbnail: /images/graduation-day-3.jpg
     alt: graduation-day
-    title: Graduation Day - Grade 10
+    title: Glentree Academy Sarjapur Road - Graduation Day - Grade 10
     description: >-
       Grade 10 graduation day is a memorable occasion that encapsulates a mix of
       emotions – pride, nostalgia, excitement, and anticipation. It celebrates
