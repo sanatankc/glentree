@@ -9,17 +9,17 @@ updates:
     title: Field Trip - Grade 2
     description: >-
       Our Grade-2 Students were taken on an enthusiastic Field Trip - on the 6th
-      of February to Bannerghatta National Park. Field trips to Such National
-      Park offer a multifaceted studying revel in that promotes environmental
-      consciousness, connects students with nature, and inspires them to become
-      stewards of the environment. These stories contribute to the holistic
-      development of students and play a vital role in fostering sustainable
-      courting among humanity and the herbal world. The field experience at
-      Bannerghatta National Park has now not only sparked their creativity and
-      interest but also instilled a deep appreciation for the beauty and
-      significance of the natural world. With smiles on their faces and a
-      newfound experience of the marvel of their hearts, they eagerly look ahead
-      to their next journey inside the terrific outside.
+      of February 2024 to Bannerghatta National Park. Field trips to Such
+      National Park offer a multifaceted studying revel in that promotes
+      environmental consciousness, connects students with nature, and inspires
+      them to become stewards of the environment. These stories contribute to
+      the holistic development of students and play a vital role in fostering
+      sustainable courting among humanity and the herbal world. The field
+      experience at Bannerghatta National Park has now not only sparked their
+      creativity and interest but also instilled a deep appreciation for the
+      beauty and significance of the natural world. With smiles on their faces
+      and a newfound experience of the marvel of their hearts, they eagerly look
+      ahead to their next journey inside the terrific outside.
     publishedDate: 2024-02-08T18:30:00.000Z
   - thumbnail: /images/field-trip.jpg
     alt: field-trip
