@@ -61,6 +61,8 @@ aroundTheCampus:
         football, basketball, volleyball, yoga, taekwondo, and fostering
         physical fitness and a spirit of teamwork among our students.
 showcase:
+  - image: /images/health-and-hygiene-at-school.jpg
+    title: Health and Hygiene - Grade 1
   - image: /images/graduation-day-in-school.jpg
     title: Graduation Day - Grade 10
   - image: /images/sports-day (1).jpg
