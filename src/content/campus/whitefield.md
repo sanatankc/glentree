@@ -77,7 +77,7 @@ aroundTheCampus:
         physical fitness and a spirit of teamwork among our students.
 showcase:
   - image: /images/graduation-day-at-school-1.jpg
-    title: Glentree Academy Whitefield - Graduation Day - Grade 10
+    title: Graduation Day - Grade 10
   - image: /images/SOF-IOE-medal-winners-at-school.jpg
     title: International English Olympiad Medal Winners
   - image: /images/field-trip-of-schools-in-whitefield-2.jpg
