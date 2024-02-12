@@ -76,6 +76,8 @@ aroundTheCampus:
         football, basketball, volleyball, yoga, taekwondo, and fostering
         physical fitness and a spirit of teamwork among our students.
 showcase:
+  - image: /images/SOF-IOE-medal-winners-at-school.jpg
+    title: International English Olympiad Medal Winners
   - image: /images/field-trip-of-schools-in-whitefield-2.jpg
     title: Field Trip - Grade 2 - Bannerghatta National Park
   - image: /images/school-fieldtrip.jpg
