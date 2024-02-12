@@ -1,5 +1,19 @@
 ---
 updates:
+  - thumbnail: /images/health-and-hygiene-at-schools.jpg
+    alt: health-and-hygiene
+    title: Health and Hygiene - Grade 1
+    description: >-
+      Grade – 1 students presented a Health and Hygiene themed special assembly.
+      Health is all about being strong, happy and energized! We should look
+      after our physique to remain healthy. Biting into delicious fruit and
+      vegetables, having water to drink, and enough rest make our bodies robust
+      and always ready! Our students addressed these practices through the mode
+      of speeches which were further entertained by the addition of dances and
+      skits. Students organized a Simon Says game to reinforce the main ideas
+      and the audience followed instructions concerning the importance of health
+      and hygiene.
+    publishedDate: 2024-02-11T18:30:00.000Z
   - thumbnail: /images/graduation-day-3.jpg
     alt: graduation-day
     title: Glentree Academy Sarjapur Road - Graduation Day - Grade 10
