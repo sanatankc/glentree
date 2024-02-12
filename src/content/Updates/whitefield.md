@@ -4,6 +4,29 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/GAW_Award.jpg
+    alt: international-english-olympiad-medal-winners
+    title: International English Olympiad Medal Winners
+    description: >-
+      Glentree Academy proudly honoured the exceptional achievers of the
+      International English Olympiad (IEO) during the felicitation ceremony held
+      on Friday, February 2nd, 2024! Congratulations to our brilliant students
+      for their outstanding performance in this esteemed competition! These
+      champions have demonstrated not only linguistic prowess but also critical
+      thinking skills, creativity, and the ability to effectively communicate
+      ideas across cultural and linguistic barriers. Their success serves as an
+      inspiration, encouraging them to strive for excellence and pursue their
+      linguistic goals with determination. English proficiency is not just a
+      skill; it's a gateway to endless possibilities, facilitating effective
+      communication across borders and cultures. As we recognize these
+      achievements, let's underscore the importance of mastering the English
+      language in today's interconnected world. At Glentree, we're committed to
+      nurturing language skills that empower our students to thrive in a
+      globalized society. Let's continue to inspire a passion for learning
+      English, fostering confidence and competence in our students' linguistic
+      abilities. Together, let's celebrate the triumphs of our IEO winners and
+      encourage all students to pursue excellence in language education.
+    publishedDate: 2024-02-11T18:30:00.000Z
   - thumbnail: /images/field-trip-of-schools-in-whitefield.jpg
     alt: field-trip-of-schools-in-whitefield
     title: Field Trip - Grade 2
