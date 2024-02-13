@@ -4,6 +4,46 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/GAW_Award.jpg
+    alt: international-english-olympiad-medal-winners
+    title: International English Olympiad Medal Winners
+    description: >-
+      Glentree Academy proudly honoured the exceptional achievers of the
+      International English Olympiad (IEO) during the felicitation ceremony held
+      on Friday, February 2nd, 2024! Congratulations to our brilliant students
+      for their outstanding performance in this esteemed competition! These
+      champions have demonstrated not only linguistic prowess but also critical
+      thinking skills, creativity, and the ability to effectively communicate
+      ideas across cultural and linguistic barriers. Their success serves as an
+      inspiration, encouraging them to strive for excellence and pursue their
+      linguistic goals with determination. English proficiency is not just a
+      skill; it's a gateway to endless possibilities, facilitating effective
+      communication across borders and cultures. As we recognize these
+      achievements, let's underscore the importance of mastering the English
+      language in today's interconnected world. At Glentree, we're committed to
+      nurturing language skills that empower our students to thrive in a
+      globalized society. Let's continue to inspire a passion for learning
+      English, fostering confidence and competence in our students' linguistic
+      abilities. Together, let's celebrate the triumphs of our IEO winners and
+      encourage all students to pursue excellence in language education.
+    publishedDate: 2024-02-11T18:30:00.000Z
+  - thumbnail: /images/field-trip-of-schools-in-whitefield.jpg
+    alt: field-trip-of-schools-in-whitefield
+    title: Field Trip - Grade 2
+    description: >-
+      Our Grade-2 Students were taken on an enthusiastic Field Trip - on the 6th
+      of February 2024 to Bannerghatta National Park. Field trips to Such
+      National Park offer a multifaceted studying revel in that promotes
+      environmental consciousness, connects students with nature, and inspires
+      them to become stewards of the environment. These stories contribute to
+      the holistic development of students and play a vital role in fostering
+      sustainable courting among humanity and the herbal world. The field
+      experience at Bannerghatta National Park has now not only sparked their
+      creativity and interest but also instilled a deep appreciation for the
+      beauty and significance of the natural world. With smiles on their faces
+      and a newfound experience of the marvel of their hearts, they eagerly look
+      ahead to their next journey inside the terrific outside.
+    publishedDate: 2024-02-08T18:30:00.000Z
   - thumbnail: /images/field-trip.jpg
     alt: field-trip
     title: Field Trip - Grade 1

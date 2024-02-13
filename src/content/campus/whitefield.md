@@ -76,6 +76,14 @@ aroundTheCampus:
         football, basketball, volleyball, yoga, taekwondo, and fostering
         physical fitness and a spirit of teamwork among our students.
 showcase:
+  - image: /images/graduation-day-at-school-1.jpg
+    title: Graduation Day - Grade 10
+  - image: /images/SOF-IOE-medal-winners-at-school.jpg
+    title: International English Olympiad Medal Winners
+  - image: /images/field-trip-of-schools-in-whitefield-2.jpg
+    title: Field Trip - Grade 2 - Bannerghatta National Park
+  - image: /images/school-fieldtrip.jpg
+    title: Field Trip - Grade 1 - Bannerghatta National Park
   - image: /images/sports-day-2.jpg
     title: Founder's Trophy for the AY - 2023-24 - Agni House
   - image: /images/sports-day-5.jpg
