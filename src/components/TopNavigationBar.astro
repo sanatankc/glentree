@@ -114,7 +114,7 @@ const { hideMenu = false, applyNowButtonId = null } = Astro.props
 ---
 
 <div class="w-full fixed z-[99]">
-  <div class="py-2 max-md:pt-2 max-md:pb-0 w-full max-md:px-2 transition-all bg-black menu-bar max-md:[&.active]:bg-[#fff6ea] px-12 text-white hidden max-md:flex flex-row items-center justify-between max-md:flex-col max-md:gap-3">
+  <div class="py-2 max-md:pt-2 max-md:pb-0 w-full relative z-20 max-md:px-2 transition-all bg-black menu-bar max-md:[&.active]:bg-[#fff6ea] px-12 text-white hidden max-md:flex flex-row items-center justify-between max-md:flex-col max-md:gap-3">
     <div class="flex flex-row justify-between max-md:px-4 max-md:py-1 max-md:w-full gap-6">
       
       <Text type="sm" class="font-bold max-md:text-[15px] max-md:hidden">Admissions Open</Text>
@@ -160,7 +160,7 @@ const { hideMenu = false, applyNowButtonId = null } = Astro.props
     </div>
   </div>
   <header
-    class="w-screen bg-black/80 py-1 px-14 max-md:px-5 box-border flex flex-row justify-between items-center backdrop-blur-md"
+    class="w-screen relative bg-black/80 py-1 px-14 max-md:px-5 box-border flex flex-row justify-between items-center backdrop-blur-md"
   >
     {hideMenu ? (
       <div class="relative z-10 daisy daisy-fixed daisy-1">
@@ -290,7 +290,7 @@ const { hideMenu = false, applyNowButtonId = null } = Astro.props
     
       </div>
       <div
-        class="mobileMenu absolute top-0 left-0 w-screen h-screen bg-black flex flex-col pt-20 overflow-scroll"
+        class="mobileMenu absolute top-[0px] left-0 w-screen h-screen bg-black flex flex-col pt-[90px] overflow-scroll"
         class="max-md:visible hidden"
       >
         {
