@@ -4,6 +4,23 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/graduation-day-at-schools.jpg
+    alt: graduation-day-at-schools
+    title: Glentree Academy Whitefield - Graduation Day - Grade 10
+    description: >-
+      The Grade -10 Graduation Day becomes the most memorable day with various
+      emotions for every Student.  On February 10, 2024, Glentree Academy
+      Whitefied hosted a graduation ceremony at the school campus. It provides
+      an occasion to appreciate student achievement, and boast of teachers’
+      dedication.  The families of our grade 10 students gathered to witness and
+      celebrate the event of our graduating class. One of the most iconic
+      elements of any graduation ceremony is the traditional cap and gown.
+      Students proudly don these symbols of achievement, signifying the end of
+      one chapter and the beginning of another. As graduates move forward, they
+      carry with them the lessons learned, friendships made, and the promise of
+      a bright and promising future. We wish all of our lovely Students Good
+      luck for all their future endeavours.
+    publishedDate: 2024-02-12T18:30:00.000Z
   - thumbnail: /images/GAW_Award.jpg
     alt: international-english-olympiad-medal-winners
     title: International English Olympiad Medal Winners
