@@ -1,6 +1,6 @@
 ---
 titleTag: >-
-  Mandatory Public Disclosure Sarjapur | Best CBSE School in Bangalore |
+  Mandatory Public Disclosure Sarjapur Road | Best CBSE School in Bangalore |
   Glentree Academy School
 disclosure:
   - title: Primary & Secondary
