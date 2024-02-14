@@ -2,6 +2,9 @@
 titleTag: >-
   Mandatory Public Disclosure Sarjapur Road | Best CBSE School in Bangalore |
   Glentree Academy School
+metaDescription: >-
+  Glentree Academy Sarjapur Road school is affiliated to CBSE. It is ranked
+  amongst the top CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 disclosure:
   - title: Primary & Secondary
     disclosure: |
