@@ -7,8 +7,8 @@ metaDescription: >-
 bannerBg: /images/gaw-school.jpg
 title: Glentree Academy - Whitefield
 description: A sprawling green campus within the heart of the city.
-virtualCampusLink: >-
-  https://www.google.com/maps/@12.9655167,77.7350299,3a,75y,331.03h,78.94t/data=!3m6!1e1!3m4!1sAF1QipP0Xik14EKwv1ca-GomAFI6LTFW--HUlNO-SRCR!2e10!7i10676!8i5338?hl=en-US&entry=ttu
+virtualCampusLink: https://tourmkr.com/F137l2R3Fg
+campusTourEmbedId: X6i2KspwIP8
 affiliationNo: '830349'
 aroundTheCampus:
   description: >-

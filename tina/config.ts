@@ -479,9 +479,14 @@ export default defineConfig({
             type: "string",
             name: "virtualCampusLink",
             label: "VirtualCampusLink",
-            required: true,
+            required: false,
           },
-         
+          {
+            type: "string",
+            name: "campusTourEmbedId",
+            label: "Campus Tour Video (Embed Id)",
+            required: false,
+          }, 
           {
             type: "string",
             name: "affiliationNo",

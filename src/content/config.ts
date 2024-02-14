@@ -12,6 +12,7 @@ const campusCollection = defineCollection({
       })
     ).optional(),
     title: z.string().optional(),
+    campusTourEmbedId: z.string().optional(),
     titleTag: z.string().optional(),
     metaDescription: z.string().optional(),
     description: z.string().optional(),

@@ -95,6 +95,7 @@ import ContactUs from '../components/campus/contactUs.astro';
 import DeckCard from '../components/DeckCard.astro';
 import DeckCardWithGallery from '../components/DeckCardWithGallery.astro';
 import CampusFacilities from '../components/campusFacilities.astro';
+import YoutubeEmbed from '../components/YoutubeEmbed.astro';
 
 
 if (!allowedCampusNames.includes(campusName)) {
@@ -293,6 +294,7 @@ const campusSeoName = {
               data={{
                 title: aroundTheCampus?.description,
                 description: aroundTheCampus?.bulletPoints?.map(({ bulletPoint }) => bulletPoint),
+                campusTourEmbedId: data?.campusTourEmbedId,
                 gallery: aroundTheCampus?.gallery?.map(({ image, title, description, altTag }) => ({
                   src: image,
                   caption: title,
@@ -359,7 +361,7 @@ const campusSeoName = {
               <Text type={'h2'} class={'mt-3 leading-9'}>From the Principal</Text>
               {campus.leaderMessage && (campus.leaderMessage.map((message => (
                 <div class='flex flex-row max-md:flex-col max-md:items-start mt-12 items-center'>
-                  <Image src={message.image} alt="leader image"  class='w-[360px] h-[322px] max-md:w-full max-md:h-auto max-md:max-w-[400px] object-cover rounded-3xl' />
+                  <Image src={message.image} alt="leader image"  class='w-[360px] h-[322px] max-md:w-full max-md:h-auto max-md:max-w-[400px] object-cover rounded-3xl' width={500} />
                   <div class='ml-16 max-md:ml-0 max-md:mt-4'>
                     <Text type={'regular'} class='uppercase text-white/80'>
                       {message.role}
@@ -387,6 +389,9 @@ const campusSeoName = {
         </div>
       </div>
     </main>
+    {data.campusTourEmbedId && (
+      <YoutubeEmbed embedId={data.campusTourEmbedId} videoId='campusTourVideo' />
+    )}
   </Layout>
 )}
 
