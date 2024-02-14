@@ -78,8 +78,6 @@ aroundTheCampus:
 showcase:
   - image: /images/graduation-day-at-school-1.jpg
     title: Graduation Day - Grade 10
-  - image: /images/SOF-IOE-medal-winners-at-school.jpg
-    title: International English Olympiad Medal Winners
   - image: /images/field-trip-of-schools-in-whitefield-2.jpg
     title: Field Trip - Grade 2 - Bannerghatta National Park
   - image: /images/school-fieldtrip.jpg
