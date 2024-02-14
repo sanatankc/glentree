@@ -4,29 +4,23 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
-  - thumbnail: /images/GAW_Award.jpg
-    alt: international-english-olympiad-medal-winners
-    title: International English Olympiad Medal Winners
+  - thumbnail: /images/graduation-day-at-schools.jpg
+    alt: graduation-day-at-schools
+    title: Glentree Academy Whitefield - Graduation Day - Grade 10
     description: >-
-      Glentree Academy proudly honoured the exceptional achievers of the
-      International English Olympiad (IEO) during the felicitation ceremony held
-      on Friday, February 2nd, 2024! Congratulations to our brilliant students
-      for their outstanding performance in this esteemed competition! These
-      champions have demonstrated not only linguistic prowess but also critical
-      thinking skills, creativity, and the ability to effectively communicate
-      ideas across cultural and linguistic barriers. Their success serves as an
-      inspiration, encouraging them to strive for excellence and pursue their
-      linguistic goals with determination. English proficiency is not just a
-      skill; it's a gateway to endless possibilities, facilitating effective
-      communication across borders and cultures. As we recognize these
-      achievements, let's underscore the importance of mastering the English
-      language in today's interconnected world. At Glentree, we're committed to
-      nurturing language skills that empower our students to thrive in a
-      globalized society. Let's continue to inspire a passion for learning
-      English, fostering confidence and competence in our students' linguistic
-      abilities. Together, let's celebrate the triumphs of our IEO winners and
-      encourage all students to pursue excellence in language education.
-    publishedDate: 2024-02-11T18:30:00.000Z
+      The Grade -10 Graduation Day becomes the most memorable day with various
+      emotions for every Student.  On February 10, 2024, Glentree Academy
+      Whitefied hosted a graduation ceremony at the school campus. It provides
+      an occasion to appreciate student achievement, and boast of teachers’
+      dedication.  The families of our grade 10 students gathered to witness and
+      celebrate the event of our graduating class. One of the most iconic
+      elements of any graduation ceremony is the traditional cap and gown.
+      Students proudly don these symbols of achievement, signifying the end of
+      one chapter and the beginning of another. As graduates move forward, they
+      carry with them the lessons learned, friendships made, and the promise of
+      a bright and promising future. We wish all of our lovely Students Good
+      luck for all their future endeavours.
+    publishedDate: 2024-02-12T18:30:00.000Z
   - thumbnail: /images/field-trip-of-schools-in-whitefield.jpg
     alt: field-trip-of-schools-in-whitefield
     title: Field Trip - Grade 2

@@ -1,7 +1,10 @@
 ---
 titleTag: >-
-  Mandatory Public Disclosure | Best CBSE School in Bangalore | Glentree Academy
-  School
+  Mandatory Public Disclosure Whitefield | Best CBSE School in Bangalore |
+  Glentree Academy School
+metaDescription: >-
+  Glentree Academy Whitefield school is affiliated to CBSE. It is ranked amongst
+  the top CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 disclosure:
   - title: 'Declaration Letter to CBSE for Deficiencies - Compliance Report    '
     disclosure: >

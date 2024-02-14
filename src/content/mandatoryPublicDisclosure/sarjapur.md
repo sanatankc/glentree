@@ -1,5 +1,10 @@
 ---
-titleTag: Mandatory Public Disclosure | Best CBSE School in Bangalore | Glentree Academy School
+titleTag: >-
+  Mandatory Public Disclosure Sarjapur Road | Best CBSE School in Bangalore |
+  Glentree Academy School
+metaDescription: >-
+  Glentree Academy Sarjapur Road school is affiliated to CBSE. It is ranked
+  amongst the top CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 disclosure:
   - title: Primary & Secondary
     disclosure: |
@@ -62,8 +67,8 @@ disclosure:
   - title: Building Safety Certificate
     disclosure: >
       [VIEW
-      HERE](<https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/Building
-      Safety Certificate 2023.pdf> "gas-safetyCertificate.pdf")
+      HERE](https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/Building%20Safety%20Certificate%202023.pdf
+      "gas-safetyCertificate.pdf")
   - title: Admission Period
     disclosure: |
       October to April
