@@ -3,14 +3,26 @@ titleTag: Best CBSE Schools in Sarjapur Road | Glentree Academy
 metaDescription: >-
   Experience academic brilliance and nurturing environments at the best CBSE
   schools in Sarjapur Road, fostering a love for learning.
-imageHero: /images/gas-school.jpeg
-imageHeroAlt: Sarjapur School
 titleHero: |
   Glentree Academy - Sarjapur Road
 descriptionHero: |
   Centrally located in the IT Corridor of Bengaluru
+imageHero: /images/gas-school.jpeg
+imageHeroAlt: Sarjapur School
 virtualCampusLink: >-
   https://www.google.com/maps/place/Glentree+Academy+%7C+Sarjapur+Road/@12.8977869,77.685075,3a,75y,40h,90t/data=!3m8!1e1!3m6!1sAF1QipMsMZhGdx_yVOtQmfHLZylZSCsbMukrLDnCoiRB!2e10!3e11!6shttps:%2F%2Flh5.googleusercontent.com%2Fp%2FAF1QipMsMZhGdx_yVOtQmfHLZylZSCsbMukrLDnCoiRB%3Dw224-h298-k-no-pi-0-ya123.074-ro-0-fo100!7i10744!8i5372!4m23!1m13!4m12!1m4!2m2!1d77.6699904!2d12.9162376!4e1!1m6!1m2!1s0x3bae133b85c0a5c9:0xfb6b527d7c9d4f4f!2sglentree+academy+sarjapur!2m2!1d77.6848375!2d12.8976944!3m8!1s0x3bae133b85c0a5c9:0xfb6b527d7c9d4f4f!8m2!3d12.8976944!4d77.6848375!10e5!14m1!1BCgIgARICCAI!16s%2Fg%2F11f03_4kl3?entry=ttu
+principalMessage:
+  sectionSubtitle: OUR LEADER
+  sectionTitle: From the Principal
+  principalName: Mrs. Nandita Sinha
+  principalImage: /images/_image-4.webp
+  principalImageAlt: Principal Sarjapur
+  principalMessage: >
+    Glentree's motto is "Never stop learning because life never stops teaching."
+    We aim to develop students' IQ, EQ, and SQ, encouraging self-learning and
+    providing transformative experiences. We strive to mold late bloomers,
+    mediocre, and gifted students to become global citizens through an
+    innovative and enlightened education.
 affiliationNo: '831088'
 aroundTheCampus:
   description: >-
@@ -63,7 +75,19 @@ aroundTheCampus:
         recreational activities, including chess, badminton, table tennis,
         football, basketball, volleyball, yoga, taekwondo, and fostering
         physical fitness and a spirit of teamwork among our students.
+newsLetter:
+  subtitle: STAY UP TO DATE WITH
+  title: "## Our Newsletter:\_<span>Glentree Express</span>\n"
+  description: >
+    Unlock a world of school updates and student stories by entering your email
+    to access our latest newsletter—and enjoy seamless subscription for future
+    issues!
+  image: /images/_image-2.webp
+  imageAlt: News Letter
+  newsLetter: /images/newsletter1.pdf
 showcase:
+  - image: /images/world-water-day.jpg
+    title: Special Assembly - World Water Day - Grade 1
   - image: /images/health-and-hygiene-at-school.jpg
     title: Health and Hygiene - Grade 1
   - image: /images/graduation-day-in-school.jpg
@@ -142,30 +166,5 @@ contactUs:
     No.36/5, Halanayakanahalli,Varthur Hobli Bengaluru East Taluk,Bengaluru,
     Karnataka 560035
   workingHours: 'Monday to Saturday - 8:00 AM to 4:00 PM'
-newsLetter:
-  subtitle: STAY UP TO DATE WITH
-  title: "## Our Newsletter:\_<span>Glentree Express</span>\n"
-  description: >
-    Unlock a world of school updates and student stories by entering your email
-    to access our latest newsletter—and enjoy seamless subscription for future
-    issues!
-  image: /images/_image-2.webp
-  imageAlt: News Letter
-  newsLetter: /images/newsletter1.pdf
-principalMessage:
-  sectionSubtitle: OUR LEADER
-  sectionTitle: From the Principal
-  principalName: Mrs. Nandita Sinha
-  principalImage: /images/_image-4.webp
-  principalImageAlt: Principal Sarjapur
-  principalMessage: >
-    Glentree's motto is "Never stop learning because life never stops teaching."
-    We aim to develop students' IQ, EQ, and SQ, encouraging self-learning and
-    providing transformative experiences. We strive to mold late bloomers,
-    mediocre, and gifted students to become global citizens through an
-    innovative and enlightened education.
 ---
-
-
-
 
