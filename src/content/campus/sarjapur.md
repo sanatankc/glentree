@@ -86,6 +86,8 @@ newsLetter:
   imageAlt: News Letter
   newsLetter: /images/newsletter1.pdf
 showcase:
+  - image: /images/world-water-day-at-schools-in-sarjapur-road.jpg
+    title: Special Assembly - World Water Day - Grade 5
   - image: /images/world-water-day.jpg
     title: Special Assembly - World Water Day - Grade 1
   - image: /images/health-and-hygiene-at-school.jpg
