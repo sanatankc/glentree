@@ -1,5 +1,19 @@
 ---
 updates:
+  - thumbnail: /images/world-water-day-post.jpg
+    alt: world-water-day
+    title: Special Assembly - World Water Day - Grade 1 and Grade 5
+    description: >-
+      World Water Day is celebrated on March 22 of every year. Grade 1 and Grade
+      5 students of Glentree Academy, Sarjapur performed a special assembly
+      focusing on the same topic through prayers, speeches, songs, and a dance
+      that emphasized clean water conservation to show the relevance of ensuring
+      sustainable water resources. The aim is to motivate the people world over
+      to learn more about water-related topics and take appropriate actions to
+      contribute to the solutions. The fact that students took part in such
+      activities showed their dedication to the protection of the environment
+      and a promise for a better world for future generations.
+    publishedDate: 2024-02-18T18:30:00.000Z
   - thumbnail: /images/health-and-hygiene-at-schools.jpg
     alt: health-and-hygiene
     title: Health and Hygiene - Grade 1
