@@ -2,6 +2,33 @@ import { defineConfig } from "tinacms";
 // Your hosting provider likely exposes this as an environment variable
 const branch = process.env.HEAD || process.env.VERCEL_GIT_COMMIT_REF || "main";
 
+
+const heroSection = [
+  {
+    type: "rich-text",
+    name: "titleHero",
+    required: false,
+    label: "Title (Hero Section)",
+  },
+  {
+    type: "rich-text",
+    name: "descriptionHero",
+    required: false,
+    label: "Description (Hero Section)",
+  },
+  {
+    type: 'image',
+    required: false,
+    name: 'imageHero',
+    label: 'Hero Image',
+  },
+  {
+    type: 'string',
+    required: false,
+    name: 'imageHeroAlt',
+    label: 'Hero Image Alt Tag',
+  },
+]
 export default defineConfig({
   branch,
   clientId: "8b588526-21ee-4f45-b047-bac58fdad52f", // Get this from tina.io
@@ -44,6 +71,38 @@ export default defineConfig({
             type: "rich-text",
             name: "title",
             label: "Title",
+          },
+          {
+            type: 'object',
+            name: 'whyGlentree',
+            label: 'Why Glentree',
+            fields: [
+              {
+                type: 'string',
+                name: 'subtitle',
+                label: 'Subtitle',
+              },
+              {
+                type: 'string',
+                name: 'title',
+                label: 'Title',
+              },
+              {
+                type: 'rich-text',
+                name: 'description',
+                label: 'Description',
+              },
+              {
+                type: 'image',
+                name: 'image',
+                label: 'Image',
+              },
+              {
+                type: 'string',
+                name: 'imageAlt',
+                label: 'Image Alt Tag',
+              },
+            ],
           },
           {
             type: 'object',
@@ -185,6 +244,24 @@ export default defineConfig({
         ]
       },
       {
+        name: 'about',
+        label: "About Us",
+        path: "src/content/about",
+        fields: [
+          {
+            type: 'string',
+            name: 'titleTag',
+            label: 'Title Tag',
+          },
+          {
+            type: 'string',
+            name: 'metaDescription',
+            label: 'Meta Description',
+          },
+          ...heroSection,
+        ]
+      },
+      {
         name: 'curriculum',
         label: 'Curriculum',
         path: 'src/content/curriculum',
@@ -199,6 +276,7 @@ export default defineConfig({
             name: 'metaDescription',
             label: 'Description Tag',
           },
+          ...heroSection,
           {
             type: 'object',
             list: true,
@@ -272,6 +350,7 @@ export default defineConfig({
             name: 'metaDescription',
             label: 'Meta Description',
           },
+          ...heroSection,
           {
             type: 'object',
             list: true,
@@ -322,6 +401,7 @@ export default defineConfig({
             name: 'metaDescription',
             label: 'Meta Description',
           },
+          ...heroSection,
           {
             type: 'object',
             list: true,
@@ -372,6 +452,7 @@ export default defineConfig({
             name: 'metaDescription',
             label: 'Meta Description',
           },
+          ...heroSection,
           {
             type: 'object',
             list: true,
@@ -422,6 +503,7 @@ export default defineConfig({
             name: 'metaDescription',
             label: 'Meta Description',
           },
+          ...heroSection,
           {
             type: 'object',
             name: 'heroImages',
@@ -459,27 +541,47 @@ export default defineConfig({
             ],
           },
           {
-            type: "image",
-            name: "bannerBg",
-            label: "Banner Image",
-          },
-          {
-            type: "string",
-            name: "title",
-            label: "Title",
-            required: true,
-          },
-          {
-            type: "string",
-            name: "description",
-            label: "Description",
-            required: true,
-          },
-          {
             type: "string",
             name: "virtualCampusLink",
             label: "VirtualCampusLink",
             required: false,
+          },
+          {
+            type: 'object',
+            name: 'principalMessage',
+            label: 'Principal Message',
+            fields: [
+              {
+                type: 'string',
+                label: 'Section Subtitle',
+                name: 'sectionSubtitle',
+              },
+              {
+                type: 'string',
+                label: 'Section Title',
+                name: 'sectionTitle',
+              },
+              {
+                type: 'string',
+                label: 'Principal Name',
+                name: 'principalName',
+              },
+              {
+                type: 'image',
+                label: 'Principal Image',
+                name: 'principalImage',
+              },
+              {
+                type: 'string',
+                label: 'Principal Image Alt Tag',
+                name: 'principalImageAlt',
+              },
+              {
+                type: 'rich-text',
+                label: 'Principal Message',
+                name: 'principalMessage',
+              },
+            ]
           },
           {
             type: "string",
@@ -538,6 +640,44 @@ export default defineConfig({
                   { type: "string", name: "title", label: "Title" },
                   { type: "string", name: "description", label: "Description" },
                 ]
+              },
+            ],
+          },
+
+          {
+            type: 'object',
+            name: 'newsLetter',
+            label: 'NewsLetter',
+            fields: [
+              {
+                type: 'string',
+                name: 'subtitle',
+                label: 'Subtitle',
+              },
+              {
+                type: 'string',
+                name: 'title',
+                label: 'Title',
+              },
+              {
+                type: 'rich-text',
+                name: 'description',
+                label: 'Description',
+              },
+              {
+                type: 'image',
+                name: 'image',
+                label: 'Image',
+              },
+              {
+                type: 'string',
+                name: 'imageAlt',
+                label: 'Image Alt Tag',
+              },
+              {
+                type: 'image',
+                name: 'newsLetter',
+                label: 'News Letter',
               },
             ],
           },
@@ -602,6 +742,7 @@ export default defineConfig({
             name: 'metaDescription',
             label: 'Meta Description',
           },
+          ...heroSection,
           {
             type: 'object',
             list: true,

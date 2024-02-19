@@ -107,6 +107,7 @@ if (!allowedCampusNames.includes(campusName)) {
   })
 }
 
+const principalMessage = data.principalMessage
 const aroundTheCampus = data?.aroundTheCampus
 const campusData = {
   whitefield: {
@@ -208,6 +209,20 @@ const campusSeoName = {
   whitefield: 'Whitefield, Bangalore',
   sarjapur: 'Sarjapur Road, Bangalore',
 }
+
+import { marked } from 'marked'
+const {
+  titleHero,
+  descriptionHero,
+  imageHero,
+  imageHeroAlt
+} = data
+const titleHeroParsed = marked(titleHero)
+const descriptionHeroParsed = marked(descriptionHero)
+
+const principalMessageParsed =  marked(principalMessage?.principalMessage)
+
+console.log('principalMessage --> ', principalMessage)
 ---
 
 {allowedCampusNames.includes(campusName) && (
@@ -227,12 +242,35 @@ const campusSeoName = {
           <TopNavigationBar />
           <div class='h-[88px] w-full bg-black'>
           </div>
-          <div class='min-h-[490px] max-h-[350px] w-full flex justify-end bg-cover bg-center p-[30px] items-center flex-col max-md:min-h-[350px]' style={{
+        <div class='relative min-h-[490px] max-h-[350px] w-full flex justify-end bg-cover bg-center p-[30px] items-center flex-col max-md:min-h-[350px]' style={{
           backgroundImage: `linear-gradient(180deg, rgba(18, 18, 18, 0.00) 40.1%, rgba(0, 0, 0, 0.70) 100%), url(${data.bannerBg})`,
           }}>
-            <Text type={'h1Sm'} class='mt-14 max-md:mt-10 text-center'>{data.title}</Text>
-            <Text type={'base'} class='mt-3 text-center max-md:w-[90%]' >{data.description}</Text>
+          <div class="absolute top-0 left-0 w-full h-full z-10">
+            <Image 
+              src={imageHero} 
+              alt={imageHeroAlt}
+              class='w-full h-full object-cover object-top'
+              style={{
+                objectPosition: '95% 60%',
+                objectFit: 'cover'
+              }}
+              width={1440} height={600}
+            />
+          </div>
+
+          <div class="absolute top-0 left-0 w-full h-full z-20" style={{
+            background: `linear-gradient(180deg, rgba(18, 18, 18, 0.00) 3.1%, rgba(0, 0, 0, 0.60) 100%)`,
+          }}>
+          </div>
+          <div class="absolute top-0 left-0 w-full h-full flex justify-end p-[30px] items-center flex-col z-30">
+            <Text type={'h1Sm'} class='mt-14 max-md:mt-10 z-30'>
+              <div set:html={titleHeroParsed} />
+            </Text>
+            <Text type={'base'} class='mt-3 text-center max-md:w-[90%]' >
+              <div set:html={descriptionHeroParsed} />
+            </Text>
             <Text type={'sm'} class='mt-3 text-center max-md:w-[90%]' >Permanent Affiliation No: {data.affiliationNo}</Text>  
+          </div>
           </div>
 
           <AdmissionMarquee />
@@ -357,25 +395,23 @@ const campusSeoName = {
             background: 'linear-gradient(180deg, #3C674F 0%, #23623F 51.08%, #0A5E2F 100%)',
           }}>
             <Constrain>
-              <Text type={'subtitle'}>OUR LEADER</Text>
-              <Text type={'h2'} class={'mt-3 leading-9'}>From the Principal</Text>
-              {campus.leaderMessage && (campus.leaderMessage.map((message => (
-                <div class='flex flex-row max-md:flex-col max-md:items-start mt-12 items-center'>
-                  <Image src={message.image} alt="leader image"  class='w-[360px] h-[322px] max-md:w-full max-md:h-auto max-md:max-w-[400px] object-cover rounded-3xl' width={500} />
-                  <div class='ml-16 max-md:ml-0 max-md:mt-4'>
-                    <Text type={'regular'} class='uppercase text-white/80'>
-                      {message.role}
-                    </Text>
-                    <Text type={'lg'} class='mt-1'>
-                      {message.name}
-                    </Text>
-                    <Text type={'base'} class='mt-4 leading-relaxed' set:html={message.body}>
-                   
-                    </Text>
-                  </div>
+              <Text type={'subtitle'}>{principalMessage?.sectionSubtitle}</Text>
+              <Text type={'h2'} class={'mt-3 leading-9'}>{principalMessage?.sectionTitle}</Text>
+
+              <div class='flex flex-row max-md:flex-col max-md:items-start mt-12 items-center'>
+                <Image src={principalMessage?.principalImage} alt={principalMessage?.principalImageAlt || 'Principal'} width={360} height={322}  class='w-[360px] h-[322px] max-md:w-full max-md:h-auto max-md:max-w-[400px] object-cover rounded-3xl' width={500} />
+                <div class='ml-16 max-md:ml-0 max-md:mt-4'>
+                  <Text type={'regular'} class='uppercase text-white/80'>
+                    PRINCIPAL
+                  </Text>
+                  <Text type={'lg'} class='mt-1'>
+                    {principalMessage?.principalName}
+                  </Text>
+                  <Text type={'base'} class='mt-4 leading-relaxed' set:html={principalMessageParsed}>
+                  
+                  </Text>
                 </div>
-              )))
-              )}
+              </div>
             </Constrain>
   
           </div>

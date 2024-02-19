@@ -1,5 +1,22 @@
 import { z, defineCollection } from 'astro:content';
 
+
+const heroSection = {
+  titleHero: z.string().optional(),
+  descriptionHero: z.string().optional(),
+  imageHero: z.string().optional(),
+  imageHeroAlt: z.string().optional(),
+};
+
+const aboutUs = defineCollection({
+  type: 'content',
+  schema: () => z.object({
+    titleTag: z.string().optional(),
+    metaDescription: z.string().optional(),
+    ...heroSection,
+  }),
+});
+
 const campusCollection = defineCollection({
   type: 'content', 
   schema: ({image}) => z.object({
@@ -11,11 +28,26 @@ const campusCollection = defineCollection({
         position: z.string(),
       })
     ).optional(),
-    title: z.string().optional(),
     campusTourEmbedId: z.string().optional(),
     titleTag: z.string().optional(),
     metaDescription: z.string().optional(),
-    description: z.string().optional(),
+    ...heroSection,
+    newsLetter: z.object({
+      title: z.string().optional(),
+      subtitle: z.string().optional(),
+      description: z.string().optional(),
+      image: z.string().optional(),
+      imageAlt: z.string().optional(),
+      newsLetter: z.string().optional(),
+    }).optional(),
+    principalMessage: z.object({
+      sectionSubtitle: z.string().optional(),
+      sectionTitle: z.string().optional(),
+      principalName: z.string().optional(),
+      principalMessage: z.string().optional(),
+      principalImage: z.string().optional(),
+      principalImageAlt: z.string().optional(),
+    }).optional(),
     bannerBg: z.string().optional(),
     virtualCampusLink: z.string().optional(),
     galleryImages: z.any().optional(),
@@ -78,6 +110,13 @@ const homeCollection = defineCollection({
       primaryCTALink: z.string().optional(),
       secondaryCTALink: z.string().optional(),
       secondaryCTAText: z.string().optional(),
+    }).optional(),
+    whyGlentree: z.object({
+      title: z.string().optional(),
+      subtitle: z.string().optional(),
+      description: z.string().optional(),
+      image: z.string().optional(),
+      imageAlt: z.string().optional(),
     }).optional(),
     faqs: z.array(
       z.object({
@@ -151,6 +190,7 @@ const curriculumCollection = defineCollection({
   schema: () => z.object({
     titleTag: z.string(),
     metaDescription: z.string(),
+    ...heroSection,
     academics: z.array(
       z.object({
         title: z.string(),
@@ -173,6 +213,7 @@ const afterschoolCollection = defineCollection({
   schema: () => z.object({
     titleTag: z.string(),
     metaDescription: z.string(),
+    ...heroSection,
     afterschool: z.array(
       z.object({
         title: z.string(),
@@ -190,6 +231,7 @@ const clubsCollection = defineCollection({
   schema: () => z.object({
     titleTag: z.string(),
     metaDescription: z.string(),
+    ...heroSection,
     clubs: z.array(
       z.object({
         title: z.string(),
@@ -206,6 +248,7 @@ const coscholasticsCollection = defineCollection({
   schema: () => z.object({
     titleTag: z.string(),
     metaDescription: z.string(),
+    ...heroSection,
     coscholastics: z.array(
       z.object({
         title: z.string(),
@@ -223,6 +266,7 @@ const admissionsCollection = defineCollection({
   schema: () => z.object({
     titleTag: z.string(),
     metaDescription: z.string(),
+    ...heroSection,
     admissionProcess: z.array(
       z.object({
         title: z.string(),
@@ -253,4 +297,5 @@ export const collections = {
   clubs: clubsCollection,
   coscholastics: coscholasticsCollection,
   admissions: admissionsCollection,
+  aboutUs: aboutUs,
 };

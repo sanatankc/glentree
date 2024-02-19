@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
 import TopNavigationBar from '../components/TopNavigationBar.astro';
 import astronautKidsAdmissionBG from '../images/astronautKidsAdmissionBG.png';
 import admissionStep1 from '../images/admissionStep1.png';
@@ -17,6 +16,7 @@ import Footer from '../components/landingPage/Footer.astro';
 import AdmissionStep from '../components/admissions/AdmissionStep.astro';
 import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
 import { marked } from 'marked';
+import { Image } from 'astro:assets';
 
 const { data: sarjapur } = await getEntry('campus','sarjapur') as CollectionEntry<'campus'>
 const { data: whitefield } = await getEntry('campus','whitefield') as CollectionEntry<'campus'>
@@ -41,6 +41,17 @@ const admissionProcessBackground = [
 
 const titleTag = admissions.titleTag
 const metaDescription = admissions.metaDescription
+
+import { marked } from 'marked'
+const {
+  titleHero,
+  descriptionHero,
+  imageHero,
+  imageHeroAlt
+} = admissions
+const titleHeroParsed = marked(titleHero)
+const descriptionHeroParsed = marked(descriptionHero)
+
 ---
 
 <Layout
@@ -58,19 +69,34 @@ const metaDescription = admissions.metaDescription
         overflowX: 'hidden',
       }}
     >
-    <div class='min-h-[490px] max-h-[350px] w-full flex justify-end bg-cover bg-center p-[30px] items-center flex-col max-md:min-h-[350px]' style={{
-        backgroundImage: `linear-gradient(180deg, rgba(18, 18, 18, 0.00) 20.1%, rgba(0, 0, 0, 0.70) 100%), url(${astronautKidsAdmissionBG.src})`,
-        backgroundPosition: '90% 40%',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
+    <div class='min-h-[450px] relative max-h-[350px] w-full max-md:min-h-[350px]'>
+      <div class="absolute top-0 left-0 w-full h-full z-10">
+        <Image 
+          src={imageHero} 
+          alt={imageHeroAlt}
+          class='w-full h-full object-cover object-center'
+          width={1440} height={600}
+        />
+      </div>
+
+      <div class="absolute top-0 left-0 w-full h-full z-20" style={{
+        background: `linear-gradient(180deg, rgba(18, 18, 18, 0.00) 3.1%, rgba(0, 0, 0, 0.60) 100%)`,
       }}>
-        <Text type={'h1Sm'} class='mt-14 max-md:mt-10'>Admissions</Text>
-        <Text type={'base'} class='mt-3 text-center max-md:w-[90%]' >Your child’s journey towards a holistic learning environment starts here.</Text>
+      </div>
+      <div class="absolute top-0 left-0 w-full h-full flex justify-end p-[30px] items-center flex-col z-30">
+        <Text type={'h1Sm'} class='mt-14 max-md:mt-10 z-30'>
+          <div set:html={titleHeroParsed} />
+        </Text>
+        <Text type={'base'} class='mt-3 text-center max-md:w-[90%]' >
+          <div set:html={descriptionHeroParsed} />
+        </Text>
         <a href="https://admissions.glentreeacademy.com" target='_blank'>
           <Button class='mt-3'>Apply Now</Button>
         </a>
+        
       </div>
-      
+    </div>
+
       <div class='text-black'>
         <Text type={'subtitle'} class='text-center mt-14' style={{ opacity: 0.6, letterSpacing: '0.1em' }}>HOW TO APPLY?</Text>
         <Text type={'h2'} class='text-center mt-3'>Admission Process</Text>

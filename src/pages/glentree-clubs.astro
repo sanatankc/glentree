@@ -35,6 +35,15 @@ const { data } = await getEntry('clubs', 'clubs') as CollectionEntry<'clubs'>
 
 const clubs = data?.clubs || []
 
+import { marked } from 'marked'
+const {
+  titleHero,
+  descriptionHero,
+  imageHero,
+  imageHeroAlt
+} = data
+const titleHeroParsed = marked(titleHero)
+const descriptionHeroParsed = marked(descriptionHero)
 
 ---
 
@@ -55,18 +64,28 @@ const clubs = data?.clubs || []
         <div class='h-[88px] w-full bg-black'>
         </div>
 
-        <div class='min-h-[380px] max-h-[350px] w-full flex justify-end p-[30px] items-center flex-col max-md:min-h-[350px]' style={{
-          background: `linear-gradient(180deg, rgba(18, 18, 18, 0.00) 50.1%, rgba(0, 0, 0, 0.70) 100%), url(${clubsBGimage.src})`,
-          backgroundPosition: 'top center',
-          backgroundSize: 'cover'
-
-          // backgroundAttachment: 'fixed',
-        }}>
-          <Text type={'h1Sm'} class='mt-14 max-md:mt-10'>Glentree Clubs</Text>
-          <Text type={'base'} class='mt-3 text-center max-md:w-[90%]' >Experience Personalized Learning and Enrichment with Our Dynamic Clubs</Text>
-          <!-- <a href="https://admissions.glentreeacademy.com" target='_blank'>
-            <Button class='mt-3'>Apply Now</Button>
-          </a> -->
+        <div class='min-h-[380px] relative max-h-[350px] w-full max-md:min-h-[350px]'>
+          <div class="absolute top-0 left-0 w-full h-full z-10">
+            <Image 
+              src={imageHero} 
+              alt={imageHeroAlt}
+              class='w-full h-full object-cover object-top'
+              width={1440} height={600}
+            />
+          </div>
+    
+          <div class="absolute top-0 left-0 w-full h-full z-20" style={{
+            background: `linear-gradient(180deg, rgba(18, 18, 18, 0.00) 3.1%, rgba(0, 0, 0, 0.60) 100%)`,
+          }}>
+          </div>
+          <div class="absolute top-0 left-0 w-full h-full flex justify-end p-[30px] items-center flex-col z-30">
+            <Text type={'h1Sm'} class='mt-14 max-md:mt-10 z-30'>
+              <div set:html={titleHeroParsed} />
+            </Text>
+            <Text type={'base'} class='mt-3 text-center max-md:w-[90%]' >
+              <div set:html={descriptionHeroParsed} />
+            </Text>
+          </div>
         </div>
 
         

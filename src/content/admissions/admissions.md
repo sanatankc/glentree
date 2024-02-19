@@ -1,6 +1,12 @@
 ---
-titleTag: Admissions Open 2024-25 | Best CBSE School in Bangalore | Glentree Academy School
-metaDescription: Are you Looking For best CBSE Schools in Sarjapur Road, Bangalore or best CBSE Schools in Whitefield, Bangalore or  best CBSE Schools in Bannerghatta Road, Bangalore? Glentree Academy is a school near you. Admissions Are Open for Nursery to Grade 11, 2024-25
+titleTag: >-
+  Admissions Open 2024-25 | Best CBSE School in Bangalore | Glentree Academy
+  School
+metaDescription: >-
+  Are you Looking For best CBSE Schools in Sarjapur Road, Bangalore or best CBSE
+  Schools in Whitefield, Bangalore or  best CBSE Schools in Bannerghatta Road,
+  Bangalore? Glentree Academy is a school near you. Admissions Are Open for
+  Nursery to Grade 11, 2024-25
 admissionProcess:
   - title: Enquire
     description: >
@@ -10,16 +16,20 @@ admissionProcess:
       Parents will also be taken on a school tour to explore the campus they
       prefer.
 
-       Please make sure to have all necessary documentation ready for administrative review, as you will be prompted to provide this information within the application form. You can find the address for all the campuses below:
+
+      Please make sure to have all necessary documentation ready for
+      administrative review, as you will be prompted to provide this information
+      within the application form. You can find the address for all the campuses
+      below:
   - title: Milestone Mapping Session
     description: >
       For Pre-Primary Grade 11, upon receipt of your application, we will
-      schedule a **Milestone Mapping Session** with the parents and the child. 
+      schedule a **Milestone Mapping Session** with the parents and the child.
 
 
       For Walk-In applications, parents will be informed of the date and time of
       the session to ensure prompt arrival. For Online applications, the session
-      will be conducted virtually. 
+      will be conducted virtually.
 
 
       During the session, we will discuss the child's academic history,
@@ -38,20 +48,27 @@ keyInformation:
   - title: Transportation
     description: >
       * Students using the school bus must be at the bus stop at least 5 minutes
-      before the scheduled arrival time. 
+      before the scheduled arrival time.
 
-      * The bus will stop only at the designated pick-up point. 
+      * The bus will stop only at the designated pick-up point.
 
       * Students must use their assigned bus and bus stop, and any changes
-      require prior written permission from the school authorities. 
+      require prior written permission from the school authorities.
 
       * Pre-Primary and Primary children will only be released to their
       parent/guardian. If the parent/guardian is not present at the pick-up
       point, the child will be returned to the school, and parents must collect
-      them directly from the school. 
+      them directly from the school.
 
       * Fees paid are non-refundable.
+titleHero: |
+  Admissions
+descriptionHero: |
+  Your child’s journey towards a holistic learning environment starts here.
+imageHero: /images/astronautKidsAdmissionBG.png
+imageHeroAlt: Reading in Library
 ---
+
 
 
 

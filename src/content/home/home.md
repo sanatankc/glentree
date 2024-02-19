@@ -115,5 +115,32 @@ faqs:
 
 
       [https://www.glentreeacademy.com/co-scholastics](https://www.glentreeacademy.com/co-scholastics)
+whyGlentree:
+  subtitle: OUR MOTTO
+  title: Learning for Life
+  description: >
+    Our curriculum is designed to harness their natural curiosity and foster
+    community-building and discipline through interactions with the environment.
+    Students share ideas and experiences, and teachers serve as facilitators,
+    learners, guides, and mentors.
+
+
+    \<br/>
+
+
+    We follow an integrated curriculum based on CBSE guidelines and the NCERT,
+    which ensures a well-balanced and challenging education that is also
+    enjoyable.
+  image: /images/_image-1.webp
 ---
+
+
+
+
+
+
+
+
+
+
 

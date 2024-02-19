@@ -6,8 +6,13 @@ import Button from '../system/Button.astro'
 import Text from '../system/Text.astro'
 import Constrain from '../system/Constrain.astro'
 import { Image } from 'astro:assets';
+import { marked } from 'marked'
 
-const { viewPhilosophyVisible = true } = Astro.props
+const { viewPhilosophyVisible = true, data } = Astro.props
+
+
+const description = marked.parse(data.description).split('<p>&lt;br/&gt;</p>')
+console.log(description)
 ---
 
 <div
@@ -16,19 +21,19 @@ const { viewPhilosophyVisible = true } = Astro.props
     background: 'linear-gradient(180deg, #3C674F 0%, #23623F 51.08%, #0A5E2F 100%)'
 }}>
   <div class="absolute -bottom-2 right-0 w-60 h-32 max-md:hidden" style={{
-    background: `url("${ourMottoSectionBG}")`,
+    background: `url("${data.image.src}")`,
   }}>
   </div>
   <Constrain class="flex flex-row max-md:flex-col">
-    <div class="min-w-max daisy daisy-2" data-scroll-section>
+  <div class="min-w-max daisy daisy-2" data-scroll-section>
       <Text 
         type='subtitle'
-      >OUR MOTTO</Text>
+      >{data.subtitle}</Text>
       <Text 
         type="h2"
         class="max-md:mt-1 max-md:mb-5 daisy daisy-2"
 
-      >Learning for Life</Text>
+      >{data.title}</Text>
       <Image src={LFLKids} alt="Kids with Halo Eating Lunch" class="w-96 min-w-min -mt-14 max-md:hidden daisy daisy-2 daisy-y-1"/>
     </div>
     <div class='flex flex-col items-start'>
@@ -36,12 +41,10 @@ const { viewPhilosophyVisible = true } = Astro.props
         type='base'
         class='daisy daisy-3'
       >
-        <span>
-          Our curriculum is designed to harness their natural curiosity and foster community-building and discipline through interactions with the environment. Students share ideas and experiences, and teachers serve as facilitators, learners, guides, and mentors.
-          <br/><br/>
-          We follow an integrated curriculum based on CBSE guidelines and the NCERT, which ensures a well-balanced and challenging education that is also enjoyable.
-
-        </span>
+        {description.map(line => (
+          <div set:html={line} />
+          <br/>
+        ))}
       </Text>
       {viewPhilosophyVisible && (
         <a href="/lfl-curriculum/" class='relative z-10'>

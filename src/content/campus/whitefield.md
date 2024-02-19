@@ -4,10 +4,13 @@ titleTag: Best CBSE Schools in Whitefield | Glentree Academy
 metaDescription: >-
   In the vibrant community, our best CBSE schools in Whitefield stand tall by
   offering a perfect blend of academics, culture, and character development.
-bannerBg: /images/gaw-school.jpg
-title: Glentree Academy - Whitefield
-description: A sprawling green campus within the heart of the city.
-virtualCampusLink: https://tourmkr.com/F137l2R3Fg
+imageHero: /images/gaw-school.jpg
+imageHeroAlt: Whitefield School
+titleHero: |
+  Glentree Academy - Whitefield
+descriptionHero: |
+  A sprawling green campus within the heart of the city.
+virtualCampusLink: 'https://tourmkr.com/F137l2R3Fg'
 campusTourEmbedId: X6i2KspwIP8
 affiliationNo: '830349'
 aroundTheCampus:
@@ -144,5 +147,47 @@ contactUs:
     Nallurhalli Rd, Palm Meadows, Nallurhalli, Whitefield, Bengaluru, Karnataka
     560066
   workingHours: 'Monday to Saturday - 8:00 AM to 4:00 PM'
+newsLetter:
+  subtitle: STAY UP TO DATE WITH
+  title: "## Our Newsletter:\_<span>Glentree Express</span>\n"
+  description: >
+    Unlock a world of school updates and student stories by entering your email
+    to access our latest newsletter—and enjoy seamless subscription for future
+    issues!
+  image: /images/_image-2.webp
+  imageAlt: News Letter
+  newsLetter: /images/newsletter.pdf
+principalMessage:
+  sectionSubtitle: OUR LEADER
+  sectionTitle: From the Principal
+  principalName: Mrs. Rizwana Reddy
+  principalImage: /images/_image-3.webp
+  principalImageAlt: Principal Whitefield
+  principalMessage: >
+    *There are no shortcuts to excellence*
+
+
+    ‎ ‎
+
+
+    Our exemplary pedagogy triumphantly stimulates passion and strengthens their
+    perseverance hence establishing an unshakable grit in the soul of each of
+    our students throughout their journey inside the walls of our schools. We
+    value every child for the individual that they are, and without omitting any
+    of our student's personality or characteristics we strive to bring out the
+    full potential of the student with immense care.
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
 

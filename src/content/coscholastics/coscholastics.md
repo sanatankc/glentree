@@ -55,5 +55,12 @@ coscholastics:
       every page-turn.
     thumbnail: /images/coscholastics/ReadingEnrichment.jpeg
     thumbnailAlt: READ Program
+titleHero: |
+  Explore Beyond the Classrooms
+descriptionHero: |
+  Take a look at our co-scholastic activities offered in our school
+imageHero: /images/coscholasticsBG.jpeg
+imageHeroAlt: Meditation
 ---
+
 

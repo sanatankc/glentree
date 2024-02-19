@@ -16,8 +16,6 @@ heroImages:
     image_mobile: /images/gab-facilities/campus1.png
     alt: Campus View
     position: center
-title: Bannerghatta
-description: Bannerghatta
 virtualCampusLink: test
 affiliationNo: test
 aroundTheCampus:

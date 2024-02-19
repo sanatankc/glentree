@@ -7,8 +7,16 @@ import Button from './system/Button.astro'
 import gasNewsLetter from '../images/campus/gas/newsletter.pdf'
 import gawNewsLetter from '../images/campus/gaw/newsletter.pdf'
 import { Image } from 'astro:assets';
+import { getEntry } from 'astro:content'
+import { marked } from 'marked'
 
-const { campusName = '' } = Astro.props
+const { campusName = '', slug } = Astro.params
+const { data } = await getEntry('campus',campusName) as CollectionEntry<'campus'>
+const title = marked.parse(data.newsLetter.title)
+const description = marked.parse(data.newsLetter.description)
+
+// console.log('title.', data.)
+
 ---
 <div class="w-full p-[60px] max-md:p-4" style={{
   background: 'linear-gradient(225deg, #FBFFF6 0%, #F6FFED 0%, #FFFAF6 100%)',
@@ -17,16 +25,18 @@ const { campusName = '' } = Astro.props
     <Image src={glentreeExpressBG} class="max-md:hidden" alt="decoration"/>
     <div class="max-md:flex max-md:flex-col">
       <Text type='subtitle' class='text-[#121212]/60 max-md:text-center'>
-        STAY UP TO DATE WITH
+        {data.newsLetter.subtitle}
       </Text>
       <Text type='h2' class='text-black max-md:text-center'>
-        Our Newsletter:  <span class='text-green-600'> Glentree Express</span>
+        <div class="[&_span]:text-green-600" set:html={title}>
+        </div>
+        <!-- <span class='text-green-600'> Glentree Express</span> -->
       </Text>
       <Image src={glentreeExpressBG} class="object-contain object-center h-40 mt-4 md:hidden" alt="decoration" />
       <Text type='base' class='text-black mt-4 max-w-[870px]'>
-        Unlock a world of school updates and student stories by entering your email to access our latest newsletter—and enjoy seamless subscription for future issues!
+        <div set:html={description}></div>
       </Text>
-      <form id="newsletter-form" action="https://script.google.com/macros/s/AKfycbyIn2f2C3nfH5NpR0mc0hd0U0ObOOLoNj9H1kBzaMDipvaAC2_4B7S1pwD6jq1vqtrM/exec">
+      <form id="newsletter-form" action="https://script.google.com/macros/s/AKfycbyIn2f2C3nfH5NpR0mc0hd0U0ObOOLoNj9H1kBzaMDipvaAC2_4B7S1pwD6jq1vqtrM/exec" data-newsletter-link={data.newsLetter.newsLetter}>
         <input placeholder="Enter email address" type="email" required name="Email" class="mt-4 py-4 px-6 w-full max-w-[400px] border border-[#C6C6C6] rounded-md box-border text-black focus:ring-2 active:ring-2" />
         <Button type='submit' secondary class='mt-4'>View Latest Newsletter</Button>
       </form>
@@ -51,7 +61,7 @@ window.addEventListener("load", function () {
       whitefield: gawNewsLetter,
     }
 
-    const link = window.location.protocol + '//' + window.location.host + newsLetterLinks[campusName]
+    const link = window.location.protocol + '//' + window.location.host + form.dataset.newsletterLink
     window.location.href = link
   });
 });
