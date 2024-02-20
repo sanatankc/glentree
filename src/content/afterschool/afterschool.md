@@ -13,7 +13,7 @@ descriptionHero: |
   Expanding Horizons: Optional After-School Activities for Student.
 
   For more information, reach out to the front desk.
-imageHero: /images/after-school-activities.jpg
+imageHero: /images/after-school-activities-1.jpg
 imageHeroAlt: Badminton
 afterschool:
   - title: Bharatnatyam
