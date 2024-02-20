@@ -10,9 +10,9 @@ metaDescription: >-
 titleHero: |
   After-School Activities
 descriptionHero: |
-  Expanding Horizons: Optional After-School Activities for Student.
+  Expanding Horizons: Optional After-School Activities for Students.
 
-  For more information, reach out to the front desk.
+  For more information, reach out to the help desk.
 imageHero: /images/after-school-activities-1.jpg
 imageHeroAlt: Badminton
 afterschool:
