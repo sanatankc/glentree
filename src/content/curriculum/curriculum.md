@@ -8,7 +8,7 @@ titleHero: |
   Curriculum
 descriptionHero: |
   Your child’s journey towards a holistic learning environment starts here.
-imageHero: /images/curriculum-3.jpg
+imageHero: /images/curriculum-4.jpg
 imageHeroAlt: 'CBSE Based Curriculum, NEP Based School Curriculum'
 academics:
   - title: Pre-Primary
