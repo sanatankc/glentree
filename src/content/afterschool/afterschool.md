@@ -7,6 +7,14 @@ metaDescription: >-
   activities at Glentree Academy Sarjapur Road, Bangalore | Glentree Academy
   Bannerghatta Road, Bangalore | Glentree Academy Whitefield, Bangalore helps
   students in their all round development.
+titleHero: |
+  After-School Activities
+descriptionHero: |
+  Expanding Horizons: Optional After-School Activities for Student.
+
+  For more information, reach out to the front desk.
+imageHero: /images/after-school-activities.jpg
+imageHeroAlt: Badminton
 afterschool:
   - title: Bharatnatyam
     description: >-
@@ -40,18 +48,5 @@ afterschool:
     description: Fostering global fluency through teaching foreign languages.
     thumbnail: /images/afterschool/german.png
     thumbnailAlt: German Language Learning
-titleHero: |
-  After-School Activities
-descriptionHero: |
-  Expanding Horizons: Optional After-School Activities for Student.
-
-  For more information, reach out to the front desk.
-imageHero: /images/afterschoolBG.png
-imageHeroAlt: Badminton
 ---
-
-
-
-
-
 
