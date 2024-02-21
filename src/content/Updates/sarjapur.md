@@ -1,5 +1,35 @@
 ---
 updates:
+  - thumbnail: /images/scouts-and-guides-at-schools-in-sarjapur-road (2).jpg
+    alt: scouts-and-guides-disaster-management-at-schools-in-sarjapur-road
+    title: Scouts and Guides - Disaster Management
+    description: >-
+      Disaster management plays a crucial role in ensuring the safety and
+      well-being of communities in times of crisis. Scouts and Guides, as
+      organizations dedicated to youth development and community service, often
+      play an active role in disaster management efforts. The Scouts and Guides
+      team of Glentree Academy Sarjapur organized an Event to teach Disaster
+      Management to the students. During this event, students were taught
+      various aspects of how to combat disasters, providing First Aid and
+      different things and types of equipment in the First Aid box, etc. The
+      scouts and guides efforts contribute significantly to saving lives,
+      reducing suffering, and building more resilient communities. Hence to
+      conclude the entire event was very fruitful and effective.
+    publishedDate: 2024-02-19T18:30:00.000Z
+  - thumbnail: /images/world-water-day-post.jpg
+    alt: world-water-day
+    title: Special Assembly - World Water Day - Grade 1 and Grade 5
+    description: >-
+      World Water Day is celebrated on March 22 of every year. Grade 1 and Grade
+      5 students of Glentree Academy, Sarjapur performed a special assembly
+      focusing on the same topic through prayers, speeches, songs, and a dance
+      that emphasized clean water conservation to show the relevance of ensuring
+      sustainable water resources. The aim is to motivate the people world over
+      to learn more about water-related topics and take appropriate actions to
+      contribute to the solutions. The fact that students took part in such
+      activities showed their dedication to the protection of the environment
+      and a promise for a better world for future generations.
+    publishedDate: 2024-02-18T18:30:00.000Z
   - thumbnail: /images/health-and-hygiene-at-schools.jpg
     alt: health-and-hygiene
     title: Health and Hygiene - Grade 1

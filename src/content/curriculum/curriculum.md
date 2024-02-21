@@ -4,6 +4,12 @@ metaDescription: >-
   Learning For Life curriculum based on CBSE guidelines and the NCERT. Best
   curriculum among top CBSE schools near Sarjapur Road, Bangalore and top CBSE
   schools near Bannerghatta Road, Bangalore
+titleHero: |
+  Curriculum
+descriptionHero: |
+  Your child’s journey towards a holistic learning environment starts here.
+imageHero: /images/curriculum-4.jpg
+imageHeroAlt: 'CBSE Based Curriculum, NEP Based School Curriculum'
 academics:
   - title: Pre-Primary
     grade: NUR - UKG
@@ -63,15 +69,5 @@ academics:
     image: /images/middle&High.png
     imageAlt: 'Grade 11 CBSE Syllabus, Grade 12 CBSE Syllabus'
     newlyAdded: true
-titleHero: |
-  Curriculum
-descriptionHero: |
-  Your child’s journey towards a holistic learning environment starts here.
-imageHero: /images/astronautKidsAdmissionBG.png
-imageHeroAlt: 'CBSE Based Curriculum, NEP Based School Curriculum'
 ---
-
-
-
-
 
