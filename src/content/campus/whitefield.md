@@ -109,7 +109,7 @@ newsLetter:
   newsLetter: /images/newsletter.pdf
 showcase:
   - image: /images/national-science-day-assembly-at-glentree-academy-2.jpg
-    title: National Science Day Assembly
+    title: National Science Day - Assembly
   - image: /images/graduation-day-at-school-1.jpg
     title: Graduation Day - Grade 10
   - image: /images/field-trip-of-schools-in-whitefield-2.jpg
