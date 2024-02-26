@@ -6,7 +6,7 @@ metaDescription: >-
 updates:
   - thumbnail: /images/national-science-day-assembly-at-glentree-academy.jpg
     alt: national-science-day-assembly-at-glentree-academy
-    title: National Science Day Assembly
+    title: National Science Day - Assembly
     description: >-
       "Science is organized knowledge. Wisdom is organized life" - Immanuel
       Kant.  National Science Day in India is celebrated on the 28th of February
