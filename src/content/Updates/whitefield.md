@@ -4,6 +4,23 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/national-science-day-assembly-at-glentree-academy.jpg
+    alt: national-science-day-assembly-at-glentree-academy
+    title: National Science Day Assembly
+    description: >-
+      "Science is organized knowledge. Wisdom is organized life" - Immanuel
+      Kant.  National Science Day in India is celebrated on the 28th of February
+      and commemorates the discovery of the Raman Effect by Sir C.V. Raman. It
+      highlights the significance of scientific operations. A special assembly
+      was organized by Glentree Academy Whitefield on the 23rd of February -
+      2024, in which the students were given an opportunity to exhibit their
+      talents based on science. Students showcased many experiments. For
+      example, the popping of balloons with orange peels. Engaging the audience
+      with interesting presentations. They also discussed their thoughts on
+      scientific topics. Extracurricular achievements of some students were
+      felicitated. Through this event, students shared and gained knowledge, and
+      it also inspired curiosity.
+    publishedDate: 2024-02-25T18:30:00.000Z
   - thumbnail: /images/graduation-day-at-schools.jpg
     alt: graduation-day-at-schools
     title: Glentree Academy Whitefield - Graduation Day - Grade 10
