@@ -108,7 +108,7 @@ newsLetter:
   imageAlt: News Letter
   newsLetter: /images/newsletter.pdf
 showcase:
-  - image: /images/national-science-day-assembly.jpg
+  - image: /images/national-science-day-assembly-2.jpg
     title: National Science Day - Assembly
   - image: /images/graduation-day-at-school-1.jpg
     title: Graduation Day - Grade 10
