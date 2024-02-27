@@ -86,6 +86,8 @@ newsLetter:
   imageAlt: News Letter
   newsLetter: /images/newsletter1.pdf
 showcase:
+  - image: /images/preprimary-field-trip-to-the-plant-nursery.jpg
+    title: Preprimary Field Trip to the Plant Nursery
   - image: /images/celebrating-the-black-color-day.jpg
     title: Celebrating the Color Black
   - image: /images/scouts-and-guides-at-schools-in-sarjapur-road.jpg
