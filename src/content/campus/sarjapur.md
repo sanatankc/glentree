@@ -86,6 +86,8 @@ newsLetter:
   imageAlt: News Letter
   newsLetter: /images/newsletter1.pdf
 showcase:
+  - image: /images/celebrating-the-black-color-day.jpg
+    title: Celebrating the Color Black
   - image: /images/scouts-and-guides-at-schools-in-sarjapur-road.jpg
     title: Scouts and Guides - Disaster Management
   - image: /images/world-water-day-at-schools-in-sarjapur-road.jpg
