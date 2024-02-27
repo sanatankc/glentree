@@ -1,5 +1,17 @@
 ---
 updates:
+  - thumbnail: /images/preprimary-field-trip-to-the-plant-nursery-2.jpg
+    alt: preprimary-field-trip-to-the-plant-nursery
+    title: Preprimary Field Trip to the Plant Nursery
+    description: >-
+      Nursery kids were taken to a Plant Nursery where our little explorers had
+      a fantastic experience. As students wander through the nursery's lush
+      greenery, they sharpen their observational skills, making them responsible
+      caretakers of the planet. The children learnt about different plants and
+      how they grow. From colorful flowers to towering trees, their eyes lit up
+      with curiosity and wonder at every turn. It was truly a fun and
+      educational day out for our bright young minds.
+    publishedDate: 2024-02-26T18:30:00.000Z
   - thumbnail: /images/celebrating-the-black-color-day-2.jpg
     alt: celebrating-the-black-color-day
     title: Celebrating the Color Black
