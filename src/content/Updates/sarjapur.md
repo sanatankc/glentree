@@ -1,5 +1,18 @@
 ---
 updates:
+  - thumbnail: /images/celebrating-the-black-color-day-2.jpg
+    alt: celebrating-the-black-color-day
+    title: Celebrating the Color Black
+    description: >-
+      Black, a color representing depth and mystery. Our little ones looked
+      absolutely adorable dressed in black attire, as they celebrated the color
+      BLACK on Feb 16th,2024. Adding charm to the day were the decorations in
+      the classrooms which created a mesmerizing learning environment for our
+      curious minds. Our tiny tots had insightful and fun-filled day learning
+      about the significance of the color black from understanding the concept
+      of absorption of light to embracing the beauty of simplicity. Let's
+      celebrate the beauty of darkness and the magic of black together.
+    publishedDate: 2024-02-26T18:30:00.000Z
   - thumbnail: /images/scouts-and-guides-at-schools-in-sarjapur-road (2).jpg
     alt: scouts-and-guides-disaster-management-at-schools-in-sarjapur-road
     title: Scouts and Guides - Disaster Management
