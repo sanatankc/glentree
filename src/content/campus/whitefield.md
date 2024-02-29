@@ -108,6 +108,8 @@ newsLetter:
   imageAlt: News Letter
   newsLetter: /images/newsletter.pdf
 showcase:
+  - image: /images/ukg-graduation-day.jpg
+    title: Graduation Day - Pre-Primary Whitefield
   - image: /images/national-science-day-assembly-2.jpg
     title: National Science Day - Assembly
   - image: /images/graduation-day-at-school-1.jpg
