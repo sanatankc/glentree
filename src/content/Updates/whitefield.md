@@ -4,6 +4,28 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/ukg-graduation-day-2.jpg
+    alt: ukg-graduation-day
+    title: Graduation Day - Pre-Primary Whitefield
+    description: >-
+      On the 24th day of February 2024, Glentree Academy Whitefield cumulated
+      Pre-Primary Graduation Day, an event characterized by the oncoming of a
+      new phase of learning for our young ones. The event was opened by a moving
+      reminiscence presentation after which followed the distribution of
+      graduation certificates. The graduating seniors harmonized the graduation
+      song with the presence of delight and pride in the achievement of their
+      goals.  Furthermore, participants had an opportunity to have a tour of the
+      school’s Earth lab, which made them aware of the earth and sustainability
+      issues. As a sign of appreciation, every student received a sow and grow
+      kit with which he or she could carry out an experiment and learn personal
+      responsibility for the environment.  This occasion reaffirms the
+      significance of primary school as the major building block for education
+      throughout one’s life. It gives credit to the teachers, parents, and other
+      school members for laying a foundation for good learning. For the
+      students, the acquisitions taken along the way have future-proofed them to
+      embark on further academic journeys that made them step to different
+      milestones in their educational journey.
+    publishedDate: 2024-02-28T18:30:00.000Z
   - thumbnail: /images/national-science-day-assembly-at-glentree-academy.jpg
     alt: national-science-day-assembly-at-glentree-academy
     title: National Science Day - Assembly
