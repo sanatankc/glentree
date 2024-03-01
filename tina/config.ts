@@ -548,6 +548,55 @@ export default defineConfig({
           },
           {
             type: 'object',
+            name: 'scholarship',
+            label: 'Scholarship',
+            list: true,
+            fields: [
+              {
+                type: 'object',
+                list: true,
+                name: 'title',
+                label: 'Title',
+                fields: [
+                  {
+                    type: 'boolean',
+                    name: 'highlight',
+                    label: 'Highlight',
+                  },
+                  {
+                    type: 'string',
+                    name: 'text',
+                    label: 'Text',
+                  },
+                ],
+              },
+              {
+                type: 'object',
+                list: true,
+                name: 'bulletPoints',
+                label: 'Bullet Points',
+                ui: {
+                  itemProps: (item) => ({
+                    label: item?.bulletPoint
+                  }),
+                },
+                fields: [
+                  {
+                    type: 'string',
+                    name: 'bulletPoint',
+                    label: 'Bullet Point',
+                  },
+                ],
+              },
+              {
+                type: 'image',
+                label: 'Thumbnail',
+                name: 'thumbnail',
+              },
+            ]
+          },
+          {
+            type: 'object',
             name: 'principalMessage',
             label: 'Principal Message',
             fields: [
