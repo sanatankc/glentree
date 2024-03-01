@@ -10,7 +10,7 @@ import scholarship2 from '../../images/register/scholarship/2.png'
 import PrePrimaryBG from '../../images/curriculum/prePrimary.png';
 import scholarship4 from '../../images/scholarships/preeti_bhanadry.png'
 
-const { bannerghattaPage = false } = Astro.props
+const { bannerghattaPage = false, schollarship } = Astro.props
 ---
 <div class='bg-white relative p-20 py-0 max-md:p-5'>
   <!-- <Image src={campusSectionPatternBG} class='w-screen absolute top-0 left-0 -z-1' role="presentation" alt="decoration" /> -->
@@ -19,12 +19,12 @@ const { bannerghattaPage = false } = Astro.props
       <Text type='subtitle' class='text-center text-black/60' style={{ letterSpacing: '0.1em' }}>Empowering Students</Text>
       <Text type='h2' class='text-center text-black mt-3'>Scholarship & Benefit <span class="text-accent2">Programs</span></Text>
       {!bannerghattaPage && (
-        <div class='grid grid-cols-2 gap-6 max-md:grid-rows-2 max-md:grid-cols-1 justify-between mt-8'>
+        <div class='grid grid-cols-2  gap-6 max-md:grid-rows-2 max-md:grid-cols-1 justify-between mt-8'>
           <div class='border border-black/20 p-6 max-md:p-2 max-md:pr-2 pr-8 flex flex-row max-md:flex-col rounded-md gap-4'>
             <div class="min-w-[232px] max-md:h-[230px] h-[180px] rounded-md">
               <Image src={scholarship1} class="w-full h-full object-cover rounded-md" alt="scholarship" />
             </div>
-            
+
             <div class="flex flex-col items-start text-left gap-3 max-md:px-2 text-black">
               <div>
                 <Text type='h4' class='text-black'><span class="text-accent">Inspire Scholarship</span> Program </Text>
@@ -34,7 +34,7 @@ const { bannerghattaPage = false } = Astro.props
                   <Image src={bulletStar} class="w-full h-full object-cover" alt="bullet icon" />
                 </div>
                 <Text type="regular" class="ml-[5px]">15% tuition fee waiver for the academic year</Text>
-              </div> 
+              </div>
               <div class="flex flex-row items-start">
                 <div class="min-w-[16px] min-h-[18px] max-w-[16px] max-h-[18px] mt-1">
                   <Image src={bulletStar} class="w-full h-full object-cover" alt="bullet icon" />
@@ -42,13 +42,13 @@ const { bannerghattaPage = false } = Astro.props
                 <Text type="regular" class="ml-[5px]">For meritorious students of Grades 6 to 9 transferring to Glentree Academy from CBSE or ICSE boards</Text>
               </div>
             </div>
-  
+
           </div>
           <div class='border border-black/20 p-6 max-md:p-2 max-md:pr-2 pr-8 flex flex-row max-md:flex-col rounded-md gap-4'>
             <div class="min-w-[232px] max-md:h-[230px] h-[180px] bg-slate-200 rounded-md">
               <Image src={scholarship2} class="w-full h-full object-cover rounded-md" alt="scholarship" />
             </div>
-  
+
             <div class="flex flex-col items-start text-left gap-3 max-md:px-2 text-black">
               <div>
                 <Text type='h4' class='text-black'><span class="text-accent3">Exellence in{' '}</span>Sports Program </Text>
@@ -58,7 +58,7 @@ const { bannerghattaPage = false } = Astro.props
                   <Image src={bulletStar} class="w-full h-full object-cover" alt="bullet icon" />
                 </div>
                 <Text type="regular" class="ml-[5px]">15% tuition fee waiver for the academic year</Text>
-              </div> 
+              </div>
               <div class="flex flex-row items-start">
                 <div class="min-w-[16px] min-h-[18px] max-w-[16px] max-h-[18px] mt-1">
                   <Image src={bulletStar} class="w-full h-full object-cover" alt="bullet icon" />
@@ -69,7 +69,40 @@ const { bannerghattaPage = false } = Astro.props
           </div>
         </div>
       )}
-      <div class='grid grid-cols-1 gap-6 max-md:grid-rows-2 max-md:grid-cols-1 mt-6'>
+
+
+<div class={`grid grid-cols-1 ${schollarship.length > 1 ? 'md:grid-cols-2' : ''} md:grid-cols-1 gap-6 max-md:grid-rows-2 max-md:grid-cols-1 mt-6`}>
+{
+  schollarship?.map(
+    data =>
+    <div class='border border-black/20 p-6 max-md:p-2 max-md:pr-2 pr-8 flex flex-row max-md:flex-col rounded-md gap-4'>
+    <div class="min-w-[232px] max-md:h-[230px] h-[180px] bg-slate-200 rounded-md">
+      <Image width={50} height={50} src={data?.image} class="w-full h-full object-cover rounded-md" alt="scholarship" />
+    </div>
+    <div class="flex flex-col items-start text-left gap-3 max-md:px-2 text-black">
+      <div>
+        <Text type='h4' class='text-black'><span class="text-accent3">{data?.headingColored}</span> {data?.headingNormal} </Text>
+      </div>
+      <div class="flex flex-col items-start">
+        {
+          data?.list.map(list=>
+          <div class="flex">
+            <div class="min-w-[16px] min-h-[18px] max-w-[16px] max-h-[18px] mt-1">
+            <Image src={bulletStar} class="w-full h-full object-cover" alt="bullet icon" />
+        </div>
+        <Text type="regular" class="ml-[5px]">{list}</Text>
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </div>
+  )
+}
+</div>
+<div class="p-4 max-md:p-2" />
+
+      <!-- <div class='grid grid-cols-1 md:grid-cols-1 gap-6 max-md:grid-rows-2 max-md:grid-cols-1 mt-6'>
         <div class='border border-black/20 p-6 max-md:p-2 max-md:pr-2 pr-8 flex flex-row max-md:flex-col rounded-md gap-4'>
           <div class="min-w-[232px] max-md:h-[230px] h-[180px] bg-slate-200 rounded-md">
             <Image src={PrePrimaryBG} class="w-full h-full object-cover rounded-md" alt="scholarship" />
@@ -84,7 +117,7 @@ const { bannerghattaPage = false } = Astro.props
                 <Image src={bulletStar} class="w-full h-full object-cover" alt="bullet icon" />
               </div>
               <Text type="regular" class="ml-[5px]">100% waiver on Admission Fees for Early Admissions. Limited period offer</Text>
-            </div> 
+            </div>
             <div class="flex flex-row items-start">
               <div class="min-w-[16px] min-h-[18px] max-w-[16px] max-h-[18px] mt-1">
                 <Image src={bulletStar} class="w-full h-full object-cover" alt="bullet icon" />
@@ -93,15 +126,14 @@ const { bannerghattaPage = false } = Astro.props
             </div>
           </div>
         </div>
-        
       </div>
-      <div class="p-4 max-md:p-2" />
-      
-      <!-- <div class="w-full px-6 py-4 rounded-lg bg-[#F6D58D]/20 flex flex-row max-md:flex-col text-center max-md:px-3 justify-between items-center text-black">
+      <div class="p-4 max-md:p-2" /> -->
+
+ <div class="w-full px-6 py-4 rounded-lg bg-[#F6D58D]/20 flex flex-row max-md:flex-col text-center max-md:px-3 justify-between items-center text-black">
         <Text type="base">To learn more about available scholarships, get in touch with our admissions counsellor.</Text>
         <a href="/register/" target="_blank">
           <Button class="max-md:mt-2 max-md:hidden">Apply Now</Button>
         </a>
-      </div> -->
+      </div>
   </Constrain>
 </div>
