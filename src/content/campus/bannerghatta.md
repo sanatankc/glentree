@@ -90,5 +90,17 @@ contactUs:
     C K Palya Rd, Hommadevanahalli, Bengaluru, Doddakammanahalli, Karnataka
     560083
   workingHours: 'Monday to Saturday - 8:00 AM to 4:00 PM'
+titleHero: ''
+descriptionHero: ''
+scholarship:
+  - image: /images/prePrimary.png
+    headingNormal: ' Priority Admission'
+    headingColored: Privilege
+    list:
+      - 100% waiver on Admission Fees for Early Admissions. Limited period offer
+      - Applicable to students seeking admissions in Nursery to Class 4
 ---
+
+
+
 
