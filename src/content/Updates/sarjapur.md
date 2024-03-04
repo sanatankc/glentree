@@ -1,5 +1,51 @@
 ---
 updates:
+  - thumbnail: /images/first-foot-forward-club-2.jpg
+    alt: first-foot-forward-club
+    title: The First Foot Forward Club – Organizing Food Fair
+    description: >-
+      The First Foot Forward Club of Glentree Academy conducted a Food Fair on
+      24th February 2024 during their Club periods wherein different food stalls
+      were set up by them.  Students used  a versatile alternative to
+      traditional cooking methods, allowing individuals to enjoy delicious and
+      nutritious meals in the menu without the need for a heat source which is
+      Fireless Cooking. The Menu included Snacks and beverages prepared by the
+      Students themselves across the grades of 4 to 9. Kudos to the students for
+      efficiently handling the entire event with a high level of
+      professionalism. This Kind of events help them to gain knowledge on
+      aspects of entrepreneurship i.e, Planning, Marketing, Advertising,
+      Executing, Leadership, Collaboration, Innovation and so on. The Aim of
+      First Foot Forward Club itself is all about uniting like minded young
+      entrepreneurs, igniting business ideas and exploring the nuances of it. It
+      exposes the students to Case Studies, Social Entrepreneurship, and
+      Knowledge Sharing. In summary, the event proved to be an enriching
+      educational experience, fostering valuable lessons for the children.
+    publishedDate: 2024-02-26T18:30:00.000Z
+  - thumbnail: /images/preprimary-field-trip-to-the-plant-nursery-2.jpg
+    alt: preprimary-field-trip-to-the-plant-nursery
+    title: Preprimary Field Trip to the Plant Nursery
+    description: >-
+      Nursery kids were taken to a Plant Nursery where our little explorers had
+      a fantastic experience. As students wandered through the nursery's lush
+      greenery, they sharpened their observational skills, making them
+      responsible caretakers of the planet. The children learnt about different
+      plants and how they grow. From colorful flowers to towering trees, their
+      eyes lit up with curiosity and wonder at every turn. It was truly a fun
+      and educational day out for our bright young minds.
+    publishedDate: 2024-02-26T18:30:00.000Z
+  - thumbnail: /images/celebrating-the-black-color-day-2.jpg
+    alt: celebrating-the-black-color-day
+    title: Celebrating the Color Black
+    description: >-
+      Black, a color representing depth and mystery. Our little ones looked
+      absolutely adorable dressed in black attire, as they celebrated the color
+      BLACK on Feb 16th,2024. Adding charm to the day were the decorations in
+      the classrooms which created a mesmerizing learning environment for our
+      curious minds. Our tiny tots had insightful and fun-filled day learning
+      about the significance of the color black from understanding the concept
+      of absorption of light to embracing the beauty of simplicity. Let's
+      celebrate the beauty of darkness and the magic of black together.
+    publishedDate: 2024-02-26T18:30:00.000Z
   - thumbnail: /images/scouts-and-guides-at-schools-in-sarjapur-road (2).jpg
     alt: scouts-and-guides-disaster-management-at-schools-in-sarjapur-road
     title: Scouts and Guides - Disaster Management

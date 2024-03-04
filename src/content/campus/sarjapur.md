@@ -86,6 +86,12 @@ newsLetter:
   imageAlt: News Letter
   newsLetter: /images/newsletter1.pdf
 showcase:
+  - image: /images/first-foot-forward-club.jpg
+    title: The First Foot Forward Club – Organizing Food Fair
+  - image: /images/preprimary-field-trip-to-the-plant-nursery.jpg
+    title: Preprimary Field Trip to the Plant Nursery
+  - image: /images/celebrating-the-black-color-day.jpg
+    title: Celebrating the Color Black
   - image: /images/scouts-and-guides-at-schools-in-sarjapur-road.jpg
     title: Scouts and Guides - Disaster Management
   - image: /images/world-water-day-at-schools-in-sarjapur-road.jpg
@@ -167,7 +173,7 @@ contactUs:
     https://www.google.com/maps/embed/v1/place?key=AIzaSyAIyVF44QhoXfwwKHLd1h3N49cQTHS0Yvw&q=Sarjapur
     Glentree Academy, Sarjapur, Bengaluru
   address: >-
-    No.36/5, Halanayakanahalli,Varthur Hobli Bengaluru East Taluk,Bengaluru,
+    No.36/5, Halanayakanahalli, Varthur Hobli Bengaluru East Taluk, Bengaluru,
     Karnataka 560035
   workingHours: 'Monday to Saturday - 8:00 AM to 4:00 PM'
 ---
