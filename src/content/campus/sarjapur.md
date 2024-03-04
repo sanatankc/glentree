@@ -173,7 +173,7 @@ contactUs:
     https://www.google.com/maps/embed/v1/place?key=AIzaSyAIyVF44QhoXfwwKHLd1h3N49cQTHS0Yvw&q=Sarjapur
     Glentree Academy, Sarjapur, Bengaluru
   address: >-
-    No.36/5, Halanayakanahalli,Varthur Hobli Bengaluru East Taluk,Bengaluru,
+    No.36/5, Halanayakanahalli, Varthur Hobli Bengaluru East Taluk, Bengaluru,
     Karnataka 560035
   workingHours: 'Monday to Saturday - 8:00 AM to 4:00 PM'
 ---
