@@ -1,5 +1,23 @@
 ---
 updates:
+  - thumbnail: >-
+      /images/scouts-and-guides-trekking-at-best-cbse-schools-in-sarjapur-road.jpg
+    alt: scouts-and-guides-trekking-at-best-cbse-schools-in-sarjapur-road
+    title: Scouts and Guides Trekking
+    description: >-
+      A hiking party of Scouts and Guides were sent to crystal clear Pearl
+      Valley. The young hikers were electrified as they enjoyed the feeling
+      which was filled with excitement and joy. During the hike to the pinnacle,
+      students walked along sandy paths and vast rocks, they were also shimmying
+      through the narrow gaps and climbing on the stairs constructed on the huge
+      boulders. Numerous small cascades dotted the path as we made our way up
+      the trail. The Scouts & Guides Programme served as a part of the study
+      plan After being taught how to pitch tents by a guide, they proceeded to
+      join in a lime juice-making session.. Exploring the picturesque landscape
+      of these boulders was just a small adventure for those with a daring
+      spirit. Uniting the students for this modest excursion brought us immense
+      joy, and we thoroughly enjoyed our time together 
+    publishedDate: 2024-03-11T18:30:00.000Z
   - thumbnail: /images/first-foot-forward-club-2.jpg
     alt: first-foot-forward-club
     title: The First Foot Forward Club – Organizing Food Fair
