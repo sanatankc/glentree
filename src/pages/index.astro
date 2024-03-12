@@ -29,9 +29,20 @@ import GlentreeCareer from '../components/GlentreerCareer.astro';
 import AdmissionMarquee from '../components/campus/admissionMarquee.astro';
 import Faqs from '../components/faqs.astro';
 
+
+
+import { marked } from 'marked';
+
 import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
 
 const { data } = await getEntry('home', 'home') as CollectionEntry<'home'>
+const career = data?.career[0]
+const treeData = data?.familyTree
+const ourFounder = data?.founderNote[0]
+const ourFounderHeader = marked.parse(ourFounder?.heading).replaceAll('&lt;','<').replaceAll('&gt;','>')
+const campus = data?.campus
+
+
 ---
 
 <Layout 
@@ -131,7 +142,7 @@ const { data } = await getEntry('home', 'home') as CollectionEntry<'home'>
 
 
       <!-- Our Campauses -->
-      <Campus />
+      <Campus campus={campus} />
 
       
 
@@ -141,9 +152,12 @@ const { data } = await getEntry('home', 'home') as CollectionEntry<'home'>
       <!-- <div class='w-5 h-32'></div> -->
       <Testimonial />
 
-      <Text type="h2" class="text-black text-center bg-white p-6">Our Founder’s <span class="text-green-600">Note</span></Text>
+      <Text type="h2" class="text-black text-center bg-white p-6" > 
+        <div class=" my-div" set:html= {ourFounderHeader}>
+        </div>
+       </Text>
       <div class='bg-white px-20 max-md:px-4 w-full'>
-        <VittalFounderDesk />
+        <VittalFounderDesk details={ourFounder} />
       </div>
 
       <!-- Admission BIG CTA -->
@@ -158,12 +172,12 @@ const { data } = await getEntry('home', 'home') as CollectionEntry<'home'>
         <div class="p-3" />
       </div>
       <!-- Glentree Family -->
-      <GlentreeFamily />
+      <GlentreeFamily treeData={treeData[0]?.familyList} header={treeData[0]?.sectionheading}/>
 
 
       <div class="pb-6" />
 
-      <GlentreeCareer alt="Careers at Top Schools in Whitefield, Bangalore" />
+      <GlentreeCareer alt="Careers at Top Schools in Whitefield, Bangalore" career={career} />
       
       <div class="pb-6" />
 

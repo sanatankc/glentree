@@ -268,9 +268,9 @@ const { data } = await getEntry('campus','bannerghatta') as CollectionEntry<'cam
     </div>
 
 
-    <EarthLab />
+    <!-- <EarthLab />
     <div id="scholarships" />
-    <div class="pt-14" />
+    <div class="pt-14" /> -->
     <!-- <LFL /> -->
 
 
@@ -282,7 +282,8 @@ const { data } = await getEntry('campus','bannerghatta') as CollectionEntry<'cam
 
     <!-- <Testimonial /> -->
 
-    <Scholarship bannerghattaPage schollarship={data.scholarship} />
+    <EarthLab bannerghattaPage data={data.earthlab} />
+    <Scholarship bannerghattaPage scholarship={data.scholarship} />
 
     <BigAdmissionCTA />
     <ContactUs 

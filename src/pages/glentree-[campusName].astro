@@ -222,7 +222,16 @@ const descriptionHeroParsed = marked(descriptionHero)
 
 const principalMessageParsed =  marked(principalMessage?.principalMessage)
 
-console.log('principalMessage --> ', principalMessage)
+// console.log('principalMessage --> ', principalMessage)
+
+import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
+
+
+const currentPage = campus?.title.split(' ').slice(-1)[0].toLowerCase()
+
+const { data:pageData } = await getEntry('campus', currentPage) as CollectionEntry<'campus'>
+
+
 ---
 
 {allowedCampusNames.includes(campusName) && (
@@ -416,8 +425,14 @@ console.log('principalMessage --> ', principalMessage)
   
           </div>
           
-          <EarthLab />
-
+          <div >
+          {
+            currentPage === 'sarjapur' && <EarthLab data={pageData?.earthlab} />
+          }
+          {
+            currentPage === 'whitefield' && <EarthLab data={pageData?.earthlab} />
+          }
+        </div>
         
           <BigAdmissionCTA />
           <ContactUs campus={data.contactUs} />

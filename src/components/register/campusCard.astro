@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import Text from "../system/Text.astro";
-const { image, alt, class: className, name, desc, link, upcomingRibbon, grade11Ribbon } = Astro.props
+const { image, alt, class: className, name, desc, link, upcomingRibbon, grade11Ribbon,ribbonHeader } = Astro.props
 ---
 
 <div data-link={link} class:list={[
@@ -9,18 +9,18 @@ const { image, alt, class: className, name, desc, link, upcomingRibbon, grade11R
   className
 ]}
 >
-  <Image 
+  <img
     class="w-full h-full object-cover object-center absolute top-0 left-0 z-0 group-hover:scale-110 transition-transform duration-300"
     src={image}
     alt={alt}
   />
   {upcomingRibbon && (
-    <div class="ribbon absolute py-2 px-12 bg-yellow border-[2px] border-[#C7AC66] text-[#613938] text-[16px] top-[1.1rem] -right-[3.5rem] font-bold rotate-[40deg]">New Campus</div>
+    <div class="ribbon absolute py-2 px-12 bg-yellow border-[2px] border-[#C7AC66] text-[#613938] text-[16px] top-[1.1rem] -right-[3.5rem] font-bold rotate-[40deg]">{ribbonHeader}</div>
   )}
   {grade11Ribbon && (
     <div class="absolute py-2 w-full text-white text-[16px] top-[0px] left-10px font-bold text-center" style={{
       background: 'linear-gradient(139deg, #138846 28.32%, #0A5E2F 78.34%)'
-    }}>Introducing Grade 11</div>
+    }}>{ribbonHeader}</div>
   )}
   <div class='flex flex-row justify-between items-center bg-gradient-to-b p-8 px-2 from-black/0 to-black max-md:p-4 w-full relative z-10'>
     <div class="flex flex-row items-center">

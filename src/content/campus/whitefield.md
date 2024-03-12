@@ -180,5 +180,24 @@ contactUs:
     Nallurhalli Rd, Palm Meadows, Nallurhalli, Whitefield, Bengaluru, Karnataka
     560066
   workingHours: 'Monday to Saturday - 8:00 AM to 4:00 PM'
+earthlab:
+  - subtitle: OUR LATEST INITIATIVE
+    heading: "## Introducing:\_\\<span>Earth Lab\\</span>\n"
+    description: >-
+      We introduce children to the fundamentals of agriculture and gardening.
+      They learn about various soil types and soil-less media for greenery,
+      growing microgreens, composting, plant care, and harvesting.
+    list:
+      - videotitle: ' Teaching urban gardening and vertical farming through microgreens and house plants.'
+      - videotitle: >-
+          Teaching students to grow microgreens promotes healthy eating habits
+          and nutrition education. 
+      - videotitle: >-
+          Tending to plants and observing their growth can have a positive
+          impact on student's mental well-being.
 ---
+
+
+
+
 

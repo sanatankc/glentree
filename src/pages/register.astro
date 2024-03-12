@@ -48,7 +48,10 @@ import slide3MB from "../images/register/slides/mb/3.jpg";
 import PhoneWhite from '../icons/PhoneWhite.svg'
 import Faqs from '../components/faqs.astro';
 import AcademicsBox from '../components/AcademicsBox.astro';
-
+import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
+const { data } = await getEntry('campus','bannerghatta') as CollectionEntry<'campus'>
+const { data :homePageData } = await getEntry('home', 'home') as CollectionEntry<'home'>
+const campus = homePageData?.campus
 
 
 const faqs = [
@@ -263,13 +266,13 @@ const faqs = [
     <!-- <LFL /> -->
 
 
-    <Campus />
+    <Campus  campus={campus}/>
 
       
 
 
 
-    <Scholarship />
+    <Scholarship scholarship={data?.scholarship} />
     <Testimonial />
 
 
