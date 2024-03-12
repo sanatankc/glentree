@@ -4,6 +4,22 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/math-wizards-at-best-cbse-schools-in-whitefield.jpg
+    alt: math-wizads-at-best-cbse-schools-in-bangalore
+    title: Math Wizads
+    description: >-
+      Celebrating our Math Wizards! 'Mathematics is the language of the
+      universe', and our students have made a masterpiece of its speech.
+      Glentree Academy Whitefield welcomed its IMO (International Mathematical
+      Olympiad) winner’s day on March 1, 2024, honouring their stunning results.
+      IMO is a worldwide math competition for school students, whose main
+      purpose aims at encouraging analysis and solving problems.  This event of
+      felicitation was a source of motivation for the participants to embrace
+      mathematics and create something similar to the given unsolved problems. 
+      Glentree Academy highlighting the IMO upper hand is an example of
+      developing talent in STEM. This would serve in preparing future innovation
+      and societal movements.
+    publishedDate: 2024-03-11T18:30:00.000Z
   - thumbnail: /images/ukg-graduation-day-2.jpg
     alt: ukg-graduation-day
     title: Graduation Day - Pre-Primary Whitefield
