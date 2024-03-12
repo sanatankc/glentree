@@ -1,5 +1,21 @@
 ---
 updates:
+  - thumbnail: /images/music-culmination-at-best-cbse-schools-in-sarjapur-road.jpg
+    alt: music-culmination-at-best-cbse-schools-in-sarjapur-road
+    title: Music Culmination
+    description: >-
+      "Where words fail, music speaks." - Hans Christian Andersen.  We are all a
+      part of this language and we all have different feelings about it. On the
+      last day of February, the 29th 2024, The melodies sung by our school
+      children resonated throughout the school grounds, accompanied by the
+      cheers of an enthusiastic audience. The 'After School Program Music
+      United' ensemble of students delivered a diverse array of musical
+      performances., Songs like Believer, Jingle Bells, and Birthday songs were
+      at the top list. The epitome encapsulates the entirety of the dance
+      lesson's progression. Our beloved music club principal passionately
+      articulated the significance of music in our lives. This gathering stands
+      as an unparalleled and unforgettable occasion.
+    publishedDate: 2024-03-11T18:30:00.000Z
   - thumbnail: >-
       /images/scouts-and-guides-trekking-at-best-cbse-schools-in-sarjapur-road.jpg
     alt: scouts-and-guides-trekking-at-best-cbse-schools-in-sarjapur-road
