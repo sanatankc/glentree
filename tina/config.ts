@@ -683,8 +683,8 @@ export default defineConfig({
           },
           {
             type: "object",
-            name: "lflCurriculam",
-            label: "LFL Curriculam",
+            name: "lflCurriculum",
+            label: "LFL Curriculum",
             list: true,
             fields: [
               {
@@ -951,9 +951,9 @@ export default defineConfig({
             required: false,
           },
           {
-            type: "object",
-            name: "principalMessage",
-            label: "Principal Message",
+            type: 'object',
+            name: 'principalMessage',
+            label: 'Principal Message',
             fields: [
               {
                 type: "string",

@@ -427,10 +427,10 @@ const { data:pageData } = await getEntry('campus', currentPage) as CollectionEnt
           
           <div class="mt-16">
           {
-            currentPage === 'sarjapur' && <EarthLab sarjapurData={pageData?.earthlab} />
+            currentPage === 'sarjapur' && <EarthLab data={pageData?.earthlab} />
           }
           {
-            currentPage === 'whitefield' && <EarthLab whitefieldData={pageData?.earthlab} />
+            currentPage === 'whitefield' && <EarthLab data={pageData?.earthlab} />
           }
         </div>
         
