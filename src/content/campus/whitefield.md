@@ -172,6 +172,21 @@ showcase:
     title: Science Experiment
   - image: /images/gaw-update18.jpeg
     title: Unveiling of the Earth Lab
+earthlab:
+  - subtitle: OUR LATEST INITIATIVE
+    heading: "## Introducing:\_\\<span>Earth Lab\\</span>\n"
+    description: >-
+      We introduce children to the fundamentals of agriculture and gardening.
+      They learn about various soil types and soil-less media for greenery,
+      growing microgreens, composting, plant care, and harvesting.
+    list:
+      - videotitle: ' Teaching urban gardening and vertical farming through microgreens and house plants.'
+      - videotitle: >-
+          Teaching students to grow microgreens promotes healthy eating habits
+          and nutrition education. 
+      - videotitle: >-
+          Tending to plants and observing their growth can have a positive
+          impact on student's mental well-being.
 contactUs:
   phoneNo: +91 7899738130
   email: admission.gaw@glentreeacademy.com
