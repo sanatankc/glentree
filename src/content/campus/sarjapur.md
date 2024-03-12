@@ -86,6 +86,8 @@ newsLetter:
   imageAlt: News Letter
   newsLetter: /images/newsletter1.pdf
 showcase:
+  - image: /images/scouts-and-guides-trekking-at-schools-in-sarjapur-road.jpg
+    title: Scouts and Guides Trekking
   - image: /images/first-foot-forward-club.jpg
     title: The First Foot Forward Club – Organizing Food Fair
   - image: /images/preprimary-field-trip-to-the-plant-nursery.jpg
@@ -176,24 +178,5 @@ contactUs:
     No.36/5, Halanayakanahalli, Varthur Hobli Bengaluru East Taluk, Bengaluru,
     Karnataka 560035
   workingHours: 'Monday to Saturday - 8:00 AM to 4:00 PM'
-earthlab:
-  - subtitle: OUR LATEST INITIATIVE
-    heading: "## Introducing:\_\\<span>Earth Lab\\</span>\n"
-    description: >-
-      We introduce children to the fundamentals of agriculture and gardening.
-      They learn about various soil types and soil-less media for greenery,
-      growing microgreens, composting, plant care, and harvesting.
-    list:
-      - videotitle: ' Teaching urban gardening and vertical farming through microgreens and house plants.'
-      - videotitle: >-
-          Teaching students to grow microgreens promotes healthy eating habits
-          and nutrition education. 
-      - videotitle: >-
-          Tending to plants and observing their growth can have a positive
-          impact on student's mental well-being.
 ---
-
-
-
-
 
