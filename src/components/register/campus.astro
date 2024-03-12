@@ -7,21 +7,31 @@ import bannerghattaCampus from '../../images/campus/gab/slides/campusSm.webp'
 import CampusCard from './campusCard.astro';
 import Constrain from '../system/Constrain.astro';
 import { Image } from 'astro:assets';
+import {marked} from 'marked'
+
+const {campus} = Astro.props;
+const campusCard = campus?.campusCards
+const campusTitleHtml =  marked.parse(campus.title).replaceAll('&lt;','<').replaceAll('&gt;','>')
+
+
 ---
 <div class='bg-white relative p-20 py-20 max-md:p-5'>
   <!-- <Image src={campusSectionPatternBG} class='w-screen absolute top-0 left-0 -z-1' role="presentation" alt="decoration" /> -->
   <Constrain>
     <div class='relative z-10'>
-      <Text type='subtitle' class='text-center text-black/60' style={{ letterSpacing: '0.1em' }}>THREE CAMPUSES, ONE VISION</Text>
-      <Text type='h2' class='text-center text-black mt-3'>Our <span class="text-accent2">Branches</span></Text>
+      <Text type='subtitle' class='text-center text-black/60' style={{ letterSpacing: '0.1em' }}>{campus?.subtitle}</Text>
+      <Text type='h2' class='text-center text-black mt-3'><div class="my-div" set:html={campusTitleHtml}></div></Text>
       <div class='grid grid-cols-3 gap-8 max-md:gap-4 max-md:grid-rows-2 max-md:grid-cols-1 justify-between mt-8'>
-        <!-- <a href='https://glentreeacademy.com/glentree-whitefield/'> -->
-          <CampusCard alt="Glentree Academy Whitefield, Best CBSE school Whitefield, Bangalore." link='/glentree-whitefield/' grade11Ribbon image={whitefieldCampus} class='text-white text-left border-[2px] border-[#D1E0D3]' name='Whitefield' desc="Centrally Located in The IT Corridor of Bangalore." />
-        <!-- </a> -->
-        <!-- <a href='/glentree-sarajapura/'> -->
-          <CampusCard alt="Glentree Academy Sarjapur, best CBSE school Sarjapur, Bangalore."  link="/glentree-sarjapur/" grade11Ribbon image={sarjapurCampus} name='Sarjapur Road' class="text-white text-left border-[2px] border-[#D1E0D3]" desc="A Sprawling Green Campus Located Within the Heart of The City." />
-          <CampusCard alt="Glentree Academy Bannerghatta, best CBSE school Bannerghatta Road, Bangalore" upcomingRibbon link="/glentree-bannerghatta" image={bannerghattaCampus} name='Bannerghatta Road' class="text-white text-left border-[2px] border-[#D1E0D3]" desc="Opening Soon to Expand Learning Horizons" />
-        <!-- </a> -->
+
+        {
+          campusCard?.map((data,i)=>
+          {if(!data.ribbon){
+            return( <CampusCard alt={data?.imageAlt} link={data.imagelink} ribbonHeader={data?.ribbonHeader}  grade11Ribbon image={data.image} class='text-white text-left border-[2px] border-[#D1E0D3]' name={data.imageTitle} desc={data.imageDescription} />)}
+          else{
+            return (
+            <CampusCard alt={data?.imageAlt} link={data.imagelink}  ribbonHeader={data?.ribbonHeader}  upcomingRibbon image={data.image} class='text-white text-left border-[2px] border-[#D1E0D3]' name={data.imageTitle} desc={data.imageDescription} />
+            )}})}
+        
       </div>
     </Constrain>
 </div>

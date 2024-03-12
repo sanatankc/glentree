@@ -93,13 +93,36 @@ contactUs:
 titleHero: ''
 descriptionHero: ''
 scholarship:
-  - image: /images/prePrimary.png
-    headingNormal: ' Priority Admission'
-    headingColored: Privilege
+  - subtitle: EMPOWERING STUDENTS
+    heading: "## Scholarship & Benefit\_\\<span>Programs\\</span>\n"
+    scholarshipList:
+      - image: /images/prePrimary.png
+        alt: scholarship
+        title: "\\<span>Privilege\\</span>\_Priority Admission\n"
+        list:
+          - ' 100% waiver on Admission Fees for Early Admissions. Limited period offer'
+          - ' Applicable to students seeking admissions in Nursery to Class 4'
+earthlab:
+  - subtitle: OUR LATEST INITIATIVE
+    heading: "## Introducing:\_\\<span>Earth Lab\\</span>\n"
+    description: >-
+      We introduce children to the fundamentals of agriculture and gardening.
+      They learn about various soil types and soil-less media for greenery,
+      growing microgreens, composting, plant care, and harvesting.
     list:
-      - 100% waiver on Admission Fees for Early Admissions. Limited period offer
-      - Applicable to students seeking admissions in Nursery to Class 4
+      - videotitle: ' Teaching urban gardening and vertical farming through microgreens and house plants.'
+      - videotitle: >-
+          Teaching students to grow microgreens promotes healthy eating habits
+          and nutrition education. 
+      - videotitle: >-
+          Tending to plants and observing their growth can have a positive
+          impact on student's mental well-being.
 ---
+
+
+
+
+
 
 
 

@@ -132,7 +132,89 @@ whyGlentree:
     which ensures a well-balanced and challenging education that is also
     enjoyable.
   image: /images/_image-1.webp
+career:
+  - image: /images/careerBG.webp
+    imageAlt: 'Careers at Top Schools in Sarjapur, Bangalore'
+    heading: Work with Us
+    title: Join the Glentree Community
+    paragraph: 'To view open career positions,'
+    buttonName: click here
+    buttonLink: 'https://www.naukri.com/learning-edge-india-jobs-careers-1633530'
+familyTree:
+  - sectionheading: "## The Glentree\_\\<span>Family Tree\\</span>\n"
+    familyList:
+      - image: /images/littleEllyLogo.png
+        imageAlt: Little Elly
+        heading: Little Elly
+        description: >-
+          India's favorite preschool with 130+ centers in South and West India.
+          Stimulating curriculum based on Montessori and Steiner models.
+        link: 'https://www.littleelly.com/'
+      - image: /images/letterAcademyLogo.png
+        imageAlt: letter
+        heading: LETTER
+        description: >-
+          Offers teacher training programs for preschool and primary school
+          teachers. For fresh graduates, working teachers, and career seekers.
+        link: 'https://letter.learningedgeindia.org/'
+      - image: /images/ellyChildCareLogo.png
+        imageAlt: Elly Child CARE
+        heading: Elly Child Care
+        description: >-
+          Integrated preschool, day-care, and creche service for children from 6
+          months onwards.
+        link: 'https://www.ellychildcare.com/'
+founderNote:
+  - heading: "## Our Founder’s\_\\<span>Note\\</span>\n"
+    description: >
+      “We started with a vision of the joy of learning. We didn't want our kids
+      to continue in formal schools, where rote learning is practised. So we've
+      come out with a new philosophy **Learning for Life.”**
+    personName: Mr. Vittal Bhandary
+    personRole: CEO of Glentree Academy
+    videoLink: 'https://www.youtube.com/watch?v=vU3yC0Xt6Rk'
+    buttonName: Watch Video
+campus:
+  subtitle: 'THREE CAMPUSES, ONE VISION'
+  title: "## Our\_\\<span>Branches\\</span>\n"
+  campusCards:
+    - ribbonHeader: Introducing Grade 11
+      image: /images/whitefieldCampus.webp
+      imageAlt: Introducing Grade 11
+      imagelink: /glentree-whitefield/
+      imageTitle: Whitefield
+      imageDescription: Centrally Located in The IT Corridor of Bangalore.
+    - ribbonHeader: Introducing Grade 11
+      image: /images/sarjapurCampus.webp
+      imageAlt: Introducing Grade 11
+      imagelink: /glentree-sarjapur/
+      imageTitle: Sarjapur Road
+      imageDescription: A Sprawling Green Campus Located Within the Heart of The City.
+    - ribbon: true
+      ribbonHeader: New Campus
+      image: /images/campusSm.webp
+      imageAlt: New Campus
+      imagelink: /glentree-bannerghatta
+      imageTitle: Bannerghatta Road
+      imageDescription: Opening Soon to Expand Learning Horizons
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

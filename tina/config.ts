@@ -106,6 +106,66 @@ export default defineConfig({
           },
           {
             type: "object",
+            name: "campus",
+            label: "Campus",
+            fields: [
+              {
+                type: "string",
+                name: "subtitle",
+                label: "Subtitle",
+              },
+              {
+                type: "rich-text",
+                name: "title",
+                label: "Title",
+              },
+              {
+                type: "object",
+                name: "campusCards",
+                label: "Campus Image Cards",
+                list: true,
+                fields: [
+                  {
+                    type: "boolean",
+                    name: "ribbon",
+                    label: "Corner Ribbon",
+                  },
+                  {
+                    type: "string",
+                    name: "ribbonHeader",
+                    label: "Image header Ribbon text",
+                  },
+                  {
+                    type: "image",
+                    name: "image",
+                    label: "Image",
+                  },
+                  {
+                    type: "string",
+                    name: "imageAlt",
+                    label: "Image Alt Tag",
+                  },
+                  {
+                    type: "string",
+                    name: "imagelink",
+                    label: "Image Link",
+                  },
+                  {
+                    type: "string",
+                    name: "imageTitle",
+                    label: "Image Title",
+                  },
+                  {
+                    type: "string",
+                    name: "imageDescription",
+                    label: "Image Description",
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: "object",
             list: true,
             label: "Hero Images",
             name: "heroImages",
@@ -129,6 +189,49 @@ export default defineConfig({
                 type: "string",
                 name: "position",
                 label: "Position",
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "career",
+            label: "Career Section",
+            list: true,
+            fields: [
+              {
+                type: "image",
+                name: "image",
+                label: "Image",
+              },
+              {
+                type: "string",
+                name: "imageAlt",
+                label: "Image Alt description",
+              },
+              {
+                type: "string",
+                name: "heading",
+                label: "Heading",
+              },
+              {
+                type: "string",
+                name: "title",
+                label: "Title",
+              },
+              {
+                type: "string",
+                name: "paragraph",
+                label: "Paragraph",
+              },
+              {
+                type: "string",
+                name: "buttonName",
+                label: "Button Name",
+              },
+              {
+                type: "string",
+                name: "buttonLink",
+                label: "Button Url",
               },
             ],
           },
@@ -218,6 +321,48 @@ export default defineConfig({
               },
             ],
           },
+
+          {
+            type: "object",
+            name: "founderNote",
+            label: "Founder's Note",
+            list: true,
+            fields: [
+              {
+                type: "rich-text",
+                name: "heading",
+                label: "Heading",
+              },
+              {
+                type: "rich-text",
+                name: "description",
+                label: "Description",
+              },
+
+              {
+                type: "string",
+                name: "personName",
+                label: "Person Name",
+              },
+              {
+                type: "string",
+                name: "personRole",
+                label: "Person Role",
+              },
+              {
+                type: "string",
+                name: "videoLink",
+                label:
+                  "Add button video URL for example https://www.youtube.com/watch?v=vU3yC0Xt6Rk",
+              },
+              {
+                type: "string",
+                name: "buttonName",
+                label: "Button Name",
+              },
+            ],
+          },
+
           {
             type: "object",
             list: true,
@@ -241,6 +386,52 @@ export default defineConfig({
               },
             ],
           },
+          {
+            type: "object",
+            name: "familyTree",
+            label: "Glentree Family Tree",
+            list: true,
+            fields: [
+              {
+                type: "rich-text",
+                name: "sectionheading",
+                label: "Section Heading",
+              },
+              {
+                type: "object",
+                name: "familyList",
+                label: "Family List",
+                list: true,
+                fields: [
+                  {
+                    type: "image",
+                    name: "image",
+                    label: "Image",
+                  },
+                  {
+                    type: "string",
+                    name: "imageAlt",
+                    label: "Image Alt Tag",
+                  },
+                  {
+                    type: "string",
+                    name: "heading",
+                    label: "Heading",
+                  },
+                  {
+                    type: "string",
+                    name: "description",
+                    label: "Description",
+                  },
+                  {
+                    type: "string",
+                    name: "link",
+                    label: "Url",
+                  },
+                ],
+              },
+            ],
+          },
         ],
       },
       {
@@ -259,6 +450,163 @@ export default defineConfig({
             label: "Meta Description",
           },
           ...heroSection,
+          {
+            type: "object",
+            name: "founderDesk",
+            label: "Founder's Desk Banner",
+            list: true,
+            fields: [
+              {
+                type: "rich-text",
+                name: "heading",
+                label: "Heading",
+              },
+              {
+                type: "rich-text",
+                name: "description",
+                label: "Description",
+              },
+
+              {
+                type: "string",
+                name: "personName",
+                label: "Person Name",
+              },
+              {
+                type: "string",
+                name: "personRole",
+                label: "Person Role",
+              },
+              {
+                type: "string",
+                name: "videoLink",
+                label:
+                  "Add button video URL for example https://www.youtube.com/watch?v=vU3yC0Xt6Rk",
+              },
+              {
+                type: "string",
+                name: "buttonName",
+                label: "Button Name",
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "founderDeskMembers",
+            label: "Founder's Desk Members details",
+            list: true,
+            fields: [
+              {
+                type: "image",
+                name: "image",
+                label: "Person Image",
+              },
+              {
+                type: "string",
+                name: "name",
+                label: "Person Name",
+              },
+              {
+                type: "string",
+                name: "title",
+                label: "Person Role",
+              },
+              {
+                type: "string",
+                name: "message",
+                label: "Message",
+              },
+              {
+                type: "string",
+                name: "linkedin",
+                label: "Linkedin URL",
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "missions",
+            label: "Our Mission Section",
+            list: true,
+            fields: [
+              {
+                type: "rich-text",
+                name: "header",
+                label: "Header",
+              },
+              {
+                type: "object",
+                name: "missions",
+                label: "Our Mission lists",
+                list: true,
+                fields: [
+                  {
+                    type: "image",
+                    name: "image",
+                    label: "Image",
+                  },
+                  {
+                    type: "string",
+                    name: "alt",
+                    label: "Image detail (ALT)",
+                  },
+                  {
+                    type: "rich-text",
+                    name: "title",
+                    label: "Title",
+                  },
+                  {
+                    type: "string",
+                    name: "description",
+                    label: "Description",
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "career",
+            label: "Career Section",
+            list: true,
+            fields: [
+              {
+                type: "image",
+                name: "image",
+                label: "image",
+              },
+              {
+                type: "string",
+                name: "imageAlt",
+                label: "Image Alt description",
+              },
+              {
+                type: "string",
+                name: "heading",
+                label: "Heading",
+              },
+              {
+                type: "string",
+                name: "title",
+                label: "Title",
+              },
+              {
+                type: "string",
+                name: "paragraph",
+                label: "Paragraph",
+              },
+              {
+                type: "string",
+                name: "buttonName",
+                label: "Button Name",
+              },
+              {
+                type: "string",
+                name: "buttonLink",
+                label: "Button Url",
+              },
+            ],
+          },
         ],
       },
       {
@@ -330,6 +678,62 @@ export default defineConfig({
                 type: "boolean",
                 name: "newlyAdded",
                 label: "Newly Added",
+              },
+            ],
+          },
+          {
+            type: "object",
+            name: "lflCurriculam",
+            label: "LFL Curriculam",
+            list: true,
+            fields: [
+              {
+                type: "string",
+                name: "subTitle",
+                label: "Sub Title",
+              },
+              {
+                type: "rich-text",
+                name: "heading",
+                label: "Heading",
+              },
+              {
+                type: "string",
+                name: "description",
+                label: "Description",
+              },
+              {
+                type: "string",
+                name: "paragraph",
+                label: "Paragraph",
+              },
+              {
+                type: "object",
+                name: "cardDetails",
+                label: "Card Details",
+                list: true,
+                fields: [
+                  {
+                    type: "image",
+                    name: "image",
+                    label: "Card Image",
+                  },
+                  {
+                    type: "string",
+                    name: "alt",
+                    label: "Image Alt field",
+                  },
+                  {
+                    type: "rich-text",
+                    name: "title",
+                    label: "Card Title",
+                  },
+                  {
+                    type: "rich-text",
+                    name: "cardDescription",
+                    label: "Card Description",
+                  },
+                ],
               },
             ],
           },
@@ -688,30 +1092,84 @@ export default defineConfig({
           },
           {
             type: "object",
+            name: "earthlab",
+            label: "Earth Lab",
+            list: true,
+            fields: [
+              {
+                type: "string",
+                name: "subtitle",
+                label: "SubTitle",
+              },
+              {
+                type: "rich-text",
+                name: "heading",
+                label: "Heading",
+              },
+              {
+                type: "string",
+                name: "description",
+                label: "Description",
+              },
+              {
+                type: "object",
+                name: "list",
+                label: "Video Title List",
+                list: true,
+                fields: [
+                  {
+                    type: "string",
+                    name: "videotitle",
+                    label: "Video Title",
+                  },
+                ],
+              },
+            ],
+          },
+          {
+            type: "object",
             name: "scholarship",
             label: "Scholarship",
             list: true,
             fields: [
               {
-                type: "image",
-                name: "image",
-                label: "Image",
+                type: "string",
+                name: "subtitle",
+                label: "Subtitle",
               },
               {
-                type: "string",
-                name: "headingNormal",
-                label: "Heading Normal",
+                type: "rich-text",
+                name: "heading",
+                label: "Heading",
               },
               {
-                type: "string",
-                name: "headingColored",
-                label: "Heading Colored",
-              },
-              {
-                type: "string",
-                name: "list",
-                label: "Item List",
+                type: "object",
+                name: "scholarshipList",
+                label: "Scholarship List",
                 list: true,
+                fields: [
+                  {
+                    type: "image",
+                    name: "image",
+                    label: "Image",
+                  },
+                  {
+                    type: "string",
+                    name: "alt",
+                    label: "Image title (alt tag)",
+                  },
+                  {
+                    type: "rich-text",
+                    name: "title",
+                    label: "Title",
+                  },
+                  {
+                    type: "string",
+                    name: "list",
+                    label: "Item List",
+                    list: true,
+                  },
+                ],
               },
             ],
           },

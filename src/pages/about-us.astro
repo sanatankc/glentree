@@ -42,17 +42,26 @@ import sledgeHammerIcon from '../images/aboutUs/icons/Sledgehammer.svg'
 import linkedinIcon from '../icons/linkedin.svg'
 import Constrain from '../components/system/Constrain.astro';
 import GlentreeCareer from '../components/GlentreerCareer.astro';
+import { marked } from 'marked'
 
 import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
 
 const { data } = await getEntry('about', 'about') as CollectionEntry<'about'>
+const founderDeskBanner = (data?.founderDesk);
+const career = data?.career[0]
+const founderDeskHeading = marked.parse(founderDeskBanner[0]?.heading)
+const founderHeading = founderDeskHeading?.replaceAll('&lt;','<').replaceAll('&gt;','>')
+const ourMissions = data?.missions[0]?.missions
+const ourMissionHeading = marked.parse(data?.missions[0].header);
+const ourMissionHeadingHtml = ourMissionHeading?.replaceAll('&lt;','<').replaceAll('&gt;','>')
+
 
 const {
   titleTag,
   metaDescription,
 } = data 
 
-import { marked } from 'marked'
+
 const {
   titleHero,
   descriptionHero,
@@ -61,23 +70,27 @@ const {
 } = data
 const titleHeroParsed = marked(titleHero)
 const descriptionHeroParsed = marked(descriptionHero)
+// const founderDesk = data.founderDeskMembers
 
+const founderMembers = data.founderDeskMembers; 
+const founderDeskMembers = founderMembers
+const missionsIcons = [cupIcon,globeIcon,fireSquareIcon,sledgeHammerIcon,LinkSquareIcon,graphUpIcon]
 
-const founderDesk = [
-  // { name: 'Vittal Bhandary', title: 'CEO', linkedin: "https://www.linkedin.com/in/vittal-bhandary-51902519/", image: vittal, message: "Glentree Academy envisions a transformative approach to education, addressing the shortcomings of traditional learning. As a child, I found little joy in the stress of memorisation, yet I thrived in the immersive world of sports. Inspired by my own experiences and Preeti's vision of a happy learning environment, Glentree aims to create a place where children can freely explore their talents and passions without the burden of grades." },
-  { name: 'Preeti Bhandary', title: 'DIRECTOR', linkedin: 'https://www.linkedin.com/in/preeti-bhandary-0164231a', image: preeti, message: "Research shows that involved parents contribute to happier, healthier, and more successful children. However, in today's fast-paced world, lack of quality parenting time leads to increased pressure on children. We often neglect the present moment, consumed by daily crises. Engaging children in multiple activities is no substitute for parental presence, despite common misconceptions." },
-  { name: 'Sowmia Raguraman', title: 'MENTOR PRINCIPAL', linkedin: 'https://www.linkedin.com/in/sowmia-raguraman-9b51b364', image: sowmia, message: "As an educator, my goal is to nurture a growth mindset in children, teaching them to embrace failures as opportunities for progress. I strive to help them measure their advancement effectively, academically and personally. By encouraging a positive attitude towards change and letting go of past negative experiences, we can develop their mature thinking from an early age. This mindset enables them to persevere through setbacks, accept constructive criticism, refine their skills, and view mistakes as stepping stones to success." },
-  { name: 'Rachana Heda', title: 'COO', linkedin: 'https://www.linkedin.com/in/rachana-heda-b218881a6', image: rachna, message: "As the proud leader of this educational institution, I am thrilled to share our commitment to learning for life. Our vision is to cultivate lifelong learners who are curious, creative, and compassionate individuals. Through innovative teaching methods, personalized guidance, and a diverse range of opportunities, we strive to equip our students with the skills, knowledge, and values needed to thrive in an ever-changing world. Together with our dedicated educators, supportive parents, and enthusiastic students, we embark on a journey of academic excellence, character development, and holistic growth. Join us as we shape the leaders and innovators of tomorrow." },
-]
+// const founderDesk = [
+// //  { name: 'Vittal Bhandary', title: 'CEO', linkedin: "https://www.linkedin.com/in/vittal-bhandary-51902519/", image: vittal, message: "Glentree Academy envisions a transformative approach to education, addressing the shortcomings of traditional learning. As a child, I found little joy in the stress of memorisation, yet I thrived in the immersive world of sports. Inspired by my own experiences and Preeti's vision of a happy learning environment, Glentree aims to create a place where children can freely explore their talents and passions without the burden of grades." },
+//   { name: 'Preeti Bhandary', title: 'DIRECTOR', linkedin: 'https://www.linkedin.com/in/preeti-bhandary-0164231a', image: preeti, message: "Research shows that involved parents contribute to happier, healthier, and more successful children. However, in today's fast-paced world, lack of quality parenting time leads to increased pressure on children. We often neglect the present moment, consumed by daily crises. Engaging children in multiple activities is no substitute for parental presence, despite common misconceptions." },
+//   { name: 'Sowmia Raguraman', title: 'MENTOR PRINCIPAL', linkedin: 'https://www.linkedin.com/in/sowmia-raguraman-9b51b364', image: sowmia, message: "As an educator, my goal is to nurture a growth mindset in children, teaching them to embrace failures as opportunities for progress. I strive to help them measure their advancement effectively, academically and personally. By encouraging a positive attitude towards change and letting go of past negative experiences, we can develop their mature thinking from an early age. This mindset enables them to persevere through setbacks, accept constructive criticism, refine their skills, and view mistakes as stepping stones to success." },
+//   { name: 'Rachana Heda', title: 'COO', linkedin: 'https://www.linkedin.com/in/rachana-heda-b218881a6', image: rachna, message: "As the proud leader of this educational institution, I am thrilled to share our commitment to learning for life. Our vision is to cultivate lifelong learners who are curious, creative, and compassionate individuals. Through innovative teaching methods, personalized guidance, and a diverse range of opportunities, we strive to equip our students with the skills, knowledge, and values needed to thrive in an ever-changing world. Together with our dedicated educators, supportive parents, and enthusiastic students, we embark on a journey of academic excellence, character development, and holistic growth. Join us as we shape the leaders and innovators of tomorrow." },
+// ]
 
-const missions = [
-  { image: mission1, alt: "Personal Growth at Best schools in Sarjapur Road, Bangalore", title: ['Empowering', 'Personal Growth'], icon: cupIcon, description: "Nurturing and empowering individuals to unleash their full potential in a supportive learning environment." },
-  { image: mission2, alt: "Global Education at top schools in Whitefield, Bangalore", title: ['Education with a', 'Global Perspective'], icon: globeIcon, description: "Broadening horizons and cultivating future leaders through innovative teaching and learning approaches." },
-  { image: mission3, alt: "Lifelong learning philosophy at Best schools in Bannerghatta Road, Bangalore", title: ['Igniting', 'Lifelong Learning'], icon: fireSquareIcon, description: "Sparking a passion for continuous exploration and discovery, making learning an engaging and enduring journey." },
-  { image: mission4, alt: "Building Resilience at top schools in Sarjapur Road, Bangalore", title: ['Building', 'Resilient Individuals'], icon: sledgeHammerIcon, description: "Equipping students with essential values, life skills, and character development for personal and professional success." },
-  { image: mission5, alt: "Top parent rated school in Whitefield, Bangalore", title: ['Strong Parents-School', 'Parternships'], icon: LinkSquareIcon, description: "Establishing collaborative communities that foster effective communication and engagement for optimal student development." },
-  { image: mission6, alt: "Innovation & Improvementat Best schools in Bannerghatta Road, Bangalore", title: ['Innovation & Improvement', 'in Education'], icon: graphUpIcon, description: "Embracing change, innovation, and research to create a dynamic and progressive educational environment." },
-]
+// const missions = [
+//   { image: mission1, alt: "Personal Growth at Best schools in Sarjapur Road, Bangalore", title: ['Empowering', 'Personal Growth'], icon: cupIcon, description: "Nurturing and empowering individuals to unleash their full potential in a supportive learning environment." },
+//   { image: mission2, alt: "Global Education at top schools in Whitefield, Bangalore", title: ['Education with a', 'Global Perspective'], icon: globeIcon, description: "Broadening horizons and cultivating future leaders through innovative teaching and learning approaches." },
+//   { image: mission3, alt: "Lifelong learning philosophy at Best schools in Bannerghatta Road, Bangalore", title: ['Igniting', 'Lifelong Learning'], icon: fireSquareIcon, description: "Sparking a passion for continuous exploration and discovery, making learning an engaging and enduring journey." },
+//   { image: mission4, alt: "Building Resilience at top schools in Sarjapur Road, Bangalore", title: ['Building', 'Resilient Individuals'], icon: sledgeHammerIcon, description: "Equipping students with essential values, life skills, and character development for personal and professional success." },
+//   { image: mission5, alt: "Top parent rated school in Whitefield, Bangalore", title: ['Strong Parents-School', 'Parternships'], icon: LinkSquareIcon, description: "Establishing collaborative communities that foster effective communication and engagement for optimal student development." },
+//   { image: mission6, alt: "Innovation & Improvementat Best schools in Bannerghatta Road, Bangalore", title: ['Innovation & Improvement', 'in Education'], icon: graphUpIcon, description: "Embracing change, innovation, and research to create a dynamic and progressive educational environment." },
+// ]
 ---
 
 <Layout 
@@ -130,26 +143,29 @@ const missions = [
           <Constrain class="flex flex-row flex-wrap">
             <div class="w-full flex justify-center items-center text-center">
               <div>
-                <Text type={'h2'} class='text-black w-full  mb-8 max-md:mb-4'>From the <span class="text-green-600">Founder's Desk</span></Text>
+                <Text type={'h2'} class='text-black w-full  mb-8 max-md:mb-4'>
+                  <div class="my-div" set:html={founderHeading}>
+                  </div>
+                  </Text>
               </div>
             </div>
-            <VittalFounderDesk />
-          {founderDesk.map((item, index) => (
+            {founderDeskBanner?.map((bannerDetails:any)=> <VittalFounderDesk  details={bannerDetails}/>)}
+          {founderDeskMembers?.map((item, index) => (
             <div class='flex flex-row w-full mt-8 items-center max-md:flex-col max-md:items-center max-md:mt-4'>
               <div class='max-w-[360px] w-full h-[410px] mr-[60px] shrink-0 rounded-3xl overflow-hidden max-md:mr-0'>
-                <Image src={item.image} alt="founder" class='w-full h-full object-cover object-top' />
+                <img src={item?.image} alt="founder" class='w-full h-full object-cover object-top' /> 
               </div>
               <div>
                 <div class="flex flex-row items-center max-md:mt-4">
-                  <Text type={'h3'} class='text-black'>{item.name}</Text>
-                  {!!item.linkedin && (
-                    <a class="w-6 h-6 ml-6 max-md:w-4 max-md:h-4 max-md:ml-3" href={item.linkedin} target="_blank">
-                      <Image src={linkedinIcon} alt="linked icon" class='w-full h-full object-cover' />
+                  <Text type={'h3'} class='text-black'>{item?.name}</Text>
+                  {!!item?.linkedin && (
+                    <a class="w-6 h-6 ml-6 max-md:w-4 max-md:h-4 max-md:ml-3" href={item?.linkedin} target="_blank">
+                     <Image src={linkedinIcon} alt="linked icon" class='w-full h-full object-cover'/> 
                     </a>
                   )}
                 </div>
-                <Text type={'subtitle'} class='mt-1 font-normal'>{item.title}</Text>
-                <Text type={'base'} class='mt-6 max-md:mt-3'>{item.message}</Text>
+                <Text type={'subtitle'} class='mt-1 font-normal'>{item?.title}</Text>
+                <Text type={'base'} class='mt-6 max-md:mt-3'>{item?.message}</Text>
               </div>
             </div>
           ))}
@@ -158,27 +174,35 @@ const missions = [
         </div>
 
         <div class='w-full flex flex-col flex-wrap px-20 py-16 gap-5 max-md:px-6 max-md:py-6 bg-white items-center max-'>
-          <Text type={'h2'} class='text-black mb-4'>Our <span class='text-accent2'>Mission</span></Text>
+          <Text type={'h2'} class='text-black mb-4'>
+            <div class="my-div text-center " set:html={ourMissionHeadingHtml}></div>
+          </Text>
           <div class='grid grid-rows-2 grid-cols-3 w-full gap-x-10 gap-y-7 max-md:grid-cols-1'>
-            {missions.map(mission => (
-              <div class='h-[400px] mission-card relative group overflow-hidden max-md:h-[320px] bg-red-100 rounded-lg bg-cover bg-center p-5 flex flex-col justify-between' style={{ backgroundImage: `url(${mission.image.src}` }}>
+            {ourMissions?.map((mission,i)=> {
+              const title = marked?.parse(mission?.title);
+              const titleCurrection = title.replaceAll('&lt;','<').replaceAll('&gt;','>').replaceAll('&amp;','and').split('<span>');
+              titleCurrection.splice(1,0,'<br/> <span class="text-[#f6d58d]">')
+              const titleHtml = titleCurrection?.join('');
+        
+              return(
+              <div class='h-[400px] mission-card relative group overflow-hidden max-md:h-[320px] bg-red-100 rounded-lg bg-cover bg-center p-5 flex flex-col justify-between' style={{ backgroundImage: `url(${mission?.image}` }}>
                 <div class="w-full h-full absolute top-0 left-0 bg-[linear-gradient(180deg,_rgba(0,_0,_0,_0.00)_50%,_#000_100%)] group-hover:bg-[linear-gradient(180deg,_rgba(10,94,47,0.9)_0%,_rgba(10,94,47,0.9)_100%)] transition-all z-0"></div>
-                <Image class="w-10 h-10 self-end object-contain relative z-10" src={mission.icon} alt={mission.alt} />
+                <Image class="w-10 h-10 self-end object-contain relative z-10" src={missionsIcons[i]} alt={`${mission?.alt} ${mission?.titleColored}`} />
                 <div class="relative z-10">
-                  <Text type={'h4'} class='leading-tight text-[28px]' style={{ transition: '0.3s all ease-in-out' }}>{mission.title[0]}<br/>
-                    <span class='text-yellow'>
-                      {mission.title[1]}
-                    </span>
+                  <Text type={'h4'} class='leading-tight text-[28px]' style={{ transition: '0.3s all ease-in-out' }}>
+                    <div class="cardDiv flex-col" set:html={titleHtml} >
+                      
+                      </div>
                   </Text>
-                  <Text type={'regular'} class='max-h-0 overflow-hidden opacity-0 group-hover:max-h-[1000px] group-hover:opacity-100' style={{ transition: '0.5s all ease-in-out' }}>{mission.description}</Text>
+                  <Text type={'regular'} class='max-h-0 overflow-hidden opacity-0 group-hover:max-h-[1000px] group-hover:opacity-100' style={{ transition: '0.5s all ease-in-out' }}>{mission?.description}</Text>
                 </div>
               </div>
-            ))}            
+            )})}            
           </div>
         </div>
         <BigAdmissionCTA />
         <div class="pt-6 max-md:pt-4" />
-        <GlentreeCareer alt="Careers at Top Schools in Sarjapur, Bangalore" />
+        <GlentreeCareer alt="Careers at Top Schools in Sarjapur, Bangalore" career={career}/>
         <div class="pt-8 max-md:pt-4" />
         <Footer />
     </div>
@@ -193,4 +217,5 @@ const missions = [
   .mission-card:hover {
     background-image: linear-gradient(45deg, rgba(10, 94, 47, 0.8), rgba(10, 94, 47, 0.8), )
   }
+
 </style>

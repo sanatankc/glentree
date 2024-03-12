@@ -1,8 +1,7 @@
-
 /* Register your custom font family and tell the browser where to find it. */
 @font-face {
-  font-family: 'MADE Gentle';
-  src: url('/fonts/MADE-Gentle.woff') format('woff');
+  font-family: "MADE Gentle";
+  src: url("/fonts/MADE-Gentle.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -10,25 +9,21 @@
 
 html {
   color: white;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
-
 
 .no-scrollbar::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
-
 
 .no-scrollbar {
-    -ms-overflow-style: none;  
-    scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
-
 
 @media screen and (max-width: 768px) {
   .main-container::-webkit-scrollbar {
     width: 1px !important;
-
   }
   ::-webkit-scrollbar {
     width: 1px;
@@ -37,7 +32,7 @@ html {
     overflow-y: overlay;
   }
 }
- 
+
 .main-container::-webkit-scrollbar {
   width: 18px;
 }
@@ -50,16 +45,16 @@ html {
 }
 
 .ribbon:before {
-  content: '';
+  content: "";
   position: absolute;
   width: 150px;
   animation: shine 2.5s ease-out infinite;
   height: 100%;
   background-image: linear-gradient(
-      120deg,
-      rgba(255,255,255, 0) 30%,
-      rgba(255,255,255, .8),
-      rgba(255,255,255, 0) 70%
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0) 70%
   );
   top: 0;
   left: -100px;
@@ -68,7 +63,17 @@ html {
 }
 
 @keyframes shine {
-  0% {left: -100px}
-  60% {left: 100%}
-  100% {left: 100%}
+  0% {
+    left: -100px;
+  }
+  60% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.my-div span {
+  color: rgb(74 124 96);
 }

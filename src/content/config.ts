@@ -14,6 +14,10 @@ const aboutUs = defineCollection({
       titleTag: z.string().optional(),
       metaDescription: z.string().optional(),
       ...heroSection,
+      founderDesk: z.string().optional(),
+      founderDeskMembers: z.any().optional(),
+      missions: z.any().optional(),
+      career: z.any().optional(),
     }),
 });
 
@@ -60,6 +64,7 @@ const campusCollection = defineCollection({
       galleryImages: z.any().optional(),
       showcase: z.any().optional(),
       scholarship: z.any().optional(),
+      earthlab: z.any().optional(),
       affiliationNo: z.string().optional(),
       aroundTheCampus: z
         .object({
@@ -100,6 +105,7 @@ const homeCollection = defineCollection({
       title: z.string().optional(),
       titleTag: z.string().optional(),
       metaDescription: z.string().optional(),
+      campus: z.any().optional(),
       heroImages: z
         .array(
           z.object({
@@ -149,6 +155,9 @@ const homeCollection = defineCollection({
           })
         )
         .optional(),
+      career: z.any().optional(),
+      familyTree: z.any().optional(),
+      founderNote: z.any().optional(),
     }),
 });
 
@@ -226,6 +235,7 @@ const curriculumCollection = defineCollection({
     z.object({
       titleTag: z.string(),
       metaDescription: z.string(),
+      lflCurriculam: z.any().optional(),
       ...heroSection,
       academics: z.array(
         z.object({
