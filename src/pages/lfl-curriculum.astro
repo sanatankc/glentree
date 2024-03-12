@@ -28,12 +28,18 @@ import Text from '../components/system/Text.astro';
 import Constrain from '../components/system/Constrain.astro';
 import { Image } from 'astro:assets';
 import AcademicsBox from '../components/AcademicsBox.astro';
-
 import { getEntries, getEntry, type CollectionEntry } from 'astro:content';
-const { data } = await getEntry('curriculum', 'curriculum') as CollectionEntry<'curriculum'>
-const { data: dataHome } = await getEntry('home', 'home') as CollectionEntry<'home'>
-
 import { marked } from 'marked'
+
+const { data: dataHome } = await getEntry('home', 'home') as CollectionEntry<'home'>
+const { data } = await getEntry('curriculum', 'curriculum') as CollectionEntry<'curriculum'>
+const curriculam = data?.lflCurriculam[0]
+const curriculamHeading =  marked.parse(curriculam.heading).replaceAll('&lt;','<').replaceAll('&gt;','>');
+
+
+
+
+
 const {
   titleHero,
   descriptionHero,
@@ -97,21 +103,46 @@ const descriptionHeroParsed = marked(descriptionHero)
         background: 'linear-gradient(249.28deg, #FBFFF7 0%, #F6FFED 0%, #FFFAF7 100%)'
       }}>
         <Constrain class="flex flex-col items-center">
-          <Text type={'subtitle'} class='text-black/80'>OUR PHILOSOPHY</Text>
-          <Text type={'h2'} class='mt-2'>LFL <span class='text-accent2'>Curriculum</span></Text>
+          <Text type={'subtitle'} class='text-black/80'>{curriculam?.subTitle}</Text>
+          <Text type={'h2'} class='mt-2'><div class="my-div" set:html={curriculamHeading}>
+            
+          </div></Text>
   
           <div class='max-w-[617px] max-h-[617px] w-full mt-9'>
             <Image src={LFLImage} alt="LFL Curriculum" class="w-full h-full object-fill" />
           </div>
 
           <Text type={'base'} class='mt-5 self-start'>
-            At Glentree Academy, our philosophy is rooted in fostering lifelong learning. We believe in a balanced approach that goes beyond grades, nurturing well-rounded individuals equipped with academic excellence, essential life skills, and the ability to make a positive impact on the world.
+           {curriculam?.description}
           </Text>
           <Text type={'base'} class='mt-8 self-start'>
-            Here's how we bring our philosophy to life in our daily school practices:
+           {curriculam.paragraph}
           </Text>
           <div class='w-full flex flex-row flex-wrap gap-8 justify-center items-center mt-6'>
-            <div class='w-full max-w-[413px] rounded-xl border-2 border-solid border-[#E2E2E2] '>
+
+            {
+              curriculam?.cardDetails?.map((data,i)=>
+              {
+                const colorArr = ['bg-accent2','bg-accent','bg-accent3']
+                const title = data?.title
+                const titleHtml = marked.parse(title).replaceAll('&lt;','<').replaceAll('&gt;','>').replaceAll('<span>',`<span class='text-white px-3 py-1 mr-1 rounded ${colorArr[i]}'>`)
+               
+                return(
+                <div class='w-full max-w-[413px] rounded-xl border-2 border-solid border-[#E2E2E2] '>
+              <img src={data.image} class='w-full h-132px rounded-t-xl' alt={data.alt} />
+              <div class='w-full bg-white p-4 flex flex-col rounded-xl'>
+               <Text type={'h4'} class='flex flex-row mt-1 w-max items-center max-md:flex-col max-md:items-start'><div class=' text-black  py-1 mr-1 rounded' set:html={titleHtml}></div></Text>
+                <Text type={'regular'} class='mt-3 font-[500] '>{data?.cardDescription}</Text>
+  
+              </div>
+            </div>
+                )
+              }
+              )
+            }
+           
+
+            <!-- <div class='w-full max-w-[413px] rounded-xl border-2 border-solid border-[#E2E2E2] '>
               <Image src={balancedLearning} class='w-full h-132px rounded-t-xl' alt="LFL Curriculum" />
               <div class='w-full bg-white p-4 flex flex-col rounded-xl'>
                 <Text type={'h4'} class='flex flex-row mt-1 w-max items-center max-md:flex-col max-md:items-start'><div class='bg-accent2 text-white px-3 py-1 mr-1 rounded'>Balanced</div> <div>Learning Approach</div></Text>
@@ -134,7 +165,7 @@ const descriptionHeroParsed = marked(descriptionHero)
                 <Text type={'regular'} class='mt-3 font-[500] '>Diverse programs like theatre, dance, music, sports, and yoga enrich our curriculum, nurturing students' passions and fostering important skills.</Text>
   
               </div>
-            </div>
+            </div> -->
           </div>
         </Constrain>
 
@@ -194,4 +225,6 @@ const descriptionHeroParsed = marked(descriptionHero)
 .my-float{
 	margin-top:16px;
 }
+
+
 </style>

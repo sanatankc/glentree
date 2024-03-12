@@ -10,15 +10,25 @@ import scholarship2 from '../../images/register/scholarship/2.png'
 import PrePrimaryBG from '../../images/curriculum/prePrimary.png';
 import scholarship4 from '../../images/scholarships/preeti_bhanadry.png'
 
-const { bannerghattaPage = false, schollarship } = Astro.props
+import {marked} from 'marked'
+ 
+const { bannerghattaPage = false, scholarship } = Astro.props
+const heading = marked.parse(scholarship[0]?.heading)
+const headingHtml = heading.replaceAll('&lt;','<').replaceAll('&gt;','>').replaceAll('&amp;','and')
+const {scholarshipList} = scholarship[0]
+
 ---
 <div class='bg-white relative p-20 py-0 max-md:p-5'>
   <!-- <Image src={campusSectionPatternBG} class='w-screen absolute top-0 left-0 -z-1' role="presentation" alt="decoration" /> -->
   <Constrain class="'max-w-[1320px]">
     <div class='relative z-10'>
       <Text type='subtitle' class='text-center text-black/60' style={{ letterSpacing: '0.1em' }}>Empowering Students</Text>
-      <Text type='h2' class='text-center text-black mt-3'>Scholarship & Benefit <span class="text-accent2">Programs</span></Text>
-      {!bannerghattaPage && (
+      <Text type='h2' class='text-center text-black mt-3'>
+        <div class="my-div" set:html={headingHtml}>
+
+        </div>
+      </Text>
+      <!-- {!bannerghattaPage && (
         <div class='grid grid-cols-2  gap-6 max-md:grid-rows-2 max-md:grid-cols-1 justify-between mt-8'>
           <div class='border border-black/20 p-6 max-md:p-2 max-md:pr-2 pr-8 flex flex-row max-md:flex-col rounded-md gap-4'>
             <div class="min-w-[232px] max-md:h-[230px] h-[180px] rounded-md">
@@ -68,22 +78,30 @@ const { bannerghattaPage = false, schollarship } = Astro.props
             </div>
           </div>
         </div>
-      )}
+      )} -->
 
 
-<div class={`grid grid-cols-1 ${schollarship.length > 1 ? 'md:grid-cols-2' : ''} md:grid-cols-1 gap-6 max-md:grid-rows-2 max-md:grid-cols-1 mt-6`}>
+ <div class={`grid grid-cols-1 ${scholarshipList.length > 1 ? 'md:grid-cols-2' : ''} md:grid-cols-1 gap-6 mt-6`}>
 {
-  schollarship?.map(
+  scholarshipList?.map(
     data =>
-    <div class='border border-black/20 p-6 max-md:p-2 max-md:pr-2 pr-8 flex flex-row max-md:flex-col rounded-md gap-4'>
+  {
+    const title = marked.parse(data.title);
+    const titleHtml = title.replaceAll('&lt;','<').replaceAll('&gt;','>').replaceAll('&amp;','and').replace('<span>', '<span class="text-[#6f322e]">')
+    
+    
+    return(  <div class='border border-black/20 p-6 max-md:p-2 max-md:pr-2 pr-8 flex flex-row max-md:flex-col rounded-md gap-4'>
     <div class="min-w-[232px] max-md:h-[230px] h-[180px] bg-slate-200 rounded-md">
-      <Image width={50} height={50} src={data?.image} class="w-full h-full object-cover rounded-md" alt="scholarship" />
+      <Image width={50} height={50} src={data?.image} class="w-full h-full object-cover rounded-md" alt={data?.alt} />
     </div>
     <div class="flex flex-col items-start text-left gap-3 max-md:px-2 text-black">
       <div>
-        <Text type='h4' class='text-black'><span class="text-accent3">{data?.headingColored}</span> {data?.headingNormal} </Text>
+        <Text type='h4' class='text-black'> <div class="scholarDiv" set:html={
+          titleHtml
+        }>
+          </div> </Text>
       </div>
-      <div class="flex flex-col items-start">
+      <div class="flex flex-col gap-2 items-start">
         {
           data?.list.map(list=>
           <div class="flex">
@@ -96,7 +114,7 @@ const { bannerghattaPage = false, schollarship } = Astro.props
         }
       </div>
     </div>
-  </div>
+  </div>)}
   )
 }
 </div>
@@ -137,3 +155,9 @@ const { bannerghattaPage = false, schollarship } = Astro.props
       </div>
   </Constrain>
 </div>
+
+<style>
+  .scholarDiv span {
+    color: #6f322e;
+  }
+</style>

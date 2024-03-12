@@ -69,5 +69,43 @@ academics:
     image: /images/middle&High.png
     imageAlt: 'Grade 11 CBSE Syllabus, Grade 12 CBSE Syllabus'
     newlyAdded: true
+lflCurriculam:
+  - subTitle: OUR PHILOSOPHY
+    heading: "## LFL\_\\<span>Curriculum\\</span>\n"
+    description: >-
+      At Glentree Academy, our philosophy is rooted in fostering lifelong
+      learning. We believe in a balanced approach that goes beyond grades,
+      nurturing well-rounded individuals equipped with academic excellence,
+      essential life skills, and the ability to make a positive impact on the
+      world.
+    paragraph: 'Here''s how we bring our philosophy to life in our daily school practices:'
+    cardDetails:
+      - image: /images/balancedLearning.png
+        alt: Balanced Learning Approach
+        title: |
+          ## \<span>Balanced\</span> Learning Approach
+        cardDescription: >
+          Our comprehensive curriculum ensures a balanced focus on both core
+          subjects and essential life skills, fostering a lifelong love for
+          learning.
+      - image: /images/lifelongLearning.png
+        alt: Lifelong Success
+        title: |
+          ## Beyond Grades:\<span>Lifelong\</span> Success
+        cardDescription: >
+          Education goes beyond grades; our curriculum empowers students with
+          practical skills, knowledge, and a growth mindset for lifelong
+          success.
+      - image: /images/diversePrograms.png
+        alt: Enrichin Diverse Programs
+        title: |
+          ## Enrich in \<span>Diverse\</span> Programs
+        cardDescription: >
+          Diverse programs like theatre, dance, music, sports, and yoga enrich
+          our curriculum, nurturing students' passions and fostering important
+          skills.
 ---
+
+
+
 

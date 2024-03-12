@@ -1,6 +1,7 @@
 ---
 import Constrain from "../system/Constrain.astro";
 import Text from "../system/Text.astro";
+import {marked} from 'marked';
 
 import video1 from '../../images/campus/gaw/earthLab/1.mp4'
 import video2 from '../../images/campus/gaw/earthLab/2.mp4'
@@ -9,52 +10,164 @@ import video3 from '../../images/campus/gaw/earthLab/3.mp4'
 import thumb1 from '../../images/campus/gaw/earthLab/1.jpeg'
 import thumb2 from '../../images/campus/gaw/earthLab/2.jpeg'
 import thumb3 from '../../images/campus/gaw/earthLab/3.jpeg'
+import { fade } from "astro:transitions";
+
+const {bannerghattaPage= false , earthLabBannerGhatta} =Astro.props;
+const { sarjapurData } =Astro.props;
+const { whitefieldData } =Astro.props;
+let BannerGhattaAllData;
+let sarjapurAllData;
+let whitefieldAllData;
+
+if(earthLabBannerGhatta){
+   BannerGhattaAllData = [{
+  video : video1,
+  thumb : thumb1,
+  description : earthLabBannerGhatta[0]?.list[0]?.videotitle
+},
+{
+  video : video2,
+  thumb : thumb2,
+  description : earthLabBannerGhatta[0]?.list[1]?.videotitle
+},
+{
+  video : video3,
+  thumb : thumb3,
+  description : earthLabBannerGhatta[0]?.list[2]?.videotitle
+}
+]
+}
+
+
+if(sarjapurData){
+ sarjapurAllData = [{
+  video : video1,
+  thumb : thumb1,
+  description : sarjapurData[0]?.list[0]?.videotitle
+},
+{
+  video : video2,
+  thumb : thumb2,
+  description : sarjapurData[0]?.list[1]?.videotitle
+},
+{
+  video : video3,
+  thumb : thumb3,
+  description : sarjapurData[0]?.list[2]?.videotitle
+}
+]}
+
+if(whitefieldData){
+  whitefieldAllData = [{
+  video : video1,
+  thumb : thumb1,
+  description : whitefieldData[0]?.list[0]?.videotitle
+},
+{
+  video : video2,
+  thumb : thumb2,
+  description : whitefieldData[0]?.list[1]?.videotitle
+},
+{
+  video : video3,
+  thumb : thumb3,
+  description : whitefieldData[0]?.list[2]?.videotitle
+}
+]}
+
 
 
 ---
 <div class="py-14 max-md:py-8 text-center flex flex-col items-center" style={{ background: 'linear-gradient(249.28deg, #FBFFF7 0%, #F6FFED 0%, #FFFAF7 100%)' }} >
-  <Text type={'subtitle'} style={{ opacity: 0.8, color: '#121212' }}>OUR LATEST INITIATIVE</Text>
-  <Text type={'h2'} class='text-black mt-6'>
-    Introducing: <span class='text-green-400'>{' '}Earth Lab </span>
-  </Text>
-  <Text type={'base'} class='mt-7 font-medium text-black w-[60%] max-md:w-[90%]'>
-    We introduce children to the fundamentals of agriculture and gardening. They learn about various soil types and soil-less media for greenery, growing microgreens, composting, plant care, and harvesting. 
-  </Text>
+  <!-- data of bannerGhatta -->
+  {earthLabBannerGhatta?.map((details : any) => {
+     const bannerghattaHeading = marked.parse(details?.heading);
+     const bannerghattaHeadingHtml = bannerghattaHeading?.replaceAll('&lt;','<').replaceAll('&gt;','>')
+
+           return(<Text type={'subtitle'} style={{ opacity: 0.8, color: '#121212' }}>{details?.subtitle}</Text>
+            <Text type={'h2'} class='text-black mt-6'>
+                  <div class="my-div" set:html={bannerghattaHeadingHtml}></div>
+            </Text> 
+      <Text type={'base'} class='mt-7 font-medium text-black w-[60%] max-md:w-[90%]'>
+      {details?.description} 
+      </Text>)})}
+
+      {whitefieldData?.map((details : any) => { 
+          const whitefieldHeading = marked.parse(details?.heading);
+          const whitefieldHeadingHtml = whitefieldHeading?.replaceAll('&lt;','<').replaceAll('&gt;','>')
+            return(<Text type={'subtitle'} style={{ opacity: 0.8, color: '#121212' }}>{details?.subtitle}</Text>
+          <Text type={'h2'} class='text-black mt-6'>
+            <div class="my-div" set:html={whitefieldHeadingHtml}></div>
+            </Text>
+          <Text type={'base'} class='mt-7 font-medium text-black w-[60%] max-md:w-[90%]'>
+          {details?.description} 
+          </Text>)})
+          }
+
+        {sarjapurData?.map((details : any) => {
+            const sarjapurHeading = marked.parse(details?.heading);
+            const sarjapurHeadingHtml = sarjapurHeading?.replaceAll('&lt;','<').replaceAll('&gt;','>')
+              return(<Text type={'subtitle'} style={{ opacity: 0.8, color: '#121212' }}>{details?.subtitle}</Text>
+            <Text type={'h2'} class='text-black mt-6'>
+              <div class="my-div" set:html={sarjapurHeadingHtml}></div>
+              </Text>
+            <Text type={'base'} class='mt-7 font-medium text-black w-[60%] max-md:w-[90%]'>
+            {details?.description} 
+            </Text>)})
+            }
+
+      
+
   <div class="px-20 w-full max-md:px-4">
     <Constrain>
       <div class='w-full mt-8 flex flex-row gap-3 max-md:flex-col'>
-        <div class='h-[507px] w-full rounded-md overflow-hidden relative'>
+
+        {BannerGhattaAllData?.map(data=>
+         <div class='h-[507px] w-full rounded-md overflow-hidden relative'>
           <!-- <video src={video1} autoplay loop /> -->
-          <video class="lazy play-on-hover w-full h-full object-cover" loop playsinline disableRemotePlayback poster={thumb1.src}>
+          <video class="lazy play-on-hover w-full h-full object-cover" loop playsinline disableRemotePlayback poster={data?.thumb.src}>
             <!-- <source data-src="one-does-not-simply.webm" type="video/webm"> -->
-            <source data-src={video1} type="video/mp4">
+            <source data-src={data?.video} type="video/mp4">
           </video>
           <div class="w-full pointer-events-none bottom-0 left-0 h-64 bg-gradient-to-b from-green-800/0 to-green-800/80 rounded-xl z-10 absolute flex justify-end items-end p-5">
             <Text type="regular" class="text-left font-medium">
-              Teaching urban gardening and vertical farming through microgreens and house plants.
+             {data?.description}
             </Text>
           </div>
         </div>
-        <div class='h-[507px] w-full rounded-md overflow-hidden relative'>
-          <video class="lazy play-on-hover w-full h-full object-cover" loop playsinline poster={thumb2.src}>
-            <source data-src={video2} type="video/mp4">
+        )}
+
+
+        {sarjapurAllData?.map(data=>
+         <div class='h-[507px] w-full rounded-md overflow-hidden relative'>
+          <!-- <video src={video1} autoplay loop /> -->
+          <video class="lazy play-on-hover w-full h-full object-cover" loop playsinline disableRemotePlayback poster={data?.thumb.src}>
+            <!-- <source data-src="one-does-not-simply.webm" type="video/webm"> -->
+            <source data-src={data?.video} type="video/mp4">
           </video>
           <div class="w-full pointer-events-none bottom-0 left-0 h-64 bg-gradient-to-b from-green-800/0 to-green-800/80 rounded-xl z-10 absolute flex justify-end items-end p-5">
             <Text type="regular" class="text-left font-medium">
-              Teaching students to grow microgreens promotes healthy eating habits and nutrition education. 
+             {data?.description}
             </Text>
           </div>
         </div>
-        <div class='h-[507px] w-full rounded-md overflow-hidden relative'>
-          <video class="lazy play-on-hover w-full h-full object-cover" loop playsinline muted poster={thumb3.src}>
-            <source data-src={video3} type="video/mp4">
+        )}
+
+        {whitefieldAllData?.map(data=>
+         <div class='h-[507px] w-full rounded-md overflow-hidden relative'>
+          <!-- <video src={video1} autoplay loop /> -->
+          <video class="lazy play-on-hover w-full h-full object-cover" loop playsinline disableRemotePlayback poster={data?.thumb.src}>
+            <!-- <source data-src="one-does-not-simply.webm" type="video/webm"> -->
+            <source data-src={data?.video} type="video/mp4">
           </video>
           <div class="w-full pointer-events-none bottom-0 left-0 h-64 bg-gradient-to-b from-green-800/0 to-green-800/80 rounded-xl z-10 absolute flex justify-end items-end p-5">
             <Text type="regular" class="text-left font-medium">
-              Tending to plants and observing their growth can have a positive impact on student's mental well-being.  
+             {data?.description}
             </Text>
           </div>
         </div>
+        )}
+    
       </div>
     </Constrain>
   </div>
