@@ -86,6 +86,8 @@ newsLetter:
   imageAlt: News Letter
   newsLetter: /images/newsletter1.pdf
 showcase:
+  - image: /images/music-culmination-at-schools-in-sarjapur-road.jpg
+    title: Music Culmination
   - image: /images/scouts-and-guides-trekking-at-schools-in-sarjapur-road.jpg
     title: Scouts and Guides Trekking
   - image: /images/first-foot-forward-club.jpg
