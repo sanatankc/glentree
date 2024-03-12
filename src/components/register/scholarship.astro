@@ -16,6 +16,7 @@ const { bannerghattaPage = false, scholarship } = Astro.props
 const heading = marked.parse(scholarship[0]?.heading)
 const headingHtml = heading.replaceAll('&lt;','<').replaceAll('&gt;','>').replaceAll('&amp;','and')
 const {scholarshipList} = scholarship[0]
+console.log(scholarshipList)
 
 ---
 <div class='bg-white relative p-20 py-0 max-md:p-5'>
@@ -86,8 +87,8 @@ const {scholarshipList} = scholarship[0]
   scholarshipList?.map(
     data =>
   {
-    const title = marked.parse(data.title);
-    const titleHtml = title.replaceAll('&lt;','<').replaceAll('&gt;','>').replaceAll('&amp;','and').replace('<span>', '<span class="text-[#6f322e]">')
+    const title = marked.parse(data?.title);
+    const titleHtml = title?.replaceAll('&lt;','<').replaceAll('&gt;','>').replaceAll('&amp;','and').replace('<span>', '<span class="text-[#6f322e]">')
     
     
     return(  <div class='border border-black/20 p-6 max-md:p-2 max-md:pr-2 pr-8 flex flex-row max-md:flex-col rounded-md gap-4'>

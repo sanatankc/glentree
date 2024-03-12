@@ -32,7 +32,6 @@ founderDeskMembers:
       multiple activities is no substitute for parental presence, despite common
       misconceptions.
     linkedin: 'https://www.linkedin.com/in/preeti-bhandary-0164231a'
-    index: '1'
   - image: /images/sowmia.png
     name: Sowmia Raguraman
     title: MENTOR PRINCIPAL
@@ -46,7 +45,6 @@ founderDeskMembers:
       accept constructive criticism, refine their skills, and view mistakes as
       stepping stones to success.
     linkedin: 'https://www.linkedin.com/in/sowmia-raguraman-9b51b364'
-    index: '2'
   - image: /images/Rachna.jpg
     name: Rachana Heda
     title: COO
@@ -62,7 +60,6 @@ founderDeskMembers:
       character development, and holistic growth. Join us as we shape the
       leaders and innovators of tomorrow.
     linkedin: 'https://www.linkedin.com/in/rachana-heda-b218881a6'
-    index: '3'
 missions:
   - header: |
       Our \<span>Mission\</span>
@@ -116,10 +113,11 @@ career:
     imageAlt: 'Careers at Top Schools in Sarjapur, Bangalore'
     heading: Work with Us
     title: Join the Glentree Community
-    paragraph: 'To view open career positions,'
+    paragraph: 'To view open career positions, '
     buttonName: click here
     buttonLink: 'https://www.naukri.com/learning-edge-india-jobs-careers-1633530'
 ---
+
 
 
 
