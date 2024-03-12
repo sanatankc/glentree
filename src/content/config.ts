@@ -235,7 +235,7 @@ const curriculumCollection = defineCollection({
     z.object({
       titleTag: z.string(),
       metaDescription: z.string(),
-      lflCurriculam: z.any().optional(),
+      lflCurriculum: z.any().optional(),
       ...heroSection,
       academics: z.array(
         z.object({

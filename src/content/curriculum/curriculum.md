@@ -69,7 +69,7 @@ academics:
     image: /images/middle&High.png
     imageAlt: 'Grade 11 CBSE Syllabus, Grade 12 CBSE Syllabus'
     newlyAdded: true
-lflCurriculam:
+lflCurriculum:
   - subTitle: OUR PHILOSOPHY
     heading: "## LFL\_\\<span>Curriculum\\</span>\n"
     description: >-

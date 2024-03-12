@@ -282,7 +282,7 @@ const { data } = await getEntry('campus','bannerghatta') as CollectionEntry<'cam
 
     <!-- <Testimonial /> -->
 
-    <EarthLab bannerghattaPage earthLabBannerGhatta={data.earthlab} />
+    <EarthLab bannerghattaPage data={data.earthlab} />
     <Scholarship bannerghattaPage scholarship={data.scholarship} />
 
     <BigAdmissionCTA />
