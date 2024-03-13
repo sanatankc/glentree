@@ -334,70 +334,21 @@ const { data:pageData } = await getEntry('campus', currentPage) as CollectionEnt
               <Button class='max-md:hidden'>Launch Virtual Campus Tour</Button>
             </a>
           </Constrain>
-          {campusName === 'whitefield' && (
-            <CampusFacilities
-              currentLink={currentPath}
-              campusName={campusName}
-              data={{
-                title: aroundTheCampus?.description,
-                description: aroundTheCampus?.bulletPoints?.map(({ bulletPoint }) => bulletPoint),
-                campusTourEmbedId: data?.campusTourEmbedId,
-                gallery: aroundTheCampus?.gallery?.map(({ image, title, description, altTag }) => ({
-                  src: image,
-                  caption: title,
-                  description,
-                  altTag,
-                })),
-              }}
-            />
-          )}
-          {campusName === 'sarjapur' && (
-            <CampusFacilities
-              currentLink={currentPath}
-              campusName={campusName}
-              data={{
-                title: 'Explore our sarjapur road campus, designed to enhance the learning experience with modern facilities and resources.',
-                description: [
-                  'Composite Science Laboratory',
-                  'High-Tech Computer Lab',
-                  'Premium Sports Facilities',
-                  'Fun-Secure Play Area',
-                ],
-                gallery: [
-                  {
-                    src: LibraryGAS, 
-                    caption: 'Library',
-                    description: 'Explore our vast library, a treasure trove of knowledge with a diverse collection of books and journals, to fuel the academic journey.',
-                  },
-                  {
-                    src: ScienceLabGAS,
-                    caption: 'Composite Science Laboratory',
-                    description: 'Unlock the wonders of science through hands-on experiments in our state-of-the-art lab, fostering a deep understanding of the natural world.',
-                  },
-                  {
-                    src: csLabGAS,
-                    caption: 'Computer Lab',
-                    description: "Embark on a digital voyage in our cutting-edge computer lab, where students gain practical skills and knowledge in technology and computer science.",
-                  },
-                  {
-                    src: smartClassroomGAS,
-                    caption: 'Smart Interactive Classrooms',
-                    description: "Step into the future of education with our Smart Interactive Classrooms, where technology and teaching seamlessly combine to enhance the learning experience.",
-                  },
-                  {
-                    src: campusGAS,
-                    caption: 'CCTV Secured Campus',
-                    description: "Safety is paramount to us. Our CCTV-secured campus ensures a secure environment, providing peace of mind to both students and parents.",
-                  },
-                  {
-                    src: SportsGAS,
-                    caption: 'Playground',
-                    description: "Sports and Recreation – Glentree offers a diverse range of sports and recreational activities, including chess, badminton, table tennis, football, basketball, volleyball, yoga, taekwondo, and fostering physical fitness and a spirit of teamwork among our students."
-                  },
-                ]
-              }}
-            />
-          )}
+          <CampusFacilities
+            currentLink={currentPath}
+            campusName={campusName}
+            data={{
+              title: aroundTheCampus?.description,
+              description: aroundTheCampus?.bulletPoints?.map(({ bulletPoint }) => bulletPoint),
+              campusTourEmbedId: data?.campusTourEmbedId,
+              gallery: aroundTheCampus?.gallery?.map(({ image, title, description, altTag }) => ({
+                src: image,
+                caption: title,
+                description,
+                altTag,
+              })),
+            }}
+          />
         </div>
 
           <div class='w-full mt-20 max-md:mt-8 mb-0 p-20 max-md:p-4 max-md:py-8 max-md:mb-0' style={{
