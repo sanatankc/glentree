@@ -23,6 +23,7 @@ principalMessage:
     providing transformative experiences. We strive to mold late bloomers,
     mediocre, and gifted students to become global citizens through an
     innovative and enlightened education.
+campusTourEmbedId: hh5bV5M49cA
 affiliationNo: '831088'
 aroundTheCampus:
   description: >-
@@ -85,6 +86,21 @@ newsLetter:
   image: /images/_image-2.webp
   imageAlt: News Letter
   newsLetter: /images/newsletter1.pdf
+earthlab:
+  - subtitle: OUR LATEST INITIATIVE
+    heading: "## Introducing:\_\\<span>Earth Lab\\</span>\n"
+    description: >-
+      We introduce children to the fundamentals of agriculture and gardening.
+      They learn about various soil types and soil-less media for greenery,
+      growing microgreens, composting, plant care, and harvesting.
+    list:
+      - videotitle: ' Teaching urban gardening and vertical farming through microgreens and house plants.'
+      - videotitle: >-
+          Teaching students to grow microgreens promotes healthy eating habits
+          and nutrition education. 
+      - videotitle: >-
+          Tending to plants and observing their growth can have a positive
+          impact on student's mental well-being.
 showcase:
   - image: /images/music-culmination-at-schools-in-sarjapur-road.jpg
     title: Music Culmination
@@ -170,21 +186,6 @@ showcase:
     title: Math Lab
   - image: /images/gas-update7.jpeg
     title: Van Mohtsav Special Assembly
-earthlab:
-  - subtitle: OUR LATEST INITIATIVE
-    heading: "## Introducing:\_\\<span>Earth Lab\\</span>\n"
-    description: >-
-      We introduce children to the fundamentals of agriculture and gardening.
-      They learn about various soil types and soil-less media for greenery,
-      growing microgreens, composting, plant care, and harvesting.
-    list:
-      - videotitle: ' Teaching urban gardening and vertical farming through microgreens and house plants.'
-      - videotitle: >-
-          Teaching students to grow microgreens promotes healthy eating habits
-          and nutrition education. 
-      - videotitle: >-
-          Tending to plants and observing their growth can have a positive
-          impact on student's mental well-being.
 contactUs:
   phoneNo: +91 9632104368
   email: admission.gas@glentreeacademy.com
