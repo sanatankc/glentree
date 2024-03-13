@@ -6,7 +6,7 @@ metaDescription: >-
 updates:
   - thumbnail: /images/math-wizards-at-best-cbse-schools-in-whitefield.jpg
     alt: math-wizads-at-best-cbse-schools-in-bangalore
-    title: Math Wizads
+    title: Math Wizards
     description: >-
       Celebrating our Math Wizards! 'Mathematics is the language of the
       universe', and our students have made a masterpiece of its speech.
