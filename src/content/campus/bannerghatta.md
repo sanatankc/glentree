@@ -18,6 +18,7 @@ heroImages:
     position: center
 virtualCampusLink: test
 affiliationNo: test
+campusTourEmbedId: dOJ3I8yNnD8
 aroundTheCampus:
   description: >-
     Explore our new campus, designed to enhance the learning experience with

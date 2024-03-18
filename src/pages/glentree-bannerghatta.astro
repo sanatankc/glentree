@@ -305,6 +305,9 @@ const { data } = await getEntry('campus','bannerghatta') as CollectionEntry<'cam
     <!-- <BigAdmissionCTA /> -->
 
     <!-- <GlentreeFamily /> -->
+    {data.campusTourEmbedId && (
+      <YoutubeEmbed embedId={data.campusTourEmbedId} videoId='campusTourVideo' />
+    )}
     <Footer />
   </div>
 
