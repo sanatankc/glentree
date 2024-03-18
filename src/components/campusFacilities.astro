@@ -32,7 +32,7 @@ const { currentLink, campusName, data } = Astro.props
           <Text type="regular" class="font-bold ml-[10px]">{item}</Text>
         </div> 
       ))}
-      <div class="flex flex-row gap-8 items-center">
+      <div class="flex flex-row gap-8 items-center max-md:flex-col max-md:items-start">
         {data.campusTourEmbedId && (
           <div data-video-open="campusTourVideo" class="flex-shrink-0">
             <Button>

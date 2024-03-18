@@ -63,6 +63,7 @@ const aroundTheCampus = data.aroundTheCampus
           </div>
         ))}
 
+      <div class="flex flex-row gap-8 items-center max-md:flex-col max-md:items-start">
         {data.campusTourEmbedId && (
           <div data-video-open="campusTourVideo" class="flex-shrink-0">
             <Button>
@@ -76,6 +77,8 @@ const aroundTheCampus = data.aroundTheCampus
         <div class="cursor-pointer" data-modal-target="new-campus-showcase" data-target-deck="deck-new-campus-showcase">
           <Text type="regular" class='underline uppercase text-green-600 tracking-wide font-bold'>VIEW Facilities</Text>
         </div>
+      </div>
+
       </div>
     </div>
 
