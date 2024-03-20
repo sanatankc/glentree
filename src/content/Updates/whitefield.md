@@ -4,6 +4,25 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/counselling-sessions-at-school.jpg
+    alt: counseling-sessions-at-schools
+    title: Counseling Sessions
+    description: >-
+      Counseling sessions in schools are not only important but essential for
+      supporting the holistic well-being and development of students, by
+      providing mental health support, academic guidance,  conflict resolution
+      skills, and life skills development. Glentree Academy conducted such
+      comprehensive counseling sessions for Grades 1 to 8.  Age-wise counselling
+      sessions were conducted for these grades for example:-  for primary
+      students (grades 1-3), including live tours at NASA, and the presence of
+      the rich diversity of Incredible India. The Theme for older ones (Grades 4
+      to 8) was individual development focus shifted towards personal growth and
+      self-discovery. Grades 6 to 8, emphasised on the importance of kindness,
+      empathy, and responsible digital citizenship. Overall, Glentree Academy's
+      counselling sessions provided a nurturing environment for students to
+      develop essential life skills, cultivate empathy, and build a strong
+      foundation for their holistic development.
+    publishedDate: 2024-03-19T18:30:00.000Z
   - thumbnail: /images/math-wizards-at-best-cbse-schools-in-whitefield.jpg
     alt: math-wizads-at-best-cbse-schools-in-bangalore
     title: Math Wizards
