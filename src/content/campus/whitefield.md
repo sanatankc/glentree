@@ -123,7 +123,7 @@ earthlab:
           Tending to plants and observing their growth can have a positive
           impact on student's mental well-being.
 showcase:
-  - image: /images/counselling-sessions-at-schools.jpg
+  - image: /images/counseling-sessions.jpg
     title: Counseling Sessions
   - image: /images/math-wizards-at-schools-in-whitefield.jpg
     title: Math Wizards
