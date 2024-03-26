@@ -4,6 +4,28 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/grade-10-expedition.jpg
+    alt: camping-expedition-of-grade-10
+    title: Camping Expedition - Grade 10
+    description: >-
+      Our grade 10 students took off on a thrilling camping trip, near the
+      serene locality of Kanakpura, as supervised by Edoutdoors from the 14th
+      and 15th of March. The expedition was catered to develop the students on
+      the practical side and to the spirit of resilience. They discovered how to
+      lead the art of observing nature to get cues and clues, they kept on
+      honing their skills as well as their problem-solving abilities while
+      enjoying the beauty of nature around them. Post which they were invited to
+      try thrilling activities such as high rope and quake walks.  This bonding
+      session in addition to a campfire really allowed students to deepen
+      relationships with both camaraderie and friendship. The campers spent the
+      night in their tents It also led the campers to appreciate all the more
+      the principles of sustainability.  This experiential learning approach
+      over-emphasized the concept of 'learning by doing, by which, the
+      theoretical knowledge was translated into practical knowledge in
+      real-world scenarios, whereby these concepts were deeply understood. It
+      was a remarkable journey during which they gained valuable life lessons
+      and experiences.
+    publishedDate: 2024-03-25T18:30:00.000Z
   - thumbnail: /images/best-cbse-schools-in-whitefield-4.jpg
     alt: sports-day-pre-primary
     title: Sports Day - Pre-Primary
