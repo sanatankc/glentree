@@ -123,6 +123,8 @@ earthlab:
           Tending to plants and observing their growth can have a positive
           impact on student's mental well-being.
 showcase:
+  - image: /images/best-cbse-schools-in-whitefield-3.jpg
+    title: Sports Day - Pre-Primary
   - image: /images/counseling-sessions.jpg
     title: Counseling Sessions
   - image: /images/math-wizards-at-schools-in-whitefield.jpg
