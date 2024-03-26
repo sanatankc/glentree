@@ -4,6 +4,34 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/best-cbse-schools-in-whitefield-4.jpg
+    alt: sports-day-pre-primary
+    title: Sports Day - Pre-Primary
+    description: >-
+      Jan 25th 2024 - Marked as a Pre-Primary Sports Day at Glentree Academy
+      Whitefield. The theme for the day was awareness and the significance of
+      millet in each one’s dietary habits.  The program was not only about
+      revealing the physical talents of young performers but also about
+      educating them about healthy eating habits.  student’s introduction
+      included certain narratives mixed with the help of visual presentations to
+      eloquently explain the benefits of eating millet.    Children in a
+      kindergarten class captured the attention with their vibrant singing of
+      "Ye Ke Ye Ke", which represented the happy side of harvest, While the UKG
+      students performed the most memorable millet tunes "What Makes You
+      Beautiful" at their turn marks the millets as the unsung heroes in the
+      process of nutrition. The skit presented by LKG students, called "Healthy
+      Eating Habits," was on the road to the consumption of the right kinds of
+      foods,   The day also had other activities that combined both
+      entertainment and education elements. Such as "Shroom Sprint Relay," which
+      represented the fast growth associated with the consumption of millets,
+      and "Color Quest Challenge" where participants rushed to pick up colours
+      which represented the different types of nutrients in various millets. The
+      series ended with a grand show with the song "Millet Songs,". The Sports
+      Day of Glentree Academy Preprimary will be a milestone in our school's
+      calendar, the event has left an indelible mark on the students and the
+      spectators as well who are the advocates of believing that millet is a
+      super food for the future.
+    publishedDate: 2024-03-25T18:30:00.000Z
   - thumbnail: /images/counselling-sessions-at-school.jpg
     alt: counseling-sessions-at-schools
     title: Counseling Sessions
