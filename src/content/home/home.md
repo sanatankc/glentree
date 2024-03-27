@@ -5,6 +5,46 @@ metaDescription: >-
   Bangalore that is dedicated to shaping success.
 title: |
   Nurturing Lifelong Learner
+whyGlentree:
+  subtitle: OUR MOTTO
+  title: Learning for Life
+  description: >
+    Our curriculum is designed to harness their natural curiosity and foster
+    community-building and discipline through interactions with the environment.
+    Students share ideas and experiences, and teachers serve as facilitators,
+    learners, guides, and mentors.
+
+
+    \<br/>
+
+
+    We follow an integrated curriculum based on CBSE guidelines and the NCERT,
+    which ensures a well-balanced and challenging education that is also
+    enjoyable.
+  image: /images/_image-1.webp
+campus:
+  subtitle: 'THREE CAMPUSES, ONE VISION'
+  title: "## Our\_\\<span>Branches\\</span>\n"
+  campusCards:
+    - ribbonHeader: Introducing Grade 11
+      image: /images/whitefieldCampus.webp
+      imageAlt: Introducing Grade 11
+      imagelink: /glentree-whitefield/
+      imageTitle: Whitefield
+      imageDescription: Centrally Located in The IT Corridor of Bangalore.
+    - ribbonHeader: Introducing Grade 11
+      image: /images/sarjapurCampus.webp
+      imageAlt: Introducing Grade 11
+      imagelink: /glentree-sarjapur/
+      imageTitle: Sarjapur Road
+      imageDescription: A Sprawling Green Campus Located Within the Heart of The City.
+    - ribbon: true
+      ribbonHeader: New Campus
+      image: /images/campusSm.webp
+      imageAlt: New Campus
+      imagelink: /glentree-bannerghatta
+      imageTitle: Bannerghatta Road
+      imageDescription: Opening Soon to Expand Learning Horizons
 heroImages:
   - image_desktop: /images/schools-in-bangalore-1.jpg
     image_mobile: /images/mobile-view-schools-in-bangalore.jpg
@@ -33,6 +73,14 @@ heroImages:
   - image_desktop: /images/schools-in-bangalore-6.jpg
     image_mobile: /images/mobile-view-schools-in-bangalore-6.jpg
     position: top
+career:
+  - image: /images/glentree-academy-staff.jpg
+    imageAlt: careers-at-top-schools-in-sarjapur-road-bangalore
+    heading: Work with Us
+    title: Join the Glentree Community
+    paragraph: 'To view open career positions,'
+    buttonName: click here
+    buttonLink: 'https://www.naukri.com/learning-edge-india-jobs-careers-1633530'
 testimonials:
   - testimonial_picture: /images/testimonial2.png
     testimonial_picture_alt: Profile Picture of Muskaan Jangid
@@ -62,6 +110,16 @@ bigAdmissionCTA:
   primaryCTALink: 'https://admissions.glentreeacademy.com'
   secondaryCTAText: View Process
   secondaryCTALink: /admissions
+founderNote:
+  - heading: "## Our Founder’s\_\\<span>Note\\</span>\n"
+    description: >
+      “We started with a vision of the joy of learning. We didn't want our kids
+      to continue in formal schools, where rote learning is practised. So we've
+      come out with a new philosophy **Learning for Life.”**
+    personName: Mr. Vittal Bhandary
+    personRole: CEO of Glentree Academy
+    videoLink: 'https://www.youtube.com/watch?v=vU3yC0Xt6Rk'
+    buttonName: Watch Video
 faqs:
   - question: How do I apply for admission to Glentree academy?
     answer: >
@@ -115,31 +173,6 @@ faqs:
 
 
       [https://www.glentreeacademy.com/co-scholastics](https://www.glentreeacademy.com/co-scholastics)
-whyGlentree:
-  subtitle: OUR MOTTO
-  title: Learning for Life
-  description: >
-    Our curriculum is designed to harness their natural curiosity and foster
-    community-building and discipline through interactions with the environment.
-    Students share ideas and experiences, and teachers serve as facilitators,
-    learners, guides, and mentors.
-
-
-    \<br/>
-
-
-    We follow an integrated curriculum based on CBSE guidelines and the NCERT,
-    which ensures a well-balanced and challenging education that is also
-    enjoyable.
-  image: /images/_image-1.webp
-career:
-  - image: /images/careerBG.webp
-    imageAlt: 'Careers at Top Schools in Sarjapur, Bangalore'
-    heading: Work with Us
-    title: Join the Glentree Community
-    paragraph: 'To view open career positions,'
-    buttonName: click here
-    buttonLink: 'https://www.naukri.com/learning-edge-india-jobs-careers-1633530'
 familyTree:
   - sectionheading: "## The Glentree\_\\<span>Family Tree\\</span>\n"
     familyList:
@@ -164,65 +197,5 @@ familyTree:
           Integrated preschool, day-care, and creche service for children from 6
           months onwards.
         link: 'https://www.ellychildcare.com/'
-founderNote:
-  - heading: "## Our Founder’s\_\\<span>Note\\</span>\n"
-    description: >
-      “We started with a vision of the joy of learning. We didn't want our kids
-      to continue in formal schools, where rote learning is practised. So we've
-      come out with a new philosophy **Learning for Life.”**
-    personName: Mr. Vittal Bhandary
-    personRole: CEO of Glentree Academy
-    videoLink: 'https://www.youtube.com/watch?v=vU3yC0Xt6Rk'
-    buttonName: Watch Video
-campus:
-  subtitle: 'THREE CAMPUSES, ONE VISION'
-  title: "## Our\_\\<span>Branches\\</span>\n"
-  campusCards:
-    - ribbonHeader: Introducing Grade 11
-      image: /images/whitefieldCampus.webp
-      imageAlt: Introducing Grade 11
-      imagelink: /glentree-whitefield/
-      imageTitle: Whitefield
-      imageDescription: Centrally Located in The IT Corridor of Bangalore.
-    - ribbonHeader: Introducing Grade 11
-      image: /images/sarjapurCampus.webp
-      imageAlt: Introducing Grade 11
-      imagelink: /glentree-sarjapur/
-      imageTitle: Sarjapur Road
-      imageDescription: A Sprawling Green Campus Located Within the Heart of The City.
-    - ribbon: true
-      ribbonHeader: New Campus
-      image: /images/campusSm.webp
-      imageAlt: New Campus
-      imagelink: /glentree-bannerghatta
-      imageTitle: Bannerghatta Road
-      imageDescription: Opening Soon to Expand Learning Horizons
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
