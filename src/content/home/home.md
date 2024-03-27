@@ -176,7 +176,7 @@ faqs:
 familyTree:
   - sectionheading: "## The Glentree\_\\<span>Family Tree\\</span>\n"
     familyList:
-      - image: /images/littleEllyLogo.png
+      - image: /images/little-elly.png
         imageAlt: Little Elly
         heading: Little Elly
         description: >-
