@@ -123,6 +123,8 @@ earthlab:
           Tending to plants and observing their growth can have a positive
           impact on student's mental well-being.
 showcase:
+  - image: /images/best-cbse-schools-in-whitefield-5.jpg
+    title: Holi Celebration - Pre-Primary
   - image: /images/grade-10-expedition-2.jpg
     title: Camping Expedition - Grade 10
   - image: /images/best-cbse-schools-in-whitefield-3.jpg
