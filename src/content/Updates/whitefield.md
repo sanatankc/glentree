@@ -4,6 +4,19 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/best-cbse-schools-in-whitefield-(2).jpg
+    alt: holi-celebration
+    title: Holi Celebration - Pre-Primary
+    description: >-
+      As the Quote Mahatma Gandhi has mentioned ‘A true celebration of Holi is
+      when we play it with a heart filled with love and a soul drenched in
+      colours." Glentree Academy's pre-primary students had a blast celebrating
+      Holi on March 25th! Students dressed in different ethnicities looked
+      vibrant. Students were also engaged in many activities like narrating
+      stories, watching Holocaust-based tales etc. Students played with herbal
+      colours and their laughter echoed in the air creating memories to cherish
+      for lifetime.
+    publishedDate: 2024-03-29T18:30:00.000Z
   - thumbnail: /images/grade-10-expedition.jpg
     alt: camping-expedition-of-grade-10
     title: Camping Expedition - Grade 10
