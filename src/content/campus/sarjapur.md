@@ -102,6 +102,8 @@ earthlab:
           Tending to plants and observing their growth can have a positive
           impact on student's mental well-being.
 showcase:
+  - image: /images/pre-primary-sports-day.jpg
+    title: Sports Day - Pre-Primary
   - image: /images/music-culmination-at-schools-in-sarjapur-road.jpg
     title: Music Culmination
   - image: /images/scouts-and-guides-trekking-at-schools-in-sarjapur-road.jpg
