@@ -1,5 +1,19 @@
 ---
 updates:
+  - thumbnail: /images/pre-primary-sports-day-2.jpg
+    alt: pre-primary-sports-day
+    title: Pre Primary Sports Day
+    description: >-
+      The Glentree Academy Sarjapur’s Pre-Primary Sports Day turned into a party
+      of athletic prowess and a show of the scholars' willpower and tough work.
+      The occasion evolved into a gathering that brought together students,
+      teachers, parents, and the entire Glentree Academy community. The
+      Pre-Primary Sports Day is a celebration of childhood, where every child is
+      a winner, and every moment is cherished. It's a day where memories are
+      made, friendships are forged, and dreams take flight amidst the cheers and
+      applause of an adoring audience. Overall our little ones showcased their
+      boundless energy and infectious spirit at the Pre-Primary Sports Day.
+    publishedDate: 2024-03-29T18:30:00.000Z
   - thumbnail: /images/music-culmination-at-best-cbse-schools-in-sarjapur-road.jpg
     alt: music-culmination-at-best-cbse-schools-in-sarjapur-road
     title: Music Culmination
