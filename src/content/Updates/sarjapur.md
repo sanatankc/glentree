@@ -1,5 +1,18 @@
 ---
 updates:
+  - thumbnail: /images/best-cbse-schools-in-sarjapur-road-3.jpg
+    alt: graduation-day-at-best-cbse-schools-in-sarjapur-road
+    title: 'Graduation Day - Pre-Primary '
+    description: >-
+      Graduation Day - an enchanting celebration of growth, achievement, and
+      endless possibilities. It's a momentous occasion where we commemorate
+      their early years of learning, laughter, and discovery. Our hearts swelled
+      with pride as each child took their place on stage and collected their
+      Graduation certificate, radiating with confidence and joy. It was a
+      bittersweet farewell, as we bid adieu to our Pre-Primary graduates,
+      sending them forth with blessings and well wishes for the adventures that
+      lie ahead.
+    publishedDate: 2024-03-29T18:30:00.000Z
   - thumbnail: /images/pre-primary-sports-day-2.jpg
     alt: pre-primary-sports-day
     title: Pre Primary Sports Day
