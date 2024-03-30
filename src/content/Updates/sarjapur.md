@@ -15,7 +15,7 @@ updates:
     publishedDate: 2024-03-29T18:30:00.000Z
   - thumbnail: /images/pre-primary-sports-day-2.jpg
     alt: pre-primary-sports-day
-    title: Pre Primary Sports Day
+    title: Pre-Primary - Sports Day
     description: >-
       The Glentree Academy Sarjapur’s Pre-Primary Sports Day turned into a party
       of athletic prowess and a show of the scholars' willpower and tough work.
