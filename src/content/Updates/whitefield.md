@@ -11,9 +11,9 @@ updates:
       As the Quote Mahatma Gandhi has mentioned ‘A true celebration of Holi is
       when we play it with a heart filled with love and a soul drenched in
       colours." Glentree Academy's pre-primary students had a blast celebrating
-      Holi on March 25th! Students dressed in different ethnicities looked
+      Holi on March 25th! Students dressed in different ethnic cloths looked
       vibrant. Students were also engaged in many activities like narrating
-      stories, watching Holocaust-based tales etc. Students played with herbal
+      stories, watching Holi based tales etc. Students played with herbal
       colours and their laughter echoed in the air creating memories to cherish
       for lifetime.
     publishedDate: 2024-03-29T18:30:00.000Z
