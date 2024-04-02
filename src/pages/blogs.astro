@@ -106,7 +106,7 @@ let blogRow = allBlogs.reduce((acc, curr, index) => {
 <Layout title="Blogs | Best CBSE School in Bangalore | Glentree Academy School">
   <main class="flex flex-col relative text-black items-center">
     <TopNavigationBar />
-    <div class="h-[130px] w-full bg-black"></div>
+    <div class="h-[95px] max-md:h-[130px]  w-full bg-black"></div>
     <div class="w-full relative">
       <Image src={bgWhiteContourPattern} alt="background pattern" class="w-full absolute z-0 opacity-40" />
       <!-- <Image src={bigCTASplashVectorBG} alt="background pattern" class="absolute z-0 opacity-40 top-0 right-0 -scale-x-100" /> -->
@@ -124,7 +124,7 @@ let blogRow = allBlogs.reduce((acc, curr, index) => {
                   <div class="p-[6px] max-md:p-1"></div>
                   <Text type="h4" class=" text-[#222] text-xl font-bold font-sans max-md:text-base  max-md:!leading-tight">{blog.data.title}</Text>
                 </div>
-                <div class="flex-1 max-w-[30%] max-md:max-w-[40%] h-[130px] max-md:h-[90px]">
+                <div class="flex-1 max-w-[30%] max-md:max-w-[40%] h-[95px] max-md:h-[130px]  max-md:h-[90px]">
                   <img src={blog.data.thumbnail} class="w-full h-full object-cover object-center rounded-md" />
                 </div>
               </div>

@@ -115,7 +115,7 @@ const { data } = await getEntry('campus','bannerghatta') as CollectionEntry<'cam
     >
       <div class='flex flex-col max-md:h-auto min-h-[99.5vh]'>
         <TopNavigationBar />
-        <div class="h-[130px] w-full bg-black"></div>
+        <div class="h-[95px] max-md:h-[130px]  w-full bg-black"></div>
         <a href="#scholarships" class="bg-yellow p-2 text-center text-black flex flex-row max-md:flex-col justify-center items-center cursor-pointer group">
           <Text type='base' class="font-bold">Avail our Early Admission Offer</Text>
           <div class="px-4" />
@@ -278,8 +278,9 @@ const { data } = await getEntry('campus','bannerghatta') as CollectionEntry<'cam
 
 
     <!-- <Testimonial /> -->
-
+    
     <EarthLab bannerghattaPage data={data.earthlab} />
+    <div id="scholarships" />
     <Scholarship bannerghattaPage scholarship={data.scholarship} />
 
     <BigAdmissionCTA />
