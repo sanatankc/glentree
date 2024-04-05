@@ -3,6 +3,8 @@ titleTag: Best CBSE Schools in Bannerghatta Road | Glentree Academy
 metaDescription: >-
   Providing quality learning experiences for children in the best CBSE schools
   in Bannerghatta Road for well-rounded development.
+titleHero: ''
+descriptionHero: ''
 heroImages:
   - image_desktop: /images/gab-facilities/campus2.png
     image_mobile: /images/gab-facilities/campus2.png
@@ -17,8 +19,8 @@ heroImages:
     alt: Campus View
     position: center
 virtualCampusLink: test
-affiliationNo: test
 campusTourEmbedId: dOJ3I8yNnD8
+affiliationNo: test
 aroundTheCampus:
   description: >-
     Explore our new campus, designed to enhance the learning experience with
@@ -59,7 +61,35 @@ aroundTheCampus:
     - image: /images/gab-facilities/basketBall.jpeg
       altTag: BasketBall Court
       title: BasketBall Court
+earthlab:
+  - subtitle: OUR LATEST INITIATIVE
+    heading: "## Introducing:\_\\<span>Earth Lab\\</span>\n"
+    description: >-
+      We introduce children to the fundamentals of agriculture and gardening.
+      They learn about various soil types and soil-less media for greenery,
+      growing microgreens, composting, plant care, and harvesting.
+    list:
+      - videotitle: ' Teaching urban gardening and vertical farming through microgreens and house plants.'
+      - videotitle: >-
+          Teaching students to grow microgreens promotes healthy eating habits
+          and nutrition education. 
+      - videotitle: >-
+          Tending to plants and observing their growth can have a positive
+          impact on student's mental well-being.
+scholarship:
+  - subtitle: EMPOWERING STUDENTS
+    heading: "## Scholarship & Benefit\_\\<span>Programs\\</span>\n"
+    scholarshipList:
+      - image: /images/prePrimary.png
+        alt: scholarship
+        title: "\\<span>Privilege\\</span>\_Priority Admission\n"
+        list:
+          - ' 100% waiver on Admission Fees for Early Admissions. Limited period offer'
+          - ' Applicable to students seeking admissions in Nursery to Class 4'
 showcase:
+  - image: >-
+      /images/glee-gather-carnival-at-best-cbse-schools-in-bannerghatta-road-2.jpg
+    title: Glee Gather - Carnival
   - image: /images/The-reading-tree.jpg
     title: The Reading Tree
   - image: /images/Wide-corridor.jpg
@@ -91,40 +121,5 @@ contactUs:
     C K Palya Rd, Hommadevanahalli, Bengaluru, Doddakammanahalli, Karnataka
     560083
   workingHours: 'Monday to Saturday - 8:00 AM to 4:00 PM'
-titleHero: ''
-descriptionHero: ''
-scholarship:
-  - subtitle: EMPOWERING STUDENTS
-    heading: "## Scholarship & Benefit\_\\<span>Programs\\</span>\n"
-    scholarshipList:
-      - image: /images/prePrimary.png
-        alt: scholarship
-        title: "\\<span>Privilege\\</span>\_Priority Admission\n"
-        list:
-          - ' 100% waiver on Admission Fees for Early Admissions. Limited period offer'
-          - ' Applicable to students seeking admissions in Nursery to Class 4'
-earthlab:
-  - subtitle: OUR LATEST INITIATIVE
-    heading: "## Introducing:\_\\<span>Earth Lab\\</span>\n"
-    description: >-
-      We introduce children to the fundamentals of agriculture and gardening.
-      They learn about various soil types and soil-less media for greenery,
-      growing microgreens, composting, plant care, and harvesting.
-    list:
-      - videotitle: ' Teaching urban gardening and vertical farming through microgreens and house plants.'
-      - videotitle: >-
-          Teaching students to grow microgreens promotes healthy eating habits
-          and nutrition education. 
-      - videotitle: >-
-          Tending to plants and observing their growth can have a positive
-          impact on student's mental well-being.
 ---
-
-
-
-
-
-
-
-
 
