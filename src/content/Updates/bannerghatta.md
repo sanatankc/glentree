@@ -1,17 +1,5 @@
 ---
 updates:
-  - thumbnail: /images/glee-gather-carnival-at best-cbse-schools-in-bannerghatta-road.jpg
-    alt: glee-gather-carnival-at-best-cbse-schools-in-bannerghatta-road
-    title: Glee Gather - Carnival
-    description: >-
-      Embark on an unforgettable journey at the Glee Gather Carnival on April
-      13, 2024. Immerse yourself in space, underwater, art, Earth Lab and other
-      themed areas. Create DIY wonders, explore the depths of the underwater
-      world, and be enchanted by magic and illusion! Don’t miss out on fun
-      games,and the chance to win exciting prizes. Plus, experience the enigma
-      of our indoor planetarium! Entry is free. Register now for a day of
-      endless fun and discovery.
-    publishedDate: 2024-04-04T18:30:00.000Z
   - thumbnail: /images/rachana-heda-coo-of-glentree-academy.jpg
     alt: >-
       Glentree Academy’s COO, Mrs. Rachana Heda, addresses student loneliness at
