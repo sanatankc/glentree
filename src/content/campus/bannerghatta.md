@@ -87,9 +87,6 @@ scholarship:
           - ' 100% waiver on Admission Fees for Early Admissions. Limited period offer'
           - ' Applicable to students seeking admissions in Nursery to Class 4'
 showcase:
-  - image: >-
-      /images/glee-gather-carnival-at-best-cbse-schools-in-bannerghatta-road-2.jpg
-    title: Glee Gather - Carnival
   - image: /images/The-reading-tree.jpg
     title: The Reading Tree
   - image: /images/Wide-corridor.jpg
