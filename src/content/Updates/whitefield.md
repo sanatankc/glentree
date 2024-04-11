@@ -4,6 +4,20 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/field-trip-2.jpg
+    alt: field-trip-2
+    title: Pre-Primary Field Trip
+    description: >-
+      Our pre-primary students headed to MM Floritech to explore the amazing
+      world of plants in Bangalore. By Looking at these magnificent seasonal
+      flowers and understanding their importance students were in awe and
+      wonder. On the other side, our UKG kids ventured into the nitty-gritty of
+      aviation history at HAL Museum, Student's jaws dropped at the sight of old
+      aircraft. This Field Trip along with other learning activities facilitated
+      the acquisition of invaluable knowledge but also fostered a sense of
+      curiosity and exploration among our young learners. These memories will be
+      treasured for a lifetime.
+    publishedDate: 2024-04-02T18:30:00.000Z
   - thumbnail: /images/best-cbse-schools-in-whitefield-(2).jpg
     alt: holi-celebration
     title: Holi Celebration - Pre-Primary
