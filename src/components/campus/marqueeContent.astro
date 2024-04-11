@@ -1,6 +1,9 @@
 ---
 import Text from "../system/Text.astro";
 
+const { newContent } = Astro.props
+const textA = newContent ? 'Coming Soon' : 'Admission Open'
+const textB = newContent ? 'AY 2025-2026' : 'AY 2024-2025'
 ---
 
 <div class='w-3 h-3 mx-14 relative'>
@@ -8,10 +11,10 @@ import Text from "../system/Text.astro";
     <rect x="5.96875" y="0.343262" width="8" height="8" transform="rotate(45 5.96875 0.343262)" fill="white"/>
   </svg>
 </div>
-<Text type='h4' class='font-display text-white'>Coming Soon</Text>
+<Text type='h4' class='font-display text-white'>{textA}</Text>
 <div class='w-3 h-3 mx-14 relative'>
   <svg>
     <rect x="5.96875" y="0.343262" width="8" height="8" transform="rotate(45 5.96875 0.343262)" fill="white"/>
   </svg>
 </div>
-<Text type='h4' class='font-display text-accent-bold'>AY 2025-2026</Text>
+<Text type='h4' class='font-display text-accent-bold'>{textB}</Text>

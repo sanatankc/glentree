@@ -1,20 +1,20 @@
 ---
 import MarqueeContent from './marqueeContent.astro'
 
-const { class: className } = Astro.props
+const { class: className, new: newContent =false } = Astro.props
 ---
 
 <div class:list={["marquee bg-black py-4 relative", className]}>
   <ul class="marquee__content items-center">
-   <MarqueeContent />
-   <MarqueeContent />
-   <MarqueeContent />
+   <MarqueeContent newContent={newContent} />
+   <MarqueeContent newContent={newContent} />
+   <MarqueeContent newContent={newContent} />
   </ul>
   <!-- Mirrors the content above -->
   <ul class="marquee__content items-center" aria-hidden="true">
-    <MarqueeContent />
-    <MarqueeContent />
-    <MarqueeContent />
+    <MarqueeContent newContent={newContent} />
+    <MarqueeContent newContent={newContent} />
+    <MarqueeContent newContent={newContent} />
   </ul>
 </div>
 
