@@ -23,11 +23,11 @@ blog: >
 
 
   I still remember when I was a student, on being asked about a topic, I had
-  selected ‘Stress’. On this, the examiner  had exclaimed that everyone is
+  selected ‘Stress’. On this, the examiner had exclaimed that everyone was
   stressed. Now post-pandemic, when we are settling back to our regular life,
   there is a new definition for stress which relates us back to our mental
   health. If you google the definition of mental health, it will define the term
-  as the ability to cope with stress and showcase the ability in learning new
+  as the ability to cope with stress and showcase the ability to learn new
   skills in life. In this course, the real challenge comes up with the
   well-being of the emotional state of our mind.
 
