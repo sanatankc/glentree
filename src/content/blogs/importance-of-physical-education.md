@@ -27,7 +27,7 @@ blog: >
   educational activities for their kids
 
 
-  ### We must now move into understanding the importance of physical education.
+  ## We must now move into understanding the importance of physical education
 
 
   **Let me list them down for you quickly:**
@@ -178,7 +178,7 @@ blog: >
   [schools](https://www.glentreeacademy.com/ "Schools").
 
 
-  ### What Is The Need For Physical Education?
+  ## What Is The Need For Physical Education?
 
 
   There are several reasons why a student must be involved in physical
