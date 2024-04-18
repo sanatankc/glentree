@@ -174,7 +174,8 @@ blog: >
   ![](/images/tempBlog1.png)
 
 
-  Now that we’ve understood the importance of physical education in schools.
+  Now that we’ve understood the importance of physical education in
+  [schools](https://www.glentreeacademy.com/ "Schools").
 
 
   ### What Is The Need For Physical Education?
