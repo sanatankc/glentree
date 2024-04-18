@@ -60,7 +60,7 @@ blog: >
   It’s hard to deal with your child’s tantrums while studying or doing any other
   chores. Studies have proven that students who play sports or who are involved
   in physical or fitness activities have increased levels of concentration and
-  focus. This renewed energy and concentration levels it positively impact all
+  focus. This renewed energy and concentration levels positively impact all
   areas of their lives including academics. Students who are athletic in nature
   are highly alert efficient and effective in academics.
 
@@ -81,8 +81,8 @@ blog: >
 
 
   It is a well-known fact that students who exercise regularly have a better
-  quality of sleep. Decent levels of sleep, it increase a student’s
-  concentration level and highly improve their attention span.
+  quality of sleep. Decent levels of sleep, increase a student’s concentration
+  level and highly improve their attention span.
 
 
   ### Relieves Stress
