@@ -52,7 +52,9 @@ blog: >
   Now we know that we all have a way in which we learn best, either through
   observing, listening, or touch. Odds are that each and every one of our
   children has a different way that they learn best, too. That is why it is
-  essential for every school to have a curriculum which uses various teaching
+  essential for [Best CBSE Schools in Bannerghatta
+  Road](https://www.glentreeacademy.com/glentree-bannerghatta "Best CBSE Schools
+  in Bannerghatta Road") to have a curriculum which uses various teaching
   strategies to appeal to each of these different learning styles and provide
   the children with a unique experience that will meet all of their needs.
 
