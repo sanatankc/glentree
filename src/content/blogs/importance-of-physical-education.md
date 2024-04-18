@@ -10,15 +10,19 @@ metaDescription: >-
 publishedDate: 2023-09-14T18:30:00.000Z
 thumbnail: /images/tempBlog.png
 blog: >
-  We’ve often heard people stress the importance of physical education, how
-  important it is really? As parents, we often place higher importance to grades
-  and ranks however for your child to grow holistically it is important for you
-  as a parent to teach them to have the right balance between academics and
-  sports.
+  ## **10 Reasons Why Physical Education is Important In Schools**
+
+
+  We’ve often heard people stress the [importance of physical
+  education](https://www.glentreeacademy.com/blogs/importance-of-physical-education
+  "Importance of Physical Education"), how important it is really? As parents,
+  we often place higher importance on grades and ranks however for your child to
+  grow holistically it is important for you as a parent to teach them to have
+  the right balance between academics and sports.
 
 
   With everything being shifted into a hybrid model, kids need to destress from
-  their screens and focus on their mind and body. Despite virtual classes,
+  their screens and focus on their minds and body. Despite virtual classes,
   Glentree Academy has made a constant effort to conduct virtual physical
   educational activities for their kids
 
@@ -56,9 +60,9 @@ blog: >
   It’s hard to deal with your child’s tantrums while studying or doing any other
   chores. Studies have proven that students who play sports or who are involved
   in physical or fitness activities have increased levels of concentration and
-  focus. With this renewed energy and concentration levels it positively impacts
-  on all arenas of their lives including academics. Students who are athletic in
-  nature are highly alert and efficient and effective in academics.
+  focus. This renewed energy and concentration levels it positively impact all
+  areas of their lives including academics. Students who are athletic in nature
+  are highly alert efficient and effective in academics.
 
 
   ### Fights Child Obesity
@@ -67,7 +71,7 @@ blog: >
   Times have definitely changed and that holds good for our food habits too.
   Children often get addicted to flashy junk foods, canned and processed foods,
   sodas and carbonated drinks. These foods are termed “unhealthy” and ultimately
-  leads to child obesity. We all do understand the many health problems that are
+  lead to child obesity. We all do understand the many health problems that are
   associated with the consumption of these unhealthy foods. Hence only with
   regular exercise implemented from childhood, a child will turn out to be a
   healthy individual.
@@ -77,16 +81,16 @@ blog: >
 
 
   It is a well-known fact that students who exercise regularly have a better
-  quality of sleep. With decent levels of sleep, it increases a student’s
-  concentration level and highly improves their attention span.
+  quality of sleep. Decent levels of sleep, it increase a student’s
+  concentration level and highly improve their attention span.
 
 
   ### Relieves Stress
 
 
-  It is an undeniable fact that kids and teens today are under high pressure
+  It is an undeniable fact that kids and teens today are under more pressure
   than anyone else. With their virtual classes, recurring assignments and being
-  stuck within four walls only adds to more pressure. The only way from them to
+  stuck within four walls only add to more pressure. The only way for them to
   escape this pressure is to engage in physical activities. It helps them to
   take a break from their usual routine for a while and destress themselves.
 
@@ -95,7 +99,7 @@ blog: >
 
 
   Depression and anxiety have become two extremely common words for Gen-Z kids.
-  These words have lost their original meaning and have turned as mere tags to
+  These words have lost their original meaning and have turned into mere tags to
   brand kids. As parents, we often forget to understand that depression and
   anxiety come in many forms. One way to ensure that kids don’t fall into these
   traps is to ensure that they step away from their homes and step their foot in
@@ -123,23 +127,23 @@ blog: >
   ### Positive Body Image
 
 
-  Body-shaming and defaming based on physical appearance is at its highest now.
-  People have turned intolerant towards each other and pass harsh comments by
-  making others feel insecure. It is highly important for everyone who promotes
-  body image to promote physical activities as it is the only way through which
-  an individual can look happy, feel good and right about themselves and their
-  body. Especially women and girls have been constantly for their looks and
-  appearance. Hence with this societal pressure to look in a specified way,
-  physical activities are of utmost importance.
+  Body-shaming and defaming based on physical appearance are at their highest
+  now. People have turned intolerant towards each other and pass harsh comments
+  by making others feel insecure. It is highly important for everyone who
+  promotes body image to promote physical activities as it is the only way
+  through which an individual can look happy, feel good and right about
+  themselves and their body. Especially women and girls have been constantly for
+  their looks and appearance. Hence with this societal pressure to look in a
+  specified way, physical activities are of utmost importance.
 
 
   ### Self Discipline
 
 
   The most important outcome of physical education is the discipline an
-  individual acquires. Sports teaches children to implement this self control in
-  all aspects of their life, from better controlling their emotions to being
-  more self motivated with their studies.
+  individual acquires. Sports teaches children to implement this self-control in
+  all aspects of their lives, from better controlling their emotions to being
+  more self-motivated with their studies.
 
 
   ### Boosts Confidence
@@ -176,8 +180,8 @@ blog: >
   ### What Is The Need For Physical Education?
 
 
-  There are several reasons why a student must involve in physical educational
-  activities, they are;
+  There are several reasons why a student must be involved in physical
+  educational activities, they are;
 
 
   1. It improves the learning aptitude of the students.
@@ -191,7 +195,7 @@ blog: >
   4. It develops the skills of the children.
 
   5. Children learn and practise motor skills in a safe environment. This allows
-  for satisfying and successful participation in physical activities like an
+  for satisfying and successful participation in physical activities like
   individual and team sports.
 
   6. Regular physical activity helps to release tension and anxiety. It also
@@ -210,7 +214,7 @@ blog: >
   health of your child on track. It plays an important role in the development
   of a student’s life. There are various factors that should be considered in
   the development of sports activities. One of these is the age of the student.
-  It is important for a physical educator to help students to make the right
-  choice of physical activities either now or in the future.
+  It is important for a physical educator to help students make the right choice
+  of physical activities either now or in the future.
 ---
 
