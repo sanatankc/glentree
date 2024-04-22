@@ -10,7 +10,7 @@ metaDescription: >-
 publishedDate: 2023-09-14T18:30:00.000Z
 thumbnail: /images/tempBlog.png
 blog: >
-  ## **10 Reasons Why Physical Education is Important In Schools**
+  ## **Why Physical Education is Important In Schools?**
 
 
   We’ve often heard people stress the [importance of physical
@@ -22,7 +22,7 @@ blog: >
 
 
   With everything being shifted into a hybrid model, kids need to destress from
-  their screens and focus on their minds and body. Despite virtual classes,
+  their screens and focus on their minds and bodies. Despite virtual classes,
   Glentree Academy has made a constant effort to conduct virtual physical
   educational activities for their kids
 
