@@ -61,9 +61,8 @@ blog: >
   Now, comes the question of why should we consider emotional well-being amongst
   students especially adolescents as so important. In order to attain a healthy
   lifestyle which is required for the steady growth of the individual. This can
-  only be possible through the joint ventures of the
-  [school](https://www.glentreeacademy.com/ "Schools in Bangalore") and the
-  parents. The school can implement it through their curriculum.
+  only be possible through the joint ventures of the school and the parents. The
+  school can implement it through their curriculum.
 
 
   Let us have an understanding of the role played by the schools in upgrading
