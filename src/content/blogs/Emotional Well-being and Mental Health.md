@@ -67,8 +67,8 @@ blog: >
 
   Let us have an understanding of the role played by the schools in upgrading
   the mental health and emotional well-being of the students, especially the
-  adolescents through the approach taken by certain top [CBSE schools in
-  Bengaluru](https://www.glentreeacademy.com/ "CBSE Schools in Bangalore").
+  adolescents through the approach taken by certain [Best CBSE schools in
+  Bangalore](https://www.glentreeacademy.com/ "Best CBSE Schools in Bangalore").
   Schools like the Glentree Academy in
   [Whitefield](https://www.glentreeacademy.com/glentree-whitefield "Schools in
   Whitefield") or Sarjapur adopt certain measures which bring out holistic
