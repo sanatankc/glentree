@@ -84,7 +84,7 @@ scholarship:
         alt: scholarship
         title: "\\<span>Privilege\\</span>\_Priority Admission\n"
         list:
-          - ' 100% waiver on Admission Fees for Early Admissions. Limited period offer'
+          - ' 100% waiver on Admission Fees for Early Admissions. Limited period offer.'
           - ' Applicable to students seeking admissions in Nursery to Class 4'
 showcase:
   - image: /images/The-reading-tree.jpg
