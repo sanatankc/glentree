@@ -1,12 +1,12 @@
 ---
 category: Education
-title: 10 things you must know as a parent before putting your kids to school
+title: 10 Things You Must Know as a Parent Before Putting Your Kids to School
 caption: >
   School plays an important role in the life of our children. It helps them to
   learn, be informed, and mould them into responsible citizens for the country
   and the community.
 metaDescription: >-
-  Get the information about 10 things you must know as a parent before putting
+  Get the information about the things you must know as a parent before putting
   your kids to school.
 publishedDate: 2023-09-17T18:30:00.000Z
 thumbnail: /images/images-1.jpg
