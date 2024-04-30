@@ -1,6 +1,6 @@
 ---
 category: Critical Thinking
-title: Critical Thinking - The Art of Thinking about Thinking
+title: Critical Thinking - the Art of Thinking About Thinking
 caption: ''
 metaDescription: >-
   In the theatre of the mind, critical thinking takes centre stage. Embark on a
