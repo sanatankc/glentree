@@ -5,8 +5,8 @@ caption: >
   With everything being shifted into a hybrid model, kids need to destress from
   their screens and focus on their mind and body.
 metaDescription: >-
-  Uncover the 10 reasons why physical education is important In schools that
-  impact on academic performance, mental health, and overall well-being.
+  Uncover the reasons why physical education is important In schools that impact
+  on academic performance, mental health, and overall well-being.
 publishedDate: 2023-09-14T18:30:00.000Z
 thumbnail: /images/tempBlog.png
 blog: >
