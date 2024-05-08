@@ -32,8 +32,8 @@ export const POST: APIRoute = async ({ request }) => {
     body: formData
   });
   const host = "api-in21.leadsquared.com";
-  const AccessKey = "u$r0bbb532f2d36db95708c26922336eaf0";
-  const SecretKey = "5fcb8920684718fbf42802f7c1df394fd231510f";
+  const AccessKey = "u$rb22de1778da877f930234ce700b9175e";
+  const SecretKey = "59a8a21ae1be1455c220b581fc60484ce1b16df9";
 
   const res = fetch(`https://${host}/v2/LeadManagement.svc/Lead.Capture?accessKey=${AccessKey}&secretKey=${SecretKey}`, {
         // const response = await fetch(`https://httpbin.org/post`, {
