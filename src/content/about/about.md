@@ -1,13 +1,13 @@
 ---
 titleTag: About Us | Best CBSE School in Bangalore | Glentree Academy School
-titleHero: |
-  About Us
-descriptionHero: |
-  Pioneering Excellence: Embracing our mission for a brighter tomorrow
 metaDescription: >-
   Glentree Academy has a philosophy of Learning for Life. It's mission and
   vision has placed it amongst best CBSE school in Whitefield and best CBSE
   school in Sarjapur Road.
+titleHero: |
+  About Us
+descriptionHero: |
+  Pioneering Excellence: Embracing our mission for a brighter tomorrow
 imageHero: /images/banner.jpg
 imageHeroAlt: Glentree Staff
 founderDesk:
@@ -109,28 +109,12 @@ missions:
           Embracing change, innovation, and research to create a dynamic and
           progressive educational environment.
 career:
-  - image: /images/careerBG.webp
-    imageAlt: 'Careers at Top Schools in Sarjapur, Bangalore'
+  - image: /images/glentree-staff.jpg
+    imageAlt: 'Careers at Top Schools in Sarjapur Road, Bangalore'
     heading: Work with Us
     title: Join the Glentree Community
     paragraph: 'To view open career positions, '
     buttonName: click here
     buttonLink: 'https://www.naukri.com/learning-edge-india-jobs-careers-1633530'
 ---
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
