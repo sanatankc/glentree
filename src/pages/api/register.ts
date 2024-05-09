@@ -35,7 +35,7 @@ export const POST: APIRoute = async ({ request }) => {
   const AccessKey = "u$rb22de1778da877f930234ce700b9175e";
   const SecretKey = "59a8a21ae1be1455c220b581fc60484ce1b16df9";
 
-  const res = fetch(`https://${host}/v2/LeadManagement.svc/Lead.Capture?accessKey=${AccessKey}&secretKey=${SecretKey}`, {
+  const res = await fetch(`https://${host}/v2/LeadManagement.svc/Lead.Capture?accessKey=${AccessKey}&secretKey=${SecretKey}`, {
         // const response = await fetch(`https://httpbin.org/post`, {
         method: "POST",
         headers: {
@@ -59,7 +59,7 @@ export const POST: APIRoute = async ({ request }) => {
             "Value": phone
             },
             {
-            "Attribute": "EmailAddress",
+            "Attribute": "Email",
             "Value": email
             },
             {
@@ -76,7 +76,7 @@ export const POST: APIRoute = async ({ request }) => {
             },
             {
             "Attribute": "mx_I_agree_messages",
-            "Value": whatsappConsent
+            "Value": whatsappConsent === 'on' ? 'Yes' : 'No'
             },
             {
             "Attribute": "SourceMedium",
@@ -89,6 +89,8 @@ export const POST: APIRoute = async ({ request }) => {
         ]),
       });
 
+      const json = await res.json();
+      console.log(json);
   return new Response(
     JSON.stringify({
       message: "Success!"
