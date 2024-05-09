@@ -2,8 +2,7 @@
 titleTag: About Us | Best CBSE School in Bangalore | Glentree Academy School
 metaDescription: >-
   Glentree Academy has a philosophy of Learning for Life. It's mission and
-  vision has placed it amongst best CBSE school in Whitefield and best CBSE
-  school in Sarjapur Road.
+  vision has placed it amongst best CBSE school in Bangalore.
 titleHero: |
   About Us
 descriptionHero: |

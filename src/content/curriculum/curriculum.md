@@ -2,8 +2,7 @@
 titleTag: 'CBSE Curriculum | Top CBSE schools near Sarjapur Road, Bangalore'
 metaDescription: >-
   Learning For Life curriculum based on CBSE guidelines and the NCERT. Best
-  curriculum among top CBSE schools near Sarjapur Road, Bangalore and top CBSE
-  schools near Bannerghatta Road, Bangalore
+  curriculum among top CBSE schools near Sarjapur Road, Bangalore.
 titleHero: |
   Curriculum
 descriptionHero: |
@@ -105,7 +104,4 @@ lflCurriculum:
           our curriculum, nurturing students' passions and fostering important
           skills.
 ---
-
-
-
 
