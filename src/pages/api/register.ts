@@ -35,6 +35,31 @@ export const POST: APIRoute = async ({ request }) => {
   const AccessKey = "u$rb22de1778da877f930234ce700b9175e";
   const SecretKey = "59a8a21ae1be1455c220b581fc60484ce1b16df9";
 
+  const campuses = {
+    "Whitefield": 'Glentree Academy Whitefield',
+    "Sarjapur Road": 'Glentree Academy Sarjapur Road',
+    "Bannerghatta Road": 'Glentree Academy Bannerghatta Road'
+  }
+
+
+  const grades = {
+    'Nursery': 'Nursery',
+    'LKG': 'LKG',
+    'UKG': 'UKG',
+    'Grade 1': '1',
+    'Grade 2': '2',
+    'Grade 3': '3',
+    'Grade 4': '4',
+    'Grade 5': '5',
+    'Grade 6': '6',
+    'Grade 7': '7',
+    'Grade 8': '8',
+    'Grade 9': '9',
+    'Grade 10': '10',
+    'Grade 11': '11',
+  }
+  
+
   const res = await fetch(`https://${host}/v2/LeadManagement.svc/Lead.Capture?accessKey=${AccessKey}&secretKey=${SecretKey}`, {
         // const response = await fetch(`https://httpbin.org/post`, {
         method: "POST",
@@ -64,11 +89,11 @@ export const POST: APIRoute = async ({ request }) => {
             },
             {
             "Attribute": "mx_Branch",
-            "Value": campus
+            "Value": campuses[campus]
             },
             {
             "Attribute": "mx_Grade",
-            "Value": grade
+            "Value": grades[grade]
             },
             {
             "Attribute": "Source",
