@@ -4,9 +4,8 @@ titleTag: >-
   School
 metaDescription: >-
   Glentree academy believes in holistic development of students. After school
-  activities at Glentree Academy Sarjapur Road, Bangalore | Glentree Academy
-  Bannerghatta Road, Bangalore | Glentree Academy Whitefield, Bangalore helps
-  students in their all round development.
+  activities at Glentree Academy school in Whitefield, Bangalore helps students
+  in their all round development.
 titleHero: |
   After-School Activities
 descriptionHero: |
