@@ -3,9 +3,14 @@ titleTag: >-
   Co-scholastics & Facilities | Top CBSE Schools in Bangalore | Glentree Academy
   School
 metaDescription: >-
-  Glentree Academy is one of the schools with top facilities in Sarjapur Road,
-  Bangalore and is also one of the schools with top facilities in Bannerghatta
-  Road, Bangalore. Admissions Open For 2024-25.
+  Glentree Academy is one of the schools with top facilities in Whitefield,
+  Bangalore. Admissions Open For 2024-25.
+titleHero: |
+  Explore Beyond the Classrooms
+descriptionHero: |
+  Take a look at our co-scholastic activities offered in our school
+imageHero: /images/coscholasticsBG.jpeg
+imageHeroAlt: Meditation
 coscholastics:
   - title: Computer Science & Coding
     description: >-
@@ -55,12 +60,5 @@ coscholastics:
       every page-turn.
     thumbnail: /images/coscholastics/ReadingEnrichment.jpeg
     thumbnailAlt: READ Program
-titleHero: |
-  Explore Beyond the Classrooms
-descriptionHero: |
-  Take a look at our co-scholastic activities offered in our school
-imageHero: /images/coscholasticsBG.jpeg
-imageHeroAlt: Meditation
 ---
-
 
