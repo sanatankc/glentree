@@ -39,7 +39,7 @@ blog: >
   individuals – the youngsters or the students.
 
 
-  ![girl got stressed and put her hand on forehead](</images/emotional well
+  ![girl-got-stressed-and-kept-her-hand-on-forehead  ](</images/emotional well
   being-schools in bangalore (1).jpg>)\
 
   Due to the rising amount of emotional pressure amongst the students, it is not
