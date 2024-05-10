@@ -55,7 +55,8 @@ blog: >
 
   \
 
-  ![](</images/mental health-cbse schools in bangalore (1).jpg>)
+  ![children-writing ](</images/mental health-cbse schools in bangalore
+  (1).jpg>)
 
 
   Now, comes the question of why should we consider emotional well-being amongst
