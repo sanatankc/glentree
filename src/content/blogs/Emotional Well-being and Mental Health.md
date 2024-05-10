@@ -88,8 +88,9 @@ blog: >
   textual learning.
 
 
-  ![](</images/emotional wellbeing and mental health-best schools in south
-  bangalore (1).jpg>)
+  ![
+  children-playing-for-good-emotional-well-being-and-mental-health](</images/emotional
+  wellbeing and mental health-best schools in south bangalore (1).jpg>)
 
 
   Furthermore, the incorporated activities in the daily lessons which serve the
