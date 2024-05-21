@@ -12,9 +12,10 @@ import linkIcon from '../icons/linkIcon.svg'
 import locationIcon from '../../icons/LocationWhite.svg'
 import Text from '../system/Text.astro'
 import Constrain from '../system/Constrain.astro'
-import theDotStudioLogo from '../../images/theDotStudioLogo.svg'
+import theDotStudioLogo from '../../images/theDotStudioLogo.png'
 
-
+const baseURL = 'https://navigate-designer-808266.framer.app/'
+const url = `https://www.thedotstudio.in/?utm_source=SchoolWebsite&utm_medium=footer&utm_content=`
 ---
 <div
   class='w-full pt-12 flex flex-col items-center'
@@ -204,10 +205,18 @@ import theDotStudioLogo from '../../images/theDotStudioLogo.svg'
       </div>
       <div class="max-md:pt-3 pt-0"></div>
       <div>
-        <a href="https://thedotstudio.in/" target="_blank">
-          <Image src={theDotStudioLogo} class="w-[250px] max-md:w-[200px]" alt={"The Dot Studio Logo"} />
+        <a href={url} target="_blank" data-dot-studio-footer>
+          <Image src={theDotStudioLogo} class="w-[200px] max-md:w-[180px] max-md:mt-4 mt-0" alt={"Website Designed by The Dot Studio"} />
         </a>
       </div>
     </Constrain>
   </div>
 </div>
+
+<script>
+  const currentDomainBase = window.location.origin;
+  console.log(currentDomainBase);
+    const dotStudioLogo = document.querySelector('[data-dot-studio-footer]');
+
+  dotStudioLogo.href = dotStudioLogo.href + currentDomainBase;
+</script>
