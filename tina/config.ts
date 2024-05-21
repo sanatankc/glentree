@@ -703,6 +703,11 @@ export default defineConfig({
                 label: "Description",
               },
               {
+                type: "image",
+                name: "image",
+                label: "Image",
+              },
+              {
                 type: "string",
                 name: "paragraph",
                 label: "Paragraph",

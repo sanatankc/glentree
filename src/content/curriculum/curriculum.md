@@ -77,6 +77,7 @@ lflCurriculum:
       nurturing well-rounded individuals equipped with academic excellence,
       essential life skills, and the ability to make a positive impact on the
       world.
+    image: /images/_image.svg
     paragraph: 'Here''s how we bring our philosophy to life in our daily school practices:'
     cardDetails:
       - image: /images/balancedLearning.png
@@ -104,4 +105,6 @@ lflCurriculum:
           our curriculum, nurturing students' passions and fostering important
           skills.
 ---
+
+
 
