@@ -26,7 +26,8 @@ updates:
       Bannerghatta mission is to be one of the top schools in Bannerghatta Road,
       Bangalore. It offers pre-primary, Grade1 to Grade 4
     publishedDate: 2023-12-03T18:30:00.000Z
-  - thumbnail: /images/lens-of-learning.jpeg
+  - thumbnail: /images/LFL-glentree-academy (1).jpg
+    alt: lens-of-learning
     title: Through the lens of Learning
     description: >-
       The motto of Glentree Academy is “ Learning For Life”. The hallmark of the
