@@ -115,7 +115,7 @@ contactUs:
   mapEmbedLink: >-
     https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15559.921740228929!2d77.5994554!3d12.8445401!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae6be1a2dd9ebb%3A0x9fb79f397d5fedd2!2sGlentree%20Academy%20Bannerghatta!5e0!3m2!1sen!2sin!4v1695325697476!5m2!1sen!2sin
   address: >-
-    C K Palya Rd, Hommadevanahalli, Bengaluru, Doddakammanahalli, Karnataka
+    C K Palya Rd, Hommadevanahalli, Doddakammanahalli, Bengaluru, Karnataka
     560083
   workingHours: 'Monday to Saturday - 8:00 AM to 4:00 PM'
 ---
