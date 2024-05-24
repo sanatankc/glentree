@@ -204,7 +204,7 @@ contactUs:
     https://www.google.com/maps/embed/v1/place?key=AIzaSyAIyVF44QhoXfwwKHLd1h3N49cQTHS0Yvw&q=Whitefield
     Glentree Academy, Whitefield, Bengaluru
   address: >-
-    Nallurahalli Main Rd, Palm Meadows, Nallurhalli, Whitefield, Bengaluru,
+    Nallurahalli Main Road, Palm Meadows, Nallurhalli, Whitefield, Bengaluru,
     Karnataka 560066
   workingHours: 'Monday to Saturday - 8:00 AM to 4:00 PM'
 ---
