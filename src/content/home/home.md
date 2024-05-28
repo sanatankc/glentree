@@ -46,7 +46,7 @@ campus:
       imageTitle: Bannerghatta Road
       imageDescription: Opening Soon to Expand Learning Horizons
 heroImages:
-  - image_desktop: /images/glentree-academy-school-toppers-2.png
+  - image_desktop: /images/glentree-acdemy-toppers-2024.jpg
     image_mobile: /images/glentree-academy-schools-toppers.jpg
     position: ''
   - image_desktop: /images/schools-in-bangalore-1.jpg
