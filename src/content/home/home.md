@@ -48,7 +48,7 @@ campus:
 heroImages:
   - image_desktop: /images/glentree-acdemy-toppers-2024.jpg
     image_mobile: /images/glentree-academy-schools-toppers.jpg
-    position: ''
+    position: top
   - image_desktop: /images/schools-in-bangalore-1.jpg
     image_mobile: /images/mobile-view-schools-in-bangalore.jpg
     position: top
