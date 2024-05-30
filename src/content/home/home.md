@@ -51,7 +51,7 @@ heroImages:
     position: center
   - image_desktop: /images/Best-CBSE-Schools-in-Bangalore.jpg
     image_mobile: /images/mobile-view-schools-in-bangalore.jpg
-    position: top
+    position: center
   - image_desktop: /images/cbse-schools-in-sarjapur-road-5.jpg
     image_mobile: /images/best-schools-in-bangalore-3.jpg
     position: center
