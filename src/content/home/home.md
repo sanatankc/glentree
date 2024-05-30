@@ -52,9 +52,6 @@ heroImages:
   - image_desktop: /images/Best-CBSE-Schools-in-Bangalore.jpg
     image_mobile: /images/mobile-view-schools-in-bangalore.jpg
     position: top
-  - image_desktop: /images/introducing-grade-11-schools-in-bangalore.jpg
-    image_mobile: /images/grade-11-schools-in-bangalore.jpg
-    position: top
   - image_desktop: /images/cbse-schools-in-sarjapur-road-5.jpg
     image_mobile: /images/best-schools-in-bangalore-3.jpg
     position: center
@@ -67,7 +64,7 @@ heroImages:
   - image_desktop: /images/slides/4.webp
     image_mobile: /images/slides/4-mb.webp
     position: top
-  - image_desktop: /images/slides/3.webp
+  - image_desktop: /images/School-in-Bangalore.jpg
     image_mobile: /images/3sm.webp
     position: center 20%
   - image_desktop: /images/cbse-schools-in-south-bangalore.jpg
