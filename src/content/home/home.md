@@ -49,7 +49,7 @@ heroImages:
   - image_desktop: /images/glentree-acdemy-toppers-2024-2.jpg
     image_mobile: /images/glentree-academy-schools-toppers.jpg
     position: center
-  - image_desktop: /images/schools-in-bangalore-1.jpg
+  - image_desktop: /images/Best-CBSE-Schools-in-Bangalore.jpg
     image_mobile: /images/mobile-view-schools-in-bangalore.jpg
     position: top
   - image_desktop: /images/introducing-grade-11-schools-in-bangalore.jpg
