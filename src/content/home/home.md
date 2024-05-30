@@ -75,7 +75,7 @@ heroImages:
     position: top
   - image_desktop: /images/cbse-schools-in-bangalore.jpg
     image_mobile: /images/mobile-view-schools-in-bangalore-6.jpg
-    position: top
+    position: center
 career:
   - image: /images/glentree-academy-staff.jpg
     imageAlt: careers-at-top-schools-in-sarjapur-road-bangalore
