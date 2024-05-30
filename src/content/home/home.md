@@ -66,7 +66,7 @@ heroImages:
     position: top
   - image_desktop: /images/School-in-Bangalore.jpg
     image_mobile: /images/3sm.webp
-    position: center 20%
+    position: center
   - image_desktop: /images/cbse-schools-in-south-bangalore.jpg
     image_mobile: /images/slides/2-mb.webp
     position: center
