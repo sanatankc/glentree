@@ -63,7 +63,7 @@ heroImages:
     position: center
   - image_desktop: /images/best-cbse-school-in-bangalore.jpg
     image_mobile: /images/slides/5-mb.webp
-    position: top
+    position: center
   - image_desktop: /images/slides/4.webp
     image_mobile: /images/slides/4-mb.webp
     position: top
