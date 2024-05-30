@@ -60,7 +60,7 @@ heroImages:
     position: center
   - image_desktop: /images/cbse-schools-in-whitefield-5.jpg
     image_mobile: /images/6.7919d22c-_1_.webp
-    position: top
+    position: center
   - image_desktop: /images/best-cbse-school-in-bangalore.jpg
     image_mobile: /images/slides/5-mb.webp
     position: top
