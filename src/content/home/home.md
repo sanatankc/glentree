@@ -73,7 +73,7 @@ heroImages:
   - image_desktop: /images/slides/2.webp
     image_mobile: /images/slides/2-mb.webp
     position: top
-  - image_desktop: /images/schools-in-bangalore-6.jpg
+  - image_desktop: /images/cbse-schools-in-bangalore.jpg
     image_mobile: /images/mobile-view-schools-in-bangalore-6.jpg
     position: top
 career:
