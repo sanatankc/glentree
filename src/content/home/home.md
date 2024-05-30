@@ -57,7 +57,7 @@ heroImages:
     position: top
   - image_desktop: /images/cbse-schools-in-sarjapur-road-5.jpg
     image_mobile: /images/best-schools-in-bangalore-3.jpg
-    position: top
+    position: center
   - image_desktop: /images/cbse-schools-in-whitefield-5.jpg
     image_mobile: /images/6.7919d22c-_1_.webp
     position: top
