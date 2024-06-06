@@ -126,7 +126,7 @@ showcase:
   - image: /images/environment-day-at-school-3.jpg
     title: 'Celebrating World Environment Day - June 5th '
   - image: /images/back-to-school-2.jpg
-    title: Back To School
+    title: 'Back To School - Welcoming the AY - 2024-25 '
   - image: /images/field-trip-1.jpg
     title: Pre-Primary Field Trip
   - image: /images/best-cbse-schools-in-whitefield-5.jpg
