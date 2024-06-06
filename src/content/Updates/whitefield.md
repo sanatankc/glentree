@@ -4,6 +4,22 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/environment-day-at-school.jpg
+    alt: environment-day-at-school
+    title: Environment Day
+    description: >-
+      June 5th which is marked as World Environment Day our school came together
+      to celebrate it as an annual event dedicated to promoting awareness and
+      action for the protection of our environment. The theme for this year was
+      "Ecosystem Restoration," highlighting the urgent need to restore damaged
+      ecosystems and encourage practices that contribute to a healthier planet.
+      The day began with a special morning assembly. The Assembly included
+      speeches, and skit. They also took an environmental pledge committing to
+      adopting sustainable practices in their daily lives. The Environment Day
+      celebration at our school was a resounding success, filled with learning,
+      engagement, and commitment to positively impacting our planet.
+      Eco-friendly actions for a sustainable future- Happy Environment Day!
+    publishedDate: 2024-06-05T18:30:00.000Z
   - thumbnail: /images/back-to-school.jpg
     alt: back-to-school
     title: Back To School
