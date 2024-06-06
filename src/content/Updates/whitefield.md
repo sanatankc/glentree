@@ -4,6 +4,21 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/back-to-school.jpg
+    alt: back-to-school
+    title: Back To School
+    description: >-
+      As summer fades and the school bells ring again, we eagerly welcome our
+      students back for another exciting school year. The start of a new
+      academic year is always filled with a sense of anticipation and
+      possibility. Whether you're returning or joining us for the first time,
+      there's so much to look forward to! As we embark on this new school year,
+      we are filled with hope and excitement for the possibilities that lie
+      ahead. Let us embrace this new beginning with enthusiasm and a shared
+      commitment to excellence. Welcome back to school, students! Let's make
+      this year the best one yet. Here's to new adventures, new friends, and new
+      achievements.
+    publishedDate: 2024-06-05T18:30:00.000Z
   - thumbnail: /images/field-trip-2.jpg
     alt: field-trip-2
     title: Pre-Primary Field Trip
