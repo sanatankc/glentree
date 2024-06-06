@@ -22,7 +22,7 @@ updates:
     publishedDate: 2024-06-05T18:30:00.000Z
   - thumbnail: /images/back-to-school.jpg
     alt: back-to-school
-    title: Back To School
+    title: 'Back To School - Welcoming the AY - 2024-25 '
     description: >-
       As summer fades and the school bells ring again, we eagerly welcome our
       students back for another exciting school year. The start of a new
