@@ -6,7 +6,7 @@ metaDescription: >-
 updates:
   - thumbnail: /images/environment-day-at-school.jpg
     alt: environment-day-at-school
-    title: Environment Day
+    title: 'Celebrating World Environment Day - June 5th '
     description: >-
       June 5th which is marked as World Environment Day our school came together
       to celebrate it as an annual event dedicated to promoting awareness and
