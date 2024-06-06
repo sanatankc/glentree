@@ -124,7 +124,7 @@ earthlab:
           impact on student's mental well-being.
 showcase:
   - image: /images/environment-day-at-school-3.jpg
-    title: Environment Day
+    title: 'Celebrating World Environment Day - June 5th '
   - image: /images/back-to-school-2.jpg
     title: Back To School
   - image: /images/field-trip-1.jpg
