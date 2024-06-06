@@ -123,6 +123,8 @@ earthlab:
           Tending to plants and observing their growth can have a positive
           impact on student's mental well-being.
 showcase:
+  - image: /images/back-to-school-2.jpg
+    title: Back To School
   - image: /images/field-trip-1.jpg
     title: Pre-Primary Field Trip
   - image: /images/best-cbse-schools-in-whitefield-5.jpg
