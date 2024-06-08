@@ -2,7 +2,7 @@
 updates:
   - thumbnail: /images/world-environment-day-at-school.jpg
     alt: world-environment-day-at-school
-    title: 'Celebrating World Environment Day '
+    title: Celebrating World Environment Day - Sarjapur Road
     description: "Students of Grades 9 and 10 at Glentree Academy, Sarjapur to celebrate 'World Resources an Environment Day', on 5th June.\_The special assembly\_began with a prayer, followed by a pledge, story of the week, speeches, news headlines, thoughts of the day, special program Dance performances, songs, skits, etc. There was also a Q&A session through which students delivered messages about environmental protection and being responsible towards nature.\_The dedication and inventiveness of our students served as a steady reminder for all of us to be aware of how essential environmental protection is that allows us to take small steps to save our planet \"Earth\", collectively."
     publishedDate: 2024-06-07T18:30:00.000Z
   - thumbnail: /images/best-cbse-schools-in-sarjapur-road-3.jpg
