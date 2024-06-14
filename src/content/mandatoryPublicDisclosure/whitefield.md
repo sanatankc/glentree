@@ -84,8 +84,10 @@ disclosure:
       "gaw-Drinking-Water-Sanitary-Whitefield.pdf")
   - title: Fire Compliance Certificate
     disclosure: >
-      [VIEW HERE](/images/gaw-Fire-Compliance-Certificate-Renewed.pdf
-      "gaw-Fire-Compliance-Certificate-Renewed.pdf")
+      [VIEW
+      HERE](<https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/Fire
+      Safety Compliance Certificate- 14.06.24.pdf>
+      "Fire-Compliance-Certificate-")
   - title: CBSE Affiliation Extension
     disclosure: |
       [VIEW HERE](/images/gaw-CBSE-Affiliation.pdf "gaw-CBSE-Affiliation.pdf")
