@@ -1,5 +1,20 @@
 ---
 updates:
+  - thumbnail: /images/election-campaign-at-school.jpg
+    alt: election-campaign-at-school
+    title: Election Campaign - Sarjapur Campus
+    description: >-
+      The students of Glentree Academy, Sarjapur had conducted their election to
+      select the School Captain for the academic year 2024-25. The students from
+      grade 4 to grade 10 participated in the event actively. During the
+      campaigning of the election enthusiasm shown by the students was simply
+      amazing. The Election was conducted in the school Auditorium, which was
+      neatly arranged with polling agents, election booths, invigilators etc.
+      The students had instilled the feeling of responsibility and understood
+      their role in deciding the future leader of their school. The student's
+      active involvement and understanding of their voting power underscored the
+      event's significance.
+    publishedDate: 2024-06-17T18:30:00.000Z
   - thumbnail: /images/world-environment-day-at-school.jpg
     alt: world-environment-day-at-school
     title: Celebrating World Environment Day - Sarjapur Road
