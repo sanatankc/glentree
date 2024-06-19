@@ -123,6 +123,8 @@ earthlab:
           Tending to plants and observing their growth can have a positive
           impact on student's mental well-being.
 showcase:
+  - image: /images/council-elections-at-school-in-whitefield.jpg
+    title: School Council Elections
   - image: /images/environment-day-at-school-3.jpg
     title: 'Celebrating World Environment Day - June 5th '
   - image: /images/back-to-school-2.jpg
