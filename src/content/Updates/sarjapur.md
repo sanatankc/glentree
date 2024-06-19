@@ -1,5 +1,17 @@
 ---
 updates:
+  - thumbnail: /images/world-ocean-day.jpg
+    alt: world-ocean-day
+    title: Celebration of World Ocean Day
+    description: >-
+      Grade 8 students from Glentree Academy Sarjapur Road, organized a special
+      assembly on June 8th to mark World Ocean Day. The Theme for the assembly
+      was "Awaken New Depths". The highlights of the assembly were featured with
+      mime and skit performances. With these performances, the students
+      emphasized the vital role of preserving the oceans and expressing issues
+      like pollution and climate change. They also aimed to inspire their peers
+      to take responsible actions for the preservation of marine life.
+    publishedDate: 2024-06-18T18:30:00.000Z
   - thumbnail: /images/election-campaign-at-school.jpg
     alt: election-campaign-at-school
     title: Election Campaign - Sarjapur Campus
