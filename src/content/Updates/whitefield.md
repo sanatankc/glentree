@@ -4,6 +4,18 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/school-council-elections.jpg
+    alt: school-council-elections
+    title: School Council Elections
+    description: >-
+      At Glentree Academy Whitefield, democracy was actively displayed during
+      the 2024-25 election activities. Students participated by casting their
+      votes into ballot boxes. With their fingers stained blue from voting ink,
+      students celebrated their newfound power and the importance of knowing
+      their rights. The whole process of campaigning until the day of the
+      election indeed highlighted the leadership, responsibility, and democracy
+      which had left a lasting impression on the school community.
+    publishedDate: 2024-06-18T18:30:00.000Z
   - thumbnail: /images/environment-day-at-school.jpg
     alt: environment-day-at-school
     title: Celebrating World Environment Day - Whitefield
