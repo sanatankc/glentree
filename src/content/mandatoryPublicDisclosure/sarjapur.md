@@ -51,8 +51,10 @@ disclosure:
     disclosure: |
       [VIEW HERE](/images/gas-trustDeed.pdf "gas-trustDeed.pdf")
   - title: Fire Safety Certificate
-    disclosure: |
-      [VIEW HERE](/images/gas-fireSaftey.pdf "gas-fireSaftey.pdf")
+    disclosure: >
+      [VIEW
+      HERE](<https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/Fire
+      Safety Certificate 20-06-2024.pdf> "Fire Safety Certificate ")
   - title: Appendix IX – Mandatory Public Disclosure
     disclosure: >
       [VIEW HERE](/images/gas-mandatoryPublicDisclosure.pdf
