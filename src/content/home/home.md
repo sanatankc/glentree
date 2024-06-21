@@ -104,8 +104,7 @@ bigAdmissionCTA:
     We believe that every child has immense potential that, in the right
     environment, can be uncovered, nurtured and realised.
   primaryCTAText: Enquire Now!
-  primaryCTALink: 'https://application.glen
-treeacademy.com'
+  primaryCTALink: 'https://application.glentreeacademy.com'
   secondaryCTAText: View Process
   secondaryCTALink: /admissions
 founderNote:
