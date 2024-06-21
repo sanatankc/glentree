@@ -80,13 +80,13 @@ disclosure:
       [VIEW HERE](/images/gaw-AcademicCalendar.pdf "gaw-AcademicCalendar.pdf")
   - title: Drinking Water & Sanitary
     disclosure: >
-      [VIEW HERE](/images/gaw-Drinking-Water-Sanitary-Whitefield.pdf
-      "gaw-Drinking-Water-Sanitary-Whitefield.pdf")
+      [VIEW
+      HERE](<https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/Water
+      and Sanitary Condition Certificate.pdf> "Water and Sanitary Certificate")
   - title: Fire Compliance Certificate
     disclosure: >
       [VIEW
-      HERE](<https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/Fire
-      Safety Compliance Certificate- 14.06.24.pdf>
+      HERE](https://assets.tina.io/8b588526-21ee-4f45-b047-bac58fdad52f/Fire%20Safety%20Compliance%20Certificate-%2014.06.24.pdf
       "Fire-Compliance-Certificate-")
   - title: CBSE Affiliation Extension
     disclosure: |
