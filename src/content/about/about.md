@@ -44,7 +44,7 @@ founderDeskMembers:
       accept constructive criticism, refine their skills, and view mistakes as
       stepping stones to success.
     linkedin: 'https://www.linkedin.com/in/sowmia-raguraman-9b51b364'
-  - image: /images/Rachna.jpg
+  - image: /images/rachana-heda-coo-of-glentree-academy-schools.jpg
     name: Rachana Heda
     title: COO
     message: >-
