@@ -46,36 +46,30 @@ campus:
       imageTitle: Bannerghatta Road
       imageDescription: Opening Soon to Expand Learning Horizons
 heroImages:
-  - image_desktop: /images/glentree-acdemy-toppers-2024.jpg
-    image_mobile: /images/glentree-academy-schools-toppers.jpg
-    position: center
-  - image_desktop: /images/schools-in-bangalore-1.jpg
+  - image_desktop: /images/Best-CBSE-Schools-in-Bangalore.jpg
     image_mobile: /images/mobile-view-schools-in-bangalore.jpg
-    position: top
-  - image_desktop: /images/introducing-grade-11-schools-in-bangalore.jpg
-    image_mobile: /images/grade-11-schools-in-bangalore.jpg
-    position: top
-  - image_desktop: /images/cbse-schools-in-bangalore-4.jpg
+    position: center
+  - image_desktop: /images/cbse-schools-in-sarjapur-road-5.jpg
     image_mobile: /images/best-schools-in-bangalore-3.jpg
-    position: top
-  - image_desktop: /images/slides/6.webp
+    position: center
+  - image_desktop: /images/cbse-schools-in-whitefield-5.jpg
     image_mobile: /images/6.7919d22c-_1_.webp
-    position: top
-  - image_desktop: /images/slides/5.webp
+    position: center
+  - image_desktop: /images/best-cbse-school-in-bangalore.jpg
     image_mobile: /images/slides/5-mb.webp
-    position: top
-  - image_desktop: /images/slides/4.webp
+    position: center
+  - image_desktop: /images/cbse-schools.jpg
     image_mobile: /images/slides/4-mb.webp
     position: top
-  - image_desktop: /images/slides/3.webp
+  - image_desktop: /images/School-in-Bangalore.jpg
     image_mobile: /images/3sm.webp
-    position: center 20%
-  - image_desktop: /images/slides/2.webp
+    position: center
+  - image_desktop: /images/cbse-schools-in-south-bangalore.jpg
     image_mobile: /images/slides/2-mb.webp
-    position: top
-  - image_desktop: /images/schools-in-bangalore-6.jpg
+    position: center
+  - image_desktop: /images/cbse-schools-in-bangalore.jpg
     image_mobile: /images/mobile-view-schools-in-bangalore-6.jpg
-    position: top
+    position: center
 career:
   - image: /images/glentree-academy-staff.jpg
     imageAlt: careers-at-top-schools-in-sarjapur-road-bangalore
@@ -202,5 +196,4 @@ familyTree:
           months onwards.
         link: 'https://www.ellychildcare.com/'
 ---
-
 

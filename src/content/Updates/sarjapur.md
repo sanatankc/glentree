@@ -1,5 +1,37 @@
 ---
 updates:
+  - thumbnail: /images/world-ocean-day.jpg
+    alt: world-ocean-day
+    title: Celebration of World Ocean Day
+    description: >-
+      Grade 8 students from Glentree Academy Sarjapur Road, organized a special
+      assembly on June 8th to mark World Ocean Day. The Theme for the assembly
+      was "Awaken New Depths". The highlights of the assembly were featured with
+      mime and skit performances. With these performances, the students
+      emphasized the vital role of preserving the oceans and expressing issues
+      like pollution and climate change. They also aimed to inspire their peers
+      to take responsible actions for the preservation of marine life.
+    publishedDate: 2024-06-18T18:30:00.000Z
+  - thumbnail: /images/election-campaign-at-school.jpg
+    alt: election-campaign-at-school
+    title: Election Campaign - Sarjapur Campus
+    description: >-
+      The students of Glentree Academy, Sarjapur had conducted their election to
+      select the School Captain for the academic year 2024-25. The students from
+      grade 4 to grade 10 participated in the event actively. During the
+      campaigning of the election enthusiasm shown by the students was simply
+      amazing. The Election was conducted in the school Auditorium, which was
+      neatly arranged with polling agents, election booths, invigilators etc.
+      The students had instilled the feeling of responsibility and understood
+      their role in deciding the future leader of their school. The student's
+      active involvement and understanding of their voting power underscored the
+      event's significance.
+    publishedDate: 2024-06-17T18:30:00.000Z
+  - thumbnail: /images/world-environment-day-at-school.jpg
+    alt: world-environment-day-at-school
+    title: Celebrating World Environment Day - Sarjapur Road
+    description: "Students of Grades 9 and 10 at Glentree Academy, Sarjapur to celebrate 'World Resources an Environment Day', on 5th June.\_The special assembly\_began with a prayer, followed by a pledge, story of the week, speeches, news headlines, thoughts of the day, special program, Dance performances, songs, skits, etc. There was also a Q&A session through which students delivered messages about environmental protection and being responsible towards nature.\_The dedication and inventiveness of our students served as a steady reminder for all of us to be aware of how essential environmental protection is that allows us to take small steps to save our planet \"Earth\", collectively."
+    publishedDate: 2024-06-07T18:30:00.000Z
   - thumbnail: /images/best-cbse-schools-in-sarjapur-road-3.jpg
     alt: graduation-day-at-best-cbse-schools-in-sarjapur-road
     title: 'Graduation Day - Pre-Primary '

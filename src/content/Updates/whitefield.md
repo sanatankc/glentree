@@ -4,6 +4,49 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/school-council-elections.jpg
+    alt: school-council-elections
+    title: School Council Elections
+    description: >-
+      At Glentree Academy Whitefield, democracy was actively displayed during
+      the 2024-25 election activities. Students participated by casting their
+      votes into ballot boxes. With their fingers stained blue from voting ink,
+      students celebrated their newfound power and the importance of knowing
+      their rights. The whole process of campaigning until the day of the
+      election indeed highlighted the leadership, responsibility, and democracy
+      which had left a lasting impression on the school community.
+    publishedDate: 2024-06-18T18:30:00.000Z
+  - thumbnail: /images/environment-day-at-school.jpg
+    alt: environment-day-at-school
+    title: Celebrating World Environment Day - Whitefield
+    description: >-
+      June 5th which is marked as World Environment Day our school came together
+      to celebrate it as an annual event dedicated to promoting awareness and
+      action for the protection of our environment. The theme for this year was
+      "Ecosystem Restoration," highlighting the urgent need to restore damaged
+      ecosystems and encourage practices that contribute to a healthier planet.
+      The day began with a special morning assembly. The Assembly included
+      speeches, and skit. They also took an environmental pledge committing to
+      adopting sustainable practices in their daily lives. The Environment Day
+      celebration at our school was a resounding success, filled with learning,
+      engagement, and commitment to positively impacting our planet.
+      Eco-friendly actions for a sustainable future- Happy Environment Day!
+    publishedDate: 2024-06-05T18:30:00.000Z
+  - thumbnail: /images/back-to-school.jpg
+    alt: back-to-school
+    title: 'Back To School - Welcoming the AY - 2024-25 '
+    description: >-
+      As summer fades and the school bells ring again, we eagerly welcome our
+      students back for another exciting school year. The start of a new
+      academic year is always filled with a sense of anticipation and
+      possibility. Whether you're returning or joining us for the first time,
+      there's so much to look forward to! As we embark on this new school year,
+      we are filled with hope and excitement for the possibilities that lie
+      ahead. Let us embrace this new beginning with enthusiasm and a shared
+      commitment to excellence. Welcome back to school, students! Let's make
+      this year the best one yet. Here's to new adventures, new friends, and new
+      achievements.
+    publishedDate: 2024-06-05T18:30:00.000Z
   - thumbnail: /images/field-trip-2.jpg
     alt: field-trip-2
     title: Pre-Primary Field Trip
