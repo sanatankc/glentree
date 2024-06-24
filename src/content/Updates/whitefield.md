@@ -4,6 +4,18 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/elocution-and-story-telling-compition-at-school.jpg
+    alt: elocution-and-storytelling-competition
+    title: Elocution and Storytelling Competition
+    description: >-
+      Our Whitefield campus recently hosted an Elocution and Storytelling
+      Competition, showcasing wonderful talents and vibrant energy. Students
+      across the grades demonstrated their language proficiency and mesmerized
+      the audience through their dancing and singing. This event was
+      particularly valuable as it allowed the students to build confidence and
+      enhance their public speaking skills. Kudos to the organizers,
+      participants, and winners for their commendable efforts.
+    publishedDate: 2024-06-23T18:30:00.000Z
   - thumbnail: /images/yoga-at-best-cbse-schools-in-whitefield-2.jpg
     alt: yoga-day-session
     title: Yoga Day - Session
