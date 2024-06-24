@@ -1,5 +1,16 @@
 ---
 updates:
+  - thumbnail: /images/investiture-ceremony-at-school.jpg
+    alt: investiture-ceremony
+    title: Investiture Ceremony
+    description: >-
+      The investiture ceremony is considered another significant event that is
+      practised in schools. The school hands over some responsibilities to the
+      potential leaders which indeed teaches accountability as they are expected
+      to lead by example and fulfil their duties. We all had the privilege to
+      witness the investiture ceremony of our Sarjapur Road campus, which marked
+      the formation of the Board of Prefects.
+    publishedDate: 2024-06-23T18:30:00.000Z
   - thumbnail: /images/yoga-practice-for-primary-students-2.jpg
     alt: yoga-day-session-secondary
     title: Yoga Day Session - Secondary
