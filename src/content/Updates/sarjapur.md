@@ -1,5 +1,18 @@
 ---
 updates:
+  - thumbnail: /images/fathers-day-celebration-2.jpg
+    alt: fathers-day-celebration
+    title: Fathers Day Celebration
+    description: >-
+      It was indeed heartening to see that the pre-primary students at Glentree
+      Academy Sarjapur Road, celebrated Father’s Day in a very special way. All
+      the kids wanted to express their love for their dads and showed their
+      appreciation to the father by creating incredible pieces of art. The art
+      depicted the close-knit relationship they have with their dads and the
+      colours and the vibrant colours portrayed their emotions. This joyful
+      event not only allowed our young talents to express themselves creatively
+      but also enabled us to celebrate and honour the fathers in our lives.
+    publishedDate: 2024-06-23T18:30:00.000Z
   - thumbnail: /images/world-ocean-day.jpg
     alt: world-ocean-day
     title: Celebration of World Ocean Day
