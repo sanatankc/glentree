@@ -102,6 +102,8 @@ earthlab:
           Tending to plants and observing their growth can have a positive
           impact on student's mental well-being.
 showcase:
+  - image: /images/yoga-practice-for-primary-students.jpg
+    title: Yoga Day Session - Secondary
   - image: /images/yoga-at-best-cbse-schools-in-sarjapur-road.jpg
     title: Yoga Day Session - Primary
   - image: /images/yoga-practice-for-pre-primary-students.jpg
