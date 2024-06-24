@@ -1,5 +1,19 @@
 ---
 updates:
+  - thumbnail: /images/yoga-at-best-cbse-schools-in-sarjapur-road-2.jpg
+    alt: 'yoga-day-session-primary '
+    title: 'Yoga Day Session - Primary '
+    description: >-
+      Recently, at Glentree Academy Sarjapur Road, coordinated an incredible
+      assembly with well-being elements like yoga. This program was intended to
+      encourage health, physical fitness, emotional health, and overall
+      personality improvement. The young learners actively engaged themselves, 
+      and they demonstrated the different yoga postures with great energy and
+      enthusiasm. Our students were more than eager to demonstrate their
+      dexterity and coordination by posing as a human ‘yoga chain’.Regular yoga
+      practice in schools supports children's physical fitness, enhances their
+      focus, and nurtures emotional resilience.
+    publishedDate: 2024-06-23T18:30:00.000Z
   - thumbnail: /images/fathers-day-celebration-2.jpg
     alt: fathers-day-celebration
     title: Fathers Day Celebration
