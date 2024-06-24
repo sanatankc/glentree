@@ -123,6 +123,8 @@ earthlab:
           Tending to plants and observing their growth can have a positive
           impact on student's mental well-being.
 showcase:
+  - image: /images/elocution-and-story-telling.jpg
+    title: Elocution and Storytelling Competition
   - image: /images/yoga-at-best-cbse-schools-in-whitefield.jpg
     title: Yoga Day - Session
   - image: /images/students-celebration-music-day.jpg
