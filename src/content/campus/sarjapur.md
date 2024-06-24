@@ -102,6 +102,8 @@ earthlab:
           Tending to plants and observing their growth can have a positive
           impact on student's mental well-being.
 showcase:
+  - image: /images/fathers-day-celebration.jpg
+    title: Fathers Day - Celebration
   - image: /images/world-ocean-day-at-school-in-sarjapur-road.jpg
     title: Celebration of World Ocean Day
   - image: /images/election-campaign-at-glentree-school.jpg
