@@ -1,5 +1,10 @@
 ---
 updates:
+  - thumbnail: /images/yoga-practice-for-primary-students-2.jpg
+    alt: yoga-day-session-secondary
+    title: Yoga Day Session - Secondary
+    description: ' During the International Yoga Day celebration, the secondary students of Glentree Academy Sarjapur Road were able to demonstrate their commitment to yoga and love for it through their performances of different asanas. The event highlighted the importance of incorporating yoga into our daily routines as a means to enhance our health. The students demonstrated different yogasanas which showed their flexibility. The synchronised dance and their dedication to this timeless art form were truly inspiring, serving as a reminder of yoga''s central role in fostering a balanced way of life.'
+    publishedDate: 2024-06-23T18:30:00.000Z
   - thumbnail: /images/yoga-practice-for-pre-primary-students-2.jpg
     alt: yoga-day-session-preprimary
     title: Yoga Day Session - PrePrimary
