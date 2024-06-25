@@ -126,7 +126,7 @@ showcase:
   - image: /images/elocution-and-story-telling.jpg
     title: Elocution and Storytelling Competition
   - image: /images/yoga-at-best-cbse-schools-in-whitefield.jpg
-    title: Yoga Day - Session
+    title: Yoga - Session
   - image: /images/students-celebration-music-day.jpg
     title: Music Day - Celebration
   - image: /images/council-elections-at-school-in-whitefield.jpg
