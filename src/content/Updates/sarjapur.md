@@ -23,11 +23,10 @@ updates:
       Our PrePrimary students perform Yoga in order to keep up the flexibility
       and for the growth of the body. Yoga is significant both for the physical
       and psychological development of the children. At Glentree Academy
-      Sarjapur Road, our young children participated in Surya Namaskar,
-      different asanas, and meditations. It was through this program that they
-      were able to learn about yoga as a practice that had been there of time
-      past and at the same time made them understand the value of exercise and
-      maintaining a calm mind from childhood.
+      Sarjapur Road, our young children did various asanas along with  Surya
+      Namaskar and meditations. Through this program, they gained profound
+      insights into yoga, simultaneously grasping the significance of physical
+      exercise and cultivating a calm mind from a young age.
     publishedDate: 2024-06-23T18:30:00.000Z
   - thumbnail: /images/yoga-at-best-cbse-schools-in-sarjapur-road-2.jpg
     alt: 'yoga-day-session-primary '
