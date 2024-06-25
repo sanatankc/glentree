@@ -105,7 +105,7 @@ showcase:
   - image: /images/investiture-ceremony.jpg
     title: Investiture Ceremony
   - image: /images/yoga-practice-for-primary-students.jpg
-    title: Yoga Day Session - Secondary
+    title: Yoga Session - Secondary
   - image: /images/yoga-at-best-cbse-schools-in-sarjapur-road.jpg
     title: Yoga Session - Primary
   - image: /images/yoga-practice-for-pre-primary-students.jpg
