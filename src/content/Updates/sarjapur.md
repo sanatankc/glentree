@@ -31,7 +31,7 @@ updates:
     publishedDate: 2024-06-23T18:30:00.000Z
   - thumbnail: /images/yoga-at-best-cbse-schools-in-sarjapur-road-2.jpg
     alt: 'yoga-day-session-primary '
-    title: 'Yoga Day Session - Primary '
+    title: 'Yoga Session - Primary '
     description: >-
       Recently, at Glentree Academy Sarjapur Road, coordinated an incredible
       assembly with well-being elements like yoga. This program was intended to
