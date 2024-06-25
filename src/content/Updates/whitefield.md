@@ -18,7 +18,7 @@ updates:
     publishedDate: 2024-06-23T18:30:00.000Z
   - thumbnail: /images/yoga-at-best-cbse-schools-in-whitefield-2.jpg
     alt: yoga-day-session
-    title: Yoga Day - Session
+    title: Yoga - Session
     description: >-
       We are thrilled to announce that Glentree Academy Whitefield, organized a
       rejuvenating yoga session for our students. This special event was
