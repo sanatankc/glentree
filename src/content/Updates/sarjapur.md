@@ -2,7 +2,7 @@
 updates:
   - thumbnail: /images/investiture-ceremony-at-school.jpg
     alt: investiture-ceremony
-    title: Investiture Ceremony
+    title: Investiture Ceremony - Sarjapur Road Campus
     description: >-
       The investiture ceremony is considered another significant event that is
       practised in schools. The school hands over some responsibilities to the
