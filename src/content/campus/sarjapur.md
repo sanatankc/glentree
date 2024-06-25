@@ -109,7 +109,7 @@ showcase:
   - image: /images/yoga-at-best-cbse-schools-in-sarjapur-road.jpg
     title: Yoga Day Session - Primary
   - image: /images/yoga-practice-for-pre-primary-students.jpg
-    title: Yoga Day Session - PrePrimary
+    title: Yoga Session - PrePrimary
   - image: /images/fathers-day-celebration.jpg
     title: Fathers Day - Celebration
   - image: /images/world-ocean-day-at-school-in-sarjapur-road.jpg
