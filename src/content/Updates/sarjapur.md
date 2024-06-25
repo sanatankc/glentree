@@ -18,7 +18,7 @@ updates:
     publishedDate: 2024-06-23T18:30:00.000Z
   - thumbnail: /images/yoga-practice-for-pre-primary-students-2.jpg
     alt: yoga-day-session-preprimary
-    title: Yoga Day Session - PrePrimary
+    title: Yoga Session - PrePrimary
     description: >-
       Our PrePrimary students perform Yoga in order to keep up the flexibility
       and for the growth of the body. Yoga is significant both for the physical
