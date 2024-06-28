@@ -4,6 +4,18 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/fire-mock-drill-and-training.jpg
+    alt: fire-mock-drill-and-training-session
+    title: Fire Mock Drill and Training Session
+    description: >-
+      Glentree Academy Whitefield had a Fire Mock Drill and Training session to
+      educate the students about fire safety measures. The event included an
+      evacuation drill and a practical demonstration of the actions to be taken
+      during a fire outbreak. The safety experts performed various life-saving
+      skills during the drill. Such drills enhance preparedness and reduce panic
+      during the actual emergencies. This initiative shows the school's
+      dedication to maintaining the safety of its community.
+    publishedDate: 2024-06-27T18:30:00.000Z
   - thumbnail: /images/global-parents-day.jpg
     alt: global-parents-day
     title: Global Parents Day - Celebration
