@@ -4,6 +4,18 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/global-parents-day.jpg
+    alt: global-parents-day
+    title: Global Parents Day - Celebration
+    description: >-
+      Glentree Academy Whitefield celebrated Global Parents Day with a Special
+      Assembly. It was a wonderful way of paying tribute to the parents. The
+      Assembly comprised many emotional songs and speeches. Students also made
+      presentations that showed their appreciation and gratitude towards their
+      parents. This assembly also strengthened the bond between the school and
+      the parents, emphasizing the crucial role parents play in shaping their
+      children's future.
+    publishedDate: 2024-06-27T18:30:00.000Z
   - thumbnail: /images/investiture-ceremony-at-school-2.jpg
     alt: investiture-ceremony
     title: Investiture Ceremony - Whitefield Campus
