@@ -4,6 +4,17 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/ctt-activity.jpg
+    alt: ctt-activity
+    title: CTT Activity - PrePrimary
+    description: >-
+      The students of the pre-primary level at Glentree Academy Whitefield were
+      engaged in Creative Thinking and Teamwork  (CTT) activity. The idea of
+      conducting such sessions is mainly to cultivate creativity and teamwork
+      among the children by involving them in various team-building activities.
+      All the students thoroughly enjoyed the session, which also demonstrated
+      their ability to coordinate with teams and explore creativity. 
+    publishedDate: 2024-06-27T18:30:00.000Z
   - thumbnail: /images/fire-mock-drill-and-training.jpg
     alt: fire-mock-drill-and-training-session
     title: Fire Mock Drill and Training Session
