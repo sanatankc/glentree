@@ -123,6 +123,9 @@ earthlab:
           Tending to plants and observing their growth can have a positive
           impact on student's mental well-being.
 showcase:
+  - image: >-
+      /images/fire-mock-drill-and-training-session-in-whitefield-school-campus.jpg
+    title: Fire Mock Drill and Training Session
   - image: /images/global-parents-day-celebration.jpg
     title: Global Parents Day - Celebration
   - image: /images/investiture-ceremony-2.jpg
