@@ -4,6 +4,17 @@ metaDescription: >-
   Glentree Academy school is affiliated to CBSE. It is ranked amongst the top
   CBSE schools in Bangalore. Admissions Are Open For AY 2024-25.
 updates:
+  - thumbnail: /images/painting-competition.jpg
+    alt: painting-competition
+    title: Painting Competition - Primary
+    description: >-
+      Glentree Academy Whitefield conducted a Painting Competition for the
+      primary students which was indeed a successful event .. This competition
+      was a great example of a young artist’s remarkable imagination and desire
+      to create something extraordinary. The result of the student's work was no
+      less than a masterpiece. We Thank you all the participants for your
+      wonderful performances and lovely creations.
+    publishedDate: 2024-06-30T18:30:00.000Z
   - thumbnail: /images/ctt-activity.jpg
     alt: ctt-activity
     title: CTT Activity - PrePrimary
