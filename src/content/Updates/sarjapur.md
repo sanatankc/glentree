@@ -1,5 +1,16 @@
 ---
 updates:
+  - thumbnail: /images/van-mahotsav.jpg
+    alt: van-mahotsav
+    title: Van Mahotsav - Primary
+    description: >-
+      Van Mahotsav was celebrated at Glentree Academy Sarjapur, and the primary
+      students responded enthusiastically to the concepts of conservation and
+      love for nature. The event was filled with fun activities, tree planting,
+      and educational moments on the importance of protecting the environment.
+      Altogether, we fostered a green future by instilling a profound
+      relationship with the natural environment in our young learners.
+    publishedDate: 2024-06-30T18:30:00.000Z
   - thumbnail: /images/investiture-ceremony-at-school.jpg
     alt: investiture-ceremony
     title: Investiture Ceremony - Sarjapur Road Campus
