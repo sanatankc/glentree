@@ -102,6 +102,8 @@ earthlab:
           Tending to plants and observing their growth can have a positive
           impact on student's mental well-being.
 showcase:
+  - image: /images/primary-students-celebration-of-van-mahotsav.jpg
+    title: Van Mahotsav - Celebration
   - image: /images/investiture-ceremony.jpg
     title: Investiture Ceremony
   - image: /images/yoga-practice-for-primary-students.jpg
