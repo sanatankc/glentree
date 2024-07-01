@@ -123,6 +123,8 @@ earthlab:
           Tending to plants and observing their growth can have a positive
           impact on student's mental well-being.
 showcase:
+  - image: /images/painting-competition-for-primary-students.jpg
+    title: 'Painting Competition - Primary '
   - image: /images/ctt-activity-pre-primary.jpg
     title: CTT Activity - PrePrimary
   - image: >-
